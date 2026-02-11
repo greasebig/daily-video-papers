@@ -138,6 +138,8 @@ def analyze_paper_with_ai(paper, pdf_text):
         half = max_chars // 2
         pdf_text = pdf_text[:half] + "\n\n[... Omitted ...]\n\n" + pdf_text[-half:]
     
+    print(f"  [Debug] Using model: {model_name} for AI analysis...")
+    
     prompt = f'''你是一位资深的计算机视觉研究专家。请仔细阅读以下论文的全文内容，并进行深度分析。
 论文标题: {paper["title"]}
 论文全文:
@@ -165,16 +167,16 @@ def analyze_paper_with_ai(paper, pdf_text):
         )
         return response.choices[0].message.content.strip()
     except Exception as e:
+        print(f"  [Error] AI analysis failed: {str(e)}")
         if "402" in str(e) or "Insufficient Balance" in str(e):
-            print(f"  [Warning] AI 分析余额不足。")
             return "AI 分析失败：API 余额不足"
-        print(f"  AI analysis failed: {e}")
         return f"AI 分析暂时不可用: {e}"
 
 def translate_text(text):
     """使用 AI 翻译文本"""
     if not text or not text.strip():
         return ""
+    print(f"  [Debug] Using model: {model_name} for translation...")
     try:
         response = client.chat.completions.create(
             model=model_name,
@@ -184,13 +186,11 @@ def translate_text(text):
             ],
             temperature=0.3
         )
-        return response.choices[0].message.content.strip()
+        result = response.choices[0].message.content.strip()
+        return result if result else text
     except Exception as e:
-        if "402" in str(e) or "Insufficient Balance" in str(e):
-            print(f"  [Warning] API 余额不足，跳过翻译。")
-        else:
-            print(f"  [Warning] 翻译出错: {e}")
-        return f"[翻译失败: {text[:50]}...]" if len(text) > 50 else f"[翻译失败: {text}]"
+        print(f"  [Error] Translation failed: {str(e)}")
+        return text
 
 def load_recent_papers(days=5):
     """加载最近几天的论文 ID 用于去重"""
