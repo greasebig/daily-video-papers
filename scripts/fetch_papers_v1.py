@@ -1,7 +1,7 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 arXiv Papers Fetcher V1 (Extended Video Version)
-每日抓取 arXiv 视频相关论文，扩大筛选范围，支持 DeepSeek API
+Daily fetch of arXiv video-related papers with free translation.
 """
 
 import os
@@ -13,91 +13,76 @@ import urllib.parse
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta
 from pathlib import Path
-from openai import OpenAI
 
-# 配置
+# Config
 CATEGORIES = ["cs.CV", "cs.AI", "cs.MM", "cs.RO", "cs.LG"]
-DAYS_TO_CHECK = 3  # 检查最近 3 天的论文
-DAYS_TO_COMPARE = 5  # 与最近 5 天对比去重
+DAYS_TO_CHECK = int(os.environ.get("DAYS_TO_CHECK", "3"))
+DAYS_TO_COMPARE = int(os.environ.get("DAYS_TO_COMPARE", "5"))
+MAX_PAPERS = int(os.environ.get("MAX_PAPERS", "0"))
 
-# 扩展后的视频相关关键词
+# Extended video-related keywords
 VIDEO_KEYWORDS = [
-    # 生成与编辑
     "video generation", "video synthesis", "video editing", "video edit",
     "video diffusion", "text-to-video", "image-to-video", "video-to-video",
     "motion generation", "character animation", "talking head", "human motion",
-    # 理解与分析
     "video understanding", "video recognition", "video classification", "action recognition",
     "action detection", "temporal action", "video retrieval", "video captioning",
     "video question answering", "video QA", "video summarization",
-    # 处理与增强
     "video super-resolution", "video enhancement", "video restoration", "video denoising",
     "video interpolation", "frame interpolation", "video compression", "video coding",
-    # 分割与跟踪
     "video segmentation", "video object segmentation", "VOS", "video instance segmentation",
     "VIS", "object tracking", "multi-object tracking", "MOT", "video matting",
-    # 基础模型与时序
     "video model", "temporal modeling", "spatio-temporal", "video transformer",
-    "video representation", "optical flow", "video prediction", "future frame prediction"
+    "video representation", "optical flow", "video prediction", "future frame prediction",
 ]
 
-# 初始化客户端
-deepseek_key = os.environ.get("DEEPSEEK_API_KEY")
-openai_key = os.environ.get("OPENAI_API_KEY")
+# Translation config (free by default)
+TRANSLATION_PROVIDER = os.environ.get("TRANSLATION_PROVIDER", "mymemory").lower()
+MYMEMORY_EMAIL = os.environ.get("MYMEMORY_EMAIL")
+LIBRETRANSLATE_URL = os.environ.get("LIBRETRANSLATE_URL")
+LIBRETRANSLATE_API_KEY = os.environ.get("LIBRETRANSLATE_API_KEY")
+MYMEMORY_URL = "https://api.mymemory.translated.net/get"
+MYMEMORY_MAX_BYTES = int(os.environ.get("MYMEMORY_MAX_BYTES", "450"))
+TRANSLATION_SLEEP = float(os.environ.get("TRANSLATION_SLEEP", "0.8"))
+_TRANSLATION_CACHE = {}
 
-if deepseek_key:
-    print("Using DeepSeek API")
-    client = OpenAI(api_key=deepseek_key, base_url="https://api.deepseek.com")
-    model_name = "deepseek-chat"
-elif openai_key and openai_key.startswith("AIza"):
-    print("Using Gemini API (via Google AI Studio)")
-    # 使用 Google Gemini 的 OpenAI 兼容接口
-    client = OpenAI(
-        api_key=openai_key,
-        base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
-    )
-    model_name = "gemini-2.0-flash" # 或者 gemini-1.5-flash
-else:
-    print("Using Standard OpenAI API")
-    client = OpenAI(api_key=openai_key)
-    model_name = "gpt-4o-mini"
 
 def fetch_arxiv_papers(category, days=3, max_retries=3):
-    """从 arXiv API 获取指定类别的论文"""
+    """Fetch papers for a category from arXiv API."""
     base_url = "http://export.arxiv.org/api/query?"
     end_date = datetime.now()
     start_date = end_date - timedelta(days=days)
-    
+
     query = f"cat:{category}"
     params = {
         "search_query": query,
         "start": 0,
-        "max_results": 500,  # 扩大范围以确保不遗漏
+        "max_results": 500,
         "sortBy": "submittedDate",
-        "sortOrder": "descending"
+        "sortOrder": "descending",
     }
-    
+
     url = base_url + urllib.parse.urlencode(params)
-    
+
     for attempt in range(max_retries):
         try:
             if attempt > 0:
                 time.sleep(5 * attempt)
-            
+
             with urllib.request.urlopen(url, timeout=30) as response:
                 data = response.read()
-            
+
             root = ET.fromstring(data)
             namespace = {"atom": "http://www.w3.org/2005/Atom"}
-            
+
             papers = []
             for entry in root.findall("atom:entry", namespace):
                 published = entry.find("atom:published", namespace).text
                 pub_date = datetime.strptime(published, "%Y-%m-%dT%H:%M:%SZ")
-                
+
                 if pub_date < start_date:
                     continue
-                
+
                 paper = {
                     "id": entry.find("atom:id", namespace).text.split("/abs/")[-1],
                     "title": entry.find("atom:title", namespace).text.strip().replace("\n", " "),
@@ -106,22 +91,25 @@ def fetch_arxiv_papers(category, days=3, max_retries=3):
                     "published": pub_date.strftime("%Y-%m-%d"),
                     "pdf_url": entry.find("atom:id", namespace).text.replace("/abs/", "/pdf/"),
                     "abs_url": entry.find("atom:id", namespace).text,
-                    "categories": [cat.attrib["term"] for cat in entry.findall("atom:category", namespace)]
+                    "categories": [cat.attrib["term"] for cat in entry.findall("atom:category", namespace)],
                 }
                 papers.append(paper)
             return papers
         except Exception as e:
             print(f"  Attempt {attempt + 1} failed: {e}")
-            if attempt == max_retries - 1: return []
+            if attempt == max_retries - 1:
+                return []
     return []
 
+
 def is_video_related(paper):
-    """判断论文是否与视频相关"""
+    """Check whether a paper is video-related."""
     text = (paper["title"] + " " + paper["summary"]).lower()
     return any(keyword.lower() in text for keyword in VIDEO_KEYWORDS)
 
+
 def extract_links(paper):
-    """从摘要中提取项目和代码链接"""
+    """Extract project/code links from abstract."""
     text = paper["summary"]
     url_pattern = r'https?://[^\s<>"{}|\\^`\[\]]+'
     urls = re.findall(url_pattern, text)
@@ -129,97 +117,209 @@ def extract_links(paper):
     for url in urls:
         url_lower = url.lower()
         if "github.com" in url_lower or "gitlab.com" in url_lower:
-            if not links["code"]: links["code"] = url
+            if not links["code"]:
+                links["code"] = url
         elif any(k in url_lower for k in ["project", "page", "site"]):
-            if not links["project"]: links["project"] = url
-        elif not links["project"]: links["project"] = url
+            if not links["project"]:
+                links["project"] = url
+        elif not links["project"]:
+            links["project"] = url
     return links
 
+
+def _looks_chinese(text):
+    cjk = sum(1 for ch in text if "\u4e00" <= ch <= "\u9fff")
+    return cjk >= max(3, int(len(text) * 0.3))
+
+
+def _hard_split_by_bytes(text, max_bytes):
+    buf = ""
+    buf_bytes = 0
+    for ch in text:
+        b = len(ch.encode("utf-8"))
+        if buf and buf_bytes + b > max_bytes:
+            yield buf
+            buf = ch
+            buf_bytes = b
+        else:
+            buf += ch
+            buf_bytes += b
+    if buf:
+        yield buf
+
+
+def _split_text_by_bytes(text, max_bytes):
+    if len(text.encode("utf-8")) <= max_bytes:
+        return [text]
+    parts = re.split(r"(?<=[.!?。！？])\s+", text)
+    chunks = []
+    current = ""
+    current_bytes = 0
+    for part in parts:
+        if not part:
+            continue
+        part_bytes = len(part.encode("utf-8"))
+        if part_bytes > max_bytes:
+            for piece in _hard_split_by_bytes(part, max_bytes):
+                piece_bytes = len(piece.encode("utf-8"))
+                if current and current_bytes + piece_bytes + 1 > max_bytes:
+                    chunks.append(current)
+                    current = ""
+                    current_bytes = 0
+                if current:
+                    current += " " + piece
+                    current_bytes += 1 + piece_bytes
+                else:
+                    current = piece
+                    current_bytes = piece_bytes
+                chunks.append(current)
+                current = ""
+                current_bytes = 0
+            continue
+        if current and current_bytes + part_bytes + 1 > max_bytes:
+            chunks.append(current)
+            current = part
+            current_bytes = part_bytes
+        else:
+            if current:
+                current += " " + part
+                current_bytes += 1 + part_bytes
+            else:
+                current = part
+                current_bytes = part_bytes
+    if current:
+        chunks.append(current)
+    return chunks
+
+
+def _translate_mymemory(text):
+    params = {
+        "q": text,
+        "langpair": "en|zh-CN",
+    }
+    if MYMEMORY_EMAIL:
+        params["de"] = MYMEMORY_EMAIL
+    url = MYMEMORY_URL + "?" + urllib.parse.urlencode(params, quote_via=urllib.parse.quote)
+    req = urllib.request.Request(url, headers={"User-Agent": "daily-video-papers/1.0"})
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        data = json.loads(resp.read().decode("utf-8"))
+    if data.get("responseStatus") != 200:
+        raise RuntimeError(f"MyMemory error: {data.get('responseStatus')} {data.get('responseDetails')}")
+    return data.get("responseData", {}).get("translatedText") or ""
+
+
+def _translate_libretranslate(text):
+    if not LIBRETRANSLATE_URL:
+        raise RuntimeError("LIBRETRANSLATE_URL not set")
+    payload = {
+        "q": text,
+        "source": "en",
+        "target": "zh",
+        "format": "text",
+    }
+    if LIBRETRANSLATE_API_KEY:
+        payload["api_key"] = LIBRETRANSLATE_API_KEY
+    data = urllib.parse.urlencode(payload).encode("utf-8")
+    req = urllib.request.Request(
+        LIBRETRANSLATE_URL.rstrip("/") + "/translate",
+        data=data,
+        headers={"Content-Type": "application/x-www-form-urlencoded", "User-Agent": "daily-video-papers/1.0"},
+    )
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        result = json.loads(resp.read().decode("utf-8"))
+    return result.get("translatedText") or ""
+
+
 def translate_text(text):
-    """使用 AI 翻译文本"""
+    """Translate text to Chinese using a free API by default."""
     if not text or not text.strip():
         return ""
-    
-    # 打印调试信息，帮助用户确认使用的是哪个模型
-    print(f"  [Debug] Using model: {model_name} for translation...")
-    
-    try:
-        response = client.chat.completions.create(
-            model=model_name,
-            messages=[
-                {"role": "system", "content": "You are a professional translator. Translate the following academic text to Chinese. Keep technical terms in English when appropriate. Only return the translation, no explanations."},
-                {"role": "user", "content": text}
-            ],
-            temperature=0.3
-        )
-        result = response.choices[0].message.content.strip()
-        if result:
-            return result
-        else:
-            print("  [Warning] Translation returned empty result.")
-            return text
-    except Exception as e:
-        print(f"  [Error] Translation failed: {str(e)}")
-        # 如果是余额不足 (402)
-        if "402" in str(e) or "Insufficient Balance" in str(e):
-            print(f"  [Tip] 请检查您的 API 余额。")
-        return text  # 翻译失败时返回原文，而不是显示错误标记，这样更美观
+    if _looks_chinese(text):
+        return text
+    cached = _TRANSLATION_CACHE.get(text)
+    if cached is not None:
+        return cached
+    chunks = _split_text_by_bytes(text, MYMEMORY_MAX_BYTES)
+    translated_chunks = []
+    for chunk in chunks:
+        try:
+            if TRANSLATION_PROVIDER == "libretranslate":
+                translated = _translate_libretranslate(chunk)
+            else:
+                translated = _translate_mymemory(chunk)
+            translated_chunks.append(translated or chunk)
+        except Exception as e:
+            print(f"  [Error] Translation failed: {e}")
+            translated_chunks.append(chunk)
+        time.sleep(TRANSLATION_SLEEP)
+    result = "".join(translated_chunks).strip()
+    _TRANSLATION_CACHE[text] = result or text
+    return result or text
+
 
 def load_recent_papers(days=5):
-    """加载最近几天的论文 ID 用于去重"""
+    """Load recent paper IDs for de-duplication."""
     papers_dir = Path(__file__).parent.parent / "papers"
     recent_ids = set()
-    if not papers_dir.exists(): return recent_ids
+    if not papers_dir.exists():
+        return recent_ids
     start_date = datetime.now() - timedelta(days=days)
     for md_file in papers_dir.glob("*.md"):
         try:
             if datetime.strptime(md_file.stem, "%Y-%m-%d") >= start_date:
                 content = md_file.read_text(encoding="utf-8")
                 recent_ids.update(re.findall(r'arxiv\.org/abs/(\d+\.\d+)', content))
-        except: continue
+        except Exception:
+            continue
     return recent_ids
 
+
 def generate_markdown(papers, date_str):
-    """生成 Markdown 格式的论文列表"""
+    """Generate Markdown for papers."""
     md_content = f"# arXiv Video Papers - {date_str}\n\n"
     md_content += f"**Update Time**: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n"
     md_content += f"**Paper Count**: {len(papers)}\n\n---\n\n"
-    
+
     for i, paper in enumerate(papers, 1):
         print(f"Processing {i}/{len(papers)}: {paper['id']}")
         title_zh = translate_text(paper["title"])
         summary_zh = translate_text(paper["summary"])
         links = extract_links(paper)
-        
+
         md_content += f"## {i}. {paper['title']}\n\n"
-        md_content += f"**中文标题**: {title_zh}\n\n"
+        md_content += f"**Chinese Title**: {title_zh}\n\n"
         md_content += f"**Authors**: {', '.join(paper['authors'][:5])}{' et al.' if len(paper['authors']) > 5 else ''}\n\n"
         md_content += f"**Date**: {paper['published']} | **arXiv**: [{paper['id']}]({paper['abs_url']}) | **PDF**: [Link]({paper['pdf_url']})\n\n"
-        if links["project"]: md_content += f"**Project**: {links['project']}  "
-        if links["code"]: md_content += f"**Code**: {links['code']}\n\n"
+        if links["project"]:
+            md_content += f"**Project**: {links['project']}  "
+        if links["code"]:
+            md_content += f"**Code**: {links['code']}\n\n"
         md_content += f"**Categories**: {', '.join(paper['categories'])}\n\n"
         md_content += f"<details><summary><b>Abstract</b></summary>\n\n{paper['summary']}\n\n</details>\n\n"
-        md_content += f"<details><summary><b>中文摘要</b></summary>\n\n{summary_zh}\n\n</details>\n\n---\n\n"
+        md_content += f"<details><summary><b>Chinese Abstract</b></summary>\n\n{summary_zh}\n\n</details>\n\n---\n\n"
         time.sleep(1)
     return md_content
 
+
 def update_readme_index():
-    """更新 README 中的论文索引"""
+    """Update README index."""
     base_dir = Path(__file__).parent.parent
     papers_dir = base_dir / "papers"
     readme_path = base_dir / "README.md"
-    if not papers_dir.exists(): return
+    if not papers_dir.exists():
+        return
     paper_files = sorted(papers_dir.glob("*.md"), reverse=True)
     index_content = "\n"
     for f in paper_files:
         content = f.read_text(encoding="utf-8")
         count = re.search(r'\*\*Paper Count\*\*: (\d+)', content)
         index_content += f"- [{f.stem}](papers/{f.name}) - {count.group(1) if count else '0'} papers\n"
-    
+
     readme_content = readme_path.read_text(encoding="utf-8")
     pattern = r'<!-- PAPERS_INDEX_START -->.*?<!-- PAPERS_INDEX_END -->'
     replacement = f'<!-- PAPERS_INDEX_START -->{index_content}<!-- PAPERS_INDEX_END -->'
     readme_path.write_text(re.sub(pattern, replacement, readme_content, flags=re.DOTALL), encoding="utf-8")
+
 
 def main():
     recent_ids = load_recent_papers(DAYS_TO_COMPARE)
@@ -228,24 +328,29 @@ def main():
         print(f"Fetching {cat}...")
         papers = fetch_arxiv_papers(cat, DAYS_TO_CHECK)
         all_papers.extend(papers)
-        if i < len(CATEGORIES) - 1: time.sleep(3)
-    
+        if i < len(CATEGORIES) - 1:
+            time.sleep(3)
+
     unique_papers = {p["id"]: p for p in all_papers}
     video_papers = [p for p in unique_papers.values() if is_video_related(p)]
     new_papers = [p for p in video_papers if p["id"] not in recent_ids]
-    
+
     if not new_papers:
         print("No new papers found.")
         return
-    
+
     new_papers.sort(key=lambda x: x["published"], reverse=True)
+    if MAX_PAPERS > 0:
+        new_papers = new_papers[:MAX_PAPERS]
+
     date_str = datetime.now().strftime("%Y-%m-%d")
     md_content = generate_markdown(new_papers, date_str)
-    
+
     papers_dir = Path(__file__).parent.parent / "papers"
     papers_dir.mkdir(parents=True, exist_ok=True)
     (papers_dir / f"{date_str}.md").write_text(md_content, encoding="utf-8")
     update_readme_index()
+
 
 if __name__ == "__main__":
     main()
