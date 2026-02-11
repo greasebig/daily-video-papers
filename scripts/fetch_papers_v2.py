@@ -43,12 +43,25 @@ VIDEO_KEYWORDS = [
     "video representation", "optical flow", "video prediction", "future frame prediction"
 ]
 
-# 初始化 OpenAI 客户端
-api_key = os.environ.get("DEEPSEEK_API_KEY") or os.environ.get("OPENAI_API_KEY")
-base_url = "https://api.deepseek.com" if os.environ.get("DEEPSEEK_API_KEY") else None
-model_name = "deepseek-chat" if os.environ.get("DEEPSEEK_API_KEY") else "gemini-2.5-flash"
+# 初始化客户端
+deepseek_key = os.environ.get("DEEPSEEK_API_KEY")
+openai_key = os.environ.get("OPENAI_API_KEY")
 
-client = OpenAI(api_key=api_key, base_url=base_url)
+if deepseek_key:
+    print("Using DeepSeek API")
+    client = OpenAI(api_key=deepseek_key, base_url="https://api.deepseek.com")
+    model_name = "deepseek-chat"
+elif openai_key and openai_key.startswith("AIza"):
+    print("Using Gemini API (via Google AI Studio)")
+    client = OpenAI(
+        api_key=openai_key,
+        base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
+    )
+    model_name = "gemini-2.0-flash"
+else:
+    print("Using Standard OpenAI API")
+    client = OpenAI(api_key=openai_key)
+    model_name = "gpt-4o-mini"
 
 def fetch_arxiv_papers(category, days=3, max_retries=3):
     """从 arXiv API 获取指定类别的论文"""
