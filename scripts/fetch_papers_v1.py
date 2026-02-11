@@ -9,7 +9,6 @@ import re
 import json
 import time
 import random
-import logging
 import urllib.request
 import urllib.parse
 import urllib.error
@@ -41,7 +40,7 @@ VIDEO_KEYWORDS = [
 
 # Translation config (free by default)
 TRANSLATION_PROVIDER = os.environ.get("TRANSLATION_PROVIDER", "mymemory").lower()
-MYMEMORY_EMAIL = os.environ.get("MYMEMORY_EMAIL")
+MYMEMORY_EMAIL = os.environ.get("MYMEMORY_EMAIL", "lujundaljdljd@163.com")
 LIBRETRANSLATE_URL = os.environ.get("LIBRETRANSLATE_URL")
 LIBRETRANSLATE_API_KEY = os.environ.get("LIBRETRANSLATE_API_KEY")
 MYMEMORY_URL = "https://api.mymemory.translated.net/get"
@@ -52,22 +51,28 @@ TRANSLATION_BASE_SLEEP = float(os.environ.get("TRANSLATION_BASE_SLEEP", "2.0"))
 TRANSLATION_MAX_SLEEP = float(os.environ.get("TRANSLATION_MAX_SLEEP", "60.0"))
 _TRANSLATION_CACHE = {}
 
-# Logging
-LOG_LEVEL = os.environ.get("LOG_LEVEL", "INFO").upper()
-LOG_DIR = Path(__file__).parent.parent / "logs"
-LOG_DIR.mkdir(parents=True, exist_ok=True)
-LOG_FILE = LOG_DIR / f"fetch_v1_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"
+# Provider state
+_provider = TRANSLATION_PROVIDER
+_provider_locked = False
 
-logging.basicConfig(
-    level=getattr(logging, LOG_LEVEL, logging.INFO),
-    format="%(asctime)s | %(levelname)s | %(message)s",
-    handlers=[
-        logging.FileHandler(LOG_FILE, encoding="utf-8"),
-        logging.StreamHandler(),
-    ],
-)
-logger = logging.getLogger("daily-video-papers")
-logger.info("Starting V1 fetch. Provider=%s, DaysToCheck=%s, DaysToCompare=%s, MaxPapers=%s", TRANSLATION_PROVIDER, DAYS_TO_CHECK, DAYS_TO_COMPARE, MAX_PAPERS)
+
+def _ts():
+    return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+
+def _info(msg):
+    print(f"{_ts()} | INFO | {msg}")
+
+
+def _warn(msg):
+    print(f"{_ts()} | WARN | {msg}")
+
+
+def _err(msg):
+    print(f"{_ts()} | ERROR | {msg}")
+
+
+_info(f"Starting V1 fetch. Provider={TRANSLATION_PROVIDER}, DaysToCheck={DAYS_TO_CHECK}, DaysToCompare={DAYS_TO_COMPARE}, MaxPapers={MAX_PAPERS}")
 
 
 def fetch_arxiv_papers(category, days=3, max_retries=3):
@@ -116,10 +121,10 @@ def fetch_arxiv_papers(category, days=3, max_retries=3):
                     "categories": [cat.attrib["term"] for cat in entry.findall("atom:category", namespace)],
                 }
                 papers.append(paper)
-            logger.info("Fetched %s papers for %s", len(papers), category)
+            _info(f"Fetched {len(papers)} papers for {category}")
             return papers
         except Exception as e:
-            logger.warning("Fetch attempt %s failed for %s: %s", attempt + 1, category, e)
+            _warn(f"Fetch attempt {attempt + 1} failed for {category}: {e}")
             if attempt == max_retries - 1:
                 return []
     return []
@@ -253,7 +258,7 @@ def _translate_libretranslate(text):
     return result.get("translatedText") or ""
 
 
-def _translate_with_retries(func, chunk, chunk_bytes):
+def _translate_with_retries(func, chunk, chunk_bytes, provider_name):
     for attempt in range(1, TRANSLATION_MAX_RETRIES + 1):
         try:
             return func(chunk)
@@ -269,17 +274,35 @@ def _translate_with_retries(func, chunk, chunk_bytes):
                     except ValueError:
                         pass
                 sleep_s += random.uniform(0, 1.0)
-                logger.warning("Translation HTTP %s on attempt %s (bytes=%s). Sleep %.1fs", status, attempt, chunk_bytes, sleep_s)
+                _warn(f"{provider_name} HTTP {status} on attempt {attempt} (bytes={chunk_bytes}). Sleep {sleep_s:.1f}s")
                 time.sleep(sleep_s)
                 continue
             raise
         except Exception as e:
             base = TRANSLATION_BASE_SLEEP * (2 ** (attempt - 1))
             sleep_s = min(TRANSLATION_MAX_SLEEP, base) + random.uniform(0, 1.0)
-            logger.warning("Translation error on attempt %s (bytes=%s): %s. Sleep %.1fs", attempt, chunk_bytes, e, sleep_s)
+            _warn(f"{provider_name} error on attempt {attempt} (bytes={chunk_bytes}): {e}. Sleep {sleep_s:.1f}s")
             time.sleep(sleep_s)
             continue
     return ""
+
+
+def _select_provider():
+    global _provider, _provider_locked
+    if _provider_locked:
+        return _provider
+    return _provider
+
+
+def _fallback_provider():
+    global _provider, _provider_locked
+    if _provider_locked:
+        return _provider
+    if _provider == "mymemory" and LIBRETRANSLATE_URL:
+        _warn("Switching translation provider to LibreTranslate due to rate limit/errors.")
+        _provider = "libretranslate"
+        _provider_locked = True
+    return _provider
 
 
 def translate_text(text):
@@ -296,15 +319,18 @@ def translate_text(text):
     translated_chunks = []
     for idx, chunk in enumerate(chunks, 1):
         chunk_bytes = len(chunk.encode("utf-8"))
-        logger.debug("Translating chunk %s/%s (bytes=%s)", idx, len(chunks), chunk_bytes)
+        provider = _select_provider()
         try:
-            if TRANSLATION_PROVIDER == "libretranslate":
-                translated = _translate_with_retries(_translate_libretranslate, chunk, chunk_bytes)
+            if provider == "libretranslate":
+                translated = _translate_with_retries(_translate_libretranslate, chunk, chunk_bytes, "LibreTranslate")
             else:
-                translated = _translate_with_retries(_translate_mymemory, chunk, chunk_bytes)
+                translated = _translate_with_retries(_translate_mymemory, chunk, chunk_bytes, "MyMemory")
+            if not translated and provider == "mymemory" and LIBRETRANSLATE_URL:
+                _fallback_provider()
+                translated = _translate_with_retries(_translate_libretranslate, chunk, chunk_bytes, "LibreTranslate")
             translated_chunks.append(translated or chunk)
         except Exception as e:
-            logger.error("Translation failed after retries (bytes=%s): %s", chunk_bytes, e)
+            _err(f"Translation failed after retries (bytes={chunk_bytes}): {e}")
             translated_chunks.append(chunk)
         time.sleep(TRANSLATION_SLEEP)
 
@@ -337,7 +363,7 @@ def generate_markdown(papers, date_str):
     md_content += f"**Paper Count**: {len(papers)}\n\n---\n\n"
 
     for i, paper in enumerate(papers, 1):
-        logger.info("Processing %s/%s: %s", i, len(papers), paper["id"])
+        _info(f"Processing {i}/{len(papers)}: {paper['id']}")
         title_zh = translate_text(paper["title"])
         summary_zh = translate_text(paper["summary"])
         links = extract_links(paper)
@@ -381,7 +407,7 @@ def main():
     recent_ids = load_recent_papers(DAYS_TO_COMPARE)
     all_papers = []
     for i, cat in enumerate(CATEGORIES):
-        logger.info("Fetching %s...", cat)
+        _info(f"Fetching {cat}...")
         papers = fetch_arxiv_papers(cat, DAYS_TO_CHECK)
         all_papers.extend(papers)
         if i < len(CATEGORIES) - 1:
@@ -392,7 +418,7 @@ def main():
     new_papers = [p for p in video_papers if p["id"] not in recent_ids]
 
     if not new_papers:
-        logger.info("No new papers found.")
+        _info("No new papers found.")
         return
 
     new_papers.sort(key=lambda x: x["published"], reverse=True)
@@ -406,7 +432,7 @@ def main():
     papers_dir.mkdir(parents=True, exist_ok=True)
     (papers_dir / f"{date_str}.md").write_text(md_content, encoding="utf-8")
     update_readme_index()
-    logger.info("Completed. Output written to papers/%s.md", date_str)
+    _info(f"Completed. Output written to papers/{date_str}.md")
 
 
 if __name__ == "__main__":
