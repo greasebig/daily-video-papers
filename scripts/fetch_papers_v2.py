@@ -42,7 +42,7 @@ VIDEO_KEYWORDS = [
 ]
 
 # Translation config (free by default)
-TRANSLATION_PROVIDER = os.environ.get("TRANSLATION_PROVIDER", "mymemory").lower()
+TRANSLATION_CHAIN = os.environ.get("TRANSLATION_CHAIN", "mymemory,libretranslate")
 MYMEMORY_EMAIL = os.environ.get("MYMEMORY_EMAIL", "lujundaljdljd@163.com")
 LIBRETRANSLATE_URL = os.environ.get("LIBRETRANSLATE_URL")
 LIBRETRANSLATE_API_KEY = os.environ.get("LIBRETRANSLATE_API_KEY")
@@ -53,10 +53,6 @@ TRANSLATION_MAX_RETRIES = int(os.environ.get("TRANSLATION_MAX_RETRIES", "5"))
 TRANSLATION_BASE_SLEEP = float(os.environ.get("TRANSLATION_BASE_SLEEP", "2.0"))
 TRANSLATION_MAX_SLEEP = float(os.environ.get("TRANSLATION_MAX_SLEEP", "60.0"))
 _TRANSLATION_CACHE = {}
-
-# Provider state
-_provider = TRANSLATION_PROVIDER
-_provider_locked = False
 
 
 def _ts():
@@ -75,7 +71,33 @@ def _err(msg):
     print(f"{_ts()} | ERROR | {msg}")
 
 
-_info(f"Starting V2 fetch. Provider={TRANSLATION_PROVIDER}, DaysToCheck={DAYS_TO_CHECK}, DaysToCompare={DAYS_TO_COMPARE}, MaxPapers={MAX_PAPERS}")
+_info(f"Starting V2 fetch. Chain={TRANSLATION_CHAIN}, DaysToCheck={DAYS_TO_CHECK}, DaysToCompare={DAYS_TO_COMPARE}, MaxPapers={MAX_PAPERS}")
+
+
+def _normalize_chain(chain_str):
+    items = [p.strip().lower() for p in chain_str.split(",") if p.strip()]
+    seen = set()
+    ordered = []
+    for p in items:
+        if p not in ("mymemory", "libretranslate"):
+            continue
+        if p in seen:
+            continue
+        seen.add(p)
+        ordered.append(p)
+    if not ordered:
+        ordered = ["mymemory"]
+    return ordered
+
+
+def _provider_chain():
+    chain = _normalize_chain(TRANSLATION_CHAIN)
+    if "libretranslate" in chain and not LIBRETRANSLATE_URL:
+        _warn("LibreTranslate in chain but LIBRETRANSLATE_URL not set. Skipping LibreTranslate.")
+        chain = [p for p in chain if p != "libretranslate"]
+    if not chain:
+        chain = ["mymemory"]
+    return chain
 
 # AI analysis client
 deepseek_key = os.environ.get("DEEPSEEK_API_KEY")
@@ -376,26 +398,8 @@ def _translate_with_retries(func, chunk, chunk_bytes, provider_name):
     return ""
 
 
-def _select_provider():
-    global _provider, _provider_locked
-    if _provider_locked:
-        return _provider
-    return _provider
-
-
-def _fallback_provider():
-    global _provider, _provider_locked
-    if _provider_locked:
-        return _provider
-    if _provider == "mymemory" and LIBRETRANSLATE_URL:
-        _warn("Switching translation provider to LibreTranslate due to rate limit/errors.")
-        _provider = "libretranslate"
-        _provider_locked = True
-    return _provider
-
-
 def translate_text(text):
-    """Translate text to Chinese using a free API by default."""
+    """Translate text to Chinese using a free API chain."""
     if not text or not text.strip():
         return ""
     if _looks_chinese(text):
@@ -404,23 +408,24 @@ def translate_text(text):
     if cached is not None:
         return cached
 
+    chain = _provider_chain()
     chunks = _split_text_by_bytes(text, MYMEMORY_MAX_BYTES)
     translated_chunks = []
-    for idx, chunk in enumerate(chunks, 1):
+
+    for chunk in chunks:
         chunk_bytes = len(chunk.encode("utf-8"))
-        provider = _select_provider()
-        try:
+        translated = ""
+        for provider in chain:
             if provider == "libretranslate":
                 translated = _translate_with_retries(_translate_libretranslate, chunk, chunk_bytes, "LibreTranslate")
             else:
                 translated = _translate_with_retries(_translate_mymemory, chunk, chunk_bytes, "MyMemory")
-            if not translated and provider == "mymemory" and LIBRETRANSLATE_URL:
-                _fallback_provider()
-                translated = _translate_with_retries(_translate_libretranslate, chunk, chunk_bytes, "LibreTranslate")
-            translated_chunks.append(translated or chunk)
-        except Exception as e:
-            _err(f"Translation failed after retries (bytes={chunk_bytes}): {e}")
-            translated_chunks.append(chunk)
+            if translated:
+                break
+        if not translated:
+            _err(f"Translation failed after retries (bytes={chunk_bytes}). Returning source chunk.")
+            translated = chunk
+        translated_chunks.append(translated)
         time.sleep(TRANSLATION_SLEEP)
 
     result = "".join(translated_chunks).strip()
