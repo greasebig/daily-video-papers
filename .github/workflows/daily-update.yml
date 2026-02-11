@@ -33,7 +33,7 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
-          TRANSLATION_CHAIN: libretranslate,mymemory
+          TRANSLATION_CHAIN: mymemory,libretranslate
           LIBRETRANSLATE_URL: http://localhost:5000
           MYMEMORY_EMAIL: lujundaljdljd@163.com
           TRANSLATION_SLEEP: '0.6'
