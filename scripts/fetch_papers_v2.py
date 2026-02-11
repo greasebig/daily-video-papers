@@ -488,24 +488,44 @@ def generate_markdown_v2(papers, date_str):
     return md_content
 
 
+def _build_readme_sections(papers_dir):
+    paper_files = sorted(papers_dir.glob("*.md"), reverse=True)
+    index_lines = []
+    content_blocks = []
+    for f in paper_files:
+        content = f.read_text(encoding="utf-8")
+        count = re.search(r'\*\*Paper Count\*\*: (\d+)', content)
+        count_str = count.group(1) if count else "0"
+        index_lines.append(f"- [{f.stem}](papers/{f.name}) - {count_str} papers")
+        content_blocks.append(
+            f"<details><summary><b>{f.stem} ({count_str} papers)</b></summary>\n\n"
+            f"{content}\n\n"
+            f"</details>"
+        )
+    index_content = "\n" + "\n".join(index_lines) + "\n"
+    content_section = "\n" + "\n\n".join(content_blocks) + "\n"
+    return index_content, content_section
+
+
 def update_readme_index():
-    """Update README index."""
+    """Update README index and daily content."""
     base_dir = Path(__file__).parent.parent
     papers_dir = base_dir / "papers"
     readme_path = base_dir / "README.md"
     if not papers_dir.exists():
         return
-    paper_files = sorted(papers_dir.glob("*.md"), reverse=True)
-    index_content = "\n"
-    for f in paper_files:
-        content = f.read_text(encoding="utf-8")
-        count = re.search(r'\*\*Paper Count\*\*: (\d+)', content)
-        index_content += f"- [{f.stem}](papers/{f.name}) - {count.group(1) if count else '0'} papers\n"
+    index_content, content_section = _build_readme_sections(papers_dir)
 
     readme_content = readme_path.read_text(encoding="utf-8")
-    pattern = r'<!-- PAPERS_INDEX_START -->.*?<!-- PAPERS_INDEX_END -->'
-    replacement = f'<!-- PAPERS_INDEX_START -->{index_content}<!-- PAPERS_INDEX_END -->'
-    readme_path.write_text(re.sub(pattern, replacement, readme_content, flags=re.DOTALL), encoding="utf-8")
+    index_pattern = r'<!-- PAPERS_INDEX_START -->.*?<!-- PAPERS_INDEX_END -->'
+    index_replacement = f'<!-- PAPERS_INDEX_START -->{index_content}<!-- PAPERS_INDEX_END -->'
+    readme_content = re.sub(index_pattern, index_replacement, readme_content, flags=re.DOTALL)
+
+    content_pattern = r'<!-- PAPERS_CONTENT_START -->.*?<!-- PAPERS_CONTENT_END -->'
+    content_replacement = f'<!-- PAPERS_CONTENT_START -->{content_section}<!-- PAPERS_CONTENT_END -->'
+    readme_content = re.sub(content_pattern, content_replacement, readme_content, flags=re.DOTALL)
+
+    readme_path.write_text(readme_content, encoding="utf-8")
 
 
 def main():

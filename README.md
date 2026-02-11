@@ -16,6 +16,11 @@
 - [2026-02-11](papers/2026-02-11.md) - 355 papers
 <!-- PAPERS_INDEX_END -->
 
+## Daily Papers
+
+<!-- PAPERS_CONTENT_START -->
+<!-- PAPERS_CONTENT_END -->
+
 ## 🚀 快速开始
 
 1. **配置 API Key**：在仓库 `Settings -> Secrets and variables -> Actions -> Secrets` 中添加 `DEEPSEEK_API_KEY`。
