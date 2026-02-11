@@ -13,7 +13,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
-- [2026-02-11](papers/2026-02-11.md) - 357 papers
+- [2026-02-11](papers/2026-02-11.md) - 356 papers
 <!-- PAPERS_INDEX_END -->
 
 ## 🚀 快速开始
