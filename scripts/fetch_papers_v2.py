@@ -165,11 +165,16 @@ def analyze_paper_with_ai(paper, pdf_text):
         )
         return response.choices[0].message.content.strip()
     except Exception as e:
+        if "402" in str(e) or "Insufficient Balance" in str(e):
+            print(f"  [Warning] AI 分析余额不足。")
+            return "AI 分析失败：API 余额不足"
         print(f"  AI analysis failed: {e}")
-        return "AI 分析暂时不可用"
+        return f"AI 分析暂时不可用: {e}"
 
 def translate_text(text):
     """使用 AI 翻译文本"""
+    if not text or not text.strip():
+        return ""
     try:
         response = client.chat.completions.create(
             model=model_name,
@@ -181,8 +186,11 @@ def translate_text(text):
         )
         return response.choices[0].message.content.strip()
     except Exception as e:
-        print(f"Translation error: {e}")
-        return text
+        if "402" in str(e) or "Insufficient Balance" in str(e):
+            print(f"  [Warning] API 余额不足，跳过翻译。")
+        else:
+            print(f"  [Warning] 翻译出错: {e}")
+        return f"[翻译失败: {text[:50]}...]" if len(text) > 50 else f"[翻译失败: {text}]"
 
 def load_recent_papers(days=5):
     """加载最近几天的论文 ID 用于去重"""
