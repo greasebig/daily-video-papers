@@ -3,9 +3,11 @@
 on:
   schedule:
     - cron: '0 2 * * *' # daily 10:00 China time (UTC+8)
-  push:
-    branches: [main]
   workflow_dispatch:
+
+concurrency:
+  group: daily-video-papers
+  cancel-in-progress: false
 
 jobs:
   update-papers:
@@ -46,6 +48,7 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
+          git pull --rebase origin main || true
           git add papers/ README.md
           if git diff --staged --quiet; then
             echo "No changes"
@@ -79,6 +82,7 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
+          git pull --rebase origin main || true
           git add world-model/README.md world-model/papers/
           if git diff --staged --quiet; then
             echo "No changes"
@@ -112,6 +116,7 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
+          git pull --rebase origin main || true
           git add agent/README.md agent/papers/
           if git diff --staged --quiet; then
             echo "No changes"
