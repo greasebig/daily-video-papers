@@ -1,4 +1,5 @@
 # Daily Video Papers 🎥
+![Actions](https://github.com/greasebig/daily-video-papers/actions/workflows/daily-update.yml/badge.svg) ![Pages](https://img.shields.io/badge/pages-online-brightgreen) ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=greasebig.daily-video-papers)
 
 ?? **Website**: https://greasebig.github.io/daily-video-papers/
 
