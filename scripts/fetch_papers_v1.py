@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
 arXiv Papers Fetcher V1 (Extended Video Version)
-Optimized for Gemini and MyMemory (No local LibreTranslate server).
+Fully Free Version: Uses Google/Bing/MyMemory web interfaces for translation.
+No API Keys required.
 """
 
 import os
@@ -15,7 +16,6 @@ import urllib.error
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta
 from pathlib import Path
-from openai import OpenAI
 
 # Config
 CATEGORIES = ["cs.CV", "cs.AI", "cs.MM", "cs.RO", "cs.LG"]
@@ -39,17 +39,6 @@ VIDEO_KEYWORDS = [
     "video representation", "optical flow", "video prediction", "future frame prediction",
 ]
 
-# API Keys
-DEEPSEEK_KEY = os.environ.get("DEEPSEEK_API_KEY")
-OPENAI_KEY = os.environ.get("OPENAI_API_KEY")
-
-# Translation config
-MYMEMORY_EMAIL = os.environ.get("MYMEMORY_EMAIL", "lujundaljdljd@163.com")
-MYMEMORY_URL = "https://api.mymemory.translated.net/get"
-MYMEMORY_MAX_BYTES = 450
-TRANSLATION_SLEEP = float(os.environ.get("TRANSLATION_SLEEP", "1.0"))
-_TRANSLATION_CACHE = {}
-
 def _ts():
     return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
@@ -62,270 +51,170 @@ def _warn(msg):
 def _err(msg):
     print(f"{_ts()} | ERROR | {msg}")
 
-# Initialize AI Client
-client = None
-model_name = None
+# --- Free Translation Providers ---
 
-if DEEPSEEK_KEY:
-    _info("Using DeepSeek API for translation")
-    client = OpenAI(api_key=DEEPSEEK_KEY, base_url="https://api.deepseek.com")
-    model_name = "deepseek-chat"
-elif OPENAI_KEY and OPENAI_KEY.startswith("AIza"):
-    _info("Using Gemini API (via Google AI Studio) for translation")
-    client = OpenAI(
-        api_key=OPENAI_KEY,
-        base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
-    )
-    model_name = "gemini-2.0-flash"
-elif OPENAI_KEY:
-    _info("Using Standard OpenAI API for translation")
-    client = OpenAI(api_key=OPENAI_KEY)
-    model_name = "gpt-4o-mini"
-else:
-    _warn("No AI API Key found. Will fallback to MyMemory.")
-
-def translate_with_ai(text):
-    """Use AI to translate text."""
-    if not client:
-        return None
+def translate_google(text):
+    """Free Google Translate web interface."""
     try:
-        response = client.chat.completions.create(
-            model=model_name,
-            messages=[
-                {"role": "system", "content": "You are a professional translator. Translate the following academic text to Chinese. Keep technical terms in English when appropriate. Only return the translation, no explanations."},
-                {"role": "user", "content": text}
-            ],
-            temperature=0.3
-        )
-        return response.choices[0].message.content.strip()
-    except Exception as e:
-        _warn(f"AI Translation failed: {e}")
-        return None
-
-def translate_with_mymemory(text):
-    """Use MyMemory API to translate text."""
-    try:
-        # Split text into chunks if too long
-        if len(text.encode("utf-8")) > MYMEMORY_MAX_BYTES:
-            return text # Simple fallback for very long text in V1
-            
-        params = {"q": text, "langpair": "en|zh-CN"}
-        if MYMEMORY_EMAIL:
-            params["de"] = MYMEMORY_EMAIL
-        url = MYMEMORY_URL + "?" + urllib.parse.urlencode(params)
-        req = urllib.request.Request(url, headers={"User-Agent": "daily-video-papers/1.0"})
-        with urllib.request.urlopen(req, timeout=15) as resp:
+        url = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=zh-CN&dt=t&q=" + urllib.parse.quote(text)
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=10) as resp:
             data = json.loads(resp.read().decode("utf-8"))
-        if data.get("responseStatus") == 200:
-            return data.get("responseData", {}).get("translatedText") or text
-        return text
+            return "".join([part[0] for part in data[0]])
     except Exception as e:
-        _warn(f"MyMemory Translation failed: {e}")
-        return text
+        _warn(f"Google Translate failed: {e}")
+        return None
+
+def translate_mymemory(text):
+    """Free MyMemory API."""
+    try:
+        params = {"q": text, "langpair": "en|zh-CN"}
+        url = "https://api.mymemory.translated.net/get?" + urllib.parse.urlencode(params)
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+            if data.get("responseStatus") == 200:
+                return data.get("responseData", {}).get("translatedText")
+        return None
+    except Exception as e:
+        _warn(f"MyMemory failed: {e}")
+        return None
 
 def translate_text(text):
-    """Translation chain: AI -> MyMemory -> Original."""
+    """Translation chain: Google -> MyMemory -> Original."""
     if not text or not text.strip():
         return ""
     
-    if text in _TRANSLATION_CACHE:
-        return _TRANSLATION_CACHE[text]
+    # 1. Try Google
+    result = translate_google(text)
+    if result: return result
     
-    # 1. Try AI
-    result = translate_with_ai(text)
+    # 2. Try MyMemory
+    time.sleep(1)
+    result = translate_mymemory(text)
+    if result: return result
     
-    # 2. Try MyMemory if AI fails
-    if not result:
-        _info("Falling back to MyMemory...")
-        result = translate_with_mymemory(text)
-        time.sleep(TRANSLATION_SLEEP) # Respect MyMemory rate limit
-        
-    _TRANSLATION_CACHE[text] = result
-    return result
+    return text
+
+# --- Core Logic ---
 
 def fetch_arxiv_papers(category, days=3, max_retries=3):
-    """Fetch papers for a category from arXiv API."""
     base_url = "http://export.arxiv.org/api/query?"
-    end_date = datetime.now()
-    start_date = end_date - timedelta(days=days)
-
-    query = f"cat:{category}"
+    start_date = datetime.now() - timedelta(days=days)
     params = {
-        "search_query": query,
+        "search_query": f"cat:{category}",
         "start": 0,
         "max_results": 200,
         "sortBy": "submittedDate",
         "sortOrder": "descending",
     }
-
     url = base_url + urllib.parse.urlencode(params)
-
     for attempt in range(max_retries):
         try:
-            if attempt > 0:
-                time.sleep(5 * attempt)
+            if attempt > 0: time.sleep(5)
             with urllib.request.urlopen(url, timeout=30) as response:
-                data = response.read()
-
-            root = ET.fromstring(data)
+                root = ET.fromstring(response.read())
             namespace = {"atom": "http://www.w3.org/2005/Atom"}
-
             papers = []
             for entry in root.findall("atom:entry", namespace):
-                published = entry.find("atom:published", namespace).text
-                pub_date = datetime.strptime(published, "%Y-%m-%dT%H:%M:%SZ")
-
-                if pub_date < start_date:
-                    continue
-
-                paper = {
+                pub_date = datetime.strptime(entry.find("atom:published", namespace).text, "%Y-%m-%dT%H:%M:%SZ")
+                if pub_date < start_date: continue
+                papers.append({
                     "id": entry.find("atom:id", namespace).text.split("/abs/")[-1],
                     "title": entry.find("atom:title", namespace).text.strip().replace("\n", " "),
                     "summary": entry.find("atom:summary", namespace).text.strip().replace("\n", " "),
-                    "authors": [author.find("atom:name", namespace).text for author in entry.findall("atom:author", namespace)],
+                    "authors": [a.find("atom:name", namespace).text for a in entry.findall("atom:author", namespace)],
                     "published": pub_date.strftime("%Y-%m-%d"),
                     "pdf_url": entry.find("atom:id", namespace).text.replace("/abs/", "/pdf/"),
                     "abs_url": entry.find("atom:id", namespace).text,
-                    "categories": [cat.attrib["term"] for cat in entry.findall("atom:category", namespace)],
-                }
-                papers.append(paper)
+                    "categories": [c.attrib["term"] for c in entry.findall("atom:category", namespace)],
+                })
             _info(f"Fetched {len(papers)} papers for {category}")
             return papers
         except Exception as e:
-            _warn(f"Fetch attempt {attempt + 1} failed for {category}: {e}")
-            if attempt == max_retries - 1:
-                return []
+            _warn(f"Fetch failed: {e}")
     return []
 
 def is_video_related(paper):
-    """Check whether a paper is video-related."""
     text = (paper["title"] + " " + paper["summary"]).lower()
-    return any(keyword.lower() in text for keyword in VIDEO_KEYWORDS)
+    return any(k.lower() in text for k in VIDEO_KEYWORDS)
 
 def extract_links(paper):
-    """Extract project/code links from abstract."""
     text = paper["summary"]
-    url_pattern = r'https?://[^\s<>"{}|\\^`\[\]]+'
-    urls = re.findall(url_pattern, text)
+    urls = re.findall(r'https?://[^\s<>"{}\\|\\^`\[\]]+', text)
     links = {"project": None, "code": None}
     for url in urls:
-        url_lower = url.lower()
-        if "github.com" in url_lower or "gitlab.com" in url_lower:
-            if not links["code"]:
-                links["code"] = url
-        elif any(k in url_lower for k in ["project", "page", "site"]):
-            if not links["project"]:
-                links["project"] = url
-        elif not links["project"]:
-            links["project"] = url
+        u = url.lower()
+        if "github.com" in u or "gitlab.com" in u: links["code"] = url
+        elif any(k in u for k in ["project", "page", "site"]): links["project"] = url
     return links
 
 def load_recent_papers(days=5):
-    """Load recent paper IDs for de-duplication."""
     papers_dir = Path(__file__).parent.parent / "papers"
     recent_ids = set()
-    if not papers_dir.exists():
-        return recent_ids
+    if not papers_dir.exists(): return recent_ids
     start_date = datetime.now() - timedelta(days=days)
-    for md_file in papers_dir.glob("*.md"):
+    for f in papers_dir.glob("*.md"):
         try:
-            if datetime.strptime(md_file.stem, "%Y-%m-%d") >= start_date:
-                content = md_file.read_text(encoding="utf-8")
-                recent_ids.update(re.findall(r'arxiv\.org/abs/(\d+\.\d+)', content))
-        except Exception:
-            continue
+            if datetime.strptime(f.stem, "%Y-%m-%d") >= start_date:
+                recent_ids.update(re.findall(r'arxiv\.org/abs/(\d+\.\d+)', f.read_text()))
+        except: continue
     return recent_ids
 
 def generate_markdown(papers, date_str):
-    """Generate Markdown for papers."""
-    md_content = f"# arXiv Video Papers - {date_str}\n\n"
-    md_content += f"**Update Time**: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n"
-    md_content += f"**Paper Count**: {len(papers)}\n\n---\n\n"
-
-    for i, paper in enumerate(papers, 1):
-        _info(f"Processing {i}/{len(papers)}: {paper['id']}")
-        title_zh = translate_text(paper["title"])
-        summary_zh = translate_text(paper["summary"])
-        links = extract_links(paper)
-
-        md_content += f"## {i}. {paper['title']}\n\n"
-        md_content += f"**Chinese Title**: {title_zh}\n\n"
-        md_content += f"**Authors**: {', '.join(paper['authors'][:5])}{' et al.' if len(paper['authors']) > 5 else ''}\n\n"
-        md_content += f"**Date**: {paper['published']} | **arXiv**: [{paper['id']}]({paper['abs_url']}) | **PDF**: [Link]({paper['pdf_url']})\n\n"
-        if links["project"]:
-            md_content += f"**Project**: {links['project']}  "
-        if links["code"]:
-            md_content += f"**Code**: {links['code']}\n\n"
-        md_content += f"**Categories**: {', '.join(paper['categories'])}\n\n"
-        md_content += f"<details><summary><b>Abstract</b></summary>\n\n{paper['summary']}\n\n</details>\n\n"
-        md_content += f"<details><summary><b>Chinese Abstract</b></summary>\n\n{summary_zh}\n\n</details>\n\n---\n\n"
-        time.sleep(0.5)
-    return md_content
+    md = f"# arXiv Video Papers - {date_str}\n\n**Paper Count**: {len(papers)}\n\n---\n\n"
+    for i, p in enumerate(papers, 1):
+        _info(f"Translating {i}/{len(papers)}: {p['id']}")
+        t_zh = translate_text(p["title"])
+        s_zh = translate_text(p["summary"])
+        links = extract_links(p)
+        md += f"## {i}. {p['title']}\n\n**中文标题**: {t_zh}\n\n"
+        md += f"**Date**: {p['published']} | **arXiv**: [{p['id']}]({p['abs_url']}) | **PDF**: [Link]({p['pdf_url']})\n\n"
+        if links["project"]: md += f"**Project**: {links['project']}  "
+        if links["code"]: md += f"**Code**: {links['code']}\n\n"
+        md += f"<details><summary><b>Abstract</b></summary>\n\n{p['summary']}\n\n</details>\n\n"
+        md += f"<details><summary><b>中文摘要</b></summary>\n\n{s_zh}\n\n</details>\n\n---\n\n"
+        time.sleep(1.5) # Anti-ban delay
+    return md
 
 def update_readme_index():
-    """Update README index and daily content."""
     base_dir = Path(__file__).parent.parent
     papers_dir = base_dir / "papers"
     readme_path = base_dir / "README.md"
-    if not papers_dir.exists():
-        return
-    
-    paper_files = sorted(papers_dir.glob("*.md"), reverse=True)
-    index_lines = []
-    content_blocks = []
-    for f in paper_files:
-        content = f.read_text(encoding="utf-8")
-        count = re.search(r'\*\*Paper Count\*\*: (\d+)', content)
-        count_str = count.group(1) if count else "0"
-        index_lines.append(f"- [{f.stem}](papers/{f.name}) - {count_str} papers")
-        content_blocks.append(
-            f"<details><summary><b>{f.stem} ({count_str} papers)</b></summary>\n\n"
-            f"{content}\n\n"
-            f"</details>"
-        )
-    
-    index_content = "\n" + "\n".join(index_lines) + "\n"
-    content_section = "\n" + "\n\n".join(content_blocks) + "\n"
-
-    readme_content = readme_path.read_text(encoding="utf-8")
-    readme_content = re.sub(r'<!-- PAPERS_INDEX_START -->.*?<!-- PAPERS_INDEX_END -->', 
-                            f'<!-- PAPERS_INDEX_START -->{index_content}<!-- PAPERS_INDEX_END -->', 
-                            readme_content, flags=re.DOTALL)
-    readme_content = re.sub(r'<!-- PAPERS_CONTENT_START -->.*?<!-- PAPERS_CONTENT_END -->', 
-                            f'<!-- PAPERS_CONTENT_START -->{content_section}<!-- PAPERS_CONTENT_END -->', 
-                            readme_content, flags=re.DOTALL)
-    readme_path.write_text(readme_content, encoding="utf-8")
+    if not papers_dir.exists(): return
+    files = sorted(papers_dir.glob("*.md"), reverse=True)
+    idx, content = "", ""
+    for f in files:
+        c = f.read_text()
+        cnt = re.search(r'\*\*Paper Count\*\*: (\d+)', c)
+        cnt_str = cnt.group(1) if cnt else "0"
+        idx += f"- [{f.stem}](papers/{f.name}) - {cnt_str} papers\n"
+        content += f"<details><summary><b>{f.stem} ({cnt_str} papers)</b></summary>\n\n{c}\n\n</details>\n\n"
+    raw = readme_path.read_text()
+    raw = re.sub(r'<!-- PAPERS_INDEX_START -->.*?<!-- PAPERS_INDEX_END -->', f'<!-- PAPERS_INDEX_START -->\n{idx}<!-- PAPERS_INDEX_END -->', raw, flags=re.DOTALL)
+    raw = re.sub(r'<!-- PAPERS_CONTENT_START -->.*?<!-- PAPERS_CONTENT_END -->', f'<!-- PAPERS_CONTENT_START -->\n{content}<!-- PAPERS_CONTENT_END -->', raw, flags=re.DOTALL)
+    readme_path.write_text(raw)
 
 def main():
-    recent_ids = load_recent_papers(DAYS_TO_COMPARE)
-    all_papers = []
-    for i, cat in enumerate(CATEGORIES):
-        _info(f"Fetching {cat}...")
-        papers = fetch_arxiv_papers(cat, DAYS_TO_CHECK)
-        all_papers.extend(papers)
-        if i < len(CATEGORIES) - 1:
-            time.sleep(2)
-
-    unique_papers = {p["id"]: p for p in all_papers}
-    video_papers = [p for p in unique_papers.values() if is_video_related(p)]
-    new_papers = [p for p in video_papers if p["id"] not in recent_ids]
-
-    if not new_papers:
-        _info("No new papers found.")
+    recent = load_recent_papers(DAYS_TO_COMPARE)
+    all_p = []
+    for cat in CATEGORIES:
+        all_p.extend(fetch_arxiv_papers(cat, DAYS_TO_CHECK))
+        time.sleep(2)
+    unique = {p["id"]: p for p in all_p}
+    video = [p for p in unique.values() if is_video_related(p) and p["id"] not in recent]
+    if not video:
+        _info("No new papers.")
         return
-
-    new_papers.sort(key=lambda x: x["published"], reverse=True)
-    if MAX_PAPERS > 0:
-        new_papers = new_papers[:MAX_PAPERS]
-
+    video.sort(key=lambda x: x["published"], reverse=True)
+    if MAX_PAPERS > 0: video = video[:MAX_PAPERS]
     date_str = datetime.now().strftime("%Y-%m-%d")
-    md_content = generate_markdown(new_papers, date_str)
-
+    md = generate_markdown(video, date_str)
     papers_dir = Path(__file__).parent.parent / "papers"
-    papers_dir.mkdir(parents=True, exist_ok=True)
-    (papers_dir / f"{date_str}.md").write_text(md_content, encoding="utf-8")
+    papers_dir.mkdir(exist_ok=True)
+    (papers_dir / f"{date_str}.md").write_text(md)
     update_readme_index()
-    _info(f"Completed. Output written to papers/{date_str}.md")
+    _info("Done.")
 
 if __name__ == "__main__":
     main()
