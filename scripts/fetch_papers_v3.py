@@ -216,8 +216,8 @@ def generate_markdown(papers, date_str):
 
 
 
-def build_docs_site(base_dir, topic_name, papers_dir):
-    docs_root = base_dir / "docs"
+def build_docs_site(repo_root, topic_slug, topic_name, papers_dir):
+    docs_root = repo_root / "docs" / topic_slug
     docs_root.mkdir(parents=True, exist_ok=True)
     papers_out = docs_root / "papers"
     papers_out.mkdir(parents=True, exist_ok=True)
