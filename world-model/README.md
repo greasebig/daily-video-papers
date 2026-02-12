@@ -67,7 +67,7 @@ Large language models (LLMs) exhibit strong general-purpose reasoning capabiliti
 
 ---
 
-## 4. RISE: Self-Improving Robot Policy with Compositional World Model / RISE：利用组合世界模型自我改进机器人政策
+## 4. RISE: Self-Improving Robot Policy with Compositional World Model / RISE：利用组合世界模型自我改进机器人策略
 
 **Date**: 2026-02-11 | **arXiv**: [2602.11075v1](http://arxiv.org/abs/2602.11075v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.11075v1)
 
@@ -215,7 +215,7 @@ Pretraining Vision-Language-Action (VLA) policies on internet-scale video is app
 
 ---
 
-## 13. NavDreamer: Video Models as Zero-Shot 3D Navigators / NavDreamer：作为零镜头 3D 导航器的视频模型
+## 13. NavDreamer: Video Models as Zero-Shot 3D Navigators / NavDreamer：视频模型作为零镜头 3D 导航器
 
 **Date**: 2026-02-10 | **arXiv**: [2602.09765v1](http://arxiv.org/abs/2602.09765v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.09765v1)
 
