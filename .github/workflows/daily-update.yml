@@ -77,6 +77,7 @@ jobs:
         env:
           TOPIC_NAME: World Model
           OUTPUT_DIR: world-model
+          REBUILD: "1"
           CATEGORIES: cs.AI,cs.LG,cs.CL,cs.RO
           KEYWORDS: world model,world models,world-model,worldmodel,dynamics model,latent world model,model-based reinforcement learning,model-based RL,model-based control,imagination,planet,dreamer
           MYMEMORY_EMAIL: lujundaljdljd@163.com
@@ -113,6 +114,7 @@ jobs:
         env:
           TOPIC_NAME: Agent
           OUTPUT_DIR: agent
+          REBUILD: "1"
           CATEGORIES: cs.AI,cs.CL,cs.LG,cs.RO
           KEYWORDS: autonomous agent,ai agent,agentic,multi-agent,multi agent,tool use,tool-use,toolformer,react,reflexion,task planning,planning,reasoning
           CONTEXT_KEYWORDS: tool use,tool-use,planning,task planning,multi-agent,agentic

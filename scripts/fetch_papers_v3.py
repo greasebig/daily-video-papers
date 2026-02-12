@@ -19,6 +19,7 @@ CATEGORIES = [c.strip() for c in os.environ.get("CATEGORIES", "cs.CV,cs.AI,cs.MM
 DAYS_TO_CHECK = int(os.environ.get("DAYS_TO_CHECK", "3"))
 DAYS_TO_COMPARE = int(os.environ.get("DAYS_TO_COMPARE", "5"))
 MAX_PAPERS = int(os.environ.get("MAX_PAPERS", "0"))
+REBUILD = int(os.environ.get("REBUILD", "0"))
 TOPIC_NAME = os.environ.get("TOPIC_NAME", "Video")
 OUTPUT_DIR = os.environ.get("OUTPUT_DIR", ".")
 
@@ -235,9 +236,16 @@ def update_readme_index(base_dir):
 def main():
     base_dir = (Path(__file__).parent.parent / OUTPUT_DIR).resolve()
     papers_dir = base_dir / "papers"
+    if REBUILD and papers_dir.exists():
+        for f in papers_dir.glob("*.md"):
+            try:
+                f.unlink()
+            except Exception:
+                pass
     papers_dir.mkdir(parents=True, exist_ok=True)
 
     recent = load_recent_papers(DAYS_TO_COMPARE, papers_dir)
+
     all_p = []
     for cat in CATEGORIES:
         all_p.extend(fetch_arxiv_papers(cat, DAYS_TO_CHECK))
