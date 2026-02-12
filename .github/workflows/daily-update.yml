@@ -53,3 +53,69 @@ jobs:
             git commit -m "Update video papers - $(date +'%Y-%m-%d')"
             git push
           fi
+
+  update-world-model:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run world model fetcher (v3)
+        env:
+          TOPIC_NAME: World Model
+          OUTPUT_DIR: world-model
+          CATEGORIES: cs.AI,cs.LG,cs.CL,cs.RO
+          KEYWORDS: world model,world models,world-model,worldmodel,dynamics model,latent world model,model-based reinforcement learning,model-based RL,model-based control,imagination,planet,dreamer
+          MYMEMORY_EMAIL: lujundaljdljd@163.com
+        run: |
+          cd scripts
+          python3 fetch_papers_v3.py
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add world-model/README.md world-model/papers/
+          if git diff --staged --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Update world model papers - $(date +'%Y-%m-%d')"
+            git push
+          fi
+
+  update-agent:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run agent fetcher (v3)
+        env:
+          TOPIC_NAME: Agent
+          OUTPUT_DIR: agent
+          CATEGORIES: cs.AI,cs.CL,cs.LG,cs.RO
+          KEYWORDS: agent,agents,autonomous agent,ai agent,agentic,multi-agent,multi agent,tool use,tool-use,planning,reasoning,task planning,toolformer,react,reflexion
+          MYMEMORY_EMAIL: lujundaljdljd@163.com
+        run: |
+          cd scripts
+          python3 fetch_papers_v3.py
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add agent/README.md agent/papers/
+          if git diff --staged --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Update agent papers - $(date +'%Y-%m-%d')"
+            git push
+          fi

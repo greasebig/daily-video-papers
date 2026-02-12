@@ -1,0 +1,272 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OpenClaw Papers Hub</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap');
+
+    :root {
+      --bg-1: #0b0f17;
+      --bg-2: #0d1b2a;
+      --bg-3: #12243a;
+      --accent-1: #ff9f1c;
+      --accent-2: #2ec4b6;
+      --accent-3: #e71d36;
+      --ink: #f4f7ff;
+      --muted: #b7c0d8;
+      --glass: rgba(255, 255, 255, 0.08);
+      --border: rgba(255, 255, 255, 0.16);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Space Grotesk", system-ui, -apple-system, sans-serif;
+      background: radial-gradient(1200px 600px at 10% -10%, #1f3b63 0%, transparent 60%),
+                  radial-gradient(1000px 500px at 90% 0%, #2a1740 0%, transparent 55%),
+                  linear-gradient(160deg, var(--bg-1), var(--bg-2) 45%, var(--bg-3));
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .grid {
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(1000px 600px at 50% 0%, black 40%, transparent 75%);
+      pointer-events: none;
+      opacity: 0.35;
+    }
+
+    .wrap {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--glass);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: 0.3px;
+      backdrop-filter: blur(8px);
+    }
+
+    h1 {
+      font-family: "Fraunces", serif;
+      font-size: clamp(36px, 4vw, 64px);
+      line-height: 1.05;
+      margin: 22px 0 16px;
+      letter-spacing: -0.5px;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: clamp(16px, 2vw, 20px);
+      max-width: 720px;
+    }
+
+    .cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 18px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      text-decoration: none;
+      color: var(--ink);
+      background: rgba(255,255,255,0.06);
+      backdrop-filter: blur(8px);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255,255,255,0.35);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    }
+
+    .sections {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-top: 48px;
+    }
+
+    .card {
+      padding: 20px;
+      border-radius: 18px;
+      background: var(--glass);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+      min-height: 180px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: #0b0f17;
+      background: linear-gradient(120deg, var(--accent-1), var(--accent-2));
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .card a {
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .stats {
+      margin-top: 50px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+    }
+
+    .stat {
+      padding: 16px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.12);
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 22px;
+    }
+
+    .footer {
+      margin-top: 64px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .orb {
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.25), rgba(255,255,255,0));
+      border-radius: 50%;
+      top: -60px;
+      right: -80px;
+      opacity: 0.4;
+    }
+
+    @media (max-width: 640px) {
+      .cta { flex-direction: column; }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-up { animation: fadeUp 0.6s ease both; }
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+  </style>
+</head>
+<body>
+  <div class="grid"></div>
+  <div class="wrap">
+    <div class="badge fade-up">OpenClaw Papers Hub · Daily arXiv Signals</div>
+    <h1 class="fade-up delay-1">Track the newest research across Video, World Models, and Agents.</h1>
+    <p class="lead fade-up delay-2">A lightweight, auto-updating hub that pulls arXiv papers, translates abstracts, and organizes them into collapsible daily digests.</p>
+
+    <div class="cta">
+      <a class="btn" href="../README.md">Open Video Index</a>
+      <a class="btn" href="../world-model/README.md">World Model Index</a>
+      <a class="btn" href="../agent/README.md">Agent Index</a>
+    </div>
+
+    <div class="sections">
+      <div class="card fade-up delay-1">
+        <div class="orb"></div>
+        <span class="chip">Video Focus</span>
+        <h3>Video Models & Editing</h3>
+        <p>Video generation, understanding, editing, restoration, and temporal modeling updates.</p>
+        <a href="../README.md">Browse Video Papers →</a>
+      </div>
+      <div class="card fade-up delay-2">
+        <span class="chip">World Models</span>
+        <h3>World Modeling</h3>
+        <p>Dynamics models, imagination, model-based RL, and world-model advances.</p>
+        <a href="../world-model/README.md">Browse World Models →</a>
+      </div>
+      <div class="card fade-up delay-2">
+        <span class="chip">Agents</span>
+        <h3>Agent Systems</h3>
+        <p>Agentic planning, tool-use, multi-agent systems, and decision-making research.</p>
+        <a href="../agent/README.md">Browse Agents →</a>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <strong>Daily</strong>
+        Updates with new arXiv submissions
+      </div>
+      <div class="stat">
+        <strong>3 Tracks</strong>
+        Video · World Model · Agent
+      </div>
+      <div class="stat">
+        <strong>Free</strong>
+        Translation pipeline with fallback
+      </div>
+      <div class="stat">
+        <strong>Readable</strong>
+        Folded daily summaries
+      </div>
+    </div>
+
+    <div class="footer">Built for fast scanning and focused reading. Everything is generated by GitHub Actions.</div>
+  </div>
+</body>
+</html>

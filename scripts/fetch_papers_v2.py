@@ -155,6 +155,36 @@ def extract_links(paper):
         elif any(k in u for k in ["project", "page", "site"]): links["project"] = url
     return links
 
+def load_recent_papers(days=5):
+    papers_dir = Path(__file__).parent.parent / "papers"
+    recent_ids = set()
+    if not papers_dir.exists(): return recent_ids
+    start_date = datetime.now() - timedelta(days=days)
+    for f in papers_dir.glob("*.md"):
+        try:
+            if datetime.strptime(f.stem, "%Y-%m-%d") >= start_date:
+                recent_ids.update(re.findall(r'arxiv\.org/abs/(\d+\.\d+v\d+|\d+\.\d+)', f.read_text()))
+        except: continue
+    return recent_ids
+
+def update_readme_index():
+    base_dir = Path(__file__).parent.parent
+    papers_dir = base_dir / "papers"
+    readme_path = base_dir / "README.md"
+    if not papers_dir.exists(): return
+    files = sorted(papers_dir.glob("*.md"), reverse=True)
+    idx, content = "", ""
+    for f in files:
+        c = f.read_text()
+        cnt = re.search(r'\*\*Paper Count\*\*: (\d+)', c)
+        cnt_str = cnt.group(1) if cnt else "0"
+        idx += f"- [{f.stem}](papers/{f.name}) - {cnt_str} papers\n"
+        content += f"<details><summary><b>{f.stem} ({cnt_str} papers)</b></summary>\n\n{c}\n\n</details>\n\n"
+    raw = readme_path.read_text()
+    raw = re.sub(r'<!-- PAPERS_INDEX_START -->.*?<!-- PAPERS_INDEX_END -->', lambda m:f'<!-- PAPERS_INDEX_START -->\n{idx}<!-- PAPERS_INDEX_END -->', raw, flags=re.DOTALL)
+    raw = re.sub(r'<!-- PAPERS_CONTENT_START -->.*?<!-- PAPERS_CONTENT_END -->',lambda m: f'<!-- PAPERS_CONTENT_START -->\n{content}<!-- PAPERS_CONTENT_END -->', raw, flags=re.DOTALL)
+    readme_path.write_text(raw)
+
 def generate_markdown(papers, date_str):
     md = f"# arXiv Video Papers (V2) - {date_str}\n\n**Paper Count**: {len(papers)}\n\n---\n\n"
     for i, p in enumerate(papers, 1):
@@ -170,22 +200,19 @@ def generate_markdown(papers, date_str):
                     txt = subprocess.run(["pdftotext", "-layout", tmp.name, "-"], capture_output=True, text=True).stdout
                     if txt: ai_analysis = analyze_paper_with_ai(p, txt)
                 except: pass
-        md += f"## {i}. {p['title']}\n\n**中文标题**: {t_zh}\n\n"
+        md += f"## {i}. {p['title']} / {t_zh}\n\n"
         md += f"**Date**: {p['published']} | **arXiv**: [{p['id']}]({p['abs_url']}) | **PDF**: [Link]({p['pdf_url']})\n\n"
+        md += f"**Categories**: {', '.join(p['categories'])}\n\n"
         if links["project"]: md += f"**Project**: {links['project']}  "
         if links["code"]: md += f"**Code**: {links['code']}\n\n"
-        md += f"<details><summary><b>Abstract</b></summary>\n\n{p['summary']}\n\n</details>\n\n"
-        md += f"<details><summary><b>中文摘要</b></summary>\n\n{s_zh}\n\n</details>\n\n"
+        md += f"<details><summary><b>Abstract / 摘要</b></summary>\n\n{p['summary']}\n\n{s_zh}\n\n</details>\n\n"
         md += f"### AI 阅读分析\n\n{ai_analysis}\n\n---\n\n"
         time.sleep(1.5)
     return md
 
 def main():
     papers_dir = Path(__file__).parent.parent / "papers"
-    recent = set()
-    if papers_dir.exists():
-        for f in papers_dir.glob("*.md"):
-            recent.update(re.findall(r'arxiv\.org/abs/(\d+\.\d+)', f.read_text()))
+    recent = load_recent_papers(DAYS_TO_COMPARE)
     all_p = []
     for cat in CATEGORIES:
         all_p.extend(fetch_arxiv_papers(cat))
@@ -199,6 +226,7 @@ def main():
     md = generate_markdown(video, date_str)
     papers_dir.mkdir(exist_ok=True)
     (papers_dir / f"{date_str}.md").write_text(md)
+    update_readme_index()
     _info("Done.")
 
 if __name__ == "__main__": main()

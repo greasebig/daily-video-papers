@@ -17,6 +17,16 @@
 - [2026-02-11](papers/2026-02-11.md) - 355 papers
 <!-- PAPERS_INDEX_END -->
 
+## Other Topics
+
+- [World Model Papers](world-model/README.md)
+- [Agent Papers](agent/README.md)
+
+## Website
+
+- [Web Index](web/index.html)
+
+
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
