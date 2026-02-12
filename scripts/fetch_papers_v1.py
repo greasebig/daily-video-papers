@@ -1,7 +1,7 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """
 arXiv Papers Fetcher V1 (Extended Video Version)
-Daily fetch of arXiv video-related papers with free translation.
+Optimized for Gemini and MyMemory (No local LibreTranslate server).
 """
 
 import os
@@ -15,6 +15,7 @@ import urllib.error
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta
 from pathlib import Path
+from openai import OpenAI
 
 # Config
 CATEGORIES = ["cs.CV", "cs.AI", "cs.MM", "cs.RO", "cs.LG"]
@@ -38,64 +39,109 @@ VIDEO_KEYWORDS = [
     "video representation", "optical flow", "video prediction", "future frame prediction",
 ]
 
-# Translation config (free by default)
-TRANSLATION_CHAIN = os.environ.get("TRANSLATION_CHAIN", "mymemory,libretranslate")
-MYMEMORY_EMAIL = os.environ.get("MYMEMORY_EMAIL", "lujundaljdljd@163.com")
-LIBRETRANSLATE_URL = os.environ.get("LIBRETRANSLATE_URL")
-LIBRETRANSLATE_API_KEY = os.environ.get("LIBRETRANSLATE_API_KEY")
-MYMEMORY_URL = "https://api.mymemory.translated.net/get"
-MYMEMORY_MAX_BYTES = int(os.environ.get("MYMEMORY_MAX_BYTES", "450"))
-TRANSLATION_SLEEP = float(os.environ.get("TRANSLATION_SLEEP", "0.8"))
-TRANSLATION_MAX_RETRIES = int(os.environ.get("TRANSLATION_MAX_RETRIES", "5"))
-TRANSLATION_BASE_SLEEP = float(os.environ.get("TRANSLATION_BASE_SLEEP", "2.0"))
-TRANSLATION_MAX_SLEEP = float(os.environ.get("TRANSLATION_MAX_SLEEP", "60.0"))
-_TRANSLATION_CACHE = {}
+# API Keys
+DEEPSEEK_KEY = os.environ.get("DEEPSEEK_API_KEY")
+OPENAI_KEY = os.environ.get("OPENAI_API_KEY")
 
+# Translation config
+MYMEMORY_EMAIL = os.environ.get("MYMEMORY_EMAIL", "lujundaljdljd@163.com")
+MYMEMORY_URL = "https://api.mymemory.translated.net/get"
+MYMEMORY_MAX_BYTES = 450
+TRANSLATION_SLEEP = float(os.environ.get("TRANSLATION_SLEEP", "1.0"))
+_TRANSLATION_CACHE = {}
 
 def _ts():
     return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-
 def _info(msg):
     print(f"{_ts()} | INFO | {msg}")
-
 
 def _warn(msg):
     print(f"{_ts()} | WARN | {msg}")
 
-
 def _err(msg):
     print(f"{_ts()} | ERROR | {msg}")
 
+# Initialize AI Client
+client = None
+model_name = None
 
-_info(f"Starting V1 fetch. Chain={TRANSLATION_CHAIN}, DaysToCheck={DAYS_TO_CHECK}, DaysToCompare={DAYS_TO_COMPARE}, MaxPapers={MAX_PAPERS}")
+if DEEPSEEK_KEY:
+    _info("Using DeepSeek API for translation")
+    client = OpenAI(api_key=DEEPSEEK_KEY, base_url="https://api.deepseek.com")
+    model_name = "deepseek-chat"
+elif OPENAI_KEY and OPENAI_KEY.startswith("AIza"):
+    _info("Using Gemini API (via Google AI Studio) for translation")
+    client = OpenAI(
+        api_key=OPENAI_KEY,
+        base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
+    )
+    model_name = "gemini-2.0-flash"
+elif OPENAI_KEY:
+    _info("Using Standard OpenAI API for translation")
+    client = OpenAI(api_key=OPENAI_KEY)
+    model_name = "gpt-4o-mini"
+else:
+    _warn("No AI API Key found. Will fallback to MyMemory.")
 
+def translate_with_ai(text):
+    """Use AI to translate text."""
+    if not client:
+        return None
+    try:
+        response = client.chat.completions.create(
+            model=model_name,
+            messages=[
+                {"role": "system", "content": "You are a professional translator. Translate the following academic text to Chinese. Keep technical terms in English when appropriate. Only return the translation, no explanations."},
+                {"role": "user", "content": text}
+            ],
+            temperature=0.3
+        )
+        return response.choices[0].message.content.strip()
+    except Exception as e:
+        _warn(f"AI Translation failed: {e}")
+        return None
 
-def _normalize_chain(chain_str):
-    items = [p.strip().lower() for p in chain_str.split(",") if p.strip()]
-    seen = set()
-    ordered = []
-    for p in items:
-        if p not in ("mymemory", "libretranslate"):
-            continue
-        if p in seen:
-            continue
-        seen.add(p)
-        ordered.append(p)
-    if not ordered:
-        ordered = ["mymemory"]
-    return ordered
+def translate_with_mymemory(text):
+    """Use MyMemory API to translate text."""
+    try:
+        # Split text into chunks if too long
+        if len(text.encode("utf-8")) > MYMEMORY_MAX_BYTES:
+            return text # Simple fallback for very long text in V1
+            
+        params = {"q": text, "langpair": "en|zh-CN"}
+        if MYMEMORY_EMAIL:
+            params["de"] = MYMEMORY_EMAIL
+        url = MYMEMORY_URL + "?" + urllib.parse.urlencode(params)
+        req = urllib.request.Request(url, headers={"User-Agent": "daily-video-papers/1.0"})
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+        if data.get("responseStatus") == 200:
+            return data.get("responseData", {}).get("translatedText") or text
+        return text
+    except Exception as e:
+        _warn(f"MyMemory Translation failed: {e}")
+        return text
 
-
-def _provider_chain():
-    chain = _normalize_chain(TRANSLATION_CHAIN)
-    if "libretranslate" in chain and not LIBRETRANSLATE_URL:
-        _warn("LibreTranslate in chain but LIBRETRANSLATE_URL not set. Skipping LibreTranslate.")
-        chain = [p for p in chain if p != "libretranslate"]
-    if not chain:
-        chain = ["mymemory"]
-    return chain
-
+def translate_text(text):
+    """Translation chain: AI -> MyMemory -> Original."""
+    if not text or not text.strip():
+        return ""
+    
+    if text in _TRANSLATION_CACHE:
+        return _TRANSLATION_CACHE[text]
+    
+    # 1. Try AI
+    result = translate_with_ai(text)
+    
+    # 2. Try MyMemory if AI fails
+    if not result:
+        _info("Falling back to MyMemory...")
+        result = translate_with_mymemory(text)
+        time.sleep(TRANSLATION_SLEEP) # Respect MyMemory rate limit
+        
+    _TRANSLATION_CACHE[text] = result
+    return result
 
 def fetch_arxiv_papers(category, days=3, max_retries=3):
     """Fetch papers for a category from arXiv API."""
@@ -107,7 +153,7 @@ def fetch_arxiv_papers(category, days=3, max_retries=3):
     params = {
         "search_query": query,
         "start": 0,
-        "max_results": 500,
+        "max_results": 200,
         "sortBy": "submittedDate",
         "sortOrder": "descending",
     }
@@ -151,12 +197,10 @@ def fetch_arxiv_papers(category, days=3, max_retries=3):
                 return []
     return []
 
-
 def is_video_related(paper):
     """Check whether a paper is video-related."""
     text = (paper["title"] + " " + paper["summary"]).lower()
     return any(keyword.lower() in text for keyword in VIDEO_KEYWORDS)
-
 
 def extract_links(paper):
     """Extract project/code links from abstract."""
@@ -176,174 +220,6 @@ def extract_links(paper):
             links["project"] = url
     return links
 
-
-def _looks_chinese(text):
-    cjk = sum(1 for ch in text if "\u4e00" <= ch <= "\u9fff")
-    return cjk >= max(3, int(len(text) * 0.3))
-
-
-def _hard_split_by_bytes(text, max_bytes):
-    buf = ""
-    buf_bytes = 0
-    for ch in text:
-        b = len(ch.encode("utf-8"))
-        if buf and buf_bytes + b > max_bytes:
-            yield buf
-            buf = ch
-            buf_bytes = b
-        else:
-            buf += ch
-            buf_bytes += b
-    if buf:
-        yield buf
-
-
-def _split_text_by_bytes(text, max_bytes):
-    if len(text.encode("utf-8")) <= max_bytes:
-        return [text]
-    parts = re.split(r"(?<=[.!?。！？])\s+", text)
-    chunks = []
-    current = ""
-    current_bytes = 0
-    for part in parts:
-        if not part:
-            continue
-        part_bytes = len(part.encode("utf-8"))
-        if part_bytes > max_bytes:
-            for piece in _hard_split_by_bytes(part, max_bytes):
-                piece_bytes = len(piece.encode("utf-8"))
-                if current and current_bytes + piece_bytes + 1 > max_bytes:
-                    chunks.append(current)
-                    current = ""
-                    current_bytes = 0
-                if current:
-                    current += " " + piece
-                    current_bytes += 1 + piece_bytes
-                else:
-                    current = piece
-                    current_bytes = piece_bytes
-                chunks.append(current)
-                current = ""
-                current_bytes = 0
-            continue
-        if current and current_bytes + part_bytes + 1 > max_bytes:
-            chunks.append(current)
-            current = part
-            current_bytes = part_bytes
-        else:
-            if current:
-                current += " " + part
-                current_bytes += 1 + part_bytes
-            else:
-                current = part
-                current_bytes = part_bytes
-    if current:
-        chunks.append(current)
-    return chunks
-
-
-def _translate_mymemory(text):
-    params = {
-        "q": text,
-        "langpair": "en|zh-CN",
-    }
-    if MYMEMORY_EMAIL:
-        params["de"] = MYMEMORY_EMAIL
-    url = MYMEMORY_URL + "?" + urllib.parse.urlencode(params, quote_via=urllib.parse.quote)
-    req = urllib.request.Request(url, headers={"User-Agent": "daily-video-papers/1.0"})
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        data = json.loads(resp.read().decode("utf-8"))
-    if data.get("responseStatus") != 200:
-        raise RuntimeError(f"MyMemory error: {data.get('responseStatus')} {data.get('responseDetails')}")
-    return data.get("responseData", {}).get("translatedText") or ""
-
-
-def _translate_libretranslate(text):
-    if not LIBRETRANSLATE_URL:
-        raise RuntimeError("LIBRETRANSLATE_URL not set")
-    payload = {
-        "q": text,
-        "source": "en",
-        "target": "zh",
-        "format": "text",
-    }
-    if LIBRETRANSLATE_API_KEY:
-        payload["api_key"] = LIBRETRANSLATE_API_KEY
-    data = urllib.parse.urlencode(payload).encode("utf-8")
-    req = urllib.request.Request(
-        LIBRETRANSLATE_URL.rstrip("/") + "/translate",
-        data=data,
-        headers={"Content-Type": "application/x-www-form-urlencoded", "User-Agent": "daily-video-papers/1.0"},
-    )
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        result = json.loads(resp.read().decode("utf-8"))
-    return result.get("translatedText") or ""
-
-
-def _translate_with_retries(func, chunk, chunk_bytes, provider_name):
-    for attempt in range(1, TRANSLATION_MAX_RETRIES + 1):
-        try:
-            return func(chunk)
-        except urllib.error.HTTPError as e:
-            status = getattr(e, "code", None)
-            retry_after = e.headers.get("Retry-After") if hasattr(e, "headers") else None
-            if status in (429, 500, 502, 503, 504):
-                base = TRANSLATION_BASE_SLEEP * (2 ** (attempt - 1))
-                sleep_s = min(TRANSLATION_MAX_SLEEP, base)
-                if retry_after:
-                    try:
-                        sleep_s = max(sleep_s, float(retry_after))
-                    except ValueError:
-                        pass
-                sleep_s += random.uniform(0, 1.0)
-                _warn(f"{provider_name} HTTP {status} on attempt {attempt} (bytes={chunk_bytes}). Sleep {sleep_s:.1f}s")
-                time.sleep(sleep_s)
-                continue
-            raise
-        except Exception as e:
-            base = TRANSLATION_BASE_SLEEP * (2 ** (attempt - 1))
-            sleep_s = min(TRANSLATION_MAX_SLEEP, base) + random.uniform(0, 1.0)
-            _warn(f"{provider_name} error on attempt {attempt} (bytes={chunk_bytes}): {e}. Sleep {sleep_s:.1f}s")
-            time.sleep(sleep_s)
-            continue
-    return ""
-
-
-def translate_text(text):
-    """Translate text to Chinese using a free API chain."""
-    if not text or not text.strip():
-        return ""
-    if _looks_chinese(text):
-        return text
-    cached = _TRANSLATION_CACHE.get(text)
-    if cached is not None:
-        return cached
-
-    chain = _provider_chain()
-    chunks = _split_text_by_bytes(text, MYMEMORY_MAX_BYTES)
-    translated_chunks = []
-
-    for chunk in chunks:
-        chunk_bytes = len(chunk.encode("utf-8"))
-        translated = ""
-        for provider in chain:
-            if provider == "libretranslate":
-                translated = _translate_with_retries(_translate_libretranslate, chunk, chunk_bytes, "LibreTranslate")
-            else:
-                translated = _translate_with_retries(_translate_mymemory, chunk, chunk_bytes, "MyMemory")
-            if translated:
-                break
-        if not translated:
-            _err(f"Translation failed after retries (bytes={chunk_bytes}). Returning source chunk.")
-            translated = chunk
-        translated_chunks.append(translated)
-        time.sleep(TRANSLATION_SLEEP)
-
-    result = "".join(translated_chunks).strip()
-    _TRANSLATION_CACHE[text] = result or text
-    return result or text
-
-
 def load_recent_papers(days=5):
     """Load recent paper IDs for de-duplication."""
     papers_dir = Path(__file__).parent.parent / "papers"
@@ -359,7 +235,6 @@ def load_recent_papers(days=5):
         except Exception:
             continue
     return recent_ids
-
 
 def generate_markdown(papers, date_str):
     """Generate Markdown for papers."""
@@ -384,11 +259,17 @@ def generate_markdown(papers, date_str):
         md_content += f"**Categories**: {', '.join(paper['categories'])}\n\n"
         md_content += f"<details><summary><b>Abstract</b></summary>\n\n{paper['summary']}\n\n</details>\n\n"
         md_content += f"<details><summary><b>Chinese Abstract</b></summary>\n\n{summary_zh}\n\n</details>\n\n---\n\n"
-        time.sleep(1)
+        time.sleep(0.5)
     return md_content
 
-
-def _build_readme_sections(papers_dir):
+def update_readme_index():
+    """Update README index and daily content."""
+    base_dir = Path(__file__).parent.parent
+    papers_dir = base_dir / "papers"
+    readme_path = base_dir / "README.md"
+    if not papers_dir.exists():
+        return
+    
     paper_files = sorted(papers_dir.glob("*.md"), reverse=True)
     index_lines = []
     content_blocks = []
@@ -402,31 +283,18 @@ def _build_readme_sections(papers_dir):
             f"{content}\n\n"
             f"</details>"
         )
+    
     index_content = "\n" + "\n".join(index_lines) + "\n"
     content_section = "\n" + "\n\n".join(content_blocks) + "\n"
-    return index_content, content_section
-
-
-def update_readme_index():
-    """Update README index and daily content."""
-    base_dir = Path(__file__).parent.parent
-    papers_dir = base_dir / "papers"
-    readme_path = base_dir / "README.md"
-    if not papers_dir.exists():
-        return
-    index_content, content_section = _build_readme_sections(papers_dir)
 
     readme_content = readme_path.read_text(encoding="utf-8")
-    index_pattern = r'<!-- PAPERS_INDEX_START -->.*?<!-- PAPERS_INDEX_END -->'
-    index_replacement = f'<!-- PAPERS_INDEX_START -->{index_content}<!-- PAPERS_INDEX_END -->'
-    readme_content = re.sub(index_pattern, index_replacement, readme_content, flags=re.DOTALL)
-
-    content_pattern = r'<!-- PAPERS_CONTENT_START -->.*?<!-- PAPERS_CONTENT_END -->'
-    content_replacement = f'<!-- PAPERS_CONTENT_START -->{content_section}<!-- PAPERS_CONTENT_END -->'
-    readme_content = re.sub(content_pattern, content_replacement, readme_content, flags=re.DOTALL)
-
+    readme_content = re.sub(r'<!-- PAPERS_INDEX_START -->.*?<!-- PAPERS_INDEX_END -->', 
+                            f'<!-- PAPERS_INDEX_START -->{index_content}<!-- PAPERS_INDEX_END -->', 
+                            readme_content, flags=re.DOTALL)
+    readme_content = re.sub(r'<!-- PAPERS_CONTENT_START -->.*?<!-- PAPERS_CONTENT_END -->', 
+                            f'<!-- PAPERS_CONTENT_START -->{content_section}<!-- PAPERS_CONTENT_END -->', 
+                            readme_content, flags=re.DOTALL)
     readme_path.write_text(readme_content, encoding="utf-8")
-
 
 def main():
     recent_ids = load_recent_papers(DAYS_TO_COMPARE)
@@ -436,7 +304,7 @@ def main():
         papers = fetch_arxiv_papers(cat, DAYS_TO_CHECK)
         all_papers.extend(papers)
         if i < len(CATEGORIES) - 1:
-            time.sleep(3)
+            time.sleep(2)
 
     unique_papers = {p["id"]: p for p in all_papers}
     video_papers = [p for p in unique_papers.values() if is_video_related(p)]
@@ -458,7 +326,6 @@ def main():
     (papers_dir / f"{date_str}.md").write_text(md_content, encoding="utf-8")
     update_readme_index()
     _info(f"Completed. Output written to papers/{date_str}.md")
-
 
 if __name__ == "__main__":
     main()
