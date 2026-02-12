@@ -38,7 +38,88 @@ VIDEO_KEYWORDS = [
     "video model", "temporal modeling", "spatio-temporal", "video transformer",
     "video representation", "optical flow", "video prediction", "future frame prediction",
 ]
+import re
 
+# =========================
+# 1️⃣ 强视频任务（必须是视频任务）
+# =========================
+VIDEO_STRICT = [
+    "video generation",
+    "video synthesis",
+    "video editing",
+    "video edit",
+    "video diffusion",
+    "text-to-video",
+    "image-to-video",
+    "video-to-video",
+    "video understanding",
+    "video recognition",
+    "video classification",
+    "video retrieval",
+    "video captioning",
+    "video question answering",
+    "video qa",
+    "video summarization",
+    "video super-resolution",
+    "video enhancement",
+    "video restoration",
+    "video denoising",
+    "video interpolation",
+    "video compression",
+    "video coding",
+    "video segmentation",
+    "video object segmentation",
+    "video instance segmentation",
+    "video matting",
+    "video prediction",
+]
+
+# =========================
+# 2️⃣ 上下文视频任务（可能不写 video）
+# 必须和 video 同时出现
+# =========================
+VIDEO_CONTEXT = [
+    "action recognition",
+    "action detection",
+    "temporal action",
+    "object tracking",
+    "multi-object tracking",
+    "optical flow",
+    "frame interpolation",
+    "future frame prediction",
+    "motion generation",
+    "character animation",
+    "talking head",
+    "human motion",
+]
+
+# =========================
+# 3️⃣ 构建单个大正则（性能更好）
+# =========================
+STRICT_PATTERN = re.compile(
+    r"\b(" + "|".join(map(re.escape, VIDEO_STRICT)) + r")\b"
+)
+
+CONTEXT_PATTERN = re.compile(
+    r"\b(" + "|".join(map(re.escape, VIDEO_CONTEXT)) + r")\b"
+)
+
+# =========================
+# 4️⃣ 主函数
+# =========================
+def is_video_related(paper):
+    text = (paper.get("title", "") + " " + paper.get("summary", "")).lower()
+
+    # 强视频任务直接匹配
+    if STRICT_PATTERN.search(text):
+        return True
+
+    # 上下文类必须包含 video
+    if "video" in text and CONTEXT_PATTERN.search(text):
+        return True
+
+    return False
+    
 def _ts():
     return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
@@ -135,9 +216,9 @@ def fetch_arxiv_papers(category, days=3, max_retries=3):
             _warn(f"Fetch failed: {e}")
     return []
 
-def is_video_related(paper):
-    text = (paper["title"] + " " + paper["summary"]).lower()
-    return any(k.lower() in text for k in VIDEO_KEYWORDS)
+#def is_video_related(paper):
+#    text = (paper["title"] + " " + paper["summary"]).lower()
+#    return any(k.lower() in text for k in VIDEO_KEYWORDS)
 
 def extract_links(paper):
     text = paper["summary"]
