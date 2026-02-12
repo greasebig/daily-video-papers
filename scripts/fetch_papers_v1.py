@@ -191,8 +191,8 @@ def update_readme_index():
         idx += f"- [{f.stem}](papers/{f.name}) - {cnt_str} papers\n"
         content += f"<details><summary><b>{f.stem} ({cnt_str} papers)</b></summary>\n\n{c}\n\n</details>\n\n"
     raw = readme_path.read_text()
-    raw = re.sub(r'<!-- PAPERS_INDEX_START -->.*?<!-- PAPERS_INDEX_END -->', f'<!-- PAPERS_INDEX_START -->\n{idx}<!-- PAPERS_INDEX_END -->', raw, flags=re.DOTALL)
-    raw = re.sub(r'<!-- PAPERS_CONTENT_START -->.*?<!-- PAPERS_CONTENT_END -->', f'<!-- PAPERS_CONTENT_START -->\n{content}<!-- PAPERS_CONTENT_END -->', raw, flags=re.DOTALL)
+    raw = re.sub(r'<!-- PAPERS_INDEX_START -->.*?<!-- PAPERS_INDEX_END -->', lambda m:f'<!-- PAPERS_INDEX_START -->\n{idx}<!-- PAPERS_INDEX_END -->', raw, flags=re.DOTALL)
+    raw = re.sub(r'<!-- PAPERS_CONTENT_START -->.*?<!-- PAPERS_CONTENT_END -->',lambda m: f'<!-- PAPERS_CONTENT_START -->\n{content}<!-- PAPERS_CONTENT_END -->', raw, flags=re.DOTALL)
     readme_path.write_text(raw)
 
 def main():
