@@ -3,6 +3,8 @@
 on:
   schedule:
     - cron: '0 2 * * *' # daily 10:00 China time (UTC+8)
+  push:
+    branches: [main]
   workflow_dispatch:
 
 concurrency:
@@ -11,6 +13,7 @@ concurrency:
 
 jobs:
   update-papers:
+    if: ${{ github.actor != 'github-actions[bot]' }}
     runs-on: ubuntu-latest
     services:
       libretranslate:
@@ -41,7 +44,7 @@ jobs:
           TRANSLATION_SLEEP: '0.6'
         run: |
           VERSION="${{ vars.VERSION }}"
-          if [ -z "$VERSION" ]; then VERSION="v1"; fi
+          if [ -z "$VERSION" ]; then VERSION="v3"; fi
           cd scripts
           python3 fetch_papers_$VERSION.py
       - name: Commit and push changes
@@ -58,6 +61,7 @@ jobs:
           fi
 
   update-world-model:
+    if: ${{ github.actor != 'github-actions[bot]' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -92,6 +96,7 @@ jobs:
           fi
 
   update-agent:
+    if: ${{ github.actor != 'github-actions[bot]' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
