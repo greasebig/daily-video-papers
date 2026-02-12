@@ -214,6 +214,79 @@ def generate_markdown(papers, date_str):
     return md
 
 
+
+
+def build_docs_site(base_dir, topic_name, papers_dir):
+    docs_root = base_dir / "docs"
+    docs_root.mkdir(parents=True, exist_ok=True)
+    papers_out = docs_root / "papers"
+    papers_out.mkdir(parents=True, exist_ok=True)
+
+    # copy markdown papers into docs folder for Pages access
+    for md in papers_dir.glob("*.md"):
+        target = papers_out / md.name
+        try:
+            target.write_text(md.read_text(encoding="utf-8"), encoding="utf-8")
+        except Exception:
+            pass
+
+    # build simple index that renders markdown via marked.js
+    index_html = f"""<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{topic_name} Papers</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap');
+    :root {{ --bg:#0b0f17; --card:rgba(255,255,255,0.06); --border:rgba(255,255,255,0.16); --ink:#f4f7ff; --muted:#b7c0d8; --accent:#2ec4b6; }}
+    *{{box-sizing:border-box}}
+    body{{margin:0;font-family:"Space Grotesk",sans-serif;color:var(--ink);background:radial-gradient(1000px 500px at 10% -10%, #1f3b63 0%, transparent 60%),linear-gradient(160deg,#0b0f17,#12243a);min-height:100vh}}
+    .wrap{{max-width:1100px;margin:0 auto;padding:48px 24px 80px}}
+    h1{{font-family:"Fraunces",serif;margin:0 0 8px;font-size:clamp(32px,4vw,56px)}}
+    p{{color:var(--muted)}}
+    .layout{{display:grid;grid-template-columns:260px 1fr;gap:20px;margin-top:24px}}
+    .panel{{padding:16px;border-radius:16px;background:var(--card);border:1px solid var(--border)}}
+    .list a{{display:block;color:var(--ink);text-decoration:none;padding:8px 6px;border-radius:10px}}
+    .list a:hover{{background:rgba(255,255,255,0.06)}}
+    .content{{padding:20px;border-radius:16px;background:var(--card);border:1px solid var(--border)}}
+    @media (max-width: 900px){{.layout{{grid-template-columns:1fr}}}}
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <h1>{topic_name} Papers</h1>
+    <p>Daily arXiv digests rendered directly on this page.</p>
+    <div class="layout">
+      <div class="panel list" id="list"></div>
+      <div class="content" id="content">Select a date to load papers.</div>
+    </div>
+  </div>
+  <script>
+    const files = {sorted([md.name for md in papers_dir.glob('*.md')], reverse=True)};
+    const list = document.getElementById('list');
+    const content = document.getElementById('content');
+    function loadFile(name){{
+      fetch('./papers/' + name).then(r=>r.text()).then(md=>{{
+        content.innerHTML = marked.parse(md);
+      }});
+    }}
+    files.forEach((f, i)=>{{
+      const a = document.createElement('a');
+      a.textContent = f.replace('.md','');
+      a.href = '#';
+      a.onclick = (e)=>{{e.preventDefault(); loadFile(f);}};
+      list.appendChild(a);
+      if (i===0) loadFile(f);
+    }});
+  </script>
+</body>
+</html>
+"""
+    (docs_root / "index.html").write_text(index_html, encoding="utf-8")
+
+
 def update_readme_index(base_dir):
     papers_dir = base_dir / "papers"
     readme_path = base_dir / "README.md"

@@ -25,6 +25,9 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - name: Sync with main
+        run: |
+          git pull --rebase origin main || true
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -51,7 +54,6 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git pull --rebase origin main || true
           git add papers/ README.md
           if git diff --staged --quiet; then
             echo "No changes"
@@ -69,6 +71,9 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - name: Sync with main
+        run: |
+          git pull --rebase origin main || true
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -88,7 +93,6 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git pull --rebase origin main || true
           git add world-model/README.md world-model/papers/
           if git diff --staged --quiet; then
             echo "No changes"
@@ -106,6 +110,9 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - name: Sync with main
+        run: |
+          git pull --rebase origin main || true
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -116,8 +123,8 @@ jobs:
           OUTPUT_DIR: agent
           REBUILD: "1"
           CATEGORIES: cs.AI,cs.CL,cs.LG,cs.RO
-          KEYWORDS: autonomous agent,ai agent,agentic,multi-agent,multi agent,tool use,tool-use,toolformer,react,reflexion,task planning,planning,reasoning
-          CONTEXT_KEYWORDS: tool use,tool-use,planning,task planning,multi-agent,agentic
+          KEYWORDS: autonomous agent,ai agent,agentic,multi-agent,multi agent,tool use,tool-use,toolformer,react,reflexion
+          CONTEXT_KEYWORDS: tool use,tool-use,multi-agent,agentic,autonomous
           REQUIRED_WORD: agent
           MYMEMORY_EMAIL: lujundaljdljd@163.com
         run: |
@@ -127,7 +134,6 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git pull --rebase origin main || true
           git add agent/README.md agent/papers/
           if git diff --staged --quiet; then
             echo "No changes"
