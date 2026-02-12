@@ -112,7 +112,9 @@ jobs:
           TOPIC_NAME: Agent
           OUTPUT_DIR: agent
           CATEGORIES: cs.AI,cs.CL,cs.LG,cs.RO
-          KEYWORDS: agent,agents,autonomous agent,ai agent,agentic,multi-agent,multi agent,tool use,tool-use,planning,reasoning,task planning,toolformer,react,reflexion
+          KEYWORDS: autonomous agent,ai agent,agentic,multi-agent,multi agent,tool use,tool-use,toolformer,react,reflexion,task planning,planning,reasoning
+          CONTEXT_KEYWORDS: tool use,tool-use,planning,task planning,multi-agent,agentic
+          REQUIRED_WORD: agent
           MYMEMORY_EMAIL: lujundaljdljd@163.com
         run: |
           cd scripts
