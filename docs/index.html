@@ -4,17 +4,17 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>OpenClaw Papers Hub</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap');
     :root {
-      --bg: #f6f9ff;
+      --bg: #eef3fb;
       --ink: #0b1b2b;
       --muted: #5a6b85;
-      --card: rgba(255,255,255,0.9);
-      --border: rgba(12,36,66,0.1);
+      --glass: rgba(255,255,255,0.6);
+      --border: rgba(12,36,66,0.12);
       --accent: #2ec4b6;
-      --accent-2: #ff9f1c;
-      --accent-3: #ff6b6b;
+      --accent-2: #f6ad55;
       --shadow: 0 18px 40px rgba(26, 60, 90, 0.12);
     }
     *{box-sizing:border-box}
@@ -24,15 +24,15 @@
       color:var(--ink);
       background:
         radial-gradient(700px 360px at 12% -8%, rgba(46,196,182,0.22), transparent 60%),
-        radial-gradient(700px 360px at 88% -10%, rgba(255,159,28,0.18), transparent 60%),
-        linear-gradient(180deg,#f9fcff,#edf4ff 60%,#f6f9ff);
+        radial-gradient(700px 360px at 88% -10%, rgba(246,173,85,0.22), transparent 60%),
+        linear-gradient(180deg,#f8fbff,#e9f1ff 60%,#eef3fb);
       min-height:100vh;
     }
     .wrap{max-width:1080px;margin:0 auto;padding:56px 24px 90px;position:relative}
     .badge{
       display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border-radius:999px;
-      background:rgba(255,255,255,0.85);border:1px solid var(--border);color:var(--muted);
-      font-size:13px;box-shadow:var(--shadow)
+      background:var(--glass);border:1px solid var(--border);color:var(--muted);
+      font-size:13px;backdrop-filter: blur(14px) saturate(160%);box-shadow:var(--shadow)
     }
     h1{font-family:"Fraunces",serif;font-size:clamp(34px,4vw,64px);margin:20px 0 12px;line-height:1.05}
     .lead{color:var(--muted);font-size:clamp(16px,2vw,20px);max-width:720px}
@@ -40,15 +40,15 @@
     .badge-row img{height:24px;border-radius:6px}
     .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
     .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:12px;border:1px solid var(--border);
-      text-decoration:none;color:var(--ink);background:rgba(255,255,255,0.7);box-shadow:var(--shadow);transition:all .2s}
+      text-decoration:none;color:var(--ink);background:var(--glass);backdrop-filter: blur(14px) saturate(160%);box-shadow:var(--shadow);transition:all .2s}
     .btn:hover{transform:translateY(-2px);border-color:rgba(12,36,66,0.2)}
     .sections{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:48px}
-    .card{padding:20px;border-radius:18px;background:var(--card);border:1px solid var(--border);box-shadow:var(--shadow);min-height:180px;display:flex;flex-direction:column;gap:10px}
+    .card{padding:20px;border-radius:18px;background:var(--glass);border:1px solid var(--border);box-shadow:var(--shadow);min-height:180px;display:flex;flex-direction:column;gap:10px;backdrop-filter: blur(16px) saturate(160%)}
     .chip{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:#0b1b2b;background:linear-gradient(120deg,var(--accent),var(--accent-2));padding:6px 10px;border-radius:999px;font-weight:700}
     .card p{margin:0;color:var(--muted);font-size:14px}
     .card a{color:var(--ink);text-decoration:none;font-weight:700;margin-top:auto;display:inline-flex;align-items:center;gap:8px}
     .stats{margin-top:50px;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px}
-    .stat{padding:16px;border-radius:14px;background:rgba(255,255,255,0.7);border:1px solid var(--border);text-align:center;box-shadow:var(--shadow)}
+    .stat{padding:16px;border-radius:14px;background:var(--glass);border:1px solid var(--border);text-align:center;box-shadow:var(--shadow);backdrop-filter: blur(14px) saturate(160%)}
     .stat strong{display:block;font-size:22px}
     .footer{margin-top:64px;color:var(--muted);font-size:13px}
     @media (max-width:640px){.cta{flex-direction:column}}

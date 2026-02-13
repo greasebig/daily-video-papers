@@ -239,6 +239,7 @@ def build_docs_site(repo_root, topic_slug, topic_name, papers_dir):
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{topic_name} Papers</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap');
     :root {{
