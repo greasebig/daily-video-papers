@@ -5,17 +5,17 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
-- [2026-02-13](papers/2026-02-13.md) - 73 papers
+- [2026-02-13](papers/2026-02-13.md) - 60 papers
 <!-- PAPERS_INDEX_END -->
 
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
-<details><summary><b>2026-02-13 (73 papers)</b></summary>
+<details><summary><b>2026-02-13 (60 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-02-13
 
-**Paper Count**: 73
+**Paper Count**: 60
 
 ---
 
@@ -397,23 +397,7 @@ The deployment of autonomous agents for Computational Fluid Dynamics (CFD), is c
 
 ---
 
-## 24. When Agents Disagree With Themselves: Measuring Behavioral Consistency in LLM-Based Agents / 当代理人与自己意见不一致时：衡量基于法学硕士的代理人的行为一致性
-
-**Date**: 2026-02-12 | **arXiv**: [2602.11619v1](http://arxiv.org/abs/2602.11619v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.11619v1)
-
-**Categories**: cs.AI
-
-<details><summary><b>Abstract / 摘要</b></summary>
-
-Run the same LLM agent on the same task twice: do you get the same behavior? We find the answer is often no. In a study of 3,000 agent runs across three models (Llama 3.1 70B, GPT-4o, and Claude Sonnet 4.5) on HotpotQA, we observe that ReAct-style agents produce 2.0--4.2 distinct action sequences per 10 runs on average, even with identical inputs. More importantly, this variance predicts failure: tasks with consistent behavior ($\leq$2 unique paths) achieve 80--92% accuracy, while highly inconsistent tasks ($\geq$6 unique paths) achieve only 25--60%, a 32--55 percentage point gap depending on model. We trace variance to early decisions: 69% of divergence occurs at step 2, the first search query. Our results suggest that monitoring behavioral consistency during execution could enable early error detection and improve agent reliability.
-
-在同一任务上运行相同的 LLM 代理两次：您得到相同的行为吗？我们发现答案往往是否定的。在 HotpotQA 上对 3,000 个智能体运行三个模型（Llama 3.1 70B、GPT-4o 和 Claude Sonnet 4.5）的研究中，我们观察到 ReAct 风格的智能体平均每 10 次运行产生 2.0--4.2 个不同的动作序列，即使输入相同。更重要的是，这种方差预测失败：行为一致的任务（$\leq$2 唯一路径）可实现 80--92% 的准确率，而高度不一致的任务（$\geq$6 唯一路径）仅实现 25--60%，根据模型的不同，差距为 32--55 个百分点。我们将差异追溯到早期决策：69% 的差异发生在第 2 步（第一个搜索查询）。我们的结果表明，在执行过程中监控行为一致性可以实现早期错误检测并提高代理可靠性。
-
-</details>
-
----
-
-## 25. ABot-N0: Technical Report on the VLA Foundation Model for Versatile Embodied Navigation / ABot-N0：多功能嵌入式导航 VLA 基础模型的技术报告
+## 24. ABot-N0: Technical Report on the VLA Foundation Model for Versatile Embodied Navigation / ABot-N0：多功能嵌入式导航 VLA 基础模型的技术报告
 
 **Date**: 2026-02-12 | **arXiv**: [2602.11598v1](http://arxiv.org/abs/2602.11598v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.11598v1)
 
@@ -429,7 +413,7 @@ Embodied navigation has long been fragmented by task-specific architectures. We 
 
 ---
 
-## 26. The Five Ws of Multi-Agent Communication: Who Talks to Whom, When, What, and Why -- A Survey from MARL to Emergent Language and LLMs / 多智能体通信的五个 W：谁与谁交谈、何时交谈、交谈内容和原因——从 MARL 到新兴语言和法学硕士的调查
+## 25. The Five Ws of Multi-Agent Communication: Who Talks to Whom, When, What, and Why -- A Survey from MARL to Emergent Language and LLMs / 多智能体通信的五个 W：谁与谁交谈、何时交谈、交谈内容和原因——从 MARL 到新兴语言和法学硕士的调查
 
 **Date**: 2026-02-12 | **arXiv**: [2602.11583v1](http://arxiv.org/abs/2602.11583v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.11583v1)
 
@@ -445,7 +429,7 @@ Multi-agent sequential decision-making powers many real-world systems, from auto
 
 ---
 
-## 27. Learning to Configure Agentic AI Systems / 学习配置代理人工智能系统
+## 26. Learning to Configure Agentic AI Systems / 学习配置代理人工智能系统
 
 **Date**: 2026-02-12 | **arXiv**: [2602.11574v1](http://arxiv.org/abs/2602.11574v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.11574v1)
 
@@ -461,7 +445,7 @@ Configuring LLM-based agent systems involves choosing workflows, tools, token bu
 
 ---
 
-## 28. Budget-Constrained Agentic Large Language Models: Intention-Based Planning for Costly Tool Use / 预算受限的代理大型语言模型：基于意图的昂贵工具使用规划
+## 27. Budget-Constrained Agentic Large Language Models: Intention-Based Planning for Costly Tool Use / 预算受限的代理大型语言模型：基于意图的昂贵工具使用规划
 
 **Date**: 2026-02-12 | **arXiv**: [2602.11541v1](http://arxiv.org/abs/2602.11541v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.11541v1)
 
@@ -477,7 +461,7 @@ We study budget-constrained tool-augmented agents, where a large language model 
 
 ---
 
-## 29. CausalAgent: A Conversational Multi-Agent System for End-to-End Causal Inference / CausalAgent：用于端到端因果推理的会话式多代理系统
+## 28. CausalAgent: A Conversational Multi-Agent System for End-to-End Causal Inference / CausalAgent：用于端到端因果推理的会话式多代理系统
 
 **Date**: 2026-02-12 | **arXiv**: [2602.11527v1](http://arxiv.org/abs/2602.11527v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.11527v1)
 
@@ -493,7 +477,7 @@ Causal inference holds immense value in fields such as healthcare, economics, an
 
 ---
 
-## 30. AgentLeak: A Full-Stack Benchmark for Privacy Leakage in Multi-Agent LLM Systems / AgentLeak：多代理 LLM 系统中隐私泄露的全栈基准
+## 29. AgentLeak: A Full-Stack Benchmark for Privacy Leakage in Multi-Agent LLM Systems / AgentLeak：多代理 LLM 系统中隐私泄露的全栈基准
 
 **Date**: 2026-02-12 | **arXiv**: [2602.11510v1](http://arxiv.org/abs/2602.11510v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.11510v1)
 
@@ -509,7 +493,7 @@ Multi-agent Large Language Model (LLM) systems create privacy risks that current
 
 ---
 
-## 31. SIGHT: Reinforcement Learning with Self-Evidence and Information-Gain Diverse Branching for Search Agent / SIGHT：具有不证自明和信息的强化学习 - 为搜索代理获得多样化分支
+## 30. SIGHT: Reinforcement Learning with Self-Evidence and Information-Gain Diverse Branching for Search Agent / SIGHT：具有不证自明和信息的强化学习 - 为搜索代理获得多样化分支
 
 **Date**: 2026-02-12 | **arXiv**: [2602.11551v1](http://arxiv.org/abs/2602.11551v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.11551v1)
 
@@ -525,7 +509,7 @@ Reinforcement Learning (RL) has empowered Large Language Models (LLMs) to master
 
 ---
 
-## 32. Convex Markov Games and Beyond: New Proof of Existence, Characterization and Learning Algorithms for Nash Equilibria / 凸马尔可夫博弈及其他：纳什均衡的新存在证明、表征和学习算法
+## 31. Convex Markov Games and Beyond: New Proof of Existence, Characterization and Learning Algorithms for Nash Equilibria / 凸马尔可夫博弈及其他：纳什均衡的新存在证明、表征和学习算法
 
 **Date**: 2026-02-12 | **arXiv**: [2602.12181v1](http://arxiv.org/abs/2602.12181v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.12181v1)
 
@@ -541,7 +525,7 @@ Convex Markov Games (cMGs) were recently introduced as a broad class of multi-ag
 
 ---
 
-## 33. PrefillShare: A Shared Prefill Module for KV Reuse in Multi-LLM Disaggregated Serving / PrefillShare：用于多 LLM 分解服务中 KV 重用的共享预填充模块
+## 32. PrefillShare: A Shared Prefill Module for KV Reuse in Multi-LLM Disaggregated Serving / PrefillShare：用于多 LLM 分解服务中 KV 重用的共享预填充模块
 
 **Date**: 2026-02-12 | **arXiv**: [2602.12029v1](http://arxiv.org/abs/2602.12029v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.12029v1)
 
@@ -557,7 +541,7 @@ Multi-agent systems increasingly orchestrate multiple specialized language model
 
 ---
 
-## 34. Towards Sustainable Investment Policies Informed by Opponent Shaping / 制定以对手塑造为指导的可持续投资政策
+## 33. Towards Sustainable Investment Policies Informed by Opponent Shaping / 制定以对手塑造为指导的可持续投资政策
 
 **Date**: 2026-02-12 | **arXiv**: [2602.11829v1](http://arxiv.org/abs/2602.11829v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.11829v1)
 
@@ -573,7 +557,7 @@ Addressing climate change requires global coordination, yet rational economic ac
 
 ---
 
-## 35. Deep Kernel Fusion for Transformers / 变形金刚的深度内核融合
+## 34. Deep Kernel Fusion for Transformers / 变形金刚的深度内核融合
 
 **Date**: 2026-02-12 | **arXiv**: [2602.11808v1](http://arxiv.org/abs/2602.11808v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.11808v1)
 
@@ -589,7 +573,7 @@ Agentic LLM inference with long contexts is increasingly limited by memory bandw
 
 ---
 
-## 36. A Generic Framework for Fair Consensus Clustering in Streams / 流中公平共识聚类的通用框架
+## 35. A Generic Framework for Fair Consensus Clustering in Streams / 流中公平共识聚类的通用框架
 
 **Date**: 2026-02-12 | **arXiv**: [2602.11500v1](http://arxiv.org/abs/2602.11500v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.11500v1)
 
@@ -605,7 +589,7 @@ Consensus clustering seeks to combine multiple clusterings of the same dataset, 
 
 ---
 
-## 37. RF-Modulated Adaptive Communication Improves Multi-Agent Robotic Exploration / 射频调制自适应通信改善多智能体机器人探索
+## 36. RF-Modulated Adaptive Communication Improves Multi-Agent Robotic Exploration / 射频调制自适应通信改善多智能体机器人探索
 
 **Date**: 2026-02-12 | **arXiv**: [2602.12074v1](http://arxiv.org/abs/2602.12074v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.12074v1)
 
@@ -621,7 +605,7 @@ Reliable coordination and efficient communication are critical challenges for mu
 
 ---
 
-## 38. Adaptive-Horizon Conflict-Based Search for Closed-Loop Multi-Agent Path Finding / 用于闭环多智能体路径查找的自适应地平线冲突搜索
+## 37. Adaptive-Horizon Conflict-Based Search for Closed-Loop Multi-Agent Path Finding / 用于闭环多智能体路径查找的自适应地平线冲突搜索
 
 **Date**: 2026-02-12 | **arXiv**: [2602.12024v1](http://arxiv.org/abs/2602.12024v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.12024v1)
 
@@ -637,7 +621,7 @@ MAPF 是自动化仓库和物流中大型机器人车队的核心协调问题。
 
 ---
 
-## 39. AC-MASAC: An Attentive Curriculum Learning Framework for Heterogeneous UAV Swarm Coordination / AC-MASAC：异构无人机群协调的细心课程学习框架
+## 38. AC-MASAC: An Attentive Curriculum Learning Framework for Heterogeneous UAV Swarm Coordination / AC-MASAC：异构无人机群协调的细心课程学习框架
 
 **Date**: 2026-02-12 | **arXiv**: [2602.11735v1](http://arxiv.org/abs/2602.11735v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.11735v1)
 
@@ -655,7 +639,7 @@ Cooperative path planning for heterogeneous UAV swarms poses significant challen
 
 ---
 
-## 40. Distributionally Robust Cooperative Multi-Agent Reinforcement Learning via Robust Value Factorization / 通过鲁棒价值分解的分布式鲁棒协作多智能体强化学习
+## 39. Distributionally Robust Cooperative Multi-Agent Reinforcement Learning via Robust Value Factorization / 通过鲁棒价值分解的分布式鲁棒协作多智能体强化学习
 
 **Date**: 2026-02-11 | **arXiv**: [2602.11437v1](http://arxiv.org/abs/2602.11437v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.11437v1)
 
@@ -673,7 +657,7 @@ Cooperative multi-agent reinforcement learning (MARL) commonly adopts centralize
 
 ---
 
-## 41. When Visibility Outpaces Verification: Delayed Verification and Narrative Lock-in in Agentic AI Discourse / 当可见性超过验证时：代理人工智能话语中的延迟验证和叙事锁定
+## 40. When Visibility Outpaces Verification: Delayed Verification and Narrative Lock-in in Agentic AI Discourse / 当可见性超过验证时：代理人工智能话语中的延迟验证和叙事锁定
 
 **Date**: 2026-02-11 | **arXiv**: [2602.11412v1](http://arxiv.org/abs/2602.11412v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.11412v1)
 
@@ -689,7 +673,7 @@ Agentic AI systems-autonomous entities capable of independent planning and execu
 
 ---
 
-## 42. TRACER: Trajectory Risk Aggregation for Critical Episodes in Agentic Reasoning / TRACER：主体推理中关键事件的轨迹风险聚合
+## 41. TRACER: Trajectory Risk Aggregation for Critical Episodes in Agentic Reasoning / TRACER：主体推理中关键事件的轨迹风险聚合
 
 **Date**: 2026-02-11 | **arXiv**: [2602.11409v1](http://arxiv.org/abs/2602.11409v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.11409v1)
 
@@ -707,7 +691,7 @@ Estimating uncertainty for AI agents in real-world multi-turn tool-using interac
 
 ---
 
-## 43. ReplicatorBench: Benchmarking LLM Agents for Replicability in Social and Behavioral Sciences / ReplicatorBench：对法学硕士代理在社会和行为科学中的可复制性进行基准测试
+## 42. ReplicatorBench: Benchmarking LLM Agents for Replicability in Social and Behavioral Sciences / ReplicatorBench：对法学硕士代理在社会和行为科学中的可复制性进行基准测试
 
 **Date**: 2026-02-11 | **arXiv**: [2602.11354v1](http://arxiv.org/abs/2602.11354v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.11354v1)
 
@@ -725,7 +709,7 @@ The literature has witnessed an emerging interest in AI agents for automated ass
 
 ---
 
-## 44. Pushing Forward Pareto Frontiers of Proactive Agents with Behavioral Agentic Optimization / 通过行为代理优化推进主动代理的帕累托前沿
+## 43. Pushing Forward Pareto Frontiers of Proactive Agents with Behavioral Agentic Optimization / 通过行为代理优化推进主动代理的帕累托前沿
 
 **Date**: 2026-02-11 | **arXiv**: [2602.11351v1](http://arxiv.org/abs/2602.11351v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.11351v1)
 
@@ -741,7 +725,7 @@ Proactive large language model (LLM) agents aim to actively plan, query, and int
 
 ---
 
-## 45. AgentNoiseBench: Benchmarking Robustness of Tool-Using LLM Agents Under Noisy Condition / AgentNoiseBench：噪声条件下使用工具的 LLM 代理的鲁棒性基准测试
+## 44. AgentNoiseBench: Benchmarking Robustness of Tool-Using LLM Agents Under Noisy Condition / AgentNoiseBench：噪声条件下使用工具的 LLM 代理的鲁棒性基准测试
 
 **Date**: 2026-02-11 | **arXiv**: [2602.11348v1](http://arxiv.org/abs/2602.11348v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.11348v1)
 
@@ -757,7 +741,7 @@ Recent advances in large language models have enabled LLM-based agents to achiev
 
 ---
 
-## 46. Security Threat Modeling for Emerging AI-Agent Protocols: A Comparative Analysis of MCP, A2A, Agora, and ANP / 新兴 AI-Agent 协议的安全威胁建模：MCP、A2A、Agora 和 ANP 的比较分析
+## 45. Security Threat Modeling for Emerging AI-Agent Protocols: A Comparative Analysis of MCP, A2A, Agora, and ANP / 新兴 AI-Agent 协议的安全威胁建模：MCP、A2A、Agora 和 ANP 的比较分析
 
 **Date**: 2026-02-11 | **arXiv**: [2602.11327v1](http://arxiv.org/abs/2602.11327v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.11327v1)
 
@@ -773,7 +757,7 @@ AI代理通信协议的快速发展，包括模型上下文协议（MCP）、Age
 
 ---
 
-## 47. CryptoAnalystBench: Failures in Multi-Tool Long-Form LLM Analysis / CryptoAnalystBench：多工具长格式 LLM 分析中的失败
+## 46. CryptoAnalystBench: Failures in Multi-Tool Long-Form LLM Analysis / CryptoAnalystBench：多工具长格式 LLM 分析中的失败
 
 **Date**: 2026-02-11 | **arXiv**: [2602.11304v1](http://arxiv.org/abs/2602.11304v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.11304v1)
 
@@ -789,7 +773,7 @@ Modern analyst agents must reason over complex, high token inputs, including doz
 
 ---
 
-## 48. The PBSAI Governance Ecosystem: A Multi-Agent AI Reference Architecture for Securing Enterprise AI Estates / PBSAI 治理生态系统：用于保护企业 AI 资产的多代理 AI 参考架构
+## 47. The PBSAI Governance Ecosystem: A Multi-Agent AI Reference Architecture for Securing Enterprise AI Estates / PBSAI 治理生态系统：用于保护企业 AI 资产的多代理 AI 参考架构
 
 **Date**: 2026-02-11 | **arXiv**: [2602.11301v1](http://arxiv.org/abs/2602.11301v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.11301v1)
 
@@ -805,7 +789,7 @@ Enterprises are rapidly deploying large language models, retrieval augmented gen
 
 ---
 
-## 49. FormalJudge: A Neuro-Symbolic Paradigm for Agentic Oversight / FormalJudge：代理监督的神经符号范式
+## 48. FormalJudge: A Neuro-Symbolic Paradigm for Agentic Oversight / FormalJudge：代理监督的神经符号范式
 
 **Date**: 2026-02-11 | **arXiv**: [2602.11136v2](http://arxiv.org/abs/2602.11136v2) | **PDF**: [Link](http://arxiv.org/pdf/2602.11136v2)
 
@@ -821,7 +805,7 @@ As LLM-based agents increasingly operate in high-stakes domains with real-world 
 
 ---
 
-## 50. Learning to Compose for Cross-domain Agentic Workflow Generation / 学习构建跨域代理工作流生成
+## 49. Learning to Compose for Cross-domain Agentic Workflow Generation / 学习构建跨域代理工作流生成
 
 **Date**: 2026-02-11 | **arXiv**: [2602.11114v1](http://arxiv.org/abs/2602.11114v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.11114v1)
 
@@ -837,7 +821,7 @@ Automatically generating agentic workflows -- executable operator graphs or code
 
 ---
 
-## 51. GameDevBench: Evaluating Agentic Capabilities Through Game Development / GameDevBench：通过游戏开发评估代理能力
+## 50. GameDevBench: Evaluating Agentic Capabilities Through Game Development / GameDevBench：通过游戏开发评估代理能力
 
 **Date**: 2026-02-11 | **arXiv**: [2602.11103v1](http://arxiv.org/abs/2602.11103v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.11103v1)
 
@@ -853,7 +837,7 @@ Despite rapid progress on coding agents, progress on their multimodal counterpar
 
 ---
 
-## 52. SurveyLens: A Research Discipline-Aware Benchmark for Automatic Survey Generation / SurveyLens：自动调查生成的研究学科感知基准
+## 51. SurveyLens: A Research Discipline-Aware Benchmark for Automatic Survey Generation / SurveyLens：自动调查生成的研究学科感知基准
 
 **Date**: 2026-02-11 | **arXiv**: [2602.11238v1](http://arxiv.org/abs/2602.11238v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.11238v1)
 
@@ -869,7 +853,7 @@ The exponential growth of scientific literature has driven the evolution of Auto
 
 ---
 
-## 53. Agent-Diff: Benchmarking LLM Agents on Enterprise API Tasks via Code Execution with State-Diff-Based Evaluation / Agent-Diff：通过基于状态差异评估的代码执行，对企业 API 任务上的 LLM 代理进行基准测试
+## 52. Agent-Diff: Benchmarking LLM Agents on Enterprise API Tasks via Code Execution with State-Diff-Based Evaluation / Agent-Diff：通过基于状态差异评估的代码执行，对企业 API 任务上的 LLM 代理进行基准测试
 
 **Date**: 2026-02-11 | **arXiv**: [2602.11224v1](http://arxiv.org/abs/2602.11224v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.11224v1)
 
@@ -887,23 +871,7 @@ We present Agent-Diff, a novel benchmarking framework for evaluating agentic Lar
 
 ---
 
-## 54. ISD-Agent-Bench: A Comprehensive Benchmark for Evaluating LLM-based Instructional Design Agents / ISD-Agent-Bench：评估基于 LLM 的教学设计代理的综合基准
-
-**Date**: 2026-02-11 | **arXiv**: [2602.10620v1](http://arxiv.org/abs/2602.10620v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.10620v1)
-
-**Categories**: cs.SE, cs.CL
-
-<details><summary><b>Abstract / 摘要</b></summary>
-
-Large Language Model (LLM) agents have shown promising potential in automating Instructional Systems Design (ISD), a systematic approach to developing educational programs. However, evaluating these agents remains challenging due to the lack of standardized benchmarks and the risk of LLM-as-judge bias. We present ISD-Agent-Bench, a comprehensive benchmark comprising 25,795 scenarios generated via a Context Matrix framework that combines 51 contextual variables across 5 categories with 33 ISD sub-steps derived from the ADDIE model. To ensure evaluation reliability, we employ a multi-judge protocol using diverse LLMs from different providers, achieving high inter-judge reliability. We compare existing ISD agents with novel agents grounded in classical ISD theories such as ADDIE, Dick \& Carey, and Rapid Prototyping ISD. Experiments on 1,017 test scenarios demonstrate that integrating classical ISD frameworks with modern ReAct-style reasoning achieves the highest performance, outperforming both pure theory-based agents and technique-only approaches. Further analysis reveals that theoretical quality strongly correlates with benchmark performance, with theory-based agents showing significant advantages in problem-centered design and objective-assessment alignment. Our work provides a foundation for systematic LLM-based ISD research.
-
-大语言模型（LLM）代理在自动化教学系统设计（ISD）方面显示出巨大的潜力，这是一种开发教育项目的系统方法。然而，由于缺乏标准化基准以及法学硕士法官偏见的风险，评估这些代理人仍然具有挑战性。我们提出了 ISD-Agent-Bench，这是一个综合基准测试，包含通过上下文矩阵框架生成的 25,795 个场景，该框架将跨 5 个类别的 51 个上下文变量与源自 ADDIE 模型的 33 个 ISD 子步骤相结合。为了确保评估的可靠性，我们采用了多法官协议，使用来自不同提供商的不同法学硕士，实现了法官间的高可靠性。我们将现有的 ISD 代理与基于经典 ISD 理论（例如 ADDIE、Dick & Carey 和快速原型 ISD）的新型代理进行比较。 1,017 个测试场景的实验表明，将经典 ISD 框架与现代 ReAct 式推理相结合可实现最高性能，优于纯粹基于理论的代理和仅技术方法。进一步的分析表明，理论质量与基准性能密切相关，基于理论的代理在以问题为中心的设计和目标评估一致性方面显示出显着的优势。我们的工作为基于法学硕士的系统性 ISD 研究奠定了基础。
-
-</details>
-
----
-
-## 55. Step 3.5 Flash: Open Frontier-Level Intelligence with 11B Active Parameters / 步骤3.5 Flash：利用11B主动参数开放前沿级智能
+## 53. Step 3.5 Flash: Open Frontier-Level Intelligence with 11B Active Parameters / 步骤3.5 Flash：利用11B主动参数开放前沿级智能
 
 **Date**: 2026-02-11 | **arXiv**: [2602.10604v1](http://arxiv.org/abs/2602.10604v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.10604v1)
 
@@ -919,7 +887,7 @@ We introduce Step 3.5 Flash, a sparse Mixture-of-Experts (MoE) model that bridge
 
 ---
 
-## 56. LHAW: Controllable Underspecification for Long-Horizon Tasks / LHAW：长期任务的可控不足
+## 54. LHAW: Controllable Underspecification for Long-Horizon Tasks / LHAW：长期任务的可控不足
 
 **Date**: 2026-02-11 | **arXiv**: [2602.10525v1](http://arxiv.org/abs/2602.10525v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.10525v1)
 
@@ -935,7 +903,7 @@ Long-horizon workflow agents that operate effectively over extended periods are 
 
 ---
 
-## 57. TestExplora: Benchmarking LLMs for Proactive Bug Discovery via Repository-Level Test Generation / TestExplora：通过存储库级测试生成对 LLM 进行主动 Bug 发现基准测试
+## 55. TestExplora: Benchmarking LLMs for Proactive Bug Discovery via Repository-Level Test Generation / TestExplora：通过存储库级测试生成对 LLM 进行主动 Bug 发现基准测试
 
 **Date**: 2026-02-11 | **arXiv**: [2602.10471v1](http://arxiv.org/abs/2602.10471v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.10471v1)
 
@@ -951,7 +919,7 @@ Given that Large Language Models (LLMs) are increasingly applied to automate sof
 
 ---
 
-## 58. The Landscape of Prompt Injection Threats in LLM Agents: From Taxonomy to Analysis / LLM 代理中的即时注入威胁概况：从分类到分析
+## 56. The Landscape of Prompt Injection Threats in LLM Agents: From Taxonomy to Analysis / LLM 代理中的即时注入威胁概况：从分类到分析
 
 **Date**: 2026-02-11 | **arXiv**: [2602.10453v1](http://arxiv.org/abs/2602.10453v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.10453v1)
 
@@ -967,7 +935,7 @@ The evolution of Large Language Models (LLMs) has resulted in a paradigm shift t
 
 ---
 
-## 59. From Natural Language to Materials Discovery:The Materials Knowledge Navigation Agent / 从自然语言到材料发现：材料知识导航代理
+## 57. From Natural Language to Materials Discovery:The Materials Knowledge Navigation Agent / 从自然语言到材料发现：材料知识导航代理
 
 **Date**: 2026-02-11 | **arXiv**: [2602.11123v1](http://arxiv.org/abs/2602.11123v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.11123v1)
 
@@ -983,7 +951,7 @@ Accelerating the discovery of high-performance materials remains a central chall
 
 ---
 
-## 60. Co-jump: Cooperative Jumping with Quadrupedal Robots via Multi-Agent Reinforcement Learning / 协同跳跃：通过多智能体强化学习与四足机器人协同跳跃
+## 58. Co-jump: Cooperative Jumping with Quadrupedal Robots via Multi-Agent Reinforcement Learning / 协同跳跃：通过多智能体强化学习与四足机器人协同跳跃
 
 **Date**: 2026-02-11 | **arXiv**: [2602.10514v1](http://arxiv.org/abs/2602.10514v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.10514v1)
 
@@ -999,7 +967,7 @@ While single-agent legged locomotion has witnessed remarkable progress, individu
 
 ---
 
-## 61. Autonomous Continual Learning of Computer-Use Agents for Environment Adaptation / 计算机使用代理的自主持续学习以适应环境
+## 59. Autonomous Continual Learning of Computer-Use Agents for Environment Adaptation / 计算机使用代理的自主持续学习以适应环境
 
 **Date**: 2026-02-10 | **arXiv**: [2602.10356v1](http://arxiv.org/abs/2602.10356v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.10356v1)
 
@@ -1017,111 +985,7 @@ Real-world digital environments are highly diverse and dynamic. These characteri
 
 ---
 
-## 62. Agent World Model: Infinity Synthetic Environments for Agentic Reinforcement Learning / 代理世界模型：代理强化学习的无限合成环境
-
-**Date**: 2026-02-10 | **arXiv**: [2602.10090v2](http://arxiv.org/abs/2602.10090v2) | **PDF**: [Link](http://arxiv.org/pdf/2602.10090v2)
-
-**Categories**: cs.AI, cs.CL, cs.LG
-
-**Code**: https://github.com/Snowflake-Labs/agent-world-model.
-
-<details><summary><b>Abstract / 摘要</b></summary>
-
-Recent advances in large language model (LLM) have empowered autonomous agents to perform complex tasks that require multi-turn interactions with tools and environments. However, scaling such agent training is limited by the lack of diverse and reliable environments. In this paper, we propose Agent World Model (AWM), a fully synthetic environment generation pipeline. Using this pipeline, we scale to 1,000 environments covering everyday scenarios, in which agents can interact with rich toolsets (35 tools per environment on average) and obtain high-quality observations. Notably, these environments are code-driven and backed by databases, providing more reliable and consistent state transitions than environments simulated by LLMs. Moreover, they enable more efficient agent interaction compared with collecting trajectories from realistic environments. To demonstrate the effectiveness of this resource, we perform large-scale reinforcement learning for multi-turn tool-use agents. Thanks to the fully executable environments and accessible database states, we can also design reliable reward functions. Experiments on three benchmarks show that training exclusively in synthetic environments, rather than benchmark-specific ones, yields strong out-of-distribution generalization. The code is available at https://github.com/Snowflake-Labs/agent-world-model.
-
-大语言模型 (LLM) 的最新进展使自主代理能够执行需要与工具和环境进行多轮交互的复杂任务。然而，由于缺乏多样化和可靠的环境，扩展此类代理训练受到限制。在本文中，我们提出了代理世界模型（AWM），一个完全合成的环境生成管道。使用此管道，我们可以扩展到涵盖日常场景的 1,000 个环境，其中代理可以与丰富的工具集（平均每个环境 35 个工具）进行交互并获得高质量的观察结果。值得注意的是，这些环境是代码驱动的，并由数据库支持，提供比法学硕士模拟的环境更可靠、更一致的状态转换。此外，与从现实环境中收集轨迹相比，它们可以实现更有效的代理交互。为了证明该资源的有效性，我们对多轮工具使用代理进行大规模强化学习。得益于完全可执行的环境和可访问的数据库状态，我们还可以设计可靠的奖励函数。对三个基准的实验表明，仅在合成环境中进行训练，而不是在特定于基准的环境中进行训练，可以产生强大的分布外泛化能力。该代码可在 https://github.com/Snowflake-Labs/agent-world-model 获取。
-
-</details>
-
----
-
-## 63. Towards Autonomous Mathematics Research / 走向自主数学研究
-
-**Date**: 2026-02-10 | **arXiv**: [2602.10177v2](http://arxiv.org/abs/2602.10177v2) | **PDF**: [Link](http://arxiv.org/pdf/2602.10177v2)
-
-**Categories**: cs.LG, cs.AI, cs.CL, cs.CY
-
-**Code**: https://github.com/google-deepmind/superhuman/tree/main/aletheia.
-
-<details><summary><b>Abstract / 摘要</b></summary>
-
-Recent advances in foundational models have yielded reasoning systems capable of achieving a gold-medal standard at the International Mathematical Olympiad. The transition from competition-level problem-solving to professional research, however, requires navigating vast literature and constructing long-horizon proofs. In this work, we introduce Aletheia, a math research agent that iteratively generates, verifies, and revises solutions end-to-end in natural language. Specifically, Aletheia is powered by an advanced version of Gemini Deep Think for challenging reasoning problems, a novel inference-time scaling law that extends beyond Olympiad-level problems, and intensive tool use to navigate the complexities of mathematical research. We demonstrate the capability of Aletheia from Olympiad problems to PhD-level exercises and most notably, through several distinct milestones in AI-assisted mathematics research: (a) a research paper (Feng26) generated by AI without any human intervention in calculating certain structure constants in arithmetic geometry called eigenweights; (b) a research paper (LeeSeo26) demonstrating human-AI collaboration in proving bounds on systems of interacting particles called independent sets; and (c) an extensive semi-autonomous evaluation (Feng et al., 2026a) of 700 open problems on Bloom's Erdos Conjectures database, including autonomous solutions to four open questions. In order to help the public better understand the developments pertaining to AI and mathematics, we suggest quantifying standard levels of autonomy and novelty of AI-assisted results, as well as propose a novel concept of human-AI interaction cards for transparency. We conclude with reflections on human-AI collaboration in mathematics and share all prompts as well as model outputs at https://github.com/google-deepmind/superhuman/tree/main/aletheia.
-
-基础模型的最新进展已经产生了能够在国际数学奥林匹克竞赛中达到金牌标准的推理系统。然而，从竞赛级问题解决到专业研究的转变需要查阅大量文献并构建长期证明。在这项工作中，我们介绍了 Aletheia，这是一种数学研究代理，可以用自然语言端到端地迭代生成、验证和修改解决方案。具体来说，Aletheia 由用于挑战性推理问题的 Gemini Deep Think 高级版本、超越奥林匹克级别问题的新颖推理时间缩放法则以及用于驾驭数学研究复杂性的密集工具使用提供支持。我们展示了 Aletheia 从奥林匹克问题到博士级别练习的能力，最值得注意的是，通过人工智能辅助数学研究中的几个不同里程碑：（a）由人工智能生成的研究论文（Feng26），在计算算术几何中称为特征权重的某些结构常数时无需任何人为干预； (b) 一篇研究论文（LeeSeo26）展示了人类与人工智能的协作，证明了称为独立集的相互作用粒子系统的界限； (c) 对 Bloom 的鄂尔多斯猜想数据库中的 700 个开放问题进行广泛的半自主评估（Feng 等人，2026a），包括四个开放问题的自主解决方案。为了帮助公众更好地了解人工智能和数学的发展，我们建议量化人工智能辅助结果的自主性和新颖性的标准水平，并提出一种新的人机交互卡概念以提高透明度。最后，我们对人类与人工智能在数学领域的协作进行了反思，并在 https://github.com/google-deepmind/super human/tree/main/aletheia 上分享了所有提示和模型输出。
-
-</details>
-
----
-
-## 64. Anagent For Enhancing Scientific Table & Figure Analysis / 增强科学表格和图形分析的试剂
-
-**Date**: 2026-02-10 | **arXiv**: [2602.10081v2](http://arxiv.org/abs/2602.10081v2) | **PDF**: [Link](http://arxiv.org/pdf/2602.10081v2)
-
-**Categories**: cs.CL, cs.AI
-
-<details><summary><b>Abstract / 摘要</b></summary>
-
-In scientific research, analysis requires accurately interpreting complex multimodal knowledge, integrating evidence from different sources, and drawing inferences grounded in domain-specific knowledge. However, current artificial intelligence (AI) systems struggle to consistently demonstrate such capabilities. The complexity and variability of scientific tables and figures, combined with heterogeneous structures and long-context requirements, pose fundamental obstacles to scientific table \& figure analysis. To quantify these challenges, we introduce AnaBench, a large-scale benchmark featuring $63,178$ instances from nine scientific domains, systematically categorized along seven complexity dimensions. To tackle these challenges, we propose Anagent, a multi-agent framework for enhanced scientific table \& figure analysis through four specialized agents: Planner decomposes tasks into actionable subtasks, Expert retrieves task-specific information through targeted tool execution, Solver synthesizes information to generate coherent analysis, and Critic performs iterative refinement through five-dimensional quality assessment. We further develop modular training strategies that leverage supervised finetuning and specialized reinforcement learning to optimize individual capabilities while maintaining effective collaboration. Comprehensive evaluation across 9 broad domains with 170 subdomains demonstrates that Anagent achieves substantial improvements, up to $\uparrow 13.43\%$ in training-free settings and $\uparrow 42.12\%$ with finetuning, while revealing that task-oriented reasoning and context-aware problem-solving are essential for high-quality scientific table \& figure analysis. Our project page: https://xhguo7.github.io/Anagent/.
-
-在科学研究中，分析需要准确解释复杂的多模态知识，整合不同来源的证据，并根据特定领域的知识得出推论。然而，当前的人工智能（AI）系统很难始终如一地展示这种能力。科学表格和图形的复杂性和可变性，加上异构结构和长上下文要求，对科学表格和图形分析构成了根本障碍。为了量化这些挑战，我们引入了 AnaBench，这是一个大型基准测试，包含来自九个科学领域的价值 63,178 美元的实例，并按照七个复杂性维度进行系统分类。为了应对这些挑战，我们提出了 Anagent，一个通过四个专门代理来增强科学表格和图形分析的多代理框架：Planner 将任务分解为可操作的子任务，Expert 通过有针对性的工具执行检索特定于任务的信息，Solver 综合信息以生成连贯的分析，Critic 通过五维质量评估进行迭代细化。我们进一步开发模块化培训策略，利用监督微调和专业强化学习来优化个人能力，同时保持有效的协作。跨 9 个广泛领域和 170 个子领域的综合评估表明，Anagent 取得了显着的改进，在免训练设置中高达 $\uparrow 13.43\%$，通过微调高达 $\uparrow 42.12\%$，同时揭示了面向任务的推理和上下文感知的问题解决对于高质量的科学表格和图形分析至关重要。我们的项目页面：https://xhguo7.github.io/Anagent/。
-
-</details>
-
----
-
-## 65. The Devil Behind Moltbook: Anthropic Safety is Always Vanishing in Self-Evolving AI Societies / Moltbook 背后的魔鬼：在自我进化的人工智能社会中，人类安全总是消失
-
-**Date**: 2026-02-10 | **arXiv**: [2602.09877v2](http://arxiv.org/abs/2602.09877v2) | **PDF**: [Link](http://arxiv.org/pdf/2602.09877v2)
-
-**Categories**: cs.CL
-
-<details><summary><b>Abstract / 摘要</b></summary>
-
-The emergence of multi-agent systems built from large language models (LLMs) offers a promising paradigm for scalable collective intelligence and self-evolution. Ideally, such systems would achieve continuous self-improvement in a fully closed loop while maintaining robust safety alignment--a combination we term the self-evolution trilemma. However, we demonstrate both theoretically and empirically that an agent society satisfying continuous self-evolution, complete isolation, and safety invariance is impossible. Drawing on an information-theoretic framework, we formalize safety as the divergence degree from anthropic value distributions. We theoretically demonstrate that isolated self-evolution induces statistical blind spots, leading to the irreversible degradation of the system's safety alignment. Empirical and qualitative results from an open-ended agent community (Moltbook) and two closed self-evolving systems reveal phenomena that align with our theoretical prediction of inevitable safety erosion. We further propose several solution directions to alleviate the identified safety concern. Our work establishes a fundamental limit on the self-evolving AI societies and shifts the discourse from symptom-driven safety patches to a principled understanding of intrinsic dynamical risks, highlighting the need for external oversight or novel safety-preserving mechanisms.
-
-由大型语言模型（LLM）构建的多智能体系统的出现为可扩展的集体智能和自我进化提供了一个有前途的范例。理想情况下，此类系统将在完全闭环中实现持续的自我改进，同时保持强大的安全一致性——我们将这种组合称为自我进化三难困境。然而，我们从理论和经验上证明，满足持续自我进化、完全隔离和安全不变性的智能体社会是不可能的。借鉴信息论框架，我们将安全性形式化为与人类价值分布的分歧程度。我们从理论上证明，孤立的自我进化会导致统计盲点，从而导致系统安全性的不可逆转的退化。来自开放式代理社区（Moltbook）和两个封闭的自我进化系统的经验和定性结果揭示了与我们对不可避免的安全侵蚀的理论预测相一致的现象。我们进一步提出了几个解决方案方向，以减轻已确定的安全问题。我们的工作对自我进化的人工智能社会建立了基本限制，并将讨论从症状驱动的安全补丁转变为对内在动态风险的原则性理解，强调了外部监督或新颖的安全保护机制的必要性。
-
-</details>
-
----
-
-## 66. Code2World: A GUI World Model via Renderable Code Generation / Code2World：通过可渲染代码生成的 GUI 世界模型
-
-**Date**: 2026-02-10 | **arXiv**: [2602.09856v1](http://arxiv.org/abs/2602.09856v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.09856v1)
-
-**Categories**: cs.CV, cs.AI, cs.CL, cs.HC
-
-**Code**: https://github.com/AMAP-ML/Code2World.
-
-<details><summary><b>Abstract / 摘要</b></summary>
-
-Autonomous GUI agents interact with environments by perceiving interfaces and executing actions. As a virtual sandbox, the GUI World model empowers agents with human-like foresight by enabling action-conditioned prediction. However, existing text- and pixel-based approaches struggle to simultaneously achieve high visual fidelity and fine-grained structural controllability. To this end, we propose Code2World, a vision-language coder that simulates the next visual state via renderable code generation. Specifically, to address the data scarcity problem, we construct AndroidCode by translating GUI trajectories into high-fidelity HTML and refining synthesized code through a visual-feedback revision mechanism, yielding a corpus of over 80K high-quality screen-action pairs. To adapt existing VLMs into code prediction, we first perform SFT as a cold start for format layout following, then further apply Render-Aware Reinforcement Learning which uses rendered outcome as the reward signal by enforcing visual semantic fidelity and action consistency. Extensive experiments demonstrate that Code2World-8B achieves the top-performing next UI prediction, rivaling the competitive GPT-5 and Gemini-3-Pro-Image. Notably, Code2World significantly enhances downstream navigation success rates in a flexible manner, boosting Gemini-2.5-Flash by +9.5% on AndroidWorld navigation. The code is available at https://github.com/AMAP-ML/Code2World.
-
-自主 GUI 代理通过感知界面并执行操作与环境进行交互。作为一个虚拟沙箱，GUI World 模型通过启用动作条件预测，使代理具有类似人类的远见。然而，现有的基于文本和像素的方法很难同时实现高视觉保真度和细粒度的结构可控性。为此，我们提出了 Code2World，一种视觉语言编码器，可通过可渲染代码生成来模拟下一个视觉状态。具体来说，为了解决数据稀缺问题，我们通过将 GUI 轨迹转换为高保真 HTML 并通过视觉反馈修订机制完善合成代码来构建 AndroidCode，从而生成超过 80K 高质量屏幕操作对的语料库。为了使现有的 VLM 适应代码预测，我们首先执行 SFT 作为格式布局遵循的冷启动，然后进一步应用渲染感知强化学习，通过强制视觉语义保真度和动作一致性，使用渲染结果作为奖励信号。大量实验表明，Code2World-8B 实现了性能最佳的下一个 UI 预测，可与竞争性的 GPT-5 和 Gemini-3-Pro-Image 相媲美。值得注意的是，Code2World 以灵活的方式显着提高了下游导航的成功率，使 Gemini-2.5-Flash 在 AndroidWorld 导航上提高了 9.5%。该代码可从 https://github.com/AMAP-ML/Code2World 获取。
-
-</details>
-
----
-
-## 67. AnalyticsGPT: An LLM Workflow for Scientometric Question Answering / AnalyticsGPT：科学计量学问答的法学硕士工作流程
-
-**Date**: 2026-02-10 | **arXiv**: [2602.09817v1](http://arxiv.org/abs/2602.09817v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.09817v1)
-
-**Categories**: cs.CL, cs.DL
-
-**Code**: https://github.com/lyvykhang/llm-agents-scientometric-qa/tree/acl.
-
-<details><summary><b>Abstract / 摘要</b></summary>
-
-This paper introduces AnalyticsGPT, an intuitive and efficient large language model (LLM)-powered workflow for scientometric question answering. This underrepresented downstream task addresses the subcategory of meta-scientific questions concerning the "science of science." When compared to traditional scientific question answering based on papers, the task poses unique challenges in the planning phase. Namely, the need for named-entity recognition of academic entities within questions and multi-faceted data retrieval involving scientometric indices, e.g. impact factors. Beyond their exceptional capacity for treating traditional natural language processing tasks, LLMs have shown great potential in more complex applications, such as task decomposition and planning and reasoning. In this paper, we explore the application of LLMs to scientometric question answering, and describe an end-to-end system implementing a sequential workflow with retrieval-augmented generation and agentic concepts. We also address the secondary task of effectively synthesizing the data into presentable and well-structured high-level analyses. As a database for retrieval-augmented generation, we leverage a proprietary research performance assessment platform. For evaluation, we consult experienced subject matter experts and leverage LLMs-as-judges. In doing so, we provide valuable insights on the efficacy of LLMs towards a niche downstream task. Our (skeleton) code and prompts are available at: https://github.com/lyvykhang/llm-agents-scientometric-qa/tree/acl.
-
-本文介绍了 AnalyticsGPT，这是一种直观且高效的大语言模型 (LLM) 支持的科学计量问答工作流程。这项代表性不足的下游任务解决了有关“科学的科学”的元科学问题的子类别。与基于论文的传统科学问答相比，该任务在规划阶段提出了独特的挑战。即，需要对问题中的学术实体进行命名实体识别以及涉及科学计量索引的多方面数据检索，例如影响因素。除了处理传统自然语言处理任务的卓越能力之外，法学硕士在更复杂的应用中也显示出了巨大的潜力，例如任务分解、规划和推理。在本文中，我们探索了法学硕士在科学计量学问答中的应用，并描述了一个端到端系统，该系统通过检索增强生成和代理概念来实现顺序工作流程。我们还解决了第二个任务，即有效地将数据合成为可呈现且结构良好的高级分析。作为检索增强生成的数据库，我们利用专有的研究绩效评估平台。为了进行评估，我们咨询了经验丰富的主题专家并利用法学硕士作为评委。在此过程中，我们就法学硕士对利基下游任务的功效提供了宝贵的见解。我们的（骨架）代码和提示位于：https://github.com/lyvykhang/llm-agents-scientometric-qa/tree/acl。
-
-</details>
-
----
-
-## 68. Adaptive Time Step Flow Matching for Autonomous Driving Motion Planning / 自动驾驶运动规划的自适应时间步流匹配
+## 60. Adaptive Time Step Flow Matching for Autonomous Driving Motion Planning / 自动驾驶运动规划的自适应时间步流匹配
 
 **Date**: 2026-02-10 | **arXiv**: [2602.10285v1](http://arxiv.org/abs/2602.10285v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.10285v1)
 
@@ -1132,88 +996,6 @@ This paper introduces AnalyticsGPT, an intuitive and efficient large language mo
 Autonomous driving requires reasoning about interactions with surrounding traffic. A prevailing approach is large-scale imitation learning on expert driving datasets, aimed at generalizing across diverse real-world scenarios. For online trajectory generation, such methods must operate at real-time rates. Diffusion models require hundreds of denoising steps at inference, resulting in high latency. Consistency models mitigate this issue but rely on carefully tuned noise schedules to capture the multimodal action distributions common in autonomous driving. Adapting the schedule, typically requires expensive retraining. To address these limitations, we propose a framework based on conditional flow matching that jointly predicts future motions of surrounding agents and plans the ego trajectory in real time. We train a lightweight variance estimator that selects the number of inference steps online, removing the need for retraining to balance runtime and imitation learning performance. To further enhance ride quality, we introduce a trajectory post-processing step cast as a convex quadratic program, with negligible computational overhead. Trained on the Waymo Open Motion Dataset, the framework performs maneuvers such as lane changes, cruise control, and navigating unprotected left turns without requiring scenario-specific tuning. Our method maintains a 20 Hz update rate on an NVIDIA RTX 3070 GPU, making it suitable for online deployment. Compared to transformer, diffusion, and consistency model baselines, we achieve improved trajectory smoothness and better adherence to dynamic constraints. Experiment videos and code implementations can be found at https://flow-matching-self-driving.github.io/.
 
 自动驾驶需要推理与周围交通的交互。一种流行的方法是对专家驾驶数据集进行大规模模仿学习，旨在泛化不同的现实场景。对于在线轨迹生成，此类方法必须以实时速率运行。扩散模型在推理时需要数百个去噪步骤，导致高延迟。一致性模型缓解了这个问题，但依赖于仔细调整的噪声计划来捕获自动驾驶中常见的多模式动作分布。调整时间表通常需要昂贵的再培训。为了解决这些限制，我们提出了一个基于条件流匹配的框架，该框架共同预测周围智能体的未来运动并实时规划自我轨迹。我们训练一个轻量级方差估计器，它在线选择推理步骤的数量，从而无需重新训练来平衡运行时和模仿学习性能。为了进一步提高乘坐质量，我们引入了轨迹后处理步骤，将其转换为凸二次程序，计算开销可以忽略不计。该框架在 Waymo 开放运动数据集上进行训练，可以执行变道、巡航控制和导航无保护左转等操作，无需针对特定场景进行调整。我们的方法在 NVIDIA RTX 3070 GPU 上保持 20 Hz 的更新率，使其适合在线部署。与变压器、扩散和一致性模型基线相比，我们实现了改进的轨迹平滑度和更好地遵守动态约束。实验视频和代码实现可以在 https://flow-matching-self-driven.github.io/ 找到。
-
-</details>
-
----
-
-## 69. SAGE: Scalable Agentic 3D Scene Generation for Embodied AI / SAGE：用于嵌入式 AI 的可扩展代理 3D 场景生成
-
-**Date**: 2026-02-10 | **arXiv**: [2602.10116v1](http://arxiv.org/abs/2602.10116v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.10116v1)
-
-**Categories**: cs.CV, cs.RO
-
-<details><summary><b>Abstract / 摘要</b></summary>
-
-Real-world data collection for embodied agents remains costly and unsafe, calling for scalable, realistic, and simulator-ready 3D environments. However, existing scene-generation systems often rely on rule-based or task-specific pipelines, yielding artifacts and physically invalid scenes. We present SAGE, an agentic framework that, given a user-specified embodied task (e.g., "pick up a bowl and place it on the table"), understands the intent and automatically generates simulation-ready environments at scale. The agent couples multiple generators for layout and object composition with critics that evaluate semantic plausibility, visual realism, and physical stability. Through iterative reasoning and adaptive tool selection, it self-refines the scenes until meeting user intent and physical validity. The resulting environments are realistic, diverse, and directly deployable in modern simulators for policy training. Policies trained purely on this data exhibit clear scaling trends and generalize to unseen objects and layouts, demonstrating the promise of simulation-driven scaling for embodied AI. Code, demos, and the SAGE-10k dataset can be found on the project page here: https://nvlabs.github.io/sage.
-
-实体代理的真实世界数据收集仍然昂贵且不安全，需要可扩展、真实且可用于模拟器的 3D 环境。然而，现有的场景生成系统通常依赖于基于规则或特定于任务的管道，从而产生伪像和物理上无效的场景。我们提出了 SAGE，一个代理框架，给定用户指定的具体任务（例如，“拿起一个碗并将其放在桌子上”），它可以理解意图并自动大规模生成模拟就绪环境。该代理将多个用于布局和对象组合的生成器与评估语义合理性、视觉真实性和物理稳定性的评论家结合起来。通过迭代推理和自适应工具选择，它可以自我完善场景，直到满足用户意图和物理有效性。由此产生的环境是真实的、多样化的，并且可以直接部署在现代模拟器中进行政策培训。纯粹基于这些数据训练的策略表现出明显的扩展趋势，并推广到看不见的对象和布局，展示了模拟驱动的扩展对具体人工智能的前景。代码、演示和 SAGE-10k 数据集可以在项目页面上找到：https://nvlabs.github.io/sage。
-
-</details>
-
----
-
-## 70. DexImit: Learning Bimanual Dexterous Manipulation from Monocular Human Videos / DexImit：从单眼人类视频中学习双手灵巧操作
-
-**Date**: 2026-02-10 | **arXiv**: [2602.10105v1](http://arxiv.org/abs/2602.10105v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.10105v1)
-
-**Categories**: cs.RO
-
-<details><summary><b>Abstract / 摘要</b></summary>
-
-Data scarcity fundamentally limits the generalization of bimanual dexterous manipulation, as real-world data collection for dexterous hands is expensive and labor-intensive. Human manipulation videos, as a direct carrier of manipulation knowledge, offer significant potential for scaling up robot learning. However, the substantial embodiment gap between human hands and robotic dexterous hands makes direct pretraining from human videos extremely challenging. To bridge this gap and unleash the potential of large-scale human manipulation video data, we propose DexImit, an automated framework that converts monocular human manipulation videos into physically plausible robot data, without any additional information. DexImit employs a four-stage generation pipeline: (1) reconstructing hand-object interactions from arbitrary viewpoints with near-metric scale; (2) performing subtask decomposition and bimanual scheduling; (3) synthesizing robot trajectories consistent with the demonstrated interactions; (4) comprehensive data augmentation for zero-shot real-world deployment. Building on these designs, DexImit can generate large-scale robot data based on human videos, either from the Internet or video generation models. DexImit is capable of handling diverse manipulation tasks, including tool use (e.g., cutting an apple), long-horizon tasks (e.g., making a beverage), and fine-grained manipulations (e.g., stacking cups).
-
-数据稀缺从根本上限制了双手灵巧操作的普及，因为灵巧手的现实世界数据收集成本高昂且劳动密集型。人类操作视频作为操作知识的直接载体，为扩大机器人学习提供了巨大的潜力。然而，人手和机器人灵巧手之间的巨大体现差距使得从人类视频直接进行预训练极具挑战性。为了弥补这一差距并释放大规模人类操纵视频数据的潜力，我们提出了 DexImit，这是一种自动化框架，可以将单眼人类操纵视频转换为物理上合理的机器人数据，而无需任何附加信息。 DexImit 采用四阶段生成流程：（1）从任意视角以接近公制的尺度重建手部与物体的交互； (2)进行子任务分解和双手调度； (3) 合成与所演示的交互一致的机器人轨迹； (4) 全面的数据增强，用于零次现实世界部署。基于这些设计，DexImit 可以根据来自互联网或视频生成模型的人类视频生成大规模机器人数据。 DexImit 能够处理各种操作任务，包括工具使用（例如切苹果）、长期任务（例如制作饮料）和细粒度操作（例如堆叠杯子）。
-
-</details>
-
----
-
-## 71. A Collaborative Safety Shield for Safe and Efficient CAV Lane Changes in Congested On-Ramp Merging / 协作安全防护罩，可在拥挤的匝道并道中安全高效地变换 CAV 车道
-
-**Date**: 2026-02-10 | **arXiv**: [2602.10007v1](http://arxiv.org/abs/2602.10007v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.10007v1)
-
-**Categories**: cs.RO, cs.AI, cs.MA, eess.SY
-
-**Code**: https://github.com/hkbharath/MARL-MASS
-
-<details><summary><b>Abstract / 摘要</b></summary>
-
-Lane changing in dense traffic is a significant challenge for Connected and Autonomous Vehicles (CAVs). Existing lane change controllers primarily either ensure safety or collaboratively improve traffic efficiency, but do not consider these conflicting objectives together. To address this, we propose the Multi-Agent Safety Shield (MASS), designed using Control Barrier Functions (CBFs) to enable safe and collaborative lane changes. The MASS enables collaboration by capturing multi-agent interactions among CAVs through interaction topologies constructed as a graph using a simple algorithm. Further, a state-of-the-art Multi-Agent Reinforcement Learning (MARL) lane change controller is extended by integrating MASS to ensure safety and defining a customised reward function to prioritise efficiency improvements. As a result, we propose a lane change controller, known as MARL-MASS, and evaluate it in a congested on-ramp merging simulation. The results demonstrate that MASS enables collaborative lane changes with safety guarantees by strictly respecting the safety constraints. Moreover, the proposed custom reward function improves the stability of MARL policies trained with a safety shield. Overall, by encouraging the exploration of a collaborative lane change policy while respecting safety constraints, MARL-MASS effectively balances the trade-off between ensuring safety and improving traffic efficiency in congested traffic. The code for MARL-MASS is available with an open-source licence at https://github.com/hkbharath/MARL-MASS
-
-拥堵交通中的变道对于联网自动驾驶车辆 (CAV) 来说是一项重大挑战。现有的变道控制器主要要么确保安全，要么协同提高交通效率，但没有同时考虑这些相互冲突的目标。为了解决这个问题，我们提出了多智能体安全盾（MASS），它使用控制屏障功能（CBF）来设计，以实现安全和协作的变道。 MASS 通过使用简单算法构建为图形的交互拓扑来捕获 CAV 之间的多代理交互，从而实现协作。此外，通过集成 MASS 来扩展最先进的多智能体强化学习 (MARL) 车道变换控制器，以确保安全并定义定制的奖励函数来优先考虑效率提高。因此，我们提出了一种变道控制器，称为 MARL-MASS，并在拥堵的匝道合并模拟中对其进行评估。结果表明，MASS 通过严格遵守安全约束，能够在安全保证的情况下实现协作变道。此外，所提出的自定义奖励函数提高了使用安全盾训练的 MARL 策略的稳定性。总体而言，通过鼓励探索协作变道政策，同时尊重安全约束，MARL-MASS 有效地平衡了拥堵交通中确保安全和提高交通效率之间的权衡。 MARL-MASS 的代码可通过开源许可证获得：https://github.com/hkbharath/MARL-MASS
-
-</details>
-
----
-
-## 72. AutoFly: Vision-Language-Action Model for UAV Autonomous Navigation in the Wild / AutoFly：无人机野外自主导航的视觉-语言-动作模型
-
-**Date**: 2026-02-10 | **arXiv**: [2602.09657v1](http://arxiv.org/abs/2602.09657v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.09657v1)
-
-**Categories**: cs.RO
-
-<details><summary><b>Abstract / 摘要</b></summary>
-
-Vision-language navigation (VLN) requires intelligent agents to navigate environments by interpreting linguistic instructions alongside visual observations, serving as a cornerstone task in Embodied AI. Current VLN research for unmanned aerial vehicles (UAVs) relies on detailed, pre-specified instructions to guide the UAV along predetermined routes. However, real-world outdoor exploration typically occurs in unknown environments where detailed navigation instructions are unavailable. Instead, only coarse-grained positional or directional guidance can be provided, requiring UAVs to autonomously navigate through continuous planning and obstacle avoidance. To bridge this gap, we propose AutoFly, an end-to-end Vision-Language-Action (VLA) model for autonomous UAV navigation. AutoFly incorporates a pseudo-depth encoder that derives depth-aware features from RGB inputs to enhance spatial reasoning, coupled with a progressive two-stage training strategy that effectively aligns visual, depth, and linguistic representations with action policies. Moreover, existing VLN datasets have fundamental limitations for real-world autonomous navigation, stemming from their heavy reliance on explicit instruction-following over autonomous decision-making and insufficient real-world data. To address these issues, we construct a novel autonomous navigation dataset that shifts the paradigm from instruction-following to autonomous behavior modeling through: (1) trajectory collection emphasizing continuous obstacle avoidance, autonomous planning, and recognition workflows; (2) comprehensive real-world data integration. Experimental results demonstrate that AutoFly achieves a 3.9% higher success rate compared to state-of-the-art VLA baselines, with consistent performance across simulated and real environments.
-
-视觉语言导航（VLN）需要智能代理通过解释语言指令和视觉观察来导航环境，这是嵌入式人工智能的基石任务。目前针对无人机 (UAV) 的 VLN 研究依赖于详细的、预先指定的指令来引导无人机沿预定路线行驶。然而，现实世界的户外探索通常发生在无法获得详细导航说明的未知环境中。相反，只能提供粗粒度的位置或方向引导，要求无人机通过连续规划和避障来自主导航。为了弥补这一差距，我们提出了 AutoFly，一种用于自主无人机导航的端到端视觉-语言-动作（VLA）模型。 AutoFly 采用了伪深度编码器，可从 RGB 输入中派生深度感知特征以增强空间推理，再加上渐进式两阶段训练策略，可有效地将视觉、深度和语言表示与动作策略保持一致。此外，现有的 VLN 数据集对于现实世界的自主导航存在根本性的限制，因为它们严重依赖于自主决策的明确指令跟踪以及现实世界数据的不足。为了解决这些问题，我们构建了一个新颖的自主导航数据集，通过以下方式将范式从遵循指令转变为自主行为建模：（1）轨迹收集，强调连续避障、自主规划和识别工作流程； (2)全面的现实世界数据集成。实验结果表明，与最先进的 VLA 基线相比，AutoFly 的成功率提高了 3.9%，并且在模拟和真实环境中具有一致的性能。
-
-</details>
-
----
-
-## 73. Sci-VLA: Agentic VLA Inference Plugin for Long-Horizon Tasks in Scientific Experiments / Sci-VLA：用于科学实验中长期任务的代理 VLA 推理插件
-
-**Date**: 2026-02-10 | **arXiv**: [2602.09430v1](http://arxiv.org/abs/2602.09430v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.09430v1)
-
-**Categories**: cs.RO, cs.AI
-
-<details><summary><b>Abstract / 摘要</b></summary>
-
-Robotic laboratories play a critical role in autonomous scientific discovery by enabling scalable, continuous experimental execution. Recent vision-language-action (VLA) models offer a promising foundation for robotic laboratories. However, scientific experiments typically involve long-horizon tasks composed of multiple atomic tasks, posing a fundamental challenge to existing VLA models. While VLA models fine-tuned for scientific tasks can reliably execute atomic experimental actions seen during training, they often fail to perform composite tasks formed by reordering and composing these known atomic actions. This limitation arises from a distributional mismatch between training-time atomic tasks and inference-time composite tasks, which prevents VLA models from executing necessary transitional operations between atomic tasks. To address this challenge, we propose an Agentic VLA Inference Plugin for Long-Horizon Tasks in Scientific Experiments. It introduces an LLM-based agentic inference mechanism that intervenes when executing sequential manipulation tasks. By performing explicit transition inference and generating transitional robotic action code, the proposed plugin guides VLA models through missing transitional steps, enabling reliable execution of composite scientific workflows without any additional training. This inference-only intervention makes our method computationally efficient, data-efficient, and well-suited for open-ended and long-horizon robotic laboratory tasks. We build 3D assets of scientific instruments and common scientific operating scenes within an existing simulation environment. In these scenes, we have verified that our method increases the average success rate per atomic task by 42\% during inference. Furthermore, we show that our method can be easily transferred from the simulation to real scientific laboratories.
-
-机器人实验室通过实现可扩展、连续的实验执行，在自主科学发现中发挥着关键作用。最近的视觉-语言-动作（VLA）模型为机器人实验室提供了有前途的基础。然而，科学实验通常涉及由多个原子任务组成的长视野任务，这对现有的VLA模型提出了根本性的挑战。虽然针对科学任务进行微调的 VLA 模型可以可靠地执行训练期间看到的原子实验动作，但它们通常无法执行通过重新排序和组合这些已知原子动作而形成的复合任务。此限制是由于训练时原子任务和推理时复合任务之间的分布不匹配而引起的，这会阻止 VLA 模型在原子任务之间执行必要的转换操作。为了应对这一挑战，我们提出了一个用于科学实验中长期任务的 Agentic VLA 推理插件。它引入了一种基于 LLM 的代理推理机制，可以在执行顺序操作任务时进行干预。通过执行显式转换推理并生成转换机器人动作代码，所提出的插件可引导 VLA 模型完成缺失的转换步骤，从而无需任何额外训练即可可靠地执行复合科学工作流程。这种仅推理的干预使我们的方法计算效率高、数据效率高，并且非常适合开放式和长视野的机器人实验室任务。我们在现有的模拟环境中构建科学仪器的 3D 资产和常见的科学操作场景。在这些场景中，我们已经验证我们的方法在推理过程中将每个原子任务的平均成功率提高了 42%。此外，我们表明我们的方法可以轻松地从模拟转移到真实的科学实验室。
 
 </details>
 
