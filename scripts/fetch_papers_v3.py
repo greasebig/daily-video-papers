@@ -230,7 +230,9 @@ def build_docs_site(repo_root, topic_slug, topic_name, papers_dir):
         except Exception:
             pass
 
-    # build simple index that renders markdown via marked.js
+    # build index that renders markdown via marked.js
+    file_list = sorted([md.name for md in papers_dir.glob("*.md")], reverse=True)
+    files_json = json.dumps(file_list)
     index_html = f"""<!doctype html>
 <html lang="en">
 <head>
@@ -238,18 +240,36 @@ def build_docs_site(repo_root, topic_slug, topic_name, papers_dir):
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{topic_name} Papers</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap');
-    :root {{ --bg:#0b0f17; --card:rgba(255,255,255,0.06); --border:rgba(255,255,255,0.16); --ink:#f4f7ff; --muted:#b7c0d8; --accent:#2ec4b6; }}
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap');
+    :root {{
+      --bg: #f6f9ff;
+      --ink: #0b1b2b;
+      --muted: #5a6b85;
+      --card: rgba(255,255,255,0.85);
+      --border: rgba(12,36,66,0.08);
+      --accent: #2ec4b6;
+      --accent-2: #ff9f1c;
+      --shadow: 0 16px 40px rgba(30, 60, 90, 0.12);
+    }}
     *{{box-sizing:border-box}}
-    body{{margin:0;font-family:"Space Grotesk",sans-serif;color:var(--ink);background:radial-gradient(1000px 500px at 10% -10%, #1f3b63 0%, transparent 60%),linear-gradient(160deg,#0b0f17,#12243a);min-height:100vh}}
+    body{{
+      margin:0;
+      font-family:"Manrope",sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(600px 300px at 10% -10%, rgba(46,196,182,0.25), transparent 60%),
+        radial-gradient(700px 350px at 90% 0%, rgba(255,159,28,0.18), transparent 60%),
+        linear-gradient(180deg,#f8fbff,#eef5ff 60%,#f6f9ff);
+      min-height:100vh;
+    }}
     .wrap{{max-width:1100px;margin:0 auto;padding:48px 24px 80px}}
-    h1{{font-family:"Fraunces",serif;margin:0 0 8px;font-size:clamp(32px,4vw,56px)}}
+    h1{{font-family:"Fraunces",serif;margin:0 0 6px;font-size:clamp(30px,3.5vw,54px)}}
     p{{color:var(--muted)}}
     .layout{{display:grid;grid-template-columns:260px 1fr;gap:20px;margin-top:24px}}
-    .panel{{padding:16px;border-radius:16px;background:var(--card);border:1px solid var(--border)}}
-    .list a{{display:block;color:var(--ink);text-decoration:none;padding:8px 6px;border-radius:10px}}
-    .list a:hover{{background:rgba(255,255,255,0.06)}}
-    .content{{padding:20px;border-radius:16px;background:var(--card);border:1px solid var(--border)}}
+    .panel{{padding:16px;border-radius:18px;background:var(--card);border:1px solid var(--border);box-shadow:var(--shadow)}}
+    .list a{{display:block;color:var(--ink);text-decoration:none;padding:10px 10px;border-radius:12px}}
+    .list a:hover{{background:rgba(46,196,182,0.12)}}
+    .content{{padding:20px;border-radius:18px;background:var(--card);border:1px solid var(--border);box-shadow:var(--shadow)}}
     @media (max-width: 900px){{.layout{{grid-template-columns:1fr}}}}
   </style>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -264,13 +284,16 @@ def build_docs_site(repo_root, topic_slug, topic_name, papers_dir):
     </div>
   </div>
   <script>
-    const files = {sorted([md.name for md in papers_dir.glob('*.md')], reverse=True)};
+    const files = {files_json};
     const list = document.getElementById('list');
     const content = document.getElementById('content');
     function loadFile(name){{
       fetch('./papers/' + name).then(r=>r.text()).then(md=>{{
         content.innerHTML = marked.parse(md);
       }});
+    }}
+    if (files.length === 0) {{
+      content.innerHTML = '<em>No papers yet.</em>';
     }}
     files.forEach((f, i)=>{{
       const a = document.createElement('a');

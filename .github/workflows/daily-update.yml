@@ -2,7 +2,7 @@
 
 on:
   schedule:
-    - cron: '0 2 * * *' # daily 10:00 China time (UTC+8)
+    - cron: '0 2 * * *' # UTC 02:00 (Beijing 10:00)
   push:
     branches: [main]
   workflow_dispatch:
@@ -10,6 +10,9 @@ on:
 concurrency:
   group: daily-video-papers
   cancel-in-progress: false
+
+env:
+  TZ: Asia/Shanghai
 
 jobs:
   update-papers:
@@ -45,6 +48,7 @@ jobs:
           LIBRETRANSLATE_URL: http://localhost:5000
           MYMEMORY_EMAIL: lujundaljdljd@163.com
           TRANSLATION_SLEEP: '0.6'
+          REBUILD: "1"
         run: |
           VERSION="${{ vars.VERSION }}"
           if [ -z "$VERSION" ]; then VERSION="v3"; fi
@@ -54,7 +58,7 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add papers/ README.md
+          git add papers/ README.md docs/video/
           if git diff --staged --quiet; then
             echo "No changes"
           else
@@ -93,7 +97,7 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add world-model/README.md world-model/papers/
+          git add world-model/README.md world-model/papers/ docs/world-model/
           if git diff --staged --quiet; then
             echo "No changes"
           else
@@ -123,7 +127,7 @@ jobs:
           OUTPUT_DIR: agent
           REBUILD: "1"
           CATEGORIES: cs.AI,cs.CL,cs.LG,cs.RO
-          KEYWORDS: autonomous agent,ai agent,agentic,multi-agent,multi agent,tool use,tool-use,toolformer,react,reflexion
+          KEYWORDS: autonomous agent,agentic,multi-agent,multi agent,tool use,tool-use,toolformer
           CONTEXT_KEYWORDS: tool use,tool-use,multi-agent,agentic,autonomous
           REQUIRED_WORD: agent
           MYMEMORY_EMAIL: lujundaljdljd@163.com
@@ -134,7 +138,7 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add agent/README.md agent/papers/
+          git add agent/README.md agent/papers/ docs/agent/
           if git diff --staged --quiet; then
             echo "No changes"
           else
