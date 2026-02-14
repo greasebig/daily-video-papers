@@ -222,6 +222,13 @@ def build_docs_site(repo_root, topic_slug, topic_name, papers_dir):
     papers_out = docs_root / "papers"
     papers_out.mkdir(parents=True, exist_ok=True)
 
+    # clear old docs papers to avoid stale dates
+    for old in papers_out.glob("*.md"):
+        try:
+            old.unlink()
+        except Exception:
+            pass
+
     # copy markdown papers into docs folder for Pages access
     for md in papers_dir.glob("*.md"):
         target = papers_out / md.name
@@ -368,6 +375,9 @@ def main():
     md = generate_markdown(topic, date_str)
     (papers_dir / f"{date_str}.md").write_text(md)
     update_readme_index(base_dir)
+    repo_root = Path(__file__).parent.parent
+    topic_slug = "video" if OUTPUT_DIR in [".", "./", ""] else OUTPUT_DIR
+    build_docs_site(repo_root, topic_slug, TOPIC_NAME, papers_dir)
     _info("Done.")
 
 
