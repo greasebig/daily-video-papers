@@ -5,17 +5,17 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
-- [2026-02-13](papers/2026-02-13.md) - 59 papers
+- [2026-02-14](papers/2026-02-14.md) - 53 papers
 <!-- PAPERS_INDEX_END -->
 
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
-<details><summary><b>2026-02-13 (59 papers)</b></summary>
+<details><summary><b>2026-02-14 (53 papers)</b></summary>
 
-# arXiv Agent Papers - 2026-02-13
+# arXiv Agent Papers - 2026-02-14
 
-**Paper Count**: 59
+**Paper Count**: 53
 
 ---
 
@@ -871,71 +871,7 @@ We present Agent-Diff, a novel benchmarking framework for evaluating agentic Lar
 
 ---
 
-## 53. Step 3.5 Flash: Open Frontier-Level Intelligence with 11B Active Parameters / 步骤3.5 Flash：利用11B主动参数开放前沿级智能
-
-**Date**: 2026-02-11 | **arXiv**: [2602.10604v1](http://arxiv.org/abs/2602.10604v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.10604v1)
-
-**Categories**: cs.CL, cs.AI
-
-<details><summary><b>Abstract / 摘要</b></summary>
-
-We introduce Step 3.5 Flash, a sparse Mixture-of-Experts (MoE) model that bridges frontier-level agentic intelligence and computational efficiency. We focus on what matters most when building agents: sharp reasoning and fast, reliable execution. Step 3.5 Flash pairs a 196B-parameter foundation with 11B active parameters for efficient inference. It is optimized with interleaved 3:1 sliding-window/full attention and Multi-Token Prediction (MTP-3) to reduce the latency and cost of multi-round agentic interactions. To reach frontier-level intelligence, we design a scalable reinforcement learning framework that combines verifiable signals with preference feedback, while remaining stable under large-scale off-policy training, enabling consistent self-improvement across mathematics, code, and tool use. Step 3.5 Flash demonstrates strong performance across agent, coding, and math tasks, achieving 85.4% on IMO-AnswerBench, 86.4% on LiveCodeBench-v6 (2024.08-2025.05), 88.2% on tau2-Bench, 69.0% on BrowseComp (with context management), and 51.0% on Terminal-Bench 2.0, comparable to frontier models such as GPT-5.2 xHigh and Gemini 3.0 Pro. By redefining the efficiency frontier, Step 3.5 Flash provides a high-density foundation for deploying sophisticated agents in real-world industrial environments.
-
-我们引入了 Step 3.5 Flash，这是一种稀疏专家混合 (MoE) 模型，可连接前沿级代理智能和计算效率。在构建代理时，我们关注最重要的事情：敏锐的推理和快速、可靠的执行。步骤 3.5 Flash 将 196B 参数基础与 11B 活动参数配对，以实现高效推理。它通过交错 3:1 滑动窗口/全注意力和多令牌预测 (MTP-3) 进行优化，以减少多轮代理交互的延迟和成本。为了达到前沿水平的智能，我们设计了一个可扩展的强化学习框架，该框架将可验证的信号与偏好反馈相结合，同时在大规模离策略训练下保持稳定，从而实现数学、代码和工具使用方面的一致自我改进。 Step 3.5 Flash 在智能体、编码和数学任务上表现出了强大的性能，在 IMO-AnswerBench 上实现了 85.4%，在 LiveCodeBench-v6 (2024.08-2025.05) 上实现了 86.4%，在 tau2-Bench 上实现了 88.2%，在 BrowseComp（具有上下文管理）上实现了 69.0%，在 Terminal-Bench 2.0 上实现了 51.0%，与前沿型号，如 GPT-5.2 xHigh 和 Gemini 3.0 Pro。通过重新定义效率边界，Step 3.5 Flash 为在现实工业环境中部署复杂的代理提供了高密度基础。
-
-</details>
-
----
-
-## 54. LHAW: Controllable Underspecification for Long-Horizon Tasks / LHAW：长期任务的可控不足
-
-**Date**: 2026-02-11 | **arXiv**: [2602.10525v1](http://arxiv.org/abs/2602.10525v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.10525v1)
-
-**Categories**: cs.CL, cs.AI, cs.LG
-
-<details><summary><b>Abstract / 摘要</b></summary>
-
-Long-horizon workflow agents that operate effectively over extended periods are essential for truly autonomous systems. Their reliable execution critically depends on the ability to reason through ambiguous situations in which clarification seeking is necessary to ensure correct task execution. However, progress is limited by the lack of scalable, task-agnostic frameworks for systematically curating and measuring the impact of ambiguity across custom workflows. We address this gap by introducing LHAW (Long-Horizon Augmented Workflows), a modular, dataset-agnostic synthetic pipeline that transforms any well-specified task into controllable underspecified variants by systematically removing information across four dimensions - Goals, Constraints, Inputs, and Context - at configurable severity levels. Unlike approaches that rely on LLM predictions of ambiguity, LHAW validates variants through empirical agent trials, classifying them as outcome-critical, divergent, or benign based on observed terminal state divergence. We release 285 task variants from TheAgentCompany, SWE-Bench Pro and MCP-Atlas according to our taxonomy alongside formal analysis measuring how current agents detect, reason about, and resolve underspecification across ambiguous settings. LHAW provides the first systematic framework for cost-sensitive evaluation of agent clarification behavior in long-horizon settings, enabling development of reliable autonomous systems.
-
-长期有效运行的长视野工作流代理对于真正的自治系统至关重要。它们的可靠执行关键取决于在模糊情况下进行推理的能力，在这种情况下，需要寻求澄清以确保正确的任务执行。然而，由于缺乏可扩展的、与任务无关的框架来系统地管理和衡量自定义工作流程中模糊性的影响，进展受到限制。我们通过引入 LHAW（长视野增强工作流）来解决这一差距，这是一种模块化的、与数据集无关的合成管道，通过在可配置的严重性级别系统地删除四个维度（目标、约束、输入和上下文）的信息，将任何明确指定的任务转换为可控的未指定变体。与依赖 LLM 模糊性预测的方法不同，LHAW 通过经验代理试验来验证变体，并根据观察到的最终状态差异将它们分类为结果关键型、发散型或良性型。我们根据我们的分类法，从 TheAgentCompany、SWE-Bench Pro 和 MCP-Atlas 发布了 285 个任务变体，同时进行正式分析，衡量当前代理如何在不明确的设置中检测、推理和解决规范不足的问题。 LHAW 提供了第一个系统框架，用于对长视野环境中的代理澄清行为进行成本敏感的评估，从而能够开发可靠的自主系统。
-
-</details>
-
----
-
-## 55. TestExplora: Benchmarking LLMs for Proactive Bug Discovery via Repository-Level Test Generation / TestExplora：通过存储库级测试生成对 LLM 进行主动 Bug 发现基准测试
-
-**Date**: 2026-02-11 | **arXiv**: [2602.10471v1](http://arxiv.org/abs/2602.10471v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.10471v1)
-
-**Categories**: cs.SE, cs.CL
-
-<details><summary><b>Abstract / 摘要</b></summary>
-
-Given that Large Language Models (LLMs) are increasingly applied to automate software development, comprehensive software assurance spans three distinct goals: regression prevention, reactive reproduction, and proactive discovery. Current evaluations systematically overlook the third goal. Specifically, they either treat existing code as ground truth (a compliance trap) for regression prevention, or depend on post-failure artifacts (e.g., issue reports) for bug reproduction-so they rarely surface defects before failures. To bridge this gap, we present TestExplora, a benchmark designed to evaluate LLMs as proactive testers within full-scale, realistic repository environments. TestExplora contains 2,389 tasks from 482 repositories and hides all defect-related signals. Models must proactively find bugs by comparing implementations against documentation-derived intent, using documentation as the oracle. Furthermore, to keep evaluation sustainable and reduce leakage, we propose continuous, time-aware data collection. Our evaluation reveals a significant capability gap: state-of-the-art models achieve a maximum Fail-to-Pass (F2P) rate of only 16.06%. Further analysis indicates that navigating complex cross-module interactions and leveraging agentic exploration are critical to advancing LLMs toward autonomous software quality assurance. Consistent with this, SWEAgent instantiated with GPT-5-mini achieves an F2P of 17.27% and an F2P@5 of 29.7%, highlighting the effectiveness and promise of agentic exploration in proactive bug discovery tasks.
-
-鉴于大型语言模型 (LLM) 越来越多地应用于自动化软件开发，全面的软件保障涵盖三个不同的目标：回归预防、反应性再现和主动发现。目前的评估系统地忽视了第三个目标。具体来说，他们要么将现有代码视为用于回归预防的基本事实（合规性陷阱），要么依赖于故障后工件（例如问题报告）来进行错误再现 - 因此他们很少在故障之前暴露缺陷。为了弥补这一差距，我们推出了 TestExplora，这是一个基准测试，旨在评估法学硕士在全面、真实的存储库环境中作为主动测试人员的能力。 TestExplora 包含来自 482 个存储库的 2,389 个任务，并隐藏所有与缺陷相关的信号。模型必须使用文档作为预言机，通过将实现与文档派生的意图进行比较来主动发现错误。此外，为了保持评估的可持续性并减少泄漏，我们建议进行连续的、具有时间意识的数据收集。我们的评估揭示了巨大的能力差距：最先进的模型的最大失败率 (F2P) 仅达到 16.06%。进一步的分析表明，导航复杂的跨模块交互和利用代理探索对于推进法学硕士走向自主软件质量保证至关重要。与此一致，使用 GPT-5-mini 实例化的 SWEAgent 实现了 17.27% 的 F2P 和 29.7% 的 F2P@5，凸显了代理探索在主动 bug 发现任务中的有效性和前景。
-
-</details>
-
----
-
-## 56. The Landscape of Prompt Injection Threats in LLM Agents: From Taxonomy to Analysis / LLM 代理中的即时注入威胁概况：从分类到分析
-
-**Date**: 2026-02-11 | **arXiv**: [2602.10453v1](http://arxiv.org/abs/2602.10453v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.10453v1)
-
-**Categories**: cs.CR, cs.CL
-
-<details><summary><b>Abstract / 摘要</b></summary>
-
-The evolution of Large Language Models (LLMs) has resulted in a paradigm shift towards autonomous agents, necessitating robust security against Prompt Injection (PI) vulnerabilities where untrusted inputs hijack agent behaviors. This SoK presents a comprehensive overview of the PI landscape, covering attacks, defenses, and their evaluation practices. Through a systematic literature review and quantitative analysis, we establish taxonomies that categorize PI attacks by payload generation strategies (heuristic vs. optimization) and defenses by intervention stages (text, model, and execution levels). Our analysis reveals a key limitation shared by many existing defenses and benchmarks: they largely overlook context-dependent tasks, in which agents are authorized to rely on runtime environmental observations to determine actions. To address this gap, we introduce AgentPI, a new benchmark designed to systematically evaluate agent behavior under context-dependent interaction settings. Using AgentPI, we empirically evaluate representative defenses and show that no single approach can simultaneously achieve high trustworthiness, high utility, and low latency. Moreover, we show that many defenses appear effective under existing benchmarks by suppressing contextual inputs, yet fail to generalize to realistic agent settings where context-dependent reasoning is essential. This SoK distills key takeaways and open research problems, offering structured guidance for future research and practical deployment of secure LLM agents.
-
-大型语言模型 (LLM) 的发展导致了向自主代理的范式转变，因此需要针对即时注入 (PI) 漏洞（即不受信任的输入劫持代理行为）提供强大的安全性。该 SoK 全面概述了 PI 领域，涵盖攻击、防御及其评估实践。通过系统的文献综述和定量分析，我们建立了分类法，根据有效负载生成策略（启发式与优化）对 PI 攻击进行分类，并根据干预阶段（文本、模型和执行级别）对防御进行分类。我们的分析揭示了许多现有防御和基准所共有的一个关键限制：它们在很大程度上忽略了上下文相关的任务，在这些任务中，代理被授权依赖运行时环境观察来确定行动。为了解决这一差距，我们引入了 AgentPI，这是一个新的基准，旨在系统地评估上下文相关交互设置下的代理行为。使用 AgentPI，我们根据经验评估了代表性防御，并表明没有任何一种方法可以同时实现高可信度、高实用性和低延迟。此外，我们表明，许多防御措施在现有基准下通过抑制上下文输入而显得有效，但无法推广到上下文相关推理至关重要的现实代理设置。该 SoK 提炼了关键要点和开放研究问题，为安全 LLM 代理的未来研究和实际部署提供结构化指导。
-
-</details>
-
----
-
-## 57. From Natural Language to Materials Discovery:The Materials Knowledge Navigation Agent / 从自然语言到材料发现：材料知识导航代理
+## 53. From Natural Language to Materials Discovery:The Materials Knowledge Navigation Agent / 从自然语言到材料发现：材料知识导航代理
 
 **Date**: 2026-02-11 | **arXiv**: [2602.11123v1](http://arxiv.org/abs/2602.11123v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.11123v1)
 
@@ -946,40 +882,6 @@ The evolution of Large Language Models (LLMs) has resulted in a paradigm shift t
 Accelerating the discovery of high-performance materials remains a central challenge across energy, electronics, and aerospace technologies, where traditional workflows depend heavily on expert intuition and computationally expensive simulations. Here we introduce the Materials Knowledge Navigation Agent (MKNA), a language-driven system that translates natural-language scientific intent into executable actions for database retrieval, property prediction, structure generation, and stability evaluation. Beyond automating tool invocation, MKNA autonomously extracts quantitative thresholds and chemically meaningful design motifs from literature and database evidence, enabling data-grounded hypothesis formation. Applied to the search for high-Debye-temperature ceramics, the agent identifies a literature-supported screening criterion (Theta_D > 800 K), rediscovers canonical ultra-stiff materials such as diamond, SiC, SiN, and BeO, and proposes thermodynamically stable, previously unreported Be-C-rich compounds that populate the sparsely explored 1500-1700 K regime. These results demonstrate that MKNA not only finds stable candidates but also reconstructs interpretable design heuristics, establishing a generalizable platform for autonomous, language-guided materials exploration.
 
 加速高性能材料的发现仍然是能源、电子和航空航天技术领域的核心挑战，这些技术的传统工作流程在很大程度上依赖于专家的直觉和计算成本高昂的模拟。在这里，我们介绍材料知识导航代理（MKNA），这是一种语言驱动的系统，可将自然语言的科学意图转化为可执行的操作，用于数据库检索、属性预测、结构生成和稳定性评估。除了自动化工具调用之外，MKNA 还可以从文献和数据库证据中自主提取定量阈值和具有化学意义的设计主题，从而能够形成基于数据的假设。应用于寻找高德拜温度陶瓷时，该代理确定了文献支持的筛选标准（Theta_D > 800 K），重新发现了典型的超硬材料，例如金刚石、SiC、SiN 和 BeO，并提出了热力学稳定、先前未报道的富含 Be-C 的化合物，这些化合物填充了很少探索的 1500-1700 K 范围。这些结果表明，MKNA 不仅找到了稳定的候选者，而且还重建了可解释的设计启发式，为自主的、语言引导的材料探索建立了一个通用平台。
-
-</details>
-
----
-
-## 58. Co-jump: Cooperative Jumping with Quadrupedal Robots via Multi-Agent Reinforcement Learning / 协同跳跃：通过多智能体强化学习与四足机器人协同跳跃
-
-**Date**: 2026-02-11 | **arXiv**: [2602.10514v1](http://arxiv.org/abs/2602.10514v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.10514v1)
-
-**Categories**: cs.RO, cs.AI, cs.LG
-
-<details><summary><b>Abstract / 摘要</b></summary>
-
-While single-agent legged locomotion has witnessed remarkable progress, individual robots remain fundamentally constrained by physical actuation limits. To transcend these boundaries, we introduce Co-jump, a cooperative task where two quadrupedal robots synchronize to execute jumps far beyond their solo capabilities. We tackle the high-impulse contact dynamics of this task under a decentralized setting, achieving synchronization without explicit communication or pre-specified motion primitives. Our framework leverages Multi-Agent Proximal Policy Optimization (MAPPO) enhanced by a progressive curriculum strategy, which effectively overcomes the sparse-reward exploration challenges inherent in mechanically coupled systems. We demonstrate robust performance in simulation and successful transfer to physical hardware, executing multi-directional jumps onto platforms up to 1.5 m in height. Specifically, one of the robots achieves a foot-end elevation of 1.1 m, which represents a 144% improvement over the 0.45 m jump height of a standalone quadrupedal robot, demonstrating superior vertical performance. Notably, this precise coordination is achieved solely through proprioceptive feedback, establishing a foundation for communication-free collaborative locomotion in constrained environments.
-
-虽然单代理腿运动已经取得了显着的进步，但单个机器人仍然从根本上受到物理驱动限制的限制。为了超越这些界限，我们引入了协同跳跃，这是一种合作任务，其中两个四足机器人同步执行远远超出其单独能力的跳跃。我们在分散的设置下处理该任务的高脉冲接触动力学，无需显式通信或预先指定的运动基元即可实现同步。我们的框架利用渐进式课程策略增强的多智能体近端策略优化（MAPPO），有效克服了机械耦合系统固有的稀疏奖励探索挑战。我们在模拟中展示了强大的性能，并成功转移到物理硬件，在高达 1.5 m 的平台上执行多向跳跃。具体来说，其中一台机器人的足端高度达到了 1.1 m，这比独立四足机器人的 0.45 m 跳跃高度提高了 144%，展示了卓越的垂直性能。值得注意的是，这种精确的协调仅通过本体感觉反馈来实现，为受限环境中的无通信协作运动奠定了基础。
-
-</details>
-
----
-
-## 59. Autonomous Continual Learning of Computer-Use Agents for Environment Adaptation / 计算机使用代理的自主持续学习以适应环境
-
-**Date**: 2026-02-10 | **arXiv**: [2602.10356v1](http://arxiv.org/abs/2602.10356v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.10356v1)
-
-**Categories**: cs.CL
-
-**Code**: https://github.com/OSU-NLP-Group/ACuRL.
-
-<details><summary><b>Abstract / 摘要</b></summary>
-
-Real-world digital environments are highly diverse and dynamic. These characteristics cause agents to frequently encounter unseen scenarios and distribution shifts, making continual learning in specific environments essential for computer-use agents (CUAs). However, a key challenge lies in obtaining high-quality and environment-grounded agent data without relying on costly human annotation. In this work, we introduce ACuRL, an Autonomous Curriculum Reinforcement Learning framework that continually adapts agents to specific environments with zero human data. The agent first explores target environments to acquire initial experiences. During subsequent iterative training, a curriculum task generator leverages these experiences together with feedback from the previous iteration to synthesize new tasks tailored for the agent's current capabilities. To provide reliable reward signals, we introduce CUAJudge, a robust automatic evaluator for CUAs that achieves 93% agreement with human judgments. Empirically, our method effectively enables both intra-environment and cross-environment continual learning, yielding 4-22% performance gains without catastrophic forgetting on existing environments. Further analyses show highly sparse updates (e.g., 20% parameters), which helps explain the effective and robust adaptation. Our data and code are available at https://github.com/OSU-NLP-Group/ACuRL.
-
-现实世界的数字环境是高度多样化和动态的。这些特征导致代理经常遇到看不见的场景和分布变化，使得在特定环境中持续学习对于计算机使用代理（CUA）至关重要。然而，一个关键的挑战在于如何在不依赖昂贵的人工注释的情况下获得高质量且基于环境的代理数据。在这项工作中，我们引入了 ACuRL，这是一种自主课程强化学习框架，它能够在零人类数据的情况下不断使代理适应特定环境。代理首先探索目标环境以获得初始经验。在随后的迭代训练中，课程任务生成器利用这些经验以及先前迭代的反馈来合成适合代理当前能力的新任务。为了提供可靠的奖励信号，我们引入了 CUAJudge，这是一种强大的 CUA 自动评估器，与人类判断的一致性达到 93%。根据经验，我们的方法有效地实现了环境内和跨环境的持续学习，获得了 4-22% 的性能提升，并且不会对现有环境造成灾难性的遗忘。进一步的分析显示高度稀疏的更新（例如 20% 的参数），这有助于解释有效且稳健的适应。我们的数据和代码可在 https://github.com/OSU-NLP-Group/ACuRL 获取。
 
 </details>
 
