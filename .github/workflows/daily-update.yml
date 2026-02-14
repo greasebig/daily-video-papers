@@ -2,7 +2,7 @@
 
 on:
   schedule:
-    - cron: '0 2 * * *' # UTC 02:00 (Beijing 10:00)
+    - cron: '0 0 * * *' # UTC 02:00 (Beijing 10:00)
   push:
     branches: [main]
   workflow_dispatch:
@@ -48,7 +48,7 @@ jobs:
           LIBRETRANSLATE_URL: http://localhost:5000
           MYMEMORY_EMAIL: lujundaljdljd@163.com
           TRANSLATION_SLEEP: '0.6'
-          REBUILD: "1"
+          REBUILD: "0"
         run: |
           VERSION="${{ vars.VERSION }}"
           if [ -z "$VERSION" ]; then VERSION="v3"; fi
@@ -86,7 +86,7 @@ jobs:
         env:
           TOPIC_NAME: World Model
           OUTPUT_DIR: world-model
-          REBUILD: "1"
+          REBUILD: "0"
           CATEGORIES: cs.AI,cs.LG,cs.CL,cs.RO
           KEYWORDS: world model,world models,world-model,worldmodel,dynamics model,latent world model,model-based reinforcement learning,model-based RL,model-based control,imagination,planet,dreamer
           MYMEMORY_EMAIL: lujundaljdljd@163.com
@@ -125,7 +125,7 @@ jobs:
         env:
           TOPIC_NAME: Agent
           OUTPUT_DIR: agent
-          REBUILD: "1"
+          REBUILD: "0"
           CATEGORIES: cs.AI,cs.CL,cs.LG,cs.RO
           KEYWORDS: autonomous agent,agentic,multi-agent,multi agent,tool use,tool-use,toolformer
           CONTEXT_KEYWORDS: tool use,tool-use,multi-agent,agentic,autonomous
@@ -153,9 +153,10 @@ jobs:
     steps:
       - name: Send Telegram notification
         run: |
+          WEBSITE_URL="https://greasebig.github.io/daily-video-papers/"
           curl -s "https://api.telegram.org/bot${TG_BOT_TOKEN}/sendMessage" \
             -d chat_id="${TG_CHAT_ID}" \
-            -d text="✅ Daily papers updated: ${GITHUB_REPOSITORY} - $(date +'%Y-%m-%d')"
+            -d text="✅ Daily papers updated: ${GITHUB_REPOSITORY} - $(date +'%Y-%m-%d' )%0A🔗 Website: ${WEBSITE_URL}"
         env:
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
           TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
