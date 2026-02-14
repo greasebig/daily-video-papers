@@ -7,7 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
-- [2026-02-13](papers/2026-02-13.md) - 19 papers
+- [2026-02-14](papers/2026-02-14.md) - 16 papers
 <!-- PAPERS_INDEX_END -->
 
 ## Other Topics
@@ -18,11 +18,11 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
-<details><summary><b>2026-02-13 (19 papers)</b></summary>
+<details><summary><b>2026-02-14 (16 papers)</b></summary>
 
-# arXiv Video Papers - 2026-02-13
+# arXiv Video Papers - 2026-02-14
 
-**Paper Count**: 19
+**Paper Count**: 16
 
 ---
 
@@ -274,43 +274,7 @@ Autoregressive models, often built on Transformer architectures, represent a pow
 
 ---
 
-## 16. TwiFF (Think With Future Frames): A Large-Scale Dataset for Dynamic Visual Reasoning / TwiFF（思考未来框架）：用于动态视觉推理的大规模数据集
-
-**Date**: 2026-02-11 | **arXiv**: [2602.10675v1](http://arxiv.org/abs/2602.10675v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.10675v1)
-
-**Categories**: cs.CV, cs.AI
-
-**Code**: https://github.com/LiuJunhua02/TwiFF.
-
-<details><summary><b>Abstract / 摘要</b></summary>
-
-Visual Chain-of-Thought (VCoT) has emerged as a promising paradigm for enhancing multimodal reasoning by integrating visual perception into intermediate reasoning steps. However, existing VCoT approaches are largely confined to static scenarios and struggle to capture the temporal dynamics essential for tasks such as instruction, prediction, and camera motion. To bridge this gap, we propose TwiFF-2.7M, the first large-scale, temporally grounded VCoT dataset derived from $2.7$ million video clips, explicitly designed for dynamic visual question and answer. Accompanying this, we introduce TwiFF-Bench, a high-quality evaluation benchmark of $1,078$ samples that assesses both the plausibility of reasoning trajectories and the correctness of final answers in open-ended dynamic settings. Building on these foundations, we propose the TwiFF model, a unified modal that synergistically leverages pre-trained video generation and image comprehension capabilities to produce temporally coherent visual reasoning cues-iteratively generating future action frames and textual reasoning. Extensive experiments demonstrate that TwiFF significantly outperforms existing VCoT methods and Textual Chain-of-Thought baselines on dynamic reasoning tasks, which fully validates the effectiveness for visual question answering in dynamic scenarios. Our code and data is available at https://github.com/LiuJunhua02/TwiFF.
-
-视觉思维链（VCoT）已成为一种有前途的范式，通过将视觉感知集成到中间推理步骤来增强多模态推理。然而，现有的 VCoT 方法主要局限于静态场景，难以捕捉指令、预测和相机运动等任务所必需的时间动态。为了弥补这一差距，我们提出了 TwiFF-2.7M，这是第一个大规模、基于时间的 VCoT 数据集，源自价值 270 万美元的视频剪辑，专门为动态视觉问答而设计。与此同时，我们推出了 TwiFF-Bench，这是一个包含 1,078 美元样本的高质量评估基准，用于评估开放式动态设置中推理轨迹的合理性和最终答案的正确性。在此基础上，我们提出了 TwiFF 模型，这是一种统一模式，协同利用预先训练的视频生成和图像理解功能来产生时间连贯的视觉推理线索，迭代地生成未来的动作框架和文本推理。大量实验表明，TwiFF 在动态推理任务上显着优于现有的 VCoT 方法和文本思维链基线，充分验证了动态场景下视觉问答的有效性。我们的代码和数据可在 https://github.com/LiuJunhua02/TwiFF 获取。
-
-</details>
-
----
-
-## 17. VideoSTF: Stress-Testing Output Repetition in Video Large Language Models / VideoSTF：视频大语言模型中的输出重复压力测试
-
-**Date**: 2026-02-11 | **arXiv**: [2602.10639v1](http://arxiv.org/abs/2602.10639v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.10639v1)
-
-**Categories**: cs.CV, cs.CR, cs.MM
-
-**Code**: https://github.com/yuxincao22/VideoSTF_benchmark.
-
-<details><summary><b>Abstract / 摘要</b></summary>
-
-Video Large Language Models (VideoLLMs) have recently achieved strong performance in video understanding tasks. However, we identify a previously underexplored generation failure: severe output repetition, where models degenerate into self-reinforcing loops of repeated phrases or sentences. This failure mode is not captured by existing VideoLLM benchmarks, which focus primarily on task accuracy and factual correctness. We introduce VideoSTF, the first framework for systematically measuring and stress-testing output repetition in VideoLLMs. VideoSTF formalizes repetition using three complementary n-gram-based metrics and provides a standardized testbed of 10,000 diverse videos together with a library of controlled temporal transformations. Using VideoSTF, we conduct pervasive testing, temporal stress testing, and adversarial exploitation across 10 advanced VideoLLMs. We find that output repetition is widespread and, critically, highly sensitive to temporal perturbations of video inputs. Moreover, we show that simple temporal transformations can efficiently induce repetitive degeneration in a black-box setting, exposing output repetition as an exploitable security vulnerability. Our results reveal output repetition as a fundamental stability issue in modern VideoLLMs and motivate stability-aware evaluation for video-language systems. Our evaluation code and scripts are available at: https://github.com/yuxincao22/VideoSTF_benchmark.
-
-视频大语言模型（VideoLLM）最近在视频理解任务中取得了强劲的性能。然而，我们发现了一个先前未被充分探索的生成失败：严重的输出重复，其中模型退化为重复短语或句子的自我强化循环。现有的 VideoLLM 基准测试未捕获此故障模式，该基准测试主要关注任务准确性和事实正确性。我们介绍 VideoSTF，这是第一个在 VideoLLM 中系统测量和压力测试输出重复的框架。 VideoSTF 使用三个互补的基于 n-gram 的指标来形式化重复，并提供包含 10,000 个不同视频的标准化测试床以及受控时间转换库。使用 VideoSTF，我们在 10 个高级 VideoLLM 中进行普遍测试、时间压力测试和对抗性利用。我们发现输出重复很普遍，而且至关重要的是，它对视频输入的时间扰动高度敏感。此外，我们表明简单的时间变换可以有效地在黑盒设置中引起重复退化，从而将输出重复暴露为可利用的安全漏洞。我们的结果表明，输出重复是现代 VideoLLM 中的一个基本稳定性问题，并激发了对视频语言系统的稳定性感知评估。我们的评估代码和脚本位于：https://github.com/yuxincao22/VideoSTF_benchmark。
-
-</details>
-
----
-
-## 18. H-WM: Robotic Task and Motion Planning Guided by Hierarchical World Model / H-WM：分层世界模型引导的机器人任务和运动规划
+## 16. H-WM: Robotic Task and Motion Planning Guided by Hierarchical World Model / H-WM：分层世界模型引导的机器人任务和运动规划
 
 **Date**: 2026-02-11 | **arXiv**: [2602.11291v1](http://arxiv.org/abs/2602.11291v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.11291v1)
 
@@ -320,23 +284,7 @@ Video Large Language Models (VideoLLMs) have recently achieved strong performanc
 
 World models are becoming central to robotic planning and control, as they enable prediction of future state transitions. Existing approaches often emphasize video generation or natural language prediction, which are difficult to directly ground in robot actions and suffer from compounding errors over long horizons. Traditional task and motion planning relies on symbolic logic world models, such as planning domains, that are robot-executable and robust for long-horizon reasoning. However, these methods typically operate independently of visual perception, preventing synchronized symbolic and perceptual state prediction. We propose a Hierarchical World Model (H-WM) that jointly predicts logical and visual state transitions within a unified bilevel framework. H-WM combines a high-level logical world model with a low-level visual world model, integrating the robot-executable, long-horizon robustness of symbolic reasoning with perceptual grounding from visual observations. The hierarchical outputs provide stable and consistent intermediate guidance for long-horizon tasks, mitigating error accumulation and enabling robust execution across extended task sequences. To train H-WM, we introduce a robotic dataset that aligns robot motion with symbolic states, actions, and visual observations. Experiments across vision-language-action (VLA) control policies demonstrate the effectiveness and generality of the approach.
 
-世界模型正在成为机器人规划和控制的核心，因为它们能够预测未来的状态转换。现有的方法通常强调视频生成或自然语言预测，这些方法很难直接反映机器人的动作，并且在长期范围内会出现复合错误。传统的任务和运动规划依赖于符号逻辑世界模型，例如规划域，这些模型是机器人可执行的并且对于长期推理来说是鲁棒的。然而，这些方法通常独立于视觉感知进行操作，从而阻止了同步的符号和感知状态预测。我们提出了一种分层世界模型（H-WM），它在统一的双层框架内联合预测逻辑和视觉状态转换。 H-WM 将高级逻辑世界模型与低级视觉世界模型相结合，将机器人可执行的符号推理的长期鲁棒性与视觉观察的感知基础相结合。分层输出为长期任务提供稳定一致的中间指导，减少错误累积并实现跨扩展任务序列的稳健执行。为了训练 H-WM，我们引入了一个机器人数据集，该数据集将机器人运动与符号状态、动作和视觉观察对齐。视觉-语言-动作（VLA）控制策略的实验证明了该方法的有效性和通用性。
-
-</details>
-
----
-
-## 19. Say, Dream, and Act: Learning Video World Models for Instruction-Driven Robot Manipulation / 说、梦想和行动：学习指令驱动机器人操作的视频世界模型
-
-**Date**: 2026-02-11 | **arXiv**: [2602.10717v1](http://arxiv.org/abs/2602.10717v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.10717v1)
-
-**Categories**: cs.RO
-
-<details><summary><b>Abstract / 摘要</b></summary>
-
-Robotic manipulation requires anticipating how the environment evolves in response to actions, yet most existing systems lack this predictive capability, often resulting in errors and inefficiency. While Vision-Language Models (VLMs) provide high-level guidance, they cannot explicitly forecast future states, and existing world models either predict only short horizons or produce spatially inconsistent frames. To address these challenges, we propose a framework for fast and predictive video-conditioned action. Our approach first selects and adapts a robust video generation model to ensure reliable future predictions, then applies adversarial distillation for fast, few-step video generation, and finally trains an action model that leverages both generated videos and real observations to correct spatial errors. Extensive experiments show that our method produces temporally coherent, spatially accurate video predictions that directly support precise manipulation, achieving significant improvements in embodiment consistency, spatial referring ability, and task completion over existing baselines. Codes & Models will be released.
-
-机器人操纵需要预测环境如何响应行动而演变，但大多数现有系统缺乏这种预测能力，常常导致错误和低效率。虽然视觉语言模型（VLM）提供高级指导，但它们无法明确预测未来状态，并且现有的世界模型要么仅预测短期情况，要么产生空间不一致的框架。为了应对这些挑战，我们提出了一个快速、预测性视频条件动作框架。我们的方法首先选择并调整一个强大的视频生成模型，以确保可靠的未来预测，然后应用对抗性蒸馏来快速、几步视频生成，最后训练一个动作模型，利用生成的视频和真实观察来纠正空间错误。大量的实验表明，我们的方法产生时间上一致、空间上准确的视频预测，直接支持精确操作，在现有基线的基础上实现了实施例一致性、空间参考能力和任务完成度的显着改进。代码和型号将被发布。
+世界模型正在成为机器人规划和控制的核心，因为它们能够预测未来的状态转换。现有的方法通常强调视频生成或自然语言预测，这些方法很难直接反映机器人的动作，并且在长期范围内会出现复合错误。传统的任务和运动规划依赖于符号逻辑世界模型，例如规划域，这些模型是机器人可执行的并且对于长视野推理来说是鲁棒的。然而，这些方法通常独立于视觉感知进行操作，从而阻止了同步的符号和感知状态预测。我们提出了一种分层世界模型（H-WM），它在统一的双层框架内联合预测逻辑和视觉状态转换。 H-WM 将高级逻辑世界模型与低级视觉世界模型相结合，将机器人可执行的符号推理的长期鲁棒性与视觉观察的感知基础相结合。分层输出为长期任务提供稳定一致的中间指导，减少错误累积并实现跨扩展任务序列的稳健执行。为了训练 H-WM，我们引入了一个机器人数据集，该数据集将机器人运动与符号状态、动作和视觉观察对齐。视觉-语言-动作（VLA）控制策略的实验证明了该方法的有效性和通用性。
 
 </details>
 
