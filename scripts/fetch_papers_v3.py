@@ -28,6 +28,13 @@ STRICT_KEYWORDS = [k.strip().lower() for k in os.environ.get("KEYWORDS", "").spl
 CONTEXT_KEYWORDS = [k.strip().lower() for k in os.environ.get("CONTEXT_KEYWORDS", "").split(",") if k.strip()]
 REQUIRED_WORD = os.environ.get("REQUIRED_WORD", "").strip().lower()
 
+# Tighten Agent keywords if it's the Agent topic
+if TOPIC_NAME.lower() == "agent":
+    # Original: autonomous agent,agentic,multi-agent,multi agent,tool use,tool-use,toolformer
+    # Tightened to roughly half
+    STRICT_KEYWORDS = ["autonomous agent", "agentic", "multi-agent", "tool use"]
+    CONTEXT_KEYWORDS = ["tool use", "multi-agent", "agentic"]
+
 # Translation config (free)
 MYMEMORY_EMAIL = os.environ.get("MYMEMORY_EMAIL", "lujundaljdljd@163.com")
 
@@ -366,7 +373,11 @@ def main():
     unique = {p["id"]: p for p in all_p}
     topic = [p for p in unique.values() if is_topic_related(p) and p["id"] not in recent]
     if not topic:
-        _info("No new papers.")
+        _info("No new papers. Still updating README and site to ensure consistency.")
+        update_readme_index(base_dir)
+        repo_root = Path(__file__).parent.parent
+        topic_slug = "video" if OUTPUT_DIR in [".", "./", ""] else OUTPUT_DIR
+        build_docs_site(repo_root, topic_slug, TOPIC_NAME, papers_dir)
         return
     topic.sort(key=lambda x: x["published"], reverse=True)
     if MAX_PAPERS > 0:
