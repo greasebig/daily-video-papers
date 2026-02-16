@@ -5,12 +5,137 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-02-16](papers/2026-02-16.md) - 7 papers
 - [2026-02-14](papers/2026-02-14.md) - 53 papers
 <!-- PAPERS_INDEX_END -->
 
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-02-16 (7 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-02-16
+
+**Paper Count**: 7
+
+---
+
+## 1. Asynchronous Verified Semantic Caching for Tiered LLM Architectures / 分层 LLM 架构的异步验证语义缓存
+
+**Date**: 2026-02-13 | **arXiv**: [2602.13165v1](http://arxiv.org/abs/2602.13165v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.13165v1)
+
+**Categories**: cs.IR, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language models (LLMs) now sit in the critical path of search, assistance, and agentic workflows, making semantic caching essential for reducing inference cost and latency. Production deployments typically use a tiered static-dynamic design: a static cache of curated, offline vetted responses mined from logs, backed by a dynamic cache populated online. In practice, both tiers are commonly governed by a single embedding similarity threshold, which induces a hard tradeoff: conservative thresholds miss safe reuse opportunities, while aggressive thresholds risk serving semantically incorrect responses. We introduce \textbf{Krites}, an asynchronous, LLM-judged caching policy that expands static coverage without changing serving decisions. On the critical path, Krites behaves exactly like a standard static threshold policy. When the nearest static neighbor of the prompt falls just below the static threshold, Krites asynchronously invokes an LLM judge to verify whether the static response is acceptable for the new prompt. Approved matches are promoted into the dynamic cache, allowing future repeats and paraphrases to reuse curated static answers and expanding static reach over time. In trace-driven simulations on conversational and search workloads, Krites increases the fraction of requests served with curated static answers (direct static hits plus verified promotions) by up to $\textbf{3.9}$ times for conversational traffic and search-style queries relative to tuned baselines, with unchanged critical path latency.
+
+大型语言模型 (LLM) 现在位于搜索、辅助和代理工作流程的关键路径中，使得语义缓存对于降低推理成本和延迟至关重要。生产部署通常使用分层的静态-动态设计：从日志中挖掘的经过策划、离线审查的响应的静态缓存，由在线填充的动态缓存提供支持。在实践中，这两层通常由单个嵌入相似性阈值控制，这会导致一个艰难的权衡：保守的阈值会错过安全重用机会，而激进的阈值则有可能提供语义上不正确的响应。我们引入了 \textbf{Krites}，这是一种异步的、LLM 判断的缓存策略，可以在不改变服务决策的情况下扩展静态覆盖范围。在关键路径上，Krites 的行为与标准静态阈值策略完全相同。当提示的最近静态邻居低于静态阈值时，Krites 异步调用 LLM 判断来验证静态响应是否适合新提示。批准的匹配将提升到动态缓存中，允许将来的重复和释义重用策划的静态答案并随着时间的推移扩大静态范围。在对话和搜索工作负载的跟踪驱动模拟中，相对于调整后的基线，Krites 将对话流量和搜索式查询的通过策划的静态答案（直接静态点击加上经过验证的促销）提供的请求比例提高了高达 $\textbf{3.9}$ 倍，且关键路径延迟不变。
+
+</details>
+
+---
+
+## 2. In-Context Autonomous Network Incident Response: An End-to-End Large Language Model Agent Approach / 上下文自治网络事件响应：一种端到端的大型语言模型代理方法
+
+**Date**: 2026-02-13 | **arXiv**: [2602.13156v1](http://arxiv.org/abs/2602.13156v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.13156v1)
+
+**Categories**: cs.CR, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Rapidly evolving cyberattacks demand incident response systems that can autonomously learn and adapt to changing threats. Prior work has extensively explored the reinforcement learning approach, which involves learning response strategies through extensive simulation of the incident. While this approach can be effective, it requires handcrafted modeling of the simulator and suppresses useful semantics from raw system logs and alerts. To address these limitations, we propose to leverage large language models' (LLM) pre-trained security knowledge and in-context learning to create an end-to-end agentic solution for incident response planning. Specifically, our agent integrates four functionalities, perception, reasoning, planning, and action, into one lightweight LLM (14b model). Through fine-tuning and chain-of-thought reasoning, our LLM agent is capable of processing system logs and inferring the underlying network state (perception), updating its conjecture of attack models (reasoning), simulating consequences under different response strategies (planning), and generating an effective response (action). By comparing LLM-simulated outcomes with actual observations, the LLM agent repeatedly refines its attack conjecture and corresponding response, thereby demonstrating in-context adaptation. Our agentic approach is free of modeling and can run on commodity hardware. When evaluated on incident logs reported in the literature, our agent achieves recovery up to 23% faster than those of frontier LLMs.
+
+快速发展的网络攻击需要事件响应系统能够自主学习并适应不断变化的威胁。先前的工作广泛探索了强化学习方法，其中涉及通过对事件的广泛模拟来学习响应策略。虽然这种方法可能很有效，但它需要对模拟器进行手工建模，并抑制原始系统日志和警报中的有用语义。为了解决这些限制，我们建议利用大型语言模型（LLM）预先训练的安全知识和上下文学习来为事件响应计划创建端到端代理解决方案。具体来说，我们的代理将感知、推理、规划和行动四种功能集成到一个轻量级 LLM（14b 模型）中。通过微调和链式推理，我们的LLM代理能够处理系统日志并推断底层网络状态（感知），更新其对攻击模型的猜想（推理），模拟不同响应策略下的后果（计划），并生成有效的响应（行动）。通过将 LLM 模拟的结果与实际观察结果进行比较，LLM 代理反复完善其攻击猜想和相应的响应，从而展示上下文适应能力。我们的代理方法无需建模，并且可以在商用硬件上运行。当对文献中报告的事件日志进行评估时，我们的代理的恢复速度比前沿法学硕士快 23%。
+
+</details>
+
+---
+
+## 3. TRACE: Temporal Reasoning via Agentic Context Evolution for Streaming Electronic Health Records (EHRs) / TRACE：通过代理上下文演化进行时间推理，用于流式传输电子健康记录 (EHR)
+
+**Date**: 2026-02-13 | **arXiv**: [2602.12833v1](http://arxiv.org/abs/2602.12833v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.12833v1)
+
+**Categories**: cs.LG, cs.AI, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large Language Models (LLMs) encode extensive medical knowledge but struggle to apply it reliably to longitudinal patient trajectories, where evolving clinical states, irregular timing, and heterogeneous events degrade performance over time. Existing adaptation strategies rely on fine-tuning or retrieval-based augmentation, which introduce computational overhead, privacy constraints, or instability under long contexts. We introduce TRACE (Temporal Reasoning via Agentic Context Evolution), a framework that enables temporal clinical reasoning with frozen LLMs by explicitly structuring and maintaining context rather than extending context windows or updating parameters. TRACE operates over a dual-memory architecture consisting of a static Global Protocol encoding institutional clinical rules and a dynamic Individual Protocol tracking patient-specific state. Four agentic components, Router, Reasoner, Auditor, and Steward, coordinate over this structured memory to support temporal inference and state evolution. The framework maintains bounded inference cost via structured state compression and selectively audits safety-critical clinical decisions. Evaluated on longitudinal clinical event streams from MIMIC-IV, TRACE significantly improves next-event prediction accuracy, protocol adherence, and clinical safety over long-context and retrieval-augmented baselines, while producing interpretable and auditable reasoning traces.
+
+大型语言模型 (LLM) 编码广泛的医学知识，但很难将其可靠地应用于纵向患者轨迹，其中不断变化的临床状态、不规则的时间安排和异质事件会随着时间的推移而降低性能。现有的适应策略依赖于微调或基于检索的增强，这会带来计算开销、隐私限制或长上下文下的不稳定。我们引入了 TRACE（通过 Agentic Context Evolution 进行时间推理），这是一个框架，通过显式构建和维护上下文而不是扩展上下文窗口或更新参数，可以使用冻结的 LLM 进行时间临床推理。 TRACE 在双内存架构上运行，该架构由编码机构临床规则的静态全局协议和跟踪患者特定状态的动态个人协议组成。四个代理组件（路由器、推理器、审计器和管家）在此结构化内存上进行协调，以支持时间推理和状态演化。该框架通过结构化状态压缩维持有界推理成本，并有选择地审核安全关键的临床决策。 TRACE 对 MIMIC-IV 的纵向临床事件流进行评估，在长上下文和检索增强基线上显着提高了下一个事件预测的准确性、协议遵守性和临床安全性，同时产生可解释和可审计的推理轨迹。
+
+</details>
+
+---
+
+## 4. TraceBack: Multi-Agent Decomposition for Fine-Grained Table Attribution / TraceBack：细粒度表归因的多代理分解
+
+**Date**: 2026-02-13 | **arXiv**: [2602.13059v1](http://arxiv.org/abs/2602.13059v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.13059v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Question answering (QA) over structured tables requires not only accurate answers but also transparency about which cells support them. Existing table QA systems rarely provide fine-grained attribution, so even correct answers often lack verifiable grounding, limiting trust in high-stakes settings. We address this with TraceBack, a modular multi-agent framework for scalable, cell-level attribution in single-table QA. TraceBack prunes tables to relevant rows and columns, decomposes questions into semantically coherent sub-questions, and aligns each answer span with its supporting cells, capturing both explicit and implicit evidence used in intermediate reasoning steps. To enable systematic evaluation, we release CITEBench, a benchmark with phrase-to-cell annotations drawn from ToTTo, FetaQA, and AITQA. We further propose FairScore, a reference-less metric that compares atomic facts derived from predicted cells and answers to estimate attribution precision and recall without human cell labels. Experiments show that TraceBack substantially outperforms strong baselines across datasets and granularities, while FairScore closely tracks human judgments and preserves relative method rankings, supporting interpretable and scalable evaluation of table-based QA.
+
+通过结构化表格进行问答 (QA) 不仅需要准确的答案，还需要透明地了解哪些单元格支持它们。现有的桌面 QA 系统很少提供细粒度的归因，因此即使是正确的答案也往往缺乏可验证的基础，从而限制了对高风险环境的信任。我们使用 TraceBack 来解决这个问题，TraceBack 是一个模块化多代理框架，用于在单表 QA 中进行可扩展的单元级归因。 TraceBack 将表格修剪为相关的行和列，将问题分解为语义上连贯的子问题，并将每个答案范围与其支持单元格对齐，捕获中间推理步骤中使用的显式和隐式证据。为了实现系统评估，我们发布了 CITEBench，这是一个基准，包含来自 ToTTo、FetaQA 和 AITQA 的短语到单元格注释。我们进一步提出 FairScore，这是一种无参考指标，可以比较从预测细胞得出的原子事实和答案，以估计归因精度和召回率，而无需人类细胞标签。实验表明，TraceBack 在数据集和粒度方面大大优于强大的基线，而 FairScore 密切跟踪人类判断并保留相对方法排名，支持基于表的 QA 的可解释和可扩展的评估。
+
+</details>
+
+---
+
+## 5. SciAgentGym: Benchmarking Multi-Step Scientific Tool-use in LLM Agents / SciAgentGym：LLM 代理中多步骤科学工具使用的基准测试
+
+**Date**: 2026-02-13 | **arXiv**: [2602.12984v1](http://arxiv.org/abs/2602.12984v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.12984v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Scientific reasoning inherently demands integrating sophisticated toolkits to navigate domain-specific knowledge. Yet, current benchmarks largely overlook agents' ability to orchestrate tools for such rigorous workflows. To bridge this gap, we introduce SciAgentGym, a scalable interactive environment featuring 1,780 domain-specific tools across four natural science disciplines, supported by a robust execution infrastructure. Complementing this, we present SciAgentBench, a tiered evaluation suite designed to stress-test agentic capabilities from elementary actions to long-horizon workflows. Our evaluation identifies a critical bottleneck: state-of-the-art models struggle with complex scientific tool-use. Even for a leading model like GPT-5, success rates drop sharply from 60.6% to 30.9% as interaction horizons extend, primarily due to failures in multi-step workflow execution. To address this, we propose SciForge, a data synthesis method that models the tool action space as a dependency graph to generate logic-aware training trajectories. By fine-tuning on these trajectories, our SciAgent-8B outperforms the significantly larger Qwen3-VL-235B-Instruct while exhibiting positive cross-domain transfer of scientific tool-use capabilities. These results underscore the promising potential of next-generation autonomous scientific agents.
+
+科学推理本质上需要集成复杂的工具包来导航特定领域的知识。然而，当前的基准在很大程度上忽视了代理为如此严格的工作流程编排工具的能力。为了弥补这一差距，我们推出了 SciAgentGym，这是一个可扩展的交互式环境，具有跨四个自然科学学科的 1,780 个特定领域工具，并由强大的执行基础设施提供支持。作为补充，我们推出了 SciAgentBench，这是一个分层评估套件，旨在对从基本操作到长期工作流程的代理功能进行压力测试。我们的评估发现了一个关键瓶颈：最先进的模型难以应对复杂的科学工具的使用。即使对于像 GPT-5 这样的领先模型，随着交互范围的扩展，成功率也会从 60.6% 急剧下降到 30.9%，这主要是由于多步骤工作流执行失败。为了解决这个问题，我们提出了 SciForge，一种数据合成方法，它将工具操作空间建模为依赖图，以生成逻辑感知的训练轨迹。通过对这些轨迹进行微调，我们的 SciAgent-8B 的性能明显优于更大的 Qwen3-VL-235B-Instruct，同时表现出科学工具使用能力的积极跨域转移。这些结果强调了下一代自主科学代理的巨大潜力。
+
+</details>
+
+---
+
+## 6. UniManip: General-Purpose Zero-Shot Robotic Manipulation with Agentic Operational Graph / UniManip：具有代理操作图的通用零射击机器人操作
+
+**Date**: 2026-02-13 | **arXiv**: [2602.13086v1](http://arxiv.org/abs/2602.13086v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.13086v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Achieving general-purpose robotic manipulation requires robots to seamlessly bridge high-level semantic intent with low-level physical interaction in unstructured environments. However, existing approaches falter in zero-shot generalization: end-to-end Vision-Language-Action (VLA) models often lack the precision required for long-horizon tasks, while traditional hierarchical planners suffer from semantic rigidity when facing open-world variations. To address this, we present UniManip, a framework grounded in a Bi-level Agentic Operational Graph (AOG) that unifies semantic reasoning and physical grounding. By coupling a high-level Agentic Layer for task orchestration with a low-level Scene Layer for dynamic state representation, the system continuously aligns abstract planning with geometric constraints, enabling robust zero-shot execution. Unlike static pipelines, UniManip operates as a dynamic agentic loop: it actively instantiates object-centric scene graphs from unstructured perception, parameterizes these representations into collision-free trajectories via a safety-aware local planner, and exploits structured memory to autonomously diagnose and recover from execution failures. Extensive experiments validate the system's robust zero-shot capability on unseen objects and tasks, demonstrating a 22.5% and 25.0% higher success rate compared to state-of-the-art VLA and hierarchical baselines, respectively. Notably, the system enables direct zero-shot transfer from fixed-base setups to mobile manipulation without fine-tuning or reconfiguration. Our open-source project page can be found at https://henryhcliu.github.io/unimanip.
+
+实现通用机器人操作需要机器人在非结构化环境中无缝地连接高级语义意图与低级物理交互。然而，现有方法在零样本泛化方面表现不佳：端到端视觉语言动作（VLA）模型通常缺乏长期任务所需的精度，而传统的分层规划器在面对开放世界变化时会受到语义僵化的困扰。为了解决这个问题，我们提出了 UniManip，这是一个基于双层代理操作图（AOG）的框架，它统一了语义推理和物理基础。通过将用于任务编排的高级代理层与用于动态状态表示的低级场景层相结合，系统不断地将抽象规划与几何约束保持一致，从而实现稳健的零样本执行。与静态管道不同，UniManip 作为动态代理循环运行：它根据非结构化感知主动实例化以对象为中心的场景图，通过安全感知本地规划器将这些表示参数化为无碰撞轨迹，并利用结构化内存来自主诊断执行故障并从执行故障中恢复。大量实验验证了该系统对未见过的物体和任务的强大零样本能力，与最先进的 VLA 和分层基线相比，成功率分别高出 22.5% 和 25.0%。值得注意的是，该系统能够从固定基地设置直接零次转移到移动操纵，无需微调或重新配置。我们的开源项目页面可以在 https://henryhcliu.github.io/unimanip 找到。
+
+</details>
+
+---
+
+## 7. Agentic AI for Robot Control: Flexible but still Fragile / 用于机器人控制的代理人工智能：灵活但仍然脆弱
+
+**Date**: 2026-02-13 | **arXiv**: [2602.13081v1](http://arxiv.org/abs/2602.13081v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.13081v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent work leverages the capabilities and commonsense priors of generative models for robot control. In this paper, we present an agentic control system in which a reasoning-capable language model plans and executes tasks by selecting and invoking robot skills within an iterative planner and executor loop. We deploy the system on two physical robot platforms in two settings: (i) tabletop grasping, placement, and box insertion in indoor mobile manipulation (Mobipick) and (ii) autonomous agricultural navigation and sensing (Valdemar). Both settings involve uncertainty, partial observability, sensor noise, and ambiguous natural-language commands. The system exposes structured introspection of its planning and decision process, reacts to exogenous events via explicit event checks, and supports operator interventions that modify or redirect ongoing execution. Across both platforms, our proof-of-concept experiments reveal substantial fragility, including non-deterministic suboptimal behavior, instruction-following errors, and high sensitivity to prompt specification. At the same time, the architecture is flexible: transfer to a different robot and task domain largely required updating the system prompt (domain model, affordances, and action catalogue) and re-binding the same tool interface to the platform-specific skill API.
+
+最近的工作利用了机器人控制生成模型的功能和常识先验。在本文中，我们提出了一种代理控制系统，其中具有推理能力的语言模型通过在迭代规划器和执行器循环中选择和调用机器人技能来规划和执行任务。我们在两个物理机器人平台上以两种设置部署该系统：(i) 室内移动操纵中的桌面抓取、放置和盒子插入 (Mobipick) 和 (ii) 自主农业导航和传感 (Valdemar)。这两种设置都涉及不确定性、部分可观察性、传感器噪声和模糊的自然语言命令。该系统公开其规划和决策过程的结构化内省，通过显式事件检查对外部事件做出反应，并支持修改或重定向正在进行的执行的操作员干预。在这两个平台上，我们的概念验证实验揭示了巨大的脆弱性，包括非确定性的次优行为、指令遵循错误以及对提示规范的高度敏感性。同时，该架构非常灵活：转移到不同的机器人和任务域很大程度上需要更新系统提示（域模型、可供性和动作目录）并将相同的工具接口重新绑定到特定于平台的技能API。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-02-14 (53 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-02-14
