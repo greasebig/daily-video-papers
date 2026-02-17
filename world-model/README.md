@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-02-17](papers/2026-02-17.md) - 1 papers
 - [2026-02-16](papers/2026-02-16.md) - 1 papers
 - [2026-02-14](papers/2026-02-14.md) - 12 papers
 <!-- PAPERS_INDEX_END -->
@@ -12,6 +13,34 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-02-17 (1 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-02-17
+
+**Paper Count**: 1
+
+---
+
+## 1. WoVR: World Models as Reliable Simulators for Post-Training VLA Policies with RL / WoVR：世界模型作为 RL 训练后 VLA 策略的可靠模拟器
+
+**Date**: 2026-02-15 | **arXiv**: [2602.13977v1](http://arxiv.org/abs/2602.13977v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.13977v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reinforcement learning (RL) promises to unlock capabilities beyond imitation learning for Vision-Language-Action (VLA) models, but its requirement for massive real-world interaction prevents direct deployment on physical robots. Recent work attempts to use learned world models as simulators for policy optimization, yet closed-loop imagined rollouts inevitably suffer from hallucination and long-horizon error accumulation. Such errors do not merely degrade visual fidelity; they corrupt the optimization signal, encouraging policies to exploit model inaccuracies rather than genuine task progress. We propose WoVR, a reliable world-model-based reinforcement learning framework for post-training VLA policies. Instead of assuming a faithful world model, WoVR explicitly regulates how RL interacts with imperfect imagined dynamics. It improves rollout stability through a controllable action-conditioned video world model, reshapes imagined interaction to reduce effective error depth via Keyframe-Initialized Rollouts, and maintains policy-simulator alignment through World Model-Policy co-evolution. Extensive experiments on LIBERO benchmarks and real-world robotic manipulation demonstrate that WoVR enables stable long-horizon imagined rollouts and effective policy optimization, improving average LIBERO success from 39.95% to 69.2% (+29.3 points) and real-robot success from 61.7% to 91.7% (+30.0 points). These results show that learned world models can serve as practical simulators for reinforcement learning when hallucination is explicitly controlled.
+
+强化学习 (RL) 有望为视觉-语言-动作 (VLA) 模型解锁超越模仿学习的功能，但其对大规模现实世界交互的要求阻碍了直接部署在物理机器人上。最近的工作尝试使用学习的世界模型作为政策优化的模拟器，但闭环想象的推出不可避免地会遭受幻觉和长期错误累积的影响。此类错误不仅会降低视觉保真度，还会降低视觉保真度。它们破坏了优化信号，鼓励政策利用模型的不准确性，而不是真正的任务进展。我们提出了 WoVR，一种可靠的基于世界模型的强化学习框架，用于训练后 VLA 策略。 WoVR 没有假设一个忠实的世界模型，而是明确规范强化学习如何与不完美的想象动态相互作用。它通过可控的动作条件视频世界模型提高了推出稳定性，通过关键帧初始化的推出重塑了想象的交互以减少有效错误深度，并通过世界模型-策略共同进化保持策略-模拟器的一致性。对 LIBERO 基准和现实世界机器人操作的大量实验表明，WoVR 能够实现稳定的长期想象部署和有效的策略优化，将 LIBERO 平均成功率从 39.95% 提高到 69.2%（+29.3 分），将真实机器人成功率从 61.7% 提高到 91.7%（+30.0 分）。这些结果表明，当幻觉受到明确控制时，学习的世界模型可以作为强化学习的实用模拟器。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-02-16 (1 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-02-16
