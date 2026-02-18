@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-02-18](papers/2026-02-18.md) - 8 papers
 - [2026-02-17](papers/2026-02-17.md) - 3 papers
 - [2026-02-16](papers/2026-02-16.md) - 4 papers
 - [2026-02-14](papers/2026-02-14.md) - 16 papers
@@ -20,6 +21,150 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-02-18 (8 papers)</b></summary>
+
+# arXiv Video Papers - 2026-02-18
+
+**Paper Count**: 8
+
+---
+
+## 1. VideoSketcher: Video Models Prior Enable Versatile Sequential Sketch Generation / VideoSketcher：视频模型优先启用多功能顺序草图生成
+
+**Date**: 2026-02-17 | **arXiv**: [2602.15819v1](http://arxiv.org/abs/2602.15819v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.15819v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Sketching is inherently a sequential process, in which strokes are drawn in a meaningful order to explore and refine ideas. However, most generative models treat sketches as static images, overlooking the temporal structure that underlies creative drawing. We present a data-efficient approach for sequential sketch generation that adapts pretrained text-to-video diffusion models to generate sketching processes. Our key insight is that large language models and video diffusion models offer complementary strengths for this task: LLMs provide semantic planning and stroke ordering, while video diffusion models serve as strong renderers that produce high-quality, temporally coherent visuals. We leverage this by representing sketches as short videos in which strokes are progressively drawn on a blank canvas, guided by text-specified ordering instructions. We introduce a two-stage fine-tuning strategy that decouples the learning of stroke ordering from the learning of sketch appearance. Stroke ordering is learned using synthetic shape compositions with controlled temporal structure, while visual appearance is distilled from as few as seven manually authored sketching processes that capture both global drawing order and the continuous formation of individual strokes. Despite the extremely limited amount of human-drawn sketch data, our method generates high-quality sequential sketches that closely follow text-specified orderings while exhibiting rich visual detail. We further demonstrate the flexibility of our approach through extensions such as brush style conditioning and autoregressive sketch generation, enabling additional controllability and interactive, collaborative drawing.
+
+素描本质上是一个连续的过程，在这个过程中，笔画是按照有意义的顺序绘制的，以探索和完善想法。然而，大多数生成模型将草图视为静态图像，忽略了创意绘画背后的时间结构。我们提出了一种用于顺序草图生成的数据高效方法，该方法采用预先训练的文本到视频扩散模型来生成草图绘制过程。我们的主要见解是，大型语言模型和视频扩散模型为这项任务提供了互补的优势：法学硕士提供语义规划和笔画排序，而视频扩散模型作为强大的渲染器，产生高质量、时间连贯的视觉效果。我们通过将草图表示为短视频来利用这一点，其中在文本指定的排序指令的指导下，在空白画布上逐步绘制笔画。我们引入了一种两阶段微调策略，将笔划顺序的学习与草图外观的学习分离。笔画顺序是使用具有受控时间结构的合成形状组合来学习的，而视觉外观是从多达七个手动创作的草图过程中提取出来的，这些过程捕获了全局绘图顺序和单个笔画的连续形成。尽管人类绘制的草图数据数量极其有限，但我们的方法可以生成高质量的顺序草图，这些草图严格遵循文本指定的顺序，同时展示丰富的视觉细节。我们通过画笔样式调节和自回归草图生成等扩展进一步展示了我们方法的灵活性，从而实现了额外的可控性和交互式协作绘图。
+
+</details>
+
+---
+
+## 2. EventMemAgent: Hierarchical Event-Centric Memory for Online Video Understanding with Adaptive Tool Use / EventMemAgent：以事件为中心的分层内存，通过自适应工具使用进行在线视频理解
+
+**Date**: 2026-02-17 | **arXiv**: [2602.15329v1](http://arxiv.org/abs/2602.15329v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.15329v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/lingcco/EventMemAgent.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Online video understanding requires models to perform continuous perception and long-range reasoning within potentially infinite visual streams. Its fundamental challenge lies in the conflict between the unbounded nature of streaming media input and the limited context window of Multimodal Large Language Models (MLLMs). Current methods primarily rely on passive processing, which often face a trade-off between maintaining long-range context and capturing the fine-grained details necessary for complex tasks. To address this, we introduce EventMemAgent, an active online video agent framework based on a hierarchical memory module. Our framework employs a dual-layer strategy for online videos: short-term memory detects event boundaries and utilizes event-granular reservoir sampling to process streaming video frames within a fixed-length buffer dynamically; long-term memory structuredly archives past observations on an event-by-event basis. Furthermore, we integrate a multi-granular perception toolkit for active, iterative evidence capture and employ Agentic Reinforcement Learning (Agentic RL) to end-to-end internalize reasoning and tool-use strategies into the agent's intrinsic capabilities. Experiments show that EventMemAgent achieves competitive results on online video benchmarks. The code will be released here: https://github.com/lingcco/EventMemAgent.
+
+在线视频理解需要模型在潜在的无限视觉流中执行连续感知和远程推理。其根本挑战在于流媒体输入的无界性质与多模态大语言模型（MLLM）的有限上下文窗口之间的冲突。当前的方法主要依赖于被动处理，这通常面临着维护远程上下文和捕获复杂任务所需的细粒度细节之间的权衡。为了解决这个问题，我们引入了 EventMemAgent，一个基于分层内存模块的主动在线视频代理框架。我们的框架对在线视频采用双层策略：短期记忆检测事件边界，并利用事件粒度存储采样动态处理固定长度缓冲区内的流视频帧；长期记忆以逐个事件为基础结构化地归档过去的观察结果。此外，我们集成了用于主动、迭代证据捕获的多粒度感知工具包，并采用代理强化学习（Agentic RL）将端到端推理和工具使用策略内化为代理的内在能力。实验表明，EventMemAgent 在在线视频基准测试中取得了有竞争力的结果。代码将在这里发布：https://github.com/lingcco/EventMemAgent。
+
+</details>
+
+---
+
+## 3. Consistency-Preserving Diverse Video Generation / 保持一致性的多样化视频生成
+
+**Date**: 2026-02-17 | **arXiv**: [2602.15287v1](http://arxiv.org/abs/2602.15287v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.15287v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Text-to-video generation is expensive, so only a few samples are typically produced per prompt. In this low-sample regime, maximizing the value of each batch requires high cross-video diversity. Recent methods improve diversity for image generation, but for videos they often degrade within-video temporal consistency and require costly backpropagation through a video decoder. We propose a joint-sampling framework for flow-matching video generators that improves batch diversity while preserving temporal consistency. Our approach applies diversity-driven updates and then removes only the components that would decrease a temporal-consistency objective. To avoid image-space gradients, we compute both objectives with lightweight latent-space models, avoiding video decoding and decoder backpropagation. Experiments on a state-of-the-art text-to-video flow-matching model show diversity comparable to strong joint-sampling baselines while substantially improving temporal consistency and color naturalness. Code will be released.
+
+文本到视频的生成成本很高，因此每个提示通常只生成几个样本。在这种低样本情况下，最大化每个批次的价值需要高度的跨视频多样性。最近的方法提高了图像生成的多样性，但对于视频来说，它们通常会降低视频内的时间一致性，并且需要通过视频解码器进行昂贵的反向传播。我们提出了一种用于流匹配视频生成器的联合采样框架，该框架可以提高批量多样性，同时保持时间一致性。我们的方法应用多样性驱动的更新，然后仅删除会降低时间一致性目标的组件。为了避免图像空间梯度，我们使用轻量级潜在空间模型计算两个目标，避免视频解码和解码器反向传播。最先进的文本到视频流匹配模型的实验显示出与强联合采样基线相当的多样性，同时显着提高了时间一致性和颜色自然度。代码将被发布。
+
+</details>
+
+---
+
+## 4. Loss Knows Best: Detecting Annotation Errors in Videos via Loss Trajectories / 损失最了解：通过损失轨迹检测视频中的注释错误
+
+**Date**: 2026-02-16 | **arXiv**: [2602.15154v1](http://arxiv.org/abs/2602.15154v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.15154v1)
+
+**Categories**: cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+High-quality video datasets are foundational for training robust models in tasks like action recognition, phase detection, and event segmentation. However, many real-world video datasets suffer from annotation errors such as *mislabeling*, where segments are assigned incorrect class labels, and *disordering*, where the temporal sequence does not follow the correct progression. These errors are particularly harmful in phase-annotated tasks, where temporal consistency is critical. We propose a novel, model-agnostic method for detecting annotation errors by analyzing the Cumulative Sample Loss (CSL)--defined as the average loss a frame incurs when passing through model checkpoints saved across training epochs. This per-frame loss trajectory acts as a dynamic fingerprint of frame-level learnability. Mislabeled or disordered frames tend to show consistently high or irregular loss patterns, as they remain difficult for the model to learn throughout training, while correctly labeled frames typically converge to low loss early. To compute CSL, we train a video segmentation model and store its weights at each epoch. These checkpoints are then used to evaluate the loss of each frame in a test video. Frames with persistently high CSL are flagged as likely candidates for annotation errors, including mislabeling or temporal misalignment. Our method does not require ground truth on annotation errors and is generalizable across datasets. Experiments on EgoPER and Cholec80 demonstrate strong detection performance, effectively identifying subtle inconsistencies such as mislabeling and frame disordering. The proposed approach provides a powerful tool for dataset auditing and improving training reliability in video-based machine learning.
+
+高质量视频数据集是在动作识别、相位检测和事件分割等任务中训练稳健模型的基础。然而，许多现实世界的视频数据集都存在注释错误，例如“错误标记”（片段被分配了不正确的类标签）和“无序”（时间序列不遵循正确的进展）。这些错误在时间一致性至关重要的阶段注释任务中尤其有害。我们提出了一种新颖的、与模型无关的方法，通过分析累积样本损失（CSL）来检测注释错误，CSL 定义为帧通过跨训练时期保存的模型检查点时产生的平均损失。这种每帧丢失轨迹充当帧级可学习性的动态指纹。错误标记或无序的帧往往会显示出持续较高或不规则的损失模式，因为模型在整个训练过程中仍然难以学习它们，而正确标记的帧通常会尽早收敛到低损失。为了计算 CSL，我们训练了一个视频分割模型并存储其在每个时期的权重。然后使用这些检查点来评估测试视频中每帧的丢失。具有持续高 CSL 的帧被标记为可能存在注释错误的候选帧，包括错误标记或时间错位。我们的方法不需要注释错误的基本事实，并且可以跨数据集推广。 EgoPER 和 Cholec80 上的实验展示了强大的检测性能，可以有效识别细微的不一致，例如错误标记和帧混乱。所提出的方法为数据集审核和提高基于视频的机器学习中的训练可靠性提供了强大的工具。
+
+</details>
+
+---
+
+## 5. EditCtrl: Disentangled Local and Global Control for Real-Time Generative Video Editing / EditCtrl：实时生成视频编辑的解开本地和全局控制
+
+**Date**: 2026-02-16 | **arXiv**: [2602.15031v1](http://arxiv.org/abs/2602.15031v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.15031v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+High-fidelity generative video editing has seen significant quality improvements by leveraging pre-trained video foundation models. However, their computational cost is a major bottleneck, as they are often designed to inefficiently process the full video context regardless of the inpainting mask's size, even for sparse, localized edits. In this paper, we introduce EditCtrl, an efficient video inpainting control framework that focuses computation only where it is needed. Our approach features a novel local video context module that operates solely on masked tokens, yielding a computational cost proportional to the edit size. This local-first generation is then guided by a lightweight temporal global context embedder that ensures video-wide context consistency with minimal overhead. Not only is EditCtrl 10 times more compute efficient than state-of-the-art generative editing methods, it even improves editing quality compared to methods designed with full-attention. Finally, we showcase how EditCtrl unlocks new capabilities, including multi-region editing with text prompts and autoregressive content propagation.
+
+通过利用预先训练的视频基础模型，高保真生成视频编辑的质量得到了显着提高。然而，它们的计算成本是一个主要瓶颈，因为它们通常被设计为低效地处理完整的视频上下文，无论修复掩模的大小如何，即使对于稀疏的局部编辑也是如此。在本文中，我们介绍了 EditCtrl，这是一种高效的视频修复控制框架，仅将计算集中在需要的地方。我们的方法采用了一种新颖的本地视频上下文模块，该模块仅对屏蔽标记进行操作，产生与编辑大小成正比的计算成本。然后，这个本地第一代由轻量级全局上下文嵌入器引导，以最小的开销确保视频范围的上下文一致性。 EditCtrl 不仅计算效率比最先进的生成编辑方法高 10 倍，而且与完全注意设计的方法相比，它甚至还提高了编辑质量。最后，我们展示 EditCtrl 如何解锁新功能，包括带有文本提示的多区域编辑和自回归内容传播。
+
+</details>
+
+---
+
+## 6. AnchorWeave: World-Consistent Video Generation with Retrieved Local Spatial Memories / AnchorWeave：通过检索本地空间记忆生成世界一致的视频
+
+**Date**: 2026-02-16 | **arXiv**: [2602.14941v1](http://arxiv.org/abs/2602.14941v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.14941v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Maintaining spatial world consistency over long horizons remains a central challenge for camera-controllable video generation. Existing memory-based approaches often condition generation on globally reconstructed 3D scenes by rendering anchor videos from the reconstructed geometry in the history. However, reconstructing a global 3D scene from multiple views inevitably introduces cross-view misalignment, as pose and depth estimation errors cause the same surfaces to be reconstructed at slightly different 3D locations across views. When fused, these inconsistencies accumulate into noisy geometry that contaminates the conditioning signals and degrades generation quality. We introduce AnchorWeave, a memory-augmented video generation framework that replaces a single misaligned global memory with multiple clean local geometric memories and learns to reconcile their cross-view inconsistencies. To this end, AnchorWeave performs coverage-driven local memory retrieval aligned with the target trajectory and integrates the selected local memories through a multi-anchor weaving controller during generation. Extensive experiments demonstrate that AnchorWeave significantly improves long-term scene consistency while maintaining strong visual quality, with ablation and analysis studies further validating the effectiveness of local geometric conditioning, multi-anchor control, and coverage-driven retrieval.
+
+在长期范围内保持空间世界的一致性仍然是摄像机可控视频生成的核心挑战。现有的基于内存的方法通常通过从历史中的重建几何体渲染锚视频来调节全局重建 3D 场景的生成。然而，从多个视图重建全局 3D 场景不可避免地会引入跨视图未对准，因为姿态和深度估计错误会导致在跨视图的稍微不同的 3D 位置重建相同的表面。当融合时，这些不一致会累积成噪声几何形状，从而污染调节信号并降低生成质量。我们介绍了 AnchorWeave，这是一种内存增强视频生成框架，它用多个干净的局部几何内存替换单个未对齐的全局内存，并学习协调它们的跨视图不一致。为此，AnchorWeave 执行与目标轨迹对齐的覆盖驱动的本地内存检索，并在生成过程中通过多锚编织控制器集成所选的本地内存。大量实验表明，AnchorWeave 显着提高了长期场景一致性，同时保持了强大的视觉质量，消融和分析研究进一步验证了局部几何条件、多锚点控制和覆盖驱动检索的有效性。
+
+</details>
+
+---
+
+## 7. Adapting VACE for Real-Time Autoregressive Video Diffusion / 采用 VACE 进行实时自回归视频扩散
+
+**Date**: 2026-02-16 | **arXiv**: [2602.14381v1](http://arxiv.org/abs/2602.14381v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.14381v1)
+
+**Categories**: cs.CV, cs.AI
+
+**Code**: https://github.com/daydreamlive/scope.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We describe an adaptation of VACE (Video All-in-one Creation and Editing) for real-time autoregressive video generation. VACE provides unified video control (reference guidance, structural conditioning, inpainting, and temporal extension) but assumes bidirectional attention over full sequences, making it incompatible with streaming pipelines that require fixed chunk sizes and causal attention. The key modification moves reference frames from the diffusion latent space into a parallel conditioning pathway, preserving the fixed chunk sizes and KV caching that autoregressive models require. This adaptation reuses existing pretrained VACE weights without additional training. Across 1.3B and 14B model scales, VACE adds 20-30% latency overhead for structural control and inpainting, with negligible VRAM cost relative to the base model. Reference-to-video fidelity is severely degraded compared to batch VACE due to causal attention constraints. A reference implementation is available at https://github.com/daydreamlive/scope.
+
+我们描述了用于实时自回归视频生成的 VACE（视频一体化创建和编辑）的改编。 VACE 提供统一的视频控制（参考指导、结构调节、修复和时间扩展），但假设对整个序列进行双向关注，这使其与需要固定块大小和因果关注的流媒体管道不兼容。关键修改将参考帧从扩散潜在空间移动到并行调节路径，保留自回归模型所需的固定块大小和 KV 缓存。此调整重复使用现有的预训练 VACE 权重，无需额外训练。在 1.3B 和 14B 模型规模中，VACE 为结构控制和修复增加了 20-30% 的延迟开销，而相对于基本模型，VRAM 成本可以忽略不计。由于因果注意力限制，与批量 VACE 相比，视频参考保真度严重下降。参考实现可在 https://github.com/daydreamlive/scope 上找到。
+
+</details>
+
+---
+
+## 8. Dual-Signal Adaptive KV-Cache Optimization for Long-Form Video Understanding in Vision-Language Models / 用于视觉语言模型中长格式视频理解的双信号自适应 KV 缓存优化
+
+**Date**: 2026-02-15 | **arXiv**: [2602.14236v1](http://arxiv.org/abs/2602.14236v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.14236v1)
+
+**Categories**: cs.CV, cs.AI, cs.LG, cs.PF
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision-Language Models (VLMs) face a critical memory bottleneck when processing long-form video content due to the linear growth of the Key-Value (KV) cache with sequence length. Existing solutions predominantly employ reactive eviction strategies that compute full attention matrices before discarding tokens, resulting in substantial computational waste. We propose Sali-Cache, a novel a priori optimization framework that implements dual-signal adaptive caching through proactive memory management. By integrating a temporal filter based on optical flow analysis for detecting inter-frame redundancy and a spatial filter leveraging saliency detection for identifying visually significant regions, Sali-Cache intelligently manages memory allocation before entering computationally expensive attention operations. Experimental evaluation on the LLaVA 1.6 architecture demonstrates that our method achieves a 2.20x compression ratio in effective memory usage while maintaining 100% accuracy across BLEU, ROUGE-L, and Exact Match metrics. Furthermore, under identical memory budget constraints, Sali-Cache preserves context-rich features over extended temporal durations without degrading model performance, enabling efficient processing of long-form video content on consumer-grade hardware.
+
+由于键值 (KV) 缓存随序列长度线性增长，视觉语言模型 (VLM) 在处理长格式视频内容时面临严重的内存瓶颈。现有的解决方案主要采用反应性驱逐策略，在丢弃令牌之前计算完整的注意力矩阵，从而导致大量的计算浪费。我们提出了 Sali-Cache，一种新颖的先验优化框架，通过主动内存管理实现双信号自适应缓存。通过集成基于光流分析的时间滤波器（用于检测帧间冗余）和空间滤波器（利用显着性检测来识别视觉上重要的区域），Sali-Cache 在进入计算量大的注意力操作之前智能地管理内存分配。对 LLaVA 1.6 架构的实验评估表明，我们的方法在有效内存使用方面实现了 2.20 倍的压缩比，同时在 BLEU、ROUGE-L 和精确匹配指标上保持 100% 的准确性。此外，在相同的内存预算限制下，Sali-Cache 在延长的时间持续时间内保留上下文丰富的特征，而不会降低模型性能，从而能够在消费级硬件上高效处理长格式视频内容。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-02-17 (3 papers)</b></summary>
 
 # arXiv Video Papers - 2026-02-17
