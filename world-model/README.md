@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-02-19](papers/2026-02-19.md) - 4 papers
 - [2026-02-18](papers/2026-02-18.md) - 6 papers
 - [2026-02-17](papers/2026-02-17.md) - 1 papers
 - [2026-02-16](papers/2026-02-16.md) - 1 papers
@@ -14,6 +15,82 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-02-19 (4 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-02-19
+
+**Paper Count**: 4
+
+---
+
+## 1. Factored Latent Action World Models / 分解的潜在动作世界模型
+
+**Date**: 2026-02-18 | **arXiv**: [2602.16229v1](http://arxiv.org/abs/2602.16229v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.16229v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Learning latent actions from action-free video has emerged as a powerful paradigm for scaling up controllable world model learning. Latent actions provide a natural interface for users to iteratively generate and manipulate videos. However, most existing approaches rely on monolithic inverse and forward dynamics models that learn a single latent action to control the entire scene, and therefore struggle in complex environments where multiple entities act simultaneously. This paper introduces Factored Latent Action Model (FLAM), a factored dynamics framework that decomposes the scene into independent factors, each inferring its own latent action and predicting its own next-step factor value. This factorized structure enables more accurate modeling of complex multi-entity dynamics and improves video generation quality in action-free video settings compared to monolithic models. Based on experiments on both simulation and real-world multi-entity datasets, we find that FLAM outperforms prior work in prediction accuracy and representation quality, and facilitates downstream policy learning, demonstrating the benefits of factorized latent action models.
+
+从无动作视频中学习潜在动作已成为扩大可控世界模型学习的强大范例。潜在动作为用户迭代生成和操作视频提供了一个自然的界面。然而，大多数现有方法依赖于整体逆向和正向动力学模型，这些模型学习单个潜在动作来控制整个场景，因此在多个实体同时动作的复杂环境中陷入困境。本文介绍了因子式潜在动作模型（FLAM），这是一种因子式动力学框架，它将场景分解为独立的因素，每个因子都推断自己的潜在动作并预测自己的下一步因子值。与整体模型相比，这种分解结构可以更准确地对复杂的多实体动态进行建模，并提高无动作视频设置中的视频生成质量。基于模拟和现实世界多实体数据集的实验，我们发现 FLAM 在预测精度和表示质量方面优于先前的工作，并促进下游策略学习，展示了因子化潜在动作模型的好处。
+
+</details>
+
+---
+
+## 2. Learning to unfold cloth: Scaling up world models to deformable object manipulation / 学习展开布料：将世界模型扩展到可变形对象操作
+
+**Date**: 2026-02-18 | **arXiv**: [2602.16675v1](http://arxiv.org/abs/2602.16675v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.16675v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Learning to manipulate cloth is both a paradigmatic problem for robotic research and a problem of immediate relevance to a variety of applications ranging from assistive care to the service industry. The complex physics of the deformable object makes this problem of cloth manipulation nontrivial. In order to create a general manipulation strategy that addresses a variety of shapes, sizes, fold and wrinkle patterns, in addition to the usual problems of appearance variations, it becomes important to carefully consider model structure and their implications for generalisation performance. In this paper, we present an approach to in-air cloth manipulation that uses a variation of a recently proposed reinforcement learning architecture, DreamerV2. Our implementation modifies this architecture to utilise surface normals input, in addition to modiying the replay buffer and data augmentation procedures. Taken together these modifications represent an enhancement to the world model used by the robot, addressing the physical complexity of the object being manipulated by the robot. We present evaluations both in simulation and in a zero-shot deployment of the trained policies in a physical robot setup, performing in-air unfolding of a variety of different cloth types, demonstrating the generalisation benefits of our proposed architecture.
+
+学习操纵布料既是机器人研究的一个典型问题，也是一个与从辅助护理到服务行业的各种应用直接相关的问题。可变形物体的复杂物理特性使得布料操纵的问题变得非常重要。为了创建解决各种形状、尺寸、折叠和皱纹图案的通用操作策略，除了外观变化的常见问题之外，仔细考虑模型结构及其对泛化性能的影响也变得很重要。在本文中，我们提出了一种空中布料操纵方法，该方法使用最近提出的强化学习架构 DreamerV2 的变体。除了修改重播缓冲区和数据增强程序之外，我们的实现还修改了该架构以利用表面法线输入。总的来说，这些修改代表了对机器人使用的世界模型的增强，解决了机器人操纵的物体的物理复杂性。我们在物理机器人设置中对经过训练的策略进行模拟和零次部署，执行各种不同布料类型的空中展开，展示了我们提出的架构的泛化优势。
+
+</details>
+
+---
+
+## 3. World Model Failure Classification and Anomaly Detection for Autonomous Inspection / 用于自主检查的世界模型故障分类和异常检测
+
+**Date**: 2026-02-18 | **arXiv**: [2602.16182v1](http://arxiv.org/abs/2602.16182v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.16182v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Autonomous inspection robots for monitoring industrial sites can reduce costs and risks associated with human-led inspection. However, accurate readings can be challenging due to occlusions, limited viewpoints, or unexpected environmental conditions. We propose a hybrid framework that combines supervised failure classification with anomaly detection, enabling classification of inspection tasks as a success, known failure, or anomaly (i.e., out-of-distribution) case. Our approach uses a world model backbone with compressed video inputs. This policy-agnostic, distribution-free framework determines classifications based on two decision functions set by conformal prediction (CP) thresholds before a human observer does. We evaluate the framework on gauge inspection feeds collected from office and industrial sites and demonstrate real-time deployment on a Boston Dynamics Spot. Experiments show over 90% accuracy in distinguishing between successes, failures, and OOD cases, with classifications occurring earlier than a human observer. These results highlight the potential for robust, anticipatory failure detection in autonomous inspection tasks or as a feedback signal for model training to assess and improve the quality of training data. Project website: https://autoinspection-classification.github.io
+
+用于监控工业现场的自主检查机器人可以降低与人工检查相关的成本和风险。然而，由于遮挡、有限的视角或意外的环境条件，准确的读数可能具有挑战性。我们提出了一种混合框架，将监督故障分类与异常检测相结合，从而能够将检查任务分类为成功、已知故障或异常（即分布外）情况。我们的方法使用具有压缩视频输入的世界模型主干。这种与策略无关、与分布无关的框架先于人类观察者根据由共形预测 (CP) 阈值设置的两个决策函数来确定分类。我们评估从办公室和工业场所收集的仪表检查源的框架，并在 Boston Dynamics Spot 上演示实时部署。实验表明，区分成功、失败和 OOD 案例的准确率超过 90%，并且分类发生得比人类观察者更早。这些结果凸显了在自主检查任务中进行稳健的预期故障检测或作为模型训练的反馈信号以评估和提高训练数据质量的潜力。项目网站：https://autoinspection-classification.github.io
+
+</details>
+
+---
+
+## 4. ODYN: An All-Shifted Non-Interior-Point Method for Quadratic Programming in Robotics and AI / ODYN：机器人和人工智能二次规划的全平移非内点方法
+
+**Date**: 2026-02-17 | **arXiv**: [2602.16005v1](http://arxiv.org/abs/2602.16005v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.16005v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We introduce ODYN, a novel all-shifted primal-dual non-interior-point quadratic programming (QP) solver designed to efficiently handle challenging dense and sparse QPs. ODYN combines all-shifted nonlinear complementarity problem (NCP) functions with proximal method of multipliers to robustly address ill-conditioned and degenerate problems, without requiring linear independence of the constraints. It exhibits strong warm-start performance and is well suited to both general-purpose optimization, and robotics and AI applications, including model-based control, estimation, and kernel-based learning methods. We provide an open-source implementation and benchmark ODYN on the Maros-Mészáros test set, demonstrating state-of-the-art convergence performance in small-to-high-scale problems. The results highlight ODYN's superior warm-starting capabilities, which are critical in sequential and real-time settings common in robotics and AI. These advantages are further demonstrated by deploying ODYN as the backend of an SQP-based predictive control framework (OdynSQP), as the implicitly differentiable optimization layer for deep learning (ODYNLayer), and the optimizer of a contact-dynamics simulation (ODYNSim).
+
+我们推出 ODYN，这是一种新颖的全平移原对偶非内点二次规划 (QP) 求解器，旨在有效处理具有挑战性的密集和稀疏 QP。 ODYN 将全移位非线性互补问题 (NCP) 函数与乘法器的近端方法相结合，以稳健地解决病态和退化问题，而不需要约束的线性独立性。它具有强大的热启动性能，非常适合通用优化以及机器人和人工智能应用，包括基于模型的控制、估计和基于内核的学习方法。我们在 Maros-Mészáros 测试集上提供开源实现和基准 ODYN，展示了小规模到大规模问题中最先进的收敛性能。结果凸显了 ODYN 卓越的热启动能力，这对于机器人和人工智能中常见的顺序和实时设置至关重要。通过将 ODYN 部署为基于 SQP 的预测控制框架 (OdynSQP) 的后端、深度学习的隐式可微优化层 (ODYNLayer) 以及接触动力学模拟的优化器 (ODYNSim)，进一步证明了这些优势。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-02-18 (6 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-02-18
