@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-02-19](papers/2026-02-19.md) - 8 papers
 - [2026-02-18](papers/2026-02-18.md) - 8 papers
 - [2026-02-17](papers/2026-02-17.md) - 3 papers
 - [2026-02-16](papers/2026-02-16.md) - 4 papers
@@ -21,6 +22,146 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-02-19 (8 papers)</b></summary>
+
+# arXiv Video Papers - 2026-02-19
+
+**Paper Count**: 8
+
+---
+
+## 1. TeCoNeRV: Leveraging Temporal Coherence for Compressible Neural Representations for Videos / TeCoNeRV：利用时间相干性实现视频的可压缩神经表示
+
+**Date**: 2026-02-18 | **arXiv**: [2602.16711v1](http://arxiv.org/abs/2602.16711v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.16711v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Implicit Neural Representations (INRs) have recently demonstrated impressive performance for video compression. However, since a separate INR must be overfit for each video, scaling to high-resolution videos while maintaining encoding efficiency remains a significant challenge. Hypernetwork-based approaches predict INR weights (hyponetworks) for unseen videos at high speeds, but with low quality, large compressed size, and prohibitive memory needs at higher resolutions. We address these fundamental limitations through three key contributions: (1) an approach that decomposes the weight prediction task spatially and temporally, by breaking short video segments into patch tubelets, to reduce the pretraining memory overhead by 20$\times$; (2) a residual-based storage scheme that captures only differences between consecutive segment representations, significantly reducing bitstream size; and (3) a temporal coherence regularization framework that encourages changes in the weight space to be correlated with video content. Our proposed method, TeCoNeRV, achieves substantial improvements of 2.47dB and 5.35dB PSNR over the baseline at 480p and 720p on UVG, with 36% lower bitrates and 1.5-3$\times$ faster encoding speeds. With our low memory usage, we are the first hypernetwork approach to demonstrate results at 480p, 720p and 1080p on UVG, HEVC and MCL-JCV. Our project page is available at https://namithap10.github.io/teconerv/ .
+
+隐式神经表示（INR）最近在视频压缩方面表现出了令人印象深刻的性能。然而，由于每个视频都必须有一个单独的 INR 过度拟合，因此在保持编码效率的同时扩展到高分辨率视频仍然是一个重大挑战。基于超网络的方法可以高速预测未见过的视频的 INR 权重（次网络），但在较高分辨率下质量较低、压缩大小较大且内存需求过高。我们通过三个关键贡献解决了这些基本限制：（1）一种在空间和时间上分解权重预测任务的方法，通过将短视频片段分解为补丁小管，将预训练内存开销减少 20$\times$； (2)基于残差的存储方案，仅捕获连续段表示之间的差异，显着减少比特流大小； （3）时间相干性正则化框架，鼓励权重空间的变化与视频内容相关。我们提出的方法 TeCoNeRV 在 UVG 上的 480p 和 720p 的基线上实现了 2.47dB 和 5.35dB PSNR 的大幅改进，比特率降低了 36%，编码速度提高了 1.5-3$\times$。由于内存使用率低，我们是第一个在 UVG、HEVC 和 MCL-JCV 上展示 480p、720p 和 1080p 效果的超网络方法。我们的项目页面位于 https://namithap10.github.io/teconerv/ 。
+
+</details>
+
+---
+
+## 2. Let's Split Up: Zero-Shot Classifier Edits for Fine-Grained Video Understanding / 让我们分开：零样本分类器编辑以实现细粒度视频理解
+
+**Date**: 2026-02-18 | **arXiv**: [2602.16545v1](http://arxiv.org/abs/2602.16545v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.16545v1)
+
+**Categories**: cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video recognition models are typically trained on fixed taxonomies which are often too coarse, collapsing distinctions in object, manner or outcome under a single label. As tasks and definitions evolve, such models cannot accommodate emerging distinctions and collecting new annotations and retraining to accommodate such changes is costly. To address these challenges, we introduce category splitting, a new task where an existing classifier is edited to refine a coarse category into finer subcategories, while preserving accuracy elsewhere. We propose a zero-shot editing method that leverages the latent compositional structure of video classifiers to expose fine-grained distinctions without additional data. We further show that low-shot fine-tuning, while simple, is highly effective and benefits from our zero-shot initialization. Experiments on our new video benchmarks for category splitting demonstrate that our method substantially outperforms vision-language baselines, improving accuracy on the newly split categories without sacrificing performance on the rest. Project page: https://kaitingliu.github.io/Category-Splitting/.
+
+视频识别模型通常是在固定分类法上进行训练的，这些分类法通常过于粗糙，在单个标签下消除了对象、方式或结果的区别。随着任务和定义的发展，此类模型无法适应新出现的区别，并且收集新的注释和重新训练以适应此类变化的成本高昂。为了解决这些挑战，我们引入了类别分割，这是一项新任务，其中编辑现有分类器以将粗略类别细化为更精细的子类别，同时保持其他地方的准确性。我们提出了一种零镜头编辑方法，利用视频分类器的潜在组成结构来揭示细粒度的区别，而无需额外的数据。我们进一步表明，低样本微调虽然简单，但却非常有效，并且受益于我们的零样本初始化。我们针对类别分割的新视频基准的实验表明，我们的方法大大优于视觉语言基线，提高了新分割类别的准确性，而不会牺牲其余类别的性能。项目页面：https://kaitingliu.github.io/Category-Splitting/。
+
+</details>
+
+---
+
+## 3. ReMoRa: Multimodal Large Language Model based on Refined Motion Representation for Long-Video Understanding / ReMoRa：基于细化运动表示的多模态大语言模型，用于长视频理解
+
+**Date**: 2026-02-18 | **arXiv**: [2602.16412v1](http://arxiv.org/abs/2602.16412v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.16412v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+While multimodal large language models (MLLMs) have shown remarkable success across a wide range of tasks, long-form video understanding remains a significant challenge. In this study, we focus on video understanding by MLLMs. This task is challenging because processing a full stream of RGB frames is computationally intractable and highly redundant, as self-attention have quadratic complexity with sequence length. In this paper, we propose ReMoRa, a video MLLM that processes videos by operating directly on their compressed representations. A sparse set of RGB keyframes is retained for appearance, while temporal dynamics are encoded as a motion representation, removing the need for sequential RGB frames. These motion representations act as a compact proxy for optical flow, capturing temporal dynamics without full frame decoding. To refine the noise and low fidelity of block-based motions, we introduce a module to denoise and generate a fine-grained motion representation. Furthermore, our model compresses these features in a way that scales linearly with sequence length. We demonstrate the effectiveness of ReMoRa through extensive experiments across a comprehensive suite of long-video understanding benchmarks. ReMoRa outperformed baseline methods on multiple challenging benchmarks, including LongVideoBench, NExT-QA, and MLVU.
+
+虽然多模态大语言模型（MLLM）在广泛的任务中取得了显着的成功，但长格式视频理解仍然是一个重大挑战。在本研究中，我们重点关注 MLLM 的视频理解。这项任务具有挑战性，因为处理完整的 RGB 帧流在计算上非常困难且高度冗余，因为自注意力的复杂度与序列长度呈二次方关系。在本文中，我们提出了 ReMoRa，一种视频 MLLM，它通过直接操作视频的压缩表示来处理视频。保留一组稀疏的 RGB 关键帧用于外观，同时将时间动态编码为运动表示，从而无需连续的 RGB 帧。这些运动表示充当光流的紧凑代理，无需全帧解码即可捕获时间动态。为了改善基于块的运动的噪声和低保真度，我们引入了一个模块来降噪并生成细粒度的运动表示。此外，我们的模型以随序列长度线性缩放的方式压缩这些特征。我们通过一系列全面的长视频理解基准进行大量实验，展示了 ReMoRa 的有效性。 ReMoRa 在多个具有挑战性的基准测试中表现优于基准方法，包括 LongVideoBench、NExT-QA 和 MLVU。
+
+</details>
+
+---
+
+## 4. DataCube: A Video Retrieval Platform via Natural Language Semantic Profiling / DataCube：基于自然语言语义分析的视频检索平台
+
+**Date**: 2026-02-18 | **arXiv**: [2602.16231v1](http://arxiv.org/abs/2602.16231v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.16231v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large-scale video repositories are increasingly available for modern video understanding and generation tasks. However, transforming raw videos into high-quality, task-specific datasets remains costly and inefficient. We present DataCube, an intelligent platform for automatic video processing, multi-dimensional profiling, and query-driven retrieval. DataCube constructs structured semantic representations of video clips and supports hybrid retrieval with neural re-ranking and deep semantic matching. Through an interactive web interface, users can efficiently construct customized video subsets from massive repositories for training, analysis, and evaluation, and build searchable systems over their own private video collections. The system is publicly accessible at https://datacube.baai.ac.cn/. Demo Video: https://baai-data-cube.ks3-cn-beijing.ksyuncs.com/custom/Adobe%20Express%20-%202%E6%9C%8818%E6%97%A5%20%281%29%281%29%20%281%29.mp4
+
+大型视频存储库越来越多地可用于现代视频理解和生成任务。然而，将原始视频转换为高质量、特定于任务的数据集仍然成本高昂且效率低下。我们推出 DataCube，一个用于自动视频处理、多维分析和查询驱动检索的智能平台。 DataCube 构建视频剪辑的结构化语义表示，并支持神经重新排序和深度语义匹配的混合检索。通过交互式网络界面，用户可以从海量存储库中高效地构建定制视频子集，用于训练、分析和评估，并在自己的私人视频集合上构建可搜索系统。该系统可通过 https://datacube.baai.ac.cn/ 公开访问。演示视频：https://baai-data-cube.ks3-cn-beijing.ksyncs.com/custom/Adobe%20Express%20-%202%E6%9C%8818%E6%97%A5%20%281%29%281%29%20%281%29.mp4
+
+</details>
+
+---
+
+## 5. CHAI: CacHe Attention Inference for text2video / CHAI：text2video 的 CacHe 注意力推理
+
+**Date**: 2026-02-18 | **arXiv**: [2602.16132v1](http://arxiv.org/abs/2602.16132v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.16132v1)
+
+**Categories**: cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Text-to-video diffusion models deliver impressive results but remain slow because of the sequential denoising of 3D latents. Existing approaches to speed up inference either require expensive model retraining or use heuristic-based step skipping, which struggles to maintain video quality as the number of denoising steps decreases. Our work, CHAI, aims to use cross-inference caching to reduce latency while maintaining video quality. We introduce Cache Attention as an effective method for attending to shared objects/scenes across cross-inference latents. This selective attention mechanism enables effective reuse of cached latents across semantically related prompts, yielding high cache hit rates. We show that it is possible to generate high-quality videos using Cache Attention with as few as 8 denoising steps. When integrated into the overall system, CHAI is 1.65x - 3.35x faster than baseline OpenSora 1.2 while maintaining video quality.
+
+文本到视频的扩散模型提供了令人印象深刻的结果，但由于 3D 潜伏的顺序去噪，速度仍然很慢。现有的加速推理的方法要么需要昂贵的模型重新训练，要么使用基于启发式的步骤跳跃，随着去噪步骤数量的减少，这很难保持视频质量。我们的工作 CHAI 旨在使用交叉推理缓存来减少延迟，同时保持视频质量。我们引入缓存注意力作为一种有效的方法来关注跨交叉推理潜在的共享对象/场景。这种选择性注意机制可以跨语义相关的提示有效地重用缓存的潜在变量，从而产生高缓存命中率。我们证明，使用 Cache Attention 只需 8 个去噪步骤即可生成高质量视频。当集成到整个系统中时，CHAI 的速度比基准 OpenSora 1.2 快 1.65 倍 - 3.35 倍，同时保持视频质量。
+
+</details>
+
+---
+
+## 6. EgoScale: Scaling Dexterous Manipulation with Diverse Egocentric Human Data / EgoScale：利用各种以自我为中心的人类数据来扩展灵巧操作
+
+**Date**: 2026-02-18 | **arXiv**: [2602.16710v1](http://arxiv.org/abs/2602.16710v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.16710v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Human behavior is among the most scalable sources of data for learning physical intelligence, yet how to effectively leverage it for dexterous manipulation remains unclear. While prior work demonstrates human to robot transfer in constrained settings, it is unclear whether large scale human data can support fine grained, high degree of freedom dexterous manipulation. We present EgoScale, a human to dexterous manipulation transfer framework built on large scale egocentric human data. We train a Vision Language Action (VLA) model on over 20,854 hours of action labeled egocentric human video, more than 20 times larger than prior efforts, and uncover a log linear scaling law between human data scale and validation loss. This validation loss strongly correlates with downstream real robot performance, establishing large scale human data as a predictable supervision source. Beyond scale, we introduce a simple two stage transfer recipe: large scale human pretraining followed by lightweight aligned human robot mid training. This enables strong long horizon dexterous manipulation and one shot task adaptation with minimal robot supervision. Our final policy improves average success rate by 54% over a no pretraining baseline using a 22 DoF dexterous robotic hand, and transfers effectively to robots with lower DoF hands, indicating that large scale human motion provides a reusable, embodiment agnostic motor prior.
+
+人类行为是学习身体智能最可扩展的数据来源之一，但如何有效地利用它进行灵巧的操作仍不清楚。虽然之前的工作证明了在受限环境下人与机器人的转移，但尚不清楚大规模人类数据是否可以支持细粒度、高自由度的灵巧操作。我们推出了 EgoScale，这是一个基于大规模以自我为中心的人类数据构建的人类到灵巧操作传输框架。我们在超过 20,854 小时的以自我为中心的人类视频中训练视觉语言动作 (VLA) 模型，比之前的工作量大 20 倍以上，并揭示了人类数据规模和验证损失之间的对数线性缩放定律。这种验证损失与下游真实机器人性能密切相关，将大规模人类数据建立为可预测的监督源。除了规模之外，我们引入了一个简单的两阶段转移方法：大规模人类预训练，然后是轻量级对齐的人类机器人中期训练。这使得强大的长视野灵巧操作和一次性任务适应与最少的机器人监督成为可能。与使用 22 DoF 灵巧机器人手的无预训练基线相比，我们的最终策略将平均成功率提高了 54%，并且有效地转移到具有较低 DoF 手的机器人，这表明大规模人体运动提供了可重复使用的、与具体实施例无关的电机先验。
+
+</details>
+
+---
+
+## 7. Factored Latent Action World Models / 分解的潜在动作世界模型
+
+**Date**: 2026-02-18 | **arXiv**: [2602.16229v1](http://arxiv.org/abs/2602.16229v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.16229v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Learning latent actions from action-free video has emerged as a powerful paradigm for scaling up controllable world model learning. Latent actions provide a natural interface for users to iteratively generate and manipulate videos. However, most existing approaches rely on monolithic inverse and forward dynamics models that learn a single latent action to control the entire scene, and therefore struggle in complex environments where multiple entities act simultaneously. This paper introduces Factored Latent Action Model (FLAM), a factored dynamics framework that decomposes the scene into independent factors, each inferring its own latent action and predicting its own next-step factor value. This factorized structure enables more accurate modeling of complex multi-entity dynamics and improves video generation quality in action-free video settings compared to monolithic models. Based on experiments on both simulation and real-world multi-entity datasets, we find that FLAM outperforms prior work in prediction accuracy and representation quality, and facilitates downstream policy learning, demonstrating the benefits of factorized latent action models.
+
+从无动作视频中学习潜在动作已成为扩大可控世界模型学习的强大范例。潜在动作为用户迭代生成和操作视频提供了一个自然的界面。然而，大多数现有方法依赖于整体逆向和正向动力学模型，这些模型学习单个潜在动作来控制整个场景，因此在多个实体同时动作的复杂环境中陷入困境。本文介绍了因子式潜在动作模型（FLAM），这是一种因子式动力学框架，它将场景分解为独立的因素，每个因子都推断自己的潜在动作并预测自己的下一步因子值。与整体模型相比，这种分解结构可以更准确地对复杂的多实体动态进行建模，并提高无动作视频设置中的视频生成质量。基于模拟和现实世界多实体数据集的实验，我们发现 FLAM 在预测精度和表示质量方面优于先前的工作，并促进下游策略学习，展示了因子化潜在动作模型的好处。
+
+</details>
+
+---
+
+## 8. World Action Models are Zero-shot Policies / 世界行动模型是零射击政策
+
+**Date**: 2026-02-17 | **arXiv**: [2602.15922v1](http://arxiv.org/abs/2602.15922v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.15922v1)
+
+**Categories**: cs.RO, cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+State-of-the-art Vision-Language-Action (VLA) models excel at semantic generalization but struggle to generalize to unseen physical motions in novel environments. We introduce DreamZero, a World Action Model (WAM) built upon a pretrained video diffusion backbone. Unlike VLAs, WAMs learn physical dynamics by predicting future world states and actions, using video as a dense representation of how the world evolves. By jointly modeling video and action, DreamZero learns diverse skills effectively from heterogeneous robot data without relying on repetitive demonstrations. This results in over 2x improvement in generalization to new tasks and environments compared to state-of-the-art VLAs in real robot experiments. Crucially, through model and system optimizations, we enable a 14B autoregressive video diffusion model to perform real-time closed-loop control at 7Hz. Finally, we demonstrate two forms of cross-embodiment transfer: video-only demonstrations from other robots or humans yield a relative improvement of over 42% on unseen task performance with just 10-20 minutes of data. More surprisingly, DreamZero enables few-shot embodiment adaptation, transferring to a new embodiment with only 30 minutes of play data while retaining zero-shot generalization.
+
+最先进的视觉-语言-动作（VLA）模型擅长语义泛化，但很难泛化到新环境中看不见的物理运动。我们介绍 DreamZero，这是一种基于预训练视频传播主干的世界动作模型 (WAM)。与 VLA 不同，WAM 通过预测未来世界状态和行为来学习物理动力学，并使用视频作为世界如何演变的密集表示。通过对视频和动作进行联合建模，DreamZero 可以从异构机器人数据中有效地学习各种技能，而无需依赖重复演示。与真实机器人实验中最先进的 VLA 相比，这使得对新任务和环境的泛化能力提高了 2 倍以上。至关重要的是，通过模型和系统优化，我们使 14B 自回归视频扩散模型能够以 7Hz 执行实时闭环控制。最后，我们演示了两种形式的跨实体传输：来自其他机器人或人类的纯视频演示仅用 10-20 分钟的数据就可以使看不见的任务性能相对提高 42% 以上。更令人惊讶的是，DreamZero 实现了少样本实施例适应，仅用 30 分钟的播放数据转移到新实施例，同时保留零样本泛化。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-02-18 (8 papers)</b></summary>
 
 # arXiv Video Papers - 2026-02-18
