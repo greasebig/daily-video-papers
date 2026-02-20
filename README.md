@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-02-20](papers/2026-02-20.md) - 2 papers
 - [2026-02-19](papers/2026-02-19.md) - 8 papers
 - [2026-02-18](papers/2026-02-18.md) - 8 papers
 - [2026-02-17](papers/2026-02-17.md) - 3 papers
@@ -22,6 +23,50 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-02-20 (2 papers)</b></summary>
+
+# arXiv Video Papers - 2026-02-20
+
+**Paper Count**: 2
+
+---
+
+## 1. DDiT: Dynamic Patch Scheduling for Efficient Diffusion Transformers / DDiT：高效扩散变压器的动态补丁调度
+
+**Date**: 2026-02-19 | **arXiv**: [2602.16968v1](http://arxiv.org/abs/2602.16968v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.16968v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Diffusion Transformers (DiTs) have achieved state-of-the-art performance in image and video generation, but their success comes at the cost of heavy computation. This inefficiency is largely due to the fixed tokenization process, which uses constant-sized patches throughout the entire denoising phase, regardless of the content's complexity. We propose dynamic tokenization, an efficient test-time strategy that varies patch sizes based on content complexity and the denoising timestep. Our key insight is that early timesteps only require coarser patches to model global structure, while later iterations demand finer (smaller-sized) patches to refine local details. During inference, our method dynamically reallocates patch sizes across denoising steps for image and video generation and substantially reduces cost while preserving perceptual generation quality. Extensive experiments demonstrate the effectiveness of our approach: it achieves up to $3.52\times$ and $3.2\times$ speedup on FLUX-1.Dev and Wan $2.1$, respectively, without compromising the generation quality and prompt adherence.
+
+扩散变压器 (DiT) 在图像和视频生成方面取得了最先进的性能，但它们的成功是以大量计算为代价的。这种低效率很大程度上是由于固定标记化过程造成的，该过程在整个去噪阶段都使用恒定大小的补丁，无论内容的复杂性如何。我们提出了动态标记化，这是一种有效的测试时间策略，可以根据内容复杂性和去噪时间步长来改变补丁大小。我们的主要见解是，早期的时间步长仅需要较粗糙的补丁来建模全局结构，而后期的迭代则需要更精细（较小尺寸）的补丁来细化局部细节。在推理过程中，我们的方法在图像和视频生成的去噪步骤中动态地重新分配补丁大小，并在保持感知生成质量的同时显着降低成本。大量的实验证明了我们方法的有效性：它在 FLUX-1.Dev 和 Wan 上分别实现了高达 $3.52\times$ 和 $3.2\times$ 的加速，而不会影响生成质量和即时依从性。
+
+</details>
+
+---
+
+## 2. Xray-Visual Models: Scaling Vision models on Industry Scale Data / X 射线视觉模型：根据行业规模数据扩展视觉模型
+
+**Date**: 2026-02-18 | **arXiv**: [2602.16918v1](http://arxiv.org/abs/2602.16918v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.16918v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present Xray-Visual, a unified vision model architecture for large-scale image and video understanding trained on industry-scale social media data. Our model leverages over 15 billion curated image-text pairs and 10 billion video-hashtag pairs from Facebook and Instagram, employing robust data curation pipelines that incorporate balancing and noise suppression strategies to maximize semantic diversity while minimizing label noise. We introduce a three-stage training pipeline that combines self-supervised MAE, semi-supervised hashtag classification, and CLIP-style contrastive learning to jointly optimize image and video modalities. Our architecture builds on a Vision Transformer backbone enhanced with efficient token reorganization (EViT) for improved computational efficiency. Extensive experiments demonstrate that Xray-Visual achieves state-of-the-art performance across diverse benchmarks, including ImageNet for image classification, Kinetics and HMDB51 for video understanding, and MSCOCO for cross-modal retrieval. The model exhibits strong robustness to domain shift and adversarial perturbations. We further demonstrate that integrating large language models as text encoders (LLM2CLIP) significantly enhances retrieval performance and generalization capabilities, particularly in real-world environments. Xray-Visual establishes new benchmarks for scalable, multimodal vision models, while maintaining superior accuracy and computational efficiency.
+
+我们推出了 Xray-Visual，这是一种统一的视觉模型架构，用于在行业规模的社交媒体数据上进行训练的大规模图像和视频理解。我们的模型利用来自 Facebook 和 Instagram 的超过 150 亿个精选图像文本对和 100 亿个视频主题标签对，采用强大的数据管理管道，其中结合了平衡和噪声抑制策略，以最大限度地提高语义多样性，同时最大限度地减少标签噪声。我们引入了一个三阶段训练流程，结合了自监督 MAE、半监督标签分类和 CLIP 式对比学习，以联合优化图像和视频模式。我们的架构建立在 Vision Transformer 主干之上，通过高效的令牌重组 (EViT) 进行增强，以提高计算效率。大量实验表明，Xray-Visual 在不同基准测试中实现了最先进的性能，包括用于图像分类的 ImageNet、用于视频理解的 Kinetics 和 HMDB51 以及用于跨模态检索的 MSCOCO。该模型对域转移和对抗性扰动表现出很强的鲁棒性。我们进一步证明，将大型语言模型集成为文本编码器（LLM2CLIP）可以显着增强检索性能和泛化能力，特别是在现实环境中。 Xray-Visual 为可扩展的多模态视觉模型建立了新的基准，同时保持卓越的准确性和计算效率。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-02-19 (8 papers)</b></summary>
 
 # arXiv Video Papers - 2026-02-19
