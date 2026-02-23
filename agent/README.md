@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-02-23](papers/2026-02-23.md) - 6 papers
 - [2026-02-20](papers/2026-02-20.md) - 36 papers
 - [2026-02-19](papers/2026-02-19.md) - 25 papers
 - [2026-02-18](papers/2026-02-18.md) - 32 papers
@@ -16,6 +17,114 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-02-23 (6 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-02-23
+
+**Paper Count**: 6
+
+---
+
+## 1. Diffusing to Coordinate: Efficient Online Multi-Agent Diffusion Policies / 扩散到协调：高效的在线多智能体扩散策略
+
+**Date**: 2026-02-20 | **arXiv**: [2602.18291v1](http://arxiv.org/abs/2602.18291v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.18291v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Online Multi-Agent Reinforcement Learning (MARL) is a prominent framework for efficient agent coordination. Crucially, enhancing policy expressiveness is pivotal for achieving superior performance. Diffusion-based generative models are well-positioned to meet this demand, having demonstrated remarkable expressiveness and multimodal representation in image generation and offline settings. Yet, their potential in online MARL remains largely under-explored. A major obstacle is that the intractable likelihoods of diffusion models impede entropy-based exploration and coordination. To tackle this challenge, we propose among the first \underline{O}nline off-policy \underline{MA}RL framework using \underline{D}iffusion policies (\textbf{OMAD}) to orchestrate coordination. Our key innovation is a relaxed policy objective that maximizes scaled joint entropy, facilitating effective exploration without relying on tractable likelihood. Complementing this, within the centralized training with decentralized execution (CTDE) paradigm, we employ a joint distributional value function to optimize decentralized diffusion policies. It leverages tractable entropy-augmented targets to guide the simultaneous updates of diffusion policies, thereby ensuring stable coordination. Extensive evaluations on MPE and MAMuJoCo establish our method as the new state-of-the-art across $10$ diverse tasks, demonstrating a remarkable $2.5\times$ to $5\times$ improvement in sample efficiency.
+
+在线多智能体强化学习（MARL）是高效智能体协调的重要框架。至关重要的是，增强政策表达力是实现卓越绩效的关键。基于扩散的生成模型能够很好地满足这一需求，在图像生成和离线设置中表现出卓越的表现力和多模态表示。然而，它们在在线 MARL 中的潜力在很大程度上仍未得到充分开发。一个主要障碍是扩散模型的棘手可能性阻碍了基于熵的探索和协调。为了应对这一挑战，我们提出了第一个 \underline{O}nline off-policy \underline{MA}RL 框架，使用 \underline{D}iffusion 策略（\textbf{OMAD}）来协调协调。我们的关键创新是宽松的政策目标，可以最大化缩放联合熵，促进有效探索而不依赖于可处理的可能性。作为补充，在集中式训练与去中心化执行（CTDE）范式中，我们采用联合分布价值函数来优化去中心化扩散策略。它利用易于处理的熵增强目标来指导扩散策略的同步更新，从而确保稳定的协调。对 MPE 和 MAMuJoCo 的广泛评估表明，我们的方法在 10 美元的不同任务中是最先进的，证明样本效率显着提高了 2.5 美元到 5 美元。
+
+</details>
+
+---
+
+## 2. [Re] Benchmarking LLM Capabilities in Negotiation through Scoreable Games / [回复]通过可评分的游戏对LLM谈判能力进行基准测试
+
+**Date**: 2026-02-20 | **arXiv**: [2602.18230v1](http://arxiv.org/abs/2602.18230v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.18230v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large Language Models (LLMs) demonstrate significant potential in multi-agent negotiation tasks, yet evaluation in this domain remains challenging due to a lack of robust and generalizable benchmarks. Abdelnabi et al. (2024) introduce a negotiation benchmark based on Scoreable Games, with the aim of developing a highly complex and realistic evaluation framework for LLMs. Our work investigates the reproducibility of claims in their benchmark, and provides a deeper understanding of its usability and generalizability. We replicate the original experiments on additional models, and introduce additional metrics to verify negotiation quality and evenness of evaluation. Our findings reveal that while the benchmark is indeed complex, model comparison is ambiguous, raising questions about its objectivity. Furthermore, we identify limitations in the experimental setup, particularly in information leakage detection and thoroughness of the ablation study. By examining and analyzing the behavior of a wider range of models on an extended version of the benchmark, we reveal insights that provide additional context to potential users. Our results highlight the importance of context in model-comparative evaluations.
+
+大型语言模型（LLM）在多智能体协商任务中表现出巨大的潜力，但由于缺乏稳健且可推广的基准，该领域的评估仍然具有挑战性。阿卜杜勒纳比等人。 (2024)引入了基于Scoreable Games的谈判基准，旨在为法学硕士开发一个高度复杂且现实的评估框架。我们的工作调查了基准中声明的可重复性，并对其可用性和普遍性提供了更深入的了解。我们在其他模型上复制原始实验，并引入额外的指标来验证谈判质量和评估的均匀性。我们的研究结果表明，虽然基准确实很复杂，但模型比较不明确，引发了对其客观性的质疑。此外，我们还发现了实验设置的局限性，特别是在信息泄漏检测和消融研究的彻底性方面。通过检查和分析更广泛的模型在基准扩展版本上的行为，我们揭示了为潜在用户提供额外背景的见解。我们的结果强调了背景在模型比较评估中的重要性。
+
+</details>
+
+---
+
+## 3. Can AI Lower the Barrier to Cybersecurity? A Human-Centered Mixed-Methods Study of Novice CTF Learning / 人工智能能否降低网络安全壁垒？以人为中心的新手 CTF 学习混合方法研究
+
+**Date**: 2026-02-20 | **arXiv**: [2602.18172v1](http://arxiv.org/abs/2602.18172v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.18172v1)
+
+**Categories**: cs.CR, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Capture-the-Flag (CTF) competitions serve as gateways into offensive cybersecurity, yet they often present steep barriers for novices due to complex toolchains and opaque workflows. Recently, agentic AI frameworks for cybersecurity promise to lower these barriers by automating and coordinating penetration testing tasks. However, their role in shaping novice learning remains underexplored.   We present a human-centered, mixed-methods case study examining how agentic AI frameworks -- here Cybersecurity AI (CAI) -- mediates novice entry into CTF-based penetration testing. An undergraduate student without prior hacking experience attempted to approach performance benchmarks from a national cybersecurity challenge using CAI. Quantitative performance metrics were complemented by structured reflective analysis of learning progression and AI interaction patterns.   Our thematic analysis suggest that agentic AI reduces initial entry barriers by providing overview, structure and guidance, thereby lowering the cognitive workload during early engagement. Quantitatively, the observed extensive exploration of strategies and low per-strategy execution time potetially facilitatates cybersecurity training on meta, i.e. strategic levels. At the same time, AI-assisted cybersecurity education introduces new challenges related to trust, dependency, and responsible use. We discuss implications for human-centered AI-supported cybersecurity education and outline open questions for future research.
+
+夺旗（CTF）竞​​赛是进入进攻性网络安全的门户，但由于复杂的工具链和不透明的工作流程，它们常常给新手带来巨大的障碍。最近，用于网络安全的代理人工智能框架有望通过自动化和协调渗透测试任务来降低这些障碍。然而，它们在塑造新手学习方面的作用仍未得到充分探索。   我们提出了一个以人为中心的混合方法案例研究，研究代理人工智能框架——这里是网络安全人工智能（CAI）——如何引导新手进入基于 CTF 的渗透测试。一名没有黑客经验的本科生尝试使用 CAI 达到国家网络安全挑战赛的性能基准。对学习进度和人工智能交互模式的结构化反思分析对定量绩效指标进行了补充。   我们的主题分析表明，代理人工智能通过提供概述、结构和指导来减少初始进入障碍，从而降低早期参与期间的认知工作量。从数量上讲，观察到的对策略的广泛探索和每个策略的较低执行时间可能会促进元（即战略层面）的网络安全培训。与此同时，人工智能辅助的网络安全教育带来了与信任、依赖和负责任使用相关的新挑战。我们讨论了以人为本的人工智能支持的网络安全教育的影响，并概述了未来研究的开放问题。
+
+</details>
+
+---
+
+## 4. Agentic Adversarial QA for Improving Domain-Specific LLMs / 用于改进特定领域法学硕士的代理对抗性质量保证
+
+**Date**: 2026-02-20 | **arXiv**: [2602.18137v1](http://arxiv.org/abs/2602.18137v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.18137v1)
+
+**Categories**: cs.CL, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large Language Models (LLMs), despite extensive pretraining on broad internet corpora, often struggle to adapt effectively to specialized domains. There is growing interest in fine-tuning these models for such domains; however, progress is constrained by the scarcity and limited coverage of high-quality, task-relevant data. To address this, synthetic data generation methods such as paraphrasing or knowledge extraction are commonly applied. Although these approaches excel at factual recall and conceptual knowledge, they suffer from two critical shortcomings: (i) they provide minimal support for interpretive reasoning capabilities in these specialized domains, and (ii) they often produce synthetic corpora that are excessively large and redundant, resulting in poor sample efficiency. To overcome these gaps, we propose an adversarial question-generation framework that produces a compact set of semantically challenging questions. These questions are constructed by comparing the outputs of the model to be adapted and a robust expert model grounded in reference documents, using an iterative, feedback-driven process designed to reveal and address comprehension gaps. Evaluation on specialized subsets of the LegalBench corpus demonstrates that our method achieves greater accuracy with substantially fewer synthetic samples.
+
+尽管在广泛的互联网语料库上进行了广泛的预训练，大型语言模型（LLM）通常难以有效地适应专业领域。人们越来越有兴趣针对这些领域微调这些模型；然而，与任务相关的高质量数据稀缺且覆盖面有限，进展受到限制。为了解决这个问题，通常应用合成数据生成方法，例如释义或知识提取。尽管这些方法在事实回忆和概念知识方面表现出色，但它们存在两个关键缺点：（i）它们对这些专业领域的解释推理能力提供的支持很少，（ii）它们经常产生过大且冗余的合成语料库，导致样本效率低下。为了克服这些差距，我们提出了一个对抗性问题生成框架，该框架可以生成一组紧凑的语义上具有挑战性的问题。这些问题是通过比较要调整的模型的输出和基于参考文档的强大专家模型的输出而构建的，使用旨在揭示和解决理解差距的迭代、反馈驱动的过程。对 LegalBench 语料库的专门子集的评估表明，我们的方法可以用更少的合成样本实现更高的准确性。
+
+</details>
+
+---
+
+## 5. RVR: Retrieve-Verify-Retrieve for Comprehensive Question Answering / RVR：检索-验证-检索以实现综合问答
+
+**Date**: 2026-02-20 | **arXiv**: [2602.18425v1](http://arxiv.org/abs/2602.18425v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.18425v1)
+
+**Categories**: cs.CL, cs.IR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Comprehensively retrieving diverse documents is crucial to address queries that admit a wide range of valid answers. We introduce retrieve-verify-retrieve (RVR), a multi-round retrieval framework designed to maximize answer coverage. Initially, a retriever takes the original query and returns a candidate document set, followed by a verifier that identifies a high-quality subset. For subsequent rounds, the query is augmented with previously verified documents to uncover answers that are not yet covered in previous rounds. RVR is effective even with off-the-shelf retrievers, and fine-tuning retrievers for our inference procedure brings further gains. Our method outperforms baselines, including agentic search approaches, achieving at least 10% relative and 3% absolute gain in complete recall percentage on a multi-answer retrieval dataset (QAMPARI). We also see consistent gains on two out-of-domain datasets (QUEST and WebQuestionsSP) across different base retrievers. Our work presents a promising iterative approach for comprehensive answer recall leveraging a verifier and adapting retrievers to a new inference scenario.
+
+全面检索不同的文档对于解决允许广泛有效答案的查询至关重要。我们引入检索-验证-检索（RVR），这是一种旨在最大化答案覆盖率的多轮检索框架。最初，检索器获取原始查询并返回候选文档集，然后由验证器识别高质量子集。对于后续轮次，查询将使用先前验证的文档进行扩充，以发现前轮次中尚未涵盖的答案。即使对于现成的检索器，RVR 也是有效的，并且针对我们的推理过程微调检索器会带来进一步的收益。我们的方法优于基线，包括代理搜索方法，在多答案检索数据集 (QAMPARI) 上的完全召回率方面实现了至少 10% 的相对增益和 3% 的绝对增益。我们还看到不同的基础检索器在两个域外数据集（QUEST 和 WebQuestionsSP）上取得了一致的收益。我们的工作提出了一种有前途的迭代方法，利用验证器并使检索器适应新的推理场景来进行全面的答案回忆。
+
+</details>
+
+---
+
+## 6. A Probabilistic Framework for LLM-Based Model Discovery / 基于 LLM 的模型发现的概率框架
+
+**Date**: 2026-02-20 | **arXiv**: [2602.18266v1](http://arxiv.org/abs/2602.18266v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.18266v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Automated methods for discovering mechanistic simulator models from observational data offer a promising path toward accelerating scientific progress. Such methods often take the form of agentic-style iterative workflows that repeatedly propose and revise candidate models by imitating human discovery processes. However, existing LLM-based approaches typically implement such workflows via hand-crafted heuristic procedures, without an explicit probabilistic formulation. We recast model discovery as probabilistic inference, i.e., as sampling from an unknown distribution over mechanistic models capable of explaining the data. This perspective provides a unified way to reason about model proposal, refinement, and selection within a single inference framework. As a concrete instantiation of this view, we introduce ModelSMC, an algorithm based on Sequential Monte Carlo sampling. ModelSMC represents candidate models as particles which are iteratively proposed and refined by an LLM, and weighted using likelihood-based criteria. Experiments on real-world scientific systems illustrate that this formulation discovers models with interpretable mechanisms and improves posterior predictive checks. More broadly, this perspective provides a probabilistic lens for understanding and developing LLM-based approaches to model discovery.
+
+从观测数据中发现机械模拟器模型的自动化方法为加速科学进步提供了一条有希望的道路。此类方法通常采用代理式迭代工作流程的形式，通过模仿人类发现过程来重复提出和修改候选模型。然而，现有的基于法学硕士的方法通常通过手工设计的启发式程序来实现此类工作流程，而没有明确的概率公式。我们将模型发现重新定义为概率推理，即从能够解释数据的机械模型上的未知分布中采样。这种视角提供了一种在单一推理框架内推理模型提议、细化和选择的统一方法。作为这种观点的具体实例，我们引入了 ModelSMC，一种基于顺序蒙特卡罗采样的算法。 ModelSMC 将候选模型表示为由 LLM 迭代提出和细化的粒子，并使用基于可能性的标准进行加权。对现实世界科学系统的实验表明，该公式发现了具有可解释机制的模型，并改进了后验预测检查。更广泛地说，这种观点为理解和开发基于法学硕士的模型发现方法提供了一个概率视角。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-02-20 (36 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-02-20
