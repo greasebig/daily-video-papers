@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-02-24](papers/2026-02-24.md) - 1 papers
 - [2026-02-20](papers/2026-02-20.md) - 2 papers
 - [2026-02-19](papers/2026-02-19.md) - 4 papers
 - [2026-02-18](papers/2026-02-18.md) - 6 papers
@@ -16,6 +17,34 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-02-24 (1 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-02-24
+
+**Paper Count**: 1
+
+---
+
+## 1. K-Search: LLM Kernel Generation via Co-Evolving Intrinsic World Model / K-Search：通过共同进化的内在世界模型生成 LLM 内核
+
+**Date**: 2026-02-22 | **arXiv**: [2602.19128v1](http://arxiv.org/abs/2602.19128v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.19128v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Optimizing GPU kernels is critical for efficient modern machine learning systems yet remains challenging due to the complex interplay of design factors and rapid hardware evolution. Existing automated approaches typically treat Large Language Models (LLMs) merely as stochastic code generators within heuristic-guided evolutionary loops. These methods often struggle with complex kernels requiring coordinated, multi-step structural transformations, as they lack explicit planning capabilities and frequently discard promising strategies due to inefficient or incorrect intermediate implementations. To address this, we propose Search via Co-Evolving World Model and build K-Search based on this method. By replacing static search heuristics with a co-evolving world model, our framework leverages LLMs' prior domain knowledge to guide the search, actively exploring the optimization space. This approach explicitly decouples high-level algorithmic planning from low-level program instantiation, enabling the system to navigate non-monotonic optimization paths while remaining resilient to temporary implementation defects. We evaluate K-Search on diverse, complex kernels from FlashInfer, including GQA, MLA, and MoE kernels. Our results show that K-Search significantly outperforms state-of-the-art evolutionary search methods, achieving an average 2.10x improvement and up to a 14.3x gain on complex MoE kernels. On the GPUMode TriMul task, K-Search achieves state-of-the-art performance on H100, reaching 1030us and surpassing both prior evolution and human-designed solutions.
+
+优化 GPU 内核对于高效的现代机器学习系统至关重要，但由于设计因素和快速硬件发展的复杂相互作用，仍然具有挑战性。现有的自动化方法通常仅将大型语言模型（LLM）视为启发式引导的进化循环中的随机代码生成器。这些方法经常与需要协调、多步结构转换的复杂内核作斗争，因为它们缺乏明确的规划能力，并且经常由于低效或不正确的中间实现而放弃有希望的策略。为了解决这个问题，我们提出通过共同进化世界模型进行搜索，并基于该方法构建 K-Search。通过用共同进化的世界模型取代静态搜索启发式，我们的框架利用法学硕士的先验领域知识来指导搜索，积极探索优化空间。这种方法明确地将高级算法规划与低级程序实例化解耦，使系统能够导航非单调优化路径，同时保持对临时实现缺陷的弹性。我们在 FlashInfer 的各种复杂内核上评估 K-Search，包括 GQA、MLA 和 MoE 内核。我们的结果表明，K-Search 的性能显着优于最先进的进化搜索方法，在复杂的 MoE 内核上实现了平均 2.10 倍的改进和高达 14.3 倍的增益。在 GPUMode TriMul 任务中，K-Search 在 H100 上实现了最先进的性能，达到 1030us，超越了先前的进化和人类设计的解决方案。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-02-20 (2 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-02-20
