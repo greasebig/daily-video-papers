@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-02-24](papers/2026-02-24.md) - 8 papers
 - [2026-02-23](papers/2026-02-23.md) - 2 papers
 - [2026-02-20](papers/2026-02-20.md) - 2 papers
 - [2026-02-19](papers/2026-02-19.md) - 8 papers
@@ -24,6 +25,154 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-02-24 (8 papers)</b></summary>
+
+# arXiv Video Papers - 2026-02-24
+
+**Paper Count**: 8
+
+---
+
+## 1. A Two-Stage Detection-Tracking Framework for Stable Apple Quality Inspection in Dense Conveyor-Belt Environments / 密集传送带环境中稳定苹果质量检测的两阶段检测跟踪框架
+
+**Date**: 2026-02-22 | **arXiv**: [2602.19278v1](http://arxiv.org/abs/2602.19278v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.19278v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Industrial fruit inspection systems must operate reliably under dense multi-object interactions and continuous motion, yet most existing works evaluate detection or classification at the image level without ensuring temporal stability in video streams. We present a two-stage detection-tracking framework for stable multi-apple quality inspection in conveyor-belt environments. An orchard-trained YOLOv8 model performs apple localization, followed by ByteTrack multi-object tracking to maintain persistent identities. A ResNet18 defect classifier, fine-tuned on a healthy-defective fruit dataset, is applied to cropped apple regions. Track-level aggregation is introduced to enforce temporal consistency and reduce prediction oscillation across frames. We define video-level industrial metrics such as track-level defect ratio and temporal consistency to evaluate system robustness under realistic processing conditions. Results demonstrate improved stability compared to frame-wise inference, suggesting that integrating tracking is essential for practical automated fruit grading systems.
+
+工业水果检测系统必须在密集的多对象交互和连续运动下可靠运行，但大多数现有工作在图像级别评估检测或分类，而无法确保视频流的时间稳定性。我们提出了一个两阶段检测跟踪框架，用于在传送带环境中进行稳定的多苹果质量检测。 Orchard 训练的 YOLOv8 模型执行苹果本地化，然后进行 ByteTrack 多对象跟踪以维护持久身份。 ResNet18 缺陷分类器在健康缺陷水果数据集上进行了微调，应用于裁剪后的苹果区域。引入轨道级聚合是为了加强时间一致性并减少帧间的预测振荡。我们定义视频级工业指标，例如轨道级缺陷率和时间一致性，以评估系统在实际处理条件下的稳健性。结果表明，与逐帧推理相比，稳定性有所提高，这表明集成跟踪对于实际的自动化水果分级系统至关重要。
+
+</details>
+
+---
+
+## 2. UniE2F: A Unified Diffusion Framework for Event-to-Frame Reconstruction with Video Foundation Models / UniE2F：使用视频基础模型进行事件到帧重建的统一扩散框架
+
+**Date**: 2026-02-22 | **arXiv**: [2602.19202v1](http://arxiv.org/abs/2602.19202v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.19202v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/CS-GangXu/UniE2F.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Event cameras excel at high-speed, low-power, and high-dynamic-range scene perception. However, as they fundamentally record only relative intensity changes rather than absolute intensity, the resulting data streams suffer from a significant loss of spatial information and static texture details. In this paper, we address this limitation by leveraging the generative prior of a pre-trained video diffusion model to reconstruct high-fidelity video frames from sparse event data. Specifically, we first establish a baseline model by directly applying event data as a condition to synthesize videos. Then, based on the physical correlation between the event stream and video frames, we further introduce the event-based inter-frame residual guidance to enhance the accuracy of video frame reconstruction. Furthermore, we extend our method to video frame interpolation and prediction in a zero-shot manner by modulating the reverse diffusion sampling process, thereby creating a unified event-to-frame reconstruction framework. Experimental results on real-world and synthetic datasets demonstrate that our method significantly outperforms previous approaches both quantitatively and qualitatively. We also refer the reviewers to the video demo contained in the supplementary material for video results. The code will be publicly available at https://github.com/CS-GangXu/UniE2F.
+
+事件摄像机擅长高速、低功耗和高动态范围场景感知。然而，由于它们从根本上只记录相对强度变化而不是绝对强度，因此生成的数据流会遭受空间信息和静态纹理细节的显着损失。在本文中，我们通过利用预训练视频扩散模型的生成先验从稀疏事件数据重建高保真视频帧来解决这一限制。具体来说，我们首先通过直接应用事件数据作为合成视频的条件来建立基线模型。然后，基于事件流和视频帧之间的物理相关性，我们进一步引入基于事件的帧间残差引导，以提高视频帧重建的准确性。此外，我们通过调制反向扩散采样过程，以零镜头方式将我们的方法扩展到视频帧插值和预测，从而创建统一的事件到帧重建框架。现实世界和合成数据集的实验结果表明，我们的方法在数量和质量上都显着优于以前的方法。我们还向审稿人推荐视频结果补充材料中包含的视频演示。该代码将在 https://github.com/CS-GangXu/UniE2F 上公开提供。
+
+</details>
+
+---
+
+## 3. JavisDiT++: Unified Modeling and Optimization for Joint Audio-Video Generation / JavisDiT++：联合音视频生成的统一建模和优化
+
+**Date**: 2026-02-22 | **arXiv**: [2602.19163v1](http://arxiv.org/abs/2602.19163v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.19163v1)
+
+**Categories**: cs.CV, cs.MM, cs.SD
+
+**Project**: https://JavisVerse.github.io/JavisDiT2-page.  <details><summary><b>Abstract / 摘要</b></summary>
+
+AIGC has rapidly expanded from text-to-image generation toward high-quality multimodal synthesis across video and audio. Within this context, joint audio-video generation (JAVG) has emerged as a fundamental task that produces synchronized and semantically aligned sound and vision from textual descriptions. However, compared with advanced commercial models such as Veo3, existing open-source methods still suffer from limitations in generation quality, temporal synchrony, and alignment with human preferences. To bridge the gap, this paper presents JavisDiT++, a concise yet powerful framework for unified modeling and optimization of JAVG. First, we introduce a modality-specific mixture-of-experts (MS-MoE) design that enables cross-modal interaction efficacy while enhancing single-modal generation quality. Then, we propose a temporal-aligned RoPE (TA-RoPE) strategy to achieve explicit, frame-level synchronization between audio and video tokens. Besides, we develop an audio-video direct preference optimization (AV-DPO) method to align model outputs with human preference across quality, consistency, and synchrony dimensions. Built upon Wan2.1-1.3B-T2V, our model achieves state-of-the-art performance merely with around 1M public training entries, significantly outperforming prior approaches in both qualitative and quantitative evaluations. Comprehensive ablation studies have been conducted to validate the effectiveness of our proposed modules. All the code, model, and dataset are released at https://JavisVerse.github.io/JavisDiT2-page.
+
+AIGC 已从文本到图像的生成迅速扩展到跨视频和音频的高质量多模态合成。在此背景下，联合音视频生成（JAVG）已成为一项基本任务，它可以根据文本描述生成同步且语义一致的声音和视觉。然而，与 Veo3 等先进商业模型相比，现有的开源方法在生成质量、时间同步性以及与人类偏好的一致性等方面仍然存在局限性。为了弥补这一差距，本文提出了 JavisDiT++，这是一个简洁而强大的框架，用于 JAVG 的统一建模和优化。首先，我们引入了一种特定模态的专家混合（MS-MoE）设计，该设计可以实现跨模态交互功效，同时提高单模态生成质量。然后，我们提出了一种时间对齐 RoPE (TA-RoPE) 策略来实现音频和视频令牌之间的显式帧级同步。此外，我们开发了一种音视频直接偏好优化（AV-DPO）方法，使模型输出在质量、一致性和同步维度上与人类偏好保持一致。我们的模型基于 Wan2.1-1.3B-T2V 构建，仅通过大约 100 万个公共训练条目就实现了最先进的性能，在定性和定量评估方面都显着优于先前的方法。已经进行了全面的消融研究来验证我们提出的模块的有效性。所有代码、模型和数据集均在 https://JavisVerse.github.io/JavisDiT2-page 发布。
+
+</details>
+
+---
+
+## 4. Flash-VAED: Plug-and-Play VAE Decoders for Efficient Video Generation / Flash-VAED：用于高效视频生成的即插即用 VAE 解码器
+
+**Date**: 2026-02-22 | **arXiv**: [2602.19161v1](http://arxiv.org/abs/2602.19161v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.19161v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Latent diffusion models have enabled high-quality video synthesis, yet their inference remains costly and time-consuming. As diffusion transformers become increasingly efficient, the latency bottleneck inevitably shifts to VAE decoders. To reduce their latency while maintaining quality, we propose a universal acceleration framework for VAE decoders that preserves full alignment with the original latent distribution. Specifically, we propose (1) an independence-aware channel pruning method to effectively mitigate severe channel redundancy, and (2) a stage-wise dominant operator optimization strategy to address the high inference cost of the widely used causal 3D convolutions in VAE decoders. Based on these innovations, we construct a Flash-VAED family. Moreover, we design a three-phase dynamic distillation framework that efficiently transfers the capabilities of the original VAE decoder to Flash-VAED. Extensive experiments on Wan and LTX-Video VAE decoders demonstrate that our method outperforms baselines in both quality and speed, achieving approximately a 6$\times$ speedup while maintaining the reconstruction performance up to 96.9%. Notably, Flash-VAED accelerates the end-to-end generation pipeline by up to 36% with negligible quality drops on VBench-2.0.
+
+潜在扩散模型已经实现了高质量的视频合成，但其推理仍然成本高昂且耗时。随着扩散变压器变得越来越高效，延迟瓶颈不可避免地转移到 VAE 解码器。为了在保持质量的同时减少延迟，我们提出了一种适用于 VAE 解码器的通用加速框架，该框架保持与原始潜在分布的完全对齐。具体来说，我们提出（1）一种独立感知的通道修剪方法，以有效减轻严重的通道冗余，以及（2）一种分阶段的主导算子优化策略，以解决 VAE 解码器中广泛使用的因果 3D 卷积的高推理成本问题。基于这些创新，我们构建了 Flash-VAED 系列。此外，我们设计了一个三相动态蒸馏框架，可以有效地将原始 VAE 解码器的功能转移到 Flash-VAED。在 Wan 和 LTX-Video VAE 解码器上进行的大量实验表明，我们的方法在质量和速度方面都优于基线，实现了大约 6 倍的加速，同时保持了高达 96.9% 的重建性能。值得注意的是，Flash-VAED 将端到端生成流程加速高达 36%，而 VBench-2.0 上的质量下降可以忽略不计。
+
+</details>
+
+---
+
+## 5. Ani3DHuman: Photorealistic 3D Human Animation with Self-guided Stochastic Sampling / Ani3DHuman：具有自引导随机采样的真实感 3D 人体动画
+
+**Date**: 2026-02-22 | **arXiv**: [2602.19089v1](http://arxiv.org/abs/2602.19089v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.19089v1)
+
+**Categories**: cs.CV, cs.GR, cs.LG
+
+**Code**: https://github.com/qiisun/ani3dhuman.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Current 3D human animation methods struggle to achieve photorealism: kinematics-based approaches lack non-rigid dynamics (e.g., clothing dynamics), while methods that leverage video diffusion priors can synthesize non-rigid motion but suffer from quality artifacts and identity loss. To overcome these limitations, we present Ani3DHuman, a framework that marries kinematics-based animation with video diffusion priors. We first introduce a layered motion representation that disentangles rigid motion from residual non-rigid motion. Rigid motion is generated by a kinematic method, which then produces a coarse rendering to guide the video diffusion model in generating video sequences that restore the residual non-rigid motion. However, this restoration task, based on diffusion sampling, is highly challenging, as the initial renderings are out-of-distribution, causing standard deterministic ODE samplers to fail. Therefore, we propose a novel self-guided stochastic sampling method, which effectively addresses the out-of-distribution problem by combining stochastic sampling (for photorealistic quality) with self-guidance (for identity fidelity). These restored videos provide high-quality supervision, enabling the optimization of the residual non-rigid motion field. Extensive experiments demonstrate that \MethodName can generate photorealistic 3D human animation, outperforming existing methods. Code is available in https://github.com/qiisun/ani3dhuman.
+
+当前的 3D 人体动画方法很难实现照片级真实感：基于运动学的方法缺乏非刚性动力学（例如服装动力学），而利用视频扩散先验的方法可以合成非刚性运动，但会遭受质量伪影和身份损失。为了克服这些限制，我们提出了 Ani3DHuman，一个将基于运动学的动画与视频扩散先验相结合的框架。我们首先引入分层运动表示，将刚性运动与残余非刚性运动分开。刚性运动是通过运动学方法生成的，然后产生粗略渲染以指导视频扩散模型生成恢复残余非刚性运动的视频序列。然而，这种基于扩散采样的恢复任务非常具有挑战性，因为初始渲染不符合分布，导致标准确定性 ODE 采样器失败。因此，我们提出了一种新颖的自引导随机采样方法，该方法通过将随机采样（用于真实感质量）与自引导（用于身份保真度）相结合，有效地解决了分布外问题。这些恢复的视频提供高质量的监督，从而能够优化残余非刚性运动场。大量实验表明 \MethodName 可以生成逼真的 3D 人体动画，性能优于现有方法。代码可在 https://github.com/qiisun/ani3d human 中找到。
+
+</details>
+
+---
+
+## 6. MoBind: Motion Binding for Fine-Grained IMU-Video Pose Alignment / MoBind：用于细粒度 IMU-视频姿势对齐的运动绑定
+
+**Date**: 2026-02-22 | **arXiv**: [2602.19004v1](http://arxiv.org/abs/2602.19004v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.19004v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/bbvisual/
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We aim to learn a joint representation between inertial measurement unit (IMU) signals and 2D pose sequences extracted from video, enabling accurate cross-modal retrieval, temporal synchronization, subject and body-part localization, and action recognition. To this end, we introduce MoBind, a hierarchical contrastive learning framework designed to address three challenges: (1) filtering out irrelevant visual background, (2) modeling structured multi-sensor IMU configurations, and (3) achieving fine-grained, sub-second temporal alignment. To isolate motion-relevant cues, MoBind aligns IMU signals with skeletal motion sequences rather than raw pixels. We further decompose full-body motion into local body-part trajectories, pairing each with its corresponding IMU to enable semantically grounded multi-sensor alignment. To capture detailed temporal correspondence, MoBind employs a hierarchical contrastive strategy that first aligns token-level temporal segments, then fuses local (body-part) alignment with global (body-wide) motion aggregation. Evaluated on mRi, TotalCapture, and EgoHumans, MoBind consistently outperforms strong baselines across all four tasks, demonstrating robust fine-grained temporal alignment while preserving coarse semantic consistency across modalities. Code is available at https://github.com/bbvisual/ MoBind.
+
+我们的目标是学习惯性测量单元 (IMU) 信号和从视频中提取的 2D 姿势序列之间的联合表示，从而实现准确的跨模态检索、时间同步、主体和身体部位定位以及动作识别。为此，我们引入了 MoBind，这是一个分层对比学习框架，旨在解决三个挑战：（1）过滤掉不相关的视觉背景，（2）对结构化多传感器 IMU 配置进行建模，以及（3）实现细粒度、亚秒级时间对齐。为了隔离与运动相关的线索，MoBind 将 IMU 信号与骨骼运动序列而不是原始像素对齐。我们进一步将全身运动分解为局部身体部位轨迹，将每个轨迹与其相应的 IMU 配对，以实现基于语义的多传感器对齐。为了捕获详细的时间对应关系，MoBind 采用分层对比策略，首先对齐令牌级时间段，然后将局部（身体部分）对齐与全局（全身）运动聚合融合。在 mRi、TotalCapture 和 EgoHumans 上进行评估，MoBind 在所有四项任务中始终优于强大的基线，展示了强大的细粒度时间对齐，同时保持了跨模态的粗略语义一致性。代码可在 https://github.com/bbvisual/MoBind 获取。
+
+</details>
+
+---
+
+## 7. Human-to-Robot Interaction: Learning from Video Demonstration for Robot Imitation / 人机交互：从机器人模仿的视频演示中学习
+
+**Date**: 2026-02-22 | **arXiv**: [2602.19184v1](http://arxiv.org/abs/2602.19184v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.19184v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Learning from Demonstration (LfD) offers a promising paradigm for robot skill acquisition. Recent approaches attempt to extract manipulation commands directly from video demonstrations, yet face two critical challenges: (1) general video captioning models prioritize global scene features over task-relevant objects, producing descriptions unsuitable for precise robotic execution, and (2) end-to-end architectures coupling visual understanding with policy learning require extensive paired datasets and struggle to generalize across objects and scenarios. To address these limitations, we propose a novel ``Human-to-Robot'' imitation learning pipeline that enables robots to acquire manipulation skills directly from unstructured video demonstrations, inspired by the human ability to learn by watching and imitating. Our key innovation is a modular framework that decouples the learning process into two distinct stages: (1) Video Understanding, which combines Temporal Shift Modules (TSM) with Vision-Language Models (VLMs) to extract actions and identify interacted objects, and (2) Robot Imitation, which employs TD3-based deep reinforcement learning to execute the demonstrated manipulations. We validated our approach in PyBullet simulation environments with a UR5e manipulator and in a real-world experiment with a UF850 manipulator across four fundamental actions: reach, pick, move, and put. For video understanding, our method achieves 89.97% action classification accuracy and BLEU-4 scores of 0.351 on standard objects and 0.265 on novel objects, representing improvements of 76.4% and 128.4% over the best baseline, respectively. For robot manipulation, our framework achieves an average success rate of 87.5% across all actions, with 100% success on reaching tasks and up to 90% on complex pick-and-place operations. The project website is available at https://thanhnguyencanh.github.io/LfD4hri.
+
+从演示中学习（LfD）为机器人技能获取提供了一个有前途的范例。最近的方法试图直接从视频演示中提取操作命令，但面临两个关键挑战：（1）通用视频字幕模型优先考虑全局场景特征而不是任务相关对象，产生不适合精确机器人执行的描述；（2）将视觉理解与策略学习相结合的端到端架构需要大量配对数据集，并且难以跨对象和场景进行泛化。为了解决这些限制，我们提出了一种新颖的“人到机器人”模仿学习管道，使机器人能够直接从非结构化视频演示中获得操作技能，其灵感来自于人类通过观看和模仿进行学习的能力。我们的关键创新是一个模块化框架，它将学习过程分解为两个不同的阶段：(1) 视频理解，它将时间转换模块 (TSM) 与视觉语言模型 (VLM) 结合起来，以提取动作并识别交互的对象；(2) 机器人模仿，它采用基于 TD3 的深度强化学习来执行演示的操作。我们在 PyBullet 模拟环境中使用 UR5e 操纵器验证了我们的方法，并在使用 UF850 操纵器的现实实验中验证了我们的方法，涉及四种基本动作：伸手、拾取、移动和放置。对于视频理解，我们的方法在标准对象上实现了 89.97% 的动作分类准确率，BLEU-4 分数为 0.351，在新颖对象上的分数为 0.265，分别比最佳基线提高了 76.4% 和 128.4%。对于机器人操作，我们的框架在所有操作中实现了 87.5% 的平均成功率，在完成任务时成功率为 100%，在复杂的拾取和放置操作中成功率高达 90%。该项目网站位于 https://thanhnguyencanh.github.io/LfD4hri。
+
+</details>
+
+---
+
+## 8. Frame2Freq: Spectral Adapters for Fine-Grained Video Understanding / Frame2Freq：用于细粒度视频理解的光谱适配器
+
+**Date**: 2026-02-21 | **arXiv**: [2602.18977v1](http://arxiv.org/abs/2602.18977v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.18977v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/th-nesh/Frame2Freq.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Adapting image-pretrained backbones to video typically relies on time-domain adapters tuned to a single temporal scale. Our experiments show that these modules pick up static image cues and very fast flicker changes, while overlooking medium-speed motion. Capturing dynamics across multiple time-scales is, however, crucial for fine-grained temporal analysis (i.e., opening vs. closing bottle).   To address this, we introduce Frame2Freq -- a family of frequency-aware adapters that perform spectral encoding during image-to-video adaptation of pretrained Vision Foundation Models (VFMs), improving fine-grained action recognition. Frame2Freq uses Fast Fourier Transform (FFT) along time and learns frequency-band specific embeddings that adaptively highlight the most discriminative frequency ranges. Across five fine-grained activity recognition datasets, Frame2Freq outperforms prior PEFT methods and even surpasses fully fine-tuned models on four of them. These results provide encouraging evidence that frequency analysis methods are a powerful tool for modeling temporal dynamics in image-to-video transfer. Code is available at https://github.com/th-nesh/Frame2Freq.
+
+将图像预训练的主干网适应视频通常依赖于调整到单个时间尺度的时域适配器。我们的实验表明，这些模块可以拾取静态图像线索和非常快的闪烁变化，同时忽略中速运动。然而，捕获多个时间尺度的动态对于细粒度时间分析（即打开与关闭瓶子）至关重要。   为了解决这个问题，我们引入了 Frame2Freq——一系列频率感知适配器，可在预训练视觉基础模型 (VFM) 的图像到视频适应过程中执行频谱编码，从而改善细粒度的动作识别。 Frame2Freq 随着时间的推移使用快速傅里叶变换 (FFT) 并学习频段特定的嵌入，自适应地突出最具辨别力的频率范围。在五个细粒度活动识别数据集上，Frame2Freq 的性能优于之前的 PEFT 方法，甚至超过了其中四个数据集的完全微调模型。这些结果提供了令人鼓舞的证据，表明频率分析方法是对图像到视频传输中的时间动态进行建模的强大工具。代码可在 https://github.com/th-nesh/Frame2Freq 获取。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-02-23 (2 papers)</b></summary>
 
 # arXiv Video Papers - 2026-02-23
