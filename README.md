@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-02-25](papers/2026-02-25.md) - 12 papers
 - [2026-02-24](papers/2026-02-24.md) - 8 papers
 - [2026-02-23](papers/2026-02-23.md) - 2 papers
 - [2026-02-20](papers/2026-02-20.md) - 2 papers
@@ -25,6 +26,214 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-02-25 (12 papers)</b></summary>
+
+# arXiv Video Papers - 2026-02-25
+
+**Paper Count**: 12
+
+---
+
+## 1. VII: Visual Instruction Injection for Jailbreaking Image-to-Video Generation Models / VII：越狱图像到视频生成模型的视觉指令注入
+
+**Date**: 2026-02-24 | **arXiv**: [2602.20999v1](http://arxiv.org/abs/2602.20999v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.20999v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Image-to-Video (I2V) generation models, which condition video generation on reference images, have shown emerging visual instruction-following capability, allowing certain visual cues in reference images to act as implicit control signals for video generation. However, this capability also introduces a previously overlooked risk: adversaries may exploit visual instructions to inject malicious intent through the image modality. In this work, we uncover this risk by proposing Visual Instruction Injection (VII), a training-free and transferable jailbreaking framework that intentionally disguises the malicious intent of unsafe text prompts as benign visual instructions in the safe reference image. Specifically, VII coordinates a Malicious Intent Reprogramming module to distill malicious intent from unsafe text prompts while minimizing their static harmfulness, and a Visual Instruction Grounding module to ground the distilled intent onto a safe input image by rendering visual instructions that preserve semantic consistency with the original unsafe text prompt, thereby inducing harmful content during I2V generation. Empirically, our extensive experiments on four state-of-the-art commercial I2V models (Kling-v2.5-turbo, Gemini Veo-3.1, Seedance-1.5-pro, and PixVerse-V5) demonstrate that VII achieves Attack Success Rates of up to 83.5% while reducing Refusal Rates to near zero, significantly outperforming existing baselines.
+
+图像到视频 (I2V) 生成模型在参考图像上调节视频生成，已显示出新兴的视觉指令跟踪功能，允许参考图像中的某些视觉提示充当视频生成的隐式控制信号。然而，这种功能也带来了一个以前被忽视的风险：对手可能会利用视觉指令通过图像模态注入恶意意图。在这项工作中，我们通过提出视觉指令注入（VII）来揭示这一风险，这是一种免训练且可转移的越狱框架，有意将不安全文本提示的恶意意图伪装成安全参考图像中的良性视觉指令。具体来说，VII 协调恶意意图重新编程模块，从不安全文本提示中提取恶意意图，同时最大限度地减少其静态危害性，并协调视觉指令接地模块，通过渲染与原始不安全文本提示保持语义一致性的视觉指令，将提取的意图接地到安全输入图像上，从而在 I2V 生成过程中引入有害内容。根据经验，我们对四种最先进的商业 I2V 模型（Kling-v2.5-turbo、Gemini Veo-3.1、Seedance-1.5-pro 和 PixVerse-V5）进行的广泛实验表明，VII 的攻击成功率高达 83.5%，同时将拒绝率降低到接近零，显着优于现有基线。
+
+</details>
+
+---
+
+## 2. LongVideo-R1: Smart Navigation for Low-cost Long Video Understanding / LongVideo-R1：低成本长视频理解的智能导航
+
+**Date**: 2026-02-24 | **arXiv**: [2602.20913v1](http://arxiv.org/abs/2602.20913v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.20913v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/qiujihao19/LongVideo-R1
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This paper addresses the critical and underexplored challenge of long video understanding with low computational budgets. We propose LongVideo-R1, an active, reasoning-equipped multimodal large language model (MLLM) agent designed for efficient video context navigation, avoiding the redundancy of exhaustive search. At the core of LongVideo-R1 lies a reasoning module that leverages high-level visual cues to infer the most informative video clip for subsequent processing. During inference, the agent initiates traversal from top-level visual summaries and iteratively refines its focus, immediately halting the exploration process upon acquiring sufficient knowledge to answer the query. To facilitate training, we first extract hierarchical video captions from CGBench, a video corpus with grounding annotations, and guide GPT-5 to generate 33K high-quality chain-of-thought-with-tool trajectories. The LongVideo-R1 agent is fine-tuned upon the Qwen-3-8B model through a two-stage paradigm: supervised fine-tuning (SFT) followed by reinforcement learning (RL), where RL employs a specifically designed reward function to maximize selective and efficient clip navigation. Experiments on multiple long video benchmarks validate the effectiveness of name, which enjoys superior tradeoff between QA accuracy and efficiency. All curated data and source code are provided in the supplementary material and will be made publicly available. Code and data are available at: https://github.com/qiujihao19/LongVideo-R1
+
+本文解决了低计算预算下长视频理解的关键且尚未充分探索的挑战。我们提出了 LongVideo-R1，一种主动的、配备推理的多模态大语言模型（MLLM）代理，设计用于高效的视频上下文导航，避免详尽搜索的冗余。 LongVideo-R1 的核心是一个推理模块，它利用高级视觉线索来推断信息最丰富的视频剪辑，以供后续处理。在推理过程中，代理从顶级视觉摘要开始遍历，并迭代地细化其焦点，在获得足够的知识来回答查询后立即停止探索过程。为了便于训练，我们首先从带有基础注释的视频语料库 CGBench 中提取分层视频字幕，并引导 GPT-5 生成 33K 高质量的思想链工具轨迹。 LongVideo-R1 代理通过两阶段范式在 Qwen-3-8B 模型上进行微调：监督微调 (SFT)，然后是强化学习 (RL)，其中 RL 采用专门设计的奖励函数来最大限度地提高选择性和高效的剪辑导航。在多个长视频基准上进行的实验验证了 name 的有效性，它在 QA 准确性和效率之间享有卓越的权衡。所有精选数据和源代码均在补充材料中提供，并将公开发布。代码和数据可参见：https://github.com/qiujihao19/LongVideo-R1
+
+</details>
+
+---
+
+## 3. PyVision-RL: Forging Open Agentic Vision Models via RL / PyVision-RL：通过 RL 打造开放代理视觉模型
+
+**Date**: 2026-02-24 | **arXiv**: [2602.20739v1](http://arxiv.org/abs/2602.20739v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.20739v1)
+
+**Categories**: cs.AI, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reinforcement learning for agentic multimodal models often suffers from interaction collapse, where models learn to reduce tool usage and multi-turn reasoning, limiting the benefits of agentic behavior. We introduce PyVision-RL, a reinforcement learning framework for open-weight multimodal models that stabilizes training and sustains interaction. Our approach combines an oversampling-filtering-ranking rollout strategy with an accumulative tool reward to prevent collapse and encourage multi-turn tool use. Using a unified training pipeline, we develop PyVision-Image and PyVision-Video for image and video understanding. For video reasoning, PyVision-Video employs on-demand context construction, selectively sampling task-relevant frames during reasoning to significantly reduce visual token usage. Experiments show strong performance and improved efficiency, demonstrating that sustained interaction and on-demand visual processing are critical for scalable multimodal agents.
+
+代理多模态模型的强化学习经常会遇到交互崩溃的问题，其中模型学习减少工具使用和多轮推理，从而限制了代理行为的好处。我们引入了 PyVision-RL，这是一种用于开放权重多模态模型的强化学习框架，可以稳定训练并维持交互。我们的方法将过采样-过滤-排名推出策略与累积工具奖励相结合，以防止崩溃并鼓励多回合工具的使用。使用统一的训练管道，我们开发了 PyVision-Image 和 PyVision-Video 用于图像和视频理解。对于视频推理，PyVision-Video 采用按需上下文构建，在推理过程中选择性地采样与任务相关的帧，以显着减少视觉标记的使用。实验显示出强大的性能和更高的效率，证明持续交互和按需视觉处理对于可扩展的多模式代理至关重要。
+
+</details>
+
+---
+
+## 4. RAYNOVA: 3D-Geometry-Free Auto-Regressive Driving World Modeling with Unified Spatio-Temporal Representation / RAYNOVA：具有统一时空表示的无 3D 几何自动回归驾驶世界建模
+
+**Date**: 2026-02-24 | **arXiv**: [2602.20685v1](http://arxiv.org/abs/2602.20685v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.20685v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World foundation models aim to simulate the evolution of the real world with physically plausible behavior. Unlike prior methods that handle spatial and temporal correlations separately, we propose RAYNOVA, a geometry-free world model that employs a dual-causal autoregressive framework. It follows both scale-wise and temporal topological orders in the autoregressive process, and leverages global attention for unified 4D spatio-temporal reasoning. Different from existing works that impose strong 3D geometric priors, RAYNOVA constructs an isotropic spatio-temporal representation across views, frames, and scales based on relative Plücker-ray positional encoding, enabling robust generalization to diverse camera setups and ego motions. We further introduce a recurrent training paradigm to alleviate distribution drift in long-horizon video generation. RAYNOVA achieves state-of-the-art multi-view video generation results on nuScenes, while offering higher throughput and strong controllability under diverse input conditions, generalizing to novel views and camera configurations without explicit 3D scene representation. Our code will be released at http://yichen928.github.io/raynova.
+
+世界基础模型旨在通过物理上合理的行为来模拟现实世界的演化。与之前分别处理空间和时间相关性的方法不同，我们提出了 RAYNOVA，一种采用双因果自回归框架的无几何世界模型。它在自回归过程中遵循尺度和时间拓扑顺序，并利用全局注意力进行统一的 4D 时空推理。与强加强 3D 几何先验的现有作品不同，RAYNOVA 基于相对 Plücker 射线位置编码构建了跨视图、帧和尺度的各向同性时空表示，从而能够对不同的相机设置和自我运动进行稳健的泛化。我们进一步引入了一种循环训练范例，以减轻长视野视频生成中的分布漂移。 RAYNOVA 在 nuScenes 上实现了最先进的多视图视频生成结果，同时在不同的输入条件下提供更高的吞吐量和强大的可控性，推广到新颖的视图和相机配置，而无需明确的 3D 场景表示。我们的代码将在http://yichen928.github.io/raynova发布。
+
+</details>
+
+---
+
+## 5. GA-Drive: Geometry-Appearance Decoupled Modeling for Free-viewpoint Driving Scene Generatio / GA-Drive：用于自由视点驾驶场景生成的几何外观解耦建模
+
+**Date**: 2026-02-24 | **arXiv**: [2602.20673v1](http://arxiv.org/abs/2602.20673v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.20673v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+A free-viewpoint, editable, and high-fidelity driving simulator is crucial for training and evaluating end-to-end autonomous driving systems. In this paper, we present GA-Drive, a novel simulation framework capable of generating camera views along user-specified novel trajectories through Geometry-Appearance Decoupling and Diffusion-Based Generation. Given a set of images captured along a recorded trajectory and the corresponding scene geometry, GA-Drive synthesizes novel pseudo-views using geometry information. These pseudo-views are then transformed into photorealistic views using a trained video diffusion model. In this way, we decouple the geometry and appearance of scenes. An advantage of such decoupling is its support for appearance editing via state-of-the-art video-to-video editing techniques, while preserving the underlying geometry, enabling consistent edits across both original and novel trajectories. Extensive experiments demonstrate that GA-Drive substantially outperforms existing methods in terms of NTA-IoU, NTL-IoU, and FID scores.
+
+自由视角、可编辑且高保真的驾驶模拟器对于训练和评估端到端自动驾驶系统至关重要。在本文中，我们提出了 GA-Drive，这是一种新颖的模拟框架，能够通过几何外观解耦和基于扩散的生成沿着用户指定的新颖轨迹生成相机视图。给定沿着记录轨迹捕获的一组图像和相应的场景几何形状，GA-Drive 使用几何信息合成新颖的伪视图。然后使用经过训练的视频扩散模型将这些伪视图转换为逼真的视图。通过这种方式，我们将场景的几何形状和外观解耦。这种解耦的优点是它支持通过最先进的视频到视频编辑技术进行外观编辑，同时保留底层几何形状，从而能够在原始和新颖的轨迹上进行一致的编辑。大量实验表明，GA-Drive 在 NTA-IoU、NTL-IoU 和 FID 分数方面明显优于现有方法。
+
+</details>
+
+---
+
+## 6. AnimeAgent: Is the Multi-Agent via Image-to-Video models a Good Disney Storytelling Artist? / AnimeAgent：通过图像到视频模型的多代理是优秀的迪士尼讲故事艺术家吗？
+
+**Date**: 2026-02-24 | **arXiv**: [2602.20664v1](http://arxiv.org/abs/2602.20664v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.20664v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Custom Storyboard Generation (CSG) aims to produce high-quality, multi-character consistent storytelling. Current approaches based on static diffusion models, whether used in a one-shot manner or within multi-agent frameworks, face three key limitations: (1) Static models lack dynamic expressiveness and often resort to "copy-paste" pattern. (2) One-shot inference cannot iteratively correct missing attributes or poor prompt adherence. (3) Multi-agents rely on non-robust evaluators, ill-suited for assessing stylized, non-realistic animation. To address these, we propose AnimeAgent, the first Image-to-Video (I2V)-based multi-agent framework for CSG. Inspired by Disney's "Combination of Straight Ahead and Pose to Pose" workflow, AnimeAgent leverages I2V's implicit motion prior to enhance consistency and expressiveness, while a mixed subjective-objective reviewer enables reliable iterative refinement. We also collect a human-annotated CSG benchmark with ground-truth. Experiments show AnimeAgent achieves SOTA performance in consistency, prompt fidelity, and stylization.
+
+自定义故事板生成 (CSG) 旨在制作高质量、多角色一致的故事讲述。当前基于静态扩散模型的方法，无论是一次性使用还是在多智能体框架内使用，都面临三个关键限制：（1）静态模型缺乏动态表达能力，并且经常采用“复制粘贴”模式。 (2) 一次性推理无法迭代地纠正缺失的属性或提示依从性差。 (3) 多智能体依赖于非鲁棒评估器，不适合评估风格化、非现实的动画。为了解决这些问题，我们提出了 AnimeAgent，这是第一个基于图像到视频 (I2V) 的 CSG 多代理框架。受迪士尼“直线前进和姿势到姿势的组合”工作流程的启发，AnimeAgent 在增强一致性和表现力之前利用 I2V 的隐式运动，而混合主客观审阅器可实现可靠的迭代细化。我们还收集了具有真实性的人工注释 CSG 基准。实验表明 AnimeAgent 在一致性、提示保真度和风格化方面实现了 SOTA 性能。
+
+</details>
+
+---
+
+## 7. PropFly: Learning to Propagate via On-the-Fly Supervision from Pre-trained Video Diffusion Models / PropFly：通过预先训练的视频扩散模型进行动态监督来学习传播
+
+**Date**: 2026-02-24 | **arXiv**: [2602.20583v1](http://arxiv.org/abs/2602.20583v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.20583v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Propagation-based video editing enables precise user control by propagating a single edited frame into following frames while maintaining the original context such as motion and structures. However, training such models requires large-scale, paired (source and edited) video datasets, which are costly and complex to acquire. Hence, we propose the PropFly, a training pipeline for Propagation-based video editing, relying on on-the-Fly supervision from pre-trained video diffusion models (VDMs) instead of requiring off-the-shelf or precomputed paired video editing datasets. Specifically, our PropFly leverages one-step clean latent estimations from intermediate noised latents with varying Classifier-Free Guidance (CFG) scales to synthesize diverse pairs of 'source' (low-CFG) and 'edited' (high-CFG) latents on-the-fly. The source latent serves as structural information of the video, while the edited latent provides the target transformation for learning propagation. Our pipeline enables an additional adapter attached to the pre-trained VDM to learn to propagate edits via Guidance-Modulated Flow Matching (GMFM) loss, which guides the model to replicate the target transformation. Our on-the-fly supervision ensures the model to learn temporally consistent and dynamic transformations. Extensive experiments demonstrate that our PropFly significantly outperforms the state-of-the-art methods on various video editing tasks, producing high-quality editing results.
+
+基于传播的视频编辑通过将单个编辑帧传播到后续帧中来实现精确的用户控制，同时保持原始上下文（例如运动和结构）。然而，训练此类模型需要大规模、配对（源和编辑）视频数据集，获取这些数据集成本高昂且复杂。因此，我们提出了 PropFly，一种基于传播的视频编辑的训练管道，依赖于预先训练的视频扩散模型 (VDM) 的即时监督，而不需要现成的或预先计算的配对视频编辑数据集。具体来说，我们的 PropFly 利用具有不同无分类器指导 (CFG) 尺度的中间噪声潜伏的一步干净潜伏估计来动态合成不同的“源”（低 CFG）和“编辑”（高 CFG）潜伏对。源潜在变量充当视频的结构信息，而编辑后的潜在变量提供学习传播的目标转换。我们的管道支持附加到预先训练的 VDM 的附加适配器，以学习通过引导调制流匹配 (GMFM) 损失来传播编辑，从而引导模型复制目标转换。我们的动态监督确保模型能够学习时间一致的动态转换。大量实验表明，我们的 PropFly 在各种视频编辑任务上显着优于最先进的方法，产生高质量的编辑结果。
+
+</details>
+
+---
+
+## 8. LESA: Learnable Stage-Aware Predictors for Diffusion Model Acceleration / LESA：用于扩散模型加速的可学习阶段感知预测器
+
+**Date**: 2026-02-24 | **arXiv**: [2602.20497v1](http://arxiv.org/abs/2602.20497v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.20497v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Diffusion models have achieved remarkable success in image and video generation tasks. However, the high computational demands of Diffusion Transformers (DiTs) pose a significant challenge to their practical deployment. While feature caching is a promising acceleration strategy, existing methods based on simple reusing or training-free forecasting struggle to adapt to the complex, stage-dependent dynamics of the diffusion process, often resulting in quality degradation and failing to maintain consistency with the standard denoising process. To address this, we propose a LEarnable Stage-Aware (LESA) predictor framework based on two-stage training. Our approach leverages a Kolmogorov-Arnold Network (KAN) to accurately learn temporal feature mappings from data. We further introduce a multi-stage, multi-expert architecture that assigns specialized predictors to different noise-level stages, enabling more precise and robust feature forecasting. Extensive experiments show our method achieves significant acceleration while maintaining high-fidelity generation. Experiments demonstrate 5.00x acceleration on FLUX.1-dev with minimal quality degradation (1.0% drop), 6.25x speedup on Qwen-Image with a 20.2% quality improvement over the previous SOTA (TaylorSeer), and 5.00x acceleration on HunyuanVideo with a 24.7% PSNR improvement over TaylorSeer. State-of-the-art performance on both text-to-image and text-to-video synthesis validates the effectiveness and generalization capability of our training-based framework across different models. Our code is included in the supplementary materials and will be released on GitHub.
+
+扩散模型在图像和视频生成任务中取得了显着的成功。然而，扩散变压器（DiT）的高计算要求对其实际部署提出了重大挑战。虽然特征缓存是一种很有前途的加速策略，但基于简单重用或免训练预测的现有方法很难适应扩散过程的复杂、阶段相关的动态，通常会导致质量下降，并且无法保持与标准去噪过程的一致性。为了解决这个问题，我们提出了一个基于两阶段训练的 LEarnable Stage-Aware (LESA) 预测器框架。我们的方法利用柯尔莫哥洛夫-阿诺德网络（KAN）来准确地从数据中学习时间特征映射。我们进一步引入了多阶段、多专家架构，将专门的预测器分配给不同的噪声级别阶段，从而实现更精确和稳健的特征预测。大量的实验表明，我们的方法在保持高保真生成的同时实现了显着的加速。实验表明，FLUX.1-dev 上的加速为 5.00 倍，质量下降最小（下降 1.0%）；Qwen-Image 上的加速为 6.25 倍，与之前的 SOTA（TaylorSeer）相比，质量提高了 20.2%；HunyuanVideo 上的加速为 5.00 倍，PSNR 比 TaylorSeer 提高了 24.7%。文本到图像和文本到视频合成的最先进性能验证了我们基于训练的框架在不同模型上的有效性和泛化能力。我们的代码包含在补充材料中，并将在 GitHub 上发布。
+
+</details>
+
+---
+
+## 9. 3DSPA: A 3D Semantic Point Autoencoder for Evaluating Video Realism / 3DSPA：用于评估视频真实感的 3D 语义点自动编码器
+
+**Date**: 2026-02-23 | **arXiv**: [2602.20354v1](http://arxiv.org/abs/2602.20354v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.20354v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/TheProParadox/3dspa_code.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+AI video generation is evolving rapidly. For video generators to be useful for applications ranging from robotics to film-making, they must consistently produce realistic videos. However, evaluating the realism of generated videos remains a largely manual process -- requiring human annotation or bespoke evaluation datasets which have restricted scope. Here we develop an automated evaluation framework for video realism which captures both semantics and coherent 3D structure and which does not require access to a reference video. Our method, 3DSPA, is a 3D spatiotemporal point autoencoder which integrates 3D point trajectories, depth cues, and DINO semantic features into a unified representation for video evaluation. 3DSPA models how objects move and what is happening in the scene, enabling robust assessments of realism, temporal consistency, and physical plausibility. Experiments show that 3DSPA reliably identifies videos which violate physical laws, is more sensitive to motion artifacts, and aligns more closely with human judgments of video quality and realism across multiple datasets. Our results demonstrate that enriching trajectory-based representations with 3D semantics offers a stronger foundation for benchmarking generative video models, and implicitly captures physical rule violations. The code and pretrained model weights will be available at https://github.com/TheProParadox/3dspa_code.
+
+人工智能视频生成正在迅速发展。为了使视频生成器能够用于从机器人到电影制作等各种应用，它们必须始终如一地生成逼真的视频。然而，评估生成视频的真实感仍然是一个很大程度上手动的过程——需要人工注释或范围有限的定制评估数据集。在这里，我们开发了一个视频真实感自动评估框架，它可以捕获语义和连贯的 3D 结构，并且不需要访问参考视频。我们的方法 3DSPA 是一种 3D 时空点自动编码器，它将 3D 点轨迹、深度线索和 DINO 语义特征集成到视频评估的统一表示中。 3DSPA 对物体如何移动以及场景中发生的情况进行建模，从而能够对真实性、时间一致性和物理合理性进行可靠的评估。实验表明，3DSPA 能够可靠地识别违反物理定律的视频，对运动伪影更敏感，并且更符合人类对多个数据集的视频质量和真实感的判断。我们的结果表明，利用 3D 语义丰富基于轨迹的表示为基准生成视频模型提供了更坚实的基础，并隐式捕获物理规则违规行为。代码和预训练模型权重将在 https://github.com/TheProParadox/3dspa_code 上提供。
+
+</details>
+
+---
+
+## 10. NovaPlan: Zero-Shot Long-Horizon Manipulation via Closed-Loop Video Language Planning / NovaPlan：通过闭环视频语言规划进行零射击长视野操作
+
+**Date**: 2026-02-23 | **arXiv**: [2602.20119v1](http://arxiv.org/abs/2602.20119v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.20119v1)
+
+**Categories**: cs.RO, cs.AI, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Solving long-horizon tasks requires robots to integrate high-level semantic reasoning with low-level physical interaction. While vision-language models (VLMs) and video generation models can decompose tasks and imagine outcomes, they often lack the physical grounding necessary for real-world execution. We introduce NovaPlan, a hierarchical framework that unifies closed-loop VLM and video planning with geometrically grounded robot execution for zero-shot long-horizon manipulation. At the high level, a VLM planner decomposes tasks into sub-goals and monitors robot execution in a closed loop, enabling the system to recover from single-step failures through autonomous re-planning. To compute low-level robot actions, we extract and utilize both task-relevant object keypoints and human hand poses as kinematic priors from the generated videos, and employ a switching mechanism to choose the better one as a reference for robot actions, maintaining stable execution even under heavy occlusion or depth inaccuracy. We demonstrate the effectiveness of NovaPlan on three long-horizon tasks and the Functional Manipulation Benchmark (FMB). Our results show that NovaPlan can perform complex assembly tasks and exhibit dexterous error recovery behaviors without any prior demonstrations or training. Project page: https://nova-plan.github.io/
+
+解决长期任务需要机器人将高级语义推理与低级物理交互相结合。虽然视觉语言模型 (VLM) 和视频生成模型可以分解任务并想象结果，但它们通常缺乏现实世界执行所需的物理基础。我们引入了 NovaPlan，这是一个分层框架，它将闭环 VLM 和视频规划与几何接地机器人执行相结合，以实现零样本长视野操作。在高层，VLM 规划器将任务分解为子目标，并在闭环中监控机器人的执行情况，使系统能够通过自主重新规划从单步故障中恢复。为了计算低级机器人动作，我们从生成的视频中提取并利用与任务相关的对象关键点和人手姿势作为运动学先验，并采用切换机制来选择更好的动作作为机器人动作的参考，即使在严重遮挡或深度不准确的情况下也能保持稳定的执行。我们展示了 NovaPlan 在三项长期任务和功能操作基准（FMB）上的有效性。我们的结果表明，NovaPlan 可以执行复杂的组装任务并表现出灵巧的错误恢复行为，而无需任何事先演示或培训。项目页面：https://nova-plan.github.io/
+
+</details>
+
+---
+
+## 11. BigMaQ: A Big Macaque Motion and Animation Dataset Bridging Image and 3D Pose Representations / BigMaQ：连接图像和 3D 姿势表示的大猕猴运动和动画数据集
+
+**Date**: 2026-02-23 | **arXiv**: [2602.19874v1](http://arxiv.org/abs/2602.19874v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.19874v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The recognition of dynamic and social behavior in animals is fundamental for advancing ethology, ecology, medicine and neuroscience. Recent progress in deep learning has enabled automated behavior recognition from video, yet an accurate reconstruction of the three-dimensional (3D) pose and shape has not been integrated into this process. Especially for non-human primates, mesh-based tracking efforts lag behind those for other species, leaving pose descriptions restricted to sparse keypoints that are unable to fully capture the richness of action dynamics. To address this gap, we introduce the $\textbf{Big Ma}$ca$\textbf{Q}$ue 3D Motion and Animation Dataset ($\texttt{BigMaQ}$), a large-scale dataset comprising more than 750 scenes of interacting rhesus macaques with detailed 3D pose descriptions. Extending previous surface-based animal tracking methods, we construct subject-specific textured avatars by adapting a high-quality macaque template mesh to individual monkeys. This allows us to provide pose descriptions that are more accurate than previous state-of-the-art surface-based animal tracking methods. From the original dataset, we derive BigMaQ500, an action recognition benchmark that links surface-based pose vectors to single frames across multiple individual monkeys. By pairing features extracted from established image and video encoders with and without our pose descriptors, we demonstrate substantial improvements in mean average precision (mAP) when pose information is included. With these contributions, $\texttt{BigMaQ}$ establishes the first dataset that both integrates dynamic 3D pose-shape representations into the learning task of animal action recognition and provides a rich resource to advance the study of visual appearance, posture, and social interaction in non-human primates. The code and data are publicly available at https://martinivis.github.io/BigMaQ/ .
+
+对动物动态和社会行为的认识是推进行为学、生态学、医学和神经科学的基础。深度学习的最新进展已经实现了视频中的自动行为识别，但三维 (3D) 姿势和形状的准确重建尚未集成到此过程中。特别是对于非人类灵长类动物，基于网格的跟踪工作落后于其他物种，使得姿势描述仅限于稀疏的关键点，无法完全捕捉动作动态的丰富性。为了解决这一差距，我们引入了 $\textbf{Big Ma}$ca$\textbf{Q}$ue 3D 运动和动画数据集 ($\texttt{BigMaQ}$)，这是一个大型数据集，包含 750 多个恒河猴互动场景，并具有详细的 3D 姿势描述。扩展了之前基于表面的动物跟踪方法，我们通过将高质量的猕猴模板网格应用于个体猴子来构建特定于主题的纹理化身。这使我们能够提供比以前最先进的基于表面的动物跟踪方法更准确的姿势描述。从原始数据集中，我们推导出 BigMaQ500，这是一种动作识别基准，它将基于表面的姿势向量链接到多个个体猴子的单个帧。通过将从已建立的图像和视频编码器中提取的特征与姿势描述符进行配对，我们证明了在包含姿势信息时平均精度（mAP）的显着改进。通过这些贡献，$\texttt{BigMaQ}$ 建立了第一个数据集，该数据集既将动态 3D 姿势形状表示集成到动物动作识别的学习任务中，又为推进非人类灵长类动物的视觉外观、姿势和社交互动的研究提供了丰富的资源。代码和数据可在 https://martinivis.github.io/BigMaQ/ 上公开获取。
+
+</details>
+
+---
+
+## 12. PedaCo-Gen: Scaffolding Pedagogical Agency in Human-AI Collaborative Video Authoring / PedaCo-Gen：人机协作视频创作中的脚手架教学机构
+
+**Date**: 2026-02-23 | **arXiv**: [2602.19623v1](http://arxiv.org/abs/2602.19623v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.19623v1)
+
+**Categories**: cs.CV, cs.AI, cs.HC
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+While advancements in Text-to-Video (T2V) generative AI offer a promising path toward democratizing content creation, current models are often optimized for visual fidelity rather than instructional efficacy. This study introduces PedaCo-Gen, a pedagogically-informed human-AI collaborative video generating system for authoring instructional videos based on Mayer's Cognitive Theory of Multimedia Learning (CTML). Moving away from traditional "one-shot" generation, PedaCo-Gen introduces an Intermediate Representation (IR) phase, enabling educators to interactively review and refine video blueprints-comprising scripts and visual descriptions-with an AI reviewer. Our study with 23 education experts demonstrates that PedaCo-Gen significantly enhances video quality across various topics and CTML principles compared to baselines. Participants perceived the AI-driven guidance not merely as a set of instructions but as a metacognitive scaffold that augmented their instructional design expertise, reporting high production efficiency (M=4.26) and guide validity (M=4.04). These findings highlight the importance of reclaiming pedagogical agency through principled co-creation, providing a foundation for future AI authoring tools that harmonize generative power with human professional expertise.
+
+虽然文本到视频 (T2V) 生成式人工智能的进步为内容创作民主化提供了一条充满希望的道路，但当前的模型通常针对视觉保真度而不是教学效果进行优化。本研究介绍了 PedaCo-Gen，这是一种基于教学的人类与人工智能协作视频生成系统，用于根据 Mayer 的多媒体学习认知理论 (CTML) 创作教学视频。 PedaCo-Gen 摆脱了传统的“一次性”生成，引入了中间表示 (IR) 阶段，使教育工作者能够与人工智能审阅者交互地审阅和完善视频蓝图（包括脚本和视觉描述）。我们与 23 名教育专家进行的研究表明，与基线相比，PedaCo-Gen 显着提高了各种主题和 CTML 原则的视频质量。参与者认为人工智能驱动的指导不仅是一组指令，而且是一个元认知支架，可以增强他们的教学设计专业知识，报告高生产效率（M = 4.26）和指南有效性（M = 4.04）。这些发现强调了通过有原则的共同创造来恢复教学机构的重要性，为未来将生成能力与人类专业知识相协调的人工智能创作工具奠定了基础。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-02-24 (8 papers)</b></summary>
 
 # arXiv Video Papers - 2026-02-24
