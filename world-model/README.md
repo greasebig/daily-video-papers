@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-02-25](papers/2026-02-25.md) - 4 papers
 - [2026-02-24](papers/2026-02-24.md) - 1 papers
 - [2026-02-20](papers/2026-02-20.md) - 2 papers
 - [2026-02-19](papers/2026-02-19.md) - 4 papers
@@ -17,6 +18,82 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-02-25 (4 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-02-25
+
+**Paper Count**: 4
+
+---
+
+## 1. Recursive Belief Vision Language Model / 递归信念视觉语言模型
+
+**Date**: 2026-02-24 | **arXiv**: [2602.20659v1](http://arxiv.org/abs/2602.20659v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.20659v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Current vision-language-action (VLA) models struggle with long-horizon manipulation under partial observability. Most existing approaches remain observation-driven, relying on short context windows or repeated queries to vision-language models (VLMs). This leads to loss of task progress, action repetition under perceptual aliasing, and high inference latency. Semantic reasoning alone is not the primary bottleneck in long-horizon manipulation. Instead, VLAs lack persistent, action-conditioned state representations and exhibit limited temporal and physical reasoning, making them ill-suited for multi-stage control. This paper introduces RB-VLA, a belief-centric architecture trained with self-supervised world-model objectives that maintains a compact latent state encoding task-relevant history, dynamics, and object interactions. Queried once for high-level intent, the VLM provides task specification, while the belief tracks task progress and enables phase-aware, causally grounded control under partial observability without storing raw observations or scaling memory with time. The belief and intent jointly condition a diffusion policy for robust closed-loop execution. RB-VLA outperforms prior VLAs on long-horizon benchmarks, achieving 52.5% and 37.5% higher success on multi-stage pick-and-place and stacking tasks, respectively, compared to π0. It also reduces inference latency by up to 5x relative to baselines and eliminates memory growth across timesteps observed in existing VLAs. Ablations show that the belief module is the primary driver of performance, increasing success rates from 32.5% to 77.5%. These results demonstrate the effectiveness of belief-based state representations for long-horizon VLA policies.
+
+当前的视觉-语言-动作（VLA）模型在部分可观察性下难以进行长视野操作。大多数现有方法仍然是观察驱动的，依赖于短上下文窗口或对视觉语言模型（VLM）的重复查询。这会导致任务进度丢失、感知混叠下的动作重复以及高推理延迟。语义推理本身并不是长视野操作的主要瓶颈。相反，VLA 缺乏持久的、以动作为条件的状态表示，并且表现出有限的时间和物理推理，这使得它们不适合多阶段控制。本文介绍了 RB-VLA，这是一种以信念为中心的架构，通过自我监督的世界模型目标进行训练，保持紧凑的潜在状态编码任务相关的历史、动态和对象交互。查询一次高级意图后，VLM 提供任务规范，而信念则跟踪任务进度，并在部分可观察性下实现阶段感知、因果基础的控制，而无需存储原始观察结果或随时间扩展内存。信念和意图共同决定了稳健闭环执行的扩散策略。 RB-VLA 在长视野基准测试中优于之前的 VLA，与 π0 相比，在多级拾放和堆叠任务上的成功率分别高出 52.5% 和 37.5%。相对于基线，它还可以将推理延迟减少多达 5 倍，并消除现有 VLA 中观察到的跨时间步长的内存增长。消融表明信念模块是绩效的主要驱动力，将成功率从 32.5% 提高到 77.5%。这些结果证明了基于信仰的国家代表对于长期 VLA 政策的有效性。
+
+</details>
+
+---
+
+## 2. AdaWorldPolicy: World-Model-Driven Diffusion Policy with Online Adaptive Learning for Robotic Manipulation / AdaWorldPolicy：世界模型驱动的扩散策略，具有用于机器人操作的在线自适应学习
+
+**Date**: 2026-02-23 | **arXiv**: [2602.20057v1](http://arxiv.org/abs/2602.20057v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.20057v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Effective robotic manipulation requires policies that can anticipate physical outcomes and adapt to real-world environments. Effective robotic manipulation requires policies that can anticipate physical outcomes and adapt to real-world environments. In this work, we introduce a unified framework, World-Model-Driven Diffusion Policy with Online Adaptive Learning (AdaWorldPolicy) to enhance robotic manipulation under dynamic conditions with minimal human involvement. Our core insight is that world models provide strong supervision signals, enabling online adaptive learning in dynamic environments, which can be complemented by force-torque feedback to mitigate dynamic force shifts. Our AdaWorldPolicy integrates a world model, an action expert, and a force predictor-all implemented as interconnected Flow Matching Diffusion Transformers (DiT). They are interconnected via the multi-modal self-attention layers, enabling deep feature exchange for joint learning while preserving their distinct modularity characteristics. We further propose a novel Online Adaptive Learning (AdaOL) strategy that dynamically switches between an Action Generation mode and a Future Imagination mode to drive reactive updates across all three modules. This creates a powerful closed-loop mechanism that adapts to both visual and physical domain shifts with minimal overhead. Across a suite of simulated and real-robot benchmarks, our AdaWorldPolicy achieves state-of-the-art performance, with dynamical adaptive capacity to out-of-distribution scenarios.
+
+有效的机器人操作需要能够预测物理结果并适应现实世界环境的策略。有效的机器人操作需要能够预测物理结果并适应现实世界环境的策略。在这项工作中，我们引入了一个统一的框架，即具有在线自适应学习的世界模型驱动扩散策略（AdaWorldPolicy），以在动态条件下以最少的人类参与增强机器人操作。我们的核心见解是，世界模型提供了强大的监督信号，使得动态环境中的在线自适应学习成为可能，并可以通过力-扭矩反馈来补充，以减轻动态力的变化。我们的 AdaWorldPolicy 集成了世界模型、动作专家和力预测器 - 所有这些都以互连的流量匹配扩散变压器 (DiT) 的形式实现。它们通过多模态自注意力层互连，实现联合学习的深度特征交换，同时保留其独特的模块化特征。我们进一步提出了一种新颖的在线自适应学习（AdaOL）策略，该策略可以在“行动生成”模式和“未来想象”模式之间动态切换，以驱动所有三个模块的反应性更新。这创建了一个强大的闭环机制，可以以最小的开销适应视觉和物理域的变化。在一系列模拟和真实机器人基准测试中，我们的 AdaWorldPolicy 实现了最先进的性能，具有对分布外场景的动态自适应能力。
+
+</details>
+
+---
+
+## 3. Denoising Particle Filters: Learning State Estimation with Single-Step Objectives / 去噪粒子滤波器：具有单步目标的学习状态估计
+
+**Date**: 2026-02-23 | **arXiv**: [2602.19651v1](http://arxiv.org/abs/2602.19651v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.19651v1)
+
+**Categories**: cs.RO, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Learning-based methods commonly treat state estimation in robotics as a sequence modeling problem. While this paradigm can be effective at maximizing end-to-end performance, models are often difficult to interpret and expensive to train, since training requires unrolling sequences of predictions in time. As an alternative to end-to-end trained state estimation, we propose a novel particle filtering algorithm in which models are trained from individual state transitions, fully exploiting the Markov property in robotic systems. In this framework, measurement models are learned implicitly by minimizing a denoising score matching objective. At inference, the learned denoiser is used alongside a (learned) dynamics model to approximately solve the Bayesian filtering equation at each time step, effectively guiding predicted states toward the data manifold informed by measurements. We evaluate the proposed method on challenging robotic state estimation tasks in simulation, demonstrating competitive performance compared to tuned end-to-end trained baselines. Importantly, our method offers the desirable composability of classical filtering algorithms, allowing prior information and external sensor models to be incorporated without retraining.
+
+基于学习的方法通常将机器人技术中的状态估计视为序列建模问题。虽然这种范式可以有效地最大化端到端性能，但模型通常难以解释并且训练成本高昂，因为训练需要及时展开预测序列。作为端到端训练状态估计的替代方案，我们提出了一种新颖的粒子滤波算法，其中模型是根据单个状态转换进行训练的，充分利用了机器人系统中的马尔可夫特性。在此框架中，通过最小化去噪分数匹配目标来隐式学习测量模型。在推理时，学习的降噪器与（学习的）动力学模型一起使用，以近似求解每个时间步的贝叶斯滤波方程，有效地将预测状态引导至测量所告知的数据流形。我们在模拟中评估所提出的具有挑战性的机器人状态估计任务的方法，与经过调整的端到端训练基线相比，展示了具有竞争力的性能。重要的是，我们的方法提供了经典过滤算法所需的可组合性，允许将先验信息和外部传感器模型合并而无需重新训练。
+
+</details>
+
+---
+
+## 4. Compositional Planning with Jumpy World Models / 使用跳跃世界模型进行构图规划
+
+**Date**: 2026-02-23 | **arXiv**: [2602.19634v1](http://arxiv.org/abs/2602.19634v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.19634v1)
+
+**Categories**: cs.LG, cs.AI, stat.ML
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The ability to plan with temporal abstractions is central to intelligent decision-making. Rather than reasoning over primitive actions, we study agents that compose pre-trained policies as temporally extended actions, enabling solutions to complex tasks that no constituent alone can solve. Such compositional planning remains elusive as compounding errors in long-horizon predictions make it challenging to estimate the visitation distribution induced by sequencing policies. Motivated by the geometric policy composition framework introduced in arXiv:2206.08736, we address these challenges by learning predictive models of multi-step dynamics -- so-called jumpy world models -- that capture state occupancies induced by pre-trained policies across multiple timescales in an off-policy manner. Building on Temporal Difference Flows (arXiv:2503.09817), we enhance these models with a novel consistency objective that aligns predictions across timescales, improving long-horizon predictive accuracy. We further demonstrate how to combine these generative predictions to estimate the value of executing arbitrary sequences of policies over varying timescales. Empirically, we find that compositional planning with jumpy world models significantly improves zero-shot performance across a wide range of base policies on challenging manipulation and navigation tasks, yielding, on average, a 200% relative improvement over planning with primitive actions on long-horizon tasks.
+
+利用时间抽象进行规划的能力是智能决策的核心。我们不是对原始动作进行推理，而是研究将预先训练的策略组成为临时扩展动作的代理，从而能够解决任何一个成员无法单独解决的复杂任务。这种组合规划仍然难以捉摸，因为长期预测中的复合误差使得估计排序策略引起的访问分布变得具有挑战性。在 arXiv:2206.08736 中引入的几何政策组合框架的推动下，我们通过学习多步动态的预测模型（所谓的跳跃世界模型）来应对这些挑战，这些模型以非政策方式捕获跨多个时间尺度的预训练政策引起的状态占用。在时间差异流 (arXiv:2503.09817) 的基础上，我们通过新颖的一致性目标增强了这些模型，该目标可以跨时间尺度调整预测，从而提高长期预测准确性。我们进一步演示了如何结合这些生成预测来估计在不同时间尺度上执行任意策略序列的价值。根据经验，我们发现，在具有挑战性的操作和导航任务上，使用跳跃世界模型进行组合规划可以显着提高各种基本策略的零样本性能，平均比在长视野任务上使用原始操作进行规划相对提高了 200%。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-02-24 (1 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-02-24
