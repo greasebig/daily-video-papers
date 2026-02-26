@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-02-26](papers/2026-02-26.md) - 18 papers
 - [2026-02-25](papers/2026-02-25.md) - 34 papers
 - [2026-02-24](papers/2026-02-24.md) - 17 papers
 - [2026-02-23](papers/2026-02-23.md) - 6 papers
@@ -19,6 +20,308 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-02-26 (18 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-02-26
+
+**Paper Count**: 18
+
+---
+
+## 1. Hierarchical LLM-Based Multi-Agent Framework with Prompt Optimization for Multi-Robot Task Planning / 基于LLM的分层多智能体框架，可快速优化多机器人任务规划
+
+**Date**: 2026-02-25 | **arXiv**: [2602.21670v1](http://arxiv.org/abs/2602.21670v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.21670v1)
+
+**Categories**: cs.RO, cs.AI, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multi-robot task planning requires decomposing natural-language instructions into executable actions for heterogeneous robot teams. Conventional Planning Domain Definition Language (PDDL) planners provide rigorous guarantees but struggle to handle ambiguous or long-horizon missions, while large language models (LLMs) can interpret instructions and propose plans but may hallucinate or produce infeasible actions. We present a hierarchical multi-agent LLM-based planner with prompt optimization: an upper layer decomposes tasks and assigns them to lower-layer agents, which generate PDDL problems solved by a classical planner. When plans fail, the system applies TextGrad-inspired textual-gradient updates to optimize each agent's prompt and thereby improve planning accuracy. In addition, meta-prompts are learned and shared across agents within the same layer, enabling efficient prompt optimization in multi-agent settings. On the MAT-THOR benchmark, our planner achieves success rates of 0.95 on compound tasks, 0.84 on complex tasks, and 0.60 on vague tasks, improving over the previous state-of-the-art LaMMA-P by 2, 7, and 15 percentage points respectively. An ablation study shows that the hierarchical structure, prompt optimization, and meta-prompt sharing contribute roughly +59, +37, and +4 percentage points to the overall success rate.
+
+多机器人任务规划需要将自然语言指令分解为异构机器人团队的可执行动作。传统的规划领域定义语言（PDDL）规划者提供严格的保证，但难以处理模糊或长期的任务，而大型语言模型（LLM）可以解释指令并提出计划，但可能会产生幻觉或产生不可行的行动。我们提出了一种基于 LLM 的分层多智能体规划器，具有即时优化功能：上层分解任务并将其分配给下层智能体，从而生成由经典规划器解决的 PDDL 问题。当计划失败时，系统会应用受 TextGrad 启发的文本梯度更新来优化每个代理的提示，从而提高计划准确性。此外，元提示可以在同一层内的代理之间学习和共享，从而在多代理设置中实现有效的提示优化。在 MAT-THOR 基准上，我们的规划器在复合任务上实现了 0.95 的成功率，在复杂任务上实现了 0.84 的成功率，在模糊任务上实现了 0.60 的成功率，分别比之前最先进的 LaMMA-P 提高了 2、7 和 15 个百分点。消融研究表明，层次结构、提示优化和元提示共享对整体成功率的贡献大约为 +59、+37 和 +4 个百分点。
+
+</details>
+
+---
+
+## 2. ARLArena: A Unified Framework for Stable Agentic Reinforcement Learning / ARLArena：稳定代理强化学习的统一框架
+
+**Date**: 2026-02-25 | **arXiv**: [2602.21534v1](http://arxiv.org/abs/2602.21534v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.21534v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Agentic reinforcement learning (ARL) has rapidly gained attention as a promising paradigm for training agents to solve complex, multi-step interactive tasks. Despite encouraging early results, ARL remains highly unstable, often leading to training collapse. This instability limits scalability to larger environments and longer interaction horizons, and constrains systematic exploration of algorithmic design choices. In this paper, we first propose ARLArena, a stable training recipe and systematic analysis framework that examines training stability in a controlled and reproducible setting. ARLArena first constructs a clean and standardized testbed. Then, we decompose policy gradient into four core design dimensions and assess the performance and stability of each dimension. Through this fine-grained analysis, we distill a unified perspective on ARL and propose SAMPO, a stable agentic policy optimization method designed to mitigate the dominant sources of instability in ARL. Empirically, SAMPO achieves consistently stable training and strong performance across diverse agentic tasks. Overall, this study provides a unifying policy gradient perspective for ARL and offers practical guidance for building stable and reproducible LLM-based agent training pipelines.
+
+智能体强化学习（ARL）作为训练智能体解决复杂、多步骤交互任务的有前途的范例而迅速受到关注。尽管早期结果令人鼓舞，ARL 仍然高度不稳定，常常导致训练崩溃。这种不稳定性限制了对更大环境和更长交互范围的可扩展性，并限制了对算法设计选择的系统探索。在本文中，我们首先提出 ARLArena，这是一种稳定的训练配方和系统分析框架，用于在受控和可重复的环境中检查训练稳定性。 ARLArena 首先构建了一个干净且标准化的测试平台。然后，我们将政策梯度分解为四个核心设计维度，并评估每个维度的性能和稳定性。通过这种细粒度的分析，我们提炼出了 ARL 的统一视角，并提出了 SAMPO，这是一种稳定的代理策略优化方法，旨在减轻 ARL 不稳定的主要来源。根据经验，SAMPO 在不同的代理任务中实现了一致稳定的训练和出色的性能。总体而言，这项研究为 ARL 提供了统一的政策梯度视角，并为构建稳定且可重复的基于 LLM 的代理培训渠道提供了实用指导。
+
+</details>
+
+---
+
+## 3. Training Generalizable Collaborative Agents via Strategic Risk Aversion / 通过战略风险规避训练通用协作代理
+
+**Date**: 2026-02-25 | **arXiv**: [2602.21515v1](http://arxiv.org/abs/2602.21515v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.21515v1)
+
+**Categories**: cs.LG, cs.AI, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Many emerging agentic paradigms require agents to collaborate with one another (or people) to achieve shared goals. Unfortunately, existing approaches to learning policies for such collaborative problems produce brittle solutions that fail when paired with new partners. We attribute these failures to a combination of free-riding during training and a lack of strategic robustness. To address these problems, we study the concept of strategic risk aversion and interpret it as a principled inductive bias for generalizable cooperation with unseen partners. While strategically risk-averse players are robust to deviations in their partner's behavior by design, we show that, in collaborative games, they also (1) can have better equilibrium outcomes than those at classical game-theoretic concepts like Nash, and (2) exhibit less or no free-riding. Inspired by these insights, we develop a multi-agent reinforcement learning (MARL) algorithm that integrates strategic risk aversion into standard policy optimization methods. Our empirical results across collaborative benchmarks (including an LLM collaboration task) validate our theory and demonstrate that our approach consistently achieves reliable collaboration with heterogeneous and previously unseen partners across collaborative tasks.
+
+许多新兴的代理范式要求代理彼此（或人）协作以实现共同目标。不幸的是，针对此类协作问题的现有学习政策方法产生了脆弱的解决方案，在与新合作伙伴配对时会失败。我们将这些失败归因于训练期间的搭便车行为和缺乏战略稳健性的结合。为了解决这些问题，我们研究了战略风险规避的概念，并将其解释为与看不见的合作伙伴进行普遍合作的原则性归纳偏差。虽然战略上规避风险的玩家对其合作伙伴行为偏差的设计是稳健的，但我们表明，在协作博弈中，他们也（1）可以比纳什等经典博弈论概念中的均衡结果更好，并且（2）表现出较少或没有搭便车。受这些见解的启发，我们开发了一种多智能体强化学习（MARL）算法，将战略风险规避集成到标准策略优化方法中。我们跨协作基准（包括法学硕士协作任务）的实证结果验证了我们的理论，并证明我们的方法始终能够在协作任务中与异类和以前未见过的合作伙伴实现可靠的协作。
+
+</details>
+
+---
+
+## 4. Beyond Refusal: Probing the Limits of Agentic Self-Correction for Semantic Sensitive Information / 超越拒绝：探索语义敏感信息的代理自我校正的极限
+
+**Date**: 2026-02-25 | **arXiv**: [2602.21496v1](http://arxiv.org/abs/2602.21496v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.21496v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+While defenses for structured PII are mature, Large Language Models (LLMs) pose a new threat: Semantic Sensitive Information (SemSI), where models infer sensitive identity attributes, generate reputation-harmful content, or hallucinate potentially wrong information. The capacity of LLMs to self-regulate these complex, context-dependent sensitive information leaks without destroying utility remains an open scientific question. To address this, we introduce SemSIEdit, an inference-time framework where an agentic "Editor" iteratively critiques and rewrites sensitive spans to preserve narrative flow rather than simply refusing to answer. Our analysis reveals a Privacy-Utility Pareto Frontier, where this agentic rewriting reduces leakage by 34.6% across all three SemSI categories while incurring a marginal utility loss of 9.8%. We also uncover a Scale-Dependent Safety Divergence: large reasoning models (e.g., GPT-5) achieve safety through constructive expansion (adding nuance), whereas capacity-constrained models revert to destructive truncation (deleting text). Finally, we identify a Reasoning Paradox: while inference-time reasoning increases baseline risk by enabling the model to make deeper sensitive inferences, it simultaneously empowers the defense to execute safe rewrites.
+
+虽然结构化 PII 的防御已经成熟，但大型语言模型 (LLM) 带来了新的威胁：语义敏感信息 (SemSI)，其中模型推断敏感身份属性、生成损害声誉的内容或幻觉潜在的错误信息。法学硕士在不破坏实用性的情况下自我调节这些复杂的、依赖于上下文的敏感信息泄漏的能力仍然是一个悬而未决的科学问题。为了解决这个问题，我们引入了 SemSIEdit，这是一个推理时间框架，其中代理“编辑”迭代地批评和重写敏感跨度以保留叙述流程，而不是简单地拒绝回答。我们的分析揭示了隐私-效用帕累托前沿，其中这种代理重写将所有三个 SemSI 类别的泄漏减少了 34.6%，同时导致了 9.8% 的边际效用损失。我们还发现了规模相关的安全分歧：大型推理模型（例如 GPT-5）通过建设性扩展（添加细微差别）实现安全，而容量受限模型则恢复为破坏性截断（删除文本）。最后，我们发现了一个推理悖论：虽然推理时间推理通过使模型能够做出更深入的敏感推理来增加基线风险，但它同时使防御能够执行安全重写。
+
+</details>
+
+---
+
+## 5. Hierarchical Lead Critic based Multi-Agent Reinforcement Learning / 基于多智能体强化学习的分层首席批评家
+
+**Date**: 2026-02-25 | **arXiv**: [2602.21680v1](http://arxiv.org/abs/2602.21680v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.21680v1)
+
+**Categories**: cs.LG, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Cooperative Multi-Agent Reinforcement Learning (MARL) solves complex tasks that require coordination from multiple agents, but is often limited to either local (independent learning) or global (centralized learning) perspectives. In this paper, we introduce a novel sequential training scheme and MARL architecture, which learns from multiple perspectives on different hierarchy levels. We propose the Hierarchical Lead Critic (HLC) - inspired by natural emerging distributions in team structures, where following high-level objectives combines with low-level execution. HLC demonstrates that introducing multiple hierarchies, leveraging local and global perspectives, can lead to improved performance with high sample efficiency and robust policies. Experimental results conducted on cooperative, non-communicative, and partially observable MARL benchmarks demonstrate that HLC outperforms single hierarchy baselines and scales robustly with increasing amounts of agents and difficulty.
+
+协作多智能体强化学习（MARL）解决需要多个智能体协调的复杂任务，但通常仅限于局部（独立学习）或全局（集中学习）视角。在本文中，我们介绍了一种新颖的顺序训练方案和 MARL 架构，它从不同层次上的多个角度进行学习。我们提出了分层首席批评家 (HLC) - 受到团队结构中自然出现的分布的启发，其中遵循高级别目标与低级别执行相结合。 HLC 证明，引入多个层次结构，利用本地和全球视角，可以通过高样本效率和稳健的政策来提高绩效。在合作、非通信和部分可观察的 MARL 基准上进行的实验结果表明，HLC 优于单一层次结构基线，并且随着代理数量和难度的增加而稳健地扩展。
+
+</details>
+
+---
+
+## 6. Reasoning-Driven Design of Single Atom Catalysts via a Multi-Agent Large Language Model Framework / 通过多智能体大语言模型框架推理驱动的单原子催化剂设计
+
+**Date**: 2026-02-25 | **arXiv**: [2602.21533v1](http://arxiv.org/abs/2602.21533v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.21533v1)
+
+**Categories**: cond-mat.mtrl-sci, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language models (LLMs) are becoming increasingly applied beyond natural language processing, demonstrating strong capabilities in complex scientific tasks that traditionally require human expertise. This progress has extended into materials discovery, where LLMs introduce a new paradigm by leveraging reasoning and in-context learning, capabilities absent from conventional machine learning approaches. Here, we present a Multi-Agent-based Electrocatalyst Search Through Reasoning and Optimization (MAESTRO) framework in which multiple LLMs with specialized roles collaboratively discover high-performance single atom catalysts for the oxygen reduction reaction. Within an autonomous design loop, agents iteratively reason, propose modifications, reflect on results and accumulate design history. Through in-context learning enabled by this iterative process, MAESTRO identified design principles not explicitly encoded in the LLMs' background knowledge and successfully discovered catalysts that break conventional scaling relations between reaction intermediates. These results highlight the potential of multi-agent LLM frameworks as a powerful strategy to generate chemical insight and discover promising catalysts.
+
+大型语言模型 (LLM) 越来越多地应用于自然语言处理之外的领域，在传统上需要人类专业知识的复杂科学任务中展现出强大的能力。这一进展已扩展到材料发现领域，法学硕士通过利用推理和上下文学习（传统机器学习方法所缺乏的功能）引入了新的范式。在这里，我们提出了一个基于多代理的电催化剂搜索推理和优化（MAESTRO）框架，其中多个具有专门角色的法学硕士协作发现用于氧还原反应的高性能单原子催化剂。在自主设计循环中，代理迭代推理、提出修改建议、反思结果并积累设计历史。通过这一迭代过程实现的情境学习，MAESTRO 确定了法学硕士背景知识中未明确编码的设计原则，并成功发现了打破反应中间体之间传统比例关系的催化剂。这些结果凸显了多智能体法学硕士框架作为产生化学见解和发现有前途催化剂的强大策略的潜力。
+
+</details>
+
+---
+
+## 7. ADM-DP: Adaptive Dynamic Modality Diffusion Policy through Vision-Tactile-Graph Fusion for Multi-Agent Manipulation / ADM-DP：通过视觉-触觉-图融合实现多智能体操作的自适应动态模态扩散策略
+
+**Date**: 2026-02-25 | **arXiv**: [2602.21622v1](http://arxiv.org/abs/2602.21622v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.21622v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multi-agent robotic manipulation remains challenging due to the combined demands of coordination, grasp stability, and collision avoidance in shared workspaces. To address these challenges, we propose the Adaptive Dynamic Modality Diffusion Policy (ADM-DP), a framework that integrates vision, tactile, and graph-based (multi-agent pose) modalities for coordinated control. ADM-DP introduces four key innovations. First, an enhanced visual encoder merges RGB and point-cloud features via Feature-wise Linear Modulation (FiLM) modulation to enrich perception. Second, a tactile-guided grasping strategy uses Force-Sensitive Resistor (FSR) feedback to detect insufficient contact and trigger corrective grasp refinement, improving grasp stability. Third, a graph-based collision encoder leverages shared tool center point (TCP) positions of multiple agents as structured kinematic context to maintain spatial awareness and reduce inter-agent interference. Fourth, an Adaptive Modality Attention Mechanism (AMAM) dynamically re-weights modalities according to task context, enabling flexible fusion. For scalability and modularity, a decoupled training paradigm is employed in which agents learn independent policies while sharing spatial information. This maintains low interdependence between agents while retaining collective awareness. Across seven multi-agent tasks, ADM-DP achieves 12-25% performance gains over state-of-the-art baselines. Ablation studies show the greatest improvements in tasks requiring multiple sensory modalities, validating our adaptive fusion strategy and demonstrating its robustness for diverse manipulation scenarios.
+
+由于共享工作空间中协调、抓取稳定性和避免碰撞的综合需求，多智能体机器人操作仍然具有挑战性。为了应对这些挑战，我们提出了自适应动态模态扩散策略（ADM-DP），这是一个集成视觉、触觉和基于图形（多智能体姿势）模态以进行协调控制的框架。 ADM-DP 引入了四项关键创新。首先，增强型视觉编码器通过特征线性调制 (FiLM) 调制合并 RGB 和点云特征，以丰富感知。其次，触觉引导抓取策略使用力敏电阻 (FSR) 反馈来检测接触不足并触发纠正性抓取细化，从而提高抓取稳定性。第三，基于图的碰撞编码器利用多个代理的共享工具中心点（TCP）位置作为结构化运动上下文来保持空间意识并减少代理间干扰。第四，自适应模态注意力机制（AMAM）根据任务上下文动态地重新加权模态，从而实现灵活的融合。为了可扩展性和模块化，采用了解耦的训练范例，其中代理在共享空间信息的同时学习独立的策略。这在保持集体意识的同时保持了主体之间的低相互依赖性。在七个多代理任务中，ADM-DP 的性能比最先进的基准提高了 12-25%。消融研究表明，需要多种感觉模式的任务得到了最大的改进，验证了我们的自适应融合策略并证明了其对不同操作场景的鲁棒性。
+
+</details>
+
+---
+
+## 8. Adversarial Intent is a Latent Variable: Stateful Trust Inference for Securing Multimodal Agentic RAG / 对抗意图是一个潜在变量：用于保护多模式代理 RAG 的状态信任推理
+
+**Date**: 2026-02-24 | **arXiv**: [2602.21447v1](http://arxiv.org/abs/2602.21447v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.21447v1)
+
+**Categories**: cs.CR, cs.AI, cs.CL, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Current stateless defences for multimodal agentic RAG fail to detect adversarial strategies that distribute malicious semantics across retrieval, planning, and generation components. We formulate this security challenge as a Partially Observable Markov Decision Process (POMDP), where adversarial intent is a latent variable inferred from noisy multi-stage observations. We introduce MMA-RAG^T, an inference-time control framework governed by a Modular Trust Agent (MTA) that maintains an approximate belief state via structured LLM reasoning. Operating as a model-agnostic overlay, MMA-RAGT mediates a configurable set of internal checkpoints to enforce stateful defence-in-depth. Extensive evaluation on 43,774 instances demonstrates a 6.50x average reduction factor in Attack Success Rate relative to undefended baselines, with negligible utility cost. Crucially, a factorial ablation validates our theoretical bounds: while statefulness and spatial coverage are individually necessary (26.4 pp and 13.6 pp gains respectively), stateless multi-point intervention can yield zero marginal benefit under homogeneous stateless filtering when checkpoint detections are perfectly correlated.
+
+当前多模式代理 RAG 的无状态防御无法检测跨检索、规划和生成组件分发恶意语义的对抗策略。我们将这一安全挑战表述为部分可观察马尔可夫决策过程（POMDP），其中对抗意图是从嘈杂的多阶段观察中推断出的潜在变量。我们引入了 MMA-RAG^T，这是一种由模块化信任代理 (MTA) 管理的推理时间控制框架，该代理通过结构化 LLM 推理维持近似信念状态。 MMA-RAGT 作为与模型无关的覆盖层运行，协调一组可配置的内部检查点，以实施有状态的纵深防御。对 43,774 个实例的广泛评估表明，相对于未设防的基线，攻击成功率平均降低了 6.5 倍，而公用事业成本可以忽略不计。至关重要的是，阶乘消融验证了我们的理论界限：虽然状态性和空间覆盖是单独必要的（分别增益 26.4 pp 和 13.6 pp），但当检查点检测完全相关时，无状态多点干预可以在同质无状态过滤下产生零边际收益。
+
+</details>
+
+---
+
+## 9. The Headless Firm: How AI Reshapes Enterprise Boundaries / 无头公司：人工智能如何重塑企业边界
+
+**Date**: 2026-02-24 | **arXiv**: [2602.21401v1](http://arxiv.org/abs/2602.21401v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.21401v1)
+
+**Categories**: cs.GT, cs.AI, cs.SI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The boundary of the firm is determined by coordination cost. We argue that agentic AI induces a structural change in how coordination costs scale: in prior modular systems, integration cost grew with interaction topology (O(n^2) in the number of components); in protocol-mediated agentic systems, integration cost collapses to O(n) while verification scales with task throughput rather than interaction count. This shift selects for a specific organizational equilibrium -- the Headless Firm -- structured as an hourglass: a personalized generative interface at the top, a standardized protocol waist in the middle, and a competitive market of micro-specialized execution agents at the bottom. We formalize this claim as a coordination cost model with two falsifiable empirical predictions: (1) the marginal cost of adding an execution provider should be approximately constant in a mature hourglass ecosystem; (2) the ratio of total coordination cost to task throughput should remain stable as ecosystem size grows. We derive conditions for hourglass stability versus re-centralization and analyze implications for firm size distributions, labor markets, and software economics. The analysis predicts a domain-conditional Great Unbundling: in high knowledge-velocity domains, firm size distributions shift mass from large integrated incumbents toward micro-specialized agents and thin protocol orchestrators.
+
+企业的边界是由协调成本决定的。我们认为，代理人工智能会导致协调成本扩展方式发生结构性变化：在之前的模块化系统中，集成成本随着交互拓扑的增加而增长（组件数量为 O(n^2)）；在以协议为中介的代理系统中，集成成本降至 O(n)，而验证则随任务吞吐量而不是交互次数进行扩展。这种转变选择了一种特定的组织平衡——无头公司——结构如沙漏：顶部是个性化的生成界面，中间是标准化协议腰部，底部是微型专业执行代理的竞争市场。我们将这一主张形式化为具有两个可证伪经验预测的协调成本模型：（1）在成熟的沙漏生态系统中，添加执行提供者的边际成本应该大致恒定； （2）随着生态系统规模的增长，总协调成本与任务吞吐量的比率应保持稳定。我们得出沙漏稳定性与重新集中化的条件，并分析对公司规模分布、劳动力市场和软件经济学的影响。该分析预测了领域条件大分拆：在高知识速度领域，公司规模分布将从大型集成现有企业转向微型专业代理和精简协议协调器。
+
+</details>
+
+---
+
+## 10. A Hierarchical Multi-Agent System for Autonomous Discovery in Geoscientific Data Archives / 用于地球科学数据档案自主发现的分层多智能体系统
+
+**Date**: 2026-02-24 | **arXiv**: [2602.21351v1](http://arxiv.org/abs/2602.21351v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.21351v1)
+
+**Categories**: cs.AI, cs.IR, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The rapid accumulation of Earth science data has created a significant scalability challenge; while repositories like PANGAEA host vast collections of datasets, citation metrics indicate that a substantial portion remains underutilized, limiting data reusability. Here we present PANGAEA-GPT, a hierarchical multi-agent framework designed for autonomous data discovery and analysis. Unlike standard Large Language Model (LLM) wrappers, our architecture implements a centralized Supervisor-Worker topology with strict data-type-aware routing, sandboxed deterministic code execution, and self-correction via execution feedback, enabling agents to diagnose and resolve runtime errors. Through use-case scenarios spanning physical oceanography and ecology, we demonstrate the system's capacity to execute complex, multi-step workflows with minimal human intervention. This framework provides a methodology for querying and analyzing heterogeneous repository data through coordinated agent workflows.
+
+地球科学数据的快速积累带来了巨大的可扩展性挑战；虽然像 PANGEA 这样的存储库拥有大量数据集，但引用指标表明很大一部分数据集仍未得到充分利用，从而限制了数据的可重用性。在这里，我们介绍 PANGAEA-GPT，一个专为自主数据发现和分析而设计的分层多代理框架。与标准大型语言模型 (LLM) 包装器不同，我们的架构实现了集中式 Supervisor-Worker 拓扑，具有严格的数据类型感知路由、沙盒确定性代码执行以及通过执行反馈进行自我纠正，使代理能够诊断和解决运行时错误。通过涵盖物理海洋学和生态学的用例场景，我们展示了系统以最少的人为干预执行复杂、多步骤工作流程的能力。该框架提供了一种通过协调代理工作流程查询和分析异构存储库数据的方法。
+
+</details>
+
+---
+
+## 11. A Benchmark for Deep Information Synthesis / 深度信息合成的基准
+
+**Date**: 2026-02-24 | **arXiv**: [2602.21143v1](http://arxiv.org/abs/2602.21143v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.21143v1)
+
+**Categories**: cs.AI, cs.CL, cs.IR, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language model (LLM)-based agents are increasingly used to solve complex tasks involving tool use, such as web browsing, code execution, and data analysis. However, current evaluation benchmarks do not adequately assess their ability to solve real-world tasks that require synthesizing information from multiple sources and inferring insights beyond simple fact retrieval. To address this, we introduce DEEPSYNTH, a novel benchmark designed to evaluate agents on realistic, time-consuming problems that combine information gathering, synthesis, and structured reasoning to produce insights. DEEPSYNTH contains 120 tasks collected across 7 domains and data sources covering 67 countries. DEEPSYNTH is constructed using a multi-stage data collection pipeline that requires annotators to collect official data sources, create hypotheses, perform manual analysis, and design tasks with verifiable answers. When evaluated on DEEPSYNTH, 11 state-of-the-art LLMs and deep research agents achieve a maximum F1 score of 8.97 and 17.5 on the LLM-judge metric, underscoring the difficulty of the benchmark. Our analysis reveals that current agents struggle with hallucinations and reasoning over large information spaces, highlighting DEEPSYNTH as a crucial benchmark for guiding future research.
+
+基于大型语言模型 (LLM) 的代理越来越多地用于解决涉及工具使用的复杂任务，例如网页浏览、代码执行和数据分析。然而，当前的评估基准并没有充分评估他们解决现实世界任务的能力，这些任务需要综合多个来源的信息并推断出简单事实检索之外的见解。为了解决这个问题，我们引入了 DEEPSYNTH，这是一种新颖的基准，旨在评估代理在现实、耗时的问题上的表现，结合信息收集、综合和结构化推理来产生见解。 DEEPSYNTH 包含跨 7 个领域和覆盖 67 个国家/地区的数据源收集的 120 项任务。 DEEPSYNTH 使用多阶段数据收集管道构建，需要注释者收集官方数据源、创建假设、执行手动分析并设计具有可验证答案的任务。在 DEEPSYNTH 上进行评估时，11 名最先进的法学硕士和深度研究代理在法学硕士评审指标上获得了最高 F1 分数 8.97 和 17.5，凸显了基准的难度。我们的分析表明，当前的智能体在大信息空间上与幻觉和推理作斗争，强调 DEEPSYNTH 是指导未来研究的重要基准。
+
+</details>
+
+---
+
+## 12. SparkMe: Adaptive Semi-Structured Interviewing for Qualitative Insight Discovery / SparkMe：用于定性洞察发现的自适应半结构化访谈
+
+**Date**: 2026-02-24 | **arXiv**: [2602.21136v1](http://arxiv.org/abs/2602.21136v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.21136v1)
+
+**Categories**: cs.HC, cs.AI, cs.CY
+
+**Code**: https://github.com/SALT-NLP/SparkMe.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Qualitative insights from user experiences are critical for informing product and policy decisions, but collecting such data at scale is constrained by the time and availability of experts to conduct semi-structured interviews. Recent work has explored using large language models (LLMs) to automate interviewing, yet existing systems lack a principled mechanism for balancing systematic coverage of predefined topics with adaptive exploration, or the ability to pursue follow-ups, deep dives, and emergent themes that arise organically during conversation. In this work, we formulate adaptive semi-structured interviewing as an optimization problem over the interviewer's behavior. We define interview utility as a trade-off between coverage of a predefined interview topic guide, discovery of relevant emergent themes, and interview cost measured by length. Based on this formulation, we introduce SparkMe, a multi-agent LLM interviewer that performs deliberative planning via simulated conversation rollouts to select questions with high expected utility. We evaluate SparkMe through controlled experiments with LLM-based interviewees, showing that it achieves higher interview utility, improving topic guide coverage (+4.7% over the best baseline) and eliciting richer emergent insights while using fewer conversational turns than prior LLM interviewing approaches. We further validate SparkMe in a user study with 70 participants across 7 professions on the impact of AI on their workflows. Domain experts rate SparkMe as producing high-quality adaptive interviews that surface helpful profession-specific insights not captured by prior approaches. The code, datasets, and evaluation protocols for SparkMe are available as open-source at https://github.com/SALT-NLP/SparkMe.
+
+来自用户体验的定性洞察对于为产品和政策决策提供信息至关重要，但大规模收集此类数据受到专家进行半结构化访谈的时间和可用性的限制。最近的工作已经探索使用大型语言模型（LLM）来自动化面试，但现有系统缺乏平衡预定义主题的系统覆盖与适应性探索的原则性机制，或者追求后续、深入探讨和对话过程中有机出现的新兴主题的能力。在这项工作中，我们将自适应半结构化面试制定为针对面试官行为的优化问题。我们将面试效用定义为预定义面试主题指南的覆盖范围、相关新兴主题的发现以及以长度衡量的面试成本之间的权衡。基于这个公式，我们引入了 SparkMe，一个多代理 LLM 面试官，通过模拟对话进行深思熟虑的计划，以选择具有高预期效用的问题。我们通过对法学硕士面试者进行的对照实验对 SparkMe 进行评估，结果表明，与之前的法学硕士面试方法相比，它实现了更高的面试效用，提高了主题指南覆盖率（比最佳基线高出 4.7%），并在使用更少的对话轮次的情况下引出了更丰富的突发见解。我们在一项用户研究中进一步验证了 SparkMe，该研究涉及 7 个职业的 70 名参与者，了解人工智能对其工作流程的影响。领域专家将 SparkMe 评为高质量的自适应访谈，可以提供先前方法无法捕捉到的有用的特定职业见解。 SparkMe 的代码、数据集和评估协议可在 https://github.com/SALT-NLP/SparkMe 上开源。
+
+</details>
+
+---
+
+## 13. "Are You Sure?": An Empirical Study of Human Perception Vulnerability in LLM-Driven Agentic Systems / “你确定吗？”：法学硕士驱动的代理系统中人类感知漏洞的实证研究
+
+**Date**: 2026-02-24 | **arXiv**: [2602.21127v1](http://arxiv.org/abs/2602.21127v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.21127v1)
+
+**Categories**: cs.HC, cs.AI, cs.CR, cs.SI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language model (LLM) agents are rapidly becoming trusted copilots in high-stakes domains like software development and healthcare. However, this deepening trust introduces a novel attack surface: Agent-Mediated Deception (AMD), where compromised agents are weaponized against their human users. While extensive research focuses on agent-centric threats, human susceptibility to deception by a compromised agent remains unexplored. We present the first large-scale empirical study with 303 participants to measure human susceptibility to AMD. This is based on HAT-Lab (Human-Agent Trust Laboratory), a high-fidelity research platform we develop, featuring nine carefully crafted scenarios spanning everyday and professional domains (e.g., healthcare, software development, human resources). Our 10 key findings reveal significant vulnerabilities and provide future defense perspectives. Specifically, only 8.6% of participants perceive AMD attacks, while domain experts show increased susceptibility in certain scenarios. We identify six cognitive failure modes in users and find that their risk awareness often fails to translate to protective behavior. The defense analysis reveals that effective warnings should interrupt workflows with low verification costs. With experiential learning based on HAT-Lab, over 90% of users who perceive risks report increased caution against AMD. This work provides empirical evidence and a platform for human-centric agent security research.
+
+大型语言模型 (LLM) 代理正在迅速成为软件开发和医疗保健等高风险领域值得信赖的副驾驶。然而，这种加深的信任引入了一种新颖的攻击面：代理介导的欺骗（AMD），其中受感染的代理被武器化以针对其人类用户。虽然广泛的研究集中在以代理为中心的威胁上，但人类对受感染代理欺骗的敏感性仍未得到探索。我们提出了第一个大规模实证研究，涉及 303 名参与者，以衡量人类对 AMD 的易感性。这是基于 HAT-Lab（人类代理信任实验室），这是我们开发的一个高保真研究平台，具有跨越日常和专业领域（例如医疗保健、软件开发、人力资源）的九个精心设计的场景。我们的 10 个关键发现揭示了重大漏洞并提供了未来的防御前景。具体而言，只有 8.6% 的参与者感知到 AMD 攻击，而领域专家在某些情况下表现出更高的敏感性。我们确定了用户的六种认知失败模式，并发现他们的风险意识往往无法转化为保护行为。防御分析表明，有效的警告应该以较低的验证成本中断工作流程。通过基于 HAT-Lab 的体验式学习，超过 90% 感知风险的用户表示对 AMD 更加谨慎。这项工作为以人为中心的代理安全研究提供了经验证据和平台。
+
+</details>
+
+---
+
+## 14. Cooperative-Competitive Team Play of Real-World Craft Robots / 现实世界工艺机器人的合作竞争团队游戏
+
+**Date**: 2026-02-24 | **arXiv**: [2602.21119v1](http://arxiv.org/abs/2602.21119v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.21119v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multi-agent deep Reinforcement Learning (RL) has made significant progress in developing intelligent game-playing agents in recent years. However, the efficient training of collective robots using multi-agent RL and the transfer of learned policies to real-world applications remain open research questions. In this work, we first develop a comprehensive robotic system, including simulation, distributed learning framework, and physical robot components. We then propose and evaluate reinforcement learning techniques designed for efficient training of cooperative and competitive policies on this platform. To address the challenges of multi-agent sim-to-real transfer, we introduce Out of Distribution State Initialization (OODSI) to mitigate the impact of the sim-to-real gap. In the experiments, OODSI improves the Sim2Real performance by 20%. We demonstrate the effectiveness of our approach through experiments with a multi-robot car competitive game and a cooperative task in real-world settings.
+
+近年来，多智能体深度强化学习（RL）在开发智能游戏智能体方面取得了重大进展。然而，使用多智能体强化学习对集体机器人进行有效训练以及将学习到的策略转移到现实世界的应用仍然是悬而未决的研究问题。在这项工作中，我们首先开发了一个全面的机器人系统，包括模拟、分布式学习框架和物理机器人组件。然后，我们提出并评估旨在高效训练该平台上的合作和竞争政策的强化学习技术。为了解决多智能体模拟到真实传输的挑战，我们引入了分布外状态初始化（OODSI）来减轻模拟到真实差距的影响。在实验中，OODSI 将 Sim2Real 性能提高了 20%。我们通过多机器人汽车竞技游戏和现实环境中的合作任务的实验证明了我们方法的有效性。
+
+</details>
+
+---
+
+## 15. Tool-R0: Self-Evolving LLM Agents for Tool-Learning from Zero Data / Tool-R0：用于从零数据进行工具学习的自我进化 LLM 代理
+
+**Date**: 2026-02-24 | **arXiv**: [2602.21320v1](http://arxiv.org/abs/2602.21320v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.21320v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language models (LLMs) are becoming the foundation for autonomous agents that can use tools to solve complex tasks. Reinforcement learning (RL) has emerged as a common approach for injecting such agentic capabilities, but typically under tightly controlled training setups. It often depends on carefully constructed task-solution pairs and substantial human supervision, which creates a fundamental obstacle to open-ended self-evolution toward superintelligent systems. In this paper, we propose Tool-R0 framework for training general purpose tool-calling agents from scratch with self-play RL, under a zero-data assumption. Initialized from the same base LLM, Tool-R0 co-evolves a Generator and a Solver with complementary rewards: one proposes targeted challenging tasks at the other's competence frontier and the other learns to solve them with real-world tool calls. This creates a self-evolving cycle that requires no pre-existing tasks or datasets. Evaluation on different tool-use benchmarks show that Tool-R0 yields 92.5 relative improvement over the base model and surpasses fully supervised tool-calling baselines under the same setting. Our work further provides empirical insights into self-play LLM agents by analyzing co-evolution, curriculum dynamics, and scaling behavior.
+
+大型语言模型 (LLM) 正在成为可以使用工具解决复杂任务的自主代理的基础。强化学习（RL）已成为注入此类代理能力的常用方法，但通常是在严格控制的训练设置下进行的。它通常依赖于精心构建的任务解决方案对和大量的人类监督，这为向超级智能系统的开放式自我进化造成了根本障碍。在本文中，我们提出了 Tool-R0 框架，用于在零数据假设下通过自我对战强化学习从头开始训练通用工具调用代理。 Tool-R0 从相同的 LLM 基础上初始化，共同进化了一个生成器和一个具有互补奖励的求解器：一个在另一个的能力前沿提出有针对性的挑战性任务，另一个学习通过现实世界的工具调用来解决这些任务。这创建了一个自我演化的循环，不需要预先存在的任务或数据集。对不同工具使用基准的评估表明，Tool-R0 比基本模型有 92.5 的相对改进，并且超过了相同设置下完全监督的工具调用基准。我们的工作通过分析共同进化、课程动态和扩展行为，进一步提供了对自我游戏 LLM 代理的实证见解。
+
+</details>
+
+---
+
+## 16. Uncertainty-Aware Diffusion Model for Multimodal Highway Trajectory Prediction via DDIM Sampling / 通过 DDIM 采样进行多模式公路轨迹预测的不确定性感知扩散模型
+
+**Date**: 2026-02-24 | **arXiv**: [2602.21319v1](http://arxiv.org/abs/2602.21319v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.21319v1)
+
+**Categories**: cs.LG, cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Accurate and uncertainty-aware trajectory prediction remains a core challenge for autonomous driving, driven by complex multi-agent interactions, diverse scene contexts and the inherently stochastic nature of future motion. Diffusion-based generative models have recently shown strong potential for capturing multimodal futures, yet existing approaches such as cVMD suffer from slow sampling, limited exploitation of generative diversity and brittle scenario encodings.   This work introduces cVMDx, an enhanced diffusion-based trajectory prediction framework that improves efficiency, robustness and multimodal predictive capability. Through DDIM sampling, cVMDx achieves up to a 100x reduction in inference time, enabling practical multi-sample generation for uncertainty estimation. A fitted Gaussian Mixture Model further provides tractable multimodal predictions from the generated trajectories. In addition, a CVQ-VAE variant is evaluated for scenario encoding. Experiments on the publicly available highD dataset show that cVMDx achieves higher accuracy and significantly improved efficiency over cVMD, enabling fully stochastic, multimodal trajectory prediction.
+
+在复杂的多智能体交互、多样化的场景环境以及未来运动固有的随机性的推动下，准确且具有不确定性的轨迹预测仍然是自动驾驶的核心挑战。基于扩散的生成模型最近显示出捕获多模态未来的强大潜力，但 cVMD 等现有方法存在采样缓慢、生成多样性利用有限以及场景编码脆弱等问题。   这项工作引入了 cVMDx，这是一种增强的基于扩散的轨迹预测框架，可提高效率、鲁棒性和多模态预测能力。通过 DDIM 采样，cVMDx 将推理时间缩短了 100 倍，从而实现了实际的多样本生成以进行不确定性估计。拟合的高斯混合模型进一步根据生成的轨迹提供易于处理的多模态预测。此外，还评估了 CVQ-VAE 变体的场景编码。在公开可用的 highD 数据集上进行的实验表明，cVMDx 比 cVMD 具有更高的精度并显着提高了效率，从而实现了完全随机的多模态轨迹预测。
+
+</details>
+
+---
+
+## 17. ActionReasoning: Robot Action Reasoning in 3D Space with LLM for Robotic Brick Stacking / ActionReasoning：3D 空间中的机器人动作推理以及用于机器人积木堆垛的法学硕士
+
+**Date**: 2026-02-24 | **arXiv**: [2602.21161v1](http://arxiv.org/abs/2602.21161v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.21161v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Classical robotic systems typically rely on custom planners designed for constrained environments. While effective in restricted settings, these systems lack generalization capabilities, limiting the scalability of embodied AI and general-purpose robots. Recent data-driven Vision-Language-Action (VLA) approaches aim to learn policies from large-scale simulation and real-world data. However, the continuous action space of the physical world significantly exceeds the representational capacity of linguistic tokens, making it unclear if scaling data alone can yield general robotic intelligence. To address this gap, we propose ActionReasoning, an LLM-driven framework that performs explicit action reasoning to produce physics-consistent, prior-guided decisions for robotic manipulation. ActionReasoning leverages the physical priors and real-world knowledge already encoded in Large Language Models (LLMs) and structures them within a multi-agent architecture. We instantiate this framework on a tractable case study of brick stacking, where the environment states are assumed to be already accurately measured. The environmental states are then serialized and passed to a multi-agent LLM framework that generates physics-aware action plans. The experiments demonstrate that the proposed multi-agent LLM framework enables stable brick placement while shifting effort from low-level domain-specific coding to high-level tool invocation and prompting, highlighting its potential for broader generalization. This work introduces a promising approach to bridging perception and execution in robotic manipulation by integrating physical reasoning with LLMs.
+
+经典的机器人系统通常依赖于为受限环境设计的定制规划器。虽然在有限的环境中有效，但这些系统缺乏泛化能力，限制了具体人工智能和通用机器人的可扩展性。最近的数据驱动的视觉-语言-行动（VLA）方法旨在从大规模模拟和现实世界数据中学习策略。然而，物理世界的连续动作空间显着超过了语言标记的表示能力，这使得人们不清楚仅扩展数据是否可以产生通用的机器人智能。为了解决这一差距，我们提出了 ActionReasoning，这是一个法学硕士驱动的框架，它执行显式的动作推理，为机器人操作生成物理一致的、先验指导的决策。 ActionReasoning 利用大型语言模型 (LLM) 中已编码的物理先验和现实世界知识，并将它们构建在多代理架构中。我们在砖堆垛的易处理案例研究中实例化了该框架，其中假设环境状态已经被准确测量。然后环境状态被序列化并传递到多代理 LLM 框架，该框架生成物理感知行动计划。实验表明，所提出的多代理 LLM 框架可以实现稳定的积木放置，同时将工作量从低级特定领域编码转移到高级工具调用和提示，突出了其更广泛泛化的潜力。这项工作引入了一种有前途的方法，通过将物理推理与法学硕士相结合，在机器人操作中桥接感知和执行。
+
+</details>
+
+---
+
+## 18. Structured Prompt Language: Declarative Context Management for LLMs / 结构化提示语言：法学硕士的声明性上下文管理
+
+**Date**: 2026-02-23 | **arXiv**: [2602.21257v1](http://arxiv.org/abs/2602.21257v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.21257v1)
+
+**Categories**: cs.CL, cs.DB, cs.PL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present SPL (Structured Prompt Language), a declarative SQL-inspired language that treats large language models as generative knowledge bases and their context windows as constrained resources. SPL provides explicit WITH BUDGET/LIMIT token management, an automatic query optimizer, EXPLAIN transparency analogous to SQL's EXPLAIN ANALYZE, and native integration of retrieval-augmented generation (RAG) and persistent memory in a single declarative framework. SPL-flow extends SPL into resilient agentic pipelines with a three-tier provider fallback strategy (Ollama -> OpenRouter -> self-healing retry) fully transparent to the .spl script. Five extensions demonstrate the paradigm's breadth: (1) Text2SPL (multilingual NL->SPL translation); (2) Mixture-of-Models (MoM) routing that dispatches each PROMPT to a domain-specialist model at runtime; (3) Logical Chunking, an intelligent strategy for documents exceeding a single context window--expressed naturally through SPL's existing CTE syntax with no new constructs, decomposing a large query into a Map-Reduce pipeline that reduces attention cost from O(N^2) to O(N^2/k) and runs identically on cloud (parallel) or local hardware (sequential); (4) SPL-flow, a declarative agentic orchestration layer with resilient three-tier provider fallback; and (5) BENCHMARK for parallel multi-model comparison with automatic winner persistence. We provide a formal EBNF grammar, two pip-installable Python packages (spl-llm, spl-flow), and comparison against Prompty, DSPy, and LMQL. SPL reduces prompt boilerplate by 65% on average, surfaces a 68x cost spread across model tiers as a pre-execution signal, and runs the identical .spl script at $0.002 on OpenRouter or at zero marginal cost on a local Ollama instance--without modification.
+
+我们提出了 SPL（结构化提示语言），这是一种受 SQL 启发的声明式语言，它将大型语言模型视为生成知识库，并将其上下文窗口视为受限资源。 SPL 提供显式的WITH BUDGET/LIMIT 令牌管理、自动查询优化器、类似于SQL 的EXPLAIN ANALYZE 的EXPLAIN 透明度，以及检索增强生成(RAG) 和持久内存在单个声明性框架中的本机集成。 SPL-flow 通过对 .spl 脚本完全透明的三层提供程序回退策略（Ollama -> OpenRouter -> 自愈重试）将 SPL 扩展到弹性代理管道中。五个扩展展示了该范例的广度：（1）Text2SPL（多语言 NL->SPL 翻译）； (2) 模型混合 (MoM) 路由，在运行时将每个 PROMPT 分派给领域专家模型； (3) 逻辑分块，一种针对超过单个上下文窗口的文档的智能策略——通过 SPL 现有的 CTE 语法自然地表达，无需新的构造，将大型查询分解为 Map-Reduce 管道，将注意力成本从 O(N^2) 降低到 O(N^2/k)，并在云（并行）或本地硬件（顺序）上相同地运行； (4) SPL-flow，一个声明式代理编排层，具有弹性的三层提供程序后备； (5) 用于并行多模型比较和自动获胜者持久性的 BENCHMARK。我们提供正式的 EBNF 语法、两个可通过 pip 安装的 Python 包（spl-llm、spl-flow），以及与 Prompty、DSPy 和 LMQL 的比较。 SPL 平均将提示样板文件减少 65%，将跨模型层的 68 倍成本分散作为预执行信号，并在 OpenRouter 上以 0.002 美元运行相同的 .spl 脚本，或者在本地 Ollama 实例上以零边际成本运行相同的 .spl 脚本，无需修改。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-02-25 (34 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-02-25
