@@ -7,7 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
-- [2026-02-26](papers/2026-02-26.md) - 11 papers
+- [2026-02-26](papers/2026-02-26.md) - 1 papers
 - [2026-02-25](papers/2026-02-25.md) - 12 papers
 - [2026-02-24](papers/2026-02-24.md) - 8 papers
 - [2026-02-23](papers/2026-02-23.md) - 2 papers
@@ -27,185 +27,25 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
-<details><summary><b>2026-02-26 (11 papers)</b></summary>
+<details><summary><b>2026-02-26 (1 papers)</b></summary>
 
 # arXiv Video Papers - 2026-02-26
 
-**Paper Count**: 11
+**Paper Count**: 1
 
 ---
 
-## 1. Geometry-as-context: Modulating Explicit 3D in Scene-consistent Video Generation to Geometry Context / 几何作为上下文：将场景一致视频生成中的显式 3D 调制为几何上下文
+## 1. Solaris: Building a Multiplayer Video World Model in Minecraft / Solaris：在 Minecraft 中构建多人视频世界模型
 
-**Date**: 2026-02-25 | **arXiv**: [2602.21929v1](http://arxiv.org/abs/2602.21929v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.21929v1)
+**Date**: 2026-02-25 | **arXiv**: [2602.22208v1](http://arxiv.org/abs/2602.22208v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.22208v1)
 
 **Categories**: cs.CV
 
 <details><summary><b>Abstract / 摘要</b></summary>
 
-Scene-consistent video generation aims to create videos that explore 3D scenes based on a camera trajectory. Previous methods rely on video generation models with external memory for consistency, or iterative 3D reconstruction and inpainting, which accumulate errors during inference due to incorrect intermediary outputs, non-differentiable processes, and separate models. To overcome these limitations, we introduce ``geometry-as-context". It iteratively completes the following steps using an autoregressive camera-controlled video generation model: (1) estimates the geometry of the current view necessary for 3D reconstruction, and (2) simulates and restores novel view images rendered by the 3D scene. Under this multi-task framework, we develop the camera gated attention module to enhance the model's capability to effectively leverage camera poses. During the training phase, text contexts are utilized to ascertain whether geometric or RGB images should be generated. To ensure that the model can generate RGB-only outputs during inference, the geometry context is randomly dropped from the interleaved text-image-geometry training sequence. The method has been tested on scene video generation with one-direction and forth-and-back trajectories. The results show its superiority over previous approaches in maintaining scene consistency and camera control.
+Existing action-conditioned video generation models (video world models) are limited to single-agent perspectives, failing to capture the multi-agent interactions of real-world environments. We introduce Solaris, a multiplayer video world model that simulates consistent multi-view observations. To enable this, we develop a multiplayer data system designed for robust, continuous, and automated data collection on video games such as Minecraft. Unlike prior platforms built for single-player settings, our system supports coordinated multi-agent interaction and synchronized videos + actions capture. Using this system, we collect 12.64 million multiplayer frames and propose an evaluation framework for multiplayer movement, memory, grounding, building, and view consistency. We train Solaris using a staged pipeline that progressively transitions from single-player to multiplayer modeling, combining bidirectional, causal, and Self Forcing training. In the final stage, we introduce Checkpointed Self Forcing, a memory-efficient Self Forcing variant that enables a longer-horizon teacher. Results show our architecture and training design outperform existing baselines. Through open-sourcing our system and models, we hope to lay the groundwork for a new generation of multi-agent world models.
 
-场景一致的视频生成旨在创建基于摄像机轨迹探索 3D 场景的视频。以前的方法依赖具有外部存储器的视频生成模型来实现一致性，或者迭代 3D 重建和修复，这会在推理过程中由于不正确的中间输出、不可微分的过程和单独的模型而累积错误。为了克服这些限制，我们引入了“几何即上下文”。它使用自回归相机控制的视频生成模型迭代地完成以下步骤：（1）估计 3D 重建所需的当前视图的几何形状，以及（2）模拟和恢复 3D 场景渲染的新视图图像。在这个多任务框架下，我们开发了相机门控注意力模块，以增强模型有效利用相机姿势的能力。在训练阶段，利用文本上下文为了确定应该生成几何图像还是 RGB 图像，为了确保模型在推理过程中可以生成仅 RGB 的输出，从交错的文本-图像-几何训练序列中随机删除该方法，并在单向和前后轨迹的场景视频生成上进行了测试，结果表明其在保持场景一致性和摄像机控制方面优于以前的方法。
-
-</details>
-
----
-
-## 2. Understanding Annotation Error Propagation and Learning an Adaptive Policy for Expert Intervention in Barrett's Video Segmentation / 了解注释错误传播并学习巴雷特视频分割中专家干预的自适应策略
-
-**Date**: 2026-02-25 | **arXiv**: [2602.21855v1](http://arxiv.org/abs/2602.21855v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.21855v1)
-
-**Categories**: cs.CV, cs.AI
-
-<details><summary><b>Abstract / 摘要</b></summary>
-
-Accurate annotation of endoscopic videos is essential yet time-consuming, particularly for challenging datasets such as dysplasia in Barrett's esophagus, where the affected regions are irregular and lack clear boundaries. Semi-automatic tools like Segment Anything Model 2 (SAM2) can ease this process by propagating annotations across frames, but small errors often accumulate and reduce accuracy, requiring expert review and correction. To address this, we systematically study how annotation errors propagate across different prompt types, namely masks, boxes, and points, and propose Learning-to-Re-Prompt (L2RP), a cost-aware framework that learns when and where to seek expert input. By tuning a human-cost parameter, our method balances annotation effort and segmentation accuracy. Experiments on a private Barrett's dysplasia dataset and the public SUN-SEG benchmark demonstrate improved temporal consistency and superior performance over baseline strategies.
-
-内窥镜视频的准确注释至关重要但又耗时，特别是对于具有挑战性的数据集，例如巴雷特食管的发育不良，其中受影响的区域不规则且缺乏清晰的边界。 Segment Anything Model 2 (SAM2) 等半自动工具可以通过跨帧传播注释来简化此过程，但小错误常常会累积并降低准确性，需要专家审查和纠正。为了解决这个问题，我们系统地研究了注释错误如何在不同的提示类型（即掩码、框和点）之间传播，并提出了学习重新提示（L2RP），这是一种成本感知框架，可以学习何时何地寻求专家输入。通过调整人力成本参数，我们的方法平衡了注释工作和分割准确性。在私人 Barrett 发育不良数据集和公共 SUN-SEG 基准上进行的实验表明，与基线策略相比，时间一致性得到了改善，性能也更优越。
-
-</details>
-
----
-
-## 3. UniVBench: Towards Unified Evaluation for Video Foundation Models / UniVBench：迈向视频基础模型的统一评估
-
-**Date**: 2026-02-25 | **arXiv**: [2602.21835v1](http://arxiv.org/abs/2602.21835v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.21835v1)
-
-**Categories**: cs.CV
-
-<details><summary><b>Abstract / 摘要</b></summary>
-
-Video foundation models aim to integrate video understanding, generation, editing, and instruction following within a single framework, making them a central direction for next-generation multimodal systems. However, existing evaluation benchmarks remain fragmented and limited in scope, as they each target a single task, rely on task-specific metrics, and typically use short or simple video clips. As a result, they do not capture the unified capabilities that these models are designed to deliver. To address this gap, we introduce UniVBench, a benchmark purpose-built for evaluating video foundation models across four core abilities: video understanding, video generation, video editing, and a newly proposed task, video reconstruction, which assesses how faithfully a model can reproduce video content it has encountered. Our benchmark substantially expands the complexity of evaluation by incorporating 200 high-quality, diverse and multi-shot videos, each paired with detailed captions, multi-format editing instructions, and reference images. All videos are human-created and carefully validated, offering richer cinematic information than prior benchmarks. In addition, we develop a unified agentic evaluation system (UniV-Eval) that standardizes prompting, instruction parsing, and scoring across all tasks, enabling fair, scalable, and reproducible comparisons of unified video models. By grounding evaluation in instruction-based multi-shot video tasks, UniVBench provides the first framework for measuring the integrated capabilities that video foundation models aim to achieve. Extensive human annotations ensure our evaluation aligns with human judgment, enabling rigorous assessment and accelerating progress toward robust video intelligence.
-
-视频基础模型旨在将视频理解、生成、编辑和指令跟踪集成在一个框架内，使其成为下一代多模态系统的中心方向。然而，现有的评估基准仍然分散且范围有限，因为它们每个都针对单个任务，依赖于特定于任务的指标，并且通常使用短或简单的视频剪辑。因此，它们无法捕获这些模型旨在提供的统一功能。为了解决这一差距，我们引入了 UniVBench，这是一个专门为评估视频基础模型的四个核心能力而构建的基准：视频理解、视频生成、视频编辑，以及新提出的任务视频重建，该任务评估模型如何忠实地再现其遇到的视频内容。我们的基准测试通过纳入 200 个高质量、多样化的多镜头视频，每个视频都配有详细的标题、多格式编辑说明和参考图像，极大地扩展了评估的复杂性。所有视频均由人工创作并经过仔细验证，提供比之前的基准更丰富的电影信息。此外，我们开发了一个统一的代理评估系统（UniV-Eval），该系统标准化了所有任务的提示、指令解析和评分，从而实现了统一视频模型的公平、可扩展和可重复的比较。通过在基于指令的多镜头视频任务中进行基础评估，UniVBench 提供了第一个用于测量视频基础模型旨在实现的集成功能的框架。广泛的人工注释确保我们的评估与人类判断一致，从而实现严格的评估并加速实现强大的视频智能。
-
-</details>
-
----
-
-## 4. SkyReels-V4: Multi-modal Video-Audio Generation, Inpainting and Editing model / SkyReels-V4：多模式视频音频生成、修复和编辑模型
-
-**Date**: 2026-02-25 | **arXiv**: [2602.21818v1](http://arxiv.org/abs/2602.21818v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.21818v1)
-
-**Categories**: cs.CV
-
-<details><summary><b>Abstract / 摘要</b></summary>
-
-SkyReels V4 is a unified multi modal video foundation model for joint video audio generation, inpainting, and editing. The model adopts a dual stream Multimodal Diffusion Transformer (MMDiT) architecture, where one branch synthesizes video and the other generates temporally aligned audio, while sharing a powerful text encoder based on the Multimodal Large Language Models (MMLM). SkyReels V4 accepts rich multi modal instructions, including text, images, video clips, masks, and audio references. By combining the MMLMs multi modal instruction following capability with in context learning in the video branch MMDiT, the model can inject fine grained visual guidance under complex conditioning, while the audio branch MMDiT simultaneously leverages audio references to guide sound generation. On the video side, we adopt a channel concatenation formulation that unifies a wide range of inpainting style tasks, such as image to video, video extension, and video editing under a single interface, and naturally extends to vision referenced inpainting and editing via multi modal prompts. SkyReels V4 supports up to 1080p resolution, 32 FPS, and 15 second duration, enabling high fidelity, multi shot, cinema level video generation with synchronized audio. To make such high resolution, long-duration generation computationally feasible, we introduce an efficiency strategy: Joint generation of low resolution full sequences and high-resolution keyframes, followed by dedicated super-resolution and frame interpolation models. To our knowledge, SkyReels V4 is the first video foundation model that simultaneously supports multi-modal input, joint video audio generation, and a unified treatment of generation, inpainting, and editing, while maintaining strong efficiency and quality at cinematic resolutions and durations.
-
-SkyReels V4 是一个统一的多模态视频基础模型，用于联合视频音频生成、修复和编辑。该模型采用双流多模态扩散变压器（MMDiT）架构，其中一个分支合成视频，另一个分支生成时间对齐的音频，同时共享基于多模态大语言模型（MMLM）的强大文本编码器。 SkyReels V4 接受丰富的多模式指令，包括文本、图像、视频剪辑、蒙版和音频参考。通过将 MMLM 多模态指令跟随功能与视频分支 MMDiT 中的上下文学习相结合，该模型可以在复杂条件下注入细粒度的视觉指导，而音频分支 MMDiT 同时利用音频参考来指导声音生成。在视频方面，我们采用通道串联公式，将图像到视频、视频扩展和视频编辑等多种修复风格任务统一在一个界面下，并通过多模式提示自然扩展到视觉参考修复和编辑。 SkyReels V4 支持高达 1080p 的分辨率、32 FPS 和 15 秒的持续时间，可生成具有同步音频的高保真、多镜头、影院级视频。为了使这种高分辨率、长时间的生成在计算上可行，我们引入了一种效率策略：联合生成低分辨率全序列和高分辨率关键帧，然后是专用的超分辨率和帧插值模型。据我们所知，SkyReels V4是第一个同时支持多模态输入、联合视频音频生成以及生成、修复和编辑统一处理的视频基础模型，同时在电影分辨率和时长上保持强大的效率和质量。
-
-</details>
-
----
-
-## 5. MultiAnimate: Pose-Guided Image Animation Made Extensible / MultiAnimate：可扩展的姿势引导图像动画
-
-**Date**: 2026-02-25 | **arXiv**: [2602.21581v1](http://arxiv.org/abs/2602.21581v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.21581v1)
-
-**Categories**: cs.CV
-
-<details><summary><b>Abstract / 摘要</b></summary>
-
-Pose-guided human image animation aims to synthesize realistic videos of a reference character driven by a sequence of poses. While diffusion-based methods have achieved remarkable success, most existing approaches are limited to single-character animation. We observe that naively extending these methods to multi-character scenarios often leads to identity confusion and implausible occlusions between characters. To address these challenges, in this paper, we propose an extensible multi-character image animation framework built upon modern Diffusion Transformers (DiTs) for video generation. At its core, our framework introduces two novel components-Identifier Assigner and Identifier Adapter - which collaboratively capture per-person positional cues and inter-person spatial relationships. This mask-driven scheme, along with a scalable training strategy, not only enhances flexibility but also enables generalization to scenarios with more characters than those seen during training. Remarkably, trained on only a two-character dataset, our model generalizes to multi-character animation while maintaining compatibility with single-character cases. Extensive experiments demonstrate that our approach achieves state-of-the-art performance in multi-character image animation, surpassing existing diffusion-based baselines.
-
-姿势引导的人体图像动画旨在合成由一系列姿势驱动的参考角色的逼真视频。虽然基于扩散的方法取得了显着的成功，但大多数现有方法仅限于单角色动画。我们观察到，天真地将这些方法扩展到多角色场景通常会导致角色之间的身份混乱和令人难以置信的遮挡。为了解决这些挑战，在本文中，我们提出了一种基于现代扩散变压器（DiT）的可扩展多字符图像动画框架，用于视频生成。我们的框架的核心引入了两个新颖的组件——标识符分配器和标识符适配器——它们协作捕获每个人的位置线索和人与人之间的空间关系。这种掩码驱动的方案以及可扩展的训练策略不仅增强了灵活性，而且还能够泛化到比训练期间看到的字符更多的场景。值得注意的是，我们的模型仅在两个字符数据集上进行训练，可推广到多字符动画，同时保持与单字符情况的兼容性。大量的实验表明，我们的方法在多字符图像动画中实现了最先进的性能，超越了现有的基于扩散的基线。
-
-</details>
-
----
-
-## 6. Exploring Vision-Language Models for Open-Vocabulary Zero-Shot Action Segmentation / 探索开放词汇零样本动作分割的视觉语言模型
-
-**Date**: 2026-02-24 | **arXiv**: [2602.21406v1](http://arxiv.org/abs/2602.21406v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.21406v1)
-
-**Categories**: cs.CV
-
-<details><summary><b>Abstract / 摘要</b></summary>
-
-Temporal Action Segmentation (TAS) requires dividing videos into action segments, yet the vast space of activities and alternative breakdowns makes collecting comprehensive datasets infeasible. Existing methods remain limited to closed vocabularies and fixed label sets. In this work, we explore the largely unexplored problem of Open-Vocabulary Zero-Shot Temporal Action Segmentation (OVTAS) by leveraging the strong zero-shot capabilities of Vision-Language Models (VLMs). We introduce a training-free pipeline that follows a segmentation-by-classification design: Frame-Action Embedding Similarity (FAES) matches video frames to candidate action labels, and Similarity-Matrix Temporal Segmentation (SMTS) enforces temporal consistency. Beyond proposing OVTAS, we present a systematic study across 14 diverse VLMs, providing the first broad analysis of their suitability for open-vocabulary action segmentation. Experiments on standard benchmarks show that OVTAS achieves strong results without task-specific supervision, underscoring the potential of VLMs for structured temporal understanding.
-
-时间动作分割（TAS）需要将视频划分为动作片段，但巨大的活动空间和替代细分使得收集全面的数据集变得不可行。现有方法仍然仅限于封闭词汇表和固定标签集。在这项工作中，我们通过利用视觉语言模型（VLM）强大的零样本能力来探索开放词汇零样本时间动作分割（OVTAS）的很大程度上未被探索的问题。我们引入了一种遵循按分类分割设计的免训练管道：帧动作嵌入相似性（FAES）将视频帧与候选动作标签相匹配，相似性矩阵时间分割（SMTS）强制时间一致性。除了提出 OVTAS 之外，我们还对 14 个不同的 VLM 进行了系统研究，首次对其开放词汇动作分割的适用性进行了广泛分析。标准基准测试的实验表明，OVTAS 在没有特定于任务的监督的情况下取得了很好的结果，强调了 VLM 在结构化时间理解方面的潜力。
-
-</details>
-
----
-
-## 7. Towards Controllable Video Synthesis of Routine and Rare OR Events / 实现常规和罕见手术事件的可控视频合成
-
-**Date**: 2026-02-24 | **arXiv**: [2602.21365v1](http://arxiv.org/abs/2602.21365v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.21365v1)
-
-**Categories**: cs.CV, cs.AI, cs.LG, eess.IV
-
-<details><summary><b>Abstract / 摘要</b></summary>
-
-Purpose: Curating large-scale datasets of operating room (OR) workflow, encompassing rare, safety-critical, or atypical events, remains operationally and ethically challenging. This data bottleneck complicates the development of ambient intelligence for detecting, understanding, and mitigating rare or safety-critical events in the OR.   Methods: This work presents an OR video diffusion framework that enables controlled synthesis of rare and safety-critical events. The framework integrates a geometric abstraction module, a conditioning module, and a fine-tuned diffusion model to first transform OR scenes into abstract geometric representations, then condition the synthesis process, and finally generate realistic OR event videos. Using this framework, we also curate a synthetic dataset to train and validate AI models for detecting near-misses of sterile-field violations.   Results: In synthesizing routine OR events, our method outperforms off-the-shelf video diffusion baselines, achieving lower FVD/LPIPS and higher SSIM/PSNR in both in- and out-of-domain datasets. Through qualitative results, we illustrate its ability for controlled video synthesis of counterfactual events. An AI model trained and validated on the generated synthetic data achieved a RECALL of 70.13% in detecting near safety-critical events. Finally, we conduct an ablation study to quantify performance gains from key design choices.   Conclusion: Our solution enables controlled synthesis of routine and rare OR events from abstract geometric representations. Beyond demonstrating its capability to generate rare and safety-critical scenarios, we show its potential to support the development of ambient intelligence models.
-
-目的：整理包含罕见、安全关键或非典型事件的手术室 (OR) 工作流程的大规模数据集，在操作和道德上仍然具有挑战性。这一数据瓶颈使得用于检测、理解和缓解手术室中罕见或安全关键事件的环境智能的开发变得复杂。   方法：这项工作提出了一个 OR 视频扩散框架，可以控制罕见和安全关键事件的合成。该框架集成了几何抽象模块、调节模块和微调扩散模型，首先将 OR 场景转换为抽象几何表示，然后调节合成过程，最后生成逼真的 OR 事件视频。使用这个框架，我们还整理了一个合成数据集来训练和验证人工智能模型，以检测无菌区违规事件的险情。   结果：在合成常规 OR 事件时，我们的方法优于现成的视频扩散基线，在域内和域外数据集中实现了较低的 FVD/LPIPS 和较高的 SSIM/PSNR。通过定性结果，我们说明了其对反事实事件进行受控视频合成的能力。根据生成的合成数据进行训练和验证的 AI 模型在检测临近安全关键事件时实现了 70.13% 的召回率。最后，我们进行了一项消融研究，以量化关键设计选择带来的性能增益。   结论：我们的解决方案能够从抽象几何表示中控制合成常规和罕见的 OR 事件。除了展示其生成罕见和安全关键场景的能力之外，我们还展示了其支持环境智能模型开发的潜力。
-
-</details>
-
----
-
-## 8. HorizonForge: Driving Scene Editing with Any Trajectories and Any Vehicles / Horizo​​nForge：使用任何轨迹和任何车辆进行驾驶场景编辑
-
-**Date**: 2026-02-24 | **arXiv**: [2602.21333v1](http://arxiv.org/abs/2602.21333v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.21333v1)
-
-**Categories**: cs.CV
-
-<details><summary><b>Abstract / 摘要</b></summary>
-
-Controllable driving scene generation is critical for realistic and scalable autonomous driving simulation, yet existing approaches struggle to jointly achieve photorealism and precise control. We introduce HorizonForge, a unified framework that reconstructs scenes as editable Gaussian Splats and Meshes, enabling fine-grained 3D manipulation and language-driven vehicle insertion. Edits are rendered through a noise-aware video diffusion process that enforces spatial and temporal consistency, producing diverse scene variations in a single feed-forward pass without per-trajectory optimization. To standardize evaluation, we further propose HorizonSuite, a comprehensive benchmark spanning ego- and agent-level editing tasks such as trajectory modifications and object manipulation. Extensive experiments show that Gaussian-Mesh representation delivers substantially higher fidelity than alternative 3D representations, and that temporal priors from video diffusion are essential for coherent synthesis. Combining these findings, HorizonForge establishes a simple yet powerful paradigm for photorealistic, controllable driving simulation, achieving an 83.4% user-preference gain and a 25.19% FID improvement over the second best state-of-the-art method. Project page: https://horizonforge.github.io/ .
-
-可控驾驶场景生成对于真实且可扩展的自动驾驶模拟至关重要，但现有方法很难同时实现照片真实感和精确控制。我们推出了 Horizo​​nForge，这是一个统一的框架，可将场景重建为可编辑的高斯图和网格，从而实现细粒度的 3D 操作和语言驱动的车辆插入。编辑是通过噪声感知视频扩散过程进行渲染的，该过程强制执行空间和时间一致性，在单个前馈通道中产生不同的场景变化，而无需每个轨迹优化。为了标准化评估，我们进一步提出了 Horizo​​nSuite，这是一个涵盖自我和代理级别编辑任务（例如轨迹修改和对象操作）的综合基准。大量实验表明，高斯网格表示比其他 3D 表示具有更高的保真度，并且视频扩散的时间先验对于相干合成至关重要。结合这些发现，Horizo​​nForge 建立了一个简单而强大的范例，用于逼真、可控的驾驶模拟，与第二最佳的最先进方法相比，实现了 83.4% 的用户偏好增益和 25.19% 的 FID 改进。项目页面：https://horizo​​nforge.github.io/。
-
-</details>
-
----
-
-## 9. Human Video Generation from a Single Image with 3D Pose and View Control / 通过 3D 姿势和视图控制从单个图像生成人体视频
-
-**Date**: 2026-02-24 | **arXiv**: [2602.21188v1](http://arxiv.org/abs/2602.21188v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.21188v1)
-
-**Categories**: cs.CV
-
-<details><summary><b>Abstract / 摘要</b></summary>
-
-Recent diffusion methods have made significant progress in generating videos from single images due to their powerful visual generation capabilities. However, challenges persist in image-to-video synthesis, particularly in human video generation, where inferring view-consistent, motion-dependent clothing wrinkles from a single image remains a formidable problem. In this paper, we present Human Video Generation in 4D (HVG), a latent video diffusion model capable of generating high-quality, multi-view, spatiotemporally coherent human videos from a single image with 3D pose and view control. HVG achieves this through three key designs: (i) Articulated Pose Modulation, which captures the anatomical relationships of 3D joints via a novel dual-dimensional bone map and resolves self-occlusions across views by introducing 3D information; (ii) View and Temporal Alignment, which ensures multi-view consistency and alignment between a reference image and pose sequences for frame-to-frame stability; and (iii) Progressive Spatio-Temporal Sampling with temporal alignment to maintain smooth transitions in long multi-view animations. Extensive experiments on image-to-video tasks demonstrate that HVG outperforms existing methods in generating high-quality 4D human videos from diverse human images and pose inputs.
-
-最近的扩散方法由于其强大的视觉生成能力，在从单个图像生成视频方面取得了重大进展。然而，图像到视频的合成仍然存在挑战，特别是在人类视频生成方面，从单个图像推断视图一致、运动相关的衣服皱纹仍然是一个艰巨的问题。在本文中，我们提出了 4D 人类视频生成 (HVG)，这是一种潜在视频扩散模型，能够从具有 3D 姿势和视图控制的单个图像生成高质量、多视图、时空连贯的人类视频。 HVG 通过三个关键设计实现了这一目标：(i) 关节姿势调制，通过新颖的二维骨图捕获 3D 关节的解剖关系，并通过引入 3D 信息解决跨视图的自遮挡问题； (ii) 视图和时间对齐，确保参考图像和姿势序列之间的多视图一致性和对齐，以实现帧到帧的稳定性； (iii) 渐进式时空采样与时间对齐，以保持长多视图动画中的平滑过渡。对图像到视频任务的大量实验表明，HVG 在从不同的人类图像和姿势输入生成高质量 4D 人类视频方面优于现有方法。
-
-</details>
-
----
-
-## 10. UDVideoQA: A Traffic Video Question Answering Dataset for Multi-Object Spatio-Temporal Reasoning in Urban Dynamics / UDVideoQA：用于城市动力学中多对象时空推理的交通视频问答数据集
-
-**Date**: 2026-02-24 | **arXiv**: [2602.21137v1](http://arxiv.org/abs/2602.21137v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.21137v1)
-
-**Categories**: cs.CV
-
-<details><summary><b>Abstract / 摘要</b></summary>
-
-Understanding the complex, multi-agent dynamics of urban traffic remains a fundamental challenge for video language models. This paper introduces Urban Dynamics VideoQA, a benchmark dataset that captures the unscripted real-world behavior of dynamic urban scenes. UDVideoQA is curated from 16 hours of traffic footage recorded at multiple city intersections under diverse traffic, weather, and lighting conditions. It employs an event-driven dynamic blur technique to ensure privacy preservation without compromising scene fidelity. Using a unified annotation pipeline, the dataset contains 28K question-answer pairs generated across 8 hours of densely annotated video, averaging one question per second. Its taxonomy follows a hierarchical reasoning level, spanning basic understanding and attribution to event reasoning, reverse reasoning, and counterfactual inference, enabling systematic evaluation of both visual grounding and causal reasoning. Comprehensive experiments benchmark 10 SOTA VideoLMs on UDVideoQA and 8 models on a complementary video question generation benchmark. Results reveal a persistent perception-reasoning gap, showing models that excel in abstract inference often fail with fundamental visual grounding. While models like Gemini Pro achieve the highest zero-shot accuracy, fine-tuning the smaller Qwen2.5-VL 7B model on UDVideoQA bridges this gap, achieving performance comparable to proprietary systems. In VideoQGen, Gemini 2.5 Pro, and Qwen3 Max generate the most relevant and complex questions, though all models exhibit limited linguistic diversity, underscoring the need for human-centric evaluation. The UDVideoQA suite, including the dataset, annotation tools, and benchmarks for both VideoQA and VideoQGen, provides a foundation for advancing robust, privacy-aware, and real-world multimodal reasoning. UDVideoQA is available at https://ud-videoqa.github.io/UD-VideoQA/UD-VideoQA/.
-
-了解城市交通复杂的多智能体动态仍然是视频语言模型的基本挑战。本文介绍了 Urban Dynamics VideoQA，这是一个基准数据集，可捕获动态城市场景的无脚本现实行为。 UDVideoQA 根据在不同交通、天气和照明条件下在多个城市十字路口录制的 16 小时交通录像进行整理。它采用事件驱动的动态模糊技术来确保隐私保护，同时又不影响场景保真度。使用统一的注释管道，该数据集包含在 8 小时的密集注释视频中生成的 28K 问答对，平均每秒一个问题。其分类遵循分层推理水平，涵盖对事件推理、逆向推理和反事实推理的基本理解和归因，从而能够对视觉基础和因果推理进行系统评估。综合实验在 UDVideoQA 上对 10 个 SOTA VideoLM 进行基准测试，在补充视频问题生成基准上对 8 个模型进行基准测试。结果揭示了持续存在的感知推理差距，表明擅长抽象推理的模型往往在基本视觉基础上失败。虽然 Gemini Pro 等模型实现了最高的零射击精度，但在 UDVideoQA 上微调较小的 Qwen2.5-VL 7B 模型弥补了这一差距，实现了与专有系统相当的性能。在 VideoQGen、Gemini 2.5 Pro 和 Qwen3 Max 中，尽管所有模型都表现出有限的语言多样性，但生成了最相关和最复杂的问题，这强调了以人为中心的评估的必要性。 UDVideoQA 套件包括数据集、注释工具以及 VideoQA 和 VideoQGen 的基准，为推进稳健、隐私意识和现实世界的多模态推理奠定了基础。 UDVideoQA 位于 https://ud-videoqa.github.io/UD-VideoQA/UD-VideoQA/。
-
-</details>
-
----
-
-## 11. RAYNOVA: Scale-Temporal Autoregressive World Modeling in Ray Space / RAYNOVA：射线空间中的尺度时间自回归世界建模
-
-**Date**: 2026-02-24 | **arXiv**: [2602.20685v2](http://arxiv.org/abs/2602.20685v2) | **PDF**: [Link](http://arxiv.org/pdf/2602.20685v2)
-
-**Categories**: cs.CV
-
-<details><summary><b>Abstract / 摘要</b></summary>
-
-World foundation models aim to simulate the evolution of the real world with physically plausible behavior. Unlike prior methods that handle spatial and temporal correlations separately, we propose RAYNOVA, a geometry-agonistic multiview world model for driving scenarios that employs a dual-causal autoregressive framework. It follows both scale-wise and temporal topological orders in the autoregressive process, and leverages global attention for unified 4D spatio-temporal reasoning. Different from existing works that impose strong 3D geometric priors, RAYNOVA constructs an isotropic spatio-temporal representation across views, frames, and scales based on relative Plücker-ray positional encoding, enabling robust generalization to diverse camera setups and ego motions. We further introduce a recurrent training paradigm to alleviate distribution drift in long-horizon video generation. RAYNOVA achieves state-of-the-art multi-view video generation results on nuScenes, while offering higher throughput and strong controllability under diverse input conditions, generalizing to novel views and camera configurations without explicit 3D scene representation. Our code will be released at https://raynova-ai.github.io/.
-
-世界基础模型旨在通过物理上合理的行为来模拟现实世界的演化。与之前分别处理空间和时间相关性的方法不同，我们提出了 RAYNOVA，这是一种采用双因果自回归框架的驾驶场景的几何对抗多视图世界模型。它在自回归过程中遵循尺度和时间拓扑顺序，并利用全局注意力进行统一的 4D 时空推理。与强加强 3D 几何先验的现有作品不同，RAYNOVA 基于相对 Plücker 射线位置编码构建了跨视图、帧和尺度的各向同性时空表示，从而能够对不同的相机设置和自我运动进行稳健的泛化。我们进一步引入了一种循环训练范例，以减轻长视野视频生成中的分布漂移。 RAYNOVA 在 nuScenes 上实现了最先进的多视图视频生成结果，同时在不同的输入条件下提供更高的吞吐量和强大的可控性，推广到新颖的视图和相机配置，而无需明确的 3D 场景表示。我们的代码将在 https://raynova-ai.github.io/ 发布。
+现有的动作条件视频生成模型（视频世界模型）仅限于单智能体视角，无法捕捉现实世界环境的多智能体交互。我们介绍 Solaris，这是一种模拟一致的多视图观察的多人视频世界模型。为了实现这一目标，我们开发了一个多人数据系统，专为《我的世界》等视频游戏的稳健、连续和自动化数据收集而设计。与之前为单人游戏设置构建的平台不同，我们的系统支持协调的多代理交互和同步视频+动作捕捉。使用该系统，我们收集了 1264 万个多人游戏帧，并提出了多人运动、记忆、接地、构建和视图一致性的评估框架。我们使用分阶段的管道来训练 Solaris，该管道逐渐从单人模式过渡到多人模式，结合了双向、因果和自我强迫训练。在最后阶段，我们引入了检查点自我强迫，这是一种内存高效的自我强迫变体，可以实现更长视野的教师。结果显示我们的架构和培训设计优于现有基线。通过开源我们的系统和模型，我们希望为新一代多智能体世界模型奠定基础。
 
 </details>
 
