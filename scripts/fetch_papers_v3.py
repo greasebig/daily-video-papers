@@ -292,14 +292,75 @@ def build_docs_site(repo_root, topic_slug, topic_name, papers_dir):
     .list a:hover{{background:rgba(46,196,182,0.12)}}
     .content{{padding:20px;border-radius:18px;background:var(--glass);border:1px solid var(--border);box-shadow:var(--shadow);backdrop-filter: blur(16px) saturate(160%)}}
     @media (max-width: 900px){{.layout{{grid-template-columns:1fr}}}}
+    
+    /* Navigation Buttons */
+    .nav-top {{
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      padding: 10px;
+      background: var(--glass);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      z-index: 1000;
+    }}
+    .nav-floating {{
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 1000;
+    }}
+    .nav-btn {{
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: var(--glass);
+      border: 1px solid var(--border);
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(16px);
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }}
+    .nav-btn:hover {{
+      transform: translateY(-2px);
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }}
   </style>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
+  <div class="nav-top">
+    <a href="javascript:history.back()" class="nav-btn">← Back</a>
+    <a href="../video/index.html" class="nav-btn">Video</a>
+    <a href="../world-model/index.html" class="nav-btn">World Model</a>
+    <a href="../agent/index.html" class="nav-btn">Agent</a>
+  </div>
+  
+  <div class="nav-floating">
+    <a href="javascript:history.back()" class="nav-btn">← Back</a>
+    <a href="../video/index.html" class="nav-btn">Video</a>
+    <a href="../world-model/index.html" class="nav-btn">World Model</a>
+    <a href="../agent/index.html" class="nav-btn">Agent</a>
+  </div>
+
   <div class="orb one"></div>
   <div class="orb two"></div>
   <div class="orb three"></div>
-  <div class="wrap">
+  <div class="wrap" style="margin-top: 40px;">
     <h1>{topic_name} Papers</h1>
     <p>Daily arXiv digests rendered directly on this page.</p>
     <div class="layout">
