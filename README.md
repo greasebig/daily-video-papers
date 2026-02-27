@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-02-27](papers/2026-02-27.md) - 18 papers
 - [2026-02-26](papers/2026-02-26.md) - 11 papers
 - [2026-02-25](papers/2026-02-25.md) - 12 papers
 - [2026-02-24](papers/2026-02-24.md) - 8 papers
@@ -27,6 +28,310 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-02-27 (18 papers)</b></summary>
+
+# arXiv Video Papers - 2026-02-27
+
+**Paper Count**: 18
+
+---
+
+## 1. MovieTeller: Tool-augmented Movie Synopsis with ID Consistent Progressive Abstraction / MovieTeller：具有 ID 一致渐进抽象的工具增强电影概要
+
+**Date**: 2026-02-26 | **arXiv**: [2602.23228v1](http://arxiv.org/abs/2602.23228v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.23228v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+With the explosive growth of digital entertainment, automated video summarization has become indispensable for applications such as content indexing, personalized recommendation, and efficient media archiving. Automatic synopsis generation for long-form videos, such as movies and TV series, presents a significant challenge for existing Vision-Language Models (VLMs). While proficient at single-image captioning, these general-purpose models often exhibit critical failures in long-duration contexts, primarily a lack of ID-consistent character identification and a fractured narrative coherence. To overcome these limitations, we propose MovieTeller, a novel framework for generating movie synopses via tool-augmented progressive abstraction. Our core contribution is a training-free, tool-augmented, fact-grounded generation process. Instead of requiring costly model fine-tuning, our framework directly leverages off-the-shelf models in a plug-and-play manner. We first invoke a specialized face recognition model as an external "tool" to establish Factual Groundings--precise character identities and their corresponding bounding boxes. These groundings are then injected into the prompt to steer the VLM's reasoning, ensuring the generated scene descriptions are anchored to verifiable facts. Furthermore, our progressive abstraction pipeline decomposes the summarization of a full-length movie into a multi-stage process, effectively mitigating the context length limitations of current VLMs. Experiments demonstrate that our approach yields significant improvements in factual accuracy, character consistency, and overall narrative coherence compared to end-to-end baselines.
+
+随着数字娱乐的爆炸性增长，自动视频摘要已成为内容索引、个性化推荐和高效媒体归档等应用不可或缺的一部分。电影和电视剧等长视频的自动概要生成对现有视觉语言模型 (VLM) 提出了重大挑战。虽然精通单图像字幕，但这些通用模型经常在长时间的环境中表现出严重的失败，主要是缺乏 ID 一致的角色识别和支离破碎的叙事连贯性。为了克服这些限制，我们提出了 MovieTeller，这是一种通过工具增强渐进抽象生成电影概要的新颖框架。我们的核心贡献是一个免培训、工具增强、基于事实的生成过程。我们的框架不需要进行昂贵的模型微调，而是以即插即用的方式直接利用现成的模型。我们首先调用专门的人脸识别模型作为外部“工具”来建立事实基础——精确的角色身份及其相应的边界框。然后将这些基础注入到提示中以引导 VLM 的推理，确保生成的场景描述锚定到可验证的事实。此外，我们的渐进式抽象管道将全长电影的摘要分解为多阶段过程，有效缓解了当前 VLM 的上下文长度限制。实验表明，与端到端基线相比，我们的方法在事实准确性、角色一致性和整体叙事连贯性方面取得了显着改进。
+
+</details>
+
+---
+
+## 2. EmbodMocap: In-the-Wild 4D Human-Scene Reconstruction for Embodied Agents / EmbodMocap：实体代理的野外 4D 人体场景重建
+
+**Date**: 2026-02-26 | **arXiv**: [2602.23205v1](http://arxiv.org/abs/2602.23205v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.23205v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Human behaviors in the real world naturally encode rich, long-term contextual information that can be leveraged to train embodied agents for perception, understanding, and acting. However, existing capture systems typically rely on costly studio setups and wearable devices, limiting the large-scale collection of scene-conditioned human motion data in the wild. To address this, we propose EmbodMocap, a portable and affordable data collection pipeline using two moving iPhones. Our key idea is to jointly calibrate dual RGB-D sequences to reconstruct both humans and scenes within a unified metric world coordinate frame. The proposed method allows metric-scale and scene-consistent capture in everyday environments without static cameras or markers, bridging human motion and scene geometry seamlessly. Compared with optical capture ground truth, we demonstrate that the dual-view setting exhibits a remarkable ability to mitigate depth ambiguity, achieving superior alignment and reconstruction performance over single iphone or monocular models. Based on the collected data, we empower three embodied AI tasks: monocular human-scene-reconstruction, where we fine-tune on feedforward models that output metric-scale, world-space aligned humans and scenes; physics-based character animation, where we prove our data could be used to scale human-object interaction skills and scene-aware motion tracking; and robot motion control, where we train a humanoid robot via sim-to-real RL to replicate human motions depicted in videos. Experimental results validate the effectiveness of our pipeline and its contributions towards advancing embodied AI research.
+
+现实世界中的人类行为自然会编码丰富的长期上下文信息，这些信息可用于训练实体代理的感知、理解和行动。然而，现有的捕捉系统通常依赖于昂贵的工作室设置和可穿戴设备，限制了在野外大规模收集场景调节的人体运动数据。为了解决这个问题，我们提出了 EmbodMocap，这是一种使用两部移动 iPhone 的便携式且经济实惠的数据收集管道。我们的关键思想是联合校准双 RGB-D 序列，以在统一的公制世界坐标系内重建人类和场景。所提出的方法允许在日常环境中进行公制尺度和场景一致的捕获，而无需静态相机或标记，从而无缝地连接人体运动和场景几何形状。与光学捕获地面实况相比，我们证明双视图设置表现出显着的减轻深度模糊性的能力，与单个 iPhone 或单目模型相比，实现了卓越的对齐和重建性能。基于收集到的数据，我们支持三项具体的人工智能任务：单目人类场景重建，我们对前馈模型进行微调，输出公制尺度、世界空间对齐的人类和场景；基于物理的角色动画，我们证明我们的数据可用于扩展人类对象交互技能和场景感知运动跟踪；和机器人运动控制，我们通过模拟到真实的强化学习来训练人形机器人来复制视频中描绘的人类运动。实验结果验证了我们管道的有效性及其对推进具体人工智能研究的贡献。
+
+</details>
+
+---
+
+## 3. ColoDiff: Integrating Dynamic Consistency With Content Awareness for Colonoscopy Video Generation / ColoDiff：将动态一致性与内容感知相结合以生成结肠镜检查视频
+
+**Date**: 2026-02-26 | **arXiv**: [2602.23203v1](http://arxiv.org/abs/2602.23203v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.23203v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Colonoscopy video generation delivers dynamic, information-rich data critical for diagnosing intestinal diseases, particularly in data-scarce scenarios. High-quality video generation demands temporal consistency and precise control over clinical attributes, but faces challenges from irregular intestinal structures, diverse disease representations, and various imaging modalities. To this end, we propose ColoDiff, a diffusion-based framework that generates dynamic-consistent and content-aware colonoscopy videos, aiming to alleviate data shortage and assist clinical analysis. At the inter-frame level, our TimeStream module decouples temporal dependency from video sequences through a cross-frame tokenization mechanism, enabling intricate dynamic modeling despite irregular intestinal structures. At the intra-frame level, our Content-Aware module incorporates noise-injected embeddings and learnable prototypes to realize precise control over clinical attributes, breaking through the coarse guidance of diffusion models. Additionally, ColoDiff employs a non-Markovian sampling strategy that cuts steps by over 90% for real-time generation. ColoDiff is evaluated across three public datasets and one hospital database, based on both generation metrics and downstream tasks including disease diagnosis, modality discrimination, bowel preparation scoring, and lesion segmentation. Extensive experiments show ColoDiff generates videos with smooth transitions and rich dynamics. ColoDiff presents an effort in controllable colonoscopy video generation, revealing the potential of synthetic videos in complementing authentic representation and mitigating data scarcity in clinical settings.
+
+结肠镜检查视频生成提供动态、信息丰富的数据，这对于诊断肠道疾病至关重要，特别是在数据稀缺的情况下。高质量视频生成需要时间一致性和对临床属性的精确控制，但面临着不规则肠道结构、多样化疾病表现和各种成像方式的挑战。为此，我们提出了 ColoDiff，一种基于扩散的框架，可生成动态一致且内容感知的结肠镜检查视频，旨在缓解数据短缺并协助临床分析。在帧间级别，我们的 TimeStream 模块通过跨帧标记化机制将时间依赖性与视频序列解耦，从而在肠道结构不规则的情况下实现复杂的动态建模。在帧内级别，我们的内容感知模块结合了噪声注入嵌入和可学习原型，以实现对临床属性的精确控制，突破了扩散模型的粗略指导。此外，ColoDiff 采用非马尔可夫采样策略，可以将实时生成的步骤减少 90% 以上。 ColoDiff 在三个公共数据集和一个医院数据库中进行评估，基于生成指标和下游任务，包括疾病诊断、模态区分、肠道准备评分和病变分割。大量实验表明 ColoDiff 生成的视频具有平滑的过渡和丰富的动态。 ColoDiff 在可控结肠镜检查视频生成方面做出了努力，揭示了合成视频在补充真实表现和缓解临床环境中数据稀缺方面的潜力。
+
+</details>
+
+---
+
+## 4. The Trinity of Consistency as a Defining Principle for General World Models / 一致性的三位一体作为一般世界模型的定义原则
+
+**Date**: 2026-02-26 | **arXiv**: [2602.23152v1](http://arxiv.org/abs/2602.23152v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.23152v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The construction of World Models capable of learning, simulating, and reasoning about objective physical laws constitutes a foundational challenge in the pursuit of Artificial General Intelligence. Recent advancements represented by video generation models like Sora have demonstrated the potential of data-driven scaling laws to approximate physical dynamics, while the emerging Unified Multimodal Model (UMM) offers a promising architectural paradigm for integrating perception, language, and reasoning. Despite these advances, the field still lacks a principled theoretical framework that defines the essential properties requisite for a General World Model. In this paper, we propose that a World Model must be grounded in the Trinity of Consistency: Modal Consistency as the semantic interface, Spatial Consistency as the geometric basis, and Temporal Consistency as the causal engine. Through this tripartite lens, we systematically review the evolution of multimodal learning, revealing a trajectory from loosely coupled specialized modules toward unified architectures that enable the synergistic emergence of internal world simulators. To complement this conceptual framework, we introduce CoW-Bench, a benchmark centered on multi-frame reasoning and generation scenarios. CoW-Bench evaluates both video generation models and UMMs under a unified evaluation protocol. Our work establishes a principled pathway toward general world models, clarifying both the limitations of current systems and the architectural requirements for future progress.
+
+构建能够学习、模拟和推理客观物理定律的世界模型是追求通用人工智能的基本挑战。以 Sora 等视频生成模型为代表的最新进展证明了数据驱动的缩放定律在近似物理动力学方面的潜力，而新兴的统一多模态模型 (UMM) 则为集成感知、语言和推理提供了一种有前途的架构范例。尽管取得了这些进展，该领域仍然缺乏一个原则性的理论框架来定义通用世界模型所需的基本属性。在本文中，我们提出世界模型必须建立在一致性三位一体的基础上：模态一致性作为语义接口，空间一致性作为几何基础，时间一致性作为因果引擎。通过这个三方视角，我们系统地回顾了多模态学习的演变，揭示了从松散耦合的专业模块到统一架构的轨迹，从而实现内部世界模拟器的协同出现。为了补充这个概念框架，我们引入了 CoW-Bench，这是一个以多帧推理和生成场景为中心的基准测试。 CoW-Bench 在统一的评估协议下评估视频生成模型和 UMM。我们的工作建立了通向通用世界模型的原则性途径，阐明了当前系统的局限性和未来进步的架构要求。
+
+</details>
+
+---
+
+## 5. Align then Adapt: Rethinking Parameter-Efficient Transfer Learning in 4D Perception / 先对齐再适应：重新思考 4D 感知中的参数高效迁移学习
+
+**Date**: 2026-02-26 | **arXiv**: [2602.23069v1](http://arxiv.org/abs/2602.23069v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.23069v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Point cloud video understanding is critical for robotics as it accurately encodes motion and scene interaction. We recognize that 4D datasets are far scarcer than 3D ones, which hampers the scalability of self-supervised 4D models. A promising alternative is to transfer 3D pre-trained models to 4D perception tasks. However, rigorous empirical analysis reveals two critical limitations that impede transfer capability: overfitting and the modality gap. To overcome these challenges, we develop a novel "Align then Adapt" (PointATA) paradigm that decomposes parameter-efficient transfer learning into two sequential stages. Optimal-transport theory is employed to quantify the distributional discrepancy between 3D and 4D datasets, enabling our proposed point align embedder to be trained in Stage 1 to alleviate the underlying modality gap. To mitigate overfitting, an efficient point-video adapter and a spatial-context encoder are integrated into the frozen 3D backbone to enhance temporal modeling capacity in Stage 2. Notably, with the above engineering-oriented designs, PointATA enables a pre-trained 3D model without temporal knowledge to reason about dynamic video content at a smaller parameter cost compared to previous work. Extensive experiments show that PointATA can match or even outperform strong full fine-tuning models, whilst enjoying the advantage of parameter efficiency, e.g. 97.21 \% accuracy on 3D action recognition, $+8.7 \%$ on 4 D action segmentation, and 84.06\% on 4D semantic segmentation.
+
+点云视频理解对于机器人技术至关重要，因为它可以准确地编码运动和场景交互。我们认识到 4D 数据集比 3D 数据集稀缺得多，这阻碍了自监督 4D 模型的可扩展性。一个有前途的替代方案是将 3D 预训练模型转移到 4D 感知任务。然而，严格的实证分析揭示了阻碍转移能力的两个关键限制：过度拟合和模态差距。为了克服这些挑战，我们开发了一种新颖的“对齐然后适应”（PointATA）范例，将参数高效的迁移学习分解为两个连续的阶段。采用最佳传输理论来量化 3D 和 4D 数据集之间的分布差异，使我们提出的点对齐嵌入器能够在第一阶段进行训练，以减轻潜在的模态差距。为了缓解过度拟合，将高效的点视频适配器和空间上下文编码器集成到冻结的 3D 主干中，以增强第 2 阶段的时间建模能力。值得注意的是，通过上述面向工程的设计，PointATA 可以在没有时间知识的情况下实现预训练的 3D 模型，与之前的工作相比，可以以更小的参数成本推理动态视频内容。大量实验表明，PointATA 可以匹配甚至超越强大的全微调模型，同时享受参数效率的优势，例如3D 动作识别的准确度为 97.21 \%，4D 动作分割的准确度为 $+8.7 \%$，4D 语义分割的准确度为 84.06\%。
+
+</details>
+
+---
+
+## 6. PackUV: Packed Gaussian UV Maps for 4D Volumetric Video / PackUV：用于 4D 体积视频的打包高斯 UV 贴图
+
+**Date**: 2026-02-26 | **arXiv**: [2602.23040v1](http://arxiv.org/abs/2602.23040v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.23040v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Volumetric videos offer immersive 4D experiences, but remain difficult to reconstruct, store, and stream at scale. Existing Gaussian Splatting based methods achieve high-quality reconstruction but break down on long sequences, temporal inconsistency, and fail under large motions and disocclusions. Moreover, their outputs are typically incompatible with conventional video coding pipelines, preventing practical applications.   We introduce PackUV, a novel 4D Gaussian representation that maps all Gaussian attributes into a sequence of structured, multi-scale UV atlas, enabling compact, image-native storage. To fit this representation from multi-view videos, we propose PackUV-GS, a temporally consistent fitting method that directly optimizes Gaussian parameters in the UV domain. A flow-guided Gaussian labeling and video keyframing module identifies dynamic Gaussians, stabilizes static regions, and preserves temporal coherence even under large motions and disocclusions. The resulting UV atlas format is the first unified volumetric video representation compatible with standard video codecs (e.g., FFV1) without losing quality, enabling efficient streaming within existing multimedia infrastructure.   To evaluate long-duration volumetric capture, we present PackUV-2B, the largest multi-view video dataset to date, featuring more than 50 synchronized cameras, substantial motion, and frequent disocclusions across 100 sequences and 2B (billion) frames. Extensive experiments demonstrate that our method surpasses existing baselines in rendering fidelity while scaling to sequences up to 30 minutes with consistent quality.
+
+体积视频提供身临其境的 4D 体验，但仍然难以大规模重建、存储和流式传输。现有的基于高斯分布的方法实现了高质量的重建，但在长序列、时间不一致的情况下会崩溃，并且在大运动和去遮挡下会失败。此外，它们的输出通常与传统的视频编码管道不兼容，从而阻碍了实际应用。   我们引入了 PackUV，这是一种新颖的 4D 高斯表示，可将所有高斯属性映射到一系列结构化、多尺度 UV 图集，从而实现紧凑的图像原生存储。为了拟合多视图视频的这种表示，我们提出了 PackUV-GS，这是一种时间一致的拟合方法，可以直接优化 UV 域中的高斯参数。流引导的高斯标记和视频关键帧模块可以识别动态高斯，稳定静态区域，并即使在大运动和去遮挡的情况下也能保持时间连贯性。由此产生的 UV 图集格式是第一个与标准视频编解码器（例如 FFV1）兼容的统一体积视频表示形式，且不会损失质量，从而能够在现有多媒体基础设施中实现高效流式传输。   为了评估长时间的体积捕获，我们提出了 PackUV-2B，这是迄今为止最大的多视图视频数据集，具有 50 多个同步摄像机、大量运动以及跨 100 个序列和 2B（十亿）帧的频繁遮挡。大量实验表明，我们的方法在渲染保真度方面超越了现有基线，同时可扩展到长达 30 分钟的序列且质量一致。
+
+</details>
+
+---
+
+## 7. DMAligner: Enhancing Image Alignment via Diffusion Model Based View Synthesis / DMAligner：通过基于扩散模型的视图合成增强图像对齐
+
+**Date**: 2026-02-26 | **arXiv**: [2602.23022v1](http://arxiv.org/abs/2602.23022v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.23022v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/boomluo02/DMAligner.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Image alignment is a fundamental task in computer vision with broad applications. Existing methods predominantly employ optical flow-based image warping. However, this technique is susceptible to common challenges such as occlusions and illumination variations, leading to degraded alignment visual quality and compromised accuracy in downstream tasks. In this paper, we present DMAligner, a diffusion-based framework for image alignment through alignment-oriented view synthesis. DMAligner is crafted to tackle the challenges in image alignment from a new perspective, employing a generation-based solution that showcases strong capabilities and avoids the problems associated with flow-based image warping. Specifically, we propose a Dynamics-aware Diffusion Training approach for learning conditional image generation, synthesizing a novel view for image alignment. This incorporates a Dynamics-aware Mask Producing (DMP) module to adaptively distinguish dynamic foreground regions from static backgrounds, enabling the diffusion model to more effectively handle challenges that classical methods struggle to solve. Furthermore, we develop the Dynamic Scene Image Alignment (DSIA) dataset using Blender, which includes 1,033 indoor and outdoor scenes with over 30K image pairs tailored for image alignment. Extensive experimental results demonstrate the superiority of the proposed approach on DSIA benchmarks, as well as on a series of widely-used video datasets for qualitative comparisons. Our code is available at https://github.com/boomluo02/DMAligner.
+
+图像对齐是计算机视觉中的一项基本任务，具有广泛的应用。现有方法主要采用基于光流的图像扭曲。然而，该技术容易受到遮挡和照明变化等常见挑战的影响，导致对齐视觉质量下降并影响下游任务的准确性。在本文中，我们提出了 DMAaligner，这是一种基于扩散的框架，通过面向对齐的视图合成进行图像对齐。 DMAligner 旨在从新的角度应对图像对齐的挑战，采用基于生成的解决方案，展示强大的功能并避免与基于流的图像扭曲相关的问题。具体来说，我们提出了一种动态感知扩散训练方法，用于学习条件图像生成，合成图像对齐的新颖视图。它结合了动态感知掩模生成（DMP）模块，可以自适应地区分动态前景区域和静态背景，使扩散模型能够更有效地应对经典方法难以解决的挑战。此外，我们使用 Blender 开发了动态场景图像对齐 (DSIA) 数据集，其中包括 1,033 个室内和室外场景，以及为图像对齐量身定制的超过 30K 图像对。大量的实验结果证明了所提出的方法在 DSIA 基准以及一系列广泛使用的视频数据集上进行定性比较的优越性。我们的代码可在 https://github.com/boomluo02/DMAligner 获取。
+
+</details>
+
+---
+
+## 8. UCM: Unifying Camera Control and Memory with Time-aware Positional Encoding Warping for World Models / UCM：通过世界模型的时间感知位置编码变形来统一相机控制和内存
+
+**Date**: 2026-02-26 | **arXiv**: [2602.22960v1](http://arxiv.org/abs/2602.22960v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.22960v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models based on video generation demonstrate remarkable potential for simulating interactive environments but face persistent difficulties in two key areas: maintaining long-term content consistency when scenes are revisited and enabling precise camera control from user-provided inputs. Existing methods based on explicit 3D reconstruction often compromise flexibility in unbounded scenarios and fine-grained structures. Alternative methods rely directly on previously generated frames without establishing explicit spatial correspondence, thereby constraining controllability and consistency. To address these limitations, we present UCM, a novel framework that unifies long-term memory and precise camera control via a time-aware positional encoding warping mechanism. To reduce computational overhead, we design an efficient dual-stream diffusion transformer for high-fidelity generation. Moreover, we introduce a scalable data curation strategy utilizing point-cloud-based rendering to simulate scene revisiting, facilitating training on over 500K monocular videos. Extensive experiments on real-world and synthetic benchmarks demonstrate that UCM significantly outperforms state-of-the-art methods in long-term scene consistency, while also achieving precise camera controllability in high-fidelity video generation.
+
+基于视频生成的世界模型在模拟交互环境方面表现出了巨大的潜力，但在两个关键领域面临着持续的困难：重新访问场景时保持长期内容一致性以及通过用户提供的输入实现精确的摄像机控制。基于显式 3D 重建的现有方法通常会损害无界场景和细粒度结构的灵活性。替代方法直接依赖于先前生成的帧，而不建立明确的空间对应关系，从而限制了可控性和一致性。为了解决这些限制，我们提出了 UCM，这是一种新颖的框架，通过时间感知的位置编码扭曲机制将长期记忆和精确的相机控制结合起来。为了减少计算开销，我们设计了一种用于高保真生成的高效双流扩散变压器。此外，我们引入了一种可扩展的数据管理策略，利用基于点云的渲染来模拟场景重访，从而促进对超过 500K 单目视频的训练。对现实世界和综合基准的大量实验表明，UCM 在长期场景一致性方面显着优于最先进的方法，同时在高保真视频生成中实现了精确的摄像机可控性。
+
+</details>
+
+---
+
+## 9. Velocity and stroke rate reconstruction of canoe sprint team boats based on panned and zoomed video recordings / 基于平移和缩放视频记录的皮划艇短跑队船只的速度和划水率重建
+
+**Date**: 2026-02-26 | **arXiv**: [2602.22941v1](http://arxiv.org/abs/2602.22941v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.22941v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Pacing strategies, defined by velocity and stroke rate profiles, are essential for peak performance in canoe sprint. While GPS is the gold standard for analysis, its limited availability necessitates automated video-based solutions. This paper presents an extended framework for reconstructing performance metrics from panned and zoomed video recordings across all sprint disciplines (K1-K4, C1-C2) and distances (200m-500m). Our method utilizes YOLOv8 for buoy and athlete detection, leveraging the known buoy grid to estimate homographies. We generalized the estimation of the boat position by means of learning a boat-specific athlete offset using a U-net based boat tip calibration. Further, we implement a robust tracking scheme using optical flow to adapt to multi-athlete boat types. Finally, we introduce methods to extract stroke rate information from either pose estimations or the athlete bounding boxes themselves. Evaluation against GPS data from elite competitions yields a velocity RRMSE of 0.020 +- 0.011 (rho = 0.956) and a stroke rate RRMSE of 0.022 +- 0.024 (rho = 0.932). The methods provide coaches with highly accurate, automated feedback without requiring on-boat sensors or manual annotation.
+
+由速度和划水频率曲线定义的配速策略对于独木舟冲刺的最佳表现至关重要。虽然 GPS 是分析的黄金标准，但其有限的可用性需要基于自动化视频的解决方案。本文提出了一个扩展框架，用于从所有冲刺学科（K1-K4、C1-C2）和距离（200m-500m）的平移和缩放视频记录中重建表现指标。我们的方法利用 YOLOv8 进行浮标和运动员检测，利用已知的浮标网格来估计单应性。我们通过使用基于 U 网的船尖校准来学习特定于船的运动员偏移量，从而概括了船位置的估计。此外，我们使用光流实现了强大的跟踪方案，以适应多运动员船只类型。最后，我们介绍了从姿势估计或运动员边界框本身中提取划水频率信息的方法。根据精英比赛的 GPS 数据进行评估，得出速度 RRMSE 为 0.020 ± 0.011 (rho = 0.956)，划水频率 RRMSE 为 0.022 ± 0.024 (rho = 0.932)。这些方法为教练提供高度准确的自动反馈，无需船上传感器或手动注释。
+
+</details>
+
+---
+
+## 10. MSJoE: Jointly Evolving MLLM and Sampler for Efficient Long-Form Video Understanding / MSJoE：联合进化 MLLM 和采样器以实现高效的长格式视频理解
+
+**Date**: 2026-02-26 | **arXiv**: [2602.22932v1](http://arxiv.org/abs/2602.22932v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.22932v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Efficiently understanding long-form videos remains a fundamental challenge for multimodal large language models (MLLMs). In this paper, we present MLLM-Sampler Joint Evolution (MSJoE), a novel framework that jointly evolves the MLLM and a lightweight key-frame sampler for efficient long-form video understanding. MSJoE builds upon a key assumption that only a small subset of key-frames is truly informative for answering each question to a video. Specifically, MSJoE first reasons out several queries, which describe diverse visual perspectives relevant to the question. Then, these queries interact with a frozen CLIP model to produce a query-frame similarity matrix. Finally, a lightweight sampler predicts key-frame sampling weights from this matrix, selecting a compact set of informative frames, which are then fed into the MLLM for answer generation. Both the MLLM and sampler are jointly optimized through reinforcement learning, enabling co-adaptation of query-reasoning, frame-sampling, and key-frame understanding. A new long-video QA dataset containing 2.8K videos with 7K question-answer pairs is collected to support the training process. Extensive experiments on VideoMME, LongVideoBench, LVBench, and MLVU show that MSJoE achieves 8.0\% accuracy gain upon the base MLLM, and 1.1\% higher accuracy than strongest baseline method.
+
+有效理解长视频仍然是多模态大语言模型（MLLM）的基本挑战。在本文中，我们提出了 MLLM-采样器联合进化（MSJoE），这是一种联合进化 MLLM 和轻量级关键帧采样器的新颖框架，用于高效的长格式视频理解。 MSJoE 建立在一个关键假设之上，即只有一小部分关键帧能够真正为回答视频的每个问题提供信息。具体来说，MSJoE 首先推理出几个查询，这些查询描述了与问题相关的不同视觉视角。然后，这些查询与冻结的 CLIP 模型交互以生成查询帧相似度矩阵。最后，轻量级采样器根据该矩阵预测关键帧采样权重，选择一组紧凑的信息帧，然后将其馈送到 MLLM 中以生成答案。 MLLM 和采样器都通过强化学习进行联合优化，从而实现查询推理、帧采样和关键帧理解的共同适应。收集了一个新的长视频 QA 数据集，其中包含 2.8K 视频和 7K 问答对，以支持训练过程。在 VideoMME、LongVideoBench、LVBench 和 MLVU 上进行的大量实验表明，MSJoE 在基础 MLLM 的基础上实现了 8.0% 的精度增益，比最强基线方法的精度提高了 1.1%。
+
+</details>
+
+---
+
+## 11. WaterVideoQA: ASV-Centric Perception and Rule-Compliant Reasoning via Multi-Modal Agents / WaterVideoQA：通过多模态代理进行以 ASV 为中心的感知和符合规则的推理
+
+**Date**: 2026-02-26 | **arXiv**: [2602.22923v1](http://arxiv.org/abs/2602.22923v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.22923v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+While autonomous navigation has achieved remarkable success in passive perception (e.g., object detection and segmentation), it remains fundamentally constrained by a void in knowledge-driven, interactive environmental cognition. In the high-stakes domain of maritime navigation, the ability to bridge the gap between raw visual perception and complex cognitive reasoning is not merely an enhancement but a critical prerequisite for Autonomous Surface Vessels to execute safe and precise maneuvers. To this end, we present WaterVideoQA, the first large-scale, comprehensive Video Question Answering benchmark specifically engineered for all-waterway environments. This benchmark encompasses 3,029 video clips across six distinct waterway categories, integrating multifaceted variables such as volatile lighting and dynamic weather to rigorously stress-test ASV capabilities across a five-tier hierarchical cognitive framework. Furthermore, we introduce NaviMind, a pioneering multi-agent neuro-symbolic system designed for open-ended maritime reasoning. By synergizing Adaptive Semantic Routing, Situation-Aware Hierarchical Reasoning, and Autonomous Self-Reflective Verification, NaviMind transitions ASVs from superficial pattern matching to regulation-compliant, interpretable decision-making. Experimental results demonstrate that our framework significantly transcends existing baselines, establishing a new paradigm for intelligent, trustworthy interaction in dynamic maritime environments.
+
+尽管自主导航在被动感知（例如对象检测和分割）方面取得了显着的成功，但它仍然从根本上受到知识驱动的交互式环境认知空白的限制。在海上导航这个高风险领域，弥合原始视觉感知和复杂认知推理之间差距的能力不仅是一种增强，而且是自主水面舰艇执行安全和精确机动的关键先决条件。为此，我们推出了 WaterVideoQA，这是第一个专门针对全水路环境设计的大规模、全面的视频问答基准测试。该基准测试包含 6 个不同水道类别的 3,029 个视频剪辑，集成了多方面变量（例如不稳定的照明和动态天气），以跨五层分层认知框架严格测试 ASV 功能。此外，我们还介绍了 NaviMind，这是一种开创性的多智能体神经符号系统，专为开放式海事推理而设计。通过协同自适应语义路由、情境感知分层推理和自主自我反思验证，NaviMind 将 ASV 从肤浅的模式匹配转变为符合法规的、可解释的决策。实验结果表明，我们的框架显着超越了现有的基线，为动态海洋环境中的智能、值得信赖的交互建立了新的范式。
+
+</details>
+
+---
+
+## 12. TrajTok: Learning Trajectory Tokens enables better Video Understanding / TrajTok：学习轨迹标记可以更好地理解视频
+
+**Date**: 2026-02-26 | **arXiv**: [2602.22779v1](http://arxiv.org/abs/2602.22779v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.22779v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Tokenization in video models, typically through patchification, generates an excessive and redundant number of tokens. This severely limits video efficiency and scalability. While recent trajectory-based tokenizers offer a promising solution by decoupling video duration from token count, they rely on complex external segmentation and tracking pipelines that are slow and task-agnostic. We propose TrajTok, an end-to-end video tokenizer module that is fully integrated and co-trained with video models for a downstream objective, dynamically adapting its token granularity to semantic complexity, independent of video duration. TrajTok contains a unified segmenter that performs implicit clustering over pixels in both space and time to directly produce object trajectories in a single forward pass. By prioritizing downstream adaptability over pixel-perfect segmentation fidelity, TrajTok is lightweight and efficient, yet empirically improves video understanding performance. With TrajTok, we implement a video CLIP model trained from scratch (TrajViT2). It achieves the best accuracy at scale across both classification and retrieval benchmarks, while maintaining efficiency comparable to the best token-merging methods. TrajTok also proves to be a versatile component beyond its role as a tokenizer. We show that it can be seamlessly integrated as either a probing head for pretrained visual features (TrajAdapter) or an alignment connector in vision-language models (TrajVLM) with especially strong performance in long-video reasoning.
+
+视频模型中的标记化（通常通过补丁化）会生成过多且冗余的标记。这严重限制了视频效率和可扩展性。虽然最近基于轨迹的标记器通过将视频持续时间与标记计数解耦提供了一种有前途的解决方案，但它们依赖于复杂的外部分段和跟踪管道，这些管道速度缓慢且与任务无关。我们提出了 TrajTok，这是一种端到端视频标记器模块，它与下游目标的视频模型完全集成和共同训练，动态地调整其标记粒度以适应语义复杂性，而与视频时长无关。 TrajTok 包含一个统一的分段器，可以在空间和时间上对像素执行隐式聚类，以在单个前向传递中直接生成对象轨迹。通过优先考虑下游适应性而不是像素完美的分割保真度，TrajTok 是轻量级且高效的，但凭经验提高了视频理解性能。借助 TrajTok，我们实现了从头开始训练的视频 CLIP 模型 (TrajViT2)。它在分类和检索基准上实现了大规模的最佳准确度，同时保持了与最佳标记合并方法相当的效率。 TrajTok 还被证明是一个超越其标记器角色的多功能组件。我们证明它可以无缝集成为预训练视觉特征的探测头（TrajAdapter）或视觉语言模型（TrajVLM）中的对齐连接器，在长视频推理中具有特别强大的性能。
+
+</details>
+
+---
+
+## 13. SPATIALALIGN: Aligning Dynamic Spatial Relationships in Video Generation / SPATIALALIGN：在视频生成中对齐动态空间关系
+
+**Date**: 2026-02-26 | **arXiv**: [2602.22745v1](http://arxiv.org/abs/2602.22745v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.22745v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Most text-to-video (T2V) generators prioritize aesthetic quality, but often ignoring the spatial constraints in the generated videos. In this work, we present SPATIALALIGN, a self-improvement framework that enhances T2V models capabilities to depict Dynamic Spatial Relationships (DSR) specified in text prompts. We present a zeroth-order regularized Direct Preference Optimization (DPO) to fine-tune T2V models towards better alignment with DSR. Specifically, we design DSR-SCORE, a geometry-based metric that quantitatively measures the alignment between generated videos and the specified DSRs in prompts, which is a step forward from prior works that rely on VLM for evaluation. We also conduct a dataset of text-video pairs with diverse DSRs to facilitate the study. Extensive experiments demonstrate that our fine-tuned model significantly out performs the baseline in spatial relationships. The code will be released in Link.
+
+大多数文本转视频 (T2V) 生成器优先考虑美观质量，但往往忽略生成视频中的空间限制。在这项工作中，我们提出了 SPATIALALIGN，这是一个自我改进框架，可增强 T2V 模型描述文本提示中指定的动态空间关系 (DSR) 的能力。我们提出了零阶正则化直接偏好优化 (DPO) 来微调 T2V 模型，以更好地与 DSR 保持一致。具体来说，我们设计了 DSR-SCORE，这是一种基于几何的指标，可以定量测量生成的视频与提示中指定的 DSR 之间的对齐情况，这比之前依赖 VLM 进行评估的工作向前迈出了一步。我们还建立了具有不同 DSR 的文本视频对数据集，以促进研究。大量的实验表明，我们的微调模型在空间关系方面的表现显着优于基线。代码将在Link中发布。
+
+</details>
+
+---
+
+## 14. Denoising as Path Planning: Training-Free Acceleration of Diffusion Models with DPCache / 去噪作为路径规划：使用 DPCache 进行扩散模型的免训练加速
+
+**Date**: 2026-02-26 | **arXiv**: [2602.22654v1](http://arxiv.org/abs/2602.22654v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.22654v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/argsss/DPCache.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Diffusion models have demonstrated remarkable success in image and video generation, yet their practical deployment remains hindered by the substantial computational overhead of multi-step iterative sampling. Among acceleration strategies, caching-based methods offer a training-free and effective solution by reusing or predicting features across timesteps. However, existing approaches rely on fixed or locally adaptive schedules without considering the global structure of the denoising trajectory, often leading to error accumulation and visual artifacts. To overcome this limitation, we propose DPCache, a novel training-free acceleration framework that formulates diffusion sampling acceleration as a global path planning problem. DPCache constructs a Path-Aware Cost Tensor from a small calibration set to quantify the path-dependent error of skipping timesteps conditioned on the preceding key timestep. Leveraging this tensor, DPCache employs dynamic programming to select an optimal sequence of key timesteps that minimizes the total path cost while preserving trajectory fidelity. During inference, the model performs full computations only at these key timesteps, while intermediate outputs are efficiently predicted using cached features. Extensive experiments on DiT, FLUX, and HunyuanVideo demonstrate that DPCache achieves strong acceleration with minimal quality loss, outperforming prior acceleration methods by $+$0.031 ImageReward at 4.87$\times$ speedup and even surpassing the full-step baseline by $+$0.028 ImageReward at 3.54$\times$ speedup on FLUX, validating the effectiveness of our path-aware global scheduling framework. Code will be released at https://github.com/argsss/DPCache.
+
+扩散模型在图像和视频生成方面取得了显着的成功，但其实际部署仍然受到多步迭代采样的大量计算开销的阻碍。在加速策略中，基于缓存的方法通过跨时间步重用或预测特征来提供免训练且有效的解决方案。然而，现有方法依赖于固定或局部自适应调度，而不考虑去噪轨迹的全局结构，通常导致误差累积和视觉伪影。为了克服这一限制，我们提出了 DPCache，这是一种新颖的免训练加速框架，它将扩散采样加速表述为全局路径规划问题。 DPCache 从一个小的校准集中构造一个路径感知成本张量，以量化以前面的关键时间步长为条件的跳过时间步长的路径相关误差。利用该张量，DPCache 采用动态编程来选择关键时间步的最佳序列，从而最大限度地降低总路径成本，同时保持轨迹保真度。在推理过程中，模型仅在这些关键时间步执行完整计算，而使用缓存的特征有效地预测中间输出。在 DiT、FLUX 和 HunyuanVideo 上进行的大量实验表明，DPCache 以最小的质量损失实现了强大的加速，在 4.87$\times$ 加速下比之前的加速方法高出 $+$0.031 ImageReward，甚至在 FLUX 上以 3.54$\times$ 加速超过全步基线 $+$0.028 ImageReward，验证了我们的路径感知全局调度框架的有效性。代码将在 https://github.com/argsss/DPCache 发布。
+
+</details>
+
+---
+
+## 15. BetterScene: 3D Scene Synthesis with Representation-Aligned Generative Model / BetterScene：使用表示对齐生成模型进行 3D 场景合成
+
+**Date**: 2026-02-26 | **arXiv**: [2602.22596v1](http://arxiv.org/abs/2602.22596v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.22596v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present BetterScene, an approach to enhance novel view synthesis (NVS) quality for diverse real-world scenes using extremely sparse, unconstrained photos. BetterScene leverages the production-ready Stable Video Diffusion (SVD) model pretrained on billions of frames as a strong backbone, aiming to mitigate artifacts and recover view-consistent details at inference time. Conventional methods have developed similar diffusion-based solutions to address these challenges of novel view synthesis. Despite significant improvements, these methods typically rely on off-the-shelf pretrained diffusion priors and fine-tune only the UNet module while keeping other components frozen, which still leads to inconsistent details and artifacts even when incorporating geometry-aware regularizations like depth or semantic conditions. To address this, we investigate the latent space of the diffusion model and introduce two components: (1) temporal equivariance regularization and (2) vision foundation model-aligned representation, both applied to the variational autoencoder (VAE) module within the SVD pipeline. BetterScene integrates a feed-forward 3D Gaussian Splatting (3DGS) model to render features as inputs for the SVD enhancer and generate continuous, artifact-free, consistent novel views. We evaluate on the challenging DL3DV-10K dataset and demonstrate superior performance compared to state-of-the-art methods.
+
+我们提出了 BetterScene，这是一种使用极其稀疏、无约束的照片来增强各种现实世界场景的新颖视图合成 (NVS) 质量的方法。 BetterScene 利用在数十亿帧上预训练的可投入生产的稳定视频扩散 (SVD) 模型作为强大的骨干，旨在减少伪影并在推理时恢复视图一致的细节。传统方法已经开发了类似的基于扩散的解决方案来解决新颖视图合成的这些挑战。尽管有了显着的改进，这些方法通常依赖于现成的预训练扩散先验，并且仅对 UNet 模块进行微调，同时保持其他组件冻结，即使在合并深度或语义条件等几何感知正则化时，这仍然会导致细节和伪影不一致。为了解决这个问题，我们研究了扩散模型的潜在空间，并引入了两个组件：(1) 时间等方差正则化和 (2) 视觉基础模型对齐表示，两者都应用于 SVD 管道内的变分自动编码器 (VAE) 模块。 BetterScene 集成了前馈 3D 高斯泼溅 (3DGS) 模型，将特征渲染为 SVD 增强器的输入，并生成连续、无伪影、一致的新颖视图。我们对具有挑战性的 DL3DV-10K 数据集进行评估，并展示了与最先进的方法相比的卓越性能。
+
+</details>
+
+---
+
+## 16. Flow Matching is Adaptive to Manifold Structures / 流量匹配适应歧管结构
+
+**Date**: 2026-02-25 | **arXiv**: [2602.22486v1](http://arxiv.org/abs/2602.22486v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.22486v1)
+
+**Categories**: stat.ML, cs.LG, math.ST
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Flow matching has emerged as a simulation-free alternative to diffusion-based generative modeling, producing samples by solving an ODE whose time-dependent velocity field is learned along an interpolation between a simple source distribution (e.g., a standard normal) and a target data distribution. Flow-based methods often exhibit greater training stability and have achieved strong empirical performance in high-dimensional settings where data concentrate near a low-dimensional manifold, such as text-to-image synthesis, video generation, and molecular structure generation. Despite this success, existing theoretical analyses of flow matching assume target distributions with smooth, full-dimensional densities, leaving its effectiveness in manifold-supported settings largely unexplained. To this end, we theoretically analyze flow matching with linear interpolation when the target distribution is supported on a smooth manifold. We establish a non-asymptotic convergence guarantee for the learned velocity field, and then propagate this estimation error through the ODE to obtain statistical consistency of the implicit density estimator induced by the flow-matching objective. The resulting convergence rate is near minimax-optimal, depends only on the intrinsic dimension, and reflects the smoothness of both the manifold and the target distribution. Together, these results provide a principled explanation for how flow matching adapts to intrinsic data geometry and circumvents the curse of dimensionality.
+
+流匹配已成为基于扩散的生成建模的免模拟替代方案，通过求解常微分方程来生成样本，该常微分方程的时间相关速度场是通过简单源分布（例如标准正态）和目标数据分布之间的插值来学习的。基于流的方法通常表现出更高的训练稳定性，并且在数据集中在低维流形附近的高维设置中实现了强大的经验性能，例如文本到图像合成、视频生成和分子结构生成。尽管取得了这一成功，现有的流匹配理论分析假设目标分布具有平滑、全维密度，使其在流形支持的设置中的有效性很大程度上无法解释。为此，我们从理论上分析了当目标分布支持在光滑流形上时使用线性插值的流匹配。我们为学习的速度场建立非渐近收敛保证，然后通过 ODE 传播该估计误差，以获得由流匹配目标引起的隐式密度估计器的统计一致性。由此产生的收敛速度接近极小极大最优，仅取决于内在维度，并且反映了流形和目标分布的平滑度。总之，这些结果为流匹配如何适应内在数据几何并规避维数灾难提供了原则性解释。
+
+</details>
+
+---
+
+## 17. Solaris: Building a Multiplayer Video World Model in Minecraft / Solaris：在 Minecraft 中构建多人视频世界模型
+
+**Date**: 2026-02-25 | **arXiv**: [2602.22208v2](http://arxiv.org/abs/2602.22208v2) | **PDF**: [Link](http://arxiv.org/pdf/2602.22208v2)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Existing action-conditioned video generation models (video world models) are limited to single-agent perspectives, failing to capture the multi-agent interactions of real-world environments. We introduce Solaris, a multiplayer video world model that simulates consistent multi-view observations. To enable this, we develop a multiplayer data system designed for robust, continuous, and automated data collection on video games such as Minecraft. Unlike prior platforms built for single-player settings, our system supports coordinated multi-agent interaction and synchronized videos + actions capture. Using this system, we collect 12.64 million multiplayer frames and propose an evaluation framework for multiplayer movement, memory, grounding, building, and view consistency. We train Solaris using a staged pipeline that progressively transitions from single-player to multiplayer modeling, combining bidirectional, causal, and Self Forcing training. In the final stage, we introduce Checkpointed Self Forcing, a memory-efficient Self Forcing variant that enables a longer-horizon teacher. Results show our architecture and training design outperform existing baselines. Through open-sourcing our system and models, we hope to lay the groundwork for a new generation of multi-agent world models.
+
+现有的动作条件视频生成模型（视频世界模型）仅限于单智能体视角，无法捕捉现实世界环境的多智能体交互。我们介绍 Solaris，这是一种模拟一致的多视图观察的多人视频世界模型。为了实现这一目标，我们开发了一个多人数据系统，专为《我的世界》等视频游戏的稳健、连续和自动化数据收集而设计。与之前为单人游戏设置构建的平台不同，我们的系统支持协调的多代理交互和同步视频+动作捕捉。使用该系统，我们收集了 1264 万个多人游戏帧，并提出了多人运动、记忆、接地、构建和视图一致性的评估框架。我们使用分阶段的管道来训练 Solaris，该管道逐渐从单人模式过渡到多人模式，结合了双向、因果和自我强迫训练。在最后阶段，我们引入了检查点自我强迫，这是一种内存高效的自我强迫变体，可以实现更长视野的教师。结果显示我们的架构和培训设计优于现有基线。通过开源我们的系统和模型，我们希望为新一代多智能体世界模型奠定基础。
+
+</details>
+
+---
+
+## 18. SkyReels-V4: Multi-modal Video-Audio Generation, Inpainting and Editing model / SkyReels-V4：多模式视频音频生成、修复和编辑模型
+
+**Date**: 2026-02-25 | **arXiv**: [2602.21818v2](http://arxiv.org/abs/2602.21818v2) | **PDF**: [Link](http://arxiv.org/pdf/2602.21818v2)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+SkyReels V4 is a unified multi modal video foundation model for joint video audio generation, inpainting, and editing. The model adopts a dual stream Multimodal Diffusion Transformer (MMDiT) architecture, where one branch synthesizes video and the other generates temporally aligned audio, while sharing a powerful text encoder based on the Multimodal Large Language Models (MMLM). SkyReels V4 accepts rich multi modal instructions, including text, images, video clips, masks, and audio references. By combining the MMLMs multi modal instruction following capability with in context learning in the video branch MMDiT, the model can inject fine grained visual guidance under complex conditioning, while the audio branch MMDiT simultaneously leverages audio references to guide sound generation. On the video side, we adopt a channel concatenation formulation that unifies a wide range of inpainting style tasks, such as image to video, video extension, and video editing under a single interface, and naturally extends to vision referenced inpainting and editing via multi modal prompts. SkyReels V4 supports up to 1080p resolution, 32 FPS, and 15 second duration, enabling high fidelity, multi shot, cinema level video generation with synchronized audio. To make such high resolution, long-duration generation computationally feasible, we introduce an efficiency strategy: Joint generation of low resolution full sequences and high-resolution keyframes, followed by dedicated super-resolution and frame interpolation models. To our knowledge, SkyReels V4 is the first video foundation model that simultaneously supports multi-modal input, joint video audio generation, and a unified treatment of generation, inpainting, and editing, while maintaining strong efficiency and quality at cinematic resolutions and durations.
+
+SkyReels V4 是一个统一的多模态视频基础模型，用于联合视频音频生成、修复和编辑。该模型采用双流多模态扩散变压器（MMDiT）架构，其中一个分支合成视频，另一个分支生成时间对齐的音频，同时共享基于多模态大语言模型（MMLM）的强大文本编码器。 SkyReels V4 接受丰富的多模式指令，包括文本、图像、视频剪辑、蒙版和音频参考。通过将 MMLM 多模态指令跟随功能与视频分支 MMDiT 中的上下文学习相结合，该模型可以在复杂条件下注入细粒度的视觉指导，而音频分支 MMDiT 同时利用音频参考来指导声音生成。在视频方面，我们采用通道串联公式，将图像到视频、视频扩展和视频编辑等多种修复风格任务统一在一个界面下，并通过多模式提示自然扩展到视觉参考修复和编辑。 SkyReels V4 支持高达 1080p 的分辨率、32 FPS 和 15 秒的持续时间，可生成具有同步音频的高保真、多镜头、影院级视频。为了使这种高分辨率、长时间的生成在计算上可行，我们引入了一种效率策略：联合生成低分辨率全序列和高分辨率关键帧，然后是专用的超分辨率和帧插值模型。据我们所知，SkyReels V4是第一个同时支持多模态输入、联合视频音频生成以及生成、修复和编辑统一处理的视频基础模型，同时在电影分辨率和时长上保持强大的效率和质量。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-02-26 (11 papers)</b></summary>
 
 # arXiv Video Papers - 2026-02-26
