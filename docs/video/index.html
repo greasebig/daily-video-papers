@@ -46,72 +46,65 @@
     
     /* Navigation Buttons */
     .nav-top {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
       display: flex;
-      justify-content: center;
+      flex-wrap: wrap;
+      justify-content: flex-start;
       gap: 10px;
-      padding: 10px;
-      background: var(--glass);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border);
-      z-index: 1000;
-    }
-    .nav-floating {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      z-index: 1000;
+      padding: 20px 0 0 0;
+      margin-bottom: 8px;
     }
     .nav-btn {
-      padding: 8px 16px;
+      padding: 9px 18px;
       border-radius: 999px;
-      background: var(--glass);
-      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.55);
+      border: 1px solid rgba(12,36,66,0.14);
       color: var(--ink);
       text-decoration: none;
       font-size: 13px;
       font-weight: 600;
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(16px);
-      transition: all 0.2s;
-      display: flex;
+      box-shadow: 0 4px 16px rgba(26,60,90,0.10), inset 0 1px 0 rgba(255,255,255,0.8);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      transition: all 0.22s cubic-bezier(.4,0,.2,1);
+      display: inline-flex;
       align-items: center;
       gap: 6px;
+      white-space: nowrap;
     }
     .nav-btn:hover {
       transform: translateY(-2px);
       background: var(--accent);
       color: white;
       border-color: var(--accent);
+      box-shadow: 0 8px 24px rgba(46,196,182,0.28);
+    }
+    .nav-btn.github {
+      background: rgba(15,20,30,0.72);
+      border-color: rgba(255,255,255,0.18);
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.12);
+    }
+    .nav-btn.github:hover {
+      background: #24292e;
+      border-color: #555;
+      color: #fff;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.32);
     }
   </style>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
-  <div class="nav-top">
-    <a href="javascript:history.back()" class="nav-btn">← Back</a>
-    <a href="../video/index.html" class="nav-btn">Video</a>
-    <a href="../world-model/index.html" class="nav-btn">World Model</a>
-    <a href="../agent/index.html" class="nav-btn">Agent</a>
-  </div>
-  
-  <div class="nav-floating">
-    <a href="javascript:history.back()" class="nav-btn">← Back</a>
-    <a href="../video/index.html" class="nav-btn">Video</a>
-    <a href="../world-model/index.html" class="nav-btn">World Model</a>
-    <a href="../agent/index.html" class="nav-btn">Agent</a>
-  </div>
-
   <div class="orb one"></div>
   <div class="orb two"></div>
   <div class="orb three"></div>
-  <div class="wrap" style="margin-top: 40px;">
+  <div class="wrap">
+    <div class="nav-top">
+      <a href="../index.html" class="nav-btn">🏠 Home</a>
+      <a href="../video/index.html" class="nav-btn">📹 Video</a>
+      <a href="../world-model/index.html" class="nav-btn">🌍 World Model</a>
+      <a href="../agent/index.html" class="nav-btn">🤖 Agent</a>
+      <a href="https://github.com/greasebig/daily-video-papers" target="_blank" class="nav-btn github">⭐ GitHub</a>
+    </div>
     <h1>Video Papers</h1>
     <p>Daily arXiv digests rendered directly on this page.</p>
     <div class="layout">
