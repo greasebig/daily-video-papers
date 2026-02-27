@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-02-27](papers/2026-02-27.md) - 7 papers
 - [2026-02-26](papers/2026-02-26.md) - 3 papers
 - [2026-02-25](papers/2026-02-25.md) - 19 papers
 - [2026-02-24](papers/2026-02-24.md) - 1 papers
@@ -19,6 +20,130 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-02-27 (7 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-02-27
+
+**Paper Count**: 7
+
+---
+
+## 1. Risk-Aware World Model Predictive Control for Generalizable End-to-End Autonomous Driving / 用于通用端到端自动驾驶的风险感知世界模型预测控制
+
+**Date**: 2026-02-26 | **arXiv**: [2602.23259v1](http://arxiv.org/abs/2602.23259v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.23259v1)
+
+**Categories**: cs.CV, cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+With advances in imitation learning (IL) and large-scale driving datasets, end-to-end autonomous driving (E2E-AD) has made great progress recently. Currently, IL-based methods have become a mainstream paradigm: models rely on standard driving behaviors given by experts, and learn to minimize the discrepancy between their actions and expert actions. However, this objective of "only driving like the expert" suffers from limited generalization: when encountering rare or unseen long-tail scenarios outside the distribution of expert demonstrations, models tend to produce unsafe decisions in the absence of prior experience. This raises a fundamental question: Can an E2E-AD system make reliable decisions without any expert action supervision? Motivated by this, we propose a unified framework named Risk-aware World Model Predictive Control (RaWMPC) to address this generalization dilemma through robust control, without reliance on expert demonstrations. Practically, RaWMPC leverages a world model to predict the consequences of multiple candidate actions and selects low-risk actions through explicit risk evaluation. To endow the world model with the ability to predict the outcomes of risky driving behaviors, we design a risk-aware interaction strategy that systematically exposes the world model to hazardous behaviors, making catastrophic outcomes predictable and thus avoidable. Furthermore, to generate low-risk candidate actions at test time, we introduce a self-evaluation distillation method to distill riskavoidance capabilities from the well-trained world model into a generative action proposal network without any expert demonstration. Extensive experiments show that RaWMPC outperforms state-of-the-art methods in both in-distribution and out-of-distribution scenarios, while providing superior decision interpretability.
+
+随着模仿学习（IL）和大规模驾驶数据集的进步，端到端自动驾驶（E2E-AD）最近取得了巨大进展。目前，基于IL的方法已成为主流范式：模型依赖于专家给出的标准驾驶行为，并学习最小化其行为与专家行为之间的差异。然而，“只像专家一样驾驶”这一目标的泛化能力有限：当遇到专家演示分布之外的罕见或未见的长尾场景时，模型往往会在缺乏先验经验的情况下做出不安全的决策。这就提出了一个基本问题：E2E-AD 系统能否在没有任何专家行动监督的情况下做出可靠的决策？受此启发，我们提出了一个名为风险感知世界模型预测控制（RaWMPC）的统一框架，通过稳健控制来解决这种泛化困境，而不依赖于专家演示。实际上，RaWMPC 利用世界模型来预测多个候选行动的后果，并通过明确的风险评估选择低风险行动。为了赋予世界模型预测危险驾驶行为结果的能力，我们设计了一种风险感知交互策略，系统地将世界模型暴露于危险行为，使灾难性结果可预测，从而可以避免。此外，为了在测试时生成低风险的候选动作，我们引入了一种自我评估蒸馏方法，将风险规避能力从训练有素的世界模型中提取到生成动作提案网络中，而无需任何专家演示。大量实验表明，RaWMPC 在分布内和分布外场景中均优于最先进的方法，同时提供卓越的决策可解释性。
+
+</details>
+
+---
+
+## 2. MetaOthello: A Controlled Study of Multiple World Models in Transformers / MetaOthello：变形金刚中多个世界模型的对照研究
+
+**Date**: 2026-02-26 | **arXiv**: [2602.23164v1](http://arxiv.org/abs/2602.23164v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.23164v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Foundation models must handle multiple generative processes, yet mechanistic interpretability largely studies capabilities in isolation; it remains unclear how a single transformer organizes multiple, potentially conflicting "world models". Previous experiments on Othello playing neural-networks test world-model learning but focus on a single game with a single set of rules. We introduce MetaOthello, a controlled suite of Othello variants with shared syntax but different rules or tokenizations, and train small GPTs on mixed-variant data to study how multiple world models are organized in a shared representation space. We find that transformers trained on mixed-game data do not partition their capacity into isolated sub-models; instead, they converge on a mostly shared board-state representation that transfers causally across variants. Linear probes trained on one variant can intervene on another's internal state with effectiveness approaching that of matched probes. For isomorphic games with token remapping, representations are equivalent up to a single orthogonal rotation that generalizes across layers. When rules partially overlap, early layers maintain game-agnostic representations while a middle layer identifies game identity, and later layers specialize. MetaOthello offers a path toward understanding not just whether transformers learn world models, but how they organize many at once.
+
+基础模型必须处理多个生成过程，但机械可解释性主要研究孤立的能力；目前尚不清楚单个变压器如何组织多个可能相互冲突的“世界模型”。之前关于黑白棋玩神经网络的实验测试了世界模型学习，但重点关注具有一组规则的单个游戏。我们引入了 MetaOthello，这是一套受控的 Othello 变体套件，具有共享语法但不同的规则或标记化，并在混合变体数据上训练小型 GPT，以研究如何在共享表示空间中组织多个世界模型。我们发现，在混合游戏数据上训练的 Transformer 不会将其容量划分为孤立的子模型；相反，它们集中在一个大部分共享的董事会状态表示上，该表示在变体之间因果转移。在一种变体上训练的线性探针可以干预另一种变体的内部状态，其有效性接近匹配探针。对于具有令牌重新映射的同构游戏，表示相当于跨层泛化的单个正交旋转。当规则部分重叠时，早期层保持与游戏无关的表示，而中间层识别游戏身份，而后面的层则专门化。 MetaOthello 不仅提供了一条了解变形金刚是否学习世界模型的途径，还提供了一条了解它们如何同时组织多个世界模型的途径。
+
+</details>
+
+---
+
+## 3. The Trinity of Consistency as a Defining Principle for General World Models / 一致性的三位一体作为一般世界模型的定义原则
+
+**Date**: 2026-02-26 | **arXiv**: [2602.23152v1](http://arxiv.org/abs/2602.23152v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.23152v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The construction of World Models capable of learning, simulating, and reasoning about objective physical laws constitutes a foundational challenge in the pursuit of Artificial General Intelligence. Recent advancements represented by video generation models like Sora have demonstrated the potential of data-driven scaling laws to approximate physical dynamics, while the emerging Unified Multimodal Model (UMM) offers a promising architectural paradigm for integrating perception, language, and reasoning. Despite these advances, the field still lacks a principled theoretical framework that defines the essential properties requisite for a General World Model. In this paper, we propose that a World Model must be grounded in the Trinity of Consistency: Modal Consistency as the semantic interface, Spatial Consistency as the geometric basis, and Temporal Consistency as the causal engine. Through this tripartite lens, we systematically review the evolution of multimodal learning, revealing a trajectory from loosely coupled specialized modules toward unified architectures that enable the synergistic emergence of internal world simulators. To complement this conceptual framework, we introduce CoW-Bench, a benchmark centered on multi-frame reasoning and generation scenarios. CoW-Bench evaluates both video generation models and UMMs under a unified evaluation protocol. Our work establishes a principled pathway toward general world models, clarifying both the limitations of current systems and the architectural requirements for future progress.
+
+构建能够学习、模拟和推理客观物理定律的世界模型是追求通用人工智能的基本挑战。以 Sora 等视频生成模型为代表的最新进展证明了数据驱动的缩放定律在近似物理动力学方面的潜力，而新兴的统一多模态模型 (UMM) 则为集成感知、语言和推理提供了一种有前途的架构范例。尽管取得了这些进展，该领域仍然缺乏一个原则性的理论框架来定义通用世界模型所需的基本属性。在本文中，我们提出世界模型必须建立在一致性三位一体的基础上：模态一致性作为语义接口，空间一致性作为几何基础，时间一致性作为因果引擎。通过这个三方视角，我们系统地回顾了多模态学习的演变，揭示了从松散耦合的专业模块到统一架构的轨迹，从而实现内部世界模拟器的协同出现。为了补充这个概念框架，我们引入了 CoW-Bench，这是一个以多帧推理和生成场景为中心的基准测试。 CoW-Bench 在统一的评估协议下评估视频生成模型和 UMM。我们的工作建立了通向通用世界模型的原则性途径，阐明了当前系统的局限性和未来进步的架构要求。
+
+</details>
+
+---
+
+## 4. On Sample-Efficient Generalized Planning via Learned Transition Models / 通过学习转移模型进行样本有效的广义规划
+
+**Date**: 2026-02-26 | **arXiv**: [2602.23148v1](http://arxiv.org/abs/2602.23148v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.23148v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Generalized planning studies the construction of solution strategies that generalize across families of planning problems sharing a common domain model, formally defined by a transition function $γ: S \times A \rightarrow S$. Classical approaches achieve such generalization through symbolic abstractions and explicit reasoning over $γ$. In contrast, recent Transformer-based planners, such as PlanGPT and Plansformer, largely cast generalized planning as direct action-sequence prediction, bypassing explicit transition modeling. While effective on in-distribution instances, these approaches typically require large datasets and model sizes, and often suffer from state drift in long-horizon settings due to the absence of explicit world-state evolution. In this work, we formulate generalized planning as a transition-model learning problem, in which a neural model explicitly approximates the successor-state function $\hatγ \approx γ$ and generates plans by rolling out symbolic state trajectories. Instead of predicting actions directly, the model autoregressively predicts intermediate world states, thereby learning the domain dynamics as an implicit world model. To study size-invariant generalization and sample efficiency, we systematically evaluate multiple state representations and neural architectures, including relational graph encodings. Our results show that learning explicit transition models yields higher out-of-distribution satisficing-plan success than direct action-sequence prediction in multiple domains, while achieving these gains with significantly fewer training instances and smaller models. This is an extended version of a short paper accepted at ICAPS 2026 under the same title.
+
+广义规划研究解决方案策略的构建，该解决方案策略泛化于共享公共域模型的规划问题系列，由转换函数 $γ 正式定义：S \times A \rightarrow S$。经典方法通过符号抽象和对 $γ$ 的显式推理来实现这种泛化。相比之下，最近基于 Transformer 的规划器（例如 PlanGPT 和 Plansformer）在很大程度上将广义规划视为直接动作序列预测，绕过了显式转换建模。虽然对分布内实例有效，但这些方法通常需要大型数据集和模型大小，并且由于缺乏明确的世界状态演化，常常会在长范围设置中遭受状态漂移。在这项工作中，我们将广义规划制定为转换模型学习问题，其中神经模型显式逼近后继状态函数 $\hatγ \approx γ$ 并通过推出符号状态轨迹来生成计划。该模型不是直接预测动作，而是自回归预测中间世界状态，从而将域动态学习为隐式世界模型。为了研究大小不变的泛化和样本效率，我们系统地评估了多种状态表示和神经架构，包括关系图编码。我们的结果表明，在多个领域中，学习显式转换模型比直接行动序列预测能产生更高的分布外满足计划成功率，同时通过显着更少的训练实例和更小的模型来实现这些收益。这是 ICAPS 2026 上接受的同名短论文的扩展版本。
+
+</details>
+
+---
+
+## 5. GeoWorld: Geometric World Models / GeoWorld：几何世界模型
+
+**Date**: 2026-02-26 | **arXiv**: [2602.23058v1](http://arxiv.org/abs/2602.23058v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.23058v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Energy-based predictive world models provide a powerful approach for multi-step visual planning by reasoning over latent energy landscapes rather than generating pixels. However, existing approaches face two major challenges: (i) their latent representations are typically learned in Euclidean space, neglecting the underlying geometric and hierarchical structure among states, and (ii) they struggle with long-horizon prediction, which leads to rapid degradation across extended rollouts. To address these challenges, we introduce GeoWorld, a geometric world model that preserves geometric structure and hierarchical relations through a Hyperbolic JEPA, which maps latent representations from Euclidean space onto hyperbolic manifolds. We further introduce Geometric Reinforcement Learning for energy-based optimization, enabling stable multi-step planning in hyperbolic latent space. Extensive experiments on CrossTask and COIN demonstrate around 3% SR improvement in 3-step planning and 2% SR improvement in 4-step planning compared to the state-of-the-art V-JEPA 2. Project website: https://steve-zeyu-zhang.github.io/GeoWorld.
+
+基于能量的预测世界模型通过推理潜在的能量景观而不是生成像素，为多步骤视觉规划提供了一种强大的方法。然而，现有的方法面临两个主要挑战：（i）它们的潜在表示通常是在欧几里得空间中学习的，忽略了状态之间潜在的几何和层次结构；（ii）它们难以进行长期预测，这导致在扩展部署过程中快速退化。为了解决这些挑战，我们引入了 GeoWorld，这是一种几何世界模型，通过双曲 JEPA 保留几何结构和层次关系，它将欧几里得空间的潜在表示映射到双曲流形。我们进一步引入几何强化学习进行基于能量的优化，从而在双曲潜在空间中实现稳定的多步规划。 CrossTask 和 COIN 上的大量实验表明，与最先进的 V-JEPA 2 相比，3 步规划的 SR 提高了约 3%，4 步规划的 SR 提高了 2%。 项目网站：https://steve-zeyu-zhang.github.io/GeoWorld。
+
+</details>
+
+---
+
+## 6. Imagination Helps Visual Reasoning, But Not Yet in Latent Space / 想象力有助于视觉推理，但尚未在潜在空间中发挥作用
+
+**Date**: 2026-02-26 | **arXiv**: [2602.22766v1](http://arxiv.org/abs/2602.22766v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.22766v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Latent visual reasoning aims to mimic human's imagination process by meditating through hidden states of Multimodal Large Language Models. While recognized as a promising paradigm for visual reasoning, the underlying mechanisms driving its effectiveness remain unclear. Motivated to demystify the true source of its efficacy, we investigate the validity of latent reasoning using Causal Mediation Analysis. We model the process as a causal chain: the input as the treatment, the latent tokens as the mediator, and the final answer as the outcome. Our findings uncover two critical disconnections: (a) Input-Latent Disconnect: dramatic perturbations on the input result in negligible changes to the latent tokens, suggesting that latent tokens do not effectively attend to the input sequence. (b) Latent-Answer Disconnect: perturbations on the latent tokens yield minimal impact on the final answer, indicating the limited causal effect latent tokens imposing on the outcome. Furthermore, extensive probing analysis reveals that latent tokens encode limited visual information and exhibit high similarity. Consequently, we challenge the necessity of latent reasoning and propose a straightforward alternative named CapImagine, which teaches the model to explicitly imagine using text. Experiments on vision-centric benchmarks show that CapImagine significantly outperforms complex latent-space baselines, highlighting the superior potential of visual reasoning through explicit imagination.
+
+潜在视觉推理旨在通过多模态大语言模型的隐藏状态进行冥想来模仿人类的想象力过程。虽然被认为是视觉推理的一种有前途的范例，但驱动其有效性的潜在机制仍不清楚。为了揭开其功效的真正来源的神秘面纱，我们使用因果中介分析研究了潜在推理的有效性。我们将过程建模为因果链：输入作为处理，潜在标记作为中介，最终答案作为结果。我们的发现揭示了两个关键的断开：（a）输入-潜在断开：输入的剧烈扰动导致潜在标记的变化可以忽略不计，这表明潜在标记不能有效地关注输入序列。 (b) 潜在答案断开：对潜在标记的扰动对最终答案产生的影响最小，表明潜在标记对结果的因果影响有限。此外，广泛的探测分析表明，潜在标记编码有限的视觉信息并表现出高度相似性。因此，我们挑战潜在推理的必要性，并提出了一个名为 CapImagine 的简单替代方案，它教会模型使用文本明确地想象。以视觉为中心的基准测试表明，CapImagine 的性能显着优于复杂的潜在空间基线，凸显了通过显式想象进行视觉推理的卓越潜力。
+
+</details>
+
+---
+
+## 7. CWM: Contrastive World Models for Action Feasibility Learning in Embodied Agent Pipelines / CWM：具体代理管道中行动可行性学习的对比世界模型
+
+**Date**: 2026-02-25 | **arXiv**: [2602.22452v1](http://arxiv.org/abs/2602.22452v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.22452v1)
+
+**Categories**: cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+A reliable action feasibility scorer is a critical bottleneck in embodied agent pipelines: before any planning or reasoning occurs, the agent must identify which candidate actions are physically executable in the current state. Existing approaches use supervised fine-tuning (SFT) to train action scorers, but SFT treats each candidate independently and does not explicitly teach the model to discriminate between actions that are physically correct and those that are subtly wrong. We propose the Contrastive World Model (CWM), which fine-tunes a large language model (LLM) as an action scorer using an InfoNCE contrastive objective with hard-mined negative examples. The key idea is to push valid actions away from invalid ones in scoring space, with special emphasis on hard negatives: semantically similar but physically incompatible candidates. We evaluate CWM on the ScienceWorld benchmark through two studies. First, an intrinsic affordance evaluation on 605 hard-negative test pairs shows that CWM outperforms SFT by +6.76 percentage points on Precision@1 for minimal-edit negatives -- cases where a single word changes the physical outcome -- and achieves a higher AUC-ROC (0.929 vs. 0.906). Second, a live filter characterisation study measures how well CWM ranks gold-path actions against all valid environment actions during task execution. Under out-of-distribution stress conditions, CWM maintains a significantly better safety margin (-2.39) than SFT (-3.96), indicating that the gold action is ranked closer to the top. These results support the hypothesis that contrastive training induces representations that capture physical feasibility more faithfully than SFT alone.
+
+可靠的行动可行性评分器是具体代理管道中的关键瓶颈：在进行任何计划或推理之前，代理必须确定哪些候选行动在当前状态下可以物理执行。现有方法使用监督微调（SFT）来训练动作评分器，但 SFT 独立对待每个候选者，并且没有明确教导模型区分物理上正确的动作和细微错误的动作。我们提出了对比世界模型（CWM），它使用 InfoNCE 对比目标和精心挖掘的负面例子来微调大型语言模型（LLM）作为动作评分器。关键思想是在评分空间中将有效动作从无效动作中剔除，特别强调硬否定：语义上相似但物理上不兼容的候选者。我们通过两项研究在 ScienceWorld 基准上评估 CWM。首先，对 605 个硬阴性测试对进行的内在可供性评估表明，对于最小编辑阴性（单个单词改变物理结果的情况），CWM 在 Precision@1 上的表现优于 SFT +6.76 个百分点，并实现了更高的 AUC-ROC（0.929 比 0.906）。其次，实时过滤器特征研究衡量 CWM 在任务执行期间根据所有有效环境操作对黄金路径操作进行排名的情况。在分布外压力条件下，CWM 保持了明显优于 SFT（-3.96）的安全裕度（-2.39），表明黄金行动排名更接近顶部。这些结果支持这样的假设：对比训练比单独的 SFT 更能忠实地捕捉物理可行性。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-02-26 (3 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-02-26
