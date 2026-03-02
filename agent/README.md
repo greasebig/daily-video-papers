@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-03-02](papers/2026-03-02.md) - 6 papers
 - [2026-02-28](papers/2026-02-28.md) - 2 papers
 - [2026-02-27](papers/2026-02-27.md) - 31 papers
 - [2026-02-26](papers/2026-02-26.md) - 3 papers
@@ -22,6 +23,114 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-03-02 (6 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-03-02
+
+**Paper Count**: 6
+
+---
+
+## 1. Agentic AI-RAN: Enabling Intent-Driven, Explainable and Self-Evolving Open RAN Intelligence / Agentic AI-RAN：实现意图驱动、可解释和自我进化的开放 RAN 智能
+
+**Date**: 2026-02-27 | **arXiv**: [2602.24115v1](http://arxiv.org/abs/2602.24115v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.24115v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Open RAN (O-RAN) exposes rich control and telemetry interfaces across the Non-RT RIC, Near-RT RIC, and distributed units, but also makes it harder to operate multi-tenant, multi-objective RANs in a safe and auditable manner. In parallel, agentic AI systems with explicit planning, tool use, memory, and self-management offer a natural way to structure long-lived control loops. This article surveys how such agentic controllers can be brought into O-RAN: we review the O-RAN architecture, contrast agentic controllers with conventional ML/RL xApps, and organise the task landscape around three clusters: network slice life-cycle, radio resource management (RRM) closed loops, and cross-cutting security, privacy, and compliance. We then introduce a small set of agentic primitives (Plan-Act-Observe-Reflect, skills as tool use, memory and evidence, and self-management gates) and show, in a multi-cell O-RAN simulation, how they improve slice life-cycle and RRM performance compared to conventional baselines and ablations that remove individual primitives. Security, privacy, and compliance are discussed as architectural constraints and open challenges for standards-aligned deployments. This framework achieves an average 8.83\% reduction in resource usage across three classic network slices.
+
+开放 RAN (O-RAN) 在非 RT RIC、近 RT RIC 和分布式单元中公开了丰富的控制和遥测接口，但也使得以安全和可审核的方式操作多租户、多目标 RAN 变得更加困难。与此同时，具有明确规划、工具使用、记忆和自我管理的代理人工智能系统提供了一种自然的方式来构建长期控制循环。本文调查了如何将此类代理控制器引入 O-RAN：我们回顾了 O-RAN 架构，将代理控制器与传统的 ML/RL xApp 进行对比，并围绕三个集群组织任务环境：网络切片生命周期、无线电资源管理 (RRM) 闭环以及跨领域安全、隐私和合规性。然后，我们介绍一小组代理原语（计划-行动-观察-反思、工具使用技能、记忆和证据以及自我管理门），并在多小区 O-RAN 模拟中展示它们如何与传统基线和删除单个原语的消融相比改善切片生命周期和 RRM 性能。安全性、隐私性和合规性被视为架构限制和符合标准的部署的开放挑战。该框架在三个经典网络切片中平均减少了 8.83% 的资源使用量。
+
+</details>
+
+---
+
+## 2. A Novel Hierarchical Multi-Agent System for Payments Using LLMs / 使用法学硕士的新型分层多代理支付系统
+
+**Date**: 2026-02-27 | **arXiv**: [2602.24068v1](http://arxiv.org/abs/2602.24068v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.24068v1)
+
+**Categories**: cs.MA, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language model (LLM) agents, such as OpenAI's Operator and Claude's Computer Use, can automate workflows but unable to handle payment tasks. Existing agentic solutions have gained significant attention; however, even the latest approaches face challenges in implementing end-to-end agentic payment workflows. To address this gap, this research proposes the Hierarchical Multi-Agent System for Payments (HMASP), which provides an end-to-end agentic method for completing payment workflows. The proposed HMASP leverages either open-weight or proprietary LLMs and employs a modular architecture consisting of the Conversational Payment Agent (CPA - first agent level), Supervisor agents (second agent level), Routing agents (third agent level), and the Process summary agent (fourth agent level). The CPA serves as the central entry point, handling all external requests and coordinating subsequent tasks across hierarchical levels. HMASP incorporates architectural patterns that enable modular task execution across agents and levels for payment operations, including shared state variables, decoupled message states, and structured handoff protocols that facilitate coordination across agents and workflows. Experimental results demonstrate the feasibility of the proposed HMASP. To our knowledge, HMASP is the first LLM-based multi-agent system to implement end-to-end agentic payment workflows. This work lays a foundation for extending agentic capabilities into the payment domain.
+
+大型语言模型（LLM）代理，例如 OpenAI 的 Operator 和 Claude 的 Computer Use，可以实现工作流程自动化，但无法处理支付任务。现有的代理解决方案已引起广泛关注；然而，即使是最新的方法在实施端到端代理支付工作流程方面也面临挑战。为了解决这一差距，本研究提出了分层多代理支付系统（HMASP），它提供了一种用于完成支付工作流程的端到端代理方法。拟议的 HMASP 利用开放式或专有的 LLM，并采用由会话支付代理（CPA - 第一代理级别）、主管代理（第二代理级别）、路由代理（第三代理级别）和流程摘要代理（第四代理级别）组成的模块化架构。 CPA 充当中央入口点，处理所有外部请求并协调跨层级的后续任务。 HMASP 结合了架构模式，支持跨代理和支付操作级别的模块化任务执行，包括共享状态变量、解耦消息状态以及促进跨代理和工作流程协调的结构化切换协议。实验结果证明了所提出的 HMASP 的可行性。据我们所知，HMASP是第一个基于LLM的多代理系统，用于实现端到端代理支付工作流程。这项工作为将代理能力扩展到支付领域奠定了基础。
+
+</details>
+
+---
+
+## 3. Jailbreak Foundry: From Papers to Runnable Attacks for Reproducible Benchmarking / 越狱铸造厂：从论文到可运行的攻击以实现可重复的基准测试
+
+**Date**: 2026-02-27 | **arXiv**: [2602.24009v1](http://arxiv.org/abs/2602.24009v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.24009v1)
+
+**Categories**: cs.CR, cs.AI, cs.CL, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Jailbreak techniques for large language models (LLMs) evolve faster than benchmarks, making robustness estimates stale and difficult to compare across papers due to drift in datasets, harnesses, and judging protocols. We introduce JAILBREAK FOUNDRY (JBF), a system that addresses this gap via a multi-agent workflow to translate jailbreak papers into executable modules for immediate evaluation within a unified harness. JBF features three core components: (i) JBF-LIB for shared contracts and reusable utilities; (ii) JBF-FORGE for the multi-agent paper-to-module translation; and (iii) JBF-EVAL for standardizing evaluations. Across 30 reproduced attacks, JBF achieves high fidelity with a mean (reproduced-reported) attack success rate (ASR) deviation of +0.26 percentage points. By leveraging shared infrastructure, JBF reduces attack-specific implementation code by nearly half relative to original repositories and achieves an 82.5% mean reused-code ratio. This system enables a standardized AdvBench evaluation of all 30 attacks across 10 victim models using a consistent GPT-4o judge. By automating both attack integration and standardized evaluation, JBF offers a scalable solution for creating living benchmarks that keep pace with the rapidly shifting security landscape.
+
+大型语言模型 (LLM) 的越狱技术的发展速度快于基准，使得鲁棒性估计变得过时，并且由于数据集、工具和评审协议的偏差而难以在论文之间进行比较。我们推出了 JAILBREAK FOUNDRY (JBF)，该系统通过多代理工作流程来解决这一差距，将越狱文件转换为可执行模块，以便在统一的工具中立即进行评估。 JBF 具有三个核心组件：(i) 用于共享合约和可重用实用程序的 JBF-LIB； (ii) JBF-FORGE 用于多智能体纸张到模块的翻译； (iii) JBF-EVAL 用于标准化评估。在 30 次重复攻击中，JBF 实现了高保真度，平均（重复报告）攻击成功率 (ASR) 偏差为 +0.26 个百分点。通过利用共享基础设施，JBF 相对于原始存储库将针对特定攻击的实现代码减少了近一半，并实现了 82.5% 的平均代码重用率。该系统使用一致的 GPT-4o 判断，可以对 10 个受害者模型的所有 30 种攻击进行标准化 AdvBench 评估。通过自动化攻击集成和标准化评估，JBF 提供了一个可扩展的解决方案，用于创建与快速变化的安全环境保持同步的实时基准。
+
+</details>
+
+---
+
+## 4. HotelQuEST: Balancing Quality and Efficiency in Agentic Search / HotelQuEST：平衡代理搜索的质量和效率
+
+**Date**: 2026-02-27 | **arXiv**: [2602.23949v1](http://arxiv.org/abs/2602.23949v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.23949v1)
+
+**Categories**: cs.IR, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Agentic search has emerged as a promising paradigm for adaptive retrieval systems powered by large language models (LLMs). However, existing benchmarks primarily focus on quality, overlooking efficiency factors that are critical for real-world deployment. Moreover, real-world user queries often contain underspecified preferences, a challenge that remains largely underexplored in current agentic search evaluation. As a result, many agentic search systems remain impractical despite their impressive performance. In this work, we introduce HotelQuEST, a benchmark comprising 214 hotel search queries that range from simple factual requests to complex queries, enabling evaluation across the full spectrum of query difficulty. We further address the challenge of evaluating underspecified user preferences by collecting clarifications that make annotators' implicit preferences explicit for evaluation. We find that LLM-based agents achieve higher accuracy than traditional retrievers, but at substantially higher costs due to redundant tool calls and suboptimal routing that fails to match query complexity to model capability. Our analysis exposes inefficiencies in current agentic search systems and demonstrates substantial potential for cost-aware optimization.
+
+代理搜索已成为由大语言模型（LLM）支持的自适应检索系统的一个有前途的范例。然而，现有的基准主要关注质量，忽视了对实际部署至关重要的效率因素。此外，现实世界的用户查询通常包含未指定的偏好，这是当前代理搜索评估中很大程度上仍未得到充分探索的挑战。因此，许多代理搜索系统尽管性能令人印象深刻，但仍然不切实际。在这项工作中，我们引入了 HotelQuEST，这是一个包含 214 个酒店搜索查询的基准，范围从简单的事实请求到复杂的查询，可以对查询难度的各个方面进行评估。我们通过收集澄清信息，使注释者的隐式偏好明确以供评估，进一步解决评估未指定的用户偏好的挑战。我们发现，基于 LLM 的代理比传统检索器实现了更高的准确性，但由于冗余工具调用和未能将查询复杂性与模型功能相匹配的次优路由，成本显着更高。我们的分析揭示了当前代理搜索系统的低效率，并展示了成本感知优化的巨大潜力。
+
+</details>
+
+---
+
+## 5. Experience-Guided Self-Adaptive Cascaded Agents for Breast Cancer Screening and Diagnosis with Reduced Biopsy Referrals / 经验引导的自适应级联药剂用于乳腺癌筛查和诊断，减少活检转诊
+
+**Date**: 2026-02-27 | **arXiv**: [2602.23899v1](http://arxiv.org/abs/2602.23899v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.23899v1)
+
+**Categories**: cs.CV, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We propose an experience-guided cascaded multi-agent framework for Breast Ultrasound Screening and Diagnosis, called BUSD-Agent, that aims to reduce diagnostic escalation and unnecessary biopsy referrals. Our framework models screening and diagnosis as a two-stage, selective decision-making process. A lightweight `screening clinic' agent, restricted to classification models as tools, selectively filters out benign and normal cases from further diagnostic escalation when malignancy risk and uncertainty are estimated as low. Cases that have higher risks are escalated to the `diagnostic clinic' agent, which integrates richer perception and radiological description tools to make a secondary decision on biopsy referral. To improve agent performance, past records of pathology-confirmed outcomes along with image embeddings, model predictions, and historical agent actions are stored in a memory bank as structured decision trajectories. For each new case, BUSD-Agent retrieves similar past cases based on image, model response and confidence similarity to condition the agent's current decision policy. This enables retrieval-conditioned in-context adaptation that dynamically adjusts model trust and escalation thresholds from prior experiences without parameter updates. Evaluation across 10 breast ultrasound datasets shows that the proposed experience-guided workflow reduces diagnostic escalation in BUSD-Agent from 84.95% to 58.72% and overall biopsy referrals from 59.50% to 37.08%, compared to the same architecture without trajectory conditioning, while improving average screening specificity by 68.48% and diagnostic specificity by 6.33%.
+
+我们提出了一种用于乳腺超声筛查和诊断的经验引导级联多代理框架，称为 BUSD-Agent，旨在减少诊断升级和不必要的活检转诊。我们的框架将筛查和诊断建模为一个两阶段的选择性决策过程。一种轻量级的“筛查诊所”代理，仅限于分类模型作为工具，当恶性肿瘤风险和不确定性估计较低时，有选择地从进一步的诊断升级中过滤掉良性和正常病例。风险较高的病例会升级到“诊断诊所”代理，该代理集成了更丰富的感知和放射学描述工具，以做出活检转诊的二次决定。为了提高智能体的性能，过去的病理学确认结果记录以及图像嵌入、模型预测和历史智能体动作都作为结构化决策轨迹存储在内存库中。对于每个新案例，BUSD-Agent 根据图像、模型响应和置信度相似性检索过去的类似案例，以调节代理当前的决策策略。这使得检索条件的上下文适应能够根据先前的经验动态调整模型信任和升级阈值，而无需更新参数。对 10 个乳腺超声数据集的评估表明，与没有轨迹调节的相同架构相比，所提出的经验引导工作流程将 BUSD-Agent 中的诊断升级从 84.95% 降低到 58.72%，将总体活检转诊率从 59.50% 降低到 37.08%，同时将平均筛查特异性提高 68.48%，将诊断特异性提高 6.33%。
+
+</details>
+
+---
+
+## 6. TSC: Topology-Conditioned Stackelberg Coordination for Multi-Agent Reinforcement Learning in Interactive Driving / TSC：交互式驾驶中多智能体强化学习的拓扑条件 Stackelberg 协调
+
+**Date**: 2026-02-27 | **arXiv**: [2602.23896v1](http://arxiv.org/abs/2602.23896v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.23896v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Safe and efficient autonomous driving in dense traffic is fundamentally a decentralized multi-agent coordination problem, where interactions at conflict points such as merging and weaving must be resolved reliably under partial observability. With only local and incomplete cues, interaction patterns can change rapidly, often causing unstable behaviors such as oscillatory yielding or unsafe commitments. Existing multi-agent reinforcement learning (MARL) approaches either adopt synchronous decision-making, which exacerbate non-stationarity, or depend on centralized sequencing mechanisms that scale poorly as traffic density increases. To address these limitations, we propose Topology-conditioned Stackelberg Coordination (TSC), a learning framework for decentralized interactive driving under communication-free execution, which extracts a time-varying directed priority graph from braid-inspired weaving relations between trajectories, thereby defining local leader-follower dependencies without constructing a global order of play. Conditioned on this graph, TSC endogenously factorizes dense interactions into graph-local Stackelberg subgames and, under centralized training and decentralized execution (CTDE), learns a sequential coordination policy that anticipates leaders via action prediction and trains followers through action-conditioned value learning to approximate local best responses, improving training stability and safety in dense traffic. Experiments across four dense traffic scenarios show that TSC achieves superior performance over representative MARL baselines across key metrics, most notably reducing collisions while maintaining competitive traffic efficiency and control smoothness.
+
+密集交通中安全高效的自动驾驶从根本上来说是一个去中心化的多智能体协调问题，其中合并、编织等冲突点的交互必须在部分可观测性下可靠地解决。由于只有局部和不完整的线索，交互模式可能会迅速变化，通常会导致不稳定的行为，例如振荡屈服或不安全的承诺。现有的多智能体强化学习（MARL）方法要么采用同步决策，这加剧了非平稳性，要么依赖集中式排序机制，随着流量密度的增加，该机制扩展性较差。为了解决这些限制，我们提出了拓扑条件Stackelberg协调（TSC），这是一种在无通信执行下的去中心化交互式驱动的学习框架，它从轨迹之间受辫子启发的编织关系中提取时变有向优先级图，从而定义本地领导者-跟随者依赖关系，而无需构建全局游戏顺序。以此图为条件，TSC 将密集交互内生地分解为图本地 Stackelberg 子博弈，并在集中训练和分散执行 (CTDE) 下学习顺序协调策略，通过行动预测预测领导者，并通过行动条件价值学习训练追随者以近似局部最佳响应，从而提高密集交通中的训练稳定性和安全性。四种密集交通场景的实验表明，TSC 在关键指标上实现了优于代表性 MARL 基线的性能，最显着的是减少碰撞，同时保持有竞争力的交通效率和控制平滑性。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-02-28 (2 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-02-28
