@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-03-02](papers/2026-03-02.md) - 6 papers
 - [2026-02-27](papers/2026-02-27.md) - 18 papers
 - [2026-02-26](papers/2026-02-26.md) - 11 papers
 - [2026-02-25](papers/2026-02-25.md) - 12 papers
@@ -28,6 +29,116 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-03-02 (6 papers)</b></summary>
+
+# arXiv Video Papers - 2026-03-02
+
+**Paper Count**: 6
+
+---
+
+## 1. SenCache: Accelerating Diffusion Model Inference via Sensitivity-Aware Caching / SenCache：通过敏感度感知缓存加速扩散模型推理
+
+**Date**: 2026-02-27 | **arXiv**: [2602.24208v1](http://arxiv.org/abs/2602.24208v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.24208v1)
+
+**Categories**: cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Diffusion models achieve state-of-the-art video generation quality, but their inference remains expensive due to the large number of sequential denoising steps. This has motivated a growing line of research on accelerating diffusion inference. Among training-free acceleration methods, caching reduces computation by reusing previously computed model outputs across timesteps. Existing caching methods rely on heuristic criteria to choose cache/reuse timesteps and require extensive tuning. We address this limitation with a principled sensitivity-aware caching framework. Specifically, we formalize the caching error through an analysis of the model output sensitivity to perturbations in the denoising inputs, i.e., the noisy latent and the timestep, and show that this sensitivity is a key predictor of caching error. Based on this analysis, we propose Sensitivity-Aware Caching (SenCache), a dynamic caching policy that adaptively selects caching timesteps on a per-sample basis. Our framework provides a theoretical basis for adaptive caching, explains why prior empirical heuristics can be partially effective, and extends them to a dynamic, sample-specific approach. Experiments on Wan 2.1, CogVideoX, and LTX-Video show that SenCache achieves better visual quality than existing caching methods under similar computational budgets.
+
+扩散模型实现了最先进的视频生成质量，但由于大量的连续去噪步骤，其推理仍然昂贵。这推动了越来越多关于加速扩散推理的研究。在免训练加速方法中，缓存通过跨时间步重用先前计算的模型输出来减少计算量。现有的缓存方法依赖于启发式标准来选择缓存/重用时间步长，并且需要大量的调整。我们通过原则性的敏感度感知缓存框架来解决这一限制。具体来说，我们通过分析模型输出对去噪输入中的扰动（即噪声潜伏和时间步长）的敏感性来形式化缓存误差，并表明这种敏感性是缓存误差的关键预测因子。基于此分析，我们提出了灵敏度感知缓存（SenCache），这是一种动态缓存策略，可以根据每个样本自适应地选择缓存时间步长。我们的框架为自适应缓存提供了理论基础，解释了为什么先前的经验启发法可以部分有效，并将其扩展到动态的、特定于样本的方法。在 Wan 2.1、CogVideoX 和 LTX-Video 上的实验表明，在类似的计算预算下，SenCache 比现有的缓存方法实现了更好的视觉质量。
+
+</details>
+
+---
+
+## 2. GeoDiff4D: Geometry-Aware Diffusion for 4D Head Avatar Reconstruction / GeoDiff4D：用于 4D 头部头像重建的几何感知扩散
+
+**Date**: 2026-02-27 | **arXiv**: [2602.24161v1](http://arxiv.org/abs/2602.24161v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.24161v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reconstructing photorealistic and animatable 4D head avatars from a single portrait image remains a fundamental challenge in computer vision. While diffusion models have enabled remarkable progress in image and video generation for avatar reconstruction, existing methods primarily rely on 2D priors and struggle to achieve consistent 3D geometry. We propose a novel framework that leverages geometry-aware diffusion to learn strong geometry priors for high-fidelity head avatar reconstruction. Our approach jointly synthesizes portrait images and corresponding surface normals, while a pose-free expression encoder captures implicit expression representations. Both synthesized images and expression latents are incorporated into 3D Gaussian-based avatars, enabling photorealistic rendering with accurate geometry. Extensive experiments demonstrate that our method substantially outperforms state-of-the-art approaches in visual quality, expression fidelity, and cross-identity generalization, while supporting real-time rendering.
+
+从单个肖像图像重建逼真且可动画的 4D 头部头像仍然是计算机视觉领域的一项基本挑战。虽然扩散模型在头像重建的图像和视频生成方面取得了显着进展，但现有方法主要依赖于 2D 先验，很难实现一致的 3D 几何形状。我们提出了一种新颖的框架，利用几何感知扩散来学习强大的几何先验，以进行高保真头部头像重建。我们的方法联合合成肖像图像和相应的表面法线，而无姿势表达编码器捕获隐式表达表示。合成图像和潜在表达都被纳入基于高斯的 3D 化身中，从而实现具有精确几何形状的逼真渲染。大量的实验表明，我们的方法在视觉质量、表达保真度和跨身份泛化方面远远优于最先进的方法，同时支持实时渲染。
+
+</details>
+
+---
+
+## 3. HumanOrbit: 3D Human Reconstruction as 360° Orbit Generation / HumanOrbit：3D 人体重建作为 360° 轨道生成
+
+**Date**: 2026-02-27 | **arXiv**: [2602.24148v1](http://arxiv.org/abs/2602.24148v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.24148v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present a method for generating a full 360° orbit video around a person from a single input image. Existing methods typically adapt image-based diffusion models for multi-view synthesis, but yield inconsistent results across views and with the original identity. In contrast, recent video diffusion models have demonstrated their ability in generating photorealistic results that align well with the given prompts. Inspired by these results, we propose HumanOrbit, a video diffusion model for multi-view human image generation. Our approach enables the model to synthesize continuous camera rotations around the subject, producing geometrically consistent novel views while preserving the appearance and identity of the person. Using the generated multi-view frames, we further propose a reconstruction pipeline that recovers a textured mesh of the subject. Experimental results validate the effectiveness of HumanOrbit for multi-view image generation and that the reconstructed 3D models exhibit superior completeness and fidelity compared to those from state-of-the-art baselines.
+
+我们提出了一种从单个输入图像生成围绕人的完整 360° 轨道视频的方法。现有方法通常采用基于图像的扩散模型来进行多视图合成，但会在视图之间和原始身份上产生不一致的结果。相比之下，最近的视频扩散模型已经证明了它们生成与给定提示非常一致的逼真结果的能力。受这些结果的启发，我们提出了 HumanOrbit，一种用于多视图人体图像生成的视频扩散模型。我们的方法使模型能够合成围绕主题的连续相机旋转，产生几何一致的新颖视图，同时保留人的外观和身份。使用生成的多视图帧，我们进一步提出了一种重建管道，可以恢复主体的纹理网格。实验结果验证了 HumanOrbit 在多视图图像生成方面的有效性，并且与最先进的基线相比，重建的 3D 模型表现出卓越的完整性和保真度。
+
+</details>
+
+---
+
+## 4. Multimodal Optimal Transport for Unsupervised Temporal Segmentation in Surgical Robotics / 手术机器人中无监督时间分割的多模态最优传输
+
+**Date**: 2026-02-27 | **arXiv**: [2602.24138v1](http://arxiv.org/abs/2602.24138v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.24138v1)
+
+**Categories**: cs.CV, cs.AI
+
+**Code**: https://github.com/omar8ahmed9/TASOT.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recognizing surgical phases and steps from video is a fundamental problem in computer-assisted interventions. Recent approaches increasingly rely on large-scale pre-training on thousands of labeled surgical videos, followed by zero-shot transfer to specific procedures. While effective, this strategy incurs substantial computational and data collection costs. In this work, we question whether such heavy pre-training is truly necessary. We propose Text-Augmented Action Segmentation Optimal Transport (TASOT), an unsupervised method for surgical phase and step recognition that extends Action Segmentation Optimal Transport (ASOT) by incorporating textual information generated directly from the videos. TASOT formulates temporal action segmentation as a multimodal optimal transport problem, where the matching cost is defined as a weighted combination of visual and text-based costs. The visual term captures frame-level appearance similarity, while the text term provides complementary semantic cues, and both are jointly regularized through a temporally consistent unbalanced Gromov-Wasserstein formulation. This design enables effective alignment between video frames and surgical actions without surgical-specific pretraining or external web-scale supervision. We evaluate TASOT on multiple benchmark surgical datasets and observe consistent and substantial improvements over existing zero-shot methods, including StrasBypass70 (+23.7), BernBypass70 (+4.5), Cholec80 (+16.5), and AutoLaparo (+19.6). These results demonstrate that fine-grained surgical understanding can be achieved by exploiting information already present in standard visual and textual representations, without resorting to increasingly complex pre-training pipelines. The code will be available at https://github.com/omar8ahmed9/TASOT.
+
+从视频中识别手术阶段和步骤是计算机辅助干预中的一个基本问题。最近的方法越来越依赖于对数千个标记的手术视频进行大规模预训练，然后零镜头转移到特定程序。虽然有效，但该策略会产生大量的计算和数据收集成本。在这项工作中，我们质疑如此繁重的预训练是否真的有必要。我们提出了文本增强动作分割最佳传输（TASOT），这是一种用于手术阶段和步骤识别的无监督方法，通过合并直接从视频生成的文本信息来扩展动作分割最佳传输（ASOT）。 TASOT 将时间动作分割表述为多模式最优运输问题，其中匹配成本定义为视觉和基于文本的成本的加权组合。视觉术语捕获帧级外观相似性，而文本术语提供互补的语义线索，并且两者都通过时间一致的不平衡 Gromov-Wasserstein 公式联合正则化。这种设计可以实现视频帧和手术动作之间的有效对齐，而无需手术特定的预训练或外部网络规模的监督。我们在多个基准手术数据集上评估 TASOT，并观察到相对于现有零样本方法的一致和实质性改进，包括 StrasBypass70 (+23.7)、BernBypass70 (+4.5)、Cholec80 (+16.5) 和 AutoLaparo (+19.6)。这些结果表明，可以通过利用标准视觉和文本表示中已有的信息来实现细粒度的手术理解，而无需诉诸日益复杂的预训练流程。该代码可在 https://github.com/omar8ahmed9/TASOT 上获取。
+
+</details>
+
+---
+
+## 5. MSVBench: Towards Human-Level Evaluation of Multi-Shot Video Generation / MSVBench：迈向多镜头视频生成的人类水平评估
+
+**Date**: 2026-02-27 | **arXiv**: [2602.23969v1](http://arxiv.org/abs/2602.23969v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.23969v1)
+
+**Categories**: cs.MM, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The evolution of video generation toward complex, multi-shot narratives has exposed a critical deficit in current evaluation methods. Existing benchmarks remain anchored to single-shot paradigms, lacking the comprehensive story assets and cross-shot metrics required to assess long-form coherence and appeal. To bridge this gap, we introduce MSVBench, the first comprehensive benchmark featuring hierarchical scripts and reference images tailored for Multi-Shot Video generation. We propose a hybrid evaluation framework that synergizes the high-level semantic reasoning of Large Multimodal Models (LMMs) with the fine-grained perceptual rigor of domain-specific expert models. Evaluating 20 video generation methods across diverse paradigms, we find that current models--despite strong visual fidelity--primarily behave as visual interpolators rather than true world models. We further validate the reliability of our benchmark by demonstrating a state-of-the-art Spearman's rank correlation of 94.4% with human judgments. Finally, MSVBench extends beyond evaluation by providing a scalable supervisory signal. Fine-tuning a lightweight model on its pipeline-refined reasoning traces yields human-aligned performance comparable to commercial models like Gemini-2.5-Flash.
+
+视频生成向复杂、多镜头叙事的演变暴露了当前评估方法的严重缺陷。现有的基准仍然以单镜头范式为基础，缺乏评估长篇连贯性和吸引力所需的全面故事资产和交叉镜头指标。为了弥补这一差距，我们推出了 MSVBench，这是第一个综合基准测试，具有为多镜头视频生成量身定制的分层脚本和参考图像。我们提出了一种混合评估框架，它将大型多模态模型（LMM）的高级语义推理与特定领域专家模型的细粒度感知严谨性相结合。通过评估不同范式的 20 种视频生成方法，我们发现当前模型尽管具有很强的视觉保真度，但主要表现为视觉插值器而不是真实世界模型。我们通过展示最先进的 Spearman 排名与人类判断的 94.4% 相关性，进一步验证了基准的可靠性。最后，MSVBench 通过提供可扩展的监控信号来超越评估。在其管道细化的推理轨迹上微调轻量级模型，可产生与 Gemini-2.5-Flash 等商业模型相当的人性化性能。
+
+</details>
+
+---
+
+## 6. SwitchCraft: Training-Free Multi-Event Video Generation with Attention Controls / SwitchCraft：具有注意力控制的免训练多事件视频生成
+
+**Date**: 2026-02-27 | **arXiv**: [2602.23956v1](http://arxiv.org/abs/2602.23956v1) | **PDF**: [Link](http://arxiv.org/pdf/2602.23956v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in text-to-video diffusion models have enabled high-fidelity and temporally coherent videos synthesis. However, current models are predominantly optimized for single-event generation. When handling multi-event prompts, without explicit temporal grounding, such models often produce blended or collapsed scenes that break the intended narrative. To address this limitation, we present SwitchCraft, a training-free framework for multi-event video generation. Our key insight is that uniform prompt injection across time ignores the correspondence between events and frames. To this end, we introduce Event-Aligned Query Steering (EAQS), which steers frame-level attention to align with relevant event prompts. Furthermore, we propose Auto-Balance Strength Solver (ABSS), which adaptively balances steering strength to preserve temporal consistency and visual fidelity. Extensive experiments demonstrate that SwitchCraft substantially improves prompt alignment, event clarity, and scene consistency compared with existing baselines, offering a simple yet effective solution for multi-event video generation.
+
+文本到视频扩散模型的最新进展使得高保真度和时间连贯的视频合成成为可能。然而，当前的模型主要针对单事件生成进行优化。在处理多事件提示时，如果没有明确的时间基础，此类模型通常会产生混合或折叠的场景，从而破坏预期的叙述。为了解决这个限制，我们提出了 SwitchCraft，这是一种用于多事件视频生成的免训练框架。我们的主要见解是跨时间的统一提示注入忽略了事件和帧之间的对应关系。为此，我们引入了事件对齐查询引导（EAQS），它引导帧级注意力与相关事件提示保持一致。此外，我们提出了自动平衡强度求解器（ABSS），它自适应地平衡转向强度以保持时间一致性和视觉保真度。大量实验表明，与现有基线相比，SwitchCraft 显着提高了提示对齐、事件清晰度和场景一致性，为多事件视频生成提供了简单而有效的解决方案。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-02-27 (18 papers)</b></summary>
 
 # arXiv Video Papers - 2026-02-27
