@@ -286,11 +286,11 @@ def build_docs_site(repo_root, topic_slug, topic_name, papers_dir):
     .wrap{{max-width:1100px;margin:0 auto;padding:48px 24px 80px}}
     h1{{font-family:"Fraunces",serif;margin:0 0 8px;font-size:clamp(32px,4vw,56px)}}
     p{{color:var(--muted)}}
-    .layout{{display:grid;grid-template-columns:260px 1fr;gap:20px;margin-top:24px}}
-    .panel{{padding:16px;border-radius:18px;background:var(--glass);border:1px solid var(--border);box-shadow:var(--shadow);backdrop-filter: blur(16px) saturate(160%)}}
+    .layout{{display:grid;grid-template-columns:260px 1fr;gap:20px;margin-top:24px;height:600px}}
+    .panel{{padding:16px;border-radius:18px;background:var(--glass);border:1px solid var(--border);box-shadow:var(--shadow);backdrop-filter: blur(16px) saturate(160%);overflow-y:auto}}
     .list a{{display:block;color:var(--ink);text-decoration:none;padding:10px 10px;border-radius:12px}}
     .list a:hover{{background:rgba(46,196,182,0.12)}}
-    .content{{padding:20px;border-radius:18px;background:var(--glass);border:1px solid var(--border);box-shadow:var(--shadow);backdrop-filter: blur(16px) saturate(160%)}}
+    .content{{padding:20px;border-radius:18px;background:var(--glass);border:1px solid var(--border);box-shadow:var(--shadow);backdrop-filter: blur(16px) saturate(160%);overflow-y:auto}}
     @media (max-width: 900px){{.layout{{grid-template-columns:1fr}}}}
     
     /* Navigation Buttons */
@@ -339,6 +339,50 @@ def build_docs_site(repo_root, topic_slug, topic_name, papers_dir):
       color: #fff;
       box-shadow: 0 8px 24px rgba(0,0,0,0.32);
     }}
+    
+    /* Floating Bottom Navigation */
+    .nav-bottom {{
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      z-index: 999;
+      max-width: 120px;
+    }}
+    .nav-bottom button {{
+      padding: 8px 12px;
+      font-size: 12px;
+      text-align: center;
+      background: rgba(255,255,255,0.55);
+      border: 1px solid rgba(12,36,66,0.14);
+      color: var(--ink);
+      border-radius: 999px;
+      cursor: pointer;
+      font-weight: 600;
+      box-shadow: 0 4px 16px rgba(26,60,90,0.10), inset 0 1px 0 rgba(255,255,255,0.8);
+      backdrop-filter: blur(20px) saturate(180%);
+      transition: all 0.22s cubic-bezier(.4,0,.2,1);
+    }}
+    .nav-bottom button:hover {{
+      transform: translateY(-2px);
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+      box-shadow: 0 8px 24px rgba(46,196,182,0.28);
+    }}
+    
+    .nav-bottom button:disabled {{
+      opacity: 0.5;
+      cursor: not-allowed;
+    }}
+    .nav-btn.github:hover {{
+      background: #24292e;
+      border-color: #555;
+      color: #fff;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.32);
+    }}
   </style>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
@@ -346,6 +390,10 @@ def build_docs_site(repo_root, topic_slug, topic_name, papers_dir):
   <div class="orb one"></div>
   <div class="orb two"></div>
   <div class="orb three"></div>
+  
+  <!-- Floating Bottom Navigation -->
+  <div class="nav-bottom" id="navBottom"></div>
+  
   <div class="wrap">
     <div class="nav-top">
       <a href="../index.html" class="nav-btn">🏠 Home</a>
@@ -365,11 +413,106 @@ def build_docs_site(repo_root, topic_slug, topic_name, papers_dir):
     const files = {files_json};
     const list = document.getElementById('list');
     const content = document.getElementById('content');
-    function loadFile(name){{
+    const navBottom = document.getElementById('navBottom');
+    let history = [];
+    let historyIndex = -1;
+    
+    function loadFile(name, addToHistory = true) {{
       fetch('./papers/' + name).then(r=>r.text()).then(md=>{{
         content.innerHTML = marked.parse(md);
+        if (addToHistory) {{
+          history = history.slice(0, historyIndex + 1);
+          history.push(name);
+          historyIndex = history.length - 1;
+        }}
+        updateNavButtons();
       }});
     }}
+    
+    function updateNavButtons() {{
+      const canBack = historyIndex > 0;
+      const canForward = historyIndex < history.length - 1;
+      const currentFile = history[historyIndex] || files[0];
+      const currentIdx = files.indexOf(currentFile);
+      const canPrevDay = currentIdx < files.length - 1;
+      const canNextDay = currentIdx > 0;
+      
+      navBottom.innerHTML = '';
+      
+      const btnBack = document.createElement('button');
+      btnBack.textContent = '← Back';
+      btnBack.disabled = !canBack;
+      btnBack.onclick = () => {{
+        if (historyIndex > 0) {{
+          historyIndex--;
+          loadFile(history[historyIndex], false);
+        }}
+      }};
+      navBottom.appendChild(btnBack);
+      
+      const btnForward = document.createElement('button');
+      btnForward.textContent = 'Forward →';
+      btnForward.disabled = !canForward;
+      btnForward.onclick = () => {{
+        if (historyIndex < history.length - 1) {{
+          historyIndex++;
+          loadFile(history[historyIndex], false);
+        }}
+      }};
+      navBottom.appendChild(btnForward);
+      
+      const btnPrevDay = document.createElement('button');
+      btnPrevDay.textContent = '⬆ Prev Day';
+      btnPrevDay.disabled = !canPrevDay;
+      btnPrevDay.onclick = () => {{
+        const idx = files.indexOf(currentFile);
+        if (idx < files.length - 1) {{
+          loadFile(files[idx + 1]);
+          content.scrollTop = 0;
+        }}
+      }};
+      navBottom.appendChild(btnPrevDay);
+      
+      const btnNextDay = document.createElement('button');
+      btnNextDay.textContent = '⬇ Next Day';
+      btnNextDay.disabled = !canNextDay;
+      btnNextDay.onclick = () => {{
+        const idx = files.indexOf(currentFile);
+        if (idx > 0) {{
+          loadFile(files[idx - 1]);
+          content.scrollTop = content.scrollHeight;
+        }}
+      }};
+      navBottom.appendChild(btnNextDay);
+    }}
+    
+    // 监听滚动事件，实现自动翻页
+    content.addEventListener('scroll', function() {{
+      const scrollTop = content.scrollTop;
+      const scrollHeight = content.scrollHeight;
+      const clientHeight = content.clientHeight;
+      
+      // 滚到底部一段距离，自动跳转到前一天
+      if (scrollTop + clientHeight >= scrollHeight - 100) {{
+        const currentFile = history[historyIndex] || files[0];
+        const currentIdx = files.indexOf(currentFile);
+        if (currentIdx < files.length - 1) {{
+          loadFile(files[currentIdx + 1]);
+          content.scrollTop = 0;
+        }}
+      }}
+      
+      // 滚到顶部一段距离，自动跳转到后一天
+      if (scrollTop <= 100) {{
+        const currentFile = history[historyIndex] || files[0];
+        const currentIdx = files.indexOf(currentFile);
+        if (currentIdx > 0) {{
+          loadFile(files[currentIdx - 1]);
+          content.scrollTop = content.scrollHeight;
+        }}
+      }}
+    }});
+    
     if (files.length === 0) {{
       content.innerHTML = '<em>No papers yet.</em>';
     }}
