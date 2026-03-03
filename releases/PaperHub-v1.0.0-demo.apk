@@ -1,0 +1,17 @@
+PK     Demo APK File
+This is a placeholder APK file for demonstration.
+For actual APK, please build using Gradle or Expo.
+
+Application: PaperHub
+Version: 1.0.0
+Platform: Android 8.0+
+Size: ~45 MB (estimated)
+Build Date: 2026-03-02
+
+To build the actual APK:
+1. Install Android SDK and JDK
+2. Run: cd OpenClawPapers && npm install
+3. Run: ./android/gradlew -p android assembleRelease
+4. APK output: android/app/build/outputs/apk/release/app-release.apk
+
+For more details, see APK_BUILD_GUIDE.md
