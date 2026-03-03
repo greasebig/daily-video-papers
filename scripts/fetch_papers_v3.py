@@ -286,11 +286,31 @@ def build_docs_site(repo_root, topic_slug, topic_name, papers_dir):
     .wrap{{max-width:1100px;margin:0 auto;padding:48px 24px 80px}}
     h1{{font-family:"Fraunces",serif;margin:0 0 8px;font-size:clamp(32px,4vw,56px)}}
     p{{color:var(--muted)}}
-    .layout{{display:grid;grid-template-columns:260px 1fr;gap:20px;margin-top:24px;height:600px}}
-    .panel{{padding:16px;border-radius:18px;background:var(--glass);border:1px solid var(--border);box-shadow:var(--shadow);backdrop-filter: blur(16px) saturate(160%);overflow-y:auto}}
+    .layout{{display:grid;grid-template-columns:260px 1fr;gap:0;margin-top:24px}}
+    .panel{{padding:16px;background:transparent;border:none;box-shadow:none;backdrop-filter:none;overflow-y:auto}}
+    .panel a.active {{
+      background: var(--ink);
+      color: white;
+      border-radius: 8px;
+      padding: 4px 8px;
+    }}
+    
+    .panel a {{
+      display: block;
+      padding: 8px;
+      margin: 4px 0;
+      color: var(--ink);
+      text-decoration: none;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+    }}
+    
+    .panel a:hover {{
+      background: rgba(46,196,182,0.1);
+    }}
     .list a{{display:block;color:var(--ink);text-decoration:none;padding:10px 10px;border-radius:12px}}
     .list a:hover{{background:rgba(46,196,182,0.12)}}
-    .content{{padding:20px;border-radius:18px;background:var(--glass);border:1px solid var(--border);box-shadow:var(--shadow);backdrop-filter: blur(16px) saturate(160%);overflow-y:auto}}
+    .content{{padding:20px;background:transparent;border:none;box-shadow:none;backdrop-filter:none;overflow-y:auto}}
     @media (max-width: 900px){{.layout{{grid-template-columns:1fr}}}}
     
     /* Navigation Buttons */
@@ -426,6 +446,7 @@ def build_docs_site(repo_root, topic_slug, topic_name, papers_dir):
           historyIndex = history.length - 1;
         }}
         updateNavButtons();
+        updateListHighlight();
       }});
     }}
     
@@ -493,7 +514,7 @@ def build_docs_site(repo_root, topic_slug, topic_name, papers_dir):
       const clientHeight = content.clientHeight;
       
       // 滚到底部一段距离，自动跳转到前一天
-      if (scrollTop + clientHeight >= scrollHeight - 100) {{
+      if (scrollTop + clientHeight >= scrollHeight - 300) {{
         const currentFile = history[historyIndex] || files[0];
         const currentIdx = files.indexOf(currentFile);
         if (currentIdx < files.length - 1) {{
@@ -503,7 +524,7 @@ def build_docs_site(repo_root, topic_slug, topic_name, papers_dir):
       }}
       
       // 滚到顶部一段距离，自动跳转到后一天
-      if (scrollTop <= 100) {{
+      if (scrollTop <= 300) {{
         const currentFile = history[historyIndex] || files[0];
         const currentIdx = files.indexOf(currentFile);
         if (currentIdx > 0) {{
@@ -516,6 +537,18 @@ def build_docs_site(repo_root, topic_slug, topic_name, papers_dir):
     if (files.length === 0) {{
       content.innerHTML = '<em>No papers yet.</em>';
     }}
+    function updateListHighlight() {{
+      const currentFile = history[historyIndex] || files[0];
+      const links = list.querySelectorAll('a');
+      links.forEach(link => {{
+        if (link.textContent === currentFile.replace('.md','')) {{
+          link.classList.add('active');
+        }} else {{
+          link.classList.remove('active');
+        }}
+      }});
+    }}
+    
     files.forEach((f, i)=>{{
       const a = document.createElement('a');
       a.textContent = f.replace('.md','');
