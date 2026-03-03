@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-03-03](papers/2026-03-03.md) - 1 papers
 - [2026-03-02](papers/2026-03-02.md) - 2 papers
 - [2026-02-27](papers/2026-02-27.md) - 7 papers
 - [2026-02-26](papers/2026-02-26.md) - 3 papers
@@ -21,6 +22,34 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-03-03 (1 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-03-03
+
+**Paper Count**: 1
+
+---
+
+## 1. MetaMind: General and Cognitive World Models in Multi-Agent Systems by Meta-Theory of Mind / MetaMind：多智能体系统中的通用认知世界模型
+
+**Date**: 2026-02-28 | **arXiv**: [2603.00808v1](http://arxiv.org/abs/2603.00808v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.00808v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+A major challenge for world models in multi-agent systems is to understand interdependent agent dynamics, predict interactive multi-agent trajectories, and plan over long horizons with collective awareness, without centralized supervision or explicit communication. In this paper, MetaMind, a general and cognitive world model for multi-agent systems that leverages a novel meta-theory of mind (Meta-ToM) framework, is proposed. Through MetaMind, each agent learns not only to predict and plan over its own beliefs, but also to inversely reason goals and beliefs from its own behavior trajectories. This self-reflective, bidirectional inference loop enables each agent to learn a metacognitive ability in a self-supervised manner. Then, MetaMind is shown to generalize the metacognitive ability from first-person to third-person through analogical reasoning. Thus, in multi-agent systems, each agent with MetaMind can actively reason about goals and beliefs of other agents from limited, observable behavior trajectories in a zero-shot manner, and then adapt to emergent collective intention without an explicit communication mechanism. Extended simulation results on diverse multi-agent tasks demonstrate that MetaMind can achieve superior task performance and outperform baselines in few-shot multi-agent generalization.
+
+多智能体系统中世界模型的一个主要挑战是理解相互依赖的智能体动态、预测交互式多智能体轨迹，并在没有集中监督或明确沟通的情况下以集体意识进行长期规划。在本文中，提出了 MetaMind，这是一种利用新颖的元心理理论 (Meta-ToM) 框架的多智能体系统的通用认知世界模型。通过 MetaMind，每个智能体不仅学会预测和规划自己的信念，还能根据自己的行为轨迹反向推理目标和信念。这种自我反思的双向推理循环使每个智能体能够以自我监督的方式学习元认知能力。然后，MetaMind 通过类比推理将元认知能力从第一人称推广到第三人称。因此，在多智能体系统中，每个具有 MetaMind 的智能体都可以从有限的、可观察的行为轨迹中以零样本的方式主动推理其他智能体的目标和信念，然后在没有明确的通信机制的情况下适应新出现的集体意图。对各种多智能体任务的扩展模拟结果表明，MetaMind 可以实现卓越的任务性能，并在少样本多智能体泛化中超越基线。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-03-02 (2 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-03-02
