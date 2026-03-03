@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-03-03](papers/2026-03-03.md) - 6 papers
 - [2026-03-02](papers/2026-03-02.md) - 6 papers
 - [2026-02-28](papers/2026-02-28.md) - 2 papers
 - [2026-02-27](papers/2026-02-27.md) - 31 papers
@@ -23,6 +24,118 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-03-03 (6 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-03-03
+
+**Paper Count**: 6
+
+---
+
+## 1. MC-Search: Evaluating and Enhancing Multimodal Agentic Search with Structured Long Reasoning Chains / MC-Search：利用结构化长推理链评估和增强多模式代理搜索
+
+**Date**: 2026-03-01 | **arXiv**: [2603.00873v1](http://arxiv.org/abs/2603.00873v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.00873v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+With the increasing demand for step-wise, cross-modal, and knowledge-grounded reasoning, multimodal large language models (MLLMs) are evolving beyond the traditional fixed retrieve-then-generate paradigm toward more sophisticated agentic multimodal retrieval-augmented generation (MM-RAG). Existing benchmarks, however, mainly focus on simplified QA with short retrieval chains, leaving adaptive planning and multimodal reasoning underexplored. We present MC-Search, the first benchmark for agentic MM-RAG with long, step-wise annotated reasoning chains spanning five representative reasoning structures. Each example specifies sub-questions, retrieval modalities, supporting facts, and intermediate answers, with fidelity ensured by HAVE (Hop-wise Attribution and Verification of Evidence), resulting in 3,333 high-quality examples averaging 3.7 hops. Beyond answer accuracy, MC-Search introduces new process-level metrics for reasoning quality, stepwise retrieval and planning accuracy. By developing a unified agentic MM-RAG pipeline, we benchmark six leading MLLMs and reveal systematic issues such as over- and under-retrieval and modality-misaligned planning. Finally, we introduce Search-Align, a process-supervised fine-tuning framework leveraging verified reasoning chains, showing that our data not only enables faithful evaluation but also improves planning and retrieval fidelity in open-source MLLMs.
+
+随着对逐步、跨模态和基于知识的推理的需求不断增加，多模态大语言模型（MLLM）正在超越传统的固定检索然后生成范式，向更复杂的代理多模态检索增强生成（MM-RAG）发展。然而，现有的基准主要侧重于具有短检索链的简化 QA，而对自适应规划和多模态推理的探索还不够。我们提出了 MC-Search，这是代理 MM-RAG 的第一个基准，具有跨越五个代表性推理结构的长的、逐步注释的推理链。每个示例都指定子问题、检索模式、支持事实和中间答案，并通过 HAVE（逐跳归因和证据验证）确保保真度，从而产生 3,333 个平均 3.7 跳的高质量示例。除了答案准确性之外，MC-Search 还引入了新的流程级指标来衡量推理质量、逐步检索和规划准确性。通过开发统一的代理 MM-RAG 管道，我们对六种领先的 MLLM 进行了基准测试，并揭示了检索过度和检索不足以及模态失调规划等系统问题。最后，我们介绍了 Search-Align，这是一个利用经过验证的推理链的流程监督微调框架，表明我们的数据不仅可以实现忠实的评估，还可以提高开源 MLLM 中的规划和检索保真度。
+
+</details>
+
+---
+
+## 2. Tiny-Critic RAG: Empowering Agentic Fallback with Parameter-Efficient Small Language Models / Tiny-Critic RAG：通过参数高效的小语言模型支持代理回退
+
+**Date**: 2026-03-01 | **arXiv**: [2603.00846v1](http://arxiv.org/abs/2603.00846v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.00846v1)
+
+**Categories**: cs.IR, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Retrieval-Augmented Generation (RAG) grounds Large Language Models (LLMs) to mitigate factual hallucinations. Recent paradigms shift from static pipelines to Modular and Agentic RAG frameworks, granting models autonomy for multi-hop reasoning or self-correction. However, current reflective RAG heavily relies on massive LLMs as universal evaluators. In high-throughput systems, executing complete forward passes for billion-parameter models merely for binary routing introduces severe computational redundancy. Furthermore, in autonomous agent scenarios, inaccurate retrieval causes models to expend excessive tokens on spurious reasoning and redundant tool calls, inflating Time-to-First-Token (TTFT) and costs. We propose Tiny-Critic RAG, decoupling evaluation by deploying a parameter-efficient Small Language Model (SLM) via Low-Rank Adaptation (LoRA). Acting as a deterministic gatekeeper, Tiny-Critic employs constrained decoding and non-thinking inference modes for ultra-low latency binary routing. Evaluations on noise-injected datasets demonstrate Tiny-Critic RAG achieves routing accuracy comparable to GPT-4o-mini while reducing latency by an order of magnitude, establishing a highly cost-effective paradigm for agent deployment.
+
+检索增强生成 (RAG) 以大型语言模型 (LLM) 为基础，以减轻事实幻觉。最近的范式从静态管道转向模块化和代理 RAG 框架，赋予模型多跳推理或自我纠正的自主权。然而，当前的反思性 RAG 严重依赖大量法学硕士作为通用评估者。在高吞吐量系统中，仅仅为了二进制路由而对十亿参数模型执行完整的前向传递会引入严重的计算冗余。此外，在自主代理场景中，不准确的检索会导致模型在虚假推理和冗余工具调用上花费过多的令牌，从而增加首次令牌时间（TTFT）和成本。我们提出 Tiny-Critic RAG，通过低秩适应 (LoRA) 部署参数高效的小语言模型 (SLM) 来解耦评估。作为确定性的看门人，Tiny-Critic 采用约束解码和非思考推理模式来实现超低延迟二进制路由。对噪声注入数据集的评估表明，Tiny-Critic RAG 实现了与 GPT-4o-mini 相当的路由精度，同时将延迟降低了一个数量级，为代理部署建立了高度经济高效的范例。
+
+</details>
+
+---
+
+## 3. MetaMind: General and Cognitive World Models in Multi-Agent Systems by Meta-Theory of Mind / MetaMind：多智能体系统中的通用认知世界模型
+
+**Date**: 2026-02-28 | **arXiv**: [2603.00808v1](http://arxiv.org/abs/2603.00808v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.00808v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+A major challenge for world models in multi-agent systems is to understand interdependent agent dynamics, predict interactive multi-agent trajectories, and plan over long horizons with collective awareness, without centralized supervision or explicit communication. In this paper, MetaMind, a general and cognitive world model for multi-agent systems that leverages a novel meta-theory of mind (Meta-ToM) framework, is proposed. Through MetaMind, each agent learns not only to predict and plan over its own beliefs, but also to inversely reason goals and beliefs from its own behavior trajectories. This self-reflective, bidirectional inference loop enables each agent to learn a metacognitive ability in a self-supervised manner. Then, MetaMind is shown to generalize the metacognitive ability from first-person to third-person through analogical reasoning. Thus, in multi-agent systems, each agent with MetaMind can actively reason about goals and beliefs of other agents from limited, observable behavior trajectories in a zero-shot manner, and then adapt to emergent collective intention without an explicit communication mechanism. Extended simulation results on diverse multi-agent tasks demonstrate that MetaMind can achieve superior task performance and outperform baselines in few-shot multi-agent generalization.
+
+多智能体系统中世界模型的一个主要挑战是理解相互依赖的智能体动态、预测交互式多智能体轨迹，并在没有集中监督或明确沟通的情况下以集体意识进行长期规划。在本文中，提出了 MetaMind，这是一种利用新颖的元心理理论 (Meta-ToM) 框架的多智能体系统的通用认知世界模型。通过 MetaMind，每个智能体不仅学会预测和规划自己的信念，还能根据自己的行为轨迹反向推理目标和信念。这种自我反思的双向推理循环使每个智能体能够以自我监督的方式学习元认知能力。然后，MetaMind 通过类比推理将元认知能力从第一人称推广到第三人称。因此，在多智能体系统中，每个具有 MetaMind 的智能体都可以从有限的、可观察的行为轨迹中以零样本的方式主动推理其他智能体的目标和信念，然后在没有明确的通信机制的情况下适应新出现的集体意图。对各种多智能体任务的扩展模拟结果表明，MetaMind 可以实现卓越的任务性能，并在少样本多智能体泛化中超越基线。
+
+</details>
+
+---
+
+## 4. MO-MIX: Multi-Objective Multi-Agent Cooperative Decision-Making With Deep Reinforcement Learning / MO-MIX：利用深度强化学习的多目标多智能体协作决策
+
+**Date**: 2026-02-28 | **arXiv**: [2603.00730v1](http://arxiv.org/abs/2603.00730v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.00730v1)
+
+**Categories**: cs.AI, cs.LG, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Deep reinforcement learning (RL) has been applied extensively to solve complex decision-making problems. In many real-world scenarios, tasks often have several conflicting objectives and may require multiple agents to cooperate, which are the multi-objective multi-agent decision-making problems. However, only few works have been conducted on this intersection. Existing approaches are limited to separate fields and can only handle multi-agent decision-making with a single objective, or multi-objective decision-making with a single agent. In this paper, we propose MO-MIX to solve the multi-objective multi-agent reinforcement learning (MOMARL) problem. Our approach is based on the centralized training with decentralized execution (CTDE) framework. A weight vector representing preference over the objectives is fed into the decentralized agent network as a condition for local action-value function estimation, while a mixing network with parallel architecture is used to estimate the joint action-value function. In addition, an exploration guide approach is applied to improve the uniformity of the final non-dominated solutions. Experiments demonstrate that the proposed method can effectively solve the multi-objective multi-agent cooperative decision-making problem and generate an approximation of the Pareto set. Our approach not only significantly outperforms the baseline method in all four kinds of evaluation metrics, but also requires less computational cost.
+
+深度强化学习（RL）已广泛应用于解决复杂的决策问题。在许多现实场景中，任务往往有多个相互冲突的目标，并且可能需要多个智能体进行合作，这就是多目标多智能体决策问题。然而，这个十字路口只进行了很少的工程。现有的方法仅限于单独的领域，只能处理具有单个目标的多智能体决策，或者具有单个智能体的多目标决策。在本文中，我们提出 MO-MIX 来解决多目标多智能体强化学习（MOMARL）问题。我们的方法基于集中培训和分散执行（CTDE）框架。表示对目标的偏好的权重向量被馈送到去中心化代理网络中作为局部动作价值函数估计的条件，而具有并行架构的混合网络用于估计联合动作价值函数。此外，还应用探索引导方法来提高最终非支配解的均匀性。实验表明，该方法能够有效解决多目标多智能体协同决策问题，并生成Pareto集的近似值。我们的方法不仅在所有四种评估指标上都显着优于基线方法，而且需要更少的计算成本。
+
+</details>
+
+---
+
+## 5. LiTS: A Modular Framework for LLM Tree Search / LiTS：LLM 树搜索的模块化框架
+
+**Date**: 2026-02-28 | **arXiv**: [2603.00631v1](http://arxiv.org/abs/2603.00631v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.00631v1)
+
+**Categories**: cs.AI
+
+**Code**: https://github.com/xinzhel/lits-llm,
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+LiTS is a modular Python framework for LLM reasoning via tree search. It decomposes tree search into three reusable components (Policy, Transition, and RewardModel) that plug into algorithms like MCTS and BFS. A decorator-based registry enables domain experts to extend to new domains by registering components, and algorithmic researchers to implement custom search algorithms. We demonstrate composability on MATH500 (language reasoning), Crosswords (environment planning), and MapEval (tool use), showing that components and algorithms are orthogonal: components are reusable across algorithms within each task type, and algorithms work across all components and domains. We also report a mode-collapse finding: in infinite action spaces, LLM policy diversity (not reward quality) is the bottleneck for effective tree search. A demonstration video is available at https://youtu.be/nRGX43YrR3I. The package is released under the Apache 2.0 license at https://github.com/xinzhel/lits-llm, including installation instructions and runnable examples that enable users to reproduce the demonstrated workflows.
+
+LiTS 是一个模块化 Python 框架，用于通过树搜索进行 LLM 推理。它将树搜索分解为三个可重用组件（策略、转换和奖励模型），这些组件插入到 MCTS 和 BFS 等算法中。基于装饰器的注册表使领域专家能够通过注册组件扩展到新领域，并使算法研究人员能够实现自定义搜索算法。我们演示了 MATH500（语言推理）、Crosswords（环境规划）和 MapEval（工具使用）的可组合性，表明组件和算法是正交的：组件可以跨每个任务类型内的算法重用，并且算法可以跨所有组件和域工作。我们还报告了一个模式崩溃的发现：在无限行动空间中，LLM 政策多样性（而不是奖励质量）是有效树搜索的瓶颈。演示视频位于 https://youtu.be/nRGX43YrR3I。该软件包根据 Apache 2.0 许可证发布，网址为 https://github.com/xinzhel/lits-llm，包括安装说明和可运行示例，使用户能够重现演示的工作流程。
+
+</details>
+
+---
+
+## 6. TraceSIR: A Multi-Agent Framework for Structured Analysis and Reporting of Agentic Execution Traces / TraceSIR：用于结构化分析和报告代理执行跟踪的多代理框架
+
+**Date**: 2026-02-28 | **arXiv**: [2603.00623v1](http://arxiv.org/abs/2603.00623v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.00623v1)
+
+**Categories**: cs.AI, cs.CL
+
+**Code**: https://github.com/SHU-XUN/TraceSIR.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Agentic systems augment large language models with external tools and iterative decision making, enabling complex tasks such as deep research, function calling, and coding. However, their long and intricate execution traces make failure diagnosis and root cause analysis extremely challenging. Manual inspection does not scale, while directly applying LLMs to raw traces is hindered by input length limits and unreliable reasoning. Focusing solely on final task outcomes further discards critical behavioral information required for accurate issue localization. To address these issues, we propose TraceSIR, a multi-agent framework for structured analysis and reporting of agentic execution traces. TraceSIR coordinates three specialized agents: (1) StructureAgent, which introduces a novel abstraction format, TraceFormat, to compress execution traces while preserving essential behavioral information; (2) InsightAgent, which performs fine-grained diagnosis including issue localization, root cause analysis, and optimization suggestions; (3) ReportAgent, which aggregates insights across task instances and generates comprehensive analysis reports. To evaluate TraceSIR, we construct TraceBench, covering three real-world agentic scenarios, and introduce ReportEval, an evaluation protocol for assessing the quality and usability of analysis reports aligned with industry needs. Experiments show that TraceSIR consistently produces coherent, informative, and actionable reports, significantly outperforming existing approaches across all evaluation dimensions. Our project and video are publicly available at https://github.com/SHU-XUN/TraceSIR.
+
+代理系统通过外部工具和迭代决策来增强大型语言模型，从而实现深入研究、函数调用和编码等复杂任务。然而，它们漫长而复杂的执行轨迹使得故障诊断和根本原因分析极具挑战性。手动检查无法扩展，而直接将 LLM 应用于原始迹线会受到输入长度限制和不可靠推理的阻碍。仅仅关注最终任务结果会进一步丢弃准确问题定位所需的关键行为信息。为了解决这些问题，我们提出了 TraceSIR，这是一个用于结构化分析和报告代理执行跟踪的多代理框架。 TraceSIR 协调三个专门的代理：（1）StructureAgent，它引入了一种新颖的抽象格式 TraceFormat，以压缩执行跟踪，同时保留基本的行为信息； （2）InsightAgent，进行细粒度诊断，包括问题定位、根因分析、优化建议等； (3) ReportAgent，它聚合跨任务实例的见解并生成全面的分析报告。为了评估TraceSIR，我们构建了TraceBench，涵盖了三个现实世界的代理场景，并引入了ReportEval，这是一种评估协议，用于评估符合行业需求的分析报告的质量和可用性。实验表明，TraceSIR 始终能够生成连贯、信息丰富且可操作的报告，在所有评估维度上均显着优于现有方法。我们的项目和视频可在 https://github.com/SHU-XUN/TraceSIR 上公开获取。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-03-02 (6 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-03-02
