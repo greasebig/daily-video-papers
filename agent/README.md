@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-03-09](papers/2026-03-09.md) - 7 papers
 - [2026-03-07](papers/2026-03-07.md) - 31 papers
 - [2026-03-05](papers/2026-03-05.md) - 31 papers
 - [2026-03-04](papers/2026-03-04.md) - 48 papers
@@ -27,6 +28,130 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-03-09 (7 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-03-09
+
+**Paper Count**: 7
+
+---
+
+## 1. SUREON: A Benchmark and Vision-Language-Model for Surgical Reasoning / SUREON：手术推理的基准和视觉语言模型
+
+**Date**: 2026-03-06 | **arXiv**: [2603.06570v1](http://arxiv.org/abs/2603.06570v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.06570v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Surgeons don't just see -- they interpret. When an expert observes a surgical scene, they understand not only what instrument is being used, but why it was chosen, what risk it poses, and what comes next. Current surgical AI cannot answer such questions, largely because training data that explicitly encodes surgical reasoning is immensely difficult to annotate at scale. Yet surgical video lectures already contain exactly this -- explanations of intent, rationale, and anticipation, narrated by experts for the purpose of teaching. Though inherently noisy and unstructured, these narrations encode the reasoning that surgical AI currently lacks. We introduce SUREON, a large-scale video QA dataset that systematically harvests this training signal from surgical academic videos. SUREON defines 12 question categories covering safety assessment, decision rationale, and forecasting, and uses a multi-agent pipeline to extract and structure supervision at scale. Across 134.7K clips and 170 procedure types, SUREON yields 206.8k QA pairs and an expert-validated benchmark of 354 examples. To evaluate the extent to which this supervision translates to surgical reasoning ability, we introduce two models: SureonVLM, a vision-language model adapted through supervised fine-tuning, and SureonVLM-R1, a reasoning model trained with Group Relative Policy Optimization. Both models can answer complex questions about surgery and substantially outperform larger general-domain models, exceeding 84% accuracy on the SUREON benchmark while outperforming general-domain models on standard surgical perception tasks. Qualitative analysis of SureonVLM-R1 reveals explicit reasoning behavior, such as inferring operative intent from visual context.
+
+外科医生不只是看，他们还解释。当专家观察手术场景时，他们不仅了解正在使用的仪器，还了解为什么选择它、它会带来什么风险以及接下来会发生什么。目前的外科人工智能无法回答这些问题，很大程度上是因为明确编码外科推理的训练数据很难大规模注释。然而，外科视频讲座已经包含了这一点——对意图、基本原理和预期的解释，由专家出于教学目的进行叙述。尽管这些叙述本质上是嘈杂且非结构化的，但它们编码了外科人工智能目前所缺乏的推理。我们引入了 SUREON，这是一个大型视频 QA 数据集，可以系统地从外科学术视频中收集训练信号。 SUREON 定义了 12 个问题类别，涵盖安全评估、决策原理和预测，并使用多智能体管道大规模提取和构建监督。 SUREON 跨越 134,700 个剪辑和 170 个程序类型，生成 206,800 个 QA 对和经过专家验证的 354 个示例基准。为了评估这种监督转化为手术推理能力的程度，我们引入了两个模型：SureonVLM，一种通过监督微调调整的视觉语言模型，以及 SureonVLM-R1，一种通过组相对策略优化训练的推理模型。这两种模型都可以回答有关手术的复杂问题，并且大大优于更大的通用域模型，在 SUREON 基准上的准确率超过 84%，同时在标准手术感知任务上优于通用域模型。 SureonVLM-R1 的定性分析揭示了明确的推理行为，例如从视觉上下文推断操作意图。
+
+</details>
+
+---
+
+## 2. Beyond Rows to Reasoning: Agentic Retrieval for Multimodal Spreadsheet Understanding and Editing / 超越行推理：多模式电子表格理解和编辑的代理检索
+
+**Date**: 2026-03-06 | **arXiv**: [2603.06503v1](http://arxiv.org/abs/2603.06503v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.06503v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in multimodal Retrieval-Augmented Generation (RAG) enable Large Language Models (LLMs) to analyze enterprise spreadsheet workbooks containing millions of cells, cross-sheet dependencies, and embedded visual artifacts. However, state-of-the-art approaches exclude critical context through single-pass retrieval, lose data resolution through compression, and exceed LLM context windows through naive full-context injection, preventing reliable multi-step reasoning over complex enterprise workbooks. We introduce Beyond Rows to Reasoning (BRTR), a multimodal agentic framework for spreadsheet understanding that replaces single-pass retrieval with an iterative tool-calling loop, supporting end-to-end Excel workflows from complex analysis to structured editing. Supported by over 200 hours of expert human evaluation, BRTR achieves state-of-the-art performance across three frontier spreadsheet understanding benchmarks, surpassing prior methods by 25 percentage points on FRTR-Bench, 7 points on SpreadsheetLLM, and 32 points on FINCH. We evaluate five multimodal embedding models, identifying NVIDIA NeMo Retriever 1B as the top performer for mixed tabular and visual data, and vary nine LLMs. Ablation experiments confirm that the planner, retrieval, and iterative reasoning each contribute substantially, and cost analysis shows GPT-5.2 achieves the best efficiency-accuracy trade-off. Throughout all evaluations, BRTR maintains full auditability through explicit tool-call traces.
+
+多模式检索增强生成 (RAG) 的最新进展使大型语言模型 (LLM) 能够分析包含数百万个单元格、跨工作表依赖性和嵌入式视觉工件的企业电子表格工作簿。然而，最先进的方法通过单遍检索排除关键上下文，通过压缩丢失数据分辨率，并通过简单的完整上下文注入超出LLM上下文窗口，从而阻止对复杂企业工作簿进行可靠的多步骤推理。我们引入 Beyond Rows to Reasoning (BRTR)，这是一种用于电子表格理解的多模式代理框架，它用迭代工具调用循环取代单遍检索，支持从复杂分析到结构化编辑的端到端 Excel 工作流程。在超过 200 小时的专家人工评估的支持下，BRTR 在三个前沿电子表格理解基准上实现了最先进的性能，在 FRTR-Bench 上超越了先前的方法 25 个百分点，在 SpreadsheetLLM 上超越了 7 个百分点，在 FINCH 上超越了 32 个百分点。我们评估了五个多模态嵌入模型，将 NVIDIA NeMo Retriever 1B 确定为混合表格和视觉数据的最佳表现者，并改变了九个法学硕士。消融实验证实，规划器、检索和迭代推理各自做出了很大贡献，成本分析表明 GPT-5.2 实现了最佳的效率与准确性权衡。在所有评估过程中，BRTR 通过显式的工具调用跟踪保持完全的可审计性。
+
+</details>
+
+---
+
+## 3. Talk Freely, Execute Strictly: Schema-Gated Agentic AI for Flexible and Reproducible Scientific Workflows / 畅所欲言，严格执行：模式门控代理人工智能，实现灵活且可重复的科学工作流程
+
+**Date**: 2026-03-06 | **arXiv**: [2603.06394v1](http://arxiv.org/abs/2603.06394v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.06394v1)
+
+**Categories**: cs.AI, cs.LG, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language models (LLMs) can now translate a researcher's plain-language goal into executable computation, yet scientific workflows demand determinism, provenance, and governance that are difficult to guarantee when an LLM decides what runs. Semi-structured interviews with 18 experts across 10 industrial R&D stakeholders surface 2 competing requirements--deterministic, constrained execution and conversational flexibility without workflow rigidity--together with boundary properties (human-in-the-loop control and transparency) that any resolution must satisfy. We propose schema-gated orchestration as the resolving principle: the schema becomes a mandatory execution boundary at the composed-workflow level, so that nothing runs unless the complete action--including cross-step dependencies--validates against a machine-checkable specification.   We operationalize the 2 requirements as execution determinism (ED) and conversational flexibility (CF), and use these axes to review 20 systems spanning 5 architectural groups along a validation-scope spectrum. Scores are assigned via a multi-model protocol--15 independent sessions across 3 LLM families--yielding substantial-to-near-perfect inter-model agreement (Krippendorff a=0.80 for ED and a=0.98 for CF), demonstrating that multi-model LLM scoring can serve as a reusable alternative to human expert panels for architectural assessment.   The resulting landscape reveals an empirical Pareto front--no reviewed system achieves both high flexibility and high determinism--but a convergence zone emerges between the generative and workflow-centric extremes. We argue that a schema-gated architecture, separating conversational from execution authority, is positioned to decouple this trade-off, and distill 3 operational principles--clarification-before-execution, constrained plan-act orchestration, and tool-to-workflow-level gating--to guide adoption.
+
+大型语言模型 (LLM) 现在可以将研究人员的简单语言目标转化为可执行计算，但科学工作流程需要确定性、出处和治理，而当 LLM 决定运行什么时，这些很难保证。对 10 个工业研发利益相关者的 18 名专家进行半结构化访谈，得出了 2 个相互竞争的要求：确定性、受限执行和没有工作流程僵化的对话灵活性，以及​​任何解决方案都必须满足的边界属性（人在环控制和透明度）。我们建议模式门控编排作为解决原则：模式成为组合工作流级别的强制执行边界，因此除非完整的操作（包括跨步骤依赖项）根据机器可检查的规范进行验证，否则任何操作都不会运行。   我们将这 2 个要求具体化为执行确定性 (ED) 和会话灵活性 (CF)，并使用这些轴来审查验证范围内跨越 5 个架构组的 20 个系统。通过多模型协议（跨 3 个 LLM 系列的 15 个独立会话）分配分数，产生基本到近乎完美的模型间协议（ED 的 Krippendorff a=0.80，CF a=0.98），表明多模型 LLM 评分可以作为架构评估的人类专家小组的可重复使用的替代方案。   由此产生的景观揭示了一个经验帕累托前沿——没有经过审查的系统能够同时实现高灵活性和高确定性——但在生成和以工作流为中心的极端之间出现了一个收敛区。我们认为，模式门控架构将会话权限与执行权限分开，旨在解耦这种权衡，并提炼出 3 个操作原则——执行前澄清、受约束的计划-行动编排以及工具到工作流级别的门控——以指导采用。
+
+</details>
+
+---
+
+## 4. ESAA-Security: An Event-Sourced, Verifiable Architecture for Agent-Assisted Security Audits of AI-Generated Code / ESAA-Security：一种基于事件的可验证架构，用于对人工智能生成的代码进行代理辅助安全审计
+
+**Date**: 2026-03-06 | **arXiv**: [2603.06365v1](http://arxiv.org/abs/2603.06365v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.06365v1)
+
+**Categories**: cs.CR, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+AI-assisted software generation has increased development speed, but it has also amplified a persistent engineering problem: systems that are functionally correct may still be structurally insecure. In practice, prompt-based security review with large language models often suffers from uneven coverage, weak reproducibility, unsupported findings, and the absence of an immutable audit trail. The ESAA architecture addresses a related governance problem in agentic software engineering by separating heuristic agent cognition from deterministic state mutation through append-only events, constrained outputs, and replay-based verification. This paper presents ESAA-Security, a domain-specific specialization of ESAA for agent-assisted security auditing of software repositories, with particular emphasis on AI-generated or AI-modified code. ESAA-Security structures auditing as a governed execution pipeline with four phases reconnaissance, domain audit execution, risk classification, and final reporting and operationalizes the workflow into 26 tasks, 16 security domains, and 95 executable checks. The framework produces structured check results, vulnerability inventories, severity classifications, risk matrices, remediation guidance, executive summaries, and a final markdown/JSON audit report. The central idea is that security review should not be modeled as a free-form conversation with an LLM, but as an evidence-oriented audit process governed by contracts and events. In ESAA-Security, agents emit structured intentions under constrained protocols; the orchestrator validates them, persists accepted outputs to an append-only log, reprojects derived views, and verifies consistency through replay and hashing. The result is a traceable, reproducible, and risk-oriented audit architecture whose final report is auditable by construction.
+
+人工智能辅助软件生成提高了开发速度，但也放大了一个长期存在的工程问题：功能正确的系统在结构上可能仍然不安全。在实践中，使用大型语言模型进行基于提示的安全审查通常会遇到覆盖范围不均匀、可重复性差、发现结果不受支持以及缺乏不可变的审计跟踪等问题。 ESAA 架构通过仅附加事件、约束输出和基于重放的验证将启发式代理认知与确定性状态突变分开，解决了代理软件工程中的相关治理问题。本文介绍了 ESAA-Security，这是 ESAA 的特定领域专业化，用于代理辅助的软件存储库安全审计，特别强调人工智能生成或人工智能修改的代码。 ESAA-Security 将审计构建为受管理的执行管道，包含四个阶段的侦察、域审计执行、风险分类和最终报告，并将工作流程操作为 26 个任务、16 个安全域和 95 个可执行检查。该框架生成结构化检查结果、漏洞清单、严重性分类、风险矩阵、补救指南、执行摘要和最终 markdown/JSON 审计报告。其中心思想是，安全审查不应被建模为与法学硕士的自由形式对话，而应被建模为受合同和事件控制的以证据为导向的审计流程。在 ESAA-Security 中，代理在受限协议下发出结构化意图；协调器验证它们，将接受的输出保留到仅附加日志中，重新投影派生视图，并通过重播和散列验证一致性。其结果是一个可追溯、可重复且以风险为导向的审计架构，其最终报告可通过构建进行审计。
+
+</details>
+
+---
+
+## 5. The EpisTwin: A Knowledge Graph-Grounded Neuro-Symbolic Architecture for Personal AI / EpisTwin：基于知识图谱的个人人工智能神经符号架构
+
+**Date**: 2026-03-06 | **arXiv**: [2603.06290v1](http://arxiv.org/abs/2603.06290v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.06290v1)
+
+**Categories**: cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Personal Artificial Intelligence is currently hindered by the fragmentation of user data across isolated silos. While Retrieval-Augmented Generation offers a partial remedy, its reliance on unstructured vector similarity fails to capture the latent semantic topology and temporal dependencies essential for holistic sensemaking. We introduce EpisTwin, a neuro-symbolic framework that grounds generative reasoning in a verifiable, user-centric Personal Knowledge Graph. EpisTwin leverages Multimodal Language Models to lift heterogeneous, cross-application data into semantic triples. At inference, EpisTwin enables complex reasoning over the personal semantic graph via an agentic coordinator that combines Graph Retrieval-Augmented Generation with Online Deep Visual Refinement, dynamically re-grounding symbolic entities in their raw visual context. We also introduce PersonalQA-71-100, a synthetic benchmark designed to simulate a realistic user's digital footprint and evaluate EpisTwin performance. Our framework demonstrates robust results across a suite of state-of-the-art judge models, offering a promising direction for trustworthy Personal AI.
+
+目前，个人人工智能因用户数据分散在孤立的孤岛中而受到阻碍。虽然检索增强生成提供了部分补救措施，但它对非结构化向量相似性的依赖无法捕获整体意义构建所必需的潜在语义拓扑和时间依赖性。我们介绍 EpisTwin，这是一种神经符号框架，它将生成推理建立在可验证的、以用户为中心的个人知识图谱中。 EpisTwin 利用多模式语言模型将异构、跨应用程序数据提升为语义三元组。在推理时，EpisTwin 通过代理协调器实现对个人语义图的复杂推理，该协调器将图检索增强生成与在线深度视觉细化相结合，动态地重新将符号实体置于原始视觉上下文中。我们还推出了 PersonalQA-71-100，这是一种综合基准测试，旨在模拟真实用户的数字足迹并评估 EpisTwin 性能。我们的框架在一系列最先进的法官模型中展示了稳健的结果，为值得信赖的个人人工智能提供了一个有希望的方向。
+
+</details>
+
+---
+
+## 6. Agentic retrieval-augmented reasoning reshapes collective reliability under model variability in radiology question answering / 代理检索增强推理重塑放射学问答模型变异下的集体可靠性
+
+**Date**: 2026-03-06 | **arXiv**: [2603.06271v1](http://arxiv.org/abs/2603.06271v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.06271v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Agentic retrieval-augmented reasoning pipelines are increasingly used to structure how large language models (LLMs) incorporate external evidence in clinical decision support. These systems iteratively retrieve curated domain knowledge and synthesize it into structured reports before answer selection. Although such pipelines can improve performance, their impact on reliability under model variability remains unclear. In real-world deployment, heterogeneous models may align, diverge, or synchronize errors in ways not captured by accuracy. We evaluated 34 LLMs on 169 expert-curated publicly available radiology questions, comparing zero-shot inference with a radiology-specific multi-step agentic retrieval condition in which all models received identical structured evidence reports derived from curated radiology knowledge. Agentic inference reduced inter-model decision dispersion (median entropy 0.48 vs. 0.13) and increased robustness of correctness across models (mean 0.74 vs. 0.81). Majority consensus also increased overall (P<0.001). Consensus strength and robust correctness remained correlated under both strategies (\r{ho}=0.88 for zero-shot; \r{ho}=0.87 for agentic), although high agreement did not guarantee correctness. Response verbosity showed no meaningful association with correctness. Among 572 incorrect outputs, 72% were associated with moderate or high clinically assessed severity, although inter-rater agreement was low (\k{appa}=0.02). Agentic retrieval therefore was associated with more concentrated decision distributions, stronger consensus, and higher cross-model robustness of correctness. These findings suggest that evaluating agentic systems through accuracy or agreement alone may not always be sufficient, and that complementary analyses of stability, cross-model robustness, and potential clinical impact are needed to characterize reliability under model variability.
+
+代理检索增强推理管道越来越多地用于构建大型语言模型 (LLM) 如何将外部证据纳入临床决策支持。这些系统迭代地检索精选的领域知识，并在选择答案之前将其合成为结构化报告。尽管此类管道可以提高性能，但它们对模型可变性下可靠性的影响仍不清楚。在实际部署中，异构模型可能会以精度无法捕获的方式对齐、发散或同步错误。我们针对 169 个专家策划的公开放射学问题评估了 34 个法学硕士，将零样本推理与放射学特定的多步骤代理检索条件进行比较，其中所有模型都收到来自策划的放射学知识的相同结构化证据报告。代理推理减少了模型间决策离散度（中位熵 0.48 vs. 0.13），并提高了模型间正确性的鲁棒性（平均 0.74 vs. 0.81）。多数共识总体上也有所增加（P<0.001）。在两种策略下，共识强度和鲁棒正确性仍然相关（对于零样本，\r{ho}=0.88；对于代理，\r{ho}=0.87），尽管高度一致性并不能保证正确性。响应的冗长与正确性没有显着的关联。在 572 个错误输出中，72% 与临床评估的中度或高度严重程度相关，尽管评估者间的一致性较低 (\k{appa}=0.02)。因此，代理检索与更集中的决策分布、更强的共识和更高的跨模型正确性稳健性相关。这些发现表明，仅通过准确性或一致性来评估代理系统可能并不总是足够的，并且需要对稳定性、跨模型鲁棒性和潜在临床影响进行补充分析，以表征模型变异性下的可靠性。
+
+</details>
+
+---
+
+## 7. Conversational Demand Response: Bidirectional Aggregator-Prosumer Coordination through Agentic AI / 对话式需求响应：通过代理人工智能进行双向聚合者-产消者协调
+
+**Date**: 2026-03-06 | **arXiv**: [2603.06217v1](http://arxiv.org/abs/2603.06217v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.06217v1)
+
+**Categories**: cs.AI, cs.MA, eess.SY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Residential demand response depends on sustained prosumer participation, yet existing coordination is either fully automated, or limited to one-way dispatch signals and price alerts that offer little possibility for informed decision-making. This paper introduces Conversational Demand Response (CDR), a coordination mechanism where aggregators and prosumers interact through bidirectional natural language, enabled through agentic AI. A two-tier multi-agent architecture is developed in which an aggregator agent dispatches flexibility requests and a prosumer Home Energy Management System (HEMS) assesses deliverability and cost-benefit by calling an optimization-based tool. CDR also enables prosumer-initiated upstream communication, where changes in preferences can reach the aggregator directly. Proof-of-concept evaluation shows that interactions complete in under 12 seconds. The architecture illustrates how agentic AI can bridge the aggregator-prosumer coordination gap, providing the scalability of automated DR while preserving the transparency, explainability, and user agency necessary for sustained prosumer participation. All system components, including agent prompts, orchestration logic, and simulation interfaces, are released as open source to enable reproducibility and further development.
+
+住宅需求响应取决于持续的产消者参与，但现有的协调要么完全自动化，要么仅限于单向调度信号和价格警报，几乎不可能做出明智的决策。本文介绍了对话式需求响应 (CDR)，这是一种协调机制，聚合者和产消者通过双向自然语言进行交互，并通过代理人工智能实现。开发了一个两层多代理架构，其中聚合代理调度灵活性请求，产消者家庭能源管理系统（HEMS）通过调用基于优化的工具来评估可交付性和成本效益。 CDR 还支持产消者发起的上游通信，其中偏好的变化可以直接到达聚合器。概念验证评估表明交互在 12 秒内完成。该架构说明了代理人工智能如何弥合聚合者与产消者之间的协调差距，提供自动化灾难恢复的可扩展性，同时保留产消者持续参与所需的透明度、可解释性和用户代理。所有系统组件，包括代理提示、编排逻辑和模拟接口，均作为开源发布，以实现可重复性和进一步开发。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-03-07 (31 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-03-07
