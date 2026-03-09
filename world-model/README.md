@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-03-09](papers/2026-03-09.md) - 1 papers
 - [2026-03-07](papers/2026-03-07.md) - 8 papers
 - [2026-03-05](papers/2026-03-05.md) - 5 papers
 - [2026-03-04](papers/2026-03-04.md) - 5 papers
@@ -25,6 +26,34 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-03-09 (1 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-03-09
+
+**Paper Count**: 1
+
+---
+
+## 1. Uncertainty-Aware Adaptive Dynamics For Underwater Vehicle-Manipulator Robots / 水下车辆机械手机器人的不确定性感知自适应动力学
+
+**Date**: 2026-03-06 | **arXiv**: [2603.06548v1](http://arxiv.org/abs/2603.06548v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.06548v1)
+
+**Categories**: cs.RO, eess.SY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Accurate and adaptive dynamic models are critical for underwater vehicle-manipulator systems where hydrodynamic effects induce time-varying parameters. This paper introduces a novel uncertainty-aware adaptive dynamics model framework that remains linear in lumped vehicle and manipulator parameters, and embeds convex physical consistency constraints during online estimation. Moving horizon estimation is used to stack horizon regressors, enforce realizable inertia, damping, friction, and hydrostatics, and quantify uncertainty from parameter evolution. Experiments on a BlueROV2 Heavy with a 4-DOF manipulator demonstrate rapid convergence and calibrated predictions. Manipulator fits achieve R2 = 0.88 to 0.98 with slopes near unity, while vehicle surge, heave, and roll are reproduced with good fidelity under stronger coupling and noise. Median solver time is approximately 0.023 s per update, confirming online feasibility. A comparison against a fixed parameter model shows consistent reductions in MAE and RMSE across degrees of freedom. Results indicate physically plausible parameters and confidence intervals with near 100% coverage, enabling reliable feedforward control and simulation in underwater environments.
+
+准确和自适应的动态模型对于水下航行器操纵器系统至关重要，其中水动力效应会引起时变参数。本文介绍了一种新颖的不确定性感知自适应动力学模型框架，该框架在集总车辆和机械臂参数中保持线性，并在在线估计期间嵌入凸物理一致性约束。移动地平线估计用于堆叠地平线回归量，强制实现可实现的惯性、阻尼、摩擦力和流体静力学，并量化参数演化的不确定性。在带有 4-DOF 机械臂的 BlueROV2 Heavy 上进行的实验证明了快速收敛和校准预测。机械手拟合实现 R2 = 0.88 至 0.98，斜率接近一致，而车辆波动、升沉和侧倾在更强的耦合和噪声下以良好的保真度再现。每次更新求解器时间中值约为 0.023 秒，证实了在线可行性。与固定参数模型的比较表明，MAE 和 RMSE 在各个自由度上均一致降低。结果表明物理上合理的参数和置信区间具有接近 100% 的覆盖率，可在水下环境中实现可靠的前馈控制和模拟。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-03-07 (8 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-03-07
