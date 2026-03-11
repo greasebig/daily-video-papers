@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-03-11](papers/2026-03-11.md) - 22 papers
 - [2026-03-10](papers/2026-03-10.md) - 12 papers
 - [2026-03-09](papers/2026-03-09.md) - 9 papers
 - [2026-03-07](papers/2026-03-07.md) - 18 papers
@@ -35,6 +36,374 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-03-11 (22 papers)</b></summary>
+
+# arXiv Video Papers - 2026-03-11
+
+**Paper Count**: 22
+
+---
+
+## 1. DISPLAY: Directable Human-Object Interaction Video Generation via Sparse Motion Guidance and Multi-Task Auxiliary / 显示：通过稀疏运动引导和多任务辅助生成可定向的人机交互视频
+
+**Date**: 2026-03-10 | **arXiv**: [2603.09883v1](http://arxiv.org/abs/2603.09883v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.09883v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Human-centric video generation has advanced rapidly, yet existing methods struggle to produce controllable and physically consistent Human-Object Interaction (HOI) videos. Existing works rely on dense control signals, template videos, or carefully crafted text prompts, which limit flexibility and generalization to novel objects. We introduce a framework, namely DISPLAY, guided by Sparse Motion Guidance, composed only of wrist joint coordinates and a shape-agnostic object bounding box. This lightweight guidance alleviates the imbalance between human and object representations and enables intuitive user control. To enhance fidelity under such sparse conditions, we propose an Object-Stressed Attention mechanism that improves object robustness. To address the scarcity of high-quality HOI data, we further develop a Multi-Task Auxiliary Training strategy with a dedicated data curation pipeline, allowing the model to benefit from both reliable HOI samples and auxiliary tasks. Comprehensive experiments show that our method achieves high-fidelity, controllable HOI generation across diverse tasks. The project page can be found at \href{https://mumuwei.github.io/DISPLAY/}.
+
+以人为中心的视频生成技术发展迅速，但现有方法难以生成可控且物理一致的人机交互 (HOI) 视频。现有的作品依赖于密集的控制信号、模板视频或精心设计的文本提示，这限制了对新物体的灵活性和泛化。我们引入了一个框架，即 DISPLAY，由稀疏运动指导引导，仅由腕关节坐标和形状不可知的对象边界框组成。这种轻量级的指导减轻了人类和物体表示之间的不平衡，并实现了直观的用户控制。为了增强这种稀疏条件下的保真度，我们提出了一种对象应力注意力机制，可以提高对象的鲁棒性。为了解决高质量 HOI 数据的稀缺问题，我们进一步开发了具有专用数据管理管道的多任务辅助训练策略，使模型能够从可靠的 HOI 样本和辅助任务中受益。综合实验表明，我们的方法可以在不同的任务中实现高保真、可控的 HOI 生成。项目页面可以在 \href{https://mumuwei.github.io/DISPLAY/} 找到。
+
+</details>
+
+---
+
+## 2. ConfCtrl: Enabling Precise Camera Control in Video Diffusion via Confidence-Aware Interpolation / ConfCtrl：通过置信度感知插值在视频扩散中实现精确的摄像机控制
+
+**Date**: 2026-03-10 | **arXiv**: [2603.09819v1](http://arxiv.org/abs/2603.09819v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.09819v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We address the challenge of novel view synthesis from only two input images under large viewpoint changes. Existing regression-based methods lack the capacity to reconstruct unseen regions, while camera-guided diffusion models often deviate from intended trajectories due to noisy point cloud projections or insufficient conditioning from camera poses. To address these issues, we propose ConfCtrl, a confidence-aware video interpolation framework that enables diffusion models to follow prescribed camera poses while completing unseen regions. ConfCtrl initializes the diffusion process by combining a confidence-weighted projected point cloud latent with noise as the conditioning input. It then applies a Kalman-inspired predict-update mechanism, treating the projected point cloud as a noisy measurement and using learned residual corrections to balance pose-driven predictions with noisy geometric observations. This allows the model to rely on reliable projections while down-weighting uncertain regions, yielding stable, geometry-aware generation. Experiments on multiple datasets show that ConfCtrl produces geometrically consistent and visually plausible novel views, effectively reconstructing occluded regions under large viewpoint changes.
+
+我们解决了在大视点变化下仅从两个输入图像合成新颖视图的挑战。现有的基于回归的方法缺乏重建未见区域的能力，而相机引导的扩散模型通常由于点云投影的噪声或相机姿态调节不足而偏离预期轨迹。为了解决这些问题，我们提出了 ConfCtrl，这是一种具有置信度的视频插值框架，使扩散模型能够遵循规定的相机姿势，同时完成看不见的区域。 ConfCtrl 通过将置信加权投影潜在点云与噪声相结合作为调节输入来初始化扩散过程。然后，它应用卡尔曼启发的预测更新机制，将投影点云视为噪声测量，并使用学习的残差校正来平衡姿势驱动的预测与噪声几何观测。这使得模型能够依赖可靠的预测，同时降低不确定区域的权重，从而产生稳定的、几何感知的生成。对多个数据集的实验表明，ConfCtrl 产生几何一致且视觉上合理的新颖视图，在大视点变化下有效地重建遮挡区域。
+
+</details>
+
+---
+
+## 3. ENIGMA-360: An Ego-Exo Dataset for Human Behavior Understanding in Industrial Scenarios / ENIGMA-360：用于工业场景中人类行为理解的 Ego-Exo 数据集
+
+**Date**: 2026-03-10 | **arXiv**: [2603.09741v1](http://arxiv.org/abs/2603.09741v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.09741v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Understanding human behavior from complementary egocentric (ego) and exocentric (exo) points of view enables the development of systems that can support workers in industrial environments and enhance their safety. However, progress in this area is hindered by the lack of datasets capturing both views in realistic industrial scenarios. To address this gap, we propose ENIGMA-360, a new ego-exo dataset acquired in a real industrial scenario. The dataset is composed of 180 egocentric and 180 exocentric procedural videos temporally synchronized offering complementary information of the same scene. The 360 videos have been labeled with temporal and spatial annotations, enabling the study of different aspects of human behavior in industrial domain. We provide baseline experiments for 3 foundational tasks for human behavior understanding: 1) Temporal Action Segmentation, 2) Keystep Recognition and 3) Egocentric Human-Object Interaction Detection, showing the limits of state-of-the-art approaches on this challenging scenario. These results highlight the need for new models capable of robust ego-exo understanding in real-world environments. We publicly release the dataset and its annotations at https://iplab.dmi.unict.it/ENIGMA-360.
+
+从互补的自我中心 (ego) 和外中心 (exo) 的角度理解人类行为，可以开发出支持工业环境中工人并增强其安全的系统。然而，由于缺乏捕获现实工业场景中两种观点的数据集，该领域的进展受到阻碍。为了解决这一差距，我们提出了 ENIGMA-360，这是在真实工业场景中获取的新的 ego-exo 数据集。该数据集由 180 个以自我为中心和 180 个以外为中心的程序视频组成，这些视频在时间上同步，提供同一场景的补充信息。 360 度视频带有时间和空间注释，可以研究工业领域人类行为的不同方面。我们为人类行为理解的 3 个基本任务提供了基线实验：1）时间动作分割，2）关键步骤识别和 3）以自我为中心的人与物体交互检测，显示了最先进的方法在这一具有挑战性的场景中的局限性。这些结果凸显了对能够在现实环境中强大的自我-外在理解的新模型的需求。我们在 https://iplab.dmi.unict.it/ENIGMA-360 公开发布数据集及其注释。
+
+</details>
+
+---
+
+## 4. FrameDiT: Diffusion Transformer with Frame-Level Matrix Attention for Efficient Video Generation / FrameDiT：具有帧级矩阵注意力的扩散变压器，可实现高效视频生成
+
+**Date**: 2026-03-10 | **arXiv**: [2603.09721v1](http://arxiv.org/abs/2603.09721v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.09721v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+High-fidelity video generation remains challenging for diffusion models due to the difficulty of modeling complex spatio-temporal dynamics efficiently. Recent video diffusion methods typically represent a video as a sequence of spatio-temporal tokens which can be modeled using Diffusion Transformers (DiTs). However, this approach faces a trade-off between the strong but expensive Full 3D Attention and the efficient but temporally limited Local Factorized Attention. To resolve this trade-off, we propose Matrix Attention, a frame-level temporal attention mechanism that processes an entire frame as a matrix and generates query, key, and value matrices via matrix-native operations. By attending across frames rather than tokens, Matrix Attention effectively preserves global spatio-temporal structure and adapts to significant motion. We build FrameDiT-G, a DiT architecture based on MatrixAttention, and further introduce FrameDiT-H, which integrates Matrix Attention with Local Factorized Attention to capture both large and small motion. Extensive experiments show that FrameDiT-H achieves state-of-the-art results across multiple video generation benchmarks, offering improved temporal coherence and video quality while maintaining efficiency comparable to Local Factorized Attention.
+
+由于难以有效地建模复杂的时空动力学，高保真视频生成对于扩散模型仍然具有挑战性。最近的视频扩散方法通常将视频表示为一系列时空标记，可以使用扩散变压器（DiT）对其进行建模。然而，这种方法面临着强大但昂贵的 Full 3D Attention 和高效但时间有限的 Local Factorized Attention 之间的权衡。为了解决这种权衡，我们提出了矩阵注意力，这是一种帧级时间注意力机制，它将整个帧作为矩阵处理，并通过矩阵本机操作生成查询、键和值矩阵。通过跨帧而不是令牌进行关注，矩阵注意力有效地保留了全局时空结构并适应重大运动。我们构建了基于 MatrixAttention 的 DiT 架构 FrameDiT-G，并进一步介绍了 FrameDiT-H，它将 Matrix Attention 与 Local Factorized Attention 相结合，以捕获大运动和小运动。大量实验表明，FrameDiT-H 在多个视频生成基准中实现了最先进的结果，提供了改进的时间一致性和视频质量，同时保持了与局部因子化注意力相当的效率。
+
+</details>
+
+---
+
+## 5. TemporalDoRA: Temporal PEFT for Robust Surgical Video Question Answering / TemporalDoRA：用于稳健手术视频问答的颞 PEFT
+
+**Date**: 2026-03-10 | **arXiv**: [2603.09696v1](http://arxiv.org/abs/2603.09696v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.09696v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Surgical Video Question Answering (VideoQA) requires accurate temporal grounding while remaining robust to natural variation in how clinicians phrase questions, where linguistic bias can arise. Standard Parameter Efficient Fine Tuning (PEFT) methods adapt pretrained projections without explicitly modeling frame-to-frame interactions within the adaptation pathway, limiting their ability to exploit sparse temporal evidence. We introduce TemporalDoRA, a video-specific PEFT formulation that extends Weight-Decomposed Low-Rank Adaptation by (i) inserting lightweight temporal Multi-Head Attention (MHA) inside the low-rank bottleneck of the vision encoder and (ii) selectively applying weight decomposition only to the trainable low-rank branch rather than the full adapted weight. This design enables temporally-aware updates while preserving a frozen backbone and stable scaling. By mixing information across frames within the adaptation subspace, TemporalDoRA steers updates toward temporally consistent visual cues and improves robustness with minimal parameter overhead. To benchmark this setting, we present REAL-Colon-VQA, a colonoscopy VideoQA dataset with 6,424 clip--question pairs, including paired rephrased Out-of-Template questions to evaluate sensitivity to linguistic variation. TemporalDoRA improves Out-of-Template performance, and ablation studies confirm that temporal mixing inside the low-rank branch is the primary driver of these gains. We also validate on EndoVis18-VQA adapted to short clips and observe consistent improvements on the Out-of-Template split. Code and dataset available at~\href{https://anonymous.4open.science/r/TemporalDoRA-BFC8/}{Anonymous GitHub}.
+
+外科视频问答 (VideoQA) 需要准确的时间基础，同时对临床医生如何表达问题的自然变化保持鲁棒性，因为在这种情况下可能会出现语言偏差。标准参数高效微调（PEFT）方法适应预训练的投影，而无需在适应路径内明确建模帧到帧的交互，从而限制了它们利用稀疏时间证据的能力。我们引入了 TemporalDoRA，这是一种视频特定的 PEFT 公式，它通过以下方式扩展了权重分解低秩自适应：(i) 在视觉编码器的低秩瓶颈内插入轻量级时态多头注意力 (MHA)；(ii) 有选择地将权重分解仅应用于可训练的低秩分支而不是完全自适应权重。这种设计可以实现临时感知更新，同时保留冻结的主干和稳定的扩展。通过在适应子空间内混合跨帧的信息，TemporalDoRA 引导更新朝向时间一致的视觉线索，并以最小的参数开销提高鲁棒性。为了对这一设置进行基准测试，我们提出了 REAL-Colon-VQA，这是一个结肠镜检查视频 QA 数据集，包含 6,424 个剪辑问题对，包括成对的改写模板外问题，以评估对语言变异的敏感性。 TemporalDoRA 提高了模板外性能，消融研究证实，低秩分支内的时间混合是这些增益的主要驱动力。我们还验证了适用于短片的 EndoVis18-VQA，并观察到模板外分割的一致改进。代码和数据集位于~\href{https://anonymous.4open.science/r/TemporalDoRA-BFC8/}{Anonymous GitHub}。
+
+</details>
+
+---
+
+## 6. Improving 3D Foot Motion Reconstruction in Markerless Monocular Human Motion Capture / 改进无标记单目人体运动捕捉中的 3D 足部运动重建
+
+**Date**: 2026-03-10 | **arXiv**: [2603.09681v1](http://arxiv.org/abs/2603.09681v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.09681v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+State-of-the-art methods can recover accurate overall 3D human body motion from in-the-wild videos. However, they often fail to capture fine-grained articulations, especially in the feet, which are critical for applications such as gait analysis and animation. This limitation results from training datasets with inaccurate foot annotations and limited foot motion diversity. We address this gap with FootMR, a Foot Motion Refinement method that refines foot motion estimated by an existing human recovery model through lifting 2D foot keypoint sequences to 3D. By avoiding direct image input, FootMR circumvents inaccurate image-3D annotation pairs and can instead leverage large-scale motion capture data. To resolve ambiguities of 2D-to-3D lifting, FootMR incorporates knee and foot motion as context and predicts only residual foot motion. Generalization to extreme foot poses is further improved by representing joints in global rather than parent-relative rotations and applying extensive data augmentation. To support evaluation of foot motion reconstruction, we introduce MOOF, a 2D dataset of complex foot movements. Experiments on MOOF, MOYO, and RICH show that FootMR outperforms state-of-the-art methods, reducing ankle joint angle error on MOYO by up to 30% over the best video-based approach.
+
+最先进的方法可以从野外视频中恢复准确的整体 3D 人体运动。然而，它们通常无法捕获细粒度的关节，尤其是脚部的关节，这对于步态分析和动画等应用至关重要。这种限制是由于训练数据集的足部注释不准确和足部运动多样性有限造成的。我们通过 FootMR 解决了这一差距，这是一种足部运动细化方法，通过将 2D 足部关键点序列提升到 3D 来细化现有人体恢复模型估计的足部运动。通过避免直接图像输入，FootMR 避免了不准确的图像-3D 注释对，而是可以利用大规模运动捕捉数据。为了解决 2D 到 3D 提升的模糊性，FootMR 将膝盖和脚部运动纳入上下文，并仅预测残余脚部运动。通过在全局而不是相对于父级旋转中表示关节并应用广泛的数据增强，进一步改进了对极端脚部姿势的泛化。为了支持足部运动重建的评估，我们引入了 MOOF，这是一个复杂足部运动的 2D 数据集。 MOOF、MOYO 和 RICH 上的实验表明，FootMR 的性能优于最先进的方法，与基于视频的最佳方法相比，MOYO 上的踝关节角度误差最多可减少 30%。
+
+</details>
+
+---
+
+## 7. When to Lock Attention: Training-Free KV Control in Video Diffusion / 何时锁定注意力：视频扩散中的免训练 KV 控制
+
+**Date**: 2026-03-10 | **arXiv**: [2603.09657v1](http://arxiv.org/abs/2603.09657v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.09657v1)
+
+**Categories**: cs.CV, cs.AI, cs.ET, eess.IV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Maintaining background consistency while enhancing foreground quality remains a core challenge in video editing. Injecting full-image information often leads to background artifacts, whereas rigid background locking severely constrains the model's capacity for foreground generation. To address this issue, we propose KV-Lock, a training-free framework tailored for DiT-based video diffusion models. Our core insight is that the hallucination metric (variance of denoising prediction) directly quantifies generation diversity, which is inherently linked to the classifier-free guidance (CFG) scale. Building upon this, KV-Lock leverages diffusion hallucination detection to dynamically schedule two key components: the fusion ratio between cached background key-values (KVs) and newly generated KVs, and the CFG scale. When hallucination risk is detected, KV-Lock strengthens background KV locking and simultaneously amplifies conditional guidance for foreground generation, thereby mitigating artifacts and improving generation fidelity. As a training-free, plug-and-play module, KV-Lock can be easily integrated into any pre-trained DiT-based models. Extensive experiments validate that our method outperforms existing approaches in improved foreground quality with high background fidelity across various video editing tasks.
+
+在增强前景质量的同时保持背景一致性仍然是视频编辑的核心挑战。注入全图像信息通常会导致背景伪影，而严格的背景锁定严重限制了模型的前景生成能力。为了解决这个问题，我们提出了 KV-Lock，这是一种为基于 DiT 的视频扩散模型量身定制的免训练框架。我们的核心见解是幻觉度量（去噪预测的方差）直接量化世代多样性，这与无分类器指导（CFG）规模有着内在的联系。在此基础上，KV-Lock 利用扩散幻觉检测来动态调度两个关键组件：缓存的背景键值 (KV) 和新生成的 KV 之间的融合比率，以及 CFG 比例。当检测到幻觉风险时，KV-Lock 会加强背景 KV 锁定，同时放大前景生成的条件指导，从而减少伪影并提高生成保真度。作为免训练、即插即用的模块，KV-Lock 可以轻松集成到任何预先训练的基于 DiT 的模型中。大量的实验验证了我们的方法在提高前景质量和跨各种视频编辑任务中的高背景保真度方面优于现有方法。
+
+</details>
+
+---
+
+## 8. SurgFed: Language-guided Multi-Task Federated Learning for Surgical Video Understanding / SurgFed：用于手术视频理解的语言引导多任务联合学习
+
+**Date**: 2026-03-10 | **arXiv**: [2603.09496v1](http://arxiv.org/abs/2603.09496v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.09496v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Surgical scene Multi-Task Federated Learning (MTFL) is essential for robot-assisted minimally invasive surgery (RAS) but remains underexplored in surgical video understanding due to two key challenges: (1) Tissue Diversity: Local models struggle to adapt to site-specific tissue features, limiting their effectiveness in heterogeneous clinical environments and leading to poor local predictions. (2) Task Diversity: Server-side aggregation, relying solely on gradient-based clustering, often produces suboptimal or incorrect parameter updates due to inter-site task heterogeneity, resulting in inaccurate localization. In light of these two issues, we propose SurgFed, a multi-task federated learning framework, enabling federated learning for surgical scene segmentation and depth estimation across diverse surgical types. SurgFed is powered by two appealing designs, i.e., Language-guided Channel Selection (LCS) and Language-guided Hyper Aggregation (LHA), to address the challenge of fully exploration on corss-site and cross-task. Technically, the LCS is first designed a lightweight personalized channel selection network that enhances site-specific adaptation using pre-defined text inputs, which optimally the local model learn the specific embeddings. We further introduce the LHA that employs a layer-wise cross-attention mechanism with pre-defined text inputs to model task interactions across sites and guide a hypernetwork for personalized parameter updates. Extensive empirical evidence shows that SurgFed yields improvements over the state-of-the-art methods in five public datasets across four surgical types. The code is available at https://anonymous.4open.science/r/SurgFed-070E/.
+
+手术场景多任务联邦学习 (MTFL) 对于机器人辅助微创手术 (RAS) 至关重要，但由于两个关键挑战，手术视频理解方面的研究仍未得到充分探索：(1) 组织多样性：局部模型难以适应特定部位的组织特征，限制了其在异构临床环境中的有效性，并导致局部预测不佳。 (2) 任务多样性：服务器端聚合仅依靠基于梯度的聚类，往往会因站点间任务异构性而产生次优或不正确的参数更新，从而导致定位不准确。鉴于这两个问题，我们提出了 SurgFed，一个多任务联邦学习框架，能够实现跨不同手术类型的手术场景分割和深度估计的联邦学习。 SurgFed 由两种吸引人的设计提供支持，即语言引导的通道选择（LCS）和语言引导的超聚合（LHA），以解决跨站点和跨任务充分探索的挑战。从技术上讲，LCS 首先设计了一个轻量级的个性化频道选择网络，该网络使用预定义的文本输入来增强特定于站点的适应，从而优化本地模型学习特定的嵌入。我们进一步介绍了 LHA，它采用分层交叉注意机制和预定义的文本输入来建模跨站点的任务交互，并指导超网络进行个性化参数更新。大量的经验证据表明，SurgFed 在四种手术类型的五个公共数据集中比最先进的方法有所改进。该代码可从 https://anonymous.4open.science/r/SurgFed-070E/ 获取。
+
+</details>
+
+---
+
+## 9. Streaming Autoregressive Video Generation via Diagonal Distillation / 通过对角蒸馏生成流式自回归视频
+
+**Date**: 2026-03-10 | **arXiv**: [2603.09488v1](http://arxiv.org/abs/2603.09488v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.09488v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large pretrained diffusion models have significantly enhanced the quality of generated videos, and yet their use in real-time streaming remains limited. Autoregressive models offer a natural framework for sequential frame synthesis but require heavy computation to achieve high fidelity. Diffusion distillation can compress these models into efficient few-step variants, but existing video distillation approaches largely adapt image-specific methods that neglect temporal dependencies. These techniques often excel in image generation but underperform in video synthesis, exhibiting reduced motion coherence, error accumulation over long sequences, and a latency-quality trade-off. We identify two factors that result in these limitations: insufficient utilization of temporal context during step reduction and implicit prediction of subsequent noise levels in next-chunk prediction (i.e., exposure bias). To address these issues, we propose Diagonal Distillation, which operates orthogonally to existing approaches and better exploits temporal information across both video chunks and denoising steps. Central to our approach is an asymmetric generation strategy: more steps early, fewer steps later. This design allows later chunks to inherit rich appearance information from thoroughly processed early chunks, while using partially denoised chunks as conditional inputs for subsequent synthesis. By aligning the implicit prediction of subsequent noise levels during chunk generation with the actual inference conditions, our approach mitigates error propagation and reduces oversaturation in long-range sequences. We further incorporate implicit optical flow modeling to preserve motion quality under strict step constraints. Our method generates a 5-second video in 2.61 seconds (up to 31 FPS), achieving a 277.3x speedup over the undistilled model.
+
+大型预训练扩散模型显着提高了生成视频的质量，但它们在实时流媒体中的使用仍然有限。自回归模型为顺序帧合成提供了一个自然的框架，但需要大量计算才能实现高保真度。扩散蒸馏可以将这些模型压缩为有效的几个步骤变体，但现有的视频蒸馏方法很大程度上采用了忽略时间依赖性的图像特定方法。这些技术通常在图像生成方面表现出色，但在视频合成方面表现不佳，表现出运动一致性降低、长序列上的错误累积以及延迟质量权衡。我们确定了导致这些限制的两个因素：在步骤减少期间对时间上下文的利用不足以及在下一个块预测中对后续噪声水平的隐式预测（即曝光偏差）。为了解决这些问题，我们提出了对角蒸馏，它与现有方法正交，可以更好地利用视频块和去噪步骤中的时间信息。我们方法的核心是不对称生成策略：早期步骤较多，后期步骤较少。这种设计允许后面的块从彻底处理的早期块继承丰富的外观信息，同时使用部分去噪的块作为后续合成的条件输入。通过将块生成期间后续噪声水平的隐式预测与实际推理条件对齐，我们的方法减轻了错误传播并减少了长程序列中的过饱和。我们进一步结合隐式光流建模，以在严格的步长约束下保持运动质量。我们的方法在 2.61 秒内生成一个 5 秒的视频（高达 31 FPS），比未蒸馏的模型实现了 277.3 倍的加速。
+
+</details>
+
+---
+
+## 10. Training-free Motion Factorization for Compositional Video Generation / 用于合成视频生成的免训练运动分解
+
+**Date**: 2026-03-10 | **arXiv**: [2603.09104v1](http://arxiv.org/abs/2603.09104v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.09104v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Compositional video generation aims to synthesize multiple instances with diverse appearance and motion, which is widely applicable in real-world scenarios. However, current approaches mainly focus on binding semantics, neglecting to understand diverse motion categories specified in prompts. In this paper, we propose a motion factorization framework that decomposes complex motion into three primary categories: motionlessness, rigid motion, and non-rigid motion. Specifically, our framework follows a planning before generation paradigm. (1) During planning, we reason about motion laws on the motion graph to obtain frame-wise changes in the shape and position of each instance. This alleviates semantic ambiguities in the user prompt by organizing it into a structured representation of instances and their interactions. (2) During generation, we modulate the synthesis of distinct motion categories in a disentangled manner. Conditioned on the motion cues, guidance branches stabilize appearance in motionless regions, preserve rigid-body geometry, and regularize local non-rigid deformations. Crucially, our two modules are model-agnostic, which can be seamlessly incorporated into various diffusion model architectures. Extensive experiments demonstrate that our framework achieves impressive performance in motion synthesis on real-world benchmarks. Our code will be released soon.
+
+合成视频生成旨在合成具有不同外观和运动的多个实例，广泛适用于现实场景。然而，当前的方法主要集中于绑定语义，忽略了理解提示中指定的不同运动类别。在本文中，我们提出了一种运动分解框架，将复杂运动分解为三个主要类别：静止、刚性运动和非刚性运动。具体来说，我们的框架遵循生成前规划范例。 （1）在规划过程中，我们对运动图上的运动规律进行推理，以获得每个实例的形状和位置的逐帧变化。这通过将用户提示组织成实例及其交互的结构化表示来减轻用户提示中的语义歧义。 (2)在生成过程中，我们以一种解开的方式调节不同运动类别的合成。根据运动线索，引导分支稳定静止区域的外观，保留刚体几何形状，并规范局部非刚性变形。至关重要的是，我们的两个模块与模型无关，可以无缝地合并到各种扩散模型架构中。大量的实验表明，我们的框架在现实世界基准的运动合成中取得了令人印象深刻的性能。我们的代码很快就会发布。
+
+</details>
+
+---
+
+## 11. Chain of Event-Centric Causal Thought for Physically Plausible Video Generation / 用于物理上合理的视频生成的以事件为中心的因果思想链
+
+**Date**: 2026-03-10 | **arXiv**: [2603.09094v1](http://arxiv.org/abs/2603.09094v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.09094v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Physically Plausible Video Generation (PPVG) has emerged as a promising avenue for modeling real-world physical phenomena. PPVG requires an understanding of commonsense knowledge, which remains a challenge for video diffusion models. Current approaches leverage commonsense reasoning capability of large language models to embed physical concepts into prompts. However, generation models often render physical phenomena as a single moment defined by prompts, due to the lack of conditioning mechanisms for modeling causal progression. In this paper, we view PPVG as generating a sequence of causally connected and dynamically evolving events. To realize this paradigm, we design two key modules: (1) Physics-driven Event Chain Reasoning. This module decomposes the physical phenomena described in prompts into multiple elementary event units, leveraging chain-of-thought reasoning. To mitigate causal ambiguity, we embed physical formulas as constraints to impose deterministic causal dependencies during reasoning. (2) Transition-aware Cross-modal Prompting (TCP). To maintain continuity between events, this module transforms causal event units into temporally aligned vision-language prompts. It summarizes discrete event descriptions to obtain causally consistent narratives, while progressively synthesizing visual keyframes of individual events by interactive editing. Comprehensive experiments on PhyGenBench and VideoPhy benchmarks demonstrate that our framework achieves superior performance in generating physically plausible videos across diverse physical domains. Our code will be released soon.
+
+物理上合理的视频生成（PPVG）已成为模拟现实世界物理现象的一种有前途的途径。 PPVG 需要理解常识知识，这对于视频扩散模型来说仍然是一个挑战。当前的方法利用大型语言模型的常识推理能力将物理概念嵌入到提示中。然而，由于缺乏用于建模因果进展的调节机制，生成模型通常将物理现象呈现为由提示定义的单个时刻。在本文中，我们将 PPVG 视为生成一系列因果关联且动态演变的事件。为了实现这一范式，我们设计了两个关键模块：（1）物理驱动的事件链推理。该模块利用思维链推理，将提示中描述的物理现象分解为多个基本事件单元。为了减轻因果模糊性，我们嵌入物理公式作为约束，以在推理过程中施加确定性因果依赖性。 (2) 转换感知的跨模式提示（TCP）。为了保持事件之间的连续性，该模块将因果事件单元转换为时间对齐的视觉语言提示。它总结离散事件描述以获得因果一致的叙述，同时通过交互式编辑逐步合成单个事件的视觉关键帧。 PhyGenBench 和 VideoPhy 基准测试的综合实验表明，我们的框架在跨不同物理领域生成物理上合理的视频方面实现了卓越的性能。我们的代码很快就会发布。
+
+</details>
+
+---
+
+## 12. SVG-EAR: Parameter-Free Linear Compensation for Sparse Video Generation via Error-aware Routing / SVG-EAR：通过错误感知路由生成稀疏视频的无参数线性补偿
+
+**Date**: 2026-03-09 | **arXiv**: [2603.08982v1](http://arxiv.org/abs/2603.08982v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.08982v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Diffusion Transformers (DiTs) have become a leading backbone for video generation, yet their quadratic attention cost remains a major bottleneck. Sparse attention reduces this cost by computing only a subset of attention blocks. However, prior methods often either drop the remaining blocks, which incurs information loss, or rely on learned predictors to approximate them, introducing training overhead and potential output distribution shifting. In this paper, we show that the missing contributions can be recovered without training: after semantic clustering, keys and values within each block exhibit strong similarity and can be well summarized by a small set of cluster centroids. Based on this observation, we introduce SVG-EAR, a parameter-free linear compensation branch that uses the centroid to approximate skipped blocks and recover their contributions. While centroid compensation is accurate for most blocks, it can fail on a small subset. Standard sparsification typically selects blocks by attention scores, which indicate where the model places its attention mass, but not where the approximation error would be largest. SVG-EAR therefore performs error-aware routing: a lightweight probe estimates the compensation error for each block, and we compute exactly the blocks with the highest error-to-cost ratio while compensating for skipped blocks. We provide theoretical guarantees that relate attention reconstruction error to clustering quality, and empirically show that SVG-EAR improves the quality-efficiency trade-off and increases throughput at the same generation fidelity on video diffusion tasks. Overall, SVG-EAR establishes a clear Pareto frontier over prior approaches, achieving up to 1.77$\times$ and 1.93$\times$ speedups while maintaining PSNRs of up to 29.759 and 31.043 on Wan2.2 and HunyuanVideo, respectively.
+
+扩散变压器（DiT）已成为视频生成的主要支柱，但其二次注意力成本仍然是主要瓶颈。稀疏注意力通过仅计算注意力块的子集来降低这种成本。然而，现有的方法通常要么丢弃剩余的块，这会导致信息丢失，要么依赖学习的预测器来近似它们，从而引入训练开销和潜在的输出分布偏移。在本文中，我们表明可以在不训练的情况下恢复缺失的贡献：在语义聚类之后，每个块内的键和值表现出很强的相似性，并且可以通过一小组聚类质心很好地概括。基于这一观察，我们引入了 SVG-EAR，这是一种无参数线性补偿分支，它使用质心来近似跳过的块并恢复它们的贡献。虽然质心补偿对于大多数块来说是准确的，但在一小部分块上可能会失败。标准稀疏化通常通过注意力分数来选择块，注意力分数指示模型将注意力集中在何处，但不是近似误差最大的位置。因此，SVG-EAR 执行错误感知路由：轻量级探针估计每个块的补偿误差，我们精确计算具有最高错误成本比的块，同时补偿跳过的块。我们提供了将注意力重建误差与聚类质量联系起来的理论保证，并凭经验证明 SVG-EAR 改善了质量效率权衡，并在视频扩散任务的同一代保真度下提高了吞吐量。总体而言，SVG-EAR 与之前的方法相比建立了清晰的帕累托边界，在 Wan2.2 和 HunyuanVideo 上分别实现了高达 1.77$\times$ 和 1.93$\times$ 的加速，同时保持高达 29.759 和 31.043 的 PSNR。
+
+</details>
+
+---
+
+## 13. MEGC2026: Micro-Expression Grand Challenge on Visual Question Answering / MEGC2026：视觉问答微表情大挑战
+
+**Date**: 2026-03-09 | **arXiv**: [2603.08927v1](http://arxiv.org/abs/2603.08927v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.08927v1)
+
+**Categories**: cs.CV, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Facial micro-expressions (MEs) are involuntary movements of the face that occur spontaneously when a person experiences an emotion but attempts to suppress or repress the facial expression, typically found in a high-stakes environment. In recent years, substantial advancements have been made in the areas of ME recognition, spotting, and generation. The emergence of multimodal large language models (MLLMs) and large vision-language models (LVLMs) offers promising new avenues for enhancing ME analysis through their powerful multimodal reasoning capabilities. The ME grand challenge (MEGC) 2026 introduces two tasks that reflect these evolving research directions: (1) ME video question answering (ME-VQA), which explores ME understanding through visual question answering on relatively short video sequences, leveraging MLLMs or LVLMs to address diverse question types related to MEs; and (2) ME long-video question answering (ME-LVQA), which extends VQA to long-duration video sequences in realistic settings, requiring models to handle temporal reasoning and subtle micro-expression detection across extended time periods. All participating algorithms are required to submit their results on a public leaderboard. More details are available at https://megc2026.github.io.
+
+面部微表情 (ME) 是当一个人经历某种情绪但试图抑制或压制面部表情时自发发生的面部不自主运动，通常出现在高风险环境中。近年来，ME 识别、发现和生成领域取得了实质性进展。多模态大语言模型 (MLLM) 和大视觉语言模型 (LVLM) 的出现，通过其强大的多模态推理能力，为增强 ME 分析提供了有希望的新途径。 ME 大挑战 (MEGC) 2026 引入了反映这些不断发展的研究方向的两项任务：(1) ME 视频问答 (ME-VQA)，它通过在相对较短的视频序列上进行视觉问答来探索 ME 理解，利用 MLLM 或 LVLM 来解决与 ME 相关的各种问题类型； (2) ME 长视频问答 (ME-LVQA)，它将 VQA 扩展到现实环境中的长视频序列，要求模型能够在较长的时间段内处理时间推理和微妙的微表情检测。所有参与的算法都必须在公共排行榜上提交其结果。更多详细信息请访问 https://megc2026.github.io。
+
+</details>
+
+---
+
+## 14. HECTOR: Hybrid Editable Compositional Object References for Video Generation / HECTOR：用于视频生成的混合可编辑组合对象参考
+
+**Date**: 2026-03-09 | **arXiv**: [2603.08850v1](http://arxiv.org/abs/2603.08850v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.08850v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Real-world videos naturally portray complex interactions among distinct physical objects, effectively forming dynamic compositions of visual elements. However, most current video generation models synthesize scenes holistically and therefore lack mechanisms for explicit compositional manipulation. To address this limitation, we propose HECTOR, a generative pipeline that enables fine-grained compositional control. In contrast to prior methods,HECTOR supports hybrid reference conditioning, allowing generation to be simultaneously guided by static images and/or dynamic videos. Moreover, users can explicitly specify the trajectory of each referenced element, precisely controlling its location, scale, and speed (see Figure1). This design allows the model to synthesize coherent videos that satisfy complex spatiotemporal constraints while preserving high-fidelity adherence to references. Extensive experiments demonstrate that HECTOR achieves superior visual quality, stronger reference preservation, and improved motion controllability compared with existing approaches.
+
+现实世界的视频自然地描绘了不同物理对象之间的复杂交互，有效地形成了视觉元素的动态组合。然而，当前大多数视频生成模型都是整体合成场景，因此缺乏显式组合操作的机制。为了解决这个限制，我们提出了 HECTOR，这是一种能够实现细粒度成分控制的生成管道。与之前的方法相比，HECTOR 支持混合参考调节，允许静态图像和/或动态视频同时引导生成。此外，用户可以明确指定每个引用元素的轨迹，精确控制其位置、比例和速度（见图1）。这种设计允许模型合成满足复杂时空约束的连贯视频，同时保持对参考的高保真度。大量实验表明，与现有方法相比，HECTOR 实现了卓越的视觉质量、更强的参考保留和改进的运动可控性。
+
+</details>
+
+---
+
+## 15. Fish Audio S2 Technical Report / Fish Audio S2 技术报告
+
+**Date**: 2026-03-09 | **arXiv**: [2603.08823v1](http://arxiv.org/abs/2603.08823v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.08823v1)
+
+**Categories**: cs.SD, cs.AI, cs.CL
+
+**Code**: https://github.com/fishaudio/fish-speech)
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We introduce Fish Audio S2, an open-sourced text-to-speech system featuring multi-speaker, multi-turn generation, and, most importantly, instruction-following control via natural-language descriptions. To scale training, we develop a multi-stage training recipe together with a staged data pipeline covering video captioning and speech captioning, voice-quality assessment, and reward modeling. To push the frontier of open-source TTS, we release our model weights, fine-tuning code, and an SGLang-based inference engine. The inference engine is production-ready for streaming, achieving an RTF of 0.195 and a time-to-first-audio below 100 ms.Our code and weights are available on GitHub (https://github.com/fishaudio/fish-speech) and Hugging Face (https://huggingface.co/fishaudio/s2-pro). We highly encourage readers to visit https://fish.audio to try custom voices.
+
+我们推出 Fish Audio S2，这是一种开源文本转语音系统，具有多扬声器、多轮生成功能，最重要的是，通过自然语言描述进行指令跟踪控制。为了扩展训练，我们开发了多阶段训练方案以及涵盖视频字幕和语音字幕、语音质量评估和奖励建模的分阶段数据管道。为了推动开源 TTS 的发展，我们发布了模型权重、微调代码和基于 SGLang 的推理引擎。推理引擎已做好流媒体生产准备，实现了 0.195 的 RTF 和低于 100 毫秒的首次音频时间。我们的代码和权重可在 GitHub (https://github.com/fishaudio/fish-speech) 和 Hugging Face (https://huggingface.co/fishaudio/s2-pro) 上获取。我们强烈鼓励读者访问 https://fish.audio 尝试自定义声音。
+
+</details>
+
+---
+
+## 16. HiAR: Efficient Autoregressive Long Video Generation via Hierarchical Denoising / HiAR：通过分层去噪实现高效自回归长视频生成
+
+**Date**: 2026-03-09 | **arXiv**: [2603.08703v1](http://arxiv.org/abs/2603.08703v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.08703v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Autoregressive (AR) diffusion offers a promising framework for generating videos of theoretically infinite length. However, a major challenge is maintaining temporal continuity while preventing the progressive quality degradation caused by error accumulation. To ensure continuity, existing methods typically condition on highly denoised contexts; yet, this practice propagates prediction errors with high certainty, thereby exacerbating degradation. In this paper, we argue that a highly clean context is unnecessary. Drawing inspiration from bidirectional diffusion models, which denoise frames at a shared noise level while maintaining coherence, we propose that conditioning on context at the same noise level as the current block provides sufficient signal for temporal consistency while effectively mitigating error propagation. Building on this insight, we propose HiAR, a hierarchical denoising framework that reverses the conventional generation order: instead of completing each block sequentially, it performs causal generation across all blocks at every denoising step, so that each block is always conditioned on context at the same noise level. This hierarchy naturally admits pipelined parallel inference, yielding a 1.8 wall-clock speedup in our 4-step setting. We further observe that self-rollout distillation under this paradigm amplifies a low-motion shortcut inherent to the mode-seeking reverse-KL objective. To counteract this, we introduce a forward-KL regulariser in bidirectional-attention mode, which preserves motion diversity for causal inference without interfering with the distillation loss. On VBench (20s generation), HiAR achieves the best overall score and the lowest temporal drift among all compared methods.
+
+自回归（AR）扩散为生成理论上无限长度的视频提供了一个有前途的框架。然而，一个主要挑战是保持时间连续性，同时防止错误累积引起的质量逐渐下降。为了确保连续性，现有方法通常以高度去噪的上下文为条件；然而，这种做法会以高确定性传播预测误差，从而加剧退化。在本文中，我们认为高度干净的上下文是不必要的。受到双向扩散模型的启发，双向扩散模型在共享噪声水平上对帧进行降噪，同时保持一致性，我们建议以与当前块相同的噪声水平对上下文进行调节，为时间一致性提供足够的信号，同时有效地减轻错误传播。基于这一见解，我们提出了 HiAR，一种分层去噪框架，它反转了传统的生成顺序：它不是按顺序完成每个块，而是在每个去噪步骤中对所有块执行因果生成，以便每个块始终以相同噪声水平的上下文为条件。这种层次结构自然允许流水线并行推理，在我们的 4 步设置中产生 1.8 的挂钟加速。我们进一步观察到，这种范式下的自推出蒸馏放大了模式搜索反向 KL 目标固有的低运动捷径。为了解决这个问题，我们在双向注意模式下引入了前向 KL 正则化器，它保留了因果推理的运动多样性，而不干扰蒸馏损失。在 VBench（20 代）上，HiAR 在所有比较方法中取得了最好的总体得分和最低的时间漂移​​。
+
+</details>
+
+---
+
+## 17. CAST: Modeling Visual State Transitions for Consistent Video Retrieval / CAST：对视觉状态转换进行建模以实现一致的视频检索
+
+**Date**: 2026-03-09 | **arXiv**: [2603.08648v1](http://arxiv.org/abs/2603.08648v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.08648v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+As video content creation shifts toward long-form narratives, composing short clips into coherent storylines becomes increasingly important. However, prevailing retrieval formulations remain context-agnostic at inference time, prioritizing local semantic alignment while neglecting state and identity consistency. To address this structural limitation, we formalize the task of Consistent Video Retrieval (CVR) and introduce a diagnostic benchmark spanning YouCook2, COIN, and CrossTask. We propose CAST (Context-Aware State Transition), a lightweight, plug-and-play adapter compatible with diverse frozen vision-language embedding spaces. By predicting a state-conditioned residual update ($Δ$) from visual history, CAST introduces an explicit inductive bias for latent state evolution. Extensive experiments show that CAST improves performance on YouCook2 and CrossTask, remains competitive on COIN, and consistently outperforms zero-shot baselines across diverse foundation backbones. Furthermore, CAST provides a useful reranking signal for black-box video generation candidates (e.g., from Veo), promoting more temporally coherent continuations.
+
+随着视频内容创作转向长篇叙事，将短片组成连贯的故事情节变得越来越重要。然而，流行的检索公式在推理时仍然与上下文无关，优先考虑局部语义对齐，而忽略状态和身份一致性。为了解决这种结构限制，我们将一致性视频检索 (CVR) 任务形式化，并引入了涵盖 YouCook2、COIN 和 CrossTask 的诊断基准。我们提出了 CAST（上下文感知状态转换），这是一种轻量级、即插即用的适配器，与多种冻结视觉语言嵌入空间兼容。通过根据视觉历史预测状态条件残差更新 ($Δ$)，CAST 为潜在状态演化引入了显式归纳偏差。大量实验表明，CAST 提高了 YouCook2 和 CrossTask 上的性能，在 COIN 上保持竞争力，并且在不同的基础主干上始终优于零样本基线。此外，CAST 为黑盒视频生成候选（例如，来自 Veo）提供了有用的重新排序信号，促进时间上更加一致的连续性。
+
+</details>
+
+---
+
+## 18. StreamReady: Learning What to Answer and When in Long Streaming Videos / StreamReady：学习在长流视频中回答什么以及何时回答
+
+**Date**: 2026-03-09 | **arXiv**: [2603.08620v1](http://arxiv.org/abs/2603.08620v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.08620v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Streaming video understanding often involves time-sensitive scenarios where models need to answer exactly when the supporting visual evidence appears: answering before the evidence reflects speculation, answering after it has passed reduces real-time utility. To capture this behavior, we introduce a readiness-aware formulation of streaming video understanding with the Answer Readiness Score (ARS), a timing-aware objective with asymmetric early and late penalties. When combined with correctness, ARS defines an effective accuracy that measures not just whether a model is right, but whether it answers at the appropriate moment. Building on this formulation, we introduce StreamReady, a framework to unify temporal reasoning with on-time answering through a lightweight readiness mechanism that decides if sufficient evidence has been observed before responding. To evaluate this capability, we further introduce ProReady-QA, a benchmark with annotated answer evidence windows and proactive multi-turn questions across local and global contexts. StreamReady achieves superior performance on ProReady-QA, and consistently outperforms prior methods across eight additional streaming and offline long-video benchmarks, demonstrating robust and broadly generalizable video understanding capability.
+
+流视频理解通常涉及时间敏感的场景，其中模型需要在支持的视觉证据出现时准确回答：在证据反映猜测之前回答，在证据通过之后回答会降低实时效用。为了捕捉这种行为，我们引入了一种流媒体视频理解的就绪感知公式，其中包括答案就绪分数（ARS），这是一个具有不对称早期和晚期惩罚的时间感知目标。当与正确性相结合时，ARS 定义了有效的准确性，不仅衡量模型是否正确，而且衡量模型是否在适当的时刻给出答案。在此基础上，我们引入了 StreamReady，这是一个框架，通过轻量级准备机制来统一时间推理和按时回答，该机制决定在响应之前是否观察到足够的证据。为了评估这种能力，我们进一步引入了 ProReady-QA，这是一个基准，具有带注释的答案证据窗口和跨本地和全球上下文的主动多轮问题。 StreamReady 在 ProReady-QA 上实现了卓越的性能，并且在八个额外的流媒体和离线长视频基准测试中始终优于先前的方法，展示了强大且广泛通用的视频理解能力。
+
+</details>
+
+---
+
+## 19. Interactive World Simulator for Robot Policy Training and Evaluation / 用于机器人政策培训和评估的交互式世界模拟器
+
+**Date**: 2026-03-09 | **arXiv**: [2603.08546v1](http://arxiv.org/abs/2603.08546v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.08546v1)
+
+**Categories**: cs.RO, cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Action-conditioned video prediction models (often referred to as world models) have shown strong potential for robotics applications, but existing approaches are often slow and struggle to capture physically consistent interactions over long horizons, limiting their usefulness for scalable robot policy training and evaluation. We present Interactive World Simulator, a framework for building interactive world models from a moderate-sized robot interaction dataset. Our approach leverages consistency models for both image decoding and latent-space dynamics prediction, enabling fast and stable simulation of physical interactions. In our experiments, the learned world models produce interaction-consistent pixel-level predictions and support stable long-horizon interactions for more than 10 minutes at 15 FPS on a single RTX 4090 GPU. Our framework enables scalable demonstration collection solely within the world models to train state-of-the-art imitation policies. Through extensive real-world evaluation across diverse tasks involving rigid objects, deformable objects, object piles, and their interactions, we find that policies trained on world-model-generated data perform comparably to those trained on the same amount of real-world data. Additionally, we evaluate policies both within the world models and in the real world across diverse tasks, and observe a strong correlation between simulated and real-world performance. Together, these results establish the Interactive World Simulator as a stable and physically consistent surrogate for scalable robotic data generation and faithful, reproducible policy evaluation.
+
+动作条件视频预测模型（通常称为世界模型）在机器人应用中显示出强大的潜力，但现有方法通常速度缓慢，并且难以捕获长范围内物理一致的交互，从而限制了它们在可扩展机器人策略训练和评估中的有用性。我们提出了交互式世界模拟器，这是一个用于从中等大小的机器人交互数据集构建交互式世界模型的框架。我们的方法利用一致性模型进行图像解码和潜在空间动态预测，从而实现快速稳定的物理交互模拟。在我们的实验中，学习的世界模型可生成交互一致的像素级预测，并在单个 RTX 4090 GPU 上以 15 FPS 的速度支持稳定的长视野交互超过 10 分钟。我们的框架可以仅在世界模型中进行可扩展的演示收集，以训练最先进的模仿策略。通过对涉及刚性物体、可变形物体、物体堆及其相互作用的各种任务进行广泛的现实世界评估，我们发现根据世界模型生成的数据训练的策略与根据相同数量的现实世界数据训练的策略的表现相当。此外，我们还评估了世界模型中和现实世界中不同任务的政策，并观察到模拟和现实世界表现之间的强相关性。总之，这些结果使交互式世界模拟器成为稳定且物理一致的替代品，用于可扩展的机器人数据生成和忠实、可重复的政策评估。
+
+</details>
+
+---
+
+## 20. SWIFT: Sliding Window Reconstruction for Few-Shot Training-Free Generated Video Attribution / SWIFT：用于少镜头训练生成视频归因的滑动窗口重建
+
+**Date**: 2026-03-09 | **arXiv**: [2603.08536v1](http://arxiv.org/abs/2603.08536v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.08536v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/wangchao0708/SWIFT.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advancements in video generation technologies have been significant, resulting in their widespread application across multiple domains. However, concerns have been mounting over the potential misuse of generated content. Tracing the origin of generated videos has become crucial to mitigate potential misuse and identify responsible parties. Existing video attribution methods require additional operations or the training of source attribution models, which may degrade video quality or necessitate large amounts of training samples. To address these challenges, we define for the first time the "few-shot training-free generated video attribution" task and propose SWIFT, which is tightly integrated with the temporal characteristics of the video. By leveraging the "Pixel Frames(many) to Latent Frame(one)" temporal mapping within each video chunk, SWIFT applies a fixed-length sliding window to perform two distinct reconstructions: normal and corrupted. The variation in the losses between two reconstructions is then used as an attribution signal. We conducted an extensive evaluation of five state-of-the-art (SOTA) video generation models. Experimental results show that SWIFT achieves over 90% average attribution accuracy with merely 20 video samples across all models and even enables zero-shot attribution for HunyuanVideo, EasyAnimate, and Wan2.2. Our source code is available at https://github.com/wangchao0708/SWIFT.
+
+视频生成技术的最新进展非常显着，导致其在多个领域得到广泛应用。然而，人们越来越担心生成内容可能被滥用。追踪生成视频的来源对于减少潜在的滥用和识别责任方至关重要。现有的视频归因方法需要额外的操作或源归因模型的训练，这可能会降低视频质量或需要大量的训练样本。为了应对这些挑战，我们首次定义了“少镜头免训练生成视频归因”任务，并提出了与视频时间特征紧密结合的 SWIFT。通过利用每个视频块内的“像素帧（许多）到潜在帧（一个）”时间映射，SWIFT 应用固定长度滑动窗口来执行两种不同的重建：正常重建和损坏重建。然后将两次重建之间的损失变化用作归因信号。我们对五种最先进的 (SOTA) 视频生成模型进行了广泛的评估。实验结果表明，SWIFT 在所有模型中仅用 20 个视频样本就实现了超过 90% 的平均归因准确率，甚至实现了 HunyuanVideo、EasyAnimate 和 Wan2.2 的零镜头归因。我们的源代码可从 https://github.com/wangchao0708/SWIFT 获取。
+
+</details>
+
+---
+
+## 21. Can Vision-Language Models Solve the Shell Game? / 视觉语言模型能解决猜壳游戏吗？
+
+**Date**: 2026-03-09 | **arXiv**: [2603.08436v1](http://arxiv.org/abs/2603.08436v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.08436v1)
+
+**Categories**: cs.CV, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Visual entity tracking is an innate cognitive ability in humans, yet it remains a critical bottleneck for Vision-Language Models (VLMs). This deficit is often obscured in existing video benchmarks by visual shortcuts. We introduce VET-Bench, a synthetic diagnostic testbed featuring visually identical objects that necessitate tracking exclusively through spatiotemporal continuity. Our experiments reveal that current state-of-the-art VLMs perform at or near chance level on VET-Bench, exposing a fundamental limitation: an over-reliance on static frame-level features and a failure to maintain entity representations over time. We provide a theoretical analysis drawing connections to the state-tracking problem, proving that fixed-depth transformer-based VLMs are fundamentally limited in tracking indistinguishable objects without intermediate supervision due to expressivity constraints. To address this, we propose Spatiotemporal Grounded Chain-of-Thought (SGCoT): generating object trajectories as explicit intermediate states. Leveraging Molmo2's object tracking ability, we elicit SGCoT reasoning by fine-tuning on synthesized text-only data for alignment. Our method achieves state-of-the-art accuracy exceeding 90% on VET-Bench, demonstrating that VLMs can reliably solve the video shell-game task end-to-end without external tools. Our code and data are available at https://vetbench.github.io .
+
+视觉实体跟踪是人类与生俱来的认知能力，但它仍然是视觉语言模型（VLM）的关键瓶颈。在现有的视频基准测试中，这种缺陷常常被视觉快捷方式所掩盖。我们推出了 VET-Bench，这是一种综合诊断测试平台，具有视觉上相同的物体，需要专门通过时空连续性进行跟踪。我们的实验表明，当前最先进的 VLM 在 VET-Bench 上的表现达到或接近随机水平，暴露了一个基本限制：过度依赖静态帧级特征，并且无法随着时间的推移维护实体表示。我们提供了与状态跟踪问题的联系的理论分析，证明由于表达能力的限制，基于固定深度变压器的 VLM 在没有中间监督的情况下跟踪难以区分的对象从根本上受到限制。为了解决这个问题，我们提出了时空接地思想链（SGCoT）：生成对象轨迹作为明确的中间状态。利用 Molmo2 的对象跟踪能力，我们通过对合成的纯文本数据进行微调以进行对齐来引发 SGCoT 推理。我们的方法在 VET-Bench 上达到了超过 90% 的最先进准确率，这表明 VLM 无需外部工具即可可靠地端到端解决视频 shell 游戏任务。我们的代码和数据可在 https://vetbench.github.io 获取。
+
+</details>
+
+---
+
+## 22. SPIRAL: A Closed-Loop Framework for Self-Improving Action World Models via Reflective Planning Agents / SPIRAL：通过反思性规划代理自我改进行动世界模型的闭环框架
+
+**Date**: 2026-03-09 | **arXiv**: [2603.08403v1](http://arxiv.org/abs/2603.08403v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.08403v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We introduce SPIRAL, a self-improving planning and iterative reflective action world modeling closed-loop framework that enables controllable long-horizon video generation conditioned on high-level semantic actions. Existing one-shot video generation models operate in open-loop, often resulting in incomplete action execution, weak semantic grounding, and temporal drift. SPIRAL formulates ActWM as a closed-loop think-act-reflect process, where generation proceeds step by step under explicit planning and feedback. A PlanAgent decomposes abstract actions into object-centric sub-actions, while a CriticAgent evaluates intermediate results and guides iterative refinement with long-horizon memory. This closed-loop design naturally supports RL evolving optimization, improving semantic alignment and temporal consistency over extended horizons. We further introduce the ActWM-Dataset and ActWM-Bench for training and evaluation. Experiments across multiple TI2V backbones demonstrate consistent gains on ActWM-Bench and mainstream video generation benchmarks, validating SPIRAL's effectiveness.
+
+我们引入了 SPIRAL，这是一种自我改进的规划和迭代反射动作世界建模闭环框架，可以实现以高级语义动作为条件的可控长视野视频生成。现有的一次性视频生成模型以开环方式运行，通常会导致动作执行不完整、语义基础薄弱和时间漂移。 SPIRAL 将 ActWM 制定为一个闭环的思考-行动-反思过程，在明确的规划和反馈下逐步进行生成。 PlanAgent 将抽象操作分解为以对象为中心的子操作，而 CriticAgent 评估中间结果并通过长视野内存指导迭代细化。这种闭环设计自然支持 RL 不断演进的优化，提高语义对齐和扩展范围内的时间一致性。我们进一步引入 ActWM-Dataset 和 ActWM-Bench 进行训练和评估。跨多个 TI2V 主干网的实验证明了 ActWM-Bench 和主流视频生成基准的一致增益，验证了 SPIRAL 的有效性。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-03-10 (12 papers)</b></summary>
 
 # arXiv Video Papers - 2026-03-10
