@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-03-12](papers/2026-03-12.md) - 11 papers
 - [2026-03-11](papers/2026-03-11.md) - 22 papers
 - [2026-03-10](papers/2026-03-10.md) - 12 papers
 - [2026-03-09](papers/2026-03-09.md) - 9 papers
@@ -36,6 +37,194 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-03-12 (11 papers)</b></summary>
+
+# arXiv Video Papers - 2026-03-12
+
+**Paper Count**: 11
+
+---
+
+## 1. COMIC: Agentic Sketch Comedy Generation / COMIC：特工素描喜剧一代
+
+**Date**: 2026-03-11 | **arXiv**: [2603.11048v1](http://arxiv.org/abs/2603.11048v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.11048v1)
+
+**Categories**: cs.CV, cs.AI, cs.CL, cs.MA, cs.NE
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We propose a fully automated AI system that produces short comedic videos similar to sketch shows such as Saturday Night Live. Starting with character references, the system employs a population of agents loosely based on real production studio roles, structured to optimize the quality and diversity of ideas and outputs through iterative competition, evaluation, and improvement. A key contribution is the introduction of LLM critics aligned with real viewer preferences through the analysis of a corpus of comedy videos on YouTube to automatically evaluate humor. Our experiments show that our framework produces results approaching the quality of professionally produced sketches while demonstrating state-of-the-art performance in video generation.
+
+我们提出了一个完全自动化的人工智能系统，可以生成类似于周六夜现场等小品节目的喜剧短片。从角色参考开始，该系统根据真实的制作工作室角色松散地采用了一群代理，其结构是通过迭代竞争、评估和改进来优化想法和输出的质量和多样性。一个关键贡献是通过分析 YouTube 上的喜剧视频语料库来自动评估幽默，引入了与真实观众偏好相一致的法学硕士评论家。我们的实验表明，我们的框架产生的结果接近专业制作草图的质量，同时展示了视频生成中最先进的性能。
+
+</details>
+
+---
+
+## 2. Contrastive learning-based video quality assessment-jointed video vision transformer for video recognition / 基于对比学习的视频质量评估——用于视频识别的联合视频视觉变换器
+
+**Date**: 2026-03-11 | **arXiv**: [2603.10965v1](http://arxiv.org/abs/2603.10965v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.10965v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video quality significantly affects video classification. We found this problem when we classified Mild Cognitive Impairment well from clear videos, but worse from blurred ones. From then, we realized that referring to Video Quality Assessment (VQA) may improve video classification. This paper proposed Self-Supervised Learning-based Video Vision Transformer combined with No-reference VQA for video classification (SSL-V3) to fulfill the goal. SSL-V3 leverages Combined-SSL mechanism to join VQA into video classification and address the label shortage of VQA, which commonly occurs in video datasets, making it impossible to provide an accurate Video Quality Score. In brief, Combined-SSL takes video quality score as a factor to directly tune the feature map of the video classification. Then, the score, as an intersected point, links VQA and classification, using the supervised classification task to tune the parameters of VQA. SSL-V3 achieved robust experimental results on two datasets. For example, it reached an accuracy of 94.87% on some interview videos in the I-CONECT (a facial video-involved healthcare dataset), verifying SSL-V3's effectiveness.
+
+视频质量显着影响视频分类。当我们对清晰视频中的轻度认知障碍进行良好分类，对模糊视频进行分类时，我们发现了这个问题。从那时起，我们意识到参考视频质量评估（VQA）可以改善视频分类。本文提出了基于自监督学习的视频视觉变换器与无参考 VQA 相结合的视频分类（SSL-V3）来实现这一目标。 SSL-V3利用Combined-SSL机制将VQA加入到视频分类中，解决了VQA在视频数据集中常见的标签短缺问题，无法提供准确的视频质量分数。简而言之，Combined-SSL以视频质量得分作为因素来直接调整视频分类的特征图。然后，分数作为一个交点，将VQA和分类联系起来，利用监督分类任务来调整VQA的参数。 SSL-V3 在两个数据集上取得了稳健的实验结果。例如，在I-CONECT（涉及面部视频的医疗数据集）中的一些采访视频上达到了94.87%的准确率，验证了SSL-V3的有效性。
+
+</details>
+
+---
+
+## 3. A New Tensor Network: Tubal Tensor Train and Its Applications / 一种新的张量网络：Tubal 张量序列及其应用
+
+**Date**: 2026-03-11 | **arXiv**: [2603.10503v1](http://arxiv.org/abs/2603.10503v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.10503v1)
+
+**Categories**: math.NA, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We introduce the tubal tensor train (TTT) decomposition, a tensor-network model that combines the t-product algebra of the tensor singular value decomposition (T-SVD) with the low-order core structure of the tensor train (TT) format. For an order-$(N+1)$ tensor with a distinguished tube mode, the proposed representation consists of two third-order boundary cores and $N-2$ fourth-order interior cores linked through the t-product. As a result, for bounded tubal ranks, the storage scales linearly with the number of modes, in contrast to direct high-order extensions of T-SVD. We present two computational strategies: a sequential fixed-rank construction, called TTT-SVD, and a Fourier-slice alternating scheme based on the alternating two-cores update (ATCU). We also state a TT-SVD-type error bound for TTT-SVD and illustrate the practical performance of the proposed model on image compression, video compression, tensor completion, and hyperspectral imaging.
+
+我们介绍了管状张量序列（TTT）分解，这是一种张量网络模型，它将张量奇异值分解（T-SVD）的t积代数与张量序列（TT）格式的低阶核心结构相结合。对于具有独特管模式的 $(N+1)$ 阶张量，所提出的表示由通过 t 积链接的两个三阶边界核心和 $N-2$ 四阶内部核心组成。因此，对于有界管列，存储量随模式数量线性扩展，这与 T-SVD 的直接高阶扩展相反。我们提出了两种计算策略：称为 TTT-SVD 的顺序固定秩结构，以及基于交替双核更新 (ATCU) 的傅里叶切片交替方案。我们还声明了 TTT-SVD 的 TT-SVD 型误差界限，并说明了所提出的模型在图像压缩、视频压缩、张量补全和高光谱成像方面的实际性能。
+
+</details>
+
+---
+
+## 4. DiT4DiT: Jointly Modeling Video Dynamics and Actions for Generalizable Robot Control / DiT4DiT：对视频动力学和动作进行联合建模以实现通用机器人控制
+
+**Date**: 2026-03-11 | **arXiv**: [2603.10448v1](http://arxiv.org/abs/2603.10448v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.10448v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision-Language-Action (VLA) models have emerged as a promising paradigm for robot learning, but their representations are still largely inherited from static image-text pretraining, leaving physical dynamics to be learned from comparatively limited action data. Generative video models, by contrast, encode rich spatiotemporal structure and implicit physics, making them a compelling foundation for robotic manipulation. But their potentials are not fully explored in the literature. To bridge the gap, we introduce DiT4DiT, an end-to-end Video-Action Model that couples a video Diffusion Transformer with an action Diffusion Transformer in a unified cascaded framework. Instead of relying on reconstructed future frames, DiT4DiT extracts intermediate denoising features from the video generation process and uses them as temporally grounded conditions for action prediction. We further propose a dual flow-matching objective with decoupled timesteps and noise scales for video prediction, hidden-state extraction, and action inference, enabling coherent joint training of both modules. Across simulation and real-world benchmarks, DiT4DiT achieves state-of-the-art results, reaching average success rates of 98.6% on LIBERO and 50.8% on RoboCasa GR1 while using substantially less training data. On the Unitree G1 robot, it also delivers superior real-world performance and strong zero-shot generalization. Importantly, DiT4DiT improves sample efficiency by over 10x and speeds up convergence by up to 7x, demonstrating that video generation can serve as an effective scaling proxy for robot policy learning. We release code and models at https://dit4dit.github.io/.
+
+视觉-语言-动作（VLA）模型已成为机器人学习的一种有前途的范例，但它们的表示仍然很大程度上继承自静态图像文本预训练，使得物理动力学只能从相对有限的动作数据中学习。相比之下，生成视频模型编码丰富的时空结构和隐式物理，使它们成为机器人操纵的引人注目的基础。但文献中并未充分探讨它们的潜力。为了弥补这一差距，我们引入了 DiT4DiT，这是一种端到端视频动作模型，它将视频扩散变压器与动作扩散变压器耦合在统一的级联框架中。 DiT4DiT 不依赖于重建的未来帧，而是从视频生成过程中提取中间去噪特征，并将它们用作动作预测的时间基础条件。我们进一步提出了一种双流匹配目标，具有解耦的时间步长和噪声尺度，用于视频预测、隐藏状态提取和动作推理，从而实现两个模块的连贯联合训练。在模拟和现实世界基准测试中，DiT4DiT 取得了最先进的结果，在 LIBERO 上达到 98.6% 的平均成功率，在 RoboCasa GR1 上达到 50.8% 的平均成功率，同时使用的训练数据却少得多。在 Unitree G1 机器人上，它还提供了卓越的现实世界性能和强大的零样本泛化能力。重要的是，DiT4DiT 将样本效率提高了 10 倍以上，并将收敛速度提高了 7 倍，这表明视频生成可以作为机器人策略学习的有效扩展代理。我们在 https://dit4dit.github.io/ 发布代码和模型。
+
+</details>
+
+---
+
+## 5. World2Act: Latent Action Post-Training via Skill-Compositional World Models / World2Act：通过技能组合世界模型进行训练后的潜在行动
+
+**Date**: 2026-03-11 | **arXiv**: [2603.10422v1](http://arxiv.org/abs/2603.10422v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.10422v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World Models (WMs) have emerged as a promising approach for post-training Vision-Language-Action (VLA) policies to improve robustness and generalization under environmental changes. However, most WM-based post-training methods rely on pixel-space supervision, making policies sensitive to pixel-level artifacts and hallucination from imperfect WM rollouts. We introduce World2Act, a post-training framework that aligns VLA actions directly with WM video-dynamics latents using a contrastive matching objective, reducing dependence on pixels. Post-training performance is tied to rollout quality, yet current WMs struggle with arbitrary-length video generation as they are mostly trained on fixed-length clips while robotic execution durations vary widely. To address this, we propose an automatic LLM-based skill-decomposition pipeline that segments high-level instructions into low-level prompts. Our pipeline produces RoboCasa-Skill and LIBERO-Skill, supporting skill-compositional WMs that remain temporally consistent across diverse task horizons. Empirically, applying World2Act to VLAs like GR00T-N1.6 and Cosmos Policy achieves state-of-the-art results on RoboCasa and LIBERO, and improves real-world performance by 6.7%, enhancing embodied agent generalization.
+
+世界模型（WM）已成为训练后视觉-语言-行动（VLA）政策的一种有前景的方法，可提高环境变化下的鲁棒性和泛化性。然而，大多数基于 WM 的后训练方法依赖于像素空间监督，使得策略对像素级伪影和不完美的 WM 推出产生的幻觉敏感。我们引入了 World2Act，这是一个后训练框架，它使用对比匹配目标将 VLA 动作直接与 WM 视频动态潜伏对齐，从而减少对像素的依赖。训练后性能与推出质量相关，但当前的 WM 难以生成任意长度的视频，因为它们主要是在固定长度的剪辑上进行训练，而机器人执行持续时间差异很大。为了解决这个问题，我们提出了一种基于 LLM 的自动技能分解管道，将高级指令分割成低级提示。我们的管道生产 RoboCasa-Skill 和 LIBERO-Skill，支持在不同任务范围内保持时间一致的技能组合 WM。根据经验，将 World2Act 应用于 GR00T-N1.6 和 Cosmos Policy 等 VLA 在 RoboCasa 和 LIBERO 上取得了最先进的结果，并将现实世界的性能提高了 6.7%，增强了体现代理的泛化能力。
+
+</details>
+
+---
+
+## 6. Frames2Residual: Spatiotemporal Decoupling for Self-Supervised Video Denoising / Frames2Residual：用于自监督视频去噪的时空解耦
+
+**Date**: 2026-03-11 | **arXiv**: [2603.10417v1](http://arxiv.org/abs/2603.10417v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.10417v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Self-supervised video denoising methods typically extend image-based frameworks into the temporal dimension, yet they often struggle to integrate inter-frame temporal consistency with intra-frame spatial specificity. Existing Video Blind-Spot Networks (BSNs) require noise independence by masking the center pixel, this constraint prevents the use of spatial evidence for texture recovery, thereby severing spatiotemporal correlations and causing texture loss. To address this, we propose Frames2Residual (F2R), a spatiotemporal decoupling framework that explicitly divides self-supervised training into two distinct stages: blind temporal consistency modeling and non-blind spatial texture recovery. In Stage 1, a blind temporal estimator learns inter-frame consistency using a frame-wise blind strategy, producing a temporally consistent anchor. In Stage 2, a non-blind spatial refiner leverages this anchor to safely reintroduce the center frame and recover intra-frame high-frequency spatial residuals while preserving temporal stability. Extensive experiments demonstrate that our decoupling strategy allows F2R to outperform existing self-supervised methods on both sRGB and raw video benchmarks.
+
+自监督视频去噪方法通常将基于图像的框架扩展到时间维度，但它们通常难以将帧间时间一致性与帧内空间特异性相结合。现有的视频盲点网络（BSN）需要通过屏蔽中心像素来实现噪声独立性，这种限制阻止了使用空间证据进行纹理恢复，从而切断时空相关性并导致纹理丢失。为了解决这个问题，我们提出了 Frames2Residual (F2R)，一种时空解耦框架，它明确地将自监督训练分为两个不同的阶段：盲时间一致性建模和非盲空间纹理恢复。在第一阶段，盲时间估计器使用逐帧盲策略学习帧间一致性，从而产生时间一致的锚。在第 2 阶段，非盲空间细化器利用该锚点安全地重新引入中心帧并恢复帧内高频空间残差，同时保持时间稳定性。大量实验表明，我们的解耦策略使 F2R 在 sRGB 和原始视频基准测试上都优于现有的自我监督方法。
+
+</details>
+
+---
+
+## 7. Motion Forcing: A Decoupled Framework for Robust Video Generation in Motion Dynamics / 运动强迫：运动动力学中鲁棒视频生成的解耦框架
+
+**Date**: 2026-03-11 | **arXiv**: [2603.10408v1](http://arxiv.org/abs/2603.10408v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.10408v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The ultimate goal of video generation is to satisfy a fundamental trilemma: achieving high visual quality, maintaining rigorous physical consistency, and enabling precise controllability. While recent models can maintain this balance in simple, isolated scenarios, we observe that this equilibrium is fragile and often breaks down as scene complexity increases (e.g., involving collisions or dense traffic). To address this, we introduce \textbf{Motion Forcing}, a framework designed to stabilize this trilemma even in complex generative tasks. Our key insight is to explicitly decouple physical reasoning from visual synthesis via a hierarchical \textbf{``Point-Shape-Appearance''} paradigm. This approach decomposes generation into verifiable stages: modeling complex dynamics as sparse geometric anchors (\textbf{Point}), expanding them into dynamic depth maps that explicitly resolve 3D geometry (\textbf{Shape}), and finally rendering high-fidelity textures (\textbf{Appearance}). Furthermore, to foster robust physical understanding, we employ a \textbf{Masked Point Recovery} strategy. By randomly masking input anchors during training and enforcing the reconstruction of complete dynamic depth, the model is compelled to move beyond passive pattern matching and learn latent physical laws (e.g., inertia) to infer missing trajectories. Extensive experiments on autonomous driving benchmarks show that Motion Forcing significantly outperforms state-of-the-art baselines, maintaining trilemma stability across complex scenes. Evaluations on physics and robotics further confirm our framework's generality.
+
+视频生成的最终目标是满足一个基本的三难困境：实现高视觉质量、保持严格的物理一致性以及实现精确的可控性。虽然最近的模型可以在简单、孤立的场景中保持这种平衡，但我们观察到这种平衡是脆弱的，并且随着场景复杂性的增加（例如，涉及碰撞或密集的交通）而经常被打破。为了解决这个问题，我们引入了 \textbf{Motion Forcing}，这是一个旨在稳定这种三难困境的框架，即使在复杂的生成任务中也是如此。我们的主要见解是通过分层 \textbf{``Point-Shape-Appearance''} 范式将物理推理与视觉合成明确分离。这种方法将生成分解为可验证的阶段：将复杂的动态建模为稀疏几何锚点（\textbf{Point}），将其扩展为显式解析 3D 几何的动态深度图（\textbf{Shape}），最后渲染高保真纹理（\textbf{Appearance}）。此外，为了促进强大的物理理解，我们采用了 \textbf{Masked Point Recovery} 策略。通过在训练期间随机屏蔽输入锚点并强制重建完整的动态深度，该模型被迫超越被动模式匹配并学习潜在的物理定律（例如惯性）以推断丢失的轨迹。自动驾驶基准的大量实验表明，运动强迫显着优于最先进的基线，在复杂场景中保持三难稳定性。对物理学和机器人技术的评估进一步证实了我们框架的通用性。
+
+</details>
+
+---
+
+## 8. From Imitation to Intuition: Intrinsic Reasoning for Open-Instance Video Classification / 从模仿到直觉：开放实例视频分类的内在推理
+
+**Date**: 2026-03-11 | **arXiv**: [2603.10300v1](http://arxiv.org/abs/2603.10300v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.10300v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Conventional video classification models, acting as effective imitators, excel in scenarios with homogeneous data distributions. However, real-world applications often present an open-instance challenge, where intra-class variations are vast and complex, beyond existing benchmarks. While traditional video encoder models struggle to fit these diverse distributions, vision-language models (VLMs) offer superior generalization but have not fully leveraged their reasoning capabilities (intuition) for such tasks. In this paper, we bridge this gap with an intrinsic reasoning framework that evolves open-instance video classification from imitation to intuition. Our approach, namely DeepIntuit, begins with a cold-start supervised alignment to initialize reasoning capability, followed by refinement using Group Relative Policy Optimization (GRPO) to enhance reasoning coherence through reinforcement learning. Crucially, to translate this reasoning into accurate classification, DeepIntuit then introduces an intuitive calibration stage. In this stage, a classifier is trained on this intrinsic reasoning traces generated by the refined VLM, ensuring stable knowledge transfer without distribution mismatch. Extensive experiments demonstrate that for open-instance video classification, DeepIntuit benefits significantly from transcending simple feature imitation and evolving toward intrinsic reasoning. Our project is available at https://bwgzk-keke.github.io/DeepIntuit/.
+
+传统的视频分类模型作为有效的模仿者，在数据分布均匀的场景中表现出色。然而，现实世界的应用程序通常会带来开放实例的挑战，其中类内的变化巨大且复杂，超出了现有的基准。虽然传统的视频编码器模型难以适应这些不同的分布，但视觉语言模型 (VLM) 提供了卓越的泛化能力，但尚未充分利用其推理能力（直觉）来完成此类任务。在本文中，我们通过内在推理框架弥补了这一差距，该框架将开放实例视频分类从模仿发展到直觉。我们的方法，即 DeepIntuit，首先通过冷启动监督对齐来初始化推理能力，然后使用组相对策略优化 (GRPO) 进行细化，以通过强化学习来增强推理一致性。至关重要的是，为了将这种推理转化为准确的分类，DeepIntuit 随后引入了直观的校准阶段。在此阶段，分类器根据精炼的 VLM 生成的内在推理轨迹进行训练，确保稳定的知识转移而不会出现分布不匹配。大量的实验表明，对于开放实例的视频分类，DeepIntuit 可以从超越简单特征模仿并向内在推理演进中获益匪浅。我们的项目位于 https://bwgzk-keke.github.io/DeepIntuit/。
+
+</details>
+
+---
+
+## 9. ID-LoRA: Identity-Driven Audio-Video Personalization with In-Context LoRA / ID-LoRA：使用上下文 LoRA 进行身份驱动的音频-视频个性化
+
+**Date**: 2026-03-10 | **arXiv**: [2603.10256v1](http://arxiv.org/abs/2603.10256v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.10256v1)
+
+**Categories**: cs.SD, cs.CV, cs.GR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Existing video personalization methods preserve visual likeness but treat video and audio separately. Without access to the visual scene, audio models cannot synchronize sounds with on-screen actions; and because classical voice-cloning models condition only on a reference recording, a text prompt cannot redirect speaking style or acoustic environment. We propose ID-LoRA (Identity-Driven In-Context LoRA), which jointly generates a subject's appearance and voice in a single model, letting a text prompt, a reference image, and a short audio clip govern both modalities together. ID-LoRA adapts the LTX-2 joint audio-video diffusion backbone via parameter-efficient In-Context LoRA and, to our knowledge, is the first method to personalize visual appearance and voice in a single generative pass. Two challenges arise. Reference and generation tokens share the same positional-encoding space, making them hard to distinguish; we address this with negative temporal positions, placing reference tokens in a disjoint RoPE region while preserving their internal temporal structure. Speaker characteristics also tend to be diluted during denoising; we introduce identity guidance, a classifier-free guidance variant that amplifies speaker-specific features by contrasting predictions with and without the reference signal. In human preference studies, ID-LoRA is preferred over Kling 2.6 Pro by 73% of annotators for voice similarity and 65% for speaking style. On cross-environment settings, speaker similarity improves by 24% over Kling, with the gap widening as conditions diverge. A preliminary user study further suggests that joint generation provides a useful inductive bias for physically grounded sound synthesis. ID-LoRA achieves these results with only ~3K training pairs on a single GPU. Code, models, and data will be released.
+
+现有的视频个性化方法保留视觉相似性，但单独处理视频和音频。如果无法访问视觉场景，音频模型就无法将声音与屏幕上的动作同步；而且由于经典的语音克隆模型仅以参考录音为条件，因此文本提示无法重定向说话风格或声学环境。我们提出了 ID-LoRA（身份驱动的上下文 LoRA），它在单个模型中联合生成主体的外观和声音，让文本提示、参考图像和简短的音频剪辑一起控制这两种模式。 ID-LoRA 通过参数高效的上下文 LoRA 来适应 LTX-2 联合音频-视频扩散骨干网，据我们所知，这是第一种在单次生成过程中个性化视觉外观和语音的方法。出现了两个挑战。引用和生成标记共享相同的位置编码空间，使得它们难以区分；我们用负时间位置来解决这个问题，将参考标记放置在不相交的 RoPE 区域中，同时保留其内部时间结构。扬声器特性在降噪过程中也往往会被淡化；我们引入了身份引导，这是一种无分类器的引导变体，它通过对比有参考信号和没有参考信号的预测来放大特定于说话者的特征。在人类偏好研究中，73% 的注释者在语音相似性方面更喜欢 ID-LoRA，在说话风格方面更喜欢 ID-LoRA，65% 的注释者更喜欢 Kling 2.6 Pro。在跨环境设置中，说话者相似度比 Kling 提高了 24%，并且随着条件的不同，差距会扩大。初步的用户研究进一步表明，联合生成为物理接地的声音合成提供了有用的感应偏置。 ID-LoRA 在单个 GPU 上仅用约 3K 训练对即可实现这些结果。代码、模型和数据将被发布。
+
+</details>
+
+---
+
+## 10. ENIGMA-360: An Ego-Exo Dataset for Human Behavior Understanding in Industrial Scenarios / ENIGMA-360：用于工业场景中人类行为理解的 Ego-Exo 数据集
+
+**Date**: 2026-03-10 | **arXiv**: [2603.09741v2](http://arxiv.org/abs/2603.09741v2) | **PDF**: [Link](http://arxiv.org/pdf/2603.09741v2)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Understanding human behavior from complementary egocentric (ego) and exocentric (exo) points of view enables the development of systems that can support workers in industrial environments and enhance their safety. However, progress in this area is hindered by the lack of datasets capturing both views in realistic industrial scenarios. To address this gap, we propose ENIGMA-360, a new ego-exo dataset acquired in a real industrial scenario. The dataset is composed of 180 egocentric and 180 exocentric procedural videos temporally synchronized offering complementary information of the same scene. The 360 videos have been labeled with temporal and spatial annotations, enabling the study of different aspects of human behavior in industrial domain. We provide baseline experiments for 3 foundational tasks for human behavior understanding: 1) Temporal Action Segmentation, 2) Keystep Recognition and 3) Egocentric Human-Object Interaction Detection, showing the limits of state-of-the-art approaches on this challenging scenario. These results highlight the need for new models capable of robust ego-exo understanding in real-world environments. We publicly release the dataset and its annotations at https://fpv-iplab.github.io/ENIGMA-360/.
+
+从互补的自我中心 (ego) 和外中心 (exo) 的角度理解人类行为，可以开发出支持工业环境中工人并增强其安全的系统。然而，由于缺乏捕获现实工业场景中两种观点的数据集，该领域的进展受到阻碍。为了解决这一差距，我们提出了 ENIGMA-360，这是在真实工业场景中获取的新的 ego-exo 数据集。该数据集由 180 个以自我为中心和 180 个以外为中心的程序视频组成，这些视频在时间上同步，提供同一场景的补充信息。 360 度视频带有时间和空间注释，可以研究工业领域人类行为的不同方面。我们为人类行为理解的 3 个基本任务提供了基线实验：1）时间动作分割，2）关键步骤识别和 3）以自我为中心的人与物体交互检测，显示了最先进的方法在这一具有挑战性的场景中的局限性。这些结果凸显了对能够在现实环境中强大的自我-外在理解的新模型的需求。我们在 https://fpv-iplab.github.io/ENIGMA-360/ 公开发布数据集及其注释。
+
+</details>
+
+---
+
+## 11. Streaming Autoregressive Video Generation via Diagonal Distillation / 通过对角蒸馏生成流式自回归视频
+
+**Date**: 2026-03-10 | **arXiv**: [2603.09488v2](http://arxiv.org/abs/2603.09488v2) | **PDF**: [Link](http://arxiv.org/pdf/2603.09488v2)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large pretrained diffusion models have significantly enhanced the quality of generated videos, and yet their use in real-time streaming remains limited. Autoregressive models offer a natural framework for sequential frame synthesis but require heavy computation to achieve high fidelity. Diffusion distillation can compress these models into efficient few-step variants, but existing video distillation approaches largely adapt image-specific methods that neglect temporal dependencies. These techniques often excel in image generation but underperform in video synthesis, exhibiting reduced motion coherence, error accumulation over long sequences, and a latency-quality trade-off. We identify two factors that result in these limitations: insufficient utilization of temporal context during step reduction and implicit prediction of subsequent noise levels in next-chunk prediction (i.e., exposure bias). To address these issues, we propose Diagonal Distillation, which operates orthogonally to existing approaches and better exploits temporal information across both video chunks and denoising steps. Central to our approach is an asymmetric generation strategy: more steps early, fewer steps later. This design allows later chunks to inherit rich appearance information from thoroughly processed early chunks, while using partially denoised chunks as conditional inputs for subsequent synthesis. By aligning the implicit prediction of subsequent noise levels during chunk generation with the actual inference conditions, our approach mitigates error propagation and reduces oversaturation in long-range sequences. We further incorporate implicit optical flow modeling to preserve motion quality under strict step constraints. Our method generates a 5-second video in 2.61 seconds (up to 31 FPS), achieving a 277.3x speedup over the undistilled model.
+
+大型预训练扩散模型显着提高了生成视频的质量，但它们在实时流媒体中的使用仍然有限。自回归模型为顺序帧合成提供了一个自然的框架，但需要大量计算才能实现高保真度。扩散蒸馏可以将这些模型压缩为有效的几个步骤变体，但现有的视频蒸馏方法很大程度上采用了忽略时间依赖性的图像特定方法。这些技术通常在图像生成方面表现出色，但在视频合成方面表现不佳，表现出运动一致性降低、长序列上的错误累积以及延迟质量权衡。我们确定了导致这些限制的两个因素：在步骤减少期间对时间上下文的利用不足以及在下一个块预测中对后续噪声水平的隐式预测（即曝光偏差）。为了解决这些问题，我们提出了对角蒸馏，它与现有方法正交，可以更好地利用视频块和去噪步骤中的时间信息。我们方法的核心是不对称生成策略：早期步骤较多，后期步骤较少。这种设计允许后面的块从彻底处理的早期块继承丰富的外观信息，同时使用部分去噪的块作为后续合成的条件输入。通过将块生成期间后续噪声水平的隐式预测与实际推理条件对齐，我们的方法减轻了错误传播并减少了长程序列中的过饱和。我们进一步结合隐式光流建模，以在严格的步长约束下保持运动质量。我们的方法在 2.61 秒内生成一个 5 秒的视频（高达 31 FPS），比未蒸馏的模型实现了 277.3 倍的加速。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-03-11 (22 papers)</b></summary>
 
 # arXiv Video Papers - 2026-03-11
