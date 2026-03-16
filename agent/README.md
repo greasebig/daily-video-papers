@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-03-16](papers/2026-03-16.md) - 7 papers
 - [2026-03-13](papers/2026-03-13.md) - 38 papers
 - [2026-03-12](papers/2026-03-12.md) - 20 papers
 - [2026-03-11](papers/2026-03-11.md) - 38 papers
@@ -32,6 +33,132 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-03-16 (7 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-03-16
+
+**Paper Count**: 7
+
+---
+
+## 1. LLM Constitutional Multi-Agent Governance / 法学硕士宪法多代理治理
+
+**Date**: 2026-03-13 | **arXiv**: [2603.13189v1](http://arxiv.org/abs/2603.13189v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.13189v1)
+
+**Categories**: cs.MA, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large Language Models (LLMs) can generate persuasive influence strategies that shift cooperative behavior in multi-agent populations, but a critical question remains: does the resulting cooperation reflect genuine prosocial alignment, or does it mask erosion of agent autonomy, epistemic integrity, and distributional fairness? We introduce Constitutional Multi-Agent Governance (CMAG), a two-stage framework that interposes between an LLM policy compiler and a networked agent population, combining hard constraint filtering with soft penalized-utility optimization that balances cooperation potential against manipulation risk and autonomy pressure. We propose the Ethical Cooperation Score (ECS), a multiplicative composite of cooperation, autonomy, integrity, and fairness that penalizes cooperation achieved through manipulative means. In experiments on scale-free networks of 80 agents under adversarial conditions (70% violating candidates), we benchmark three regimes: full CMAG, naive filtering, and unconstrained optimization. While unconstrained optimization achieves the highest raw cooperation (0.873), it yields the lowest ECS (0.645) due to severe autonomy erosion (0.867) and fairness degradation (0.888). CMAG attains an ECS of 0.741, a 14.9% improvement, while preserving autonomy at 0.985 and integrity at 0.995, with only modest cooperation reduction to 0.770. The naive ablation (ECS = 0.733) confirms that hard constraints alone are insufficient. Pareto analysis shows CMAG dominates the cooperation-autonomy trade-off space, and governance reduces hub-periphery exposure disparities by over 60%. These findings establish that cooperation is not inherently desirable without governance: constitutional constraints are necessary to ensure that LLM-mediated influence produces ethically stable outcomes rather than manipulative equilibria.
+
+大型语言模型（LLM）可以产生有说服力的影响策略，从而改变多智能体群体中的合作行为，但仍然存在一个关键问题：由此产生的合作是否反映了真正的亲社会联盟，还是掩盖了智能体自主权、认知完整性和分配公平性的侵蚀？我们引入了宪法多智能体治理（CMAG），这是一个两阶段框架，介于法学硕士政策编译器和网络智能体群体之间，将硬约束过滤与软惩罚效用优化相结合，平衡合作潜力与操纵风险和自治压力。我们提出道德合作评分（ECS），这是合作、自主、诚信和公平的乘法组合，对通过操纵手段实现的合作进行惩罚。在对抗条件下（70% 违规候选者）对 80 个智能体的无标度网络进行的实验中，我们对三种方案进行了基准测试：完整 CMAG、朴素过滤和无约束优化。虽然无约束优化实现了最高的原始合作 (0.873)，但由于严重的自治侵蚀 (0.867) 和公平性退化 (0.888)，它产生了最低的 ECS (0.645)。 CMAG 的 ECS 为 0.741，提高了 14.9%，同时保持了 0.985 的自主性和 0.995 的完整性，仅将合作度适度降低至 0.770。朴素消融 (ECS = 0.733) 证实仅靠硬约束是不够的。帕累托分析显示，CMAG 在合作与自治权衡空间中占据主导地位，治理将枢纽与外围的暴露差异缩小了 60% 以上。这些发现表明，如果没有治理，合作本质上并不是可取的：宪法约束对于确保法学硕士介导的影响力产生道德上稳定的结果而不是操纵性平衡是必要的。
+
+</details>
+
+---
+
+## 2. Semantic Invariance in Agentic AI / 代理人工智能中的语义不变性
+
+**Date**: 2026-03-13 | **arXiv**: [2603.13173v1](http://arxiv.org/abs/2603.13173v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.13173v1)
+
+**Categories**: cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large Language Models (LLMs) increasingly serve as autonomous reasoning agents in decision support, scientific problem-solving, and multi-agent coordination systems. However, deploying LLM agents in consequential applications requires assurance that their reasoning remains stable under semantically equivalent input variations, a property we term semantic invariance.Standard benchmark evaluations, which assess accuracy on fixed, canonical problem formulations, fail to capture this critical reliability dimension. To address this shortcoming, in this paper we present a metamorphic testing framework for systematically assessing the robustness of LLM reasoning agents, applying eight semantic-preserving transformations (identity, paraphrase, fact reordering, expansion, contraction, academic context, business context, and contrastive formulation) across seven foundation models spanning four distinct architectural families: Hermes (70B, 405B), Qwen3 (30B-A3B, 235B-A22B), DeepSeek-R1, and gpt-oss (20B, 120B). Our evaluation encompasses 19 multi-step reasoning problems across eight scientific domains. The results reveal that model scale does not predict robustness: the smaller Qwen3-30B-A3B achieves the highest stability (79.6% invariant responses, semantic similarity 0.91), while larger models exhibit greater fragility.
+
+大型语言模型 (LLM) 越来越多地在决策支持、科学问题解决和多智能体协调系统中充当自主推理智能体。然而，在后续应用中部署 LLM 代理需要确保它们的推理在语义等效的输入变化下保持稳定，我们将这种属性称为语义不变性。标准基准评估（评估固定的规范问题表述的准确性）无法捕获这一关键的可靠性维度。为了解决这个缺点，在本文中，我们提出了一个变质测试框架，用于系统地评估 LLM 推理代理的稳健性，在跨越四个不同架构系列的七个基础模型中应用八种语义保留转换（身份、释义、事实重新排序、扩展、收缩、学术背景、业务背景和对比表述）：Hermes（70B、405B）、Qwen3（30B-A3B、 235B-A22B)、DeepSeek-R1 和 gpt-oss (20B、120B)。我们的评估涵盖 8 个科学领域的 19 个多步骤推理问题。结果表明，模型规模并不能预测鲁棒性：较小的 Qwen3-30B-A3B 实现了最高的稳定性（79.6% 不变响应，语义相似度 0.91），而较大的模型表现出更大的脆弱性。
+
+</details>
+
+---
+
+## 3. PISmith: Reinforcement Learning-based Red Teaming for Prompt Injection Defenses / PISmith：基于强化学习的红队快速注入防御
+
+**Date**: 2026-03-13 | **arXiv**: [2603.13026v1](http://arxiv.org/abs/2603.13026v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.13026v1)
+
+**Categories**: cs.LG, cs.CR
+
+**Code**: https://github.com/albert-y1n/PISmith.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Prompt injection poses serious security risks to real-world LLM applications, particularly autonomous agents. Although many defenses have been proposed, their robustness against adaptive attacks remains insufficiently evaluated, potentially creating a false sense of security. In this work, we propose PISmith, a reinforcement learning (RL)-based red-teaming framework that systematically assesses existing prompt-injection defenses by training an attack LLM to optimize injected prompts in a practical black-box setting, where the attacker can only query the defended LLM and observe its outputs. We find that directly applying standard GRPO to attack strong defenses leads to sub-optimal performance due to extreme reward sparsity -- most generated injected prompts are blocked by the defense, causing the policy's entropy to collapse before discovering effective attack strategies, while the rare successes cannot be learned effectively. In response, we introduce adaptive entropy regularization and dynamic advantage weighting to sustain exploration and amplify learning from scarce successes. Extensive evaluation on 13 benchmarks demonstrates that state-of-the-art prompt injection defenses remain vulnerable to adaptive attacks. We also compare PISmith with 7 baselines across static, search-based, and RL-based attack categories, showing that PISmith consistently achieves the highest attack success rates. Furthermore, PISmith achieves strong performance in agentic settings on InjecAgent and AgentDojo against both open-source and closed-source LLMs (e.g., GPT-4o-mini and GPT-5-nano). Our code is available at https://github.com/albert-y1n/PISmith.
+
+即时注入会给现实世界的 LLM 应用程序（尤其是自主代理）带来严重的安全风险。尽管已经提出了许多防御措施，但它们针对自适应攻击的稳健性仍未得到充分评估，可能会产生错误的安全感。在这项工作中，我们提出了 PISmith，一种基于强化学习 (RL) 的红队框架，通过训练攻击 LLM 在实际黑盒设置中优化注入提示，系统地评估现有的提示注入防御，其中攻击者只能查询受防御的 LLM 并观察其输出。我们发现，直接应用标准 GRPO 来攻击强大的防御会因奖励极度稀疏而导致性能次优——大多数生成的注入提示都被防御阻止，导致策略的熵在发现有效的攻击策略之前崩溃，而罕见的成功则无法有效学习。作为回应，我们引入自适应熵正则化和动态优势加权来维持探索并放大从稀缺成功中学习。对 13 个基准的广泛评估表明，最先进的即时注入防御仍然容易受到自适应攻击。我们还将 PISmith 与静态、基于搜索和基于 RL 的攻击类别的 7 个基线进行比较，表明 PISmith 始终实现最高的攻击成功率。此外，PISmith 在 InjecAgent 和 AgentDojo 上的代理设置中针对开源和闭源 LLM（例如 GPT-4o-mini 和 GPT-5-nano）实现了强大的性能。我们的代码可在 https://github.com/albert-y1n/PISmith 获取。
+
+</details>
+
+---
+
+## 4. daVinci-Env: Open SWE Environment Synthesis at Scale / daVinci-Env：大规模开放 SWE 环境综合
+
+**Date**: 2026-03-13 | **arXiv**: [2603.13023v1](http://arxiv.org/abs/2603.13023v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.13023v1)
+
+**Categories**: cs.SE, cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Training capable software engineering (SWE) agents demands large-scale, executable, and verifiable environments that provide dynamic feedback loops for iterative code editing, test execution, and solution refinement. However, existing open-source datasets remain limited in scale and repository diversity, while industrial solutions are opaque with unreleased infrastructure, creating a prohibitive barrier for most academic research groups. We present OpenSWE, the largest fully transparent framework for SWE agent training in Python, comprising 45,320 executable Docker environments spanning over 12.8k repositories, with all Dockerfiles, evaluation scripts, and infrastructure fully open-sourced for reproducibility. OpenSWE is built through a multi-agent synthesis pipeline deployed across a 64-node distributed cluster, automating repository exploration, Dockerfile construction, evaluation script generation, and iterative test analysis. Beyond scale, we propose a quality-centric filtering pipeline that characterizes the inherent difficulty of each environment, filtering out instances that are either unsolvable or insufficiently challenging and retaining only those that maximize learning efficiency. With $891K spent on environment construction and an additional $576K on trajectory sampling and difficulty-aware curation, the entire project represents a total investment of approximately $1.47 million, yielding about 13,000 curated trajectories from roughly 9,000 quality guaranteed environments. Extensive experiments validate OpenSWE's effectiveness: OpenSWE-32B and OpenSWE-72B achieve 62.4% and 66.0% on SWE-bench Verified, establishing SOTA among Qwen2.5 series. Moreover, SWE-focused training yields substantial out-of-domain improvements, including up to 12 points on mathematical reasoning and 5 points on science benchmarks, without degrading factual recall.
+
+具有培训能力的软件工程 (SWE) 代理需要大规模、可执行且可验证的环境，为迭代代码编辑、测试执行和解决方案细化提供动态反馈循环。然而，现有的开源数据集在规模和存储库多样性方面仍然有限，而工业解决方案由于未发布的基础设施而不透明，这对大多数学术研究团体造成了阻碍。我们推出 OpenSWE，这是用于 Python 中 SWE 代理训练的最大的完全透明框架，包含跨越 12.8k 存储库的 45,320 个可执行 Docker 环境，所有 Dockerfile、评估脚本和基础设施完全开源，以实现可重复性。 OpenSWE 是通过跨 64 节点分布式集群部署的多代理综合管道构建的，可自动执行存储库探索、Dockerfile 构建、评估脚本生成和迭代测试分析。除了规模之外，我们提出了一个以质量为中心的过滤管道，该管道描述了每个环境的固有难度，过滤掉无法解决或挑战不足的实例，并仅保留那些最大化学习效率的实例。整个项目总投资约 147 万美元，在环境建设上花费了 89.1 万美元，在轨迹采样和难度感知管理上花费了 57.6 万美元，从大约 9,000 个有质量保证的环境中产生了约 13,000 个策划轨迹。大量实验验证了OpenSWE的有效性：OpenSWE-32B和OpenSWE-72B在SWE-bench Verified上分别达到62.4%和66.0%，在Qwen2.5系列中建立了SOTA。此外，以 SWE 为重点的培训带来了实质性的领域外改进，包括数学推理方面高达 12 分，科学基准方面高达 5 分，而不会降低事实回忆。
+
+</details>
+
+---
+
+## 5. ARL-Tangram: Unleash the Resource Efficiency in Agentic Reinforcement Learning / ARL-Tangram：释放代理强化学习的资源效率
+
+**Date**: 2026-03-13 | **arXiv**: [2603.13019v1](http://arxiv.org/abs/2603.13019v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.13019v1)
+
+**Categories**: cs.DC, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Agentic reinforcement learning (RL) has emerged as a transformative workload in cloud clusters, enabling large language models (LLMs) to solve complex problems through interactions with real world. However, unlike traditional RL, agentic RL demands substantial external cloud resources, e.g., CPUs for code execution and GPUs for reward models, that exist outside the primary training cluster. Existing agentic RL framework typically rely on static over-provisioning, i.e., resources are often tied to long-lived trajectories or isolated by tasks, which leads to severe resource inefficiency.   We propose the action-level orchestration, and incorporate it into ARL-Tangram, a unified resource management system that enables fine-grained external resource sharing and elasticity. ARL-Tangram utilizes a unified action-level formulation and an elastic scheduling algorithm to minimize action completion time (ACT) while satisfying heterogeneous resource constraints. Further, heterogeneous resource managers are tailored to efficiently support the action-level execution on resources with heterogeneous characteristics and topologies. Evaluation on real-world agentic RL tasks demonstrates that ARL-Tangram improves average ACT by up to 4.3$\times$, speeds up the step duration of RL training by up to 1.5$\times$, and saves the external resources by up to 71.2$\%$. This system has been deployed to support the training of the MiMo series models.
+
+代理强化学习 (RL) 已成为云集群中的变革性工作负载，使大型语言模型 (LLM) 能够通过与现实世界的交互来解决复杂问题。然而，与传统强化学习不同，代理强化学习需要大量外部云资源，例如用于代码执行的 CPU 和用于奖励模型的 GPU，这些资源存在于主训练集群之外。现有的代理强化学习框架通常依赖于静态过度配置，即资源通常与长期轨迹相关或被任务隔离，这导致严重的资源效率低下。   我们提出了行动级编排，并将其纳入ARL-Tangram，这是一个统一的资源管理系统，可实现细粒度的外部资源共享和弹性。 ARL-Tangram 利用统一的动作级公式和弹性调度算法来最小化动作完成时间（ACT），同时满足异构资源约束。此外，异构资源管理器经过定制，可以有效地支持具有异构特征和拓扑的资源上的操作级执行。对现实世界代理强化学习任务的评估表明，ARL-Tangram 将平均 ACT 提高高达 4.3$\times$，将 RL 训练的步骤持续时间加快高达 1.5$\times$，并节省高达 71.2$\%$ 的外部资源。该系统已部署用于支持 MiMo 系列模型的训练。
+
+</details>
+
+---
+
+## 6. Efficient and Interpretable Multi-Agent LLM Routing via Ant Colony Optimization / 通过蚁群优化实现高效且可解释的多代理 LLM 路由
+
+**Date**: 2026-03-13 | **arXiv**: [2603.12933v1](http://arxiv.org/abs/2603.12933v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.12933v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large Language Model (LLM)-driven Multi-Agent Systems (MAS) have demonstrated strong capability in complex reasoning and tool use, and heterogeneous agent pools further broaden the quality--cost trade-off space. Despite these advances, real-world deployment is often constrained by high inference cost, latency, and limited transparency, which hinders scalable and efficient routing. Existing routing strategies typically rely on expensive LLM-based selectors or static policies, and offer limited controllability for semantic-aware routing under dynamic loads and mixed intents, often resulting in unstable performance and inefficient resource utilization. To address these limitations, we propose AMRO-S, an efficient and interpretable routing framework for Multi-Agent Systems (MAS). AMRO-S models MAS routing as a semantic-conditioned path selection problem, enhancing routing performance through three key mechanisms: First, it leverages a supervised fine-tuned (SFT) small language model for intent inference, providing a low-overhead semantic interface for each query; second, it decomposes routing memory into task-specific pheromone specialists, reducing cross-task interference and optimizing path selection under mixed workloads; finally, it employs a quality-gated asynchronous update mechanism to decouple inference from learning, optimizing routing without increasing latency. Extensive experiments on five public benchmarks and high-concurrency stress tests demonstrate that AMRO-S consistently improves the quality--cost trade-off over strong routing baselines, while providing traceable routing evidence through structured pheromone patterns.
+
+大型语言模型（LLM）驱动的多智能体系统（MAS）在复杂推理和工具使用方面表现出了强大的能力，异构智能体池进一步拓宽了质量-成本权衡空间。尽管取得了这些进步，但现实世界的部署往往受到高推理成本、延迟和有限透明度的限制，这阻碍了可扩展和高效的路由。现有的路由策略通常依赖于昂贵的基于LLM的选择器或静态策略，并且在动态负载和混合意图下为语义感知路由提供有限的可控性，通常导致性能不稳定和资源利用效率低下。为了解决这些限制，我们提出了 AMRO-S，这是一种用于多代理系统 (MAS) 的高效且可解释的路由框架。 AMRO-S 将 MAS 路由建模为语义条件路径选择问题，通过三个关键机制增强路由性能：首先，它利用监督微调（SFT）小语言模型进行意图推断，为每个查询提供低开销的语义接口；其次，它将路由内存分解为特定于任务的信息素专家，减少跨任务干扰并优化混合工作负载下的路径选择；最后，它采用质量门控异步更新机制来将推理与学习分离，在不增加延迟的情况下优化路由。对五个公共基准和高并发压力测试的广泛实验表明，AMRO-S 在强大的路由基线上持续改进质量与成本权衡，同时通过结构化信息素模式提供可追踪的路由证据。
+
+</details>
+
+---
+
+## 7. GoalSwarm: Multi-UAV Semantic Coordination for Open-Vocabulary Object Navigation / GoalSwarm：用于开放词汇对象导航的多无人机语义协调
+
+**Date**: 2026-03-13 | **arXiv**: [2603.12908v1](http://arxiv.org/abs/2603.12908v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.12908v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Cooperative visual semantic navigation is a foundational capability for aerial robot teams operating in unknown environments. However, achieving robust open-vocabulary object-goal navigation remains challenging due to the computational constraints of deploying heavy perception models onboard and the complexity of decentralized multi-agent coordination. We present GoalSwarm, a fully decentralized multi-UAV framework for zero-shot semantic object-goal navigation. Each UAV collaboratively constructs a shared, lightweight 2D top-down semantic occupancy map by projecting depth observations from aerial vantage points, eliminating the computational burden of full 3D representations while preserving essential geometric and semantic structure. The core contributions of GoalSwarm are threefold: (1) integration of zero-shot foundation model -- SAM3 for open vocabulary detection and pixel-level segmentation, enabling open-vocabulary target identification without task-specific training; (2) a Bayesian Value Map that fuses multi-viewpoint detection confidences into a per-pixel goal-relevance distribution, enabling informed frontier scoring via Upper Confidence Bound (UCB) exploration; and (3) a decentralized coordination strategy combining semantic frontier extraction, cost-utility bidding with geodesic path costs, and spatial separation penalties to minimize redundant exploration across the swarm.
+
+协作视觉语义导航是在未知环境中运行的空中机器人团队的基本能力。然而，由于船上部署重型感知模型的计算限制以及去中心化多智能体协调的复杂性，实现鲁棒的开放词汇对象目标导航仍然具有挑战性。我们提出了 GoalSwarm，一个完全去中心化的多无人机框架，用于零样本语义对象目标导航。每架无人机通过从空中有利位置投射深度观测结果，协作构建共享的轻量级 2D 自上而下语义占用图，消除完整 3D 表示的计算负担，同时保留基本的几何和语义结构。 GoalSwarm的核心贡献有三个：（1）集成零样本基础模型——SAM3，用于开放词汇检测和像素级分割，无需特定任务训练即可实现开放词汇目标识别； (2) 贝叶斯价值图，将多视点检测置信度融合到每像素目标相关性分布中，从而通过置信上限 (UCB) 探索实现知情的前沿评分； （3）分散协调策略，结合语义边界提取、成本效用投标与测地路径成本以及空间分离惩罚，以最大限度地减少群体中的冗余探索。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-03-13 (38 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-03-13
