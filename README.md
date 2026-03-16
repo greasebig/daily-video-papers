@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-03-16](papers/2026-03-16.md) - 2 papers
 - [2026-03-13](papers/2026-03-13.md) - 18 papers
 - [2026-03-12](papers/2026-03-12.md) - 11 papers
 - [2026-03-11](papers/2026-03-11.md) - 22 papers
@@ -38,6 +39,50 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-03-16 (2 papers)</b></summary>
+
+# arXiv Video Papers - 2026-03-16
+
+**Paper Count**: 2
+
+---
+
+## 1. Reasoning over Video: Evaluating How MLLMs Extract, Integrate, and Reconstruct Spatiotemporal Evidence / 通过视频进行推理：评估 MLLM 如何提取、集成和重建时空证据
+
+**Date**: 2026-03-13 | **arXiv**: [2603.13091v1](http://arxiv.org/abs/2603.13091v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.13091v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The growing interest in embodied agents increases the demand for spatiotemporal video understanding, yet existing benchmarks largely emphasize extractive reasoning, where answers can be explicitly presented within spatiotemporal events. It remains unclear whether multimodal large language models can instead perform abstractive spatiotemporal reasoning, which requires integrating observations over time, combining dispersed cues, and inferring implicit spatial and contextual structure. To address this gap, we formalize abstractive spatiotemporal reasoning from videos by introducing a structured evaluation taxonomy that systematically targets its core dimensions and construct a controllable, scenario-driven synthetic egocentric video dataset tailored to evaluate abstractive spatiotemporal reasoning capabilities, spanning object-, room-, and floor-plan-level scenarios. Based on this framework, we present VAEX-BENCH, a benchmark comprising five abstractive reasoning tasks together with their extractive counterparts. Our extensive experiments compare the performance of state-of-the-art MLLMs under extractive and abstractive settings, exposing their limitations on abstractive tasks and providing a fine-grained analysis of the underlying bottlenecks. The dataset will be released soon.
+
+对实体代理日益增长的兴趣增加了对时空视频理解的需求，但现有基准主要强调提取推理，其中答案可以在时空事件中明确呈现。目前尚不清楚多模态大语言模型是否可以执行抽象时空推理，这需要随着时间的推移整合观察结果，结合分散的线索，并推断隐含的空间和上下文结构。为了解决这一差距，我们通过引入结构化评估分类法来形式化视频的抽象时空推理，该分类系统系统地针对其核心维度，并构建一个可控的、场景驱动的合成自我中心视频数据集，专门用于评估抽象时空推理能力，涵盖对象、房间和平面图级别的场景。基于这个框架，我们提出了 VAEX-BENCH，这是一个包含五个抽象推理任务及其提取对应任务的基准测试。我们广泛的实验比较了提取和抽象设置下最先进的 MLLM 的性能，暴露了它们在抽象任务上的局限性，并提供了对潜在瓶颈的细粒度分析。该数据集即将发布。
+
+</details>
+
+---
+
+## 2. SAW: Toward a Surgical Action World Model via Controllable and Scalable Video Generation / SAW：通过可控和可扩展的视频生成建立外科手术世界模型
+
+**Date**: 2026-03-13 | **arXiv**: [2603.13024v1](http://arxiv.org/abs/2603.13024v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.13024v1)
+
+**Categories**: cs.CV, cs.AI, cs.LG, eess.IV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+A surgical world model capable of generating realistic surgical action videos with precise control over tool-tissue interactions can address fundamental challenges in surgical AI and simulation -- from data scarcity and rare event synthesis to bridging the sim-to-real gap for surgical automation. However, current video generation methods, the very core of such surgical world models, require expensive annotations or complex structured intermediates as conditioning signals at inference, limiting their scalability. Other approaches exhibit limited temporal consistency across complex laparoscopic scenes and do not possess sufficient realism. We propose Surgical Action World (SAW) -- a step toward surgical action world modeling through video diffusion conditioned on four lightweight signals: language prompts encoding tool-action context, a reference surgical scene, tissue affordance mask, and 2D tool-tip trajectories. We design a conditional video diffusion approach that reformulates video-to-video diffusion into trajectory-conditioned surgical action synthesis. The backbone diffusion model is fine-tuned on a custom-curated dataset of 12,044 laparoscopic clips with lightweight spatiotemporal conditioning signals, leveraging a depth consistency loss to enforce geometric plausibility without requiring depth at inference. SAW achieves state-of-the-art temporal consistency (CD-FVD: 199.19 vs. 546.82) and strong visual quality on held-out test data. Furthermore, we demonstrate its downstream utility for (a) surgical AI, where augmenting rare actions with SAW-generated videos improves action recognition (clipping F1-score: 20.93% to 43.14%; cutting: 0.00% to 8.33%) on real test data, and (b) surgical simulation, where rendering tool-tissue interaction videos from simulator-derived trajectory points toward a visually faithful simulation engine.
+
+能够生成逼真的手术动作视频并精确控制工具与组织相互作用的手术世界模型可以解决手术人工智能和模拟中的基本挑战——从数据稀缺和罕见事件合成到缩小手术自动化的模拟与真实差距。然而，当前的视频生成方法（此类手术世界模型的核心）需要昂贵的注释或复杂的结构化中间体作为推理时的条件信号，限制了其可扩展性。其他方法在复杂的腹腔镜场景中表现出有限的时间一致性，并且不具备足够的真实性。我们提出手术动作世界（SAW）——通过以四个轻量级信号为条件的视频扩散实现手术动作世界建模的一步：语言提示编码工具动作上下文、参考手术场景、组织可供性掩模和 2D 工具提示轨迹。我们设计了一种条件视频扩散方法，将视频到视频的扩散重新表述为轨迹条件手术动作合成。主干扩散模型在包含 12,044 个腹腔镜剪辑的定制数据集上进行微调，具有轻量级时空条件信号，利用深度一致性损失来增强几何合理性，而无需推理深度。 SAW 在保留的测试数据上实现了最先进的时间一致性（CD-FVD：199.19 与 546.82）和强大的视觉质量。此外，我们还展示了其在以下方面的下游实用性：(a) 手术人工智能，其中使用 SAW 生成的视频增强罕见动作，从而提高了对真实测试数据的动作识别（剪切 F1 分数：20.93% 至 43.14%；剪切：0.00% 至 8.33%）；以及 (b) 手术模拟，其中从模拟器导出的轨迹渲染工具与组织交互视频，指向视觉上忠实的模拟引擎。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-03-13 (18 papers)</b></summary>
 
 # arXiv Video Papers - 2026-03-13
