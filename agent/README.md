@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-03-17](papers/2026-03-17.md) - 16 papers
 - [2026-03-16](papers/2026-03-16.md) - 7 papers
 - [2026-03-13](papers/2026-03-13.md) - 38 papers
 - [2026-03-12](papers/2026-03-12.md) - 20 papers
@@ -33,6 +34,274 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-03-17 (16 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-03-17
+
+**Paper Count**: 16
+
+---
+
+## 1. Ego to World: Collaborative Spatial Reasoning in Embodied Systems via Reinforcement Learning / 自我到世界：通过强化学习在具体系统中进行协作空间推理
+
+**Date**: 2026-03-16 | **arXiv**: [2603.14811v1](http://arxiv.org/abs/2603.14811v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14811v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Understanding the world from distributed, partial viewpoints is a fundamental challenge for embodied multi-agent systems. Each agent perceives the environment through an ego-centric view that is often limited by occlusion and ambiguity. To study this problem, we introduce the Ego-to-World (E2W) benchmark, which evaluates a vision-language model's ability to fuse heterogeneous viewpoints across three tasks: (i) global counting, (ii) relational location reasoning, and (iii) action-oriented grasping that requires predicting view-specific image coordinates. To address this setting, we propose CoRL, a two-stage framework that combines Chain-of-Thought supervised fine-tuning with reinforcement learning using Group-Relative Policy Optimization. Its core component, the Cross-View Spatial Reward (CVSR), provides dense task-aligned feedback by linking reasoning steps to visual evidence, ensuring coherent cross-view entity resolution, and guiding the model toward correct final predictions. Experiments on E2W show that CoRL consistently surpasses strong proprietary and open-source baselines on both reasoning and perception-grounding metrics, while ablations further confirm the necessity of each CVSR component. Beyond that, CoRL generalizes to external spatial reasoning benchmarks and enables effective real-world multi-robot manipulation with calibrated multi-camera rigs, demonstrating cross-view localization and successful grasp-and-place execution. Together, E2W and CoRL provide a principled foundation for learning world-centric scene understanding from distributed, ego-centric observations, advancing collaborative embodied AI.
+
+从分布式、局部的角度理解世界是实体多智能体系统面临的基本挑战。每个智能体通过以自我为中心的观点来感知环境，这种观点通常受到遮挡和模糊性的限制。为了研究这个问题，我们引入了自我到世界（E2W）基准，它评估视觉语言模型在三个任务中融合异构视点的能力：（i）全局计数，（ii）关系位置推理，以及（iii）需要预测特定视图图像坐标的面向动作的抓取。为了解决这个问题，我们提出了 CoRL，这是一个两阶段框架，它将思想链监督微调与使用组相关策略优化的强化学习相结合。其核心组件跨视图空间奖励（CVSR），通过将推理步骤与视觉证据联系起来，提供密集的任务对齐反馈，确保一致的跨视图实体分辨率，并指导模型实现正确的最终预测。 E2W 实验表明，CoRL 在推理和感知基础指标方面始终超越强大的专有和开源基线，而消融则进一步证实了每个 CVSR 组件的必要性。除此之外，CoRL 还推广到外部空间推理基准，并通过校准的多摄像头装置实现有效的现实世界多机器人操作，展示了跨视图定位和成功的抓取和放置执行。 E2W 和 CoRL 共同为从分布式、以自我为中心的观察中学习以世界为中心的场景理解提供了原则基础，从而推进协作式具体人工智能的发展。
+
+</details>
+
+---
+
+## 2. Knowledge Activation: AI Skills as the Institutional Knowledge Primitive for Agentic Software Development / 知识激活：人工智能技能作为代理软件开发的机构知识原语
+
+**Date**: 2026-03-16 | **arXiv**: [2603.14805v1](http://arxiv.org/abs/2603.14805v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14805v1)
+
+**Categories**: cs.AI, cs.HC, cs.SE
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Enterprise software organizations accumulate critical institutional knowledge - architectural decisions, deployment procedures, compliance policies, incident playbooks - yet this knowledge remains trapped in formats designed for human interpretation. The bottleneck to effective agentic software development is not model capability but knowledge architecture. When any knowledge consumer - an autonomous AI agent, a newly onboarded engineer, or a senior developer - encounters an enterprise task without institutional context, the result is guesswork, correction cascades, and a disproportionate tax on senior engineers who must manually supply what others cannot infer.   This paper introduces Knowledge Activation, a framework that specializes AI Skills - the open standard for agent-consumable knowledge - into structured, governance-aware Atomic Knowledge Units (AKUs) for institutional knowledge delivery. Rather than retrieving documents for interpretation, AKUs deliver action - ready specifications encoding what to do, which tools to use, what constraints to respect, and where to go next - so that agents act correctly and engineers receive institutionally grounded guidance without reconstructing organizational context from scratch.   AKUs form a composable knowledge graph that agents traverse at runtime - compressing onboarding, reducing cross - team friction, and eliminating correction cascades. The paper formalizes the resource constraints that make this architecture necessary, specifies the AKU schema and deployment architecture, and grounds long - term maintenance in knowledge commons practice. Organizations that architect their institutional knowledge for the agentic era will outperform those that invest solely in model capability.
+
+企业软件组织积累了关键的机构知识——架构决策、部署程序、合规策略、事件手册——但这些知识仍然受制于为人类解释而设计的格式。有效的代理软​​件开发的瓶颈不是模型能力而是知识架构。当任何知识消费者（自主人工智能代理、新入职的工程师或高级开发人员）遇到没有机构背景的企业任务时，结果就是猜测、级联修正，并对必须手动提供其他人无法推断的信息的高级工程师造成不成比例的负担。   本文介绍了知识激活，这是一个专门将人工智能技能（代理可消费知识的开放标准）转化为结构化、具有治理意识的原子知识单元 (AKU) 的框架，用于机构知识交付。 AKU 不是检索文档进行解释，而是提供行动就绪的规范，编码要做什么、要使用哪些工具、要遵守哪些约束以及下一步该去哪里，以便代理正确行事，工程师可以收到基于制度的指导，而无需从头开始重建组织环境。   AKU 形成了一个可组合的知识图，代理在运行时遍历 - 压缩入职、减少跨团队摩擦并消除校正级联。该论文形式化了使该架构成为必要的资源约束，指定了 AKU 模式和部署架构，并在知识共享实践中奠定了长期维护的基础。为代理时代构建机构知识的组织将胜过那些仅投资于模型能力的组织。
+
+</details>
+
+---
+
+## 3. GameUIAgent: An LLM-Powered Framework for Automated Game UI Design with Structured Intermediate Representation / GameUIAgent：一个由法学硕士支持的框架，用于具有结构化中间表示的自动化游戏 UI 设计
+
+**Date**: 2026-03-16 | **arXiv**: [2603.14724v1](http://arxiv.org/abs/2603.14724v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14724v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Game UI design requires consistent visual assets across rarity tiers yet remains a predominantly manual process. We present GameUIAgent, an LLM-powered agentic framework that translates natural language descriptions into editable Figma designs via a Design Spec JSON intermediate representation. A six-stage neuro-symbolic pipeline combines LLM generation, deterministic post-processing, and a Vision-Language Model (VLM)-guided Reflection Controller (RC) for iterative self-correction with guaranteed non-regressive quality. Evaluated across 110 test cases, three LLMs, and three UI templates, cross-model analysis establishes a game-domain failure taxonomy (rarity-dependent degradation; visual emptiness) and uncovers two key empirical findings. A Quality Ceiling Effect (Pearson r=-0.96, p<0.01) suggests that RC improvement is bounded by headroom below a quality threshold -- a visual-domain counterpart to test-time compute scaling laws. A Rendering-Evaluation Fidelity Principle reveals that partial rendering enhancements paradoxically degrade VLM evaluation by amplifying structural defects. Together, these results establish foundational principles for LLM-driven visual generation agents in game production.
+
+游戏 UI 设计需要跨稀有度等级的一致视觉资产，但仍然是一个主要的手动过程。我们推出 GameUIAgent，这是一个由 LLM 支持的代理框架，可通过设计规范 JSON 中间表示将自然语言描述转换为可编辑的 Figma 设计。六级神经符号管道结合了 LLM 生成、确定性后处理和视觉语言模型 (VLM) 引导的反射控制器 (RC)，用于迭代自我校正，并保证非回归质量。通过对 110 个测试用例、三个法学硕士和三个 UI 模板进行评估，跨模型分析建立了游戏领域失败分类法（稀有性相关的退化；视觉空虚），并揭示了两个关键的实证结果。质量上限效应（Pearson r=-0.96，p<0.01）表明 RC 的改进受到低于质量阈值的余量的限制——与测试时计算缩放定律相对应的视觉域。渲染评估保真度原则揭示了部分渲染增强通过放大结构缺陷反而降低了 VLM 评估。这些结果共同为游戏制作中法学硕士驱动的视觉生成代理建立了基本原则。
+
+</details>
+
+---
+
+## 4. Beyond Local Code Optimization: Multi-Agent Reasoning for Software System Optimization / 超越本地代码优化：软件系统优化的多代理推理
+
+**Date**: 2026-03-16 | **arXiv**: [2603.14703v1](http://arxiv.org/abs/2603.14703v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14703v1)
+
+**Categories**: cs.SE, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language models and AI agents have recently shown promise in automating software performance optimization, but existing approaches predominantly rely on local, syntax-driven code transformations. This limits their ability to reason about program behavior and capture whole system performance interactions. As modern software increasingly comprises interacting components - such as microservices, databases, and shared infrastructure - effective code optimization requires reasoning about program structure and system architecture beyond individual functions or files.   This paper explores the feasibility of whole system optimization for microservices. We introduce a multi-agent framework that integrates control-flow and data-flow representations with architectural and cross-component dependency signals to support system-level performance reasoning. The proposed system is decomposed into coordinated agent roles - summarization, analysis, optimization, and verification - that collaboratively identify cross-cutting bottlenecks and construct multi-step optimization strategies spanning the software stack. We present a proof-of-concept on a microservice-based system that illustrates the effectiveness of our proposed framework, achieving a 36.58% improvement in throughput and a 27.81% reduction in average response time.
+
+大型语言模型和人工智能代理最近在自动化软件性能优化方面显示出了希望，但现有方法主要依赖于本地语法驱动的代码转换。这限制了他们推理程序行为和捕获整个系统性能交互的能力。随着现代软件越来越多地包含交互组件（例如微服务、数据库和共享基础设施），有效的代码优化需要对超出单个功能或文件的程序结构和系统架构进行推理。   本文探讨了微服务整体系统优化的可行性。我们引入了一个多代理框架，它将控制流和数据流表示与架构和跨组件依赖信号集成在一起，以支持系统级性能推理。所提出的系统被分解为协调的代理角色 - 总结、分析、优化和验证 - 协作识别横切瓶颈并构建跨越软件堆栈的多步骤优化策略。我们提出了基于微服务的系统的概念验证，说明了我们提出的框架的有效性，吞吐量提高了 36.58%，平均响应时间缩短了 27.81%。
+
+</details>
+
+---
+
+## 5. AgentTrace: Causal Graph Tracing for Root Cause Analysis in Deployed Multi-Agent Systems / AgentTrace：用于在已部署的多代理系统中进行根本原因分析的因果图跟踪
+
+**Date**: 2026-03-16 | **arXiv**: [2603.14688v1](http://arxiv.org/abs/2603.14688v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14688v1)
+
+**Categories**: cs.LG, cs.AI, cs.SE
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+As multi-agent AI systems are increasingly deployed in real-world settings - from automated customer support to DevOps remediation - failures become harder to diagnose due to cascading effects, hidden dependencies, and long execution traces. We present AgentTrace, a lightweight causal tracing framework for post-hoc failure diagnosis in deployed multi-agent workflows. AgentTrace reconstructs causal graphs from execution logs, traces backward from error manifestations, and ranks candidate root causes using interpretable structural and positional signals - without requiring LLM inference at debugging time. Across a diverse benchmark of multi-agent failure scenarios designed to reflect common deployment patterns, AgentTrace localizes root causes with high accuracy and sub-second latency, significantly outperforming both heuristic and LLM-based baselines. Our results suggest that causal tracing provides a practical foundation for improving the reliability and trustworthiness of agentic systems in the wild.
+
+随着多代理人工智能系统越来越多地部署在现实世界中（从自动化客户支持到 DevOps 修复），由于级联效应、隐藏依赖性和长执行跟踪，故障变得更难诊断。我们提出了 AgentTrace，这是一个轻量级因果跟踪框架，用于在已部署的多代理工作流程中进行事后故障诊断。 AgentTrace 从执行日志中重建因果图，从错误表现中向后追踪，并使用可解释的结构和位置信号对候选根本原因进行排名 - 无需在调试时进行 LLM 推理。在旨在反映常见部署模式的多代理故障场景的各种基准中，AgentTrace 能够以高精度和亚秒级延迟定位根本原因，显着优于启发式基准和基于 LLM 的基准。我们的结果表明，因果追踪为提高野外代理系统的可靠性和可信度提供了实践基础。
+
+</details>
+
+---
+
+## 6. ResearchPilot: A Local-First Multi-Agent System for Literature Synthesis and Related Work Drafting / ResearchPilot：用于文献合成和相关工作起草的本地优先多智能体系统
+
+**Date**: 2026-03-15 | **arXiv**: [2603.14629v1](http://arxiv.org/abs/2603.14629v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14629v1)
+
+**Categories**: cs.IR, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+ResearchPilot is an open-source, self-hostable multi-agent system for literature-review assistance. Given a natural-language research question, it retrieves papers from Semantic Scholar and arXiv, extracts structured findings from paper abstracts, synthesizes cross-paper patterns, and drafts a citation-aware related-work section. The system combines FastAPI, Next.js, DSPy, SQLite, and Qdrant in a local-first architecture that supports bring-your-own-key model access and remote-or-local embeddings. This paper describes the system design, typed agent interfaces, persistence and history-search mechanisms, and the engineering tradeoffs involved in building a transparent research assistant. Rather than claiming algorithmic novelty, we present ResearchPilot as a systems contribution and evaluate it through automated tests and end-to-end local runs. We discuss limitations including external API rate limits, abstract-only extraction, incomplete corpus coverage, and the lack of citation verification.
+
+ResearchPilot 是一个开源、可自托管的多代理系统，用于协助文献综述。给定一个自然语言研究问题，它从 Semantic Sc​​holar 和 arXiv 检索论文，从论文摘要中提取结构化发现，综合跨论文模式，并起草一个引文感知的相关工作部分。该系统将 FastAPI、Next.js、DSPy、SQLite 和 Qdrant 结合在本地优先架构中，支持自带密钥模型访问和远程或本地嵌入。本文描述了系统设计、类型化代理接口、持久性和历史搜索机制，以及构建透明研究助理所涉及的工程权衡。我们并没有声称算法新颖，而是将 ResearchPilot 作为系统贡献来呈现，并通过自动化测试和端到端本地运行对其进行评估。我们讨论了一些限制，包括外部 API 速率限制、仅摘要提取、不完整的语料库覆盖以及缺乏引文验证。
+
+</details>
+
+---
+
+## 7. EcoFair-CH-MARL: Scalable Constrained Hierarchical Multi-Agent RL with Real-Time Emission Budgets and Fairness Guarantees / EcoFair-CH-MARL：具有实时排放预算和公平保证的可扩展约束分层多智能体强化学习
+
+**Date**: 2026-03-15 | **arXiv**: [2603.14625v1](http://arxiv.org/abs/2603.14625v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14625v1)
+
+**Categories**: cs.MA, cs.AI, cs.LG, eess.SY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Global decarbonisation targets and tightening market pressures demand maritime logistics solutions that are simultaneously efficient, sustainable, and equitable. We introduce EcoFair-CH-MARL, a constrained hierarchical multi-agent reinforcement learning framework that unifies three innovations: (i) a primal-dual budget layer that provably bounds cumulative emissions under stochastic weather and demand; (ii) a fairness-aware reward transformer with dynamically scheduled penalties that enforces max-min cost equity across heterogeneous fleets; and (iii) a two-tier policy architecture that decouples strategic routing from real-time vessel control, enabling linear scaling in agent count. New theoretical results establish O(\sqrt{T}) regret for both constraint violations and fairness loss. Experiments on a high-fidelity maritime digital twin (16 ports, 50 vessels) driven by automatic identification system traces, plus an energy-grid case study, show up to 15% lower emissions, 12% higher through-put, and a 45% fair-cost improvement over state-of-the-art hierarchical and constrained MARL baselines. In addition, EcoFair-CH-MARL achieves stronger equity (lower Gini and higher min-max welfare) than fairness-specific MARL baselines (e.g., SOTO, FEN), and its modular design is compatible with both policy- and value-based learners. EcoFair-CH-MARL therefore advances the feasibility of large-scale, regulation-compliant, and socially responsible multi-agent coordination in safety-critical domains.
+
+全球脱碳目标和日益紧张的市场压力需要同时高效、可持续和公平的海运物流解决方案。我们引入了 EcoFair-CH-MARL，这是一种约束分层多智能体强化学习框架，它统一了三项创新：（i）原始-对偶预算层，可证明在随机天气和需求下限制累积排放量； (ii) 具有公平意识的奖励变压器，具有动态安排的惩罚，可在异构车队之间强制执行最大-最小成本公平； (iii) 两层策略架构，将战略路由与实时船舶控制分离，从而实现代理数量的线性扩展。新的理论结果为违反约束和公平性损失建立了 O(\sqrt{T}) 遗憾。由自动识别系统痕迹驱动的高保真海事数字孪生（16 个港口、50 艘船舶）以及能源网案例研究表明，与最先进的分层和约束 MARL 基线相比，排放量降低了 15%，吞吐量提高了 12%，公平成本提高了 45%。此外，EcoFair-CH-MARL 比特定于公平性的 MARL 基线（例如 SOTO、FEN）实现了更强的公平性（更低的基尼系数和更高的最小-最大福利），并且其模块化设计与基于政策和基于价值的学习者兼容。因此，EcoFair-CH-MARL 提高了安全关键领域中大规模、合规且对社会负责的多主体协调的可行性。
+
+</details>
+
+---
+
+## 8. D-MEM: Dopamine-Gated Agentic Memory via Reward Prediction Error Routing / D-MEM：通过奖励预测错误路由的多巴胺门控代理记忆
+
+**Date**: 2026-03-15 | **arXiv**: [2603.14597v1](http://arxiv.org/abs/2603.14597v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14597v1)
+
+**Categories**: q-bio.NC, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Autonomous LLM agents require structured long-term memory, yet current "append-and-evolve" systems like A-MEM face O(N^2) write-latency and excessive token costs. We introduce D-MEM (Dopamine-Gated Agentic Memory), a biologically inspired architecture that decouples short-term interaction from cognitive restructuring via a Fast/Slow routing system based on Reward Prediction Error (RPE). A lightweight Critic Router evaluates stimuli for Surprise and Utility. Routine, low-RPE inputs are bypassed or cached in an O(1) fast-access buffer. Conversely, high-RPE inputs, such as factual contradictions or preference shifts, trigger a "dopamine" signal, activating the O(N) memory evolution pipeline to reshape the agent's knowledge graph. To evaluate performance under realistic conditions, we introduce the LoCoMo-Noise benchmark, which injects controlled conversational noise into long-term sessions. Evaluations demonstrate that D-MEM reduces token consumption by over 80%, eliminates O(N^2) bottlenecks, and outperforms baselines in multi-hop reasoning and adversarial resilience. By selectively gating cognitive restructuring, D-MEM provides a scalable, cost-efficient foundation for lifelong agentic memory.
+
+自主 LLM 代理需要结构化的长期记忆，但当前的“追加和演化”系统（例如 A-MEM）面临 O(N^2) 写入延迟和过高的令牌成本。我们引入了 D-MEM（多巴胺门控代理记忆），这是一种受生物学启发的架构，可通过基于奖励预测误差 (RPE) 的快/慢路由系统将短期交互与认知重组解耦。轻量级评论路由器评估惊喜和效用的刺激。常规的低 RPE 输入被绕过或缓存在 O(1) 快速访问缓冲区中。相反，高 RPE 输入，例如事实矛盾或偏好转变，会触发“多巴胺”信号，激活 O(N) 记忆演化管道，重塑智能体的知识图谱。为了评估现实条件下的性能，我们引入了 LoCoMo-Noise 基准，它将受控的对话噪声注入到长期会话中。评估表明，D-MEM 将代币消耗减少了 80% 以上，消除了 O(N^2) 瓶颈，并且在多跳推理和对抗弹性方面优于基线。通过选择性地控制认知重组，D-MEM 为终身代理记忆提供了可扩展、经济高效的基础。
+
+</details>
+
+---
+
+## 9. An End-to-end Architecture for Collider Physics and Beyond / 对撞机物理及其他领域的端到端架构
+
+**Date**: 2026-03-15 | **arXiv**: [2603.14553v1](http://arxiv.org/abs/2603.14553v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14553v1)
+
+**Categories**: hep-ph, cs.AI, cs.MA, hep-ex
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present, to our knowledge, the first language-driven agent system capable of executing end-to-end collider phenomenology tasks, instantiated within a decoupled, domain-agnostic architecture for autonomous High-Energy Physics phenomenology. Guided only by natural-language prompts supplemented with standard physics notation, ColliderAgent carries out workflows from a theoretical Lagrangian to final phenomenological outputs without relying on package-specific code. In this framework, a hierarchical multi-agent reasoning layer is coupled to Magnus, a unified execution backend for phenomenological calculations and simulation toolchains. We validate the system on representative literature reproductions spanning leptoquark and axion-like-particle scenarios, higher-dimensional effective operators, parton-level and detector-level analyses, and large-scale parameter scans leading to exclusion limits. These results point to a route toward more automated, scalable, and reproducible research in collider physics, cosmology, and physics more broadly.
+
+据我们所知，我们提出了第一个能够执行端到端对撞机现象学任务的语言驱动代理系统，该系统在解耦的、与领域无关的自主高能物理现象学架构中实例化。仅在自然语言提示的指导下辅以标准物理符号，ColliderAgent 即可执行从理论拉格朗日到最终现象学输出的工作流程，而无需依赖特定于包的代码。在此框架中，分层多智能体推理层与 Magnus 耦合，Magnus 是现象学计算和模拟工具链的统一执行后端。我们验证了系统的代表性文献复制品，涵盖轻夸克和类轴子粒子场景、高维有效算子、部分子级和探测器级分析，以及导致排除极限的大规模参数扫描。这些结果为对撞机物理学、宇宙学和更广泛的物理学领域的更加自动化、可扩展和可重复的研究指明了道路。
+
+</details>
+
+---
+
+## 10. Infinite Problem Generator: Verifiably Scaling Physics Reasoning Data with Agentic Workflows / 无限问题生成器：通过代理工作流程可验证地扩展物理推理数据
+
+**Date**: 2026-03-15 | **arXiv**: [2603.14486v1](http://arxiv.org/abs/2603.14486v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14486v1)
+
+**Categories**: cs.CL, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Training large language models for complex reasoning is bottlenecked by the scarcity of verifiable, high-quality data. In domains like physics, standard text augmentation often introduces hallucinations, while static benchmarks lack the reasoning traces required for fine-tuning. We introduce the Infinite Problem Generator (IPG), an agentic framework that synthesizes physics problems with guaranteed solvability through a Formula-as-Code paradigm. Unlike probabilistic text generation, IPG constructs solutions as executable Python programs, enforcing strict mathematical consistency. As a proof-of-concept, we release ClassicalMechanicsV1, a high-fidelity corpus of 1,335 classical mechanics problems expanded from 165 expert seeds. The corpus demonstrates high structural diversity, spanning 102 unique physical formulas with an average complexity of 3.05 formulas per problem. Furthermore, we identify a Complexity Blueprint, demonstrating a strong linear correlation ($R^2 \approx 0.95$) between formula count and verification code length. This relationship establishes code complexity as a precise, proxy-free metric for problem difficulty, enabling controllable curriculum generation. We release the full IPG pipeline, the ClassicalMechanicsV1 dataset, and our evaluation report to support reproducible research in reasoning-intensive domains.
+
+由于缺乏可验证的高质量数据，训练大型语言模型进行复杂推理面临着瓶颈。在物理学等领域，标准文本增强通常会引入幻觉，而静态基准缺乏微调所需的推理痕迹。我们引入了无限问题生成器（IPG），这是一个代理框架，它通过公式即代码范例来综合物理问题，并保证可解决性。与概率文本生成不同，IPG 将解决方案构建为可执行的 Python 程序，强制执行严格的数学一致性。作为概念验证，我们发布了 ClassicalMechanicsV1，这是一个由 165 个专家种子扩展而成的包含 1,335 个经典力学问题的高保真语料库。该语料库表现出高度的结构多样性，涵盖 102 个独特的物理公式，每个问题的平均复杂度为 3.05 个公式。此外，我们确定了一个复杂度蓝图，证明公式计数和验证码长度之间存在很强的线性相关性（$R^2 \approx 0.95$）。这种关系将代码复杂性建立为精确的、无代理的问题难度度量，从而实现可控的课程生成。我们发布了完整的 IPG 流程、ClassicalMechanicsV1 数据集和我们的评估报告，以支持推理密集型领域的可重复研究。
+
+</details>
+
+---
+
+## 11. MedPriv-Bench: Benchmarking the Privacy-Utility Trade-off of Large Language Models in Medical Open-End Question Answering / MedPriv-Bench：对医疗开放式问答中大型语言模型的隐私与效用权衡进行基准测试
+
+**Date**: 2026-03-15 | **arXiv**: [2603.14265v1](http://arxiv.org/abs/2603.14265v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14265v1)
+
+**Categories**: cs.CL, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in Retrieval-Augmented Generation (RAG) have enabled large language models (LLMs) to ground outputs in clinical evidence. However, connecting LLMs with external databases introduces the risk of contextual leakage: a subtle privacy threat where unique combinations of medical details enable patient re-identification even without explicit identifiers. Current benchmarks in healthcare heavily focus on accuracy, ignoring such privacy issues, despite strict regulations like Health Insurance Portability and Accountability Act (HIPAA) and General Data Protection Regulation (GDPR). To fill this gap, we present MedPriv-Bench, the first benchmark specifically designed to jointly evaluate privacy preservation and clinical utility in medical open-ended question answering. Our framework utilizes a multi-agent, human-in-the-loop pipeline to synthesize sensitive medical contexts and clinically relevant queries that create realistic privacy pressure. We establish a standardized evaluation protocol leveraging a pre-trained RoBERTa-Natural Language Inference (NLI) model as an automated judge to quantify data leakage, achieving an average of 85.9% alignment with human experts. Through an extensive evaluation of 9 representative LLMs, we demonstrate a pervasive privacy-utility trade-off. Our findings underscore the necessity of domain-specific benchmarks to validate the safety and efficacy of medical AI systems in privacy-sensitive environments.
+
+检索增强生成 (RAG) 的最新进展使大型语言模型 (LLM) 能够将输出结果纳入临床证据。然而，将法学硕士与外部数据库连接会带来上下文泄露的风险：这是一种微妙的隐私威胁，即使没有明确的标识符，医疗详细信息的独特组合也可以使患者重新识别。尽管存在健康保险流通与责任法案 (HIPAA) 和通用数据保护条例 (GDPR) 等严格法规，但当前的医疗保健基准严重关注准确性，忽略此类隐私问题。为了填补这一空白，我们推出了 MedPriv-Bench，这是第一个专门设计用于联合评估医疗开放式问答中的隐私保护和临床实用性的基准。我们的框架利用多代理、人机交互管道来综合敏感的医疗环境和临床相关查询，从而产生现实的隐私压力。我们建立了标准化评估协议，利用预先训练的 RoBERTa 自然语言推理 (NLI) 模型作为自动判断来量化数据泄漏，与人类专家平均达到 85.9% 的一致性。通过对 9 位具有代表性的法学硕士进行广泛评估，我们展示了普遍存在的隐私与实用性权衡。我们的研究结果强调了特定领域基准的必要性，以验证医疗人工智能系统在隐私敏感环境中的安全性和有效性。
+
+</details>
+
+---
+
+## 12. AeroGen: Agentic Drone Autonomy through Single-Shot Structured Prompting & Drone SDK / AeroGen：通过单次结构化提示和无人机 SDK 实现代理无人机自主
+
+**Date**: 2026-03-15 | **arXiv**: [2603.14236v1](http://arxiv.org/abs/2603.14236v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14236v1)
+
+**Categories**: cs.RO, cs.DC
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Designing correct UAV autonomy programs is challenging due to joint navigation, sensing and analytics requirements. While LLMs can generate code, their reliability for safety-critical UAVs remains uncertain. This paper presents AeroGen, an open-loop framework that enables consistently correct single-shot AI-generated drone control programs through structured guardrail prompting and integration with the AeroDaaS drone SDK. AeroGen encodes API descriptions, flight constraints and operational world rules directly into the system context prompt, enabling generic LLMs to produce constraint-aware code from user prompts, with minimal example code. We evaluate AeroGen across a diverse benchmark of 20 navigation tasks and 5 drone missions on urban, farm and inspection environments, using both imperative and declarative user prompts. AeroGen generates about 40 lines of AeroDaaS Python code in about 20s per mission, in both real-world and simulations, showing that structured prompting with a well-defined SDK improves robustness, correctness and deployability of LLM-generated drone autonomy programs.
+
+由于联合导航、传感和分析要求，设计正确的无人机自主计划具有挑战性。虽然法学硕士可以生成代码，但它们对于安全关键型无人机的可靠性仍然不确定。本文介绍了 AeroGen，这是一种开环框架，可通过结构化护栏提示以及与 AeroDaaS 无人机 SDK 的集成，实现一致正确的单次 AI 生成的无人机控制程序。 AeroGen 将 API 描述、飞行约束和操作世界规则直接编码到系统上下文提示中，使通用法学硕士能够根据用户提示生成约束感知代码，并使用最少的示例代码。我们使用命令式和声明式用户提示，在城市、农场和检查环境中的 20 项导航任务和 5 项无人机任务的多样化基准中评估 AeroGen。在现实世界和模拟中，AeroGen 在每次任务约 20 秒内生成约 40 行 AeroDaaS Python 代码，这表明使用定义良好的 SDK 进行结构化提示可提高 LLM 生成的无人机自主程序的稳健性、正确性和可部署性。
+
+</details>
+
+---
+
+## 13. Agentic DAG-Orchestrated Planner Framework for Multi-Modal, Multi-Hop Question Answering in Hybrid Data Lakes / 用于混合数据湖中多模式、多跳问答的代理 DAG 协调规划器框架
+
+**Date**: 2026-03-15 | **arXiv**: [2603.14229v1](http://arxiv.org/abs/2603.14229v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14229v1)
+
+**Categories**: cs.AI, cs.SE
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Enterprises increasingly need natural language (NL) question answering over hybrid data lakes that combine structured tables and unstructured documents. Current deployed solutions, including RAG-based systems, typically rely on brute-force retrieval from each store and post-hoc merging. Such approaches are inefficient and leaky, and more critically, they lack explicit support for multi-hop reasoning, where a query is decomposed into successive steps (hops) that may traverse back and forth between structured and unstructured sources. We present Agentic DAG-Orchestrated Transformer (A.DOT) Planner, a framework for multi-modal, multi-hop question answering, that compiles user NL queries into directed acyclic graph (DAG) execution plans spanning both structured and unstructured stores. The system decomposes queries into parallelizable sub-queries, incorporates schema-aware reasoning, and applies both structural and semantic validation before execution. The execution engine adheres to the generated DAG plan to coordinate concurrent retrieval across heterogeneous sources, route intermediate outputs to dependent sub-queries, and merge final results in strict accordance with the plan's logical dependencies. Advanced caching mechanisms, incorporating paraphrase-aware template matching, enable the system to detect equivalent queries and reuse prior DAG execution plans for rapid re-execution, while the DataOps System addresses validation feedback or execution errors. The proposed framework not only improves accuracy and latency, but also produces explicit evidence trails, enabling verification of retrieved content, tracing of data lineage, and fostering user trust in the system's outputs. On benchmark dataset, A.DOT achieves 14.8% absolute gain in correctness and 10.7% in completeness over baselines.
+
+企业越来越需要通过结合结构化表和非结构化文档的混合数据湖进行自然语言 (NL) 问答。当前部署的解决方案（包括基于 RAG 的系统）通常依赖于从每个存储中进行强力检索和事后合并。这种方法效率低下且存在漏洞，更关键的是，它们缺乏对多跳推理的明确支持，在多跳推理中，查询被分解为可能在结构化和非结构化源之间来回遍历的连续步骤（跳跃）。我们提出了 Agentic DAG-Orchesterated Transformer (A.DOT) Planner，这是一个多模式、多跳问答框架，它将用户 NL 查询编译为跨越结构化和非结构化存储的有向无环图 (DAG) 执行计划。该系统将查询分解为可并行的子查询，结合模式感知推理，并在执行前应用结构和语义验证。执行引擎遵循生成的 DAG 计划来协调跨异构源的并发检索，将中间输出路由到相关子查询，并严格按照计划的逻辑依赖关系合并最终结果。先进的缓存机制结合了释义感知模板匹配，使系统能够检测等效查询并重用先前的 DAG 执行计划以快速重新执行，同时 DataOps 系统可解决验证反馈或执行错误。所提出的框架不仅提高了准确性和延迟，而且还产生了明确的证据线索，从而能够验证检索到的内容、跟踪数据沿袭并培养用户对系统输出的信任。在基准数据集上，A.DOT 的正确性绝对提高了 14.8%，完整性提高了 10.7%。
+
+</details>
+
+---
+
+## 14. I'm Not Reading All of That: Understanding Software Engineers' Level of Cognitive Engagement with Agentic Coding Assistants / 我没有阅读全部内容：了解软件工程师与代理编码助手的认知参与水平
+
+**Date**: 2026-03-15 | **arXiv**: [2603.14225v1](http://arxiv.org/abs/2603.14225v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14225v1)
+
+**Categories**: cs.HC, cs.AI, cs.SE
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Over-reliance on AI systems can undermine users' critical thinking and promote complacency, a risk intensified by the emergence of agentic AI systems that operate with minimal human involvement. In software engineering, agentic coding assistants are rapidly becoming embedded in everyday development workflows. Since software engineers create systems deployed across diverse and high-stakes real-world contexts, these assistants must function not merely as autonomous task performers but as Tools for Thought that actively support human reasoning and sensemaking. We conducted a formative study examining software engineers' cognitive engagement and sensemaking processes when working with an agentic coding assistant. Our findings reveal that cognitive engagement consistently declines as tasks progress, and that current agentic coding assistants' designs provide limited affordances for reflection, verification, and meaning-making. Based on these findings, e identify concrete design opportunities leveraging richer interaction modalities and cognitive-forcing mechanisms to sustain engagement and promote deeper thinking in AI-assisted programming.
+
+过度依赖人工智能系统可能会削弱用户的批判性思维并助长自满情绪，而在人类参与最少的情况下运行的代理人工智能系统的出现加剧了这种风险。在软件工程中，代理编码助手正迅速嵌入日常开发工作流程中。由于软件工程师创建的系统部署在多样化和高风险的现实世界环境中，因此这些助手不仅必须充当自主任务执行者，而且必须充当积极支持人类推理和意义建构的思维工具。我们进行了一项形成性研究，检查软件工程师在与代理编码助理一起工作时的认知参与和意义建构过程。我们的研究结果表明，随着任务的进展，认知参与度持续下降，并且当前代理编码助手的设计为反思、验证和意义创造提供的功能有限。基于这些发现，我们确定了具体的设计机会，利用更丰富的交互方式和认知强迫机制来维持参与并促进人工智能辅助编程的更深入思考。
+
+</details>
+
+---
+
+## 15. Towards Agentic Honeynet Configuration / 走向代理蜜网配置
+
+**Date**: 2026-03-14 | **arXiv**: [2603.14122v1](http://arxiv.org/abs/2603.14122v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14122v1)
+
+**Categories**: cs.CR, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Honeypots are deception systems that emulate vulnerable services to collect threat intelligence. While deploying many honeypots increases the opportunity to observe attacker behaviour, in practise network and computational resources limit the number of honeypots that can be exposed. Hence, practitioners must select the assets to deploy, a decision that is typically made statically despite attackers' tactics evolving over time. This work investigates an AI-driven agentic architecture that autonomously manages honeypot exposure in response to ongoing attacks. The proposed agent analyses Intrusion Detection System (IDS) alerts and network state to infer the progression of the attack, identify compromised assets, and predict likely attacker targets. Based on this assessment, the agent dynamically reconfigures the system to maintain attacker engagement while minimizing unnecessary exposure. The approach is evaluated in a simulated environment where attackers execute Proof-of-Concept exploits for known CVEs. Preliminary results indicate that the agent can effectively infer the intent of the attacker and improve the efficiency of exposure under resource constraints
+
+蜜罐是模拟易受攻击的服务来收集威胁情报的欺骗系统。虽然部署许多蜜罐增加了观察攻击者行为的机会，但实际上网络和计算资源限制了可以暴露的蜜罐的数量。因此，从业者必须选择要部署的资产，这一决定通常是静态做出的，尽管攻击者的策略会随着时间的推移而变化。这项工作研究了人工智能驱动的代理架构，该架构可以自主管理蜜罐暴露以响应持续的攻击。所提出的代理分析入侵检测系统 (IDS) 警报和网络状态，以推断攻击的进展、识别受损资产并预测可能的攻击目标。根据此评估，代理动态地重新配置系统以保持攻击者的参与，同时最大限度地减少不必要的暴露。该方法在模拟环境中进行评估，攻击者在模拟环境中对已知 CVE 执行概念验证攻击。初步结果表明，该代理能够有效推断攻击者的意图，提高资源限制下的暴露效率
+
+</details>
+
+---
+
+## 16. GroupGuard: A Framework for Modeling and Defending Collusive Attacks in Multi-Agent Systems / GroupGuard：多代理系统中的共谋攻击建模和防御框架
+
+**Date**: 2026-03-14 | **arXiv**: [2603.13940v1](http://arxiv.org/abs/2603.13940v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.13940v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+While large language model-based agents demonstrate great potential in collaborative tasks, their interactivity also introduces security vulnerabilities. In this paper, we propose and model group collusive attacks, a highly destructive threat in which multiple agents coordinate via sociological strategies to mislead the system. To address this challenge, we introduce GroupGuard, a training-free defense framework that employs a multi-layered defense strategy, including continuous graph-based monitoring, active honeypot inducement, and structural pruning, to identify and isolate collusive agents. Experimental results across five datasets and four topologies demonstrate that group collusive attacks increase the attack success rate by up to 15\% compared to individual attacks. GroupGuard consistently achieves high detection accuracy (up to 88\%) and effectively restores collaborative performance, providing a robust solution for securing multi-agent systems.
+
+虽然基于大型语言模型的代理在协作任务中表现出巨大的潜力，但它们的交互性也引入了安全漏洞。在本文中，我们提出并模拟了群体共谋攻击，这是一种高度破坏性的威胁，其中多个代理通过社会学策略进行协调以误导系统。为了应对这一挑战，我们引入了 GroupGuard，这是一种免训练的防御框架，它采用多层防御策略，包括基于连续图形的监控、主动蜜罐诱导和结构修剪，以识别和隔离共谋代理。五个数据集和四种拓扑的实验结果表明，与单独攻击相比，群体共谋攻击将攻击成功率提高了 15%。 GroupGuard 始终如一地实现高检测准确度（高达 88%）并有效恢复协作性能，为保护多代理系统提供强大的解决方案。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-03-16 (7 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-03-16
