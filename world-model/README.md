@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-03-17](papers/2026-03-17.md) - 6 papers
 - [2026-03-16](papers/2026-03-16.md) - 1 papers
 - [2026-03-13](papers/2026-03-13.md) - 3 papers
 - [2026-03-12](papers/2026-03-12.md) - 3 papers
@@ -31,6 +32,114 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-03-17 (6 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-03-17
+
+**Paper Count**: 6
+
+---
+
+## 1. RS-WorldModel: a Unified Model for Remote Sensing Understanding and Future Sense Forecasting / RS-WorldModel：遥感理解和未来感知预测的统一模型
+
+**Date**: 2026-03-16 | **arXiv**: [2603.14941v1](http://arxiv.org/abs/2603.14941v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14941v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Remote sensing world models aim to both explain observed changes and forecast plausible futures, two tasks that share spatiotemporal priors. Existing methods, however, typically address them separately, limiting cross-task transfer. We present RS-WorldModel, a unified world model for remote sensing that jointly handles spatiotemporal change understanding and text-guided future scene forecasting, and we build RSWBench-1.1M, a 1.1 million sample dataset with rich language annotations covering both tasks. RS-WorldModel is trained in three stages: (1) Geo-Aware Generative Pre-training (GAGP) conditions forecasting on geographic and acquisition metadata; (2) synergistic instruction tuning (SIT) jointly trains understanding and forecasting; (3) verifiable reinforcement optimization (VRO) refines outputs with verifiable, task-specific rewards. With only 2B parameters, RS-WorldModel surpasses open-source models up to 120$ \times $ larger on most spatiotemporal change question-answering metrics. It achieves an FID of 43.13 on text-guided future scene forecasting, outperforming all open-source baselines as well as the closed-source Gemini-2.5-Flash Image (Nano Banana).
+
+遥感世界模型旨在解释观察到的变化并预测可能的未来，这两项任务共享时空先验。然而，现有的方法通常单独解决它们，限制了跨任务传输。我们提出了 RS-WorldModel，这是一种统一的遥感世界模型，可联合处理时空变化理解和文本引导的未来场景预测，并构建了 RSWBench-1.1M，这是一个包含 110 万个样本的数据集，具有涵盖这两项任务的丰富语言注释。 RS-WorldModel 分三个阶段进行训练：（1）地理感知生成预训练（GAGP）对地理和采集元数据进行条件预测； （2）协同指令调优（SIT）联合训练理解和预测； (3) 可验证的强化优化 (VRO) 通过可验证的、特定于任务的奖励来完善输出。仅用 2B 参数，RS-WorldModel 在大多数时空变化问答指标上就超过了开源模型高达 120 美元 × 美元。它在文本引导的未来场景预测方面达到了 43.13 的 FID，优于所有开源基线以及闭源 Gemini-2.5-Flash Image (Nano Banana)。
+
+</details>
+
+---
+
+## 2. PerlAD: Towards Enhanced Closed-loop End-to-end Autonomous Driving with Pseudo-simulation-based Reinforcement Learning / PerlAD：通过基于伪仿真的强化学习迈向增强型闭环端到端自动驾驶
+
+**Date**: 2026-03-16 | **arXiv**: [2603.14908v1](http://arxiv.org/abs/2603.14908v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14908v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+End-to-end autonomous driving policies based on Imitation Learning (IL) often struggle in closed-loop execution due to the misalignment between inadequate open-loop training objectives and real driving requirements. While Reinforcement Learning (RL) offers a solution by directly optimizing driving goals via reward signals, the rendering-based training environments introduce the rendering gap and are inefficient due to high computational costs. To overcome these challenges, we present a novel Pseudo-simulation-based RL method for closed-loop end-to-end autonomous driving, PerlAD. Based on offline datasets, PerlAD constructs a pseudo-simulation that operates in vector space, enabling efficient, rendering-free trial-and-error training. To bridge the gap between static datasets and dynamic closed-loop environments, PerlAD introduces a prediction world model that generates reactive agent trajectories conditioned on the ego vehicle's plan. Furthermore, to facilitate efficient planning, PerlAD utilizes a hierarchical decoupled planner that combines IL for lateral path generation and RL for longitudinal speed optimization. Comprehensive experimental results demonstrate that PerlAD achieves state-of-the-art performance on the Bench2Drive benchmark, surpassing the previous E2E RL method by 10.29% in Driving Score without requiring expensive online interactions. Additional evaluations on the DOS benchmark further confirm its reliability in handling safety-critical occlusion scenarios.
+
+由于开环训练目标与真实驾驶需求不匹配，基于模仿学习（IL）的端到端自动驾驶策略常常难以闭环执行。虽然强化学习（RL）提供了一种通过奖励信号直接优化驾驶目标的解决方案，但基于渲染的训练环境引入了渲染间隙，并且由于高计算成本而效率低下。为了克服这些挑战，我们提出了一种用于闭环端到端自动驾驶的基于伪仿真的新型 RL 方法 PerlAD。基于离线数据集，PerlAD 构建了在向量空间中运行的伪模拟，从而实现高效、免渲染的试错训练。为了弥合静态数据集和动态闭环环境之间的差距，PerlAD 引入了一种预测世界模型，该模型可以根据自我车辆的计划生成反应代理轨迹。此外，为了促进高效规划，PerlAD 利用分层解耦规划器，将用于横向路径生成的 IL 和用于纵向速度优化的 RL 结合起来。综合实验结果表明，PerlAD 在 Bench2Drive 基准上实现了最先进的性能，在无需昂贵的在线交互的情况下，在驾驶分数上超越了之前的 E2E RL 方法 10.29%。对 DOS 基准的额外评估进一步证实了其在处理安全关键遮挡场景方面的可靠性。
+
+</details>
+
+---
+
+## 3. WorldVLM: Combining World Model Forecasting and Vision-Language Reasoning / WorldVLM：结合世界模型预测和视觉语言推理
+
+**Date**: 2026-03-15 | **arXiv**: [2603.14497v1](http://arxiv.org/abs/2603.14497v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14497v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Autonomous driving systems depend on on models that can reason about high-level scene contexts and accurately predict the dynamics of their surrounding environment. Vision- Language Models (VLMs) have recently emerged as promising tools for decision-making and scene understanding, offering strong capabilities in contextual reasoning. However, their limited spatial comprehension constrains their effectiveness as end-to-end driving models. World Models (WM) internalize environmental dynamics to predict future scene evolution. Recently explored as ego-motion predictors and foundation models for autonomous driving, they represent a promising direction for addressing key challenges in the field, particularly enhancing generalization while maintaining dynamic prediction. To leverage the complementary strengths of context-based decision making and prediction, we propose WorldVLM: A hybrid architecture that unifies VLMs and WMs. In our design, the high-level VLM generates behavior commands to guide the driving WM, enabling interpretable and context-aware actions. We evaluate conditioning strategies and provide insights into the hybrid design challenges.
+
+Autonomous driving systems depend on on models that can reason about high-level scene contexts and accurately predict the dynamics of their surrounding environment. Vision- Language Models (VLMs) have recently emerged as promising tools for decision-making and scene understanding, offering strong capabilities in contextual reasoning.然而，它们有限的空间理解限制了它们作为端到端驾驶模型的有效性。世界模型 (WM) 内化环境动态来预测未来场景的演变。 Recently explored as ego-motion predictors and foundation models for autonomous driving, they represent a promising direction for addressing key challenges in the field, particularly enhancing generalization while maintaining dynamic prediction. To leverage the complementary strengths of context-based decision making and prediction, we propose WorldVLM: A hybrid architecture that unifies VLMs and WMs.在我们的设计中，高级 VLM 生成行为命令来指导驾驶 WM，从而实现可解释和上下文感知的操作。我们评估调节策略并提供有关混合设计挑战的见解。
+
+</details>
+
+---
+
+## 4. WestWorld: A Knowledge-Encoded Scalable Trajectory World Model for Diverse Robotic Systems / WestWorld：适用于各种机器人系统的知识编码的可扩展轨迹世界模型
+
+**Date**: 2026-03-15 | **arXiv**: [2603.14392v1](http://arxiv.org/abs/2603.14392v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14392v1)
+
+**Categories**: cs.LG, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Trajectory world models play a crucial role in robotic dynamics learning, planning, and control. While recent works have explored trajectory world models for diverse robotic systems, they struggle to scale to a large number of distinct system dynamics and overlook domain knowledge of physical structures. To address these limitations, we introduce WestWorld, a knoWledge-Encoded Scalable Trajectory World model for diverse robotic systems. To tackle the scalability challenge, we propose a novel system-aware Mixture-of-Experts (Sys-MoE) that dynamically combines and routes specialized experts for different robotic systems via a learnable system embedding. To further enhance zero-shot generalization, we incorporate domain knowledge of robot physical structures by introducing a structural embedding that aligns trajectory representations with morphological information. After pretraining on 89 complex environments spanning diverse morphologies across both simulation and real-world settings, WestWorld achieves significant improvements over competitive baselines in zero- and few-shot trajectory prediction. Additionally, it shows strong scalability across a wide range of robotic environments and significantly improves performance on downstream model-based control for different robots. Finally, we deploy our model on a real-world Unitree Go1, where it demonstrates stable locomotion performance (see our demo on the website: https://westworldrobot.github.io/). The code will be available upon publication.
+
+轨迹世界模型在机器人动力学学习、规划和控制中发挥着至关重要的作用。虽然最近的工作探索了不同机器人系统的轨迹世界模型，但它们难以扩展到大量不同的系统动力学，并且忽略了物理结构的领域知识。为了解决这些限制，我们引入了 WestWorld，这是一种适用于不同机器人系统的知识编码可扩展轨迹世界模型。为了应对可扩展性挑战，我们提出了一种新颖的系统感知专家混合（Sys-MoE），它通过可学习的系统嵌入动态组合和路由不同机器人系统的专业专家。为了进一步增强零样本泛化，我们通过引入将轨迹表示与形态信息对齐的结构嵌入来整合机器人物理结构的领域知识。在对跨越模拟和现实世界设置的不同形态的 89 个复杂环境进行预训练后，WestWorld 在零次和少次轨迹预测方面比竞争基线取得了显着改进。此外，它在各种机器人环境中表现出强大的可扩展性，并显着提高了不同机器人下游基于模型的控制的性能。最后，我们将模型部署在现实世界的 Unitree Go1 上，并展示了稳定的运动性能（请参阅网站上的演示：https://westworldrobot.github.io/）。该代码将在发布后提供。
+
+</details>
+
+---
+
+## 5. The Pulse of Motion: Measuring Physical Frame Rate from Visual Dynamics / 运动的脉搏：从视觉动力学测量物理帧速率
+
+**Date**: 2026-03-15 | **arXiv**: [2603.14375v1](http://arxiv.org/abs/2603.14375v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14375v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+While recent generative video models have achieved remarkable visual realism and are being explored as world models, true physical simulation requires mastering both space and time. Current models can produce visually smooth kinematics, yet they lack a reliable internal motion pulse to ground these motions in a consistent, real-world time scale. This temporal ambiguity stems from the common practice of indiscriminately training on videos with vastly different real-world speeds, forcing them into standardized frame rates. This leads to what we term chronometric hallucination: generated sequences exhibit ambiguous, unstable, and uncontrollable physical motion speeds. To address this, we propose Visual Chronometer, a predictor that recovers the Physical Frames Per Second (PhyFPS) directly from the visual dynamics of an input video. Trained via controlled temporal resampling, our method estimates the true temporal scale implied by the motion itself, bypassing unreliable metadata. To systematically quantify this issue, we establish two benchmarks, PhyFPS-Bench-Real and PhyFPS-Bench-Gen. Our evaluations reveal a harsh reality: state-of-the-art video generators suffer from severe PhyFPS misalignment and temporal instability. Finally, we demonstrate that applying PhyFPS corrections significantly improves the human-perceived naturalness of AI-generated videos. Our project page is https://xiangbogaobarry.github.io/Visual_Chronometer/.
+
+虽然最近的生成视频模型已经实现了显着的视觉真实感，并且正在作为世界模型进行探索，但真正的物理模拟需要掌握空间和时间。当前的模型可以产生视觉上平滑的运动学，但它们缺乏可靠的内部运动脉冲来将这些运动置于一致的、真实世界的时间尺度内。这种时间模糊性源于对现实世界速度截然不同的视频进行不加区别的训练的常见做法，迫使它们采用标准化的帧速率。这导致了我们所说的计时幻觉：生成的序列表现出模糊、不稳定和无法控制的物理运动速度。为了解决这个问题，我们提出了 Visual Chronometer，这是一种直接从输入视频的视觉动态中恢复物理帧每秒 (PhyFPS) 的预测器。通过受控时间重采样进行训练，我们的方法绕过不可靠的元数据来估计运动本身隐含的真实时间尺度。为了系统地量化这个问题，我们建立了两个基准：PhyFPS-Bench-Real 和 PhyFPS-Bench-Gen。我们的评估揭示了一个严酷的现实：最先进的视频生成器存在严重的 PhyFPS 错位和时间不稳定问题。最后，我们证明应用 PhyFPS 校正可以显着提高人工智能生成视频的人类感知自然度。我们的项目页面是https://yangbogaobarry.github.io/Visual_Chronometer/。
+
+</details>
+
+---
+
+## 6. Understanding the Emergence of Seemingly Useless Features in Next-Token Predictors / 了解下一个标记预测器中看似无用的特征的出现
+
+**Date**: 2026-03-14 | **arXiv**: [2603.14087v1](http://arxiv.org/abs/2603.14087v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14087v1)
+
+**Categories**: cs.LG, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Trained Transformers have been shown to compute abstract features that appear redundant for predicting the immediate next token. We identify which components of the gradient signal from the next-token prediction objective give rise to this phenomenon, and we propose a method to estimate the influence of those components on the emergence of specific features. After validating our approach on toy tasks, we use it to interpret the origins of the world model in OthelloGPT and syntactic features in a small language model. Finally, we apply our framework to a pretrained LLM, showing that features with extremely high or low influence on future tokens tend to be related to formal reasoning domains such as code. Overall, our work takes a step toward understanding hidden features of Transformers through the lens of their development during training.
+
+经过训练的 Transformer 已被证明可以计算抽象特征，这些特征对于预测紧邻的下一个标记来说似乎是多余的。我们确定了下一个令牌预测目标的梯度信号的哪些分量引起了这种现象，并提出了一种方法来估计这些分量对特定特征出现的影响。在验证了我们在玩具任务上的方法后，我们用它来解释 OthelloGPT 中世界模型的起源和小型语言模型中的句法特征。最后，我们将我们的框架应用于预训练的 LLM，表明对未来令牌影响极高或极低的特征往往与代码等形式推理领域相关。总的来说，我们的工作朝着通过变形金刚在训练过程中的发展过程来理解变形金刚的隐藏特征迈出了一步。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-03-16 (1 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-03-16
