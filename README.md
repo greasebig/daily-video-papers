@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-03-17](papers/2026-03-17.md) - 22 papers
 - [2026-03-16](papers/2026-03-16.md) - 2 papers
 - [2026-03-13](papers/2026-03-13.md) - 18 papers
 - [2026-03-12](papers/2026-03-12.md) - 11 papers
@@ -39,6 +40,372 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-03-17 (22 papers)</b></summary>
+
+# arXiv Video Papers - 2026-03-17
+
+**Paper Count**: 22
+
+---
+
+## 1. Learning Question-Aware Keyframe Selection with Synthetic Supervision for Video Question Answering / 通过视频问答的综合监督学习问题感知关键帧选择
+
+**Date**: 2026-03-16 | **arXiv**: [2603.14953v1](http://arxiv.org/abs/2603.14953v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14953v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large multimodal models (LMMs) have recently demonstrated remarkable performance in video question answering (VideoQA), yet reasoning over video remains challenging due to high inference cost and diluted information. Keyframe selection offers efficiency and sharper reasoning but suffers from sparse supervision and redundant frame choices when relying only on image-text similarity. We present a question-aware keyframe selection framework with two components: pseudo keyframe labels derived from LMMs that provide informative supervision and a coverage regularization that promotes diverse, complementary evidence across time. Experiments on NExT-QA show that our method significantly improves accuracy, especially for temporal and causal question types, establishing keyframe selection as an effective and learnable module for VideoQA.
+
+大型多模态模型（LMM）最近在视频问答（VideoQA）中表现出了卓越的性能，但由于推理成本高和信息稀释，视频推理仍然具有挑战性。关键帧选择提供了效率和更清晰的推理，但在仅依赖图像文本相似性时会受到稀疏监督和冗余帧选择的影响。我们提出了一个具有两个组件的问题感知关键帧选择框架：源自 LMM 的伪关键帧标签，提供信息监督；以及覆盖正则化，促进跨时间的多样化、互补证据。 NExT-QA 实验表明，我们的方法显着提高了准确性，特别是对于时间和因果问题类型，将关键帧选择建立为 VideoQA 的有效且可学习的模块。
+
+</details>
+
+---
+
+## 2. Bridging Scene Generation and Planning: Driving with World Model via Unifying Vision and Motion Representation / 连接场景生成和规划：通过统一视觉和运动表示使用世界模型驾驶
+
+**Date**: 2026-03-16 | **arXiv**: [2603.14948v1](http://arxiv.org/abs/2603.14948v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14948v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+End-to-end autonomous driving aims to generate safe and plausible planning policies from raw sensor input. Driving world models have shown great potential in learning rich representations by predicting the future evolution of a driving scene. However, existing driving world models primarily focus on visual scene representation, and motion representation is not explicitly designed to be planner-shared and inheritable, leaving a schism between the optimization of visual scene generation and the requirements of precise motion planning. We present WorldDrive, a holistic framework that couples scene generation and real-time planning via unifying vision and motion representation. We first introduce a Trajectory-aware Driving World Model, which conditions on a trajectory vocabulary to enforce consistency between visual dynamics and motion intentions, enabling the generation of diverse and plausible future scenes conditioned on a specific trajectory. We transfer the vision and motion encoders to a downstream Multi-modal Planner, ensuring the driving policy operates on mature representations pre-optimized by scene generation. A simple interaction between motion representation, visual representation, and ego status can generate high-quality, multi-modal trajectories. Furthermore, to exploit the world model's foresight, we propose a Future-aware Rewarder, which distills future latent representation from the frozen world model to evaluate and select optimal trajectories in real-time. Extensive experiments on the NAVSIM, NAVSIM-v2, and nuScenes benchmarks demonstrate that WorldDrive achieves leading planning performance among vision-only methods while maintaining high-fidelity action-controlled video generation capabilities, providing strong evidence for the effectiveness of unifying vision and motion representation for robust autonomous driving.
+
+端到端自动驾驶旨在根据原始传感器输入生成安全且合理的规划策略。驾驶世界模型在通过预测驾驶场景的未来演变来学习丰富的表示方面显示出巨大的潜力。然而，现有的驾驶世界模型主要关注视觉场景表示，而运动表示没有明确设计为规划器共享和可继承，从而在视觉场景生成的优化和精确运动规划的要求之间留下了分歧。我们提出了 WorldDrive，这是一个整体框架，通过统一视觉和运动表示将场景生成和实时规划结合起来。我们首先引入轨迹感知驾驶世界模型，该模型以轨迹词汇为条件，以加强视觉动态和运动意图之间的一致性，从而能够生成以特定轨迹为条件的多样化且合理的未来场景。我们将视觉和运动编码器传输到下游的多模态规划器，确保驾驶策略在通过场景生成预先优化的成熟表示上运行。运动表征、视觉表征和自我状态之间的简单交互可以生成高质量的多模态轨迹。此外，为了利用世界模型的远见，我们提出了一个未来感知奖励器，它从冻结的世界模型中提取未来的潜在表示，以实时评估和选择最佳轨迹。对 NAVSIM、NAVSIM-v2 和 nuScenes 基准的大量实验表明，WorldDrive 在仅视觉方法中实现了领先的规划性能，同时保持了高保真动作控制视频生成功能，为统一视觉和运动表示以实现稳健的自动驾驶的有效性提供了有力的证据。
+
+</details>
+
+---
+
+## 3. FAR-Drive: Frame-AutoRegressive Video Generation in Closed-Loop Autonomous Driving / FAR-Drive：闭环自动驾驶中的帧自回归视频生成
+
+**Date**: 2026-03-16 | **arXiv**: [2603.14938v1](http://arxiv.org/abs/2603.14938v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14938v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Despite rapid progress in autonomous driving, reliable training and evaluation of driving systems remain fundamentally constrained by the lack of scalable and interactive simulation environments. Recent generative video models achieve remarkable visual fidelity, yet most operate in open-loop settings and fail to support fine-grained frame-level interaction between agent actions and environment evolution. Building a learning-based closed-loop simulator for autonomous driving poses three major challenges: maintaining long-horizon temporal and cross-view consistency, mitigating autoregressive degradation under iterative self-conditioning, and satisfying low-latency inference constraints. In this work, we propose FAR-Drive, a frame-level autoregressive video generation framework for autonomous driving. We introduce a multi-view diffusion transformer with fine-grained structured control, enabling geometrically consistent multi-camera generation. To address long-horizon consistency and iterative degradation, we design a two-stage training strategy consisting of adaptive reference horizon conditioning and blend-forcing autoregressive training, which progressively improves consistency and robustness under self-conditioning. To meet low-latency interaction requirements, we further integrate system-level efficiency optimizations for inference acceleration. Experiments on the nuScenes dataset demonstrate that our method achieves state-of-the-art performance among existing closed-loop autonomous driving simulation approaches, while maintaining sub-second latency on a single GPU.
+
+尽管自动驾驶领域取得了快速进展，但由于缺乏可扩展和交互式仿真环境，驾驶系统的可靠训练和评估仍然从根本上受到限制。最近的生成视频模型实现了显着的视觉保真度，但大多数在开环设置中运行，并且无法支持代理动作和环境演化之间的细粒度帧级交互。构建基于学习的自动驾驶闭环模拟器面临三个主要挑战：保持长视野时间和跨视图一致性、减轻迭代自调节下的自回归退化以及满足低延迟推理约束。在这项工作中，我们提出了 FAR-Drive，一种用于自动驾驶的帧级自回归视频生成框架。我们引入了具有细粒度结构化控制的多视图扩散变换器，可实现几何一致的多相机生成。为了解决长视野一致性和迭代退化问题，我们设计了一种两阶段训练策略，包括自适应参考视野调节和混合强制自回归训练，逐步提高自调节下的一致性和鲁棒性。为了满足低延迟的交互需求，我们进一步集成了系统级效率优化以实现推理加速。 nuScenes 数据集上的实验表明，我们的方法在现有闭环自动驾驶模拟方法中实现了最先进的性能，同时在单个 GPU 上保持亚秒级延迟。
+
+</details>
+
+---
+
+## 4. $\text{F}^2\text{HDR}$: Two-Stage HDR Video Reconstruction via Flow Adapter and Physical Motion Modeling / $\text{F}^2\text{HDR}$：通过流适配器和物理运动建模进行两阶段 HDR 视频重建
+
+**Date**: 2026-03-16 | **arXiv**: [2603.14920v1](http://arxiv.org/abs/2603.14920v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14920v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reconstructing High Dynamic Range (HDR) videos from sequences of alternating-exposure Low Dynamic Range (LDR) frames remains highly challenging, especially under dynamic scenes where cross-exposure inconsistencies and complex motion make inter-frame alignment difficult, leading to ghosting and detail loss. Existing methods often suffer from inaccurate alignment, suboptimal feature aggregation, and degraded reconstruction quality in motion-dominated regions. To address these challenges, we propose $\text{F}^2\text{HDR}$, a two-stage HDR video reconstruction framework that robustly perceives inter-frame motion and restores fine details in complex dynamic scenarios. The proposed framework integrates a flow adapter that adapts generic optical flow for robust cross-exposure alignment, a physical motion modeling to identify salient motion regions, and a motion-aware refinement network that aggregates complementary information while removing ghosting and noise. Extensive experiments demonstrate that $\text{F}^2\text{HDR}$ achieves state-of-the-art performance on real-world HDR video benchmarks, producing ghost-free and high-fidelity results under large motion and exposure variations.
+
+从交替曝光的低动态范围 (LDR) 帧序列重建高动态范围 (HDR) 视频仍然极具挑战性，特别是在动态场景下，交叉曝光不一致和复杂的运动使帧间对齐变得困难，导致重影和细节丢失。现有方法通常会遇到对齐不准确、特征聚合欠佳以及运动主导区域的重建质量下降等问题。为了应对这些挑战，我们提出了$\text{F}^2\text{HDR}$，这是一个两阶段的 HDR 视频重建框架，可以稳健地感知帧间运动并恢复复杂动态场景中的精细细节。所提出的框架集成了一个流适配器，该适配器适应通用光流以实现鲁棒的交叉曝光对齐，一个物理运动建模以识别显着运动区域，以及一个运动感知细化网络，该网络聚合补充信息，同时消除重影和噪声。大量实验表明，$\text{F}^2\text{HDR}$ 在现实世界的 HDR 视频基准上实现了最先进的性能，在大运动和曝光变化下产生无鬼影和高保真结果。
+
+</details>
+
+---
+
+## 5. Video Detector: A Dual-Phase Vision-Based System for Real-Time Traffic Intersection Control and Intelligent Transportation Analysis / 视频检测器：基于双相视觉的系统，用于实时交通路口控制和智能交通分析
+
+**Date**: 2026-03-16 | **arXiv**: [2603.14861v1](http://arxiv.org/abs/2603.14861v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14861v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Urban traffic management increasingly requires intelligent sensing systems capable of adapting to dynamic traffic conditions without costly infrastructure modifications. Vision-based vehicle detection has therefore become a key technology for modern intelligent transportation systems. This study presents Video Detector (VD), a dual-phase vision-based traffic intersection management system designed as a flexible and cost-effective alternative to traditional inductive loop detectors. The framework integrates a real-time module (VD-RT) for intersection control with an offline analytical module (VD-Offline) for detailed traffic behavior analysis. Three system configurations were implemented using SSD Inception v2, Faster R-CNN Inception v2, and CenterNet ResNet-50 V1 FPN, trained on datasets totaling 108,000 annotated images across 6-10 vehicle classes. Experimental results show detection performance of up to 90% test accuracy and 29.5 mAP@0.5, while maintaining real-time throughput of 37 FPS on HD video streams. Field deployments conducted in collaboration with Istanbul IT and Smart City Technologies Inc. (ISBAK) demonstrate stable operation under diverse environmental conditions. The system supports virtual loop detection, vehicle counting, multi-object tracking, queue estimation, speed analysis, and multiclass vehicle classification, enabling comprehensive intersection monitoring without the need for embedded road sensors. The annotated dataset and training pipeline are publicly released to support reproducibility. These results indicate that the proposed framework provides a scalable and deployable vision-based solution for intelligent transportation systems and smart-city traffic management.
+
+城市交通管理越来越需要能够适应动态交通状况而无需进行昂贵的基础设施改造的智能传感系统。基于视觉的车辆检测因此成为现代智能交通系统的关键技术。本研究提出了视频检测器 (VD)，这是一种基于双相视觉的交通路口管理系统，旨在作为传统感应环路检测器的灵活且经济高效的替代方案。该框架集成了用于交叉口控制的实时模块（VD-RT）和用于详细交通行为分析的离线分析模块（VD-Offline）。使用 SSD Inception v2、Faster R-CNN Inception v2 和 CenterNet ResNet-50 V1 FPN 实现了三种系统配置，并在 6-10 个车辆类别的总计 108,000 张带注释图像的数据集上进行训练。实验结果表明，检测性能高达 90% 的测试精度和 29.5 mAP@0.5，同时在高清视频流上保持 37 FPS 的实时吞吐量。与伊斯坦布尔 IT 和 Smart City Technologies Inc. (ISBAK) 合作进行的现场部署证明了在不同环境条件下的稳定运行。该系统支持虚拟环路检测、车辆计数、多目标跟踪、队列估计、速度分析和多类车辆分类，无需嵌入式道路传感器即可实现全面的路口监控。带注释的数据集和训练流程公开发布以支持可重复性。这些结果表明，所提出的框架为智能交通系统和智能城市交通管理提供了可扩展且可部署的基于视觉的解决方案。
+
+</details>
+
+---
+
+## 6. A Skill-augmented Agentic Framework and Benchmark for Multi-Video Understanding / 多视频理解的技能增强代理框架和基准
+
+**Date**: 2026-03-16 | **arXiv**: [2603.14733v1](http://arxiv.org/abs/2603.14733v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14733v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multimodal Large Language Models have achieved strong performance in single-video understanding, yet their ability to reason across multiple videos remains limited. Existing approaches typically concatenate multiple videos into a single input and perform direct inference, which introduces training-inference mismatch, information loss from frame compression, and a lack of explicit cross-video coordination. Meanwhile, current multi-video benchmarks primarily emphasize event-level comparison, leaving identity-level matching, fine-grained discrimination, and structured multi-step reasoning underexplored. To address these gaps, we introduce MVX-Bench, a Multi-Video Cross-Dimension Benchmark that reformulates 11 classical computer vision tasks into a unified multi-video question-answering framework, comprising 1,442 questions over 4,255 videos from diverse real-world datasets. We further propose SAMA, a Skill-Augmented Agentic Framework for Multi-Video Understanding, which integrates visual tools, task-specific skills, and a conflict-aware verification mechanism to enable iterative and structured reasoning. Experimental results show that SAMA outperforms strong open-source baselines and GPT on MVX-Bench, and ablations validate the effectiveness of skill design and conflict resolution.
+
+多模态大语言模型在单视频理解方面取得了强大的性能，但它们跨多个视频进行推理的能力仍然有限。现有方法通常将多个视频连接成单个输入并执行直接推理，这会引入训练推理不匹配、帧压缩带来的信息丢失以及缺乏明确的跨视频协调。与此同时，当前的多视频基准主要强调事件级别的比较，而对身份级别匹配、细粒度区分和结构化多步骤推理的探索还不够。为了解决这些差距，我们引入了 MVX-Bench，这是一种多视频跨维度基准，它将 11 种经典计算机视觉任务重新表述为统一的多视频问答框架，其中包含来自不同现实世界数据集的 4,255 个视频中的 1,442 个问题。我们进一步提出了 SAMA，一种用于多视频理解的技能增强代理框架，它集成了视觉工具、特定任务技能和冲突感知验证机制，以实现迭代和结构化推理。实验结果表明，SAMA 在 MVX-Bench 上的性能优于强大的开源基线和 GPT，并且消融验证了技能设计和冲突解决的有效性。
+
+</details>
+
+---
+
+## 7. MVHOI: Bridge Multi-view Condition to Complex Human-Object Interaction Video Reenactment via 3D Foundation Model / MVHOI：通过 3D 基础模型将多视图条件桥接到复杂的人机交互视频重演
+
+**Date**: 2026-03-16 | **arXiv**: [2603.14686v1](http://arxiv.org/abs/2603.14686v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14686v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Human-Object Interaction (HOI) video reenactment with realistic motion remains a frontier in expressive digital human creation. Existing approaches primarily handle simple image-plane motion (e.g., in-plane translations), struggling with complex non-planar manipulations like out-of-plane reorientation. In this paper, we propose MVHOI, a two-stage HOI video reenactment framework that bridges multi-view reference conditions and video foundation models via a 3D Foundation Model (3DFM). The 3DFM first produces view-consistent object priors conditioned on implicit motion dynamics across novel viewpoints. A controllable video generation model then synthesizes high-fidelity object texture by incorporating multi-view reference images, ensuring appearance consistency via a reasonable retrieval mechanism. By enabling these two stages to mutually reinforce one another during the inference phase, our framework shows superior performance in generating long-duration HOI videos with intricate object manipulations. Extensive experiments show substantial improvements over prior approaches, especially for HOI with complex 3D object manipulations.
+
+具有真实动作的人机交互 (HOI) 视频重演仍然是富有表现力的数字人类创作的前沿。现有方法主要处理简单的图像平面运动（例如平面内平移），难以处理复杂的非平面操作（例如平面外重新定向）。在本文中，我们提出了 MVHOI，这是一种两阶段 HOI 视频重演框架，通过 3D 基础模型 (3DFM) 连接多视图参考条件和视频基础模型。 3DFM 首先根据新视点的隐式运动动力学生成视图一致的对象先验。然后，可控视频生成模型通过合并多视图参考图像来合成高保真对象纹理，通过合理的检索机制确保外观一致性。通过使这两个阶段在推理阶段相互加强，我们的框架在生成具有复杂对象操作的长时间 HOI 视频方面表现出了卓越的性能。大量的实验表明，与之前的方法相比，有很大的改进，特别是对于具有复杂 3D 对象操作的 HOI。
+
+</details>
+
+---
+
+## 8. VisionCoach: Reinforcing Grounded Video Reasoning via Visual-Perception Prompting / VisionCoach：通过视觉感知提示强化扎根视频推理
+
+**Date**: 2026-03-15 | **arXiv**: [2603.14659v1](http://arxiv.org/abs/2603.14659v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14659v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video reasoning requires models to locate and track question-relevant evidence across frames. While reinforcement learning (RL) with verifiable rewards improves accuracy, it still struggles to achieve reliable spatio-temporal grounding during the reasoning process. Moreover, improving grounding typically relies on scaled training data or inference-time perception tools, which increases annotation cost or computational cost. To address this challenge, we propose VisonCoach, an input-adaptive RL framework that improves spatio-temporal grounding through visual prompting as training-time guidance. During RL training, visual prompts are selectively applied to challenging inputs to amplify question-relevant evidence and suppress distractors. The model then internalizes these improvements through self-distillation, enabling grounded reasoning directly on raw videos without visual prompting at inference. VisonCoach consists of two components: (1) Visual Prompt Selector, which predicts appropriate prompt types conditioned on the video and question, and (2) Spatio-Temporal Reasoner, optimized with RL under visual prompt guidance and object-aware grounding rewards that enforce object identity consistency and multi-region bounding-box overlap. Extensive experiments demonstrate that VisonCoach achieves state-of-the-art performance under comparable settings, across diverse video reasoning, video understanding, and temporal grounding benchmarks (V-STAR, VideoMME, World-Sense, VideoMMMU, PerceptionTest, and Charades-STA), while maintaining a single efficient inference pathway without external tools. Our results show that visual prompting during training improves grounded video reasoning, while self-distillation enables the model to internalize this ability without requiring prompts at inference time.
+
+视频推理需要模型跨帧定位和跟踪与问题相关的证据。虽然具有可验证奖励的强化学习（RL）提高了准确性，但它仍然难以在推理过程中实现可靠的时空基础。此外，改善基础通常依赖于缩放训练数据或推理时间感知工具，这会增加注释成本或计算成本。为了应对这一挑战，我们提出了 VisonCoach，这是一种输入自适应 RL 框架，可通过视觉提示作为训练时指导来改善时空基础。在强化学习训练期间，视觉提示会选择性地应用于具有挑战性的输入，以放大与问题相关的证据并抑制干扰因素。然后，该模型通过自我蒸馏将这些改进内化，从而可以直接在原始视频上进行基础推理，而无需推理时的视觉提示。 VisonCoach 由两个组件组成：(1) 视觉提示选择器，根据视频和问题预测适当的提示类型；(2) 时空推理器，在视觉提示引导和对象感知基础奖励下使用 RL 进行优化，以强制对象身份一致性和多区域边界框重叠。大量实验表明，VisonCoach 在相当的设置下、跨不同的视频推理、视频理解和时间基础基准（V-STAR、VideoMME、World-Sense、VideoMMMU、PerceptionTest 和 Charades-STA）实现了最先进的性能，同时无需外部工具即可保持单一高效的推理路径。我们的结果表明，训练期间的视觉提示可以改善基础视频推理，而自蒸馏使模型能够内化这种能力，而无需在推理时进行提示。
+
+</details>
+
+---
+
+## 9. Interp3R: Continuous-time 3D Geometry Estimation with Frames and Events / Interp3R：使用帧和事件进行连续时间 3D 几何估计
+
+**Date**: 2026-03-15 | **arXiv**: [2603.14528v1](http://arxiv.org/abs/2603.14528v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14528v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In recent years, 3D visual foundation models pioneered by pointmap-based approaches such as DUSt3R have attracted a lot of interest, achieving impressive accuracy and strong generalization across diverse scenes. However, these methods are inherently limited to recovering scene geometry only at the discrete time instants when images are captured, leaving the scene evolution during the blind time between consecutive frames largely unexplored. We introduce Interp3R, to the best of our knowledge the first method that enhances pointmap-based models to estimate depth and camera poses at arbitrary time instants. Interp3R leverages asynchronous event data to interpolate pointmaps produced by frame-based models, enabling temporally continuous geometric representations. Depth and camera poses are then jointly recovered by aligning the interpolated pointmaps together with those predicted by the underlying frame-based models into a consistent spatial framework. We train Interp3R exclusively on a synthetic dataset, yet demonstrate strong generalization across a wide range of synthetic and real-world benchmarks. Extensive experiments show that Interp3R outperforms by a considerable margin state-of-the-art baselines that follow a two-stage pipeline of 2D video frame interpolation followed by 3D geometry estimation.
+
+近年来，由基于点图的方法（例如 DUSt3R）开创的 3D 视觉基础模型吸引了很多人的兴趣，在不同场景中实现了令人印象深刻的准确性和强大的泛化能力。然而，这些方法本质上仅限于仅在捕获图像时的离散时刻恢复场景几何形状，从而使得连续帧之间的盲时间期间的场景演变很大程度上未被探索。据我们所知，我们引入了 Interp3R，这是第一种增强基于点图的模型来估计任意时刻的深度和相机姿势的方法。 Interp3R 利用异步事件数据对基于帧的模型生成的点图进行插值，从而实现时间连续的几何表示。然后，通过将插值点图与底层基于帧的模型预测的点图对齐到一致的空间框架中，联合恢复深度和相机姿态。我们专门在合成数据集上训练 Interp3R，但在各种合成和现实世界基准中展示了强大的泛化能力。大量实验表明，Interp3R 的性能远远优于最先进的基线，该基线遵循 2D 视频帧插值和 3D 几何估计的两级管道。
+
+</details>
+
+---
+
+## 10. LatSearch: Latent Reward-Guided Search for Faster Inference-Time Scaling in Video Diffusion / LatSearch：潜在奖励引导搜索，以在视频扩散中实现更快的推理时间缩放
+
+**Date**: 2026-03-15 | **arXiv**: [2603.14526v1](http://arxiv.org/abs/2603.14526v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14526v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The recent success of inference-time scaling in large language models has inspired similar explorations in video diffusion. In particular, motivated by the existence of "golden noise" that enhances video quality, prior work has attempted to improve inference by optimising or searching for better initial noise. However, these approaches have notable limitations: they either rely on priors imposed at the beginning of noise sampling or on rewards evaluated only on the denoised and decoded videos. This leads to error accumulation, delayed and sparse reward signals, and prohibitive computational cost, which prevents the use of stronger search algorithms. Crucially, stronger search algorithms are precisely what could unlock substantial gains in controllability, sample efficiency and generation quality for video diffusion, provided their computational cost can be reduced. To fill in this gap, we enable efficient inference-time scaling for video diffusion through latent reward guidance, which provides intermediate, informative and efficient feedback along the denoising trajectory. We introduce a latent reward model that scores partially denoised latents at arbitrary timesteps with respect to visual quality, motion quality, and text alignment. Building on this model, we propose LatSearch, a novel inference-time search mechanism that performs Reward-Guided Resampling and Pruning (RGRP). In the resampling stage, candidates are sampled according to reward-normalised probabilities to reduce over-reliance on the reward model. In the pruning stage, applied at the final scheduled step, only the candidate with the highest cumulative reward is retained, improving both quality and efficiency. We evaluate LatSearch on the VBench-2.0 benchmark and demonstrate that it consistently improves video generation across multiple evaluation dimensions compared to the baseline Wan2.1 model.
+
+最近在大型语言模型中推理时间缩放的成功激发了视频传播领域的类似探索。特别是，由于存在增强视频质量的“黄金噪声”，先前的工作试图通过优化或搜索更好的初始噪声来改进推理。然而，这些方法有明显的局限性：它们要么依赖于噪声采样开始时施加的先验，要么依赖于仅在去噪和解码视频上评估的奖励。这会导致错误累积、奖励信号延迟和稀疏以及计算成本过高，从而阻碍了更强的搜索算法的使用。至关重要的是，如果可以降低计算成本，更强大的搜索算法恰恰可以在视频扩散的可控性、样本效率和生成质量方面带来巨大的收益。为了填补这一空白，我们通过潜在奖励指导实现视频传播的有效推理时间缩放，从而沿着去噪轨迹提供中间、信息丰富且高效的反馈。我们引入了一种潜在奖励模型，该模型在视觉质量、运动质量和文本对齐方面对任意时间步长的部分去噪潜伏进行评分。在此模型的基础上，我们提出了 LatSearch，这是一种执行奖励引导重采样和修剪（RGRP）的新型推理时间搜索机制。在重采样阶段，根据奖励归一化概率对候选者进行采样，以减少对奖励模型的过度依赖。在修剪阶段，应用于最后的预定步骤，仅保留累积奖励最高的候选者，从而提高质量和效率。我们在 VBench-2.0 基准上评估 LatSearch，并证明与基线 Wan2.1 模型相比，它在多个评估维度上持续改进了视频生成。
+
+</details>
+
+---
+
+## 11. LongVidSearch: An Agentic Benchmark for Multi-hop Evidence Retrieval Planning in Long Videos / LongVidSearch：长视频中多跳证据检索规划的代理基准
+
+**Date**: 2026-03-15 | **arXiv**: [2603.14468v1](http://arxiv.org/abs/2603.14468v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14468v1)
+
+**Categories**: cs.CV, cs.IR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long video question answering (Long-Video QA) increasingly relies on agentic tool use to retrieve evidence from long videos. In realistic settings, this process often requires multi-hop retrieval, where agents must iteratively gather multiple discontinuous evidence clips. However, existing long-video benchmarks are largely static: they rarely enforce strict multi-hop retrieval and typically lack a standardized evidence-access interface, making it difficult to separate failures in retrieval planning from those in answer generation. To address this gap, we introduce LongVidSearch, a benchmark for evaluating agentic multi-hop evidence retrieval planning in long videos under standardized access constraints. LongVidSearch enforces retrieval necessity: a Hop-k question requires exactly k necessary evidence clips, and removing any single clip renders the question unsolvable. The benchmark contains 3,000 questions over 447 long videos (average length 26 minutes), covering four reasoning categories: State Mutation, Causal Inference, Global Summary, and Visual Tracking, with 2-hop, 3-hop, and 4-hop evidence requirements. To ensure fair and controlled evaluation, all agents interact with LongVidSearch through a unified tool interface, which fixes the retrieval backend and isolates the agent's ability to formulate queries and plan iterative retrieval. In addition to answer accuracy, we measure tool-call cost to analyze the accuracy-efficiency trade-off under identical access conditions. We evaluate VideoAgent-style QA agents with multiple backbone LLMs using three-judge majority voting. GPT-5 achieves the highest accuracy (42.43), outperforming Gemini 3 Pro (30.97) and GPT-4o (19.20), yet remaining below 50 %, highlighting the difficulty of multi-hop retrieval planning. With gold evidence clips, performance becomes near-perfect, confirming retrieval planning as the primary bottleneck.
+
+Long video question answering (Long-Video QA) increasingly relies on agentic tool use to retrieve evidence from long videos.在现实环境中，此过程通常需要多跳检索，其中代理必须迭代收集多个不连续的证据片段。然而，现有的长视频基准在很大程度上是静态的：它们很少强制执行严格的多跳检索，并且通常缺乏标准化的证据访问接口，使得很难将检索计划中的失败与答案生成中的失败区分开。为了解决这一差距，我们引入了 LongVidSearch，这是一个用于评估标准化访问约束下长视频中的代理多跳证据检索规划的基准。 LongVidSearch 强制检索的必要性：Hop-k 问题恰好需要 k 个必要的证据片段，删除任何单个片段都会导致问题无法解决。该基准测试包含 447 个长视频（平均长度 26 分钟）中的 3,000 个问题，涵盖四个推理类别：状态突变、因果推理、全局摘要和视觉跟踪，并具有 2 跳、3 跳和 4 跳证据要求。为了确保公平和受控的评估，所有代理通过统一的工具界面与 LongVidSearch 交互，该接口修复了检索后端并隔离了代理制定查询和计划迭代检索的能力。 In addition to answer accuracy, we measure tool-call cost to analyze the accuracy-efficiency trade-off under identical access conditions. We evaluate VideoAgent-style QA agents with multiple backbone LLMs using three-judge majority voting. GPT-5 达到了最高的准确率（42.43），优于 Gemini 3 Pro（30.97）和 GPT-4o（19.20），但仍低于 50%，凸显了多跳检索规划的难度。 With gold evidence clips, performance becomes near-perfect, confirming retrieval planning as the primary bottleneck.
+
+</details>
+
+---
+
+## 12. End-to-End Spatial-Temporal Transformer for Real-time 4D HOI Reconstruction / 用于实时 4D HOI 重建的端到端时空转换器
+
+**Date**: 2026-03-15 | **arXiv**: [2603.14435v1](http://arxiv.org/abs/2603.14435v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14435v1)
+
+**Categories**: cs.CV
+
+**Project**: https://nianheng.github.io/THO-project/  <details><summary><b>Abstract / 摘要</b></summary>
+
+Monocular 4D human-object interaction (HOI) reconstruction - recovering a moving human and a manipulated object from a single RGB video - remains challenging due to depth ambiguity and frequent occlusions. Existing methods often rely on multi-stage pipelines or iterative optimization, leading to high inference latency, failing to meet real-time requirements, and susceptibility to error accumulation. To address these limitations, we propose THO, an end-to-end Spatial-Temporal Transformer that predicts human motion and coordinated object motion in a forward fashion from the given video and 3D template. THO achieves this by leveraging spatial-temporal HOI tuple priors. Spatial priors exploit contact-region proximity to infer occluded object features from human cues, while temporal priors capture cross-frame kinematic correlations to refine object representations and enforce physical coherence. Extensive experiments demonstrate that THO operates at an inference speed of 31.5 FPS on a single RTX 4090 GPU, achieving a >600x speedup over prior optimization-based methods while simultaneously improving reconstruction accuracy and temporal consistency. The project page is available at: https://nianheng.github.io/THO-project/
+
+Monocular 4D human-object interaction (HOI) reconstruction - recovering a moving human and a manipulated object from a single RGB video - remains challenging due to depth ambiguity and frequent occlusions. Existing methods often rely on multi-stage pipelines or iterative optimization, leading to high inference latency, failing to meet real-time requirements, and susceptibility to error accumulation. To address these limitations, we propose THO, an end-to-end Spatial-Temporal Transformer that predicts human motion and coordinated object motion in a forward fashion from the given video and 3D template. THO 通过利用时空 HOI 元组先验来实现这一点。 Spatial priors exploit contact-region proximity to infer occluded object features from human cues, while temporal priors capture cross-frame kinematic correlations to refine object representations and enforce physical coherence. Extensive experiments demonstrate that THO operates at an inference speed of 31.5 FPS on a single RTX 4090 GPU, achieving a >600x speedup over prior optimization-based methods while simultaneously improving reconstruction accuracy and temporal consistency.项目页面位于：https://nianheng.github.io/THO-project/
+
+</details>
+
+---
+
+## 13. GenState-AI: State-Aware Dataset for Text-to-Video Retrieval on AI-Generated Videos / GenState-AI：用于对 AI 生成的视频进行文本到视频检索的状态感知数据集
+
+**Date**: 2026-03-15 | **arXiv**: [2603.14426v1](http://arxiv.org/abs/2603.14426v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14426v1)
+
+**Categories**: cs.CV, cs.IR, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Existing text-to-video retrieval benchmarks are dominated by real-world footage where much of the semantics can be inferred from a single frame, leaving temporal reasoning and explicit end-state grounding under-evaluated. We introduce GenState-AI, an AI-generated benchmark centered on controlled state transitions, where each query is paired with a main video, a temporal hard negative that differs only in the decisive end-state, and a semantic hard negative with content substitution, enabling fine-grained diagnosis of temporal vs. semantic confusions beyond appearance matching. Using Wan2.2-TI2V-5B, we generate short clips whose meaning depends on precise changes in position, quantity, and object relations, providing controllable evaluation conditions for state-aware retrieval. We evaluate two representative MLLM-based baselines, and observe consistent and interpretable failure patterns: both frequently confuse the main video with the temporal hard negative and over-prefer temporally plausible but end-state-incorrect clips, indicating insufficient grounding to decisive end-state evidence, while being comparatively less sensitive to semantic substitutions. We further introduce triplet-based diagnostic analyses, including relative-order statistics and breakdowns across transition categories, to make temporal vs. semantic failure sources explicit. GenState-AI provides a focused testbed for state-aware, temporally and semantically sensitive text-to-video retrieval, and will be released on huggingface.co.
+
+现有的文本到视频检索基准以现实世界的镜头为主，其中许多语义可以从单个帧中推断出来，而对时间推理和明确的最终状态基础的评估不足。我们引入了 GenState-AI，这是一个以受控状态转换为中心的人工智能生成的基准，其中每个查询都与一个主视频、一个仅在决定性最终状态不同的时间硬负例和一个具有内容替换的语义硬负例配对，从而能够对时间与语义混淆进行细粒度诊断，而不仅仅是外观匹配。使用Wan2.2-TI2V-5B，我们生成短片，其含义取决于位置、数量和对象关系的精确变化，为状态感知检索提供可控的评估条件。我们评估了两个具有代表性的基于 MLLM 的基线，并观察到一致且可解释的失败模式：两者都经常将主视频与时间硬阴性相混淆，并且过分偏爱时间上合理但最终状态不正确的剪辑，表明对决定性最终状态证据的基础不足，同时对语义替换相对不太敏感。我们进一步引入基于三元组的诊断分析，包括相对顺序统计和跨转换类别的细分，以使时间与语义故障源变得明确。 GenState-AI 为状态感知、时间和语义敏感的文本到视频检索提供了一个重点测试平台，并将在 Huggingface.co 上发布。
+
+</details>
+
+---
+
+## 14. LoCAtion: Long-time Collaborative Attention Framework for High Dynamic Range Video Reconstruction / LoCAtion：高动态范围视频重建的长期协作注意力框架
+
+**Date**: 2026-03-15 | **arXiv**: [2603.14377v1](http://arxiv.org/abs/2603.14377v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14377v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Prevailing High Dynamic Range (HDR) video reconstruction methods are fundamentally trapped in a fragile alignment-and-fusion paradigm. While explicit spatial alignment can successfully recover fine details in controlled environments, it becomes a severe bottleneck in unconstrained dynamic scenes. By forcing rigid alignment across unpredictable motions and varying exposures, these methods inevitably translate registration errors into severe ghosting artifacts and temporal flickering. In this paper, we rethink this conventional prerequisite. Recognizing that explicit alignment is inherently vulnerable to real-world complexities, we propose LoCAtion, a Long-time Collaborative Attention framework that reformulates HDR video generation from a fragile spatial warping task into a robust, alignment-free collaborative feature routing problem. Guided by this new formulation, our architecture explicitly decouples the highly entangled reconstruction task. Rather than struggling to rigidly warp neighboring frames, we anchor the scene on a continuous medium-exposure backbone and utilize collaborative attention to dynamically harvest and inject reliable irradiance cues from unaligned exposures. Furthermore, we introduce a learned global sequence solver. By leveraging bidirectional context and long-range temporal modeling, it propagates corrective signals and structural features across the entire sequence, inherently enforcing whole-video coherence and eliminating jitter. Extensive experiments demonstrate that LoCAtion achieves state-of-the-art visual quality and temporal stability, offering a highly competitive balance between accuracy and computational efficiency.
+
+Prevailing High Dynamic Range (HDR) video reconstruction methods are fundamentally trapped in a fragile alignment-and-fusion paradigm.虽然显式空间对齐可以成功地恢复受控环境中的精细细节，但它在不受约束的动态场景中成为严重的瓶颈。通过在不可预测的运动和变化的曝光之间强制进行严格对准，这些方法不可避免地将配准错误转化为严重的重影伪像和时间闪烁。 In this paper, we rethink this conventional prerequisite.认识到显式对齐本质上容易受到现实世界复杂性的影响，我们提出了 LoCAtion，这是一种长期协作注意力框架，它将 HDR 视频生成从脆弱的空间扭曲任务重新表述为鲁棒的、无需对齐的协作特征路由问题。 Guided by this new formulation, our architecture explicitly decouples the highly entangled reconstruction task.我们不是费力地扭曲相邻帧，而是将场景锚定在连续的中等曝光主干上，并利用协作注意力从未对齐的曝光中动态采集和注入可靠的辐照度线索。 Furthermore, we introduce a learned global sequence solver.通过利用双向上下文和远程时间建模，它可以在整个序列中传播校正信号和结构特征，从本质上增强整个视频的一致性并消除抖动。大量实验表明，LoCAtion 实现了最先进的视觉质量和时间稳定性，在准确性和计算效率之间提供了极具竞争力的平衡。
+
+</details>
+
+---
+
+## 15. On the Nature of Attention Sink that Shapes Decoding Strategy in MLLMs / 论在MLLM中形成解码策略的注意力汇的性质
+
+**Date**: 2026-03-15 | **arXiv**: [2603.14337v1](http://arxiv.org/abs/2603.14337v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14337v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language models and their multimodal extensions have achieved remarkable success across diverse tasks, yet the internal mechanisms that govern their reasoning behaviour remain partially understood. In particular, the attention sink, a token that attracts disproportionate attention mass, has been observed in transformer architectures, but its role is still unclear. Our goal is to understand what attention sinks represent and how they shape model behaviour during inference, rather than considering them as incidental artifacts. Through our analysis, we find that attention sink representations encode structured global information that influences the decoding process. Building on our findings, we introduce OutRo, a lightweight inference-time strategy that leverages the sink token to enhance contextual representations: (i) non-sink token representations are aligned with the sink representation in the feature space; and (ii) the sink token is allowed to attend beyond the causal constraint, facilitating information exchange with non-sink tokens. This design enhances the reasoning process without requiring additional forward passes or access to attention maps. Based on extensive experiments, OutRo consistently improves performance across representative MLLMs on seven video QA benchmarks and demonstrates strong generalisation, while incurring only a 1.1x decoding overhead.
+
+Large language models and their multimodal extensions have achieved remarkable success across diverse tasks, yet the internal mechanisms that govern their reasoning behaviour remain partially understood. In particular, the attention sink, a token that attracts disproportionate attention mass, has been observed in transformer architectures, but its role is still unclear. Our goal is to understand what attention sinks represent and how they shape model behaviour during inference, rather than considering them as incidental artifacts.通过我们的分析，我们发现注意力池表示编码影响解码过程的结构化全局信息。 Building on our findings, we introduce OutRo, a lightweight inference-time strategy that leverages the sink token to enhance contextual representations: (i) non-sink token representations are aligned with the sink representation in the feature space; (ii) 允许汇通证参与超出因果约束，从而促进与非汇通证的信息交换。这种设计增强了推理过程，无需额外的前向传递或访问注意力图。 Based on extensive experiments, OutRo consistently improves performance across representative MLLMs on seven video QA benchmarks and demonstrates strong generalisation, while incurring only a 1.1x decoding overhead.
+
+</details>
+
+---
+
+## 16. Early Failure Detection and Intervention in Video Diffusion Models / 视频扩散模型中的早期故障检测和干预
+
+**Date**: 2026-03-15 | **arXiv**: [2603.14320v1](http://arxiv.org/abs/2603.14320v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14320v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Text-to-video (T2V) diffusion models have rapidly advanced, yet generations still occasionally fail in practice, such as low text-video alignment or low perceptual quality. Since diffusion sampling is non-deterministic, it is difficult to know during inference whether a generation will succeed or fail, incurring high computational cost due to trial-and-error regeneration. To address this, we propose an early failure detection and diagnostic intervention pipeline for latent T2V diffusion models. For detection, we design a Real-time Inspection (RI) module that converts latents into intermediate video previews, enabling the use of established text-video alignment scorers for inspection in the RGB space. The RI module completes the conversion and inspection process in just 39.2ms. This is highly efficient considering that CogVideoX-5B requires 4.3s per denoising step when generating a 480p, 49-frame video on an NVIDIA A100 GPU. Subsequently, we trigger a hierarchical and early-exit intervention pipeline only when failure is predicted. Experiments on CogVideoX-5B and Wan2.1-1.3B demonstrate consistency gains on VBench with up to 2.64 times less time overhead compared to post-hoc regeneration. Our method also generalizes to a higher-capacity setting, remaining effective on Wan2.1-14B with 720p resolution and 81-frame generation. Furthermore, our pipeline is plug-and-play and orthogonal to existing techniques, showing seamless compatibility with prompt refinement and sampling guidance methods. We also provide evidence that failure signals emerge early in the denoising process and are detectable within intermediate video previews using standard vision-language evaluators.
+
+Text-to-video (T2V) diffusion models have rapidly advanced, yet generations still occasionally fail in practice, such as low text-video alignment or low perceptual quality. Since diffusion sampling is non-deterministic, it is difficult to know during inference whether a generation will succeed or fail, incurring high computational cost due to trial-and-error regeneration.为了解决这个问题，我们提出了一种针对潜在 T2V 扩散模型的早期故障检测和诊断干预流程。 For detection, we design a Real-time Inspection (RI) module that converts latents into intermediate video previews, enabling the use of established text-video alignment scorers for inspection in the RGB space. RI模块仅用39.2ms就完成了转换和检查过程。 This is highly efficient considering that CogVideoX-5B requires 4.3s per denoising step when generating a 480p, 49-frame video on an NVIDIA A100 GPU.随后，仅当预测到故障时，我们才会触发分层且提前退出的干预流程。 Experiments on CogVideoX-5B and Wan2.1-1.3B demonstrate consistency gains on VBench with up to 2.64 times less time overhead compared to post-hoc regeneration.我们的方法还推广到更高容量的设置，在 720p 分辨率和 81 帧生成的 Wan2.1-14B 上仍然有效。 Furthermore, our pipeline is plug-and-play and orthogonal to existing techniques, showing seamless compatibility with prompt refinement and sampling guidance methods. We also provide evidence that failure signals emerge early in the denoising process and are detectable within intermediate video previews using standard vision-language evaluators.
+
+</details>
+
+---
+
+## 17. Show Me When and Where: Towards Referring Video Object Segmentation in the Wild / 告诉我何时何地：在野外引用视频对象分割
+
+**Date**: 2026-03-15 | **arXiv**: [2603.14300v1](http://arxiv.org/abs/2603.14300v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14300v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Referring video object segmentation (RVOS) has recently generated great popularity in computer vision due to its widespread applications. Existing RVOS setting contains elaborately trimmed videos, with text-referred objects always appearing in all frames, which however fail to fully reflect the realistic challenges of this task. This simplified setting requires RVOS methods to only predict where objects, with no need to show when the objects appear. In this work, we introduce a new setting towards in-the-wild RVOS. To this end, we collect a new benchmark dataset using Youtube Untrimmed videos for RVOS - YoURVOS, which contains 1,120 in-the-wild videos with 7 times more duration and scenes than existing datasets. Our new benchmark challenges RVOS methods to show not only where but also when objects appear in videos. To set a baseline, we propose Object-level Multimodal TransFormers (OMFormer) to tackle the challenges, which are characterized by encoding object-level multimodal interactions for efficient and global spatial-temporal localisation. We demonstrate that previous VOS methods struggle on our YoURVOS benchmark, especially with the increase of target-absent frames, while our OMFormer consistently performs well. Our YoURVOS dataset offers an imperative benchmark, which will push forward the advancement of RVOS methods for practical applications.
+
+参考视频对象分割（RVOS）由于其广泛的应用，最近在计算机视觉领域广受欢迎。现有的 RVOS 设置包含精心修剪的视频，文本引用的对象始终出现在所有帧中，但这无法完全反映此任务的现实挑战。这种简化的设置要求 RVOS 方法仅预测对象的位置，而无需显示对象何时出现。在这项工作中，我们引入了野外 RVOS 的新设置。为此，我们使用 RVOS 的 Youtube Untrimmed 视频收集了一个新的基准数据集 - YoOURVOS，其中包含 1,120 个野外视频，其时长和场景是现有数据集的 7 倍。我们的新基准测试对 RVOS 方法提出了挑战，不仅要显示对象在视频中出现的位置，还要显示对象何时出现。为了设定基线，我们提出了对象级多模态 TransFormer（OMFormer）来应对挑战，其特点是编码对象级多模态交互以实现高效的全局时空定位。我们证明，以前的 VOS 方法在 YoOURVOS 基准测试中表现不佳，尤其是随着目标缺失帧的增加，而我们的 OMFormer 始终表现良好。我们的 YouRVOS 数据集提供了一个必要的基准，它将推动 RVOS 方法在实际应用中的进步。
+
+</details>
+
+---
+
+## 18. Seeking Physics in Diffusion Noise / 在扩散噪声中寻求物理学
+
+**Date**: 2026-03-15 | **arXiv**: [2603.14294v1](http://arxiv.org/abs/2603.14294v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14294v1)
+
+**Categories**: cs.CV, cs.AI, cs.LG, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Do video diffusion models encode signals predictive of physical plausibility? We probe intermediate denoising representations of a pretrained Diffusion Transformer (DiT) and find that physically plausible and implausible videos are partially separable in mid-layer feature space across noise levels. This separability cannot be fully attributed to visual quality or generator identity, suggesting recoverable physics-related cues in frozen DiT features. Leveraging this observation, we introduce progressive trajectory selection, an inference-time strategy that scores parallel denoising trajectories at a few intermediate checkpoints using a lightweight physics verifier trained on frozen features, and prunes low-scoring candidates early. Extensive experiments on PhyGenBench demonstrate that our method improves physical consistency while reducing inference cost, achieving comparable results to Best-of-K sampling with substantially fewer denoising steps.
+
+视频扩散模型是否对预测物理合理性的信号进行编码？我们探索了预训练扩散变压器（DiT）的中间去噪表示，发现物理上合理的和不合理的视频在中间层特征空间中跨噪声水平是部分可分离的。这种可分离性不能完全归因于视觉质量或生成器身份，这表明冻结 DiT 特征中存在可恢复的物理相关线索。利用这一观察结果，我们引入了渐进式轨迹选择，这是一种推理时间策略，使用在冻结特征上训练的轻量级物理验证器在几个中间检查点对并行去噪轨迹进行评分，并尽早修剪低分候选者。 PhyGenBench 上的大量实验表明，我们的方法提高了物理一致性，同时降低了推理成本，以更少的去噪步骤实现了与 Best-of-K 采样相当的结果。
+
+</details>
+
+---
+
+## 19. CamLit: Unified Video Diffusion with Explicit Camera and Lighting Control / CamLit：具有显式摄像机和照明控制的统一视频漫射
+
+**Date**: 2026-03-15 | **arXiv**: [2603.14241v1](http://arxiv.org/abs/2603.14241v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14241v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present CamLit, the first unified video diffusion model that jointly performs novel view synthesis (NVS) and relighting from a single input image. Given one reference image, a user-defined camera trajectory, and an environment map, CamLit synthesizes a video of the scene from new viewpoints under the specified illumination. Within a single generative process, our model produces temporally coherent and spatially aligned outputs, including relit novel-view frames and corresponding albedo frames, enabling high-quality control of both camera pose and lighting. Qualitative and quantitative experiments demonstrate that CamLit achieves high-fidelity outputs on par with state-of-the-art methods in both novel view synthesis and relighting, without sacrificing visual quality in either task. We show that a single generative model can effectively integrate camera and lighting control, simplifying the video generation pipeline while maintaining competitive performance and consistent realism.
+
+我们提出了 CamLit，这是第一个统一的视频扩散模型，它联合执行新颖的视图合成（NVS）和从单个输入图像重新照明。给定一个参考图像、一个用户定义的相机轨迹和一个环境图，CamLit 会在指定的照明下从新的视点合成场景的视频。在单个生成过程中，我们的模型产生时间连贯和空间对齐的输出，包括重新照明的新颖视图帧和相应的反照率帧，从而实现对相机姿势和照明的高质量控制。定性和定量实验表明，CamLit 在新颖的视图合成和重新照明方面都实现了与最先进的方法相当的高保真输出，并且在这两项任务中都没有牺牲视觉质量。我们证明，单个生成模型可以有效地集成相机和照明控制，简化视频生成流程，同时保持具有竞争力的性能和一致的真实感。
+
+</details>
+
+---
+
+## 20. MotionCFG: Boosting Motion Dynamics via Stochastic Concept Perturbation / MotionCFG：通过随机概念扰动增强运动动力学
+
+**Date**: 2026-03-14 | **arXiv**: [2603.14073v1](http://arxiv.org/abs/2603.14073v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.14073v1)
+
+**Categories**: cs.CV, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Despite recent advances in Text-to-Video (T2V) synthesis, generating high-fidelity and dynamic motion remains a significant challenge. Existing methods primarily rely on Classifier-Free Guidance (CFG), often with explicit negative prompts (e.g. "static", "blurry"), to suppress undesired artifacts. However, such explicit negations frequently introduce unintended semantic bias and distort object integrity; a phenomenon we define as Content-Motion Drift. To address this, we propose MotionCFG, a framework that enhances motion dynamics by contrasting a target concept with its noise-perturbed counterparts. Specifically, by injecting Gaussian noise into the concept embeddings, MotionCFG creates localized negative anchors that encapsulate a broad complementary space of sub-optimal motion variations. Unlike explicit negations, this approach facilitates implicit hard negative mining without shifting the global semantic identity, allowing for a focused refinement of temporal details. Combined with a piecewise guidance schedule that confines intervention to the early denoising steps, MotionCFG consistently improves motion dynamics across state-of-the-art T2V frameworks with negligible computational overhead and minimal compromise in visual quality. Additionally, we demonstrate that this noise-induced contrastive mechanism is effective not only for sharpening motion trajectories but also for steering complex, non-linear concepts such as precise object numerosity, which are typically difficult to modulate via standard text-based guidance.
+
+尽管文本到视频 (T2V) 合成最近取得了进展，但生成高保真动态运动仍然是一个重大挑战。现有方法主要依赖于无分类器指导（CFG），通常带有明确的负面提示（例如“静态”、“模糊”），以抑制不需要的伪影。然而，这种明确的否定经常会引入意想不到的语义偏差并扭曲对象的完整性；我们将这种现象定义为“内容-运动漂移”。为了解决这个问题，我们提出了 MotionCFG，这是一个通过将目标概念与其受噪声扰动的对应概念进行对比来增强运动动力学的框架。具体来说，通过将高斯噪声注入概念嵌入，MotionCFG 创建了局部负锚，封装了次优运动变化的广泛互补空间。与显式否定不同，这种方法有利于隐式硬否定挖掘，而无需改变全局语义身份，从而可以集中细化时间细节。结合将干预限制在早期去噪步骤的分段指导计划，MotionCFG 能够持续改善最先进的 T2V 框架的运动动态，同时计算开销可以忽略不计，视觉质量的影响也最小。此外，我们证明这种噪声引起的对比机制不仅对于锐化运动轨迹有效，而且对于引导复杂的非线性概念（例如精确的对象数量）也有效，这些概念通常很难通过标准的基于文本的指导进行调节。
+
+</details>
+
+---
+
+## 21. EchoLVFM: One-Step Video Generation via Latent Flow Matching for Echocardiogram Synthesis / EchoLVFM：通过潜在血流匹配生成超声心动图合成的一步视频
+
+**Date**: 2026-03-14 | **arXiv**: [2603.13967v1](http://arxiv.org/abs/2603.13967v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.13967v1)
+
+**Categories**: eess.IV, cs.AI, cs.CV
+
+**Code**: https://github.com/EngEmmanuel/EchoLVFM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Echocardiography is widely used for assessing cardiac function, where clinically meaningful parameters such as left-ventricular ejection fraction (EF) play a central role in diagnosis and management. Generative models capable of synthesising realistic echocardiogram videos with explicit control over such parameters are valuable for data augmentation, counterfactual analysis, and specialist training. However, existing approaches typically rely on computationally expensive multi-step sampling and aggressive temporal normalisation, limiting efficiency and applicability to heterogeneous real-world data.   We introduce EchoLVFM, a one-step latent video flow-matching framework for controllable echocardiogram generation. Operating in the latent space, EchoLVFM synthesises temporally coherent videos in a single inference step, achieving a $\mathbf{\sim 50\times}$ improvement in sampling efficiency compared to multi-step flow baselines while maintaining visual fidelity. The model supports global conditioning on clinical variables, demonstrated through precise control of EF, and enables reconstruction and counterfactual generation from partially observed sequences. A masked conditioning strategy further removes fixed-length constraints, allowing shorter sequences to be retained rather than discarded.   We evaluate EchoLVFM on the CAMUS dataset under challenging single-frame conditioning. Quantitative and qualitative results demonstrate competitive video quality, strong EF adherence, and 57.9% discrimination accuracy by expert clinicians which is close to chance. These findings indicate that efficient, one-step flow matching can enable practical, controllable echocardiogram video synthesis without sacrificing fidelity. Code available at: https://github.com/EngEmmanuel/EchoLVFM
+
+超声心动图广泛用于评估心脏功能，其中左心室射血分数（EF）等具有临床意义的参数在诊断和治疗中发挥着核心作用。能够合成真实超声心动图视频并明确控制这些参数的生成模型对于数据增强、反事实分析和专业培训很有价值。然而，现有方法通常依赖于计算成本昂贵的多步采样和激进的时间归一化，限制了异构现实世界数据的效率和适用性。   我们推出了 EchoLVFM，这是一种用于可控超声心动图生成的一步式潜在视频流匹配框架。 EchoLVFM 在潜在空间中运行，在单个推理步骤中合成时间连贯的视频，与多步骤流基线相比，采样效率提高了 $\mathbf{\sim 50\times}$，同时保持了视觉保真度。该模型支持对临床变量的全局调节，通过精确控制 EF 得到证明，并能够根据部分观察的序列进行重建和反事实生成。掩蔽调节策略进一步消除了固定长度的限制，允许保留而不是丢弃较短的序列。   我们在具有挑战性的单帧调节下在 CAMUS 数据集上评估 EchoLVFM。定量和定性结果表明，具有竞争力的视频质量、强大的 EF 依从性以及专家临床医生的 57.9% 的辨别准确率（接近偶然）。这些发现表明，高效的一步式流量匹配可以在不牺牲保真度的情况下实现实用的、可控的超声心动图视频合成。代码位于：https://github.com/EngEmmanuel/EchoLVFM
+
+</details>
+
+---
+
+## 22. Scene Generation at Absolute Scale: Utilizing Semantic and Geometric Guidance From Text for Accurate and Interpretable 3D Indoor Scene Generation / 绝对规模的场景生成：利用文本的语义和几何引导进行准确和可解释的3D室内场景生成
+
+**Date**: 2026-03-14 | **arXiv**: [2603.13910v1](http://arxiv.org/abs/2603.13910v1) | **PDF**: [Link](http://arxiv.org/pdf/2603.13910v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present GuidedSceneGen, a text-to-3D generation framework that produces metrically accurate, globally consistent, and semantically interpretable indoor scenes. Unlike prior text-driven methods that often suffer from geometric drift or scale ambiguity, our approach maintains an absolute world coordinate frame throughout the entire generation process. Starting from a textual scene description, we predict a global 3D layout encoding both semantic and geometric structure, which serves as a guiding proxy for downstream stages. A semantics- and depth-conditioned panoramic diffusion model then synthesizes 360° imagery aligned with the global layout, substantially improving spatial coherence. To explore unobserved regions, we employ a video diffusion model guided by optimized camera trajectories that balances coverage and collision avoidance, achieving up to 10x faster sampling compared to exhaustive path exploration. The generated views are fused using 3D Gaussian Splatting, yielding a consistent and fully navigable 3D scene in absolute scale. GuidedSceneGen enables accurate transfer of object poses and semantic labels from layout to reconstruction, and supports progressive scene expansion without re-alignment. Quantitative results and a user study demonstrate greater 3D consistency and layout plausibility compared to recent panoramic text-to-3D baselines.
+
+We present GuidedSceneGen, a text-to-3D generation framework that produces metrically accurate, globally consistent, and semantically interpretable indoor scenes. Unlike prior text-driven methods that often suffer from geometric drift or scale ambiguity, our approach maintains an absolute world coordinate frame throughout the entire generation process. Starting from a textual scene description, we predict a global 3D layout encoding both semantic and geometric structure, which serves as a guiding proxy for downstream stages. A semantics- and depth-conditioned panoramic diffusion model then synthesizes 360° imagery aligned with the global layout, substantially improving spatial coherence. To explore unobserved regions, we employ a video diffusion model guided by optimized camera trajectories that balances coverage and collision avoidance, achieving up to 10x faster sampling compared to exhaustive path exploration.生成的视图使用 3D 高斯分布进行融合，以绝对比例生成一致且完全可导航的 3D 场景。 GuidedSceneGen enables accurate transfer of object poses and semantic labels from layout to reconstruction, and supports progressive scene expansion without re-alignment. Quantitative results and a user study demonstrate greater 3D consistency and layout plausibility compared to recent panoramic text-to-3D baselines.
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-03-16 (2 papers)</b></summary>
 
 # arXiv Video Papers - 2026-03-16
