@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-04-07](papers/2026-04-07.md) - 17 papers
 - [2026-04-06](papers/2026-04-06.md) - 3 papers
 - [2026-04-03](papers/2026-04-03.md) - 25 papers
 - [2026-04-02](papers/2026-04-02.md) - 25 papers
@@ -53,6 +54,294 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-04-07 (17 papers)</b></summary>
+
+# arXiv Video Papers - 2026-04-07
+
+**Paper Count**: 17
+
+---
+
+## 1. Vanast: Virtual Try-On with Human Image Animation via Synthetic Triplet Supervision / Vanast：通过合成三元组监督进行人体图像动画虚拟试穿
+
+**Date**: 2026-04-06 | **arXiv**: [2604.04934v1](http://arxiv.org/abs/2604.04934v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.04934v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present Vanast, a unified framework that generates garment-transferred human animation videos directly from a single human image, garment images, and a pose guidance video. Conventional two-stage pipelines treat image-based virtual try-on and pose-driven animation as separate processes, which often results in identity drift, garment distortion, and front-back inconsistency. Our model addresses these issues by performing the entire process in a single unified step to achieve coherent synthesis. To enable this setting, we construct large-scale triplet supervision. Our data generation pipeline includes generating identity-preserving human images in alternative outfits that differ from garment catalog images, capturing full upper and lower garment triplets to overcome the single-garment-posed video pair limitation, and assembling diverse in-the-wild triplets without requiring garment catalog images. We further introduce a Dual Module architecture for video diffusion transformers to stabilize training, preserve pretrained generative quality, and improve garment accuracy, pose adherence, and identity preservation while supporting zero-shot garment interpolation. Together, these contributions allow Vanast to produce high-fidelity, identity-consistent animation across a wide range of garment types.
+
+我们提出了 Vanast，一个统一的框架，可以直接从单个人体图像、服装图像和姿势引导视频生成服装转移的人体动画视频。传统的两阶段流程将基于图像的虚拟试穿和姿势驱动的动画视为单独的过程，这通常会导致身份漂移、服装变形和前后不一致。我们的模型通过在一个统一的步骤中执行整个过程来实现一致的合成来解决这些问题。为了实现这种设置，我们构建了大规模的三元组监督。我们的数据生成流程包括生成与服装目录图像不同的替代服装中保留身份的人类图像，捕获完整的上衣和下衣三元组以克服单件服装姿势视频对的限制，以及在不需要服装目录图像的情况下组装不同的野外三元组。我们进一步引入了用于视频扩散变压器的双模块架构，以稳定训练，保留预训练的生成质量，并提高服装准确性、姿势依从性和身份保留，同时支持零镜头服装插值。总之，这些贡献使 Vanast 能够制作跨各种服装类型的高保真度、身份一致的动画。
+
+</details>
+
+---
+
+## 2. DIRECT: Video Mashup Creation via Hierarchical Multi-Agent Planning and Intent-Guided Editing / 直接：通过分层多代理规划和意图引导编辑创建视频混搭
+
+**Date**: 2026-04-06 | **arXiv**: [2604.04875v1](http://arxiv.org/abs/2604.04875v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.04875v1)
+
+**Categories**: cs.CV, cs.AI, cs.MM
+
+**Code**: https://github.com/AK-DREAM/DIRECT
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video mashup creation represents a complex video editing paradigm that recomposes existing footage to craft engaging audio-visual experiences, demanding intricate orchestration across semantic, visual, and auditory dimensions and multiple levels. However, existing automated editing frameworks often overlook the cross-level multimodal orchestration to achieve professional-grade fluidity, resulting in disjointed sequences with abrupt visual transitions and musical misalignment. To address this, we formulate video mashup creation as a Multimodal Coherency Satisfaction Problem (MMCSP) and propose the DIRECT framework. Simulating a professional production pipeline, our hierarchical multi-agent framework decomposes the challenge into three cascade levels: the Screenwriter for source-aware global structural anchoring, the Director for instantiating adaptive editing intent and guidance, and the Editor for intent-guided shot sequence editing with fine-grained optimization. We further introduce Mashup-Bench, a comprehensive benchmark with tailored metrics for visual continuity and auditory alignment. Extensive experiments demonstrate that DIRECT significantly outperforms state-of-the-art baselines in both objective metrics and human subjective evaluation. Project page and code: https://github.com/AK-DREAM/DIRECT
+
+视频混搭创作代表了一种复杂的视频编辑范例，它重新组合现有的素材来打造引人入胜的视听体验，需要跨语义、视觉和听觉维度和多个层次进行复杂的编排。然而，现有的自动编辑框架经常忽视跨级别的多模式编排以实现专业级的流动性，从而导致脱节的序列、突然的视觉过渡和音乐错位。为了解决这个问题，我们将视频混搭创建制定为多模态一致性满意度问题（MMCSP），并提出了 DIRECT 框架。模拟专业的制作流程，我们的分层多智能体框架将挑战分解为三个级联级别：用于源感知全局结构锚定的编剧、用于实例化自适应编辑意图和指导的导演、以及用于具有细粒度优化的意图引导镜头序列编辑的编辑器。我们进一步介绍 Mashup-Bench，这是一个综合基准测试，具有针对视觉连续性和听觉对齐的定制指标。大量实验表明，DIRECT 在客观指标和人类主观评估方面均显着优于最先进的基线。项目页面和代码：https://github.com/AK-DREAM/DIRECT
+
+</details>
+
+---
+
+## 3. Preserving Forgery Artifacts: AI-Generated Video Detection at Native Scale / 保护伪造品：本地规模的人工智能生成视频检测
+
+**Date**: 2026-04-06 | **arXiv**: [2604.04634v1](http://arxiv.org/abs/2604.04634v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.04634v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The rapid advancement of video generation models has enabled the creation of highly realistic synthetic media, raising significant societal concerns regarding the spread of misinformation. However, current detection methods suffer from critical limitations. They rely on preprocessing operations like fixed-resolution resizing and cropping. These operations not only discard subtle, high-frequency forgery traces but also cause spatial distortion and significant information loss. Furthermore, existing methods are often trained and evaluated on outdated datasets that fail to capture the sophistication of modern generative models. To address these challenges, we introduce a comprehensive dataset and a novel detection framework. First, we curate a large-scale dataset of over 140K videos from 15 state-of-the-art open-source and commercial generators, along with Magic Videos benchmark designed specifically for evaluating ultra-realistic synthetic content. In addition, we propose a novel detection framework built on the Qwen2.5-VL Vision Transformer, which operates natively at variable spatial resolutions and temporal durations. This native-scale approach effectively preserves the high-frequency artifacts and spatiotemporal inconsistencies typically lost during conventional preprocessing. Extensive experiments demonstrate that our method achieves superior performance across multiple benchmarks, underscoring the critical importance of native-scale processing and establishing a robust new baseline for AI-generated video detection.
+
+视频生成模型的快速发展使得高度逼真的合成媒体的创建成为可能，引起了社会对错误信息传播的严重担忧。然而，当前的检测方法存在严重的局限性。它们依赖于固定分辨率调整大小和裁剪等预处理操作。这些操作不仅会丢弃微妙的高频伪造痕迹，还会导致空间失真和重大信息丢失。此外，现有方法通常是在过时的数据集上进行训练和评估的，这些数据集无法捕捉现代生成模型的复杂性。为了应对这些挑战，我们引入了全面的数据集和新颖的检测框架。首先，我们整理了来自 15 个最先进的开源和商业生成器的超过 14 万个视频的大型数据集，以及专门为评估超现实合成内容而设计的 Magic Videos 基准。此外，我们提出了一种基于 Qwen2.5-VL Vision Transformer 构建的新颖检测框架，该框架以可变的空间分辨率和时间持续时间本地运行。这种本地规模的方法有效地保留了传统预处理过程中通常丢失的高频伪影和时空不一致。大量实验表明，我们的方法在多个基准测试中实现了卓越的性能，强调了本地规模处理的至关重要性，并为人工智能生成的视频检测建立了强大的新基线。
+
+</details>
+
+---
+
+## 4. Veo-Act: How Far Can Frontier Video Models Advance Generalizable Robot Manipulation? / Veo-Act：前沿视频模型可以将通用机器人操作推进多远？
+
+**Date**: 2026-04-06 | **arXiv**: [2604.04502v1](http://arxiv.org/abs/2604.04502v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.04502v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video generation models have advanced rapidly and are beginning to show a strong understanding of physical dynamics. In this paper, we investigate how far an advanced video generation model such as Veo-3 can support generalizable robotic manipulation. We first study a zero-shot approach in which Veo-3 predicts future image sequences from current robot observations, while an inverse dynamics model IDM recovers the corresponding robot actions. The IDM is trained solely on random-play data, requiring neither human supervision nor expert demonstrations. The key intuition is that, if a video model can generate physically plausible future motions in image space, an IDM can translate those visual trajectories into executable robot actions. We evaluate this "Veo-3+IDM" approach in both simulation and the real world using a high-dimensional dexterous hand. We find that, owing to the strong generalization capability of frontier video models, Veo-3+IDM can consistently generate approximately correct task-level trajectories. However, its low-level control accuracy remains insufficient to solve most tasks reliably. Motivated by this observation, we develop a hierarchical framework, Veo-Act, which uses Veo-3 as a high-level motion planner and a VLA policy as the low-level executor, significantly improving the instruction-following performance of a state-of-the-art vision-language-action policy. Overall, our results suggest that, as video generation models continue to improve, video models can be a valuable component for generalizable robot learning.
+
+视频生成模型发展迅速，并开始表现出对物理动力学的深刻理解。在本文中，我们研究了 Veo-3 等高级视频生成模型可以在多大程度上支持通用的机器人操作。我们首先研究了一种零样本方法，其中 Veo-3 根据当前机器人观察结果预测未来图像序列，而逆动力学模型 IDM 则恢复相应的机器人动作。 IDM 仅根据随机游戏数据进行训练，不需要人工监督或专家演示。关键的直觉是，如果视频模型可以在图像空间中生成物理上合理的未来运动，那么 IDM 就可以将这些视觉轨迹转换为可执行的机器人动作。我们使用高维灵巧手在模拟和现实世界中评估这种“Veo-3+IDM”方法。我们发现，由于前沿视频模型强大的泛化能力，Veo-3+IDM 可以一致地生成近似正确的任务级轨迹。然而，其低水平的控制精度仍然不足以可靠地解决大多数任务。受这一观察的启发，我们开发了一个分层框架 Veo-Act，它使用 Veo-3 作为高级运动规划器，使用 VLA 策略作为低级执行器，显着提高了最先进的视觉-语言-动作策略的指令跟踪性能。总的来说，我们的结果表明，随着视频生成模型的不断改进，视频模型可以成为通用机器人学习的重要组成部分。
+
+</details>
+
+---
+
+## 5. Beyond Few-Step Inference: Accelerating Video Diffusion Transformer Model Serving with Inter-Request Caching Reuse / 超越几步推理：通过请求间缓存重用加速视频扩散变压器模型服务
+
+**Date**: 2026-04-06 | **arXiv**: [2604.04451v1](http://arxiv.org/abs/2604.04451v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.04451v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video Diffusion Transformer (DiT) models are a dominant approach for high-quality video generation but suffer from high inference cost due to iterative denoising. Existing caching approaches primarily exploit similarity within the diffusion process of a single request to skip redundant denoising steps. In this paper, we introduce Chorus, a caching approach that leverages similarity across requests to accelerate video diffusion model serving. Chorus achieves up to 45\% speedup on industrial 4-step distilled models, where prior intra-request caching approaches are ineffective. Particularly, Chorus employs a three-stage caching strategy along the denoising process. Stage 1 performs full reuse of latent features from similar requests. Stage 2 exploits inter-request caching in specific latent regions during intermediate denoising steps. This stage is combined with Token-Guided Attention Amplification to improve semantic alignment between the generated video and the conditional prompts, thereby extending the applicability of full reuse to later denoising steps.
+
+视频扩散变压器 (DiT) 模型是高质量视频生成的主要方法，但由于迭代去噪而导致推理成本较高。现有的缓存方法主要利用单个请求的扩散过程中的相似性来跳过冗余的去噪步骤。在本文中，我们介绍了 Chorus，这是一种利用请求之间的相似性来加速视频传播模型服务的缓存方法。 Chorus 在工业 4 步蒸馏模型上实现了高达 45% 的加速，而先前的请求内缓存方法在该模型中无效。特别是，Chorus 在去噪过程中采用了三阶段缓存策略。第 1 阶段对类似请求中的潜在功能进行完全重用。第 2 阶段在中间去噪步骤期间利用特定潜在区域中的请求间缓存。该阶段与令牌引导注意力放大相结合，以改善生成的视频和条件提示之间的语义对齐，从而将完全重用的适用性扩展到后续的去噪步骤。
+
+</details>
+
+---
+
+## 6. BoxComm: Benchmarking Category-Aware Commentary Generation and Narration Rhythm in Boxing / BoxComm：拳击中类别感知评论生成和叙述节奏的基准测试
+
+**Date**: 2026-04-06 | **arXiv**: [2604.04419v1](http://arxiv.org/abs/2604.04419v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.04419v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent multimodal large language models (MLLMs) have shown strong capabilities in general video understanding, driving growing interest in automatic sports commentary generation. However, existing benchmarks for this task focus exclusively on team sports such as soccer and basketball, leaving combat sports entirely unexplored. Notably, combat sports present distinct challenges: critical actions unfold within milliseconds with visually subtle yet semantically decisive differences, and professional commentary contains a substantially higher proportion of tactical analysis compared to team sports. In this paper, we present BoxComm, a large-scale dataset comprising 445 World Boxing Championship match videos with over 52K commentary sentences from professional broadcasts. We propose a structured commentary taxonomy that categorizes each sentence into play-by-play, tactical, or contextual, providing the first category-level annotation for sports commentary benchmarks. Building on this taxonomy, we introduce two novel and complementary evaluations tailored to sports commentary generation: (1) category-conditioned generation, which evaluates whether models can produce accurate commentary of a specified type given video context; and (2) commentary rhythm assessment, which measures whether freely generated commentary exhibits appropriate temporal pacing and type distribution over continuous video segments, capturing a dimension of commentary competence that prior benchmarks have not addressed. Experiments on multiple state-of-the-art MLLMs reveal that current models struggle on both evaluations. We further propose EIC-Gen, an improved baseline incorporating detected punch events to supply structured action cues, yielding consistent gains and highlighting the importance of perceiving fleeting and subtle events for combat sports commentary.
+
+最近的多模态大语言模型（MLLM）在一般视频理解方面表现出了强大的能力，推动了人们对自动体育评论生成的兴趣日益浓厚。然而，这项任务的现有基准仅关注足球和篮球等团队运动，而完全没有探索格斗运动。值得注意的是，格斗运动提出了独特的挑战：关键动作在几毫秒内展开，具有视觉上微妙但语义上决定性的差异，与团队运动相比，专业评论包含的战术分析比例要高得多。在本文中，我们提出了 BoxComm，这是一个大型数据集，包含 445 个世界拳击锦标赛比赛视频以及来自专业广播的超过 52K 评论句子。我们提出了一种结构化的评论分类法，将每个句子分类为逐场比赛、战术或上下文，为体育评论基准提供第一个类别级注释。在此分类法的基础上，我们引入了两种针对体育评论生成的新颖且互补的评估：（1）类别条件生成，它评估模型是否可以在给定视频上下文的情况下生成指定类型的准确评论； （2）评论节奏评估，衡量自由生成的评论是否在连续视频片段上表现出适当的时间节奏和类型分布，捕获先前基准尚未解决的评论能力维度。对多个最先进的 MLLM 进行的实验表明，当前模型在这两项评估上都表现不佳。我们进一步提出了 EIC-Gen，这是一种改进的基线，结合了检测到的拳击事件，以提供结构化的动作线索，产生一致的收益，并强调感知转瞬即逝和微妙的事件对于格斗运动评论的重要性。
+
+</details>
+
+---
+
+## 7. UENR-600K: A Large-Scale Physically Grounded Dataset for Nighttime Video Deraining / UENR-600K：用于夜间视频除雨的大规模物理接地数据集
+
+**Date**: 2026-04-06 | **arXiv**: [2604.04402v1](http://arxiv.org/abs/2604.04402v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.04402v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Nighttime video deraining is uniquely challenging because raindrops interact with artificial lighting. Unlike daytime white rain, nighttime rain takes on various colors and appears locally illuminated. Existing small-scale synthetic datasets rely on 2D rain overlays and fail to capture these physical properties, causing models to generalize poorly to real-world night rain. Meanwhile, capturing real paired nighttime videos remains impractical because rain effects cannot be isolated from other degradations like sensor noise. To bridge this gap, we introduce UENR-600K, a large-scale, physically grounded dataset containing 600,000 1080p frame pairs. We utilize Unreal Engine to simulate rain as 3D particles within virtual environments. This approach guarantees photorealism and physically real raindrops, capturing correct details like color refractions, scene occlusions, rain curtains. Leveraging this high-quality data, we establish a new state-of-the-art baseline by adapting the Wan 2.2 video generation model. Our baseline treat deraining as a video-to-video generation task, exploiting strong generative priors to almost entirely bridge the sim-to-real gap. Extensive benchmarking demonstrates that models trained on our dataset generalize significantly better to real-world videos. Project page: https://showlab.github.io/UENR-600K/.
+
+夜间视频除雨具有独特的挑战性，因为雨滴会与人工照明相互作用。与白天的白雨不同，夜间的雨呈现出各种颜色，并且看起来局部被照亮。现有的小规模合成数据集依赖于二维降雨覆盖，无法捕获这些物理特性，导致模型无法很好地推广到现实世界的夜间降雨。与此同时，捕捉真实的配对夜间视频仍然不切实际，因为降雨影响无法与传感器噪声等其他退化因素隔离开来。为了弥补这一差距，我们引入了 UENR-600K，这是一个包含 600,000 个 1080p 帧对的大规模物理接地数据集。我们利用虚幻引擎在虚拟环境中将雨模拟为 3D 粒子。这种方法保证了照片级真实感和物理上真实的雨滴，捕捉正确的细节，如颜色折射、场景遮挡、雨幕。利用这些高质量数据，我们通过采用 Wan 2.2 视频生成模型建立了新的最先进基线。我们的基线将除雨视为视频到视频的生成任务，利用强大的生成先验几乎完全弥合了模拟与真实的差距。广泛的基准测试表明，在我们的数据集上训练的模型可以更好地推广到现实世界的视频。项目页面：https://showlab.github.io/UENR-600K/。
+
+</details>
+
+---
+
+## 8. DriveVA: Video Action Models are Zero-Shot Drivers / DriveVA：视频动作模型是零镜头驱动程序
+
+**Date**: 2026-04-05 | **arXiv**: [2604.04198v1](http://arxiv.org/abs/2604.04198v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.04198v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Generalization is a central challenge in autonomous driving, as real-world deployment requires robust performance under unseen scenarios, sensor domains, and environmental conditions. Recent world-model-based planning methods have shown strong capabilities in scene understanding and multi-modal future prediction, yet their generalization across datasets and sensor configurations remains limited. In addition, their loosely coupled planning paradigm often leads to poor video-trajectory consistency during visual imagination. To overcome these limitations, we propose DriveVA, a novel autonomous driving world model that jointly decodes future visual forecasts and action sequences in a shared latent generative process. DriveVA inherits rich priors on motion dynamics and physical plausibility from well-pretrained large-scale video generation models to capture continuous spatiotemporal evolution and causal interaction patterns. To this end, DriveVA employs a DiT-based decoder to jointly predict future action sequences (trajectories) and videos, enabling tighter alignment between planning and scene evolution. We also introduce a video continuation strategy to strengthen long-duration rollout consistency. DriveVA achieves an impressive closed-loop performance of 90.9 PDM score on the challenge NAVSIM. Extensive experiments also demonstrate the zero-shot capability and cross-domain generalization of DriveVA, which reduces average L2 error and collision rate by 78.9% and 83.3% on nuScenes and 52.5% and 52.4% on the Bench2drive built on CARLA v2 compared with the state-of-the-art world-model-based planner.
+
+泛化是自动驾驶的一个核心挑战，因为现实世界的部署需要在未见过的场景、传感器域和环境条件下具有强大的性能。最近基于世界模型的规划方法在场景理解和多模式未来预测方面表现出了强大的能力，但它们跨数据集和传感器配置的泛化仍然有限。此外，它们松散耦合的规划范式通常会导致视觉想象过程中视频轨迹一致性较差。为了克服这些限制，我们提出了 DriveVA，这是一种新颖的自动驾驶世界模型，可以在共享的潜在生成过程中联合解码未来的视觉预测和动作序列。 DriveVA 从经过良好预训练的大规模视频生成模型继承了关于运动动力学和物理合理性的丰富先验，以捕获连续的时空演化和因果交互模式。为此，DriveVA 采用基于 DiT 的解码器来联合预测未来的动作序列（轨迹）和视频，从而实现规划和场景演进之间更紧密的结合。我们还引入了视频延续策略来加强长期推出的一致性。 DriveVA 在 NAVSIM 挑战赛中取得了 90.9 PDM 分数的令人印象深刻的闭环性能。大量实验还证明了 DriveVA 的零射击能力和跨域泛化能力，与最先进的基于世界模型的规划器相比，在 nuScenes 上平均 L2 错误和碰撞率降低了 78.9% 和 83.3%，在基于 CARLA v2 的 Bench2drive 上降低了 52.5% 和 52.4%。
+
+</details>
+
+---
+
+## 9. AURA: Always-On Understanding and Real-Time Assistance via Video Streams / AURA：通过视频流始终在线的理解和实时帮助
+
+**Date**: 2026-04-05 | **arXiv**: [2604.04184v1](http://arxiv.org/abs/2604.04184v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.04184v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video Large Language Models (VideoLLMs) have achieved strong performance on many video understanding tasks, but most existing systems remain offline and are not well-suited for live video streams that require continuous observation and timely response. Recent streaming VideoLLMs have made progress, yet current approaches often rely on decoupled trigger-response pipelines or are limited to captioning-style narration, reducing their effectiveness for open-ended question answering and long-horizon interaction. We propose AURA (Always-On Understanding and Real-Time Assistance), an end-to-end streaming visual interaction framework that enables a unified VideoLLM to continuously process video streams and support both real-time question answering and proactive responses. AURA integrates context management, data construction, training objectives, and deployment optimization for stable long-horizon streaming interaction. It achieves state-of-the-art performance on streaming benchmarks and supports a real-time demo system with ASR and TTS running at 2 FPS on two 80G accelerators. We release the AURA model together with a real-time inference framework to facilitate future research.
+
+视频大语言模型（VideoLLM）在许多视频理解任务上取得了强大的性能，但大多数现有系统仍然处于离线状态，并且不太适合需要持续观察和及时响应的实时视频流。最近的流式 VideoLLM 取得了进展，但当前的方法通常依赖于解耦的触发响应管道或仅限于字幕式叙述，从而降低了其开放式问答和长视野交互的有效性。我们提出AURA（始终在线理解和实时协助），这是一种端到端流式视觉交互框架，使统一的VideoLLM能够持续处理视频流并支持实时问答和主动响应。 AURA 集成了上下文管理、数据构建、训练目标和部署优化，以实现稳定的长视野流交互。它在流媒体基准测试中实现了最先进的性能，并支持实时演示系统，其中 ASR 和 TTS 在两个 80G 加速器上以 2 FPS 运行。我们发布了 AURA 模型和实时推理框架，以方便未来的研究。
+
+</details>
+
+---
+
+## 10. OP-GRPO: Efficient Off-Policy GRPO for Flow-Matching Models / OP-GRPO：用于流量匹配模型的高效离策略 GRPO
+
+**Date**: 2026-04-05 | **arXiv**: [2604.04142v1](http://arxiv.org/abs/2604.04142v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.04142v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Post training via GRPO has demonstrated remarkable effectiveness in improving the generation quality of flow-matching models. However, GRPO suffers from inherently low sample efficiency due to its on-policy training paradigm. To address this limitation, we present OP-GRPO, the first Off-Policy GRPO framework tailored for flow-matching models. First, we actively select high-quality trajectories and adaptively incorporate them into a replay buffer for reuse in subsequent training iterations. Second, to mitigate the distribution shift introduced by off-policy samples, we propose a sequence-level importance sampling correction that preserves the integrity of GRPO's clipping mechanism while ensuring stable policy updates. Third, we theoretically and empirically show that late denoising steps yield ill-conditioned off-policy ratios, and mitigate this by truncating trajectories at late steps. Across image and video generation benchmarks, OP-GRPO achieves comparable or superior performance to Flow-GRPO with only 34.2% of the training steps on average, yielding substantial gains in training efficiency while maintaining generation quality.
+
+通过 GRPO 进行的后期训练在提高流匹配模型的生成质量方面表现出了显着的效果。然而，由于其在策略训练范式，GRPO 固有的样本效率较低。为了解决这个限制，我们提出了 OP-GRPO，这是第一个专为流量匹配模型量身定制的离策略 GRPO 框架。首先，我们主动选择高质量的轨迹，并将它们自适应地合并到重放缓冲区中，以便在后续训练迭代中重用。其次，为了减轻非策略样本引入的分布变化，我们提出了一种序列级重要性采样校正，可以保留 GRPO 裁剪机制的完整性，同时确保稳定的策略更新。第三，我们从理论上和经验上表明，后期去噪步骤会产生病态的离策略比率，并通过在后期步骤截断轨迹来缓解这种情况。在图像和视频生成基准中，OP-GRPO 平均只需 34.2% 的训练步骤即可实现与 Flow-GRPO 相当或更好的性能，在保持生成质量的同时显着提高训练效率。
+
+</details>
+
+---
+
+## 11. Intelligent Traffic Monitoring with YOLOv11: A Case Study in Real-Time Vehicle Detection / 使用 YOLOv11 进行智能交通监控：实时车辆检测案例研究
+
+**Date**: 2026-04-05 | **arXiv**: [2604.04080v1](http://arxiv.org/abs/2604.04080v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.04080v1)
+
+**Categories**: cs.CV, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advancements in computer vision, driven by artificial intelligence, have significantly enhanced monitoring systems. One notable application is traffic monitoring, which leverages computer vision alongside deep learning-based object detection and counting. We present an offline, real-time traffic monitoring system that couples a pre-trained YOLOv11 detector with BoT-SORT/ByteTrack for multi-object tracking, implemented in PyTorch/OpenCV and wrapped in a Qt-based desktop UI. The CNN pipeline enables efficient vehicle detection and counting from video streams without cloud dependencies. Across diverse scenes, the system achieves (66.67-95.83%) counting accuracy. Class-wise detection yields high precision (cars: 0.97-1.00; trucks: 1.00) with strong recall (cars: 0.82-1.00; trucks: 0.70-1.00), resulting in F1 scores of (0.90-1.00 for cars and 0.82-1.00 for trucks). While adverse weather conditions may negatively impact this performance, results remain robust in typical conditions. By integrating lightweight models with an accessible, cloud-independent interface, this paper contributes to the modernization and development of future smart cities by showing the capacity of AI-driven traffic monitoring systems.
+
+在人工智能的推动下，计算机视觉的最新进展显着增强了监控系统。一项值得注意的应用是交通监控，它利用计算机视觉以及基于深度学习的对象检测和计数。我们提出了一个离线实时交通监控系统，它将预先训练的 YOLOv11 检测器与 BoT-SORT/ByteTrack 结合起来，用于多目标跟踪，在 PyTorch/OpenCV 中实现，并包装在基于 Qt 的桌面 UI 中。 CNN 管道可实现高效的车辆检测和视频流计数，无需依赖云。在不同场景下，系统实现了（66.67-95.83%）的计数准确率。分类检测具有高精度（汽车：0.97-1.00；卡车：1.00）和强召回率（汽车：0.82-1.00；卡车：0.70-1.00），导致 F1 分数为（汽车 0.90-1.00，卡车 0.82-1.00）。虽然恶劣的天气条件可能会对性能产生负面影响，但在典型条件下结果仍然稳健。通过将轻量级模型与可访问、独立于云的界面相集成，本文展示了人工智能驱动的交通监控系统的能力，为未来智慧城市的现代化和发展做出了贡献。
+
+</details>
+
+---
+
+## 12. ATSS: Detecting AI-Generated Videos via Anomalous Temporal Self-Similarity / ATSS：通过异常时间自相似性检测人工智能生成的视频
+
+**Date**: 2026-04-05 | **arXiv**: [2604.04029v1](http://arxiv.org/abs/2604.04029v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.04029v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/hwang-cs-ime/ATSS.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+AI-generated videos (AIGVs) have achieved unprecedented photorealism, posing severe threats to digital forensics. Existing AIGV detectors focus mainly on localized artifacts or short-term temporal inconsistencies, thus often fail to capture the underlying generative logic governing global temporal evolution, limiting AIGV detection performance. In this paper, we identify a distinctive fingerprint in AIGVs, termed anomalous temporal self-similarity (ATSS). Unlike real videos that exhibit stochastic natural dynamics, AIGVs follow deterministic anchor-driven trajectories (e.g., text or image prompts), inducing unnaturally repetitive correlations across visual and semantic domains. To exploit this, we propose the ATSS method, a multimodal detection framework that exploits this insight via a triple-similarity representation and a cross-attentive fusion mechanism. Specifically, ATSS reconstructs semantic trajectories by leveraging frame-wise descriptions to construct visual, textual, and cross-modal similarity matrices, which jointly quantify the inherent temporal anomalies. These matrices are encoded by dedicated Transformer encoders and integrated via a bidirectional cross-attentive fusion module to effectively model intra- and inter-modal dynamics. Extensive experiments on four large-scale benchmarks, including GenVideo, EvalCrafter, VideoPhy, and VidProM, demonstrate that ATSS significantly outperforms state-of-the-art methods in terms of AP, AUC, and ACC metrics, exhibiting superior generalization across diverse video generation models. Code and models of ATSS will be released at https://github.com/hwang-cs-ime/ATSS.
+
+人工智能生成的视频（AIGV）实现了前所未有的真实感，对数字取证构成了严重威胁。现有的 AIGV 检测器主要关注局部伪影或短期时间不一致，因此常常无法捕获控制全局时间演化的底层生成逻辑，从而限制了 AIGV 检测性能。在本文中，我们确定了 AIGV 中的独特指纹，称为异常时间自相似性（ATSS）。与表现出随机自然动态的真实视频不同，AIGV 遵循确定性锚点驱动的轨迹（例如文本或图像提示），从而在视觉和语义领域中引入不自然的重复相关性。为了利用这一点，我们提出了 ATSS 方法，这是一种多模态检测框架，通过三重相似性表示和交叉注意融合机制来利用这种洞察力。具体来说，ATSS 通过利用逐帧描述来构建视觉、文本和跨模式相似性矩阵来重建语义轨迹，从而共同量化固有的时间异常。这些矩阵由专用 Transformer 编码器进行编码，并通过双向交叉注意力融合模块进行集成，以有效地模拟模内和模间动态。对四个大型基准（包括 GenVideo、EvalCrafter、VideoPhy 和 VidProM）的广泛实验表明，ATSS 在 AP、AUC 和 ACC 指标方面显着优于最先进的方法，在不同的视频生成模型中表现出卓越的泛化能力。 ATSS的代码和模型将在https://github.com/hwang-cs-ime/ATSS发布。
+
+</details>
+
+---
+
+## 13. Interpreting Video Representations with Spatio-Temporal Sparse Autoencoders / 使用时空稀疏自动编码器解释视频表示
+
+**Date**: 2026-04-05 | **arXiv**: [2604.03919v1](http://arxiv.org/abs/2604.03919v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.03919v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present the first systematic study of Sparse Autoencoders (SAEs) on video representations. Standard SAEs decompose video into interpretable, monosemantic features but destroy temporal coherence: hard TopK selection produces unstable feature assignments across frames, reducing autocorrelation by 36%. We propose spatio-temporal contrastive objectives and Matryoshka hierarchical grouping that recover and even exceed raw temporal coherence. The contrastive loss weight controls a tunable trade-off between reconstruction and temporal coherence. A systematic ablation on two backbones and two datasets shows that different configurations excel at different goals: reconstruction fidelity, temporal coherence, action discrimination, or interpretability. Contrastive SAE features improve action classification by +3.9% over raw features and text-video retrieval by up to 2.8xR@1. A cross-backbone analysis reveals that standard monosemanticity metrics contain a backbone-alignment artifact: both DINOv2 and VideoMAE produce equally monosemantic features under neutral (CLIP) similarity. Causal ablation confirms that contrastive training concentrates predictive signal into a small number of identifiable features.
+
+我们提出了关于视频表示的稀疏自动编码器（SAE）的第一个系统研究。标准 SAE 将视频分解为可解释的单语义特征，但会破坏时间连贯性：硬 TopK 选择会导致跨帧的特征分配不稳定，从而将自相关性降低 36%。我们提出时空对比目标和俄罗斯套娃分层分组，以恢复甚至超过原始时间一致性。对比损失权重控制重建和时间相干性之间的可调权衡。对两个主干网和两个数据集的系统消融表明，不同的配置在不同的目标上表现出色：重建保真度、时间连贯性、动作辨别或可解释性。与原始特征相比，对比 SAE 特征将动作分类提高了 3.9%，文本视频检索提高了高达 2.8xR@1。跨主干分析表明，标准单语义度量包含主干对齐伪影：DINOv2 和 VideoMAE 在中性 (CLIP) 相似性下产生同样的单语义特征。因果消融证实对比训练将预测信号集中到少量可识别的特征中。
+
+</details>
+
+---
+
+## 14. ActivityForensics: A Comprehensive Benchmark for Localizing Manipulated Activity in Videos / ActivityForensics：定位视频中被操纵活动的综合基准
+
+**Date**: 2026-04-04 | **arXiv**: [2604.03819v1](http://arxiv.org/abs/2604.03819v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.03819v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Temporal forgery localization aims to temporally identify manipulated segments in videos. Most existing benchmarks focus on appearance-level forgeries, such as face swapping and object removal. However, recent advances in video generation have driven the emergence of activity-level forgeries that modify human actions to distort event semantics, resulting in highly deceptive forgeries that critically undermine media authenticity and public trust. To overcome this issue, we introduce ActivityForensics, the first large-scale benchmark for localizing manipulated activity in videos. It contains over 6K forged video segments that are seamlessly blended into the video context, rendering high visual consistency that makes them almost indistinguishable from authentic content to the human eye. We further propose Temporal Artifact Diffuser (TADiff), a simple yet effective baseline that exposes artifact cues through a diffusion-based feature regularizer. Based on ActivityForensics, we introduce comprehensive evaluation protocols covering intra-domain, cross-domain, and open-world settings, and benchmark a wide range of state-of-the-art forgery localizers to facilitate future research. The dataset and code are available at https://activityforensics.github.io.
+
+时间伪造定位旨在暂时识别视频中被操纵的片段。大多数现有基准测试都侧重于外观级别的伪造，例如面部交换和对象移除。然而，视频生成的最新进展推动了活动级伪造的出现，这些伪造会修改人类行为以扭曲事件语义，从而导致高度欺骗性的伪造，严重损害媒体的真实性和公众信任。为了解决这个问题，我们引入了 ActivityForensics，这是第一个用于本地化视频中被操纵活动的大规模基准。它包含超过 6K 的伪造视频片段，这些片段无缝地融入视频上下文中，呈现出高度的视觉一致性，使人眼几乎无法将其与真实内容区分开。我们进一步提出了时间伪影扩散器（TADiff），这是一个简单而有效的基线，通过基于扩散的特征正则化器暴露伪影线索。基于 ActivityForensics，我们引入了涵盖域内、跨域和开放世界设置的综合评估协议，并对各种最先进的伪造定位器进行基准测试，以促进未来的研究。数据集和代码可在 https://activityforensics.github.io 获取。
+
+</details>
+
+---
+
+## 15. Rethinking Position Embedding as a Context Controller for Multi-Reference and Multi-Shot Video Generation / 重新思考位置嵌入作为多参考和多镜头视频生成的上下文控制器
+
+**Date**: 2026-04-04 | **arXiv**: [2604.03738v1](http://arxiv.org/abs/2604.03738v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.03738v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent proprietary models such as Sora2 demonstrate promising progress in generating multi-shot videos conditioned on multiple reference characters. However, academic research on this problem remains limited. We study this task and identify a core challenge: when reference images exhibit highly similar appearances, the model often suffers from reference confusion, where semantically similar tokens degrade the model's ability to retrieve the correct context. To address this, we introduce PoCo (Position Embedding as a Context Controller), which incorporates position encoding as additional context control beyond semantic retrieval. By employing side information of tokens, PoCo enables precise token-level matching while preserving implicit semantic consistency modeling. Building on PoCo, we develop a multi-reference and multi-shot video generation model capable of reliably controlling characters with extremely similar visual traits. Extensive experiments demonstrate that PoCo improves cross-shot consistency and reference fidelity compared with various baselines.
+
+最近的专有模型（例如 Sora2）在生成基于多个参考角色的多镜头视频方面取得了可喜的进展。然而，学术界对此问题的研究仍然有限。我们研究这个任务并确定一个核心挑战：当参考图像表现出高度相似的外观时，模型经常会遇到参考混淆，其中语义相似的标记会降低模型检索正确上下文的能力。为了解决这个问题，我们引入了 PoCo（位置嵌入作为上下文控制器），它将位置编码作为语义检索之外的附加上下文控制。通过利用令牌的辅助信息，PoCo 可以实现精确的令牌级别匹配，同时保留隐式语义一致性模型。在 PoCo 的基础上，我们开发了一种多参考和多镜头视频生成模型，能够可靠地控制具有极其相似视觉特征的角色。大量实验表明，与各种基线相比，PoCo 提高了交叉镜头一致性和参考保真度。
+
+</details>
+
+---
+
+## 16. SymphoMotion: Joint Control of Camera Motion and Object Dynamics for Coherent Video Generation / SymphoMotion：相机运动和物体动力学的联合控制以生成连贯视频
+
+**Date**: 2026-04-04 | **arXiv**: [2604.03723v1](http://arxiv.org/abs/2604.03723v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.03723v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Controlling both camera motion and object dynamics is essential for coherent and expressive video generation, yet current methods typically handle only one motion type or rely on ambiguous 2D cues that entangle camera-induced parallax with true object movement. We present SymphoMotion, a unified motion-control framework that jointly governs camera trajectories and object dynamics within a single model. SymphoMotion features a Camera Trajectory Control mechanism that integrates explicit camera paths with geometry-aware cues to ensure stable, structurally consistent viewpoint transitions, and an Object Dynamics Control mechanism that combines 2D visual guidance with 3D trajectory embeddings to enable depth-aware, spatially coherent object manipulation. To support large-scale training and evaluation, we further construct RealCOD-25K, a comprehensive real-world dataset containing paired camera poses and object-level 3D trajectories across diverse indoor and outdoor scenes, addressing a key data gap in unified motion control. Extensive experiments and user studies show that SymphoMotion significantly outperforms existing methods in visual fidelity, camera controllability, and object-motion accuracy, establishing a new benchmark for unified motion control in video generation.Codes and data are publicly available at https://grenoble-zhang.github.io/SymphoMotion/.
+
+控制相机运动和物体动力学对于生成连贯且富有表现力的视频至关重要，但当前的方法通常仅处理一种运动类型或依赖于模糊的 2D 线索，这些线索将相机引起的视差与真实的物体运动纠缠在一起。我们推出了 SymphoMotion，这是一个统一的运动控制框架，可在单个模型中共同控制相机轨迹和物体动力学。 SymphoMotion 具有相机轨迹控制机制，将显式相机路径与几何感知提示集成在一起，以确保稳定、结构一致的视点转换，以及对象动态控制机制，将 2D 视觉引导与 3D 轨迹嵌入相结合，以实现深度感知、空间连贯的对象操作。为了支持大规模训练和评估，我们进一步构建了 RealCOD-25K，这是一个全面的真实世界数据集，包含跨不同室内和室外场景的配对相机姿势和对象级 3D 轨迹，解决了统一运动控制中的关键数据缺口。大量的实验和用户研究表明，SymphoMotion 在视觉保真度、相机可控性和物体运动精度方面显着优于现有方法，为视频生成中的统一运动控制建立了新的基准。代码和数据可在 https://grenoble-zhang.github.io/SymphoMotion/ 上公开获取。
+
+</details>
+
+---
+
+## 17. SGTA: Scene-Graph Based Multi-Modal Traffic Agent for Video Understanding / SGTA：用于视频理解的基于场景图的多模态交通代理
+
+**Date**: 2026-04-04 | **arXiv**: [2604.03697v1](http://arxiv.org/abs/2604.03697v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.03697v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present Scene-Graph Based Multi-Modal Traffic Agent (SGTA), a modular framework for traffic video understanding that combines structured scene graphs with multi-modal reasoning. It constructs a traffic scene graph from roadside videos using detection, tracking, and lane extraction, followed by tool-based reasoning over both symbolic graph queries and visual inputs. SGTA adopts ReAct to process interleaved reasoning traces from large language models with tool invocations, enabling interpretable decision-making for complex video questions. Experiments on selected TUMTraffic VideoQA dataset sample demonstrate that SGTA achieves competitive accuracy across multiple question types while providing transparent reasoning steps. These results highlight the potential of integrating structured scene representations with multi-modal agents for traffic video understanding.
+
+我们提出了基于场景图的多模态交通代理（SGTA），这是一种用于交通视频理解的模块化框架，它将结构化场景图与多模态推理相结合。它使用检测、跟踪和车道提取从路边视频构建交通场景图，然后对符号图查询和视觉输入进行基于工具的推理。 SGTA 采用 ReAct 通过工具调用处理来自大型语言模型的交错推理轨迹，从而能够针对复杂的视频问题做出可解释的决策。对选定的 TUMTraffic VideoQA 数据集样本进行的实验表明，SGTA 在提供透明的推理步骤的同时，在多种问题类型上实现了有竞争力的准确性。这些结果凸显了将结构化场景表示与多模式代理集成以实现交通视频理解的潜力。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-04-06 (3 papers)</b></summary>
 
 # arXiv Video Papers - 2026-04-06
