@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-04-08](papers/2026-04-08.md) - 4 papers
 - [2026-04-07](papers/2026-04-07.md) - 6 papers
 - [2026-04-06](papers/2026-04-06.md) - 2 papers
 - [2026-04-03](papers/2026-04-03.md) - 8 papers
@@ -46,6 +47,84 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-04-08 (4 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-04-08
+
+**Paper Count**: 4
+
+---
+
+## 1. Action Images: End-to-End Policy Learning via Multiview Video Generation / 动作图像：通过多视图视频生成进行端到端政策学习
+
+**Date**: 2026-04-07 | **arXiv**: [2604.06168v1](http://arxiv.org/abs/2604.06168v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.06168v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World action models (WAMs) have emerged as a promising direction for robot policy learning, as they can leverage powerful video backbones to model the future states. However, existing approaches often rely on separate action modules, or use action representations that are not pixel-grounded, making it difficult to fully exploit the pretrained knowledge of video models and limiting transfer across viewpoints and environments. In this work, we present Action Images, a unified world action model that formulates policy learning as multiview video generation. Instead of encoding control as low-dimensional tokens, we translate 7-DoF robot actions into interpretable action images: multi-view action videos that are grounded in 2D pixels and explicitly track robot-arm motion. This pixel-grounded action representation allows the video backbone itself to act as a zero-shot policy, without a separate policy head or action module. Beyond control, the same unified model supports video-action joint generation, action-conditioned video generation, and action labeling under a shared representation. On RLBench and real-world evaluations, our model achieves the strongest zero-shot success rates and improves video-action joint generation quality over prior video-space world models, suggesting that interpretable action images are a promising route to policy learning.
+
+世界行动模型（WAM）已成为机器人政策学习的一个有前途的方向，因为它们可以利用强大的视频主干来模拟未来状态。然而，现有的方法通常依赖于单独的动作模块，或者使用非像素基础的动作表示，这使得很难充分利用视频模型的预训练知识，并限制跨视点和环境的传输。在这项工作中，我们提出了 Action Images，这是一种统一的世界动作模型，它将策略学习制定为多视图视频生成。我们没有将控制编码为低维标记，而是将 7-DoF 机器人动作转换为可解释的动作图像：基于 2D 像素并明确跟踪机器人手臂运动的多视图动作视频。这种基于像素的动作表示允许视频主干本身充当零镜头策略，无需单独的策略头或动作模块。除了控制之外，同一统一模型还支持共享表示下的视频动作联合生成、动作条件视频生成和动作标记。在 RLBench 和现实世界评估中，我们的模型实现了最强的零镜头成功率，并比之前的视频空间世界模型提高了视频动作联合生成质量，这表明可解释的动作图像是政策学习的一条有前途的途径。
+
+</details>
+
+---
+
+## 2. Toward Consistent World Models with Multi-Token Prediction and Latent Semantic Enhancement / 通过多标记预测和潜在语义增强实现一致的世界模型
+
+**Date**: 2026-04-07 | **arXiv**: [2604.06155v1](http://arxiv.org/abs/2604.06155v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.06155v1)
+
+**Categories**: cs.LG, cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Whether Large Language Models (LLMs) develop coherent internal world models remains a core debate. While conventional Next-Token Prediction (NTP) focuses on one-step-ahead supervision, Multi-Token Prediction (MTP) has shown promise in learning more structured representations. In this work, we provide a theoretical perspective analyzing the gradient inductive bias of MTP, supported by empirical evidence, showing that MTP promotes the convergence toward internal belief states by inducing representational contractivity via gradient coupling. However, we reveal that standard MTP often suffers from structural hallucinations, where discrete token supervision encourages illegal shortcuts in latent space that violate environmental constraints. To address this, we propose a novel method Latent Semantic Enhancement MTP (LSE-MTP), which anchors predictions to ground-truth hidden state trajectories. Experiments on synthetic graphs and real-world Manhattan Taxi Ride show that LSE-MTP effectively bridges the gap between discrete tokens and continuous state representations, enhancing representation alignment, reducing structural hallucinations, and improving robustness to perturbations.
+
+大型语言模型（LLM）是否开发出连贯的内部世界模型仍然是一个核心争论。虽然传统的下一个令牌预测（NTP）侧重于一步领先的监督，但多令牌预测（MTP）在学习更结构化的表示方面表现出了希望。在这项工作中，我们提供了一个理论视角来分析 MTP 的梯度归纳偏差，并得到经验证据的支持，表明 MTP 通过梯度耦合诱导表征收缩性来促进向内部信念状态的收敛。然而，我们发现标准 MTP 经常遭受结构性幻觉的困扰，其中离散的代币监管鼓励违反环境约束的潜在空间中的非法捷径。为了解决这个问题，我们提出了一种新方法潜在语义增强 MTP (LSE-MTP)，它将预测锚定到真实的隐藏状态轨迹。对合成图和现实世界曼哈顿出租车之旅的实验表明，LSE-MTP 有效地弥合了离散标记和连续状态表示之间的差距，增强了表示对齐，减少了结构幻觉，并提高了对扰动的鲁棒性。
+
+</details>
+
+---
+
+## 3. Cross-fitted Proximal Learning for Model-Based Reinforcement Learning / 基于模型的强化学习的交叉拟合近端学习
+
+**Date**: 2026-04-06 | **arXiv**: [2604.05185v1](http://arxiv.org/abs/2604.05185v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.05185v1)
+
+**Categories**: cs.LG, eess.SY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Model-based reinforcement learning is attractive for sequential decision-making because it explicitly estimates reward and transition models and then supports planning through simulated rollouts. In offline settings with hidden confounding, however, models learned directly from observational data may be biased. This challenge is especially pronounced in partially observable systems, where latent factors may jointly affect actions, rewards, and future observations. Recent work has shown that policy evaluation in such confounded partially observable Markov decision processes (POMDPs) can be reduced to estimating reward-emission and observation-transition bridge functions satisfying conditional moment restrictions (CMRs). In this paper, we study the statistical estimation of these bridge functions. We formulate bridge learning as a CMR problem with nuisance objects given by a conditional mean embedding and a conditional density. We then develop a $K$-fold cross-fitted extension of the existing two-stage bridge estimator. The proposed procedure preserves the original bridge-based identification strategy while using the available data more efficiently than a single sample split. We also derive an oracle-comparator bound for the cross-fitted estimator and decompose the resulting error into a Stage I term induced by nuisance estimation and a Stage II term induced by empirical averaging.
+
+基于模型的强化学习对于顺序决策很有吸引力，因为它明确地估计奖励和转换模型，然后通过模拟推出支持规划。然而，在存在隐藏混杂因素的离线环境中，直接从观测数据学习的模型可能会存在偏差。这一挑战在部分可观察的系统中尤其明显，其中潜在因素可能共同影响行动、奖励和未来的观察。最近的工作表明，这种混杂的部分可观察马尔可夫决策过程（POMDP）中的政策评估可以简化为估计满足条件矩限制（CMR）的奖励-排放和观察-转移桥函数。在本文中，我们研究了这些桥函数的统计估计。我们将桥梁学习表述为一个 CMR 问题，其中的干扰对象由条件平均嵌入和条件密度给出。然后，我们开发了现有两级桥估计器的 $K$ 倍交叉拟合扩展。所提出的过程保留了原始的基于桥的识别策略，同时比单个样本分割更有效地使用可用数据。我们还推导了交叉拟合估计器的预言比较器界限，并将所得误差分解为由干扰估计引起的阶段 I 项和由经验平均引起的阶段 II 项。
+
+</details>
+
+---
+
+## 4. StarVLA: A Lego-like Codebase for Vision-Language-Action Model Developing / StarVLA：用于视觉-语言-动作模型开发的类似乐高的代码库
+
+**Date**: 2026-04-06 | **arXiv**: [2604.05014v1](http://arxiv.org/abs/2604.05014v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.05014v1)
+
+**Categories**: cs.RO, cs.AI, cs.CV
+
+**Code**: https://github.com/starVLA/starVLA.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Building generalist embodied agents requires integrating perception, language understanding, and action, which are core capabilities addressed by Vision-Language-Action (VLA) approaches based on multimodal foundation models, including recent advances in vision-language models and world models. Despite rapid progress, VLA methods remain fragmented across incompatible architectures, codebases, and evaluation protocols, hindering principled comparison and reproducibility. We present StarVLA, an open-source codebase for VLA research. StarVLA addresses these challenges in three aspects. First, it provides a modular backbone--action-head architecture that supports both VLM backbones (e.g., Qwen-VL) and world-model backbones (e.g., Cosmos) alongside representative action-decoding paradigms, all under a shared abstraction in which backbone and action head can each be swapped independently. Second, it provides reusable training strategies, including cross-embodiment learning and multimodal co-training, that apply consistently across supported paradigms. Third, it integrates major benchmarks, including LIBERO, SimplerEnv, RoboTwin~2.0, RoboCasa-GR1, and BEHAVIOR-1K, through a unified evaluation interface that supports both simulation and real-robot deployment. StarVLA also ships simple, fully reproducible single-benchmark training recipes that, despite minimal data engineering, already match or surpass prior methods on multiple benchmarks with both VLM and world-model backbones. To our best knowledge, StarVLA is one of the most comprehensive open-source VLA frameworks available, and we expect it to lower the barrier for reproducing existing methods and prototyping new ones. StarVLA is being actively maintained and expanded; we will update this report as the project evolves. The code and documentation are available at https://github.com/starVLA/starVLA.
+
+构建多面手的具体代理需要整合感知、语言理解和行动，这些是基于多模态基础模型（包括视觉语言模型和世界模型的最新进展）的视觉-语言-行动（VLA）方法所解决的核心能力。尽管进展迅速，VLA 方法在不兼容的架构、代码库和评估协议中仍然支离破碎，阻碍了原则性比较和可重复性。我们推出 StarVLA，一个用于 VLA 研究的开源代码库。 StarVLA 从三个方面应对这些挑战。首先，它提供了一个模块化的主干-动作头架构，支持 VLM 主干（例如 Qwen-VL）和世界模型主干（例如 Cosmos）以及代表性的动作解码范例，所有这些都在共享抽象下，其中主干和动作头都可以独立交换。其次，它提供可重复使用的训练策略，包括跨实体学习和多模式协同训练，这些策略在支持的范例中一致应用。第三，它通过统一的评估界面集成了LIBERO、SimplerEnv、RoboTwin~2.0、RoboCasa-GR1和BEHAVIOR-1K等主要基准，支持模拟和真实机器人部署。 StarVLA 还提供了简单、完全可重复的单基准训练方法，尽管数据工程很少，但已经在具有 VLM 和世界模型主干的多个基准上匹配或超越了先前的方法。据我们所知，StarVLA 是最全面的开源 VLA 框架之一，我们期望它能够降低复制现有方法和制作新方法原型的障碍。 StarVLA正在积极维护和扩展；我们将随着项目的进展更新这份报告。代码和文档可在 https://github.com/starVLA/starVLA 获取。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-04-07 (6 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-04-07
