@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-04-13](papers/2026-04-13.md) - 3 papers
 - [2026-04-10](papers/2026-04-10.md) - 7 papers
 - [2026-04-09](papers/2026-04-09.md) - 4 papers
 - [2026-04-08](papers/2026-04-08.md) - 4 papers
@@ -49,6 +50,66 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-04-13 (3 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-04-13
+
+**Paper Count**: 3
+
+---
+
+## 1. Toward World Models for Epidemiology / 走向流行病学的世界模型
+
+**Date**: 2026-04-10 | **arXiv**: [2604.09519v1](http://arxiv.org/abs/2604.09519v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.09519v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models have emerged as a unifying paradigm for learning latent dynamics, simulating counterfactual futures, and supporting planning under uncertainty. In this paper, we argue that computational epidemiology is a natural and underdeveloped setting for world models. This is because epidemic decision-making requires reasoning about latent disease burden, imperfect and policy-dependent surveillance signals, and intervention effects are mediated by adaptive human behavior. We introduce a conceptual framework for epidemiological world models, formulating epidemics as controlled, partially observed dynamical systems in which (i) the true epidemic state is latent, (ii) observations are noisy and endogenous to policy, and (iii) interventions act as sequential actions whose effects propagate through behavioral and social feedback. We present three case studies that illustrate why explicit world modeling is necessary for policy-relevant reasoning: strategic misreporting in behavioral surveillance, systematic delays in time-lagged signals such as hospitalizations and deaths, and counterfactual intervention analysis where identical histories diverge under alternative action sequences.
+
+世界模型已成为学习潜在动态、模拟反事实未来以及支持不确定性下的规划的统一范式。在本文中，我们认为计算流行病学是世界模型的自然且不发达的环境。这是因为流行病决策需要对潜在疾病负担、不完善且依赖于政策的监测信号进行推理，而干预效果是由适应性人类行为介导的。我们引入了流行病学世界模型的概念框架，将流行病制定为受控、部分观察的动态系统，其中（i）真正的流行病状态是潜在的，（ii）观察结果是嘈杂的且内生于政策，以及（iii）干预措施作为顺序行动，其影响通过行为和社会反馈传播。我们提出了三个案例研究，说明为什么明确的世界模型对于政策相关推理是必要的：行为监测中的战略误报、住院和死亡等滞后信号的系统性延迟，以及反事实干预分析，其中相同的历史在替代行动序列下出现分歧。
+
+</details>
+
+---
+
+## 2. PhysInOne: Visual Physics Learning and Reasoning in One Suite / PhysInOne：一套视觉物理学习和推理工具
+
+**Date**: 2026-04-10 | **arXiv**: [2604.09415v1](http://arxiv.org/abs/2604.09415v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.09415v1)
+
+**Categories**: cs.CV, cs.AI, cs.LG, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present PhysInOne, a large-scale synthetic dataset addressing the critical scarcity of physically-grounded training data for AI systems. Unlike existing datasets limited to merely hundreds or thousands of examples, PhysInOne provides 2 million videos across 153,810 dynamic 3D scenes, covering 71 basic physical phenomena in mechanics, optics, fluid dynamics, and magnetism. Distinct from previous works, our scenes feature multiobject interactions against complex backgrounds, with comprehensive ground-truth annotations including 3D geometry, semantics, dynamic motion, physical properties, and text descriptions. We demonstrate PhysInOne's efficacy across four emerging applications: physics-aware video generation, long-/short-term future frame prediction, physical property estimation, and motion transfer. Experiments show that fine-tuning foundation models on PhysInOne significantly enhances physical plausibility, while also exposing critical gaps in modeling complex physical dynamics and estimating intrinsic properties. As the largest dataset of its kind, orders of magnitude beyond prior works, PhysInOne establishes a new benchmark for advancing physics-grounded world models in generation, simulation, and embodied AI.
+
+我们推出了 PhysInOne，这是一个大规模合成数据集，解决了人工智能系统物理训练数据严重匮乏的问题。与仅限于数百或数千个示例的现有数据集不同，PhysInOne 提供了 200 万个视频，涵盖 153,810 个动态 3D 场景，涵盖力学、光学、流体动力学和磁学方面的 71 种基本物理现象。与之前的作品不同，我们的场景以复杂背景下的多对象交互为特色，并具有全面的真实注释，包括 3D 几何、语义、动态运动、物理属性和文本描述。我们展示了 PhysInOne 在四个新兴应用中的功效：物理感知视频生成、长期/短期未来帧预测、物理属性估计和运动传输。实验表明，在 PhysInOne 上微调基础模型可显着增强物理合理性，同时也暴露出复杂物理动力学建模和内在属性估计方面的关键差距。作为同类中最大的数据集，其数量级超出了之前的工作，PhysInOne 为在生成、模拟和具体人工智能方面推进基于物理的世界模型建立了新的基准。
+
+</details>
+
+---
+
+## 3. VAG: Dual-Stream Video-Action Generation for Embodied Data Synthesis / VAG：用于具体数据合成的双流视频动作生成
+
+**Date**: 2026-04-10 | **arXiv**: [2604.09330v1](http://arxiv.org/abs/2604.09330v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.09330v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in robot foundation models trained on large-scale human teleoperation data have enabled robots to perform increasingly complex real-world tasks. However, scaling these systems remains difficult because collecting task-specific demonstrations is expensive and labor-intensive. Synthetic data, especially generated videos, offer a promising direction, but existing World Models (WMs) are not directly suitable for policy learning since they do not provide paired action trajectories. World-Action (WA) models partially address this by predicting actions with visual outputs, yet often lack strong video-action alignment, while two-stage pipelines that generate video first and then infer actions introduce inefficiency and error accumulation. To address these limitations, we propose VAG, a unified flow-matching-based dual-stream framework that jointly generates video and action under visual and language conditioning. By synchronizing denoising in both branches and using an adaptive 3D pooling mechanism to transfer compact global video context to the action branch, VAG improves cross-modal consistency during generation. Across both simulated and real-world settings, VAG produces aligned video-action pairs with competitive prediction quality, supports executable trajectory replay, and provides useful synthetic pretraining data that improves downstream policy generalization, indicating its potential as a practical world-action model for embodied data synthesis.
+
+基于大规模人类远程操作数据训练的机器人基础模型的最新进展使机器人能够执行日益复杂的现实世界任务。然而，扩展这些系统仍然很困难，因为收集特定任务的演示既昂贵又费力。合成数据，特别是生成的视频，提供了一个有前途的方向，但现有的世界模型（WM）并不直接适合政策学习，因为它们不提供配对的行动轨迹。世界动作（WA）模型通过视觉输出预测动作来部分解决这个问题，但通常缺乏强大的视频动作对齐，而首先生成视频然后推断动作的两阶段管道会导致效率低下和错误累积。为了解决这些限制，我们提出了 VAG，一种基于流匹配的统一双流框架，可在视觉和语言条件下联合生成视频和动作。通过同步两个分支中的去噪并使用自适应 3D 池化机制将紧凑的全局视频上下文传输到动作分支，VAG 提高了生成过程中的跨模式一致性。在模拟和现实世界的设置中，VAG 生成具有竞争性预测质量的对齐视频动作对，支持可执行轨迹重放，并提供有用的合成预训练数据，以改进下游策略泛化，表明其作为具体数据合成的实用世界动作模型的潜力。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-04-10 (7 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-04-10
