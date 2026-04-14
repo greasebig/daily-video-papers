@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-04-14](papers/2026-04-14.md) - 18 papers
 - [2026-04-13](papers/2026-04-13.md) - 5 papers
 - [2026-04-10](papers/2026-04-10.md) - 20 papers
 - [2026-04-09](papers/2026-04-09.md) - 6 papers
@@ -58,6 +59,308 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-04-14 (18 papers)</b></summary>
+
+# arXiv Video Papers - 2026-04-14
+
+**Paper Count**: 18
+
+---
+
+## 1. TAG-Head: Time-Aligned Graph Head for Plug-and-Play Fine-grained Action Recognition / TAG-Head：用于即插即用细粒度动作识别的时间对齐图形头
+
+**Date**: 2026-04-13 | **arXiv**: [2604.11498v1](http://arxiv.org/abs/2604.11498v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.11498v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Fine-grained human action recognition (FHAR) is challenging because visually similar actions differ by subtle spatio-temporal cues. Many recent systems enhance discriminability with extra modalities (e.g., pose, text, optical flow), but this increases annotation burden and computational cost. We introduce TAG-Head, a lightweight spatio-temporal graph head that upgrades standard 3D backbones (SlowFast, R(2+1)D-34, I3D, etc.) for FHAR using RGB only. Our pipeline first applies a Transformer encoder with learnable 3D positional encodings to the backbone tokens, capturing long-range dependencies across space and time. The resulting features are then refined by a graph in which (i) fully-connected intra-frame edges to resolve subtle appearance differences within frames, and (ii) time-aligned temporal edges that connect features at the same spatial location across frames to stabilise motion cues without over-smoothing. The head is compact (little parameter/FLOP overhead), plug-and-play across backbones, and trained end-to-end with the backbone. Extensive evaluations on FineGym (Gym99 and Gym288) and HAA500 show that TAG-Head sets a new state-of-the-art among RGB-only models and surpasses many recent multimodal approaches (video + pose + text) that rely on privileged information. Ablations disentangle the contributions of the Transformer and the graph topology, and complexity analyses confirm low latency. TAG-Head advances FHAR by explicitly coupling global context with high-resolution spatial interactions and low-variance temporal continuity inside a slim, composable graph head. The simplicity of the design enables straightforward adoption in practical systems that favour RGB-only sensors, while delivering performance gains typically associated with heavier or multimodal models. Code will be released on GitHub.
+
+细粒度的人类动作识别（FHAR）具有挑战性，因为视觉上相似的动作因微妙的时空线索而有所不同。许多最近的系统通过额外的模式（例如姿势、文本、光流）增强了可辨别性，但这增加了注释负担和计算成本。我们推出了 TAG-Head，这是一种轻量级时空图头，它仅使用 RGB 为 FHAR 升级标准 3D 主干（SlowFast、R(2+1)D-34、I3D 等）。我们的管道首先将具有可学习 3D 位置编码的 Transformer 编码器应用于骨干令牌，捕获跨空间和时间的远程依赖关系。然后通过图表对所得特征进行细化，其中（i）完全连接的帧内边缘，以解决帧内细微的外观差异，以及（ii）时间对齐的时间边缘，将跨帧的同一空间位置处的特征连接起来，以稳定运动线索，而不会过度平滑。头部结构紧凑（参数/FLOP 开销小），跨主干网即插即用，并与主干网进行端到端训练。对 FineGym（Gym99 和 Gym288）和 HAA500 的广泛评估表明，TAG-Head 在纯 RGB 模型中树立了新的最先进水平，并超越了许多最近依赖特权信息的多模态方法（视频 + 姿势 + 文本）。 Ablations 解开了 Transformer 和图拓扑的贡献，复杂性分析证实了低延迟。 TAG-Head 通过将全局上下文与高分辨率空间交互和细长、可组合图头内的低方差时间连续性显式耦合来推进 FHAR。该设计的简单性使得能够直接在支持纯 RGB 传感器的实际系统中采用，同时提供通常与较重或多模式模型相关的性能增益。代码将在 GitHub 上发布。
+
+</details>
+
+---
+
+## 2. Online Reasoning Video Object Segmentation / 在线推理视频对象分割
+
+**Date**: 2026-04-13 | **arXiv**: [2604.11411v1](http://arxiv.org/abs/2604.11411v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.11411v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reasoning video object segmentation predicts pixel-level masks in videos from natural-language queries that may involve implicit and temporally grounded references. However, existing methods are developed and evaluated in an offline regime, where the entire video is available at inference time and future frames can be exploited for retrospective disambiguation, deviating from real-world deployments that require strictly causal, frame-by-frame decisions. We study Online Reasoning Video Object Segmentation (ORVOS), where models must incrementally interpret queries using only past and current frames without revisiting previous predictions, while handling referent shifts as events unfold. To support evaluation, we introduce ORVOSB, a benchmark with frame-level causal annotations and referent-shift labels, comprising 210 videos, 12,907 annotated frames, and 512 queries across five reasoning categories. We further propose a baseline with continually-updated segmentation prompts and a structured temporal token reservoir for long-horizon reasoning under bounded computation. Experiments show that existing methods struggle under strict causality and referent shifts, while our baseline establishes a strong foundation for future research.
+
+推理视频对象分割可以根据自然语言查询预测视频中的像素级掩模，这些查询可能涉及隐式和基于时间的参考。然而，现有的方法是在离线状态下开发和评估的，其中整个视频在推理时可用，并且可以利用未来的帧进行回顾性消歧，这偏离了需要严格因果、逐帧决策的现实世界部署。我们研究在线推理视频对象分割（ORVOS），其中模型必须仅使用过去和当前的帧增量解释查询，而无需重新访问以前的预测，同时随着事件的展开处理指示物的变化。为了支持评估，我们引入了 ORVOSB，这是一个具有帧级因果注释和指称转移标签的基准，包含 210 个视频、12,907 个注释帧和跨五个推理类别的 512 个查询。我们进一步提出了一个具有不断更新的分割提示的基线和一个结构化的时间令牌库，用于有界计算下的长范围推理。实验表明，现有的方法在严格的因果关系和指称变化下举步维艰，而我们的基线为未来的研究奠定了坚实的基础。
+
+</details>
+
+---
+
+## 3. Any 3D Scene is Worth 1K Tokens: 3D-Grounded Representation for Scene Generation at Scale / 任何 3D 场景都值得 1K 代币：大规模场景生成的 3D 基础表示
+
+**Date**: 2026-04-13 | **arXiv**: [2604.11331v1](http://arxiv.org/abs/2604.11331v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.11331v1)
+
+**Categories**: cs.CV, cs.CG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+3D scene generation has long been dominated by 2D multi-view or video diffusion models. This is due not only to the lack of scene-level 3D latent representation, but also to the fact that most scene-level 3D visual data exists in the form of multi-view images or videos, which are naturally compatible with 2D diffusion architectures. Typically, these 2D-based approaches degrade 3D spatial extrapolation to 2D temporal extension, which introduces two fundamental issues: (i) representing 3D scenes via 2D views leads to significant representation redundancy, and (ii) latent space rooted in 2D inherently limits the spatial consistency of the generated 3D scenes. In this paper, we propose, for the first time, to perform 3D scene generation directly within an implicit 3D latent space to address these limitations. First, we repurpose frozen 2D representation encoders to construct our 3D Representation Autoencoder (3DRAE), which grounds view-coupled 2D semantic representations into a view-decoupled 3D latent representation. This enables representing 3D scenes observed from arbitrary numbers of views--at any resolution and aspect ratio--with fixed complexity and rich semantics. Then we introduce 3D Diffusion Transformer (3DDiT), which performs diffusion modeling in this 3D latent space, achieving remarkably efficient and spatially consistent 3D scene generation while supporting diverse conditioning configurations. Moreover, since our approach directly generates a 3D scene representation, it can be decoded to images and optional point maps along arbitrary camera trajectories without requiring per-trajectory diffusion sampling pass, which is common in 2D-based approaches.
+
+3D 场景生成长期以来一直由 2D 多视图或视频扩散模型主导。这不仅是由于缺乏场景级 3D 潜在表示，而且还因为大多数场景级 3D 视觉数据以多视图图像或视频的形式存在，这与 2D 扩散架构天然兼容。通常，这些基于 2D 的方法将 3D 空间外推降级为 2D 时间扩展，这引入了两个基本问题：（i）通过 2D 视图表示 3D 场景会导致显着的表示冗余，以及（ii）植根于 2D 的潜在空间本质上限制了生成的 3D 场景的空间一致性。在本文中，我们首次建议直接在隐式 3D 潜在空间内执行 3D 场景生成，以解决这些限制。首先，我们重新利用冻结的 2D 表示编码器来构建我们的 3D 表示自动编码器 (3DRAE)，它将视图耦合的 2D 语义表示转化为视图解耦的 3D 潜在表示。这使得能够以固定的复杂性和丰富的语义来表示从任意数量的视图（在任何分辨率和宽高比）观察到的 3D 场景。然后我们介绍 3D 扩散变换器 (3DDiT)，它在这个 3D 潜在空间中执行扩散建模，实现非常高效且空间一致的 3D 场景生成，同时支持不同的调节配置。此外，由于我们的方法直接生成 3D 场景表示，因此可以将其解码为沿着任意相机轨迹的图像和可选点图，而不需要每个轨迹扩散采样通道，这在基于 2D 的方法中很常见。
+
+</details>
+
+---
+
+## 4. Empowering Video Translation using Multimodal Large Language Models / 使用多模态大语言模型增强视频翻译能力
+
+**Date**: 2026-04-13 | **arXiv**: [2604.11283v1](http://arxiv.org/abs/2604.11283v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.11283v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent developments in video translation have further enhanced cross-lingual access to video content, with multimodal large language models (MLLMs) playing an increasingly important supporting role. With strong multimodal understanding, reasoning, and generation capabilities, MLLMs-based video translation systems are overcoming the limitations of traditional cascaded pipelines that separately handle automatic speech recognition, machine translation, text-to-speech and lip synchronization. These MLLM-powered approaches not only achieve competitive or superior translation quality, but also demonstrate stronger robustness in zero-shot settings and multi-speaker scenarios, while jointly modeling semantic fidelity, timing, speaker identity, and emotional consistency. However, despite the rapid progress of MLLMs and extensive surveys on general video-language understanding, a focused and systematic review of how MLLMs empower video translation tasks is still lacking. To fill this gap, we provide the first comprehensive overview of MLLMs-based video translation, organized around a three-role taxonomy: 1) Semantic Reasoner, which characterizes how MLLMs perform video understanding, temporal reasoning, and multimodal fusion; 2) Expressive Performer, which analyzes LLM-driven and LLM-augmented techniques for expressive, controllable speech generation; and 3) Visual Synthesizer, which examines different types of video generators for high-fidelity lip-sync and visual alignment. Finally, we discuss open challenges in video understanding, temporal modeling, and multimodal alignment, and outline promising future research directions for MLLMs-powered video translation.
+
+视频翻译的最新发展进一步增强了视频内容的跨语言访问，多模态大语言模型（MLLM）发挥着越来越重要的支持作用。凭借强大的多模态理解、推理和生成能力，基于 MLLM 的视频翻译系统正在克服传统级联管道的局限性，传统级联管道分别处理自动语音识别、机器翻译、文本到语音和唇形同步。这些基于 MLLM 的方法不仅实现了有竞争力或卓越的翻译质量，而且在零样本设置和多说话人场景中表现出更强的鲁棒性，同时联合建模语义保真度、时间、说话人身份和情感一致性。然而，尽管 MLLM 取得了快速进展，并且对一般视频语言理解进行了广泛的调查，但仍然缺乏对 MLLM 如何赋能视频翻译任务的有针对性和系统性的回顾。为了填补这一空白，我们首次全面概述了基于 MLLM 的视频翻译，围绕三角色分类进行组织：1）语义推理器，它描述了 MLLM 如何执行视频理解、时间推理和多模态融合； 2) Expressive Performer，分析了 LLM 驱动和 LLM 增强技术，以实现富有表现力、可控的语音生成； 3) 视觉合成器，它检查不同类型的视频生成器的高保真口型同步和视觉对齐。最后，我们讨论了视频理解、时间建模和多模态对齐方面的开放挑战，并概述了 MLLM 支持的视频翻译的未来有前景的研究方向。
+
+</details>
+
+---
+
+## 5. Script-a-Video: Deep Structured Audio-visual Captions via Factorized Streams and Relational Grounding / 视频脚本：通过分解流和关系基础实现深度结构化视听字幕
+
+**Date**: 2026-04-13 | **arXiv**: [2604.11244v1](http://arxiv.org/abs/2604.11244v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.11244v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Advances in Multimodal Large Language Models (MLLMs) are transforming video captioning from a descriptive endpoint into a semantic interface for both video understanding and generation. However, the dominant paradigm still casts videos as monolithic narrative paragraphs that entangle visual, auditory, and identity information. This dense coupling not only compromises representational fidelity but also limits scalability, since even local edits can trigger global rewrites. To address this structural bottleneck, we propose Multi-Stream Scene Script (MTSS), a novel paradigm that replaces monolithic text with factorized and explicitly grounded scene descriptions. MTSS is built on two core principles: Stream Factorization, which decouples a video into complementary streams (Reference, Shot, Event, and Global), and Relational Grounding, which reconnects these isolated streams through explicit identity and temporal links to maintain holistic video consistency. Extensive experiments demonstrate that MTSS consistently enhances video understanding across various models, achieving an average reduction of 25% in the total error rate on Video-SALMONN-2 and an average performance gain of 67% on the Daily-Omni reasoning benchmark. It also narrows the performance gap between smaller and larger MLLMs, indicating a substantially more learnable caption interface. Finally, even without architectural adaptation, replacing monolithic prompts with MTSS in multi-shot video generation yields substantial human-rated improvements: a 45% boost in cross-shot identity consistency, a 56% boost in audio-visual alignment, and a 71% boost in temporal controllability.
+
+多模态大语言模型 (MLLM) 的进步正在将视频字幕从描述性端点转变为用于视频理解和生成的语义接口。然而，主流范式仍然将视频视为单一的叙事段落，其中纠缠着视觉、听觉和身份信息。这种密集耦合不仅会损害表征保真度，还会限制可扩展性，因为即使是本地编辑也可能会触发全局重写。为了解决这个结构瓶颈，我们提出了多流场景脚本（MTSS），这是一种新颖的范例，用分解且明确的场景描述取代单一文本。 MTSS 基于两个核心原则：流分解，将视频解耦为互补流（参考、镜头、事件和全局）；关系接地，通过显式身份和时间链接重新连接这些孤立的流，以保持整体视频一致性。大量实验表明，MTSS 持续增强了各种模型的视频理解，在 Video-SALMONN-2 上实现了总错误率平均降低 25%，在 Daily-Omni 推理基准上平均性能提升了 67%。它还缩小了较小和较大 MLLM 之间的性能差距，表明字幕界面更加易于学习。最后，即使没有架构调整，在多镜头视频生成中用 MTSS 取代单一提示也会产生显着的人类评价改进：跨镜头身份一致性提高 45%，视听对齐提高 56%，时间可控性提高 71%。
+
+</details>
+
+---
+
+## 6. BoxTuning: Directly Injecting the Object Box for Multimodal Model Fine-Tuning / BoxTuning：直接注入对象框进行多模态模型微调
+
+**Date**: 2026-04-13 | **arXiv**: [2604.11136v1](http://arxiv.org/abs/2604.11136v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.11136v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Object-level spatial-temporal understanding is essential for video question answering, yet existing multimodal large language models (MLLMs) encode frames holistically and lack explicit mechanisms for fine-grained object grounding. Recent work addresses this by serializing bounding box coordinates as text tokens, but this text-coordinate paradigm suffers from a fundamental modality mismatch: object information is inherently visual, yet encoding it as text incurs a high token cost that forces aggressive temporal downsampling. We propose BoxTuning, which resolves this mismatch by injecting object spatial-temporal information directly into the visual modality. Colored bounding boxes and trajectory trails are rendered onto video frames as visual prompts, with only a concise color-to-object legend retained as text. This reduces the token cost significantly, achieving 87-93% text token reduction in practice. It also preserves full temporal resolution, where the trajectory trails further encode inter-frame motion direction and speed within each keyframe, recovering fine-grained dynamics that text-coordinate methods are forced to discard. Experimental results on five video QA benchmarks (CLEVRER, Perception Test, STAR, NExT-QA, IntentQA) show that BoxTuning surpasses text-coordinate baselines on spatially oriented tasks and nearly eliminates the accuracy degradation observed on reasoning-centric tasks, establishing visual prompting as a more natural and efficient paradigm for conveying object information to video MLLMs.
+
+对象级时空理解对于视频问答至关重要，但现有的多模态大语言模型（MLLM）对帧进行整体编码，缺乏细粒度对象基础的明确机制。最近的工作通过将边界框坐标序列化为文本标记来解决这个问题，但这种文本坐标范式存在基本的模态不匹配问题：对象信息本质上是视觉的，但将其编码为文本会产生很高的标记成本，从而迫使进行积极的时间下采样。我们提出了 BoxTuning，它通过将对象时空信息直接注入视觉模态来解决这种不匹配问题。彩色边界框和轨迹轨迹作为视觉提示渲染到视频帧上，仅保留简洁的颜色到对象图例作为文本。这显着降低了令牌成本，在实践中实现了 87-93% 的文本令牌减少。它还保留了完整的时间分辨率，其中轨迹轨迹进一步编码每个关键帧内的帧间运动方向和速度，恢复文本坐标方法被迫丢弃的细粒度动态。五个视频 QA 基准（CLEVRER、Perception Test、STAR、NExT-QA、IntentQA）的实验结果表明，BoxTuning 在面向空间的任务上超越了文本坐标基线，并且几乎消除了在以推理为中心的任务上观察到的准确性下降，建立了视觉提示作为向视频 MLLM 传递对象信息的更自然和有效的范例。
+
+</details>
+
+---
+
+## 7. AIM: Intent-Aware Unified world action Modeling with Spatial Value Maps / 目标：使用空间价值图进行意图感知统一世界行动建模
+
+**Date**: 2026-04-13 | **arXiv**: [2604.11135v1](http://arxiv.org/abs/2604.11135v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.11135v1)
+
+**Categories**: cs.RO, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Pretrained video generation models provide strong priors for robot control, but existing unified world action models still struggle to decode reliable actions without substantial robot-specific training. We attribute this limitation to a structural mismatch: while video models capture how scenes evolve, action generation requires explicit reasoning about where to interact and the underlying manipulation intent. We introduce AIM, an intent-aware unified world action model that bridges this gap via an explicit spatial interface. Instead of decoding actions directly from future visual representations, AIM predicts an aligned spatial value map that encodes task-relevant interaction structure, enabling a control-oriented abstraction of future dynamics. Built on a pretrained video generation model, AIM jointly models future observations and value maps within a shared mixture-of-transformers architecture. It employs intent-causal attention to route future information to the action branch exclusively through the value representation. We further propose a self-distillation reinforcement learning stage that freezes the video and value branches and optimizes only the action head using dense rewards derived from projected value-map responses together with sparse task-level signals. To support training and evaluation, we construct a simulation dataset of 30K manipulation trajectories with synchronized multi-view observations, actions, and value-map annotations. Experiments on RoboTwin 2.0 benchmark show that AIM achieves a 94.0% average success rate, significantly outperforming prior unified world action baselines. Notably, the improvement is more pronounced in long-horizon and contact-sensitive manipulation tasks, demonstrating the effectiveness of explicit spatial-intent modeling as a bridge between visual world modeling and robot control.
+
+预训练的视频生成模型为机器人控制提供了强大的先验，但现有的统一世界动作模型仍然难以在没有大量针对机器人的训练的情况下解码可靠的动作。我们将此限制归因于结构不匹配：虽然视频模型捕捉场景如何演变，但动作生成需要明确推理在哪里交互以及潜在的操纵意图。我们引入了 AIM，这是一种意图感知的统一世界动作模型，它通过显式的空间接口弥合了这一差距。 AIM 不是直接从未来的视觉表示中解码动作，而是预测一个对齐的空间值图，该图对与任务相关的交互结构进行编码，从而实现未来动态的面向控制的抽象。 AIM 基于预训练的视频生成模型而构建，在共享的混合变压器架构中对未来的观察结果和价值图进行联合建模。它采用意图因果注意力，仅通过值表示将未来信息路由到操作分支。我们进一步提出了一个自蒸馏强化学习阶段，该阶段冻结视频和价值分支，并使用从投影价值图响应和稀疏任务级信号中获得的密集奖励仅优化动作头。为了支持训练和评估，我们构建了一个包含 30K 操作轨迹的模拟数据集，其中包含同步的多视图观察、动作和值图注释。 RoboTwin 2.0 基准测试表明，AIM 的平均成功率达到 94.0%，显着优于之前的统一世界行动基准。值得注意的是，这种改进在长视野和接触敏感操作任务中更为明显，证明了显式空间意图建模作为视觉世界建模和机器人控制之间桥梁的有效性。
+
+</details>
+
+---
+
+## 8. OmniScript: Towards Audio-Visual Script Generation for Long-Form Cinematic Video / OmniScript：为长格式电影视频生成视听脚本
+
+**Date**: 2026-04-13 | **arXiv**: [2604.11102v1](http://arxiv.org/abs/2604.11102v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.11102v1)
+
+**Categories**: cs.CV, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Current multimodal large language models (MLLMs) have demonstrated remarkable capabilities in short-form video understanding, yet translating long-form cinematic videos into detailed, temporally grounded scripts remains a significant challenge. This paper introduces the novel video-to-script (V2S) task, aiming to generate hierarchical, scene-by-scene scripts encompassing character actions, dialogues, expressions, and audio cues. To facilitate this, we construct a first-of-its-kind human-annotated benchmark and propose a temporally-aware hierarchical evaluation framework. Furthermore, we present OmniScript, an 8B-parameter omni-modal (audio-visual) language model tailored for long-form narrative comprehension. OmniScript is trained via a progressive pipeline that leverages chain-of-thought supervised fine-tuning for plot and character reasoning, followed by reinforcement learning using temporally segmented rewards. Extensive experiments demonstrate that despite its parameter efficiency, OmniScript significantly outperforms larger open-source models and achieves performance comparable to state-of-the-art proprietary models, including Gemini 3-Pro, in both temporal localization and multi-field semantic accuracy.
+
+当前的多模态大语言模型（MLLM）在短视频理解方面表现出了卓越的能力，但将长电影视频翻译成详细的、基于时间的脚本仍然是一个重大挑战。本文介绍了新颖的视频到脚本（V2S）任务，旨在生成包含角色动作、对话、表情和音频提示的分层、逐场景脚本。为了促进这一点，我们构建了一个首个人类注释基准，并提出了一个时间感知的分层评估框架。此外，我们还提出了 OmniScript，这是一种专为长篇叙事理解而定制的 8B 参数全模态（视听）语言模型。 OmniScript 通过渐进式管道进行训练，该管道利用思想链监督微调来进行情节和角色推理，然后使用时间分段奖励进行强化学习。大量实验表明，尽管参数效率较高，但 OmniScript 在时间定位和多字段语义准确性方面的性能显着优于较大的开源模型，并实现了与最先进的专有模型（包括 Gemini 3-Pro）相当的性能。
+
+</details>
+
+---
+
+## 9. UHD-GPGNet: UHD Video Denoising via Gaussian-Process-Guided Local Spatio-Temporal Modeling / UHD-GPGNet：通过高斯过程引导的局部时空建模进行超高清视频去噪
+
+**Date**: 2026-04-13 | **arXiv**: [2604.11014v1](http://arxiv.org/abs/2604.11014v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.11014v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Ultra-high-definition (UHD) video denoising requires simultaneously suppressing complex spatio-temporal degradations, preserving fine textures and chromatic stability, and maintaining efficient full-resolution 4K deployment. In this paper, we propose UHD-GPGNet, a Gaussian-process-guided local spatio-temporal denoising framework that addresses these requirements jointly. Rather than relying on implicit feature learning alone, the method estimates sparse GP posterior statistics over compact spatio-temporal descriptors to explicitly characterize local degradation response and uncertainty, which then guide adaptive temporal-detail fusion. A structure-color collaborative reconstruction head decouples luminance, chroma, and high-frequency correction, while a heteroscedastic objective and overlap-tiled inference further stabilize optimization and enable memory-bounded 4K deployment. Experiments on UVG and RealisVideo-4K show that UHD-GPGNet achieves competitive restoration fidelity with substantially fewer parameters than existing methods, enables real-time full-resolution 4K inference with significant speedup over the closest quality competitor, and maintains robust performance across a multi-level mixed-degradation schedule.A real-world study on phone-captured 4K video further confirms that the model, trained entirely on synthetic degradation, generalizes to unseen real sensor noise and improves downstream object detection under challenging conditions.
+
+超高清 (UHD) 视频去噪需要同时抑制复杂的时空退化、保留精细纹理和色彩稳定性，并保持高效的全分辨率 4K 部署。在本文中，我们提出了 UHD-GPGNet，这是一种高斯过程引导的局部时空去噪框架，可以共同解决这些要求。该方法不是仅仅依赖隐式特征学习，而是通过紧凑的时空描述符估计稀疏 GP 后验统计量，以明确表征局部退化响应和不确定性，然后指导自适应时间细节融合。结构-颜色协作重建头可解耦亮度、色度和高频校正，而异方差目标和重叠平铺推理可进一步稳定优化并实现内存有限的 4K 部署。 UVG 和 RealisVideo-4K 上的实验表明，UHD-GPGNet 使用比现有方法少得多的参数实现了有竞争力的恢复保真度，实现了实时全分辨率 4K 推理，与最接近的质量竞争对手相比，速度显着提升，并在多级混合降级方案中保持了稳健的性能。对手机捕获的 4K 视频的真实研究进一步证实，该模型完全经过合成降级训练，可推广到不可见的真实传感器噪声并改进下游对象检测在充满挑战的条件下。
+
+</details>
+
+---
+
+## 10. ReXSonoVQA: A Video QA Benchmark for Procedure-Centric Ultrasound Understanding / ReXSonoVQA：以程序为中心的超声理解的视频 QA 基准
+
+**Date**: 2026-04-13 | **arXiv**: [2604.10916v1](http://arxiv.org/abs/2604.10916v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.10916v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Ultrasound acquisition requires skilled probe manipulation and real-time adjustments. Vision-language models (VLMs) could enable autonomous ultrasound systems, but existing benchmarks evaluate only static images, not dynamic procedural understanding. We introduce ReXSonoVQA, a video QA benchmark with 514 video clips and 514 questions (249 MCQ, 265 free-response) targeting three competencies: Action-Goal Reasoning, Artifact Resolution & Optimization, and Procedure Context & Planning. Zero-shot evaluation of Gemini 3 Pro, Qwen3.5-397B, LLaVA-Video-72B, and Seed 2.0 Pro shows VLMs can extract some procedural information, but troubleshooting questions remain challenging with minimal gains over text-only baselines, exposing limitations in causal reasoning. ReXSonoVQA enables developing perception systems for ultrasound training, guidance, and robotic automation.
+
+超声采集需要熟练的探头操作和实时调整。视觉语言模型（VLM）可以实现自主超声系统，但现有基准仅评估静态图像，而不评估动态程序理解。我们推出了 ReXSonoVQA，这是一个视频 QA 基准，包含 514 个视频剪辑和 514 个问题（249 个 MCQ，265 个自由回答），针对三种能力：行动目标推理、工件解析和优化以及程序上下文和规划。对 Gemini 3 Pro、Qwen3.5-397B、LLaVA-Video-72B 和 Seed 2.0 Pro 的零样本评估表明，VLM 可以提取一些程序信息，但解决问题仍然具有挑战性，与纯文本基线相比，收益最小，暴露了因果推理的局限性。 ReXSonoVQA 能够开发用于超声训练、引导和机器人自动化的感知系统。
+
+</details>
+
+---
+
+## 11. Immune2V: Image Immunization Against Dual-Stream Image-to-Video Generation / Immune2V：针对双流图像到视频生成的图像免疫
+
+**Date**: 2026-04-12 | **arXiv**: [2604.10837v1](http://arxiv.org/abs/2604.10837v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.10837v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Image-to-video (I2V) generation has the potential for societal harm because it enables the unauthorized animation of static images to create realistic deepfakes. While existing defenses effectively protect against static image manipulation, extending these to I2V generation remains underexplored and non-trivial. In this paper, we systematically analyze why modern I2V models are highly robust against naive image-level adversarial attacks (i.e., immunization). We observe that the video encoding process rapidly dilutes the adversarial noise across future frames, and the continuous text-conditioned guidance actively overrides the intended disruptive effect of the immunization. Building on these findings, we propose the Immune2V framework which enforces temporally balanced latent divergence at the encoder level to prevent signal dilution, and aligns intermediate generative representations with a precomputed collapse-inducing trajectory to counteract the text-guidance override. Extensive experiments demonstrate that Immune2V produces substantially stronger and more persistent degradation than adapted image-level baselines under the same imperceptibility budget.
+
+图像到视频 (I2V) 生成可能会造成社会危害，因为它允许未经授权的静态图像动画来创建逼真的深度赝品。虽然现有的防御措施可以有效防止静态图像操纵，但将这些措施扩展到 I2V 生成仍然没有得到充分探索，而且并非易事。在本文中，我们系统地分析了为什么现代 I2V 模型对于幼稚图像级对抗攻击（即免疫）具有高度鲁棒性。我们观察到，视频编码过程迅速稀释了未来帧中的对抗性噪声，并且连续的文本条件指导主动覆盖了免疫的预期破坏性效果。基于这些发现，我们提出了 Immune2V 框架，该框架在编码器级别强制执行时间平衡的潜在发散，以防止信号稀释，并将中间生成表示与预先计算的崩溃诱导轨迹对齐，以抵消文本指导覆盖。大量实验表明，在相同的不可察觉性预算下，Immune2V 比适应的图像级基线产生更强、更持久的退化。
+
+</details>
+
+---
+
+## 12. LoViF 2026 The First Challenge on Weather Removal in Videos / LoViF 2026 首届视频天气去除挑战赛
+
+**Date**: 2026-04-12 | **arXiv**: [2604.10655v1](http://arxiv.org/abs/2604.10655v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.10655v1)
+
+**Categories**: cs.CV, cs.AI, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This paper presents a review of the LoViF 2026 Challenge on Weather Removal in Videos. The challenge encourages the development of methods for restoring clean videos from inputs degraded by adverse weather conditions such as rain and snow, with an emphasis on achieving visually plausible and temporally consistent results while preserving scene structure and motion dynamics. To support this task, we introduce a new short-form WRV dataset tailored for video weather removal. It consists of 18 videos 1,216 synthesized frames paired with 1,216 real-world ground-truth frames at a resolution of 832 x 480, and is split into training, validation, and test sets with a ratio of 1:1:1. The goal of this challenge is to advance robust and realistic video restoration under real-world weather conditions, with evaluation protocols that jointly consider fidelity and perceptual quality. The challenge attracted 37 participants and received 5 valid final submissions with corresponding fact sheets, contributing to progress in weather removal for videos. The project is publicly available at https://www.codabench.org/competitions/13462/.
+
+本文回顾了 LoViF 2026 视频天气去除挑战赛。该挑战鼓励开发方法，从因雨雪等恶劣天气条件而退化的输入中恢复干净的视频，重点是实现视觉上合理且时间一致的结果，同时保留场景结构和运动动态。为了支持这项任务，我们引入了一个专为视频天气去除而定制的新的简短 WRV 数据集。它由 18 个视频、1,216 个合成帧与 1,216 个现实世界的真实帧配对组成，分辨率为 832 x 480，并按 1:1:1 的比例分为训练集、验证集和测试集。本次挑战的目标是通过共同考虑保真度和感知质量的评估协议，在现实天气条件下推进稳健且逼真的视频恢复。该挑战吸引了 37 名参与者，并收到了 5 份有效的最终提交内容和相应的情况说明书，为视频天气去除方面的进展做出了贡献。该项目可在 https://www.codabench.org/competitions/13462/ 上公开获取。
+
+</details>
+
+---
+
+## 13. Rein3D: Reinforced 3D Indoor Scene Generation with Panoramic Video Diffusion Models / Rein3D：利用全景视频扩散模型增强 3D 室内场景生成
+
+**Date**: 2026-04-12 | **arXiv**: [2604.10578v1](http://arxiv.org/abs/2604.10578v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.10578v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The growing demand for Embodied AI and VR applications has highlighted the need for synthesizing high-quality 3D indoor scenes from sparse inputs. However, existing approaches struggle to infer massive amounts of missing geometry in large unseen areas while maintaining global consistency, often producing locally plausible but globally inconsistent reconstructions. We present Rein3D, a framework that reconstructs full 360-degree indoor environments by coupling explicit 3D Gaussian Splatting (3DGS) with temporally coherent priors from video diffusion models. Our approach follows a "restore-and-refine" paradigm: we employ a radial exploration strategy to render imperfect panoramic videos along trajectories starting from the origin, effectively uncovering occluded regions from a coarse 3DGS initialization. These sequences are restored by a panoramic video-to-video diffusion model and further enhanced via video super-resolution to synthesize high-fidelity geometry and textures. Finally, these refined videos serve as pseudo-ground truths to update the global 3D Gaussian field. To support this task, we construct PanoV2V-15K, a dataset of over 15K paired clean and degraded panoramic videos for diffusion-based scene restoration. Experiments demonstrate that Rein3D produces photorealistic and globally consistent 3D scenes and significantly improves long-range camera exploration compared with existing baselines.
+
+对嵌入式 AI 和 VR 应用的需求不断增长，凸显了从稀疏输入合成高质量 3D 室内场景的需求。然而，现有的方法很难在保持全局一致性的同时推断大片看不见的区域中大量缺失的几何形状，通常会产生局部合理但全局不一致的重建。我们提出了 Rein3D，这是一个通过将显式 3D 高斯分布 (3DGS) 与来自视频扩散模型的时间相干先验相结合来重建完整 360 度室内环境的框架。我们的方法遵循“恢复和优化”范式：我们采用径向探索策略沿着从原点开始的轨迹渲染不完美的全景视频，从而有效地从粗略的 3DGS 初始化中发现遮挡区域。这些序列通过全景视频到视频扩散模型进行恢复，并通过视频超分辨率进一步增强，以合成高保真几何和纹理。最后，这些精炼视频作为伪地面事实来更新全局 3D 高斯场。为了支持这项任务，我们构建了 PanoV2V-15K，这是一个包含超过 15K 配对的干净和降级全景视频的数据集，用于基于扩散的场景恢复。实验表明，Rein3D 可以生成逼真且全局一致的 3D 场景，并且与现有基线相比，显着改进了远程相机探索。
+
+</details>
+
+---
+
+## 14. NTIRE 2026 Challenge on Short-form UGC Video Restoration in the Wild with Generative Models: Datasets, Methods and Results / NTIRE 2026 使用生成模型在野外修复短格式 UGC 视频的挑战：数据集、方法和结果
+
+**Date**: 2026-04-12 | **arXiv**: [2604.10551v1](http://arxiv.org/abs/2604.10551v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.10551v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This paper presents an overview of the NTIRE 2026 Challenge on Short-form UGC Video Restoration in the Wild with Generative Models. This challenge utilizes a new short-form UGC (S-UGC) video restoration benchmark, termed KwaiVIR, which is contributed by USTC and Kuaishou Technology. It contains both synthetically distorted videos and real-world short-form UGC videos in the wild. For this edition, the released data include 200 synthetic training videos, 48 wild training videos, 11 validation videos, and 20 testing videos. The primary goal of this challenge is to establish a strong and practical benchmark for restoring short-form UGC videos under complex real-world degradations, especially in the emerging paradigm of generative-model-based S-UGC video restoration. This challenge has two tracks: (i) the primary track is a subjective track, where the evaluation is based on a user study; (ii) the second track is an objective track. These two tracks enable a comprehensive assessment of restoration quality. In total, 95 teams have registered for this competition. And 12 teams submitted valid final solutions and fact sheets for the testing phase. The submitted methods achieved strong performance on the KwaiVIR benchmark, demonstrating encouraging progress in short-form UGC video restoration in the wild.
+
+本文概述了 NTIRE 2026 关于使用生成模型进行短格式 UGC 视频恢复的挑战。本次挑战赛采用了由中国科学技术大学和快手科技共同贡献的新的短格式 UGC (S-UGC) 视频修复基准测试，名为 KwaiVIR。它包含合成扭曲的视频和现实世界中的 UGC 短视频。此版本发布的数据包括 200 个合成训练视频、48 个野外训练视频、11 个验证视频和 20 个测试视频。这项挑战的主要目标是建立一个强大且实用的基准，用于在复杂的现实世界退化情况下恢复短格式 UGC 视频，特别是在基于生成模型的 S-UGC 视频恢复的新兴范例中。该挑战有两个轨道：（i）主要轨道是主观轨道，其中评估基于用户研究； (ii) 第二轨道是客观轨道。这两个轨道可以对修复质量进行全面评估。共有95支队伍报名参加本次比赛。 12 个团队提交了测试阶段有效的最终解决方案和情况说明书。提交的方法在 KwaiVIR 基准测试中取得了强劲的性能，表明在野外短格式 UGC 视频恢复方面取得了令人鼓舞的进展。
+
+</details>
+
+---
+
+## 15. STORM: End-to-End Referring Multi-Object Tracking in Videos / STORM：视频中的端到端参考多对象跟踪
+
+**Date**: 2026-04-12 | **arXiv**: [2604.10527v1](http://arxiv.org/abs/2604.10527v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.10527v1)
+
+**Categories**: cs.CV, cs.AI
+
+**Code**: https://github.com/amazon-science/storm-referring-multi-object-grounding.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Referring multi-object tracking (RMOT) is a task of associating all the objects in a video that semantically match with given textual queries or referring expressions. Existing RMOT approaches decompose object grounding and tracking into separated modules and exhibit limited performance due to the scarcity of training videos, ambiguous annotations, and restricted domains. In this work, we introduce STORM, an end-to-end MLLM that jointly performs grounding and tracking within a unified framework, eliminating external detectors and enabling coherent reasoning over appearance, motion, and language. To improve data efficiency, we propose a task-composition learning (TCL) strategy that decomposes RMOT into image grounding and object tracking, allowing STORM to leverage data-rich sub-tasks and learn structured spatial--temporal reasoning. We further construct STORM-Bench, a new RMOT dataset with accurate trajectories and diverse, unambiguous referring expressions generated through a bottom-up annotation pipeline. Extensive experiments show that STORM achieves state-of-the-art performance on image grounding, single-object tracking, and RMOT benchmarks, demonstrating strong generalization and robust spatial--temporal grounding in complex real-world scenarios. STORM-Bench is released at https://github.com/amazon-science/storm-referring-multi-object-grounding.
+
+引用多对象跟踪 (RMOT) 是将视频中语义上与给定文本查询或引用表达式匹配的所有对象关联起来的任务。现有的 RMOT 方法将对象接地和跟踪分解为单独的模块，并且由于训练视频的稀缺、模糊的注释和受限的领域而表现出有限的性能。在这项工作中，我们引入了 STORM，这是一种端到端 MLLM，它在统一框架内联合执行接地和跟踪，消除了外部检测器，并实现了对外观、运动和语言的连贯推理。为了提高数据效率，我们提出了一种任务组合学习（TCL）策略，将 RMOT 分解为图像基础和对象跟踪，使 STORM 能够利用数据丰富的子任务并学习结构化的时空推理。我们进一步构建了 STORM-Bench，这是一个新的 RMOT 数据集，具有通过自下而上的注释管道生成的准确轨迹和多样化、明确的引用表达式。大量实验表明，STORM 在图像接地、单目标跟踪和 RMOT 基准方面实现了最先进的性能，在复杂的现实场景中展示了强大的泛化性和强大的时空接地能力。 STORM-Bench 发布于 https://github.com/amazon-science/storm-referring-multi-object-grounding。
+
+</details>
+
+---
+
+## 16. Point2Pose: Occlusion-Recovering 6D Pose Tracking and 3D Reconstruction for Multiple Unknown Objects Via 2D Point Trackers / Point2Pose：通过 2D 点跟踪器对多个未知对象进行遮挡恢复 6D 姿势跟踪和 3D 重建
+
+**Date**: 2026-04-12 | **arXiv**: [2604.10415v1](http://arxiv.org/abs/2604.10415v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.10415v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present Point2Pose, a model-free method for causal 6D pose tracking of multiple rigid objects from monocular RGB-D video. Initialized only from sparse image points on the objects to be tracked, our approach tracks multiple unseen objects without requiring object CAD models or category priors. Point2Pose leverages a 2D point tracker to obtain long-range correspondences, enabling instant recovery after complete occlusion. Simultaneously, the system incrementally reconstructs an online Truncated Signed Distance Function (TSDF) representation of the tracked targets. Alongside the method, we introduce a new multi-object tracking dataset comprising both simulation and real-world sequences, with motion-capture ground truth for evaluation. Experiments show that Point2Pose achieves performance comparable to the state-of-the-art methods on a severe-occlusion benchmark, while additionally supporting multi-object tracking and recovery from complete occlusion, capabilities that are not supported by previous model-free tracking approaches.
+
+我们提出了 Point2Pose，这是一种无模型方法，用于对单目 RGB-D 视频中的多个刚性对象进行因果 6D 姿态跟踪。我们的方法仅从要跟踪的对象上的稀疏图像点进行初始化，无需对象 CAD 模型或类别先验即可跟踪多个看不见的对象。 Point2Pose 利用 2D 点跟踪器来获取远程对应关系，从而实现完全遮挡后的即时恢复。同时，系统逐步重建跟踪目标的在线截断符号距离函数（TSDF）表示。除了该方法之外，我们还引入了一个新的多目标跟踪数据集，其中包括模拟和现实世界序列，并使用运动捕捉地面实况进行评估。实验表明，Point2Pose 在严重遮挡基准上的性能可与最先进的方法相媲美，同时还支持多对象跟踪和从完全遮挡中恢复，这是以前的无模型跟踪方法所不支持的功能。
+
+</details>
+
+---
+
+## 17. GTASA: Ground Truth Annotations for Spatiotemporal Analysis, Evaluation and Training of Video Models / GTASA：用于视频模型时空分析、评估和训练的地面实况注释
+
+**Date**: 2026-04-12 | **arXiv**: [2604.10385v1](http://arxiv.org/abs/2604.10385v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.10385v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Generating complex multi-actor scenario videos remains difficult even for state-of-the-art neural generators, while evaluating them is hard due to the lack of ground truth for physical plausibility and semantic faithfulness. We introduce GTASA, a corpus of multi-actor videos with per-frame spatial relation graphs and event-level temporal mappings, and the system that produced it based on Graphs of Events in Space and Time (GEST): GEST-Engine. We compare our method with both open and closed source neural generators and prove both qualitatively (human evaluation of physical validity and semantic alignment) and quantitatively (via training video captioning models) the clear advantages of our method. Probing four frozen video encoders across 11 spatiotemporal reasoning tasks enabled by GTASA's exact 3D ground truth reveals that self-supervised encoders encode spatial structure significantly better than VLM visual encoders.
+
+即使对于最先进的神经生成器来说，生成复杂的多演员场景视频仍然很困难，而由于缺乏物理合理性和语义忠实性的基本事实，对其进行评估也很困难。我们介绍 GTASA，一个具有每帧空间关系图和事件级时间映射的多演员视频语料库，以及基于时空事件图 (GEST) 生成它的系统：GEST-Engine。我们将我们的方法与开源和闭源神经生成器进行比较，并从定性（人类对物理有效性和语义对齐的评估）和定量（通过训练视频字幕模型）证明我们的方法的明显优势。通过 GTASA 精确的 3D 地面事实实现的 11 个时空推理任务中的四个冻结视频编码器的探测表明，自监督编码器对空间结构的编码明显优于 VLM 视觉编码器。
+
+</details>
+
+---
+
+## 18. Agentic Video Generation: From Text to Executable Event Graphs via Tool-Constrained LLM Planning / 代理视频生成：通过工具受限的 LLM 规划从文本到可执行事件图
+
+**Date**: 2026-04-11 | **arXiv**: [2604.10383v1](http://arxiv.org/abs/2604.10383v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.10383v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Existing multi-agent video generation systems use LLM agents to orchestrate neural video generators, producing visually impressive but semantically unreliable outputs with no ground truth annotations. We present an agentic system that inverts this paradigm: instead of generating pixels, the LLM constructs a formal Graph of Events in Space and Time (GEST) -- a structured specification of actors, actions, objects, and temporal constraints -- which is then executed deterministically in a 3D game engine. A staged LLM refinement pipeline fails entirely at this task (0 of 50 attempts produce an executable specification), motivating a fundamentally different architecture based on a separation of concerns: the LLM handles narrative planning through natural language reasoning, while a programmatic state backend enforces all simulator constraints through validated tool calls, guaranteeing that every generated specification is executable by construction. The system uses a hierarchical two-agent architecture -- a Director that plans the story and a Scene Builder that constructs individual scenes through a round-based state machine -- with dedicated Relation Subagents that populate the logical and semantic edge types of the GEST formalism that procedural generation leaves empty, making this the first approach to exercise the full expressive capacity of the representation. We evaluate in two stages: autonomous generation against procedural baselines via a 3-model LLM jury, where agentic narratives win 79% of text and 74% of video comparisons; and seeded generation where the same text is given to our system, VEO 3.1, and WAN 2.2, with human annotations showing engine-generated videos substantially outperform neural generators on physical validity (58% vs 25% and 20%) and semantic alignment (3.75/5 vs 2.33 and 1.50).
+
+现有的多智能体视频生成系统使用 LLM 智能体来编排神经视频生成器，产生视觉上令人印象深刻但语义上不可靠的输出，并且没有地面真实注释。我们提出了一个颠覆这种范式的代理系统：法学硕士不是生成像素，而是构建一个正式的时空事件图（GEST）——演员、动作、对象和时间约束的结构化规范——然后在 3D 游戏引擎中确定性地执行。分阶段的 LLM 细化管道在此任务中完全失败（50 次尝试中的 0 次产生可执行规范），从而激发了基于关注点分离的根本不同的架构：LLM 通过自然语言推理处理叙事规划，而编程状态后端通过经过验证的工具调用强制执行所有模拟器约束，保证每个生成的规范都可以通过构造执行。该系统使用分层的双代理架构——一个负责规划故事的导演和一个通过基于回合的状态机构建各个场景的场景生成器——以及专用的关系子代理，这些子代理填充程序生成留下的空的 GEST 形式的逻辑和语义边缘类型，这使得这是第一种锻炼表示的完整表达能力的方法。我们分两个阶段进行评估：通过 3 模型 LLM 评审团根据程序基线进​​行自主生成，其中代理叙事赢得了 79% 的文本和 74% 的视频比较；种子生成，其中相同的文本被赋予我们的系统、VEO 3.1 和 WAN 2.2，人工注释显示引擎生成的视频在物理有效性（58% vs 25% 和 20%）和语义对齐（3.75/5 vs 2.33 和 1.50）方面远远优于神经生成器。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-04-13 (5 papers)</b></summary>
 
 # arXiv Video Papers - 2026-04-13
