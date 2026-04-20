@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-04-20](papers/2026-04-20.md) - 1 papers
 - [2026-04-17](papers/2026-04-17.md) - 12 papers
 - [2026-04-16](papers/2026-04-16.md) - 9 papers
 - [2026-04-15](papers/2026-04-15.md) - 19 papers
@@ -62,6 +63,34 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-04-20 (1 papers)</b></summary>
+
+# arXiv Video Papers - 2026-04-20
+
+**Paper Count**: 1
+
+---
+
+## 1. VEFX-Bench: A Holistic Benchmark for Generic Video Editing and Visual Effects / VEFX-Bench：通用视频编辑和视觉效果的整体基准
+
+**Date**: 2026-04-17 | **arXiv**: [2604.16272v1](http://arxiv.org/abs/2604.16272v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.16272v1)
+
+**Categories**: cs.CV, cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+As AI-assisted video creation becomes increasingly practical, instruction-guided video editing has become essential for refining generated or captured footage to meet professional requirements. Yet the field still lacks both a large-scale human-annotated dataset with complete editing examples and a standardized evaluator for comparing editing systems. Existing resources are limited by small scale, missing edited outputs, or the absence of human quality labels, while current evaluation often relies on expensive manual inspection or generic vision-language model judges that are not specialized for editing quality. We introduce VEFX-Dataset, a human-annotated dataset containing 5,049 video editing examples across 9 major editing categories and 32 subcategories, each labeled along three decoupled dimensions: Instruction Following, Rendering Quality, and Edit Exclusivity. Building on VEFX-Dataset, we propose VEFX-Reward, a reward model designed specifically for video editing quality assessment. VEFX-Reward jointly processes the source video, the editing instruction, and the edited video, and predicts per-dimension quality scores via ordinal regression. We further release VEFX-Bench, a benchmark of 300 curated video-prompt pairs for standardized comparison of editing systems. Experiments show that VEFX-Reward aligns more strongly with human judgments than generic VLM judges and prior reward models on both standard IQA/VQA metrics and group-wise preference evaluation. Using VEFX-Reward as an evaluator, we benchmark representative commercial and open-source video editing systems, revealing a persistent gap between visual plausibility, instruction following, and edit locality in current models.
+
+随着人工智能辅助视频创作变得越来越实用，指令引导的视频编辑对于完善生成或捕获的镜头以满足专业要求至关重要。然而，该领域仍然缺乏具有完整编辑示例的大规模人工注释数据集和用于比较编辑系统的标准化评估器。现有资源受到小规模、缺少编辑输出或缺乏人工质量标签的限制，而当前的评估通常依赖于昂贵的手动检查或不专门用于编辑质量的通用视觉语言模型判断。我们引入了 VEFX-Dataset，这是一个人工注释的数据集，包含 9 个主要编辑类别和 32 个子类别的 5,049 个视频编辑示例，每个示例都沿着三个解耦的维度进行标记：指令跟踪、渲染质量和编辑独占性。在 VEFX-Dataset 的基础上，我们提出了 VEFX-Reward，这是一种专门为视频编辑质量评估而设计的奖励模型。 VEFX-Reward 联合处理源视频、编辑指令和编辑后的视频，并通过序数回归预测每个维度的质量得分。我们进一步发布了 VEFX-Bench，这是一个包含 300 个精选视频提示对的基准测试，用于对编辑系统进行标准化比较。实验表明，在标准 IQA/VQA 指标和分组偏好评估方面，VEFX-Reward 比通用 VLM 判断和先前奖励模型更符合人类判断。我们使用 VEFX-Reward 作为评估器，对代表性商业和开源视频编辑系统进行基准测试，揭示当前模型中视觉合理性、指令遵循和编辑局部性之间持续存在的差距。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-04-17 (12 papers)</b></summary>
 
 # arXiv Video Papers - 2026-04-17
