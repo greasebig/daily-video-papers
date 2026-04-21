@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-04-21](papers/2026-04-21.md) - 8 papers
 - [2026-04-20](papers/2026-04-20.md) - 1 papers
 - [2026-04-17](papers/2026-04-17.md) - 4 papers
 - [2026-04-16](papers/2026-04-16.md) - 3 papers
@@ -55,6 +56,146 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-04-21 (8 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-04-21
+
+**Paper Count**: 8
+
+---
+
+## 1. Sonata: A Hybrid World Model for Inertial Kinematics under Clinical Data Scarcity / Sonata：临床数据稀缺下的惯性运动学混合世界模型
+
+**Date**: 2026-04-20 | **arXiv**: [2604.18058v1](http://arxiv.org/abs/2604.18058v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.18058v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We introduce Sonata, a compact latent world model for six-axis trunk IMU representation learning under clinical data scarcity. Clinical cohorts typically comprise tens to hundreds of patients, making web-scale masked-reconstruction objectives poorly matched to the problem. Sonata is a 3.77 M-parameter hybrid model, pre-trained on a harmonised corpus of nine public datasets (739 subjects, 190k windows) with a latent world-model objective that predicts future state rather than reconstructing raw sensor traces. In a controlled comparison against a matched autoregressive forecasting baseline (MAE) on the same backbone, Sonata yields consistently stronger frozen-probe clinical discrimination, prospective fall-risk prediction, and cross-cohort transfer across a 14-arm evaluation suite, while producing higher-rank, more structured latent representations. At 3.77 M parameters the model is compatible with on-device wearable inference, offering a step toward general kinematic world models for neurological assessment.
+
+我们介绍了 Sonata，一种紧凑的潜在世界模型，用于临床数据稀缺情况下的六轴躯干 IMU 表示学习。临床队列通常由数十到数百名患者组成，这使得网络规模的掩蔽重建目标与问题的匹配度很差。 Sonata 是一个 3.77 M 参数的混合模型，在由 9 个公共数据集（739 个主题，190k 个窗口）组成的统一语料库上进行了预训练，其潜在的世界模型目标是预测未来状态而不是重建原始传感器轨迹。在与同一主干上匹配的自回归预测基线 (MAE) 进行对照比较时，Sonata 始终产生更强的冻结探针临床辨别力、前瞻性跌倒风险预测和跨 14 臂评估套件的跨队列转移，同时产生更高等级、更结构化的潜在表示。该模型的参数为 3.77 M，与设备上的可穿戴推理兼容，为神经评估的通用运动学世界模型迈出了一步。
+
+</details>
+
+---
+
+## 2. The Umwelt Representation Hypothesis: Rethinking Universality / 环境表征假说：重新思考普遍性
+
+**Date**: 2026-04-20 | **arXiv**: [2604.17960v1](http://arxiv.org/abs/2604.17960v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.17960v1)
+
+**Categories**: q-bio.NC, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent studies reveal striking representational alignment between artificial neural networks (ANNs) and biological brains, leading to proposals that all sufficiently capable systems converge on universal representations of reality. Here, we argue that this claim of Universality is premature. We introduce the Umwelt Representation Hypothesis (URH), proposing that alignment arises not from convergence toward a single global optimum, but from overlap in ecological constraints under which systems develop. We review empirical evidence showing that representational differences between species, individuals, and ANNs are systematic and adaptive, which is difficult to reconcile with Universality. Finally, we reframe ANN model comparison as a method for mapping clusters of alignment in ecological constraint space rather than searching for a single optimal world model.
+
+最近的研究揭示了人工神经网络（ANN）和生物大脑之间惊人的表征一致性，从而提出了所有足够强大的系统都会收敛于现实的普遍表征的建议。在这里，我们认为这种普遍性主张还为时过早。我们引入了环境表征假说（URH），提出一致性不是源于向单一全局最优的收敛，而是源于系统发展的生态约束的重叠。我们回顾了经验证据，表明物种、个体和人工神经网络之间的代表性差异是系统性的和适应性的，这很难与普遍性相一致。最后，我们将 ANN 模型比较重新定义为一种在生态约束空间中映射对齐聚类的方法，而不是搜索单个最优世界模型。
+
+</details>
+
+---
+
+## 3. StableIDM: Stabilizing Inverse Dynamics Model against Manipulator Truncation via Spatio-Temporal Refinement / StableIDM：通过时空细化稳定逆动力学模型以防止机械臂截断
+
+**Date**: 2026-04-20 | **arXiv**: [2604.17887v1](http://arxiv.org/abs/2604.17887v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.17887v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Inverse Dynamics Models (IDMs) map visual observations to low-level action commands, serving as central components for data labeling and policy execution in embodied AI. However, their performance degrades severely under manipulator truncation, a common failure mode that makes state recovery ill-posed and leads to unstable control. We present StableIDM, a spatio-temporal framework that refines features from visual inputs to stabilize action predictions under such partial observability. StableIDM integrates three complementary components: (1) auxiliary robot-centric masking to suppress background clutter, (2) Directional Feature Aggregation (DFA) for geometry-aware spatial reasoning, which extracts anisotropic features along directions inferred from the visible arm and (3) Temporal Dynamics Refinement (TDR) to smooth and correct predictions via motion continuity. Extensive evaluations validate our approach: StableIDM improves strict action accuracy by 12.1% under severe truncation on the AgiBot benchmark, and increases average task success by 9.7% in real-robot replay. Moreover, it boosts end-to-end grasp success by 11.5% when decoding video-generated plans, and improves downstream VLA real-robot success by 17.6% when functioning as an automatic annotator. These results demonstrate that StableIDM provides a robust and scalable backbone for both policy execution and data generation in embodied artificial intelligence.
+
+逆动态模型 (IDM) 将视觉观察映射到低级操作命令，作为具体人工智能中数据标记和策略执行的核心组件。然而，它们的性能在操纵器截断下严重下降，这是一种常见的故障模式，使状态恢复不适定并导致控制不稳定。我们提出了 StableIDM，这是一个时空框架，它可以细化视觉输入的特征，以在这种部分可观察性下稳定动作预测。 StableIDM 集成了三个互补组件：(1) 以机器人为中心的辅助掩蔽，用于抑制背景杂乱；(2) 用于几何感知空间推理的方向特征聚合 (DFA)，它沿着从可见臂推断的方向提取各向异性特征；(3) 时间动态细化 (TDR)，通过运动连续性平滑和校正预测。广泛的评估验证了我们的方法：StableIDM 在 AgiBot 基准的严重截断下将严格动作准确性提高了 12.1%，并将真实机器人重放中的平均任务成功率提高了 9.7%。此外，它在解码视频生成的计划时将端到端抓取成功率提高了 11.5%，在用作自动注释器时将下游 VLA 真实机器人的成功率提高了 17.6%。这些结果表明，StableIDM 为具体人工智能中的策略执行和数据生成提供了强大且可扩展的支柱。
+
+</details>
+
+---
+
+## 4. Scaling Human-AI Coding Collaboration Requires a Governable Consensus Layer / 扩展人类与人工智能编码协作需要可治理的共识层
+
+**Date**: 2026-04-20 | **arXiv**: [2604.17883v1](http://arxiv.org/abs/2604.17883v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.17883v1)
+
+**Categories**: cs.SE, cs.HC, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vibe coding produces correct, executable code at speed, but leaves no record of the structural commitments, dependencies, or evidence behind it. Reviewers cannot determine what invariants were assumed, what changed, or why a regression occurred. This is not a generation failure but a control failure: the dominant artifact of AI-assisted development (code plus chat history) performs dimension collapse, flattening complex system topology into low-dimensional text and making systems opaque and fragile under change. We propose Agentic Consensus: a paradigm in which the consensus layer C, an operable world model represented as a typed property graph, replaces code as the primary artifact of engineering. Executable artifacts are derived from C and kept in correspondence via synchronization operators Phi (realize) and Psi (rehydrate). Evidence links directly to structural claims in C, making every commitment auditable and under-specification explicit as measurable consensus entropy rather than a silent guess. Evaluation must move beyond code correctness toward alignment fidelity, consensus entropy, and intervention distance. We propose benchmark task families designed to measure whether consensus-based workflows reduce human intervention compared to chat-driven baselines.
+
+Vibe 编码快速生成正确的可执行代码，但不会留下结构承诺、依赖性或背后证据的记录。审阅者无法确定假设了哪些不变量、发生了哪些变化或为什么会发生回归。这不是生成失败，而是控制失败：人工智能辅助开发的主要工件（代码加聊天记录）执行维度崩溃，将复杂的系统拓扑扁平化为低维文本，并使系统在变化下变得不透明和脆弱。我们提出代理共识：一种范式，其中共识层 C（表示为类型化属性图的可操作世界模型）取代代码作为工程的主要工件。可执行工件源自 C，并通过同步运算符 Phi（实现）和 Psi（补充）保持对应关系。证据直接与 C 中的结构主张相关，使每个承诺都可审计且未明确说明为可测量的共识熵，而不是无声的猜测。评估必须超越代码正确性，转向对齐保真度、共识熵和干预距离。我们提出了基准任务系列，旨在衡量与聊天驱动的基线相比，基于共识的工作流程是否减少了人为干预。
+
+</details>
+
+---
+
+## 5. DART: Learning-Enhanced Model Predictive Control for Dual-Arm Non-Prehensile Manipulation / DART：双臂非预握操纵的学习增强模型预测控制
+
+**Date**: 2026-04-20 | **arXiv**: [2604.17833v1](http://arxiv.org/abs/2604.17833v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.17833v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+What appears effortless to a human waiter remains a major challenge for robots. Manipulating objects nonprehensilely on a tray is inherently difficult, and the complexity is amplified in dual-arm settings. Such tasks are highly relevant to service robotics in domains such as hotels and hospitality, where robots must transport and reposition diverse objects with precision. We present DART, a novel dual-arm framework that integrates nonlinear Model Predictive Control (MPC) with an optimization-based impedance controller to achieve accurate object motion relative to a dynamically controlled tray. The framework systematically evaluates three complementary strategies for modeling tray-object dynamics as the state transition function within our MPC formulation: (i) a physics-based analytical model, (ii) an online regression based identification model that adapts in real-time, and (iii) a reinforcement learning-based dynamics model that generalizes across object properties. Our pipeline is validated in simulation with objects of varying mass, geometry, and friction coefficients. Extensive evaluations highlight the trade-offs among the three modeling strategies in terms of settling time, steady-state error, control effort, and generalization across objects. To the best of our knowledge, DART constitutes the first framework for non-prehensile dual-arm manipulation of objects on a tray. Project Link: https://dart-icra.github.io/dart/
+
+对于人类服务员来说看似毫不费力的事情对于机器人来说仍然是一个重大挑战。难以理解地操纵托盘上的物体本质上是困难的，并且在双臂设置中复杂性被放大。此类任务与酒店和酒店等领域的服务机器人高度相关，这些领域的机器人必须精确地运输和重新定位不同的物体。我们提出了 DART，一种新颖的双臂框架，它将非线性模型预测控制 (MPC) 与基于优化的阻抗控制器集成在一起，以实现相对于动态控制托盘的精确物体运动。该框架系统地评估了三种互补策略，用于将托盘对象动力学建模为 MPC 公式中的状态转换函数：（i）基于物理的分析模型，（ii）基于在线回归的实时适应识别模型，以及（iii）基于强化学习的动态模型，该模型可概括对象属性。我们的管道通过具有不同质量、几何形状和摩擦系数的物体的模拟验证。广泛的评估强调了三种建模策略在稳定时间、稳态误差、控制工作和跨对象泛化方面的权衡。据我们所知，DART 构成了第一个用于非抓握式双臂操作托盘上物体的框架。项目链接：https://dart-icra.github.io/dart/
+
+</details>
+
+---
+
+## 6. Infrastructure-Centric World Models: Bridging Temporal Depth and Spatial Breadth for Roadside Perception / 以基础设施为中心的世界模型：桥接路边感知的时间深度和空间广度
+
+**Date**: 2026-04-19 | **arXiv**: [2604.17651v1](http://arxiv.org/abs/2604.17651v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.17651v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models, generative AI systems that simulate how environments evolve, are transforming autonomous driving, yet all existing approaches adopt an ego-vehicle perspective, leaving the infrastructure viewpoint unexplored. We argue that infrastructure-centric world models offer a fundamentally complementary capability: the bird's-eye, multi-sensor, persistent viewpoint that roadside systems uniquely possess. Central to our thesis is a spatio-temporal complementarity: fixed roadside sensors excel at temporal depth, accumulating long-term behavioral distributions including rare safety-critical events, while vehicle-borne sensors excel at spatial breadth, sampling diverse scenes across large road networks. This paper presents a vision for Infrastructure-centric World Models (I-WM) in three phases: (I) generative scene understanding with quality-aware uncertainty propagation, (II) physics-informed predictive dynamics with multi-agent counterfactual reasoning, and (III) collaborative world models for V2X communication via latent space alignment. We propose a dual-layer architecture, annotation-free perception as a multi-modal data engine feeding end-to-end generative world models, with a phased sensor strategy from LiDAR through 4D radar and signal phase data to event cameras. We establish a taxonomy of driving world model paradigms, position I-WM relative to LeCun's JEPA, Li Fei-Fei's spatial intelligence, and VLA architectures, and introduce Infrastructure VLA (I-VLA) as a novel unification of roadside perception, language commands, and traffic control actions. Our vision builds upon existing multi-LiDAR pipelines and identifies open-source foundations for each phase, providing a path toward infrastructure that understands and anticipates traffic.
+
+世界模型、模拟环境如何演变的生成式人工智能系统正在改变自动驾驶，但所有现有方法都采用自我车辆视角，而基础设施视角尚未得到探索。我们认为，以基础设施为中心的世界模型提供了一种根本上的互补能力：路边系统独特拥有的鸟瞰、多传感器、持续视角。我们论文的核心是时空互补性：固定路边传感器擅长时间深度，积累长期行为分布，包括罕见的安全关键事件，而车载传感器擅长空间广度，对大型道路网络的不同场景进行采样。本文提出了以基础设施为中心的世界模型（I-WM）的愿景，分为三个阶段：（I）具有质量感知不确定性传播的生成场景理解，（II）具有多智能体反事实推理的物理信息预测动力学，以及（III）通过潜在空间对齐进行 V2X 通信的协作世界模型。我们提出了一种双层架构、无注释感知作为多模态数据引擎，提供端到端生成世界模型，并采用从 LiDAR 到 4D 雷达的分阶段传感器策略以及到事件摄像机的信号相位数据。我们建立了驾驶世界模型范式的分类法，将 I-WM 相对于 LeCun 的 JEPA、李飞飞的空间智能和 VLA 架构进行定位，并引入基础设施 VLA (I-VLA) 作为路边感知、语言命令和交通控制动作的新颖统一。我们的愿景建立在现有的多激光雷达管道的基础上，并为每个阶段确定了开源基础，从而提供了一条通往理解和预测流量的基础设施的道路。
+
+</details>
+
+---
+
+## 7. Dual-Anchoring: Addressing State Drift in Vision-Language Navigation / 双锚定：解决视觉语言导航中的状态漂移
+
+**Date**: 2026-04-19 | **arXiv**: [2604.17473v1](http://arxiv.org/abs/2604.17473v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.17473v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision-Language Navigation(VLN) requires an agent to navigate through 3D environments by following natural language instructions. While recent Video Large Language Models(Video-LLMs) have largely advanced VLN, they remain highly susceptible to State Drift in long scenarios. In these cases, the agent's internal state drifts away from the true task execution state, leading to aimless wandering and failure to execute essential maneuvers in the instruction. We attribute this failure to two distinct cognitive deficits: Progress Drift, where the agent fails to distinguish completed sub-goals from remaining ones, and Memory Drift, where the agent's history representations degrade, making it lose track of visited landmarks. In this paper, we propose a Dual-Anchoring Framework that explicitly anchors the instruction progress and history representations. First, to address progress drift, we introduce Instruction Progress Anchoring, which supervises the agent to generate structured text tokens that delineate completed versus remaining sub-goals. Second, to mitigate memory drift, we propose Memory Landmark Anchoring, which utilizes a Landmark-Centric World Model to retrospectively predict object-centric embeddings extracted by the Segment Anything Model, compelling the agent to explicitly verify past observations and preserve distinct representations of visited landmarks. Facilitating this framework, we curate two extensive datasets: 3.6 million samples with explicit progress descriptions, and 937k grounded landmark data for retrospective verification. Extensive experiments in both simulation and real-world environments demonstrate the superiority of our method, achieving a 15.2% improvement in Success Rate and a remarkable 24.7% gain on long-horizon trajectories. To facilitate further research, we will release our code, data generation pipelines, and the collected datasets.
+
+视觉语言导航 (VLN) 要求代理按照自然语言指令在 3D 环境中进行导航。虽然最近的视频大语言模型（Video-LLM）在很大程度上改进了 VLN，但它们在长时间场景中仍然非常容易受到状态漂移的影响。在这些情况下，代理的内部状态偏离真实的任务执行状态，导致漫无目的的徘徊并且无法执行指令中的基本动作。我们将这种失败归因于两种不同的认知缺陷：进度漂移（智能体无法区分已完成的子目标和剩余子目标）和记忆漂移（智能体的历史表征退化，使其失去对访问过的地标的追踪）。在本文中，我们提出了一种双重锚定框架，该框架明确锚定指令进度和历史表示。首先，为了解决进度漂移问题，我们引入了指令进度锚定，它监督代理生成结构化文本标记，以描述已完成的子目标与剩余的子目标。其次，为了减轻记忆漂移，我们提出了记忆地标锚定，它利用以地标为中心的世界模型来回顾性预测由分段任何模型提取的以对象为中心的嵌入，迫使代理明确验证过去的观察结果并保留访问过的地标的不同表示。为了促进这个框架的发展，我们整理了两个广泛的数据集：具有明确进展描述的 360 万个样本，以及用于回顾性验证的 937,000 个接地标志数据。在模拟和现实环境中进行的大量实验证明了我们方法的优越性，成功率提高了 15.2%，长视野轨迹显着提高了 24.7%。为了促进进一步的研究，我们将发布我们的代码、数据生成管道和收集的数据集。
+
+</details>
+
+---
+
+## 8. TensorHub: Rethinking AI Model Hub with Tensor-Centric Compression / TensorHub：通过以张量为中心的压缩重新思考 AI 模型中心
+
+**Date**: 2026-04-18 | **arXiv**: [2604.17104v1](http://arxiv.org/abs/2604.17104v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.17104v1)
+
+**Categories**: cs.DC, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Modern AI models are growing rapidly in size and redundancy, leading to significant storage and distribution challenges in model hubs. We present TensorHub, a tensor-centric system for reducing storage overhead through fine-grained deduplication and compression. TensorHub leverages tensor-level fingerprinting and clustering to identify redundancy across models without requiring annotations. Our design enables efficient storage reduction while preserving model usability and performance. Experiments on real-world model repositories demonstrate substantial storage savings with minimal overhead.
+
+现代人工智能模型的规模和冗余度正在迅速增长，导致模型中心面临巨大的存储和分发挑战。我们推出 TensorHub，这是一个以张量为中心的系统，通过细粒度的重复数据删除和压缩来减少存储开销。 TensorHub 利用张量级指纹识别和聚类来识别模型之间的冗余，而无需注释。我们的设计可以有效减少存储空间，同时保持模型的可用性和性能。对现实世界模型存储库的实验表明，可以以最小的开销节省大量存储空间。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-04-20 (1 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-04-20
