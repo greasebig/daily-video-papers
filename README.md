@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-04-21](papers/2026-04-21.md) - 18 papers
 - [2026-04-20](papers/2026-04-20.md) - 1 papers
 - [2026-04-17](papers/2026-04-17.md) - 12 papers
 - [2026-04-16](papers/2026-04-16.md) - 9 papers
@@ -63,6 +64,310 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-04-21 (18 papers)</b></summary>
+
+# arXiv Video Papers - 2026-04-21
+
+**Paper Count**: 18
+
+---
+
+## 1. GS-STVSR: Ultra-Efficient Continuous Spatio-Temporal Video Super-Resolution via 2D Gaussian Splatting / GS-STVSR：通过 2D 高斯分布实现超高效连续时空视频超分辨率
+
+**Date**: 2026-04-20 | **arXiv**: [2604.18047v1](http://arxiv.org/abs/2604.18047v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.18047v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Continuous Spatio-Temporal Video Super-Resolution (C-STVSR) aims to simultaneously enhance the spatial resolution and frame rate of videos by arbitrary scale factors, offering greater flexibility than fixed-scale methods that are constrained by predefined upsampling ratios. In recent years, methods based on Implicit Neural Representations (INR) have made significant progress in C-STVSR by learning continuous mappings from spatio-temporal coordinates to pixel values. However, these methods fundamentally rely on dense pixel-wise grid queries, causing computational cost to scale linearly with the number of interpolated frames and severely limiting inference efficiency. We propose GS-STVSR, an ultra-efficient C-STVSR framework based on 2D Gaussian Splatting (2D-GS) that drives the spatiotemporal evolution of Gaussian kernels through continuous motion modeling, bypassing dense grid queries entirely. We exploit the strong temporal stability of covariance parameters for lightweight intermediate fitting, design an optical flow-guided motion module to derive Gaussian position and color at arbitrary time steps, introduce a Covariance resampling alignment module to prevent covariance drift, and propose an adaptive offset window for large-scale motion. Extensive experiments on Vid4, GoPro, and Adobe240 show that GS-STVSR achieves state-of-the-art quality across all benchmarks. Moreover, its inference time remains nearly constant at conventional temporal scales (X2--X8) and delivers over X3 speedup at extreme scales X32, demonstrating strong practical applicability.
+
+连续时空视频超分辨率（C-STVSR）旨在通过任意比例因子同时增强视频的空间分辨率和帧速率，比受预定义上采样比率限制的固定比例方法提供更大的灵活性。近年来，基于隐式神经表示（INR）的方法通过学习从时空坐标到像素值的连续映射，在 C-STVSR 方面取得了重大进展。然而，这些方法从根本上依赖于密集的像素级网格查询，导致计算成本随着插值帧的数量线性扩展，并严重限制了推理效率。我们提出了 GS-STVSR，一种基于 2D 高斯分布 (2D-GS) 的超高效 C-STVSR 框架，它通过连续运动建模驱动高斯内核的时空演化，完全绕过密集网格查询。我们利用协方差参数的强时间稳定性进行轻量级中间拟合，设计光流引导运动模块以在任意时间步推导高斯位置和颜色，引入协方差重采样对齐模块以防止协方差漂移，并提出用于大规模运动的自适应偏移窗口。在 Vid4、GoPro 和 Adob​​e240 上进行的大量实验表明，GS-STVSR 在所有基准测试中都实现了最先进的质量。此外，其推理时间在传统时间尺度（X2--X8）下几乎保持恒定，并在极端尺度 X32 下提供超过 X3 的加速，表现出强大的实际适用性。
+
+</details>
+
+---
+
+## 2. Identifying Ethical Biases in Action Recognition Models / 识别行为识别模型中的道德偏见
+
+**Date**: 2026-04-20 | **arXiv**: [2604.17971v1](http://arxiv.org/abs/2604.17971v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.17971v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Human Action Recognition (HAR) models are increasingly deployed in high-stakes environments, yet their fairness across different human appearances has not been analyzed. We introduce a framework for auditing bias in HAR models using synthetic video data, generated with full control over visual identity attributes such as skin color. Unlike prior work that focuses on static images or pose estimation, our approach preserves temporal consistency, allowing us to isolate and test how changes to a single attribute affect model predictions. Through controlled interventions using the BEDLAM simulation platform, we show whether some popular HAR models exhibit statistically significant biases on the skin color even when the motion remains identical. Our results highlight how models may encode unwanted visual associations, and we provide evidence of systematic errors across groups. This work contributes a framework for auditing HAR models and supports the development of more transparent, accountable systems in light of upcoming regulatory standards.
+
+人类行为识别（HAR）模型越来越多地部署在高风险环境中，但它们在不同人类外表下的公平性尚未得到分析。我们引入了一个使用合成视频数据来审计 HAR 模型中偏差的框架，这些数据是在完全控制视觉身份属性（例如肤色）的情况下生成的。与之前专注于静态图像或姿势估计的工作不同，我们的方法保留了时间一致性，使我们能够隔离和测试单个属性的变化如何影响模型预测。通过使用 BEDLAM 模拟平台进行受控干预，我们展示了一些流行的 HAR 模型即使运动保持相同，是否也会在肤色上表现出统计上显着的偏差。我们的结果强调了模型如何编码不需要的视觉关联，并且我们提供了跨组系统错误的证据。这项工作为审计 HAR 模型提供了一个框架，并支持根据即将出台的监管标准开发更透明、更负责任的系统。
+
+</details>
+
+---
+
+## 3. ReTrack: Evidence-Driven Dual-Stream Directional Anchor Calibration Network for Composed Video Retrieval / ReTrack：用于合成视频检索的证据驱动双流定向锚定校准网络
+
+**Date**: 2026-04-20 | **arXiv**: [2604.17898v1](http://arxiv.org/abs/2604.17898v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.17898v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/Lee-zixu/ReTrack
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+With the rapid growth of video data, Composed Video Retrieval (CVR) has emerged as a novel paradigm in video retrieval and is receiving increasing attention from researchers. Unlike unimodal video retrieval methods, the CVR task takes a multi-modal query consisting of a reference video and a piece of modification text as input. The modification text conveys the user's intended alterations to the reference video. Based on this input, the model aims to retrieve the most relevant target video. In the CVR task, there exists a substantial discrepancy in information density between video and text modalities. Traditional composition methods tend to bias the composed feature toward the reference video, which leads to suboptimal retrieval performance. This limitation is significant due to the presence of three core challenges: (1) modal contribution entanglement, (2) explicit optimization of composed features, and (3) retrieval uncertainty. To address these challenges, we propose the evidence-dRivRn dual-sTream diRectionAl anChor calibration networK (ReTrack). ReTrack is the first CVR framework that improves multi-modal query understanding by calibrating directional bias in composed features. It consists of three key modules: Semantic Contribution Disentanglement, Composition Geometry Calibration, and Reliable Evidence-driven Alignment. Specifically, ReTrack estimates the semantic contribution of each modality to calibrate the directional bias of the composed feature. It then uses the calibrated directional anchors to compute bidirectional evidence that drives reliable composed-to-target similarity estimation. Moreover, ReTrack exhibits strong generalization to the Composed Image Retrieval (CIR) task, achieving SOTA performance across three benchmark datasets in both CVR and CIR scenarios. Codes are available at https://github.com/Lee-zixu/ReTrack
+
+随着视频数据的快速增长，组合视频检索（CVR）已成为视频检索的一种新范式，并受到研究人员越来越多的关注。与单模态视频检索方法不同，CVR 任务采用由参考视频和一段修改文本组成的多模态查询作为输入。修改文本传达用户对参考视频的预期更改。基于此输入，该模型旨在检索最相关的目标视频。在 CVR 任务中，视频和文本模式之间的信息密度存在很大差异。传统的合成方法倾向于将合成特征偏向参考视频，这导致检索性能不佳。由于存在三个核心挑战，这种限制很重要：（1）模态贡献纠缠，（2）组合特征的显式优化，以及（3）检索不确定性。为了应对这些挑战，我们提出了证据驱动的双流定向锚定标定网络（ReTrack）。 ReTrack 是第一个通过校准组合特征中的方向偏差来提高多模式查询理解的 CVR 框架。它由三个关键模块组成：语义贡献解缠、构图几何校准和可靠证据驱动的对齐。具体来说，ReTrack 估计每种模态的语义贡献，以校准组合特征的方向偏差。然后，它使用校准的方向锚来计算双向证据，从而驱动可靠的组合到目标相似性估计。此外，ReTrack 对组合图像检索 (CIR) 任务表现出强大的泛化能力，在 CVR 和 CIR 场景中的三个基准数据集上实现了 SOTA 性能。代码可在 https://github.com/Lee-zixu/ReTrack 获取
+
+</details>
+
+---
+
+## 4. Spatiotemporal Sycophancy: Negation-Based Gaslighting in Video Large Language Models / 时空阿谀奉承：视频大语言模型中基于否定的煤气灯操纵
+
+**Date**: 2026-04-20 | **arXiv**: [2604.17873v1](http://arxiv.org/abs/2604.17873v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.17873v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video Large Language Models (Vid-LLMs) have demonstrated remarkable performance in video understanding tasks, yet their robustness under conversational interaction remains largely underexplored. In this paper, we identify spatiotemporal sycophancy, a failure mode in which Vid-LLMs retract initially correct, visually grounded judgments and conform to misleading user feedback under negation-based gaslighting. Rather than merely changing their answers, the models often fabricate unsupported temporal or spatial explanations to justify incorrect revisions. To systematically investigate this phenomenon, we propose a negation-based gaslighting evaluation framework and introduce GasVideo-1000, a curated benchmark designed to probe spatiotemporal sycophancy with clear visual grounding and temporal reasoning requirements. We evaluate a broad range of state-of-the-art open-source and proprietary Vid-LLMs across diverse video understanding tasks. Extensive experiments reveal that vulnerability to negation-based gaslighting is pervasive and severe, even among models with strong baseline performance. While prompt-level grounding constraints can partially mitigate this behavior, they do not reliably prevent hallucinated justifications or belief reversal. Our results indicate that current Vid-LLMs lack robust mechanisms for maintaining grounded spatiotemporal beliefs under adversarial conversational feedback.
+
+视频大语言模型（Vid-LLM）在视频理解任务中表现出了卓越的性能，但其在对话交互下的稳健性在很大程度上仍未得到充分探索。在本文中，我们识别了时空阿谀奉承，这是一种失败模式，在这种模式下，Vid-LLM 会收回最初正确的、基于视觉的判断，并在基于否定的煤气灯下遵循误导性的用户反馈。这些模型不仅仅是改变答案，还经常编造不受支持的时间或空间解释来证明不正确的修改是合理的。为了系统地研究这一现象，我们提出了一个基于否定的煤气灯评估框架，并引入了 GasVideo-1000，这是一个精心设计的基准，旨在探讨具有清晰视觉基础和时间推理要求的时空阿谀奉承。我们在不同的视频理解任务中评估了各种最先进的开源和专有的 Vid-LLM。大量实验表明，即使在具有强大基线性能的模型中，基于否定的煤气灯操纵的脆弱性也是普遍且严重的。虽然即时水平的基础约束可以部分缓解这种行为，但它们并不能可靠地防止幻觉的理由或信念逆转。我们的结果表明，当前的 Vid-LLM 缺乏在对抗性对话反馈下维持扎根的时空信念的强大机制。
+
+</details>
+
+---
+
+## 5. AnyLift: Scaling Motion Reconstruction from Internet Videos via 2D Diffusion / AnyLift：通过 2D 扩散从互联网视频缩放运动重建
+
+**Date**: 2026-04-20 | **arXiv**: [2604.17818v1](http://arxiv.org/abs/2604.17818v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.17818v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reconstructing 3D human motion and human-object interactions (HOI) from Internet videos is a fundamental step toward building large-scale datasets of human behavior. Existing methods struggle to recover globally consistent 3D motion under dynamic cameras, especially for motion types underrepresented in current motion-capture datasets, and face additional difficulty recovering coherent human-object interactions in 3D. We introduce a two-stage framework leveraging 2D diffusion that reconstructs 3D human motion and HOI from Internet videos. In the first stage, we synthesize multi-view 2D motion data for each domain, leveraging 2D keypoints extracted from Internet videos to incorporate human motions that rarely appear in existing MoCap datasets. In the second stage, a camera-conditioned multi-view 2D motion diffusion model is trained on the domain-specific synthetic data to recover 3D human motion and 3D HOI in the world space. We demonstrate the effectiveness of our method on Internet videos featuring challenging motions such as gymnastics, as well as in-the-wild HOI videos, and show that it outperforms prior work in producing realistic human motion and human-object interaction.
+
+从互联网视频中重建 3D 人体运动和人与物体交互 (HOI) 是构建大规模人类行为数据集的基本步骤。现有方法很难在动态相机下恢复全局一致的 3D 运动，特别是对于当前运动捕捉数据集中代表性不足的运动类型，并且在 3D 中恢复连贯的人与物体交互时面临额外的困难。我们引入了一个利用 2D 扩散的两阶段框架，可以从互联网视频中重建 3D 人体运动和 HOI。在第一阶段，我们合成每个领域的多视图 2D 运动数据，利用从互联网视频中提取的 2D 关键点来合并很少出现在现有 MoCap 数据集中的人体运动。在第二阶段，在特定领域的合成数据上训练相机调节的多视图 2D 运动扩散模型，以恢复世界空间中的 3D 人体运动和 3D HOI。我们在具有挑战性运动（例如体操）的互联网视频以及野外 HOI 视频上展示了我们的方法的有效性，并表明该方法在产生逼真的人体运动和人与物体交互方面优于先前的工作。
+
+</details>
+
+---
+
+## 6. Weakly-Supervised Referring Video Object Segmentation through Text Supervision / 通过文本监督的弱监督参考视频对象分割
+
+**Date**: 2026-04-20 | **arXiv**: [2604.17797v1](http://arxiv.org/abs/2604.17797v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.17797v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/viscom-tongji/WSRVOS
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Referring video object segmentation (RVOS) aims to segment the target instance in a video, referred by a text expression. Conventional approaches are mostly supervised learning, requiring expensive pixel-level mask annotations. To tackle it, weakly-supervised RVOS has recently been proposed to replace mask annotations with bounding boxes or points, which are however still costly and labor-intensive. In this paper, we design a novel weakly-supervised RVOS method, namely WSRVOS, to train the model with only text expressions. Given an input video and the referring expression, we first design a contrastive referring expression augmentation scheme that leverages the captioning capabilities of a multimodal large language model to generate both positive and negative expressions. We extract visual and linguistic features from the input video and generated expressions, then perform bi-directional vision-language feature selection and interaction to enable fine-grained multimodal alignment. Next, we propose an instance-aware expression classification scheme to optimize the model in distinguishing positive from negative expressions. Also, we introduce a positive-prediction fusion strategy to generate high-quality pseudo-masks, which serve as additional supervision to the model. Last, we design a temporal segment ranking constraint such that the overlaps between mask predictions of temporally neighboring frames are required to conform to specific orders. Extensive experiments on four publicly available RVOS datasets, including A2D Sentences, J-HMDB Sentences, Ref-YouTube-VOS, and Ref-DAVIS17, demonstrate the superiority of our method. Code is available at \href{https://github.com/viscom-tongji/WSRVOS}{https://github.com/viscom-tongji/WSRVOS}.
+
+引用视频对象分割（RVOS）旨在分割视频中由文本表达式引用的目标实例。传统方法主要是监督学习，需要昂贵的像素级掩模注释。为了解决这个问题，最近有人提出弱监督的 RVOS 用边界框或点替换掩模注释，但这仍然是昂贵且劳动密集型的。在本文中，我们设计了一种新颖的弱监督 RVOS 方法，即 WSRVOS，仅使用文本表达式来训练模型。给定输入视频和引用表达，我们首先设计一种对比引用表达增强方案，该方案利用多模态大语言模型的字幕功能来生成正面和负面表达。我们从输入视频和生成的表达中提取视觉和语言特征，然后执行双向视觉-语言特征选择和交互，以实现细粒度的多模态对齐。接下来，我们提出了一种实例感知的表达分类方案，以优化区分正面和负面表达的模型。此外，我们引入了正预测融合策略来生成高质量的伪掩模，作为模型的额外监督。最后，我们设计了时间段排序约束，使得时间相邻帧的掩模预测之间的重叠需要符合特定顺序。对四个公开可用的 RVOS 数据集（包括 A2D Sentences、J-HMDB Sentences、Ref-YouTube-VOS 和 Ref-DAVIS17）进行的广泛实验证明了我们方法的优越性。代码可在 \href{https://github.com/viscom-tongji/WSRVOS}{https://github.com/viscom-tongji/WSRVOS} 获取。
+
+</details>
+
+---
+
+## 7. FlowC2S: Flowing from Current to Succeeding Frames for Fast and Memory-Efficient Video Continuation / FlowC2S：从当前帧流向后续帧，以实现快速且节省内存的视频连续性
+
+**Date**: 2026-04-19 | **arXiv**: [2604.17625v1](http://arxiv.org/abs/2604.17625v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.17625v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This paper introduces a novel methodology for generating fast and memory-efficient video continuations. Our method, dubbed FlowC2S, fine-tunes a pre-trained text-to-video flow model to learn a vector field between the current and succeeding video chunks. Two design choices are key. First, we introduce inherent optimal couplings, utilizing temporally adjacent video chunks during training as a practical proxy for true optimal couplings, resulting in straighter flows. Second, we incorporate target inversion, injecting the inverted latent of the target chunk into the input representation to strengthen correspondences and improve visual fidelity. By flowing directly from current to succeeding frames, instead of the common combination of current frames with noise to generate a video continuation, we reduce the dimensionality of the model input by a factor of two. The proposed method, fine-tuned from LTXV and Wan, surpasses the state-of-the-art scores across quantitative evaluations with FID and FVD, with as few as five neural function evaluations.
+
+本文介绍了一种生成快速且节省内存的视频连续视频的新颖方法。我们的方法被称为 FlowC2S，它对预先训练的文本到视频流模型进行微调，以学习当前视频块和后续视频块之间的矢量场。两个设计选择是关键。首先，我们引入固有的最佳耦合，在训练期间利用时间相邻的视频块作为真正最佳耦合的实际代理，从而产生更直的流。其次，我们结合了目标反转，将目标块的反转潜伏注入到输入表示中，以加强对应性并提高视觉保真度。通过直接从当前帧流向后续帧，而不是使用当前帧与噪声的常见组合来生成视频延续，我们将模型输入的维度减少了两倍。所提出的方法经过 LTXV 和 Wan 的微调，在 FID 和 FVD 的定量评估中超越了最先进的分数，并且神经功能评估仅需五次。
+
+</details>
+
+---
+
+## 8. ViPS: Video-informed Pose Spaces for Auto-Rigged Meshes / ViPS：用于自动装配网格的视频通知姿势空间
+
+**Date**: 2026-04-19 | **arXiv**: [2604.17623v1](http://arxiv.org/abs/2604.17623v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.17623v1)
+
+**Categories**: cs.CV, cs.GR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Kinematic rigs provide a structured interface for articulating 3D meshes, but they lack an inherent representation of the plausible manifold of joint configurations for a given asset. Without such a pose space, stochastic sampling or manual manipulation of raw rig parameters often leads to semantic or geometric violations, such as anatomical hyperextension and non-physical self-intersections. We propose Video-informed Pose Spaces (ViPS), a feed-forward framework that discovers the latent distribution of valid articulations for auto-rigged meshes by distilling motion priors from a pretrained video diffusion model. Unlike existing methods that rely on scarce artist-authored 4D datasets, ViPS transfers generative video priors into a universal distribution over a given rig parameterization. Differentiable geometric validators applied to the skinned mesh enforce asset-specific validity without requiring manual regularizers. Our model learns a smooth, compact, and controllable pose space that supports diverse sampling, manifold projection for inverse kinematics, and temporally coherent trajectories for keyframing. Furthermore, the distilled 3D pose samples serve as precise semantic proxies for guiding video diffusion, effectively closing the loop between generative 2D priors and structured 3D kinematic control. Our evaluations show that ViPS, trained solely on video priors, matches the performance of state-of-the-art methods trained on synthetic artist-created 4D data in both plausibility and diversity. Most importantly, as a universal model, ViPS demonstrates robust zero-shot generalization to out-of-distribution species and unseen skeletal topologies.
+
+运动装置提供了用于连接 3D 网格的结构化接口，但它们缺乏给定资产的合理的关节配置流形的固有表示。如果没有这样的姿势空间，原始装备参数的随机采样或手动操作通常会导致语义或几何违规，例如解剖学过度延伸和非物理自相交。我们提出了视频通知姿势空间（ViPS），这是一种前馈框架，通过从预训练的视频扩散模型中提取运动先验来发现自动装配网格的有效关节的潜在分布。与依赖于稀缺的艺术家创作的 4D 数据集的现有方法不同，ViPS 将生成视频先验转换为给定装备参数化的通用分布。应用于蒙皮网格的可微分几何验证器可以强制资产特定的有效性，而无需手动正则化器。我们的模型学习一个平滑、紧凑且可控的姿态空间，支持不同的采样、逆运动学的流形投影以及关键帧的时间相干轨迹。此外，经过提炼的 3D 姿势样本可作为指导视频扩散的精确语义代理，有效地闭合生成 2D 先验和结构化 3D 运动控制之间的循环。我们的评估表明，仅基于视频先验训练的 ViPS 在合理性和多样性方面与基于合成艺术家创建的 4D 数据训练的最先进方法的性能相匹配。最重要的是，作为一种通用模型，ViPS 展示了对分布外物种和未见过的骨骼拓扑的强大的零样本泛化能力。
+
+</details>
+
+---
+
+## 9. Long-CODE: Isolating Pure Long-Context as an Orthogonal Dimension in Video Evaluation / 长代码：将纯长上下文隔离为视频评估中的正交维度
+
+**Date**: 2026-04-19 | **arXiv**: [2604.17428v1](http://arxiv.org/abs/2604.17428v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.17428v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+As video generation models achieve unprecedented capabilities, the demand for robust video evaluation metrics becomes increasingly critical. Traditional metrics are intrinsically tailored for short-video evaluation, predominantly assessing frame-level visual quality and localized temporal smoothness. However, as state-of-the-art video generation models scale to generate longer videos, these metrics fail to capture essential long-range characteristics, such as narrative richness and global causal consistency. Recognizing that short-term visual perception and long-context attributes are fundamentally orthogonal dimensions, we argue that long-video metrics should be disentangled from short-video assessments. In this paper, we focus on the rigorous justification and design of a dedicated framework for long-video evaluation. We first introduce a suite of long-video attribute corruption tests, exposing the critical limitations of existing hort-video metrics from their insensitivity to structural inconsistencies, such as shot-level perturbations and narrative shuffling. To bridge this gap, we design a novel long-video metric based on shot dynamics, which is highly sensitive to the long-range testing framework. Furthermore, we introduce Long-CODE (Long-Context as an Orthogonal Dimension for video Evaluation), a specialized dataset designed to benchmark long-video evaluation, with human annotations isolated specifically to genuine long-range characteristics. Extensive experiments show that our proposed metrics achieve state-of-the-art correlation with human judgments. Ultimately, our metric and benchmark seamlessly complement existing short-video standards, establishing a holistic and unbiased evaluation paradigm for video generation models.
+
+随着视频生成模型实现前所未有的功能，对强大的视频评估指标的需求变得越来越重要。传统指标本质上是为短视频评估量身定制的，主要评估帧级视觉质量和局部时间平滑度。然而，随着最先进的视频生成模型扩展以生成更长的视频，这些指标无法捕获基本的长期特征，例如叙事丰富性和全局因果一致性。认识到短期视觉感知和长上下文属性本质上是正交维度，我们认为长视频指标应该与短视频评估分开。在本文中，我们重点关注长视频评估专用框架的严格论证和设计。我们首先引入了一套长视频属性损坏测试，暴露了现有短视频指标的关键局限性，因为它们对结构不一致（例如镜头级扰动和叙事洗牌）不敏感。为了弥补这一差距，我们设计了一种基于镜头动态的新颖的长视频指标，该指标对远程测试框架高度敏感。此外，我们还引入了 Long-CODE（长上下文作为视频评估的正交维度），这是一个专门用于对长视频评估进行基准测试的数据集，其中人工注释专门针对真实的远程特征进行了隔离。大量实验表明，我们提出的指标与人类判断实现了最先进的相关性。最终，我们的指标和基准无缝补充了现有的短视频标准，为视频生成模型建立了全面且公正的评估范例。
+
+</details>
+
+---
+
+## 10. Where to Focus: Query-Modulated Multimodal Keyframe Selection for Long Video Understanding / 关注点：用于长视频理解的查询调制多模式关键帧选择
+
+**Date**: 2026-04-19 | **arXiv**: [2604.17422v1](http://arxiv.org/abs/2604.17422v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.17422v1)
+
+**Categories**: cs.CV, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long video understanding remains a formidable challenge for Multimodal Large Language Models (MLLMs) due to the prohibitive computational cost of processing dense frame sequences. Prevailing solutions, which select a keyframe subset, typically rely on either a single visual-centric metric (e.g., CLIP similarity) or a static fusion of heuristic scores. This ``one-size-fits-all'' paradigm frequently fails: visual-only metrics are ineffective for plot-driven narrative queries, while indiscriminately incorporating textual scores introduces severe ``modal noise'' for purely visual tasks. To break this bottleneck, we propose Q-Gate, a plug-and-play and training-free framework that treats keyframe selection as a dynamic modality routing problem. We decouple the retrieval process into three lightweight expert streams: Visual Grounding for local details, Global Matching for scene semantics, and Contextual Alignment for subtitle-driven narratives. Crucially, Q-Gate introduces a Query-Modulated Gating Mechanism that leverages the in-context reasoning of an LLM to assess the query's intent and dynamically allocate attention weights across the experts. This mechanism intelligently activates necessary modalities while ``muting'' irrelevant ones, thereby maximizing the signal-to-noise ratio. Extensive experiments on LongVideoBench and Video-MME across multiple MLLM backbones demonstrate that Q-Gate substantially outperforms state-of-the-art baselines. By effectively suppressing modality-specific noise, it provides a robust, highly interpretable solution for scalable video reasoning.
+
+由于处理密集帧序列的计算成本过高，长视频理解对于多模态大型语言模型（MLLM）来说仍然是一个巨大的挑战。选择关键帧子集的流行解决方案通常依赖于单个以视觉为中心的度量（例如 CLIP 相似性）或启发式分数的静态融合。这种“一刀切”的范式经常失败：仅视觉指标对于情节驱动的叙事查询无效，而不加区别地合并文本分数会给纯粹的视觉任务带来严重的“模态噪音”。为了打破这个瓶颈，我们提出了 Q-Gate，一个即插即用且免训练的框架，它将关键帧选择视为动态模态路由问题。我们将检索过程分解为三个轻量级专家流：局部细节的视觉基础、场景语义的全局匹配以及字幕驱动叙述的上下文对齐。至关重要的是，Q-Gate 引入了一种查询调制门控机制，该机制利用 LLM 的上下文推理来评估查询的意图并在专家之间动态分配注意力权重。这种机制智能地激活必要的模式，同时“静音”不相关的模式，从而最大化信噪比。跨多个 MLLM 主干的 LongVideoBench 和 Video-MME 的广泛实验表明，Q-Gate 的性能大大优于最先进的基线。通过有效抑制特定模态噪声，它为可扩展视频推理提供了强大的、高度可解释的解决方案。
+
+</details>
+
+---
+
+## 11. Speculative Decoding for Autoregressive Video Generation / 自回归视频生成的推测解码
+
+**Date**: 2026-04-19 | **arXiv**: [2604.17397v1](http://arxiv.org/abs/2604.17397v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.17397v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Autoregressive video diffusion is emerging as a promising paradigm for streaming video synthesis, with step distillation serving as the primary means of accelerating inference. Whether speculative decoding, the dominant acceleration strategy for large language models, can be effectively adapted to autoregressive video generation remains an open question, because video blocks are continuous spatiotemporal tensors with no token-level distribution for exact rejection sampling. We introduce SDVG, which brings speculative decoding to block-based autoregressive video diffusion by replacing token verification with an image-quality router. A 1.3B drafter proposes candidate blocks via four denoising steps; each block is VAE-decoded and scored by ImageReward using worst-frame aggregation--taking the minimum per-frame reward to catch single-frame artifacts that averaging would mask. Blocks scoring above a fixed threshold tau are accepted into the 14B target's KV cache; the rest are regenerated by the target. Two additional design choices prove critical: the first block is always force-rejected to anchor scene composition, and tau serves as a single knob that traces a smooth quality-speed Pareto frontier. On 1003 MovieGenVideoBench prompts (832x480), SDVG retains 98.1% of target-only VisionReward quality (0.0773 vs. 0.0788) at a 1.59x speedup with tau=-0.7, and reaches 2.09x at 95.7% quality retention--while consistently outperforming draft-only generation by over +17%. The framework is training-free, requires no architectural changes, and can be seamlessly integrated into existing autoregressive video generation pipelines.
+
+自回归视频扩散正在成为流视频合成的一种有前途的范例，其中步骤蒸馏是加速推理的主要手段。推测解码（大型语言模型的主要加速策略）是否可以有效地适应自回归视频生成仍然是一个悬而未决的问题，因为视频块是连续的时空张量，没有用于精确拒绝采样的令牌级分布。我们引入了 SDVG，它通过用图像质量路由器取代令牌验证，为基于块的自回归视频扩散带来了推测性解码。 1.3B 起草者通过四个去噪步骤提出候选块；每个块都经过 VAE 解码，并由 ImageReward 使用最差帧聚合进行评分——采用最小每帧奖励来捕获平均会掩盖的单帧伪影。得分高于固定阈值 tau 的块将被接受到 14B 目标的 KV 缓存中；其余的由目标重新生成。事实证明，另外两个设计选择至关重要：第一个块始终被强制拒绝以锚定场景构图，而 tau 则充当追踪平滑质量-速度帕累托前沿的单个旋钮。在 1003 MovieGenVideoBench 提示 (832x480) 上，SDVG 在 tau=-0.7 的情况下以 1.59 倍加速，保留了 98.1% 的仅目标 VisionReward 质量（0.0773 与 0.0788），并在 95.7% 的质量保留下达到 2.09 倍，同时始终优于仅草稿生成超过 +17%。该框架无需培训，无需进行架构更改，并且可以无缝集成到现有的自回归视频生成管道中。
+
+</details>
+
+---
+
+## 12. When Text Hijacks Vision: Benchmarking and Mitigating Text Overlay-Induced Hallucination in Vision Language Models / 当文本劫持视觉时：视觉语言模型中的基准测试和减轻文本叠加引起的幻觉
+
+**Date**: 2026-04-19 | **arXiv**: [2604.17375v1](http://arxiv.org/abs/2604.17375v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.17375v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in Vision-Language Models (VLMs) have substantially enhanced their ability across multimodal video understanding benchmarks spanning temporal, action, object, and spatial understanding. However, we identify a critical yet overlooked issue: when embedded on-screen text contradicts the visual scene, existing VLMs systematically hallucinate, prioritizing overlay textual semantics over the actual visual content. We define this phenomenon as Text Overlay-Induced Hallucination (TOIH). In this work, we propose VisualTextTrap, the first comprehensive benchmark, including large-scale human-validated samples with specifically designed evaluation metrics. In particular, we construct VisualTextTrap from widely-used public datasets using a scalable hybrid pipeline of VLMs assisted text generation and rigorous manual verification. The benchmark features 6,057 samples annotated across 88 fine-grained attributes within four dimensions, with hallucination intensity quantified on a five-level scale (L1--L5) that reflects the semantic contradiction between overlay text and visual reality. Moreover, we propose Visual Text Hallucination Mitigation Mixture-of-Experts (VTHM-MoE), a novel Vision-Text Disentanglement framework that employs a dual-encoder architecture. Concretely, four dimension-specialized expert modules spanning Temporal, Action, Object, and Spatial reasoning are first pre-trained to identify and leverage cross-modal discrepancies between textual semantics and actual video content. We develop an Adaptive Token Routing Strategy to enable dynamic expert allocation, conferring robust resistance to TOIH while preserving performance on uncontaminated videos. Extensive experiments conducted on our VisualTextTrap benchmark verify the effectiveness of VTHM-MoE, outperforming state-of-the-art counterparts with diverse video question answering tasks.
+
+视觉语言模型 (VLM) 的最新进展极大地增强了它们跨时间、动作、对象和空间理解的多模态视频理解基准的能力。然而，我们发现了一个关键但被忽视的问题：当嵌入的屏幕文本与视觉场景相矛盾时，现有的 VLM 会系统性地产生幻觉，优先考虑覆盖文本语义而不是实际的视觉内容。我们将这种现象定义为文本叠加引起的幻觉（TOIH）。在这项工作中，我们提出了 VisualTextTrap，这是第一个综合基准测试，包括具有专门设计的评估指标的大规模人类验证样本。特别是，我们使用 VLM 辅助文本生成和严格的手动验证的可扩展混合管道，从广泛使用的公共数据集构建 VisualTextTrap。该基准测试包含 6,057 个样本，这些样本在四个维度内的 88 个细粒度属性上进行了注释，幻觉强度在五个级别（L1--L5）上进行了量化，反映了覆盖文本和视觉现实之间的语义矛盾。此外，我们提出了视觉文本幻觉缓解专家混合（VTHM-MoE），这是一种采用双编码器架构的新颖的视觉文本解开框架。具体而言，首先对涵盖时间、动作、对象和空间推理的四个维度专业专家模块进行预训练，以识别和利用文本语义与实际视频内容之间的跨模式差异。我们开发了一种自适应令牌路由策略，以实现动态专家分配，赋予对 TOIH 的强大抵抗力，同时保留未受污染视频的性能。在我们的 VisualTextTrap 基准测试上进行的大量实验验证了 VTHM-MoE 的有效性，其在各种视频问答任务中的表现优于最先进的同行。
+
+</details>
+
+---
+
+## 13. DreamShot: Personalized Storyboard Synthesis with Video Diffusion Prior / DreamShot：具有视频扩散优先级的个性化故事板合成
+
+**Date**: 2026-04-19 | **arXiv**: [2604.17195v1](http://arxiv.org/abs/2604.17195v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.17195v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Storyboard synthesis plays a crucial role in visual storytelling, aiming to generate coherent shot sequences that visually narrate cinematic events with consistent characters, scenes, and transitions. However, existing approaches are mostly adapted from text-to-image diffusion models, which struggle to maintain long-range temporal coherence, consistent character identities, and narrative flow across multiple shots. In this paper, we introduce DreamShot, a video generative model based storyboard framework that fully exploits powerful video diffusion priors for controllable multi-shot synthesis. DreamShot supports both Text-to-Shot and Reference-to-Shot generation, as well as story continuation conditioned on previous frames, enabling flexible and context-aware storyboard generation. By leveraging the spatial-temporal consistency inherent in video generative models, DreamShot produces visually and semantically coherent sequences with improved narrative fidelity and character continuity. Furthermore, DreamShot incorporates a multi-reference role conditioning module that accepts multiple character reference images and enforces identity alignment via a Role-Attention Consistency Loss, explicitly constraining attention between reference and generated roles. Extensive experiments demonstrate that DreamShot achieves superior scene coherence, role consistency, and generation efficiency compared to state-of-the-art text-to-image storyboard models, establishing a new direction toward controllable video model-driven visual storytelling.
+
+故事板合成在视觉叙事中起着至关重要的作用，旨在生成连贯的镜头序列，以视觉方式叙述具有一致的角色、场景和过渡的电影事件。然而，现有的方法大多改编自文本到图像的扩散模型，这些模型很难在多个镜头中保持长期的时间连贯性、一致的角色身份和叙事流。在本文中，我们介绍了 DreamShot，一种基于视频生成模型的故事板框架，它充分利用强大的视频扩散先验来实现可控的多镜头合成。 DreamShot 支持文本到镜头和参考到镜头生成，以及以先前帧为条件的故事延续，从而实现灵活且上下文感知的故事板生成。通过利用视频生成模型中固有的时空一致性，DreamShot 可以生成视觉和语义上连贯的序列，并提高叙事保真度和角色连续性。此外，DreamShot 还包含一个多参考角色调节模块，该模块接受多个角色参考图像，并通过角色注意力一致性损失强制身份对齐，明确限制参考角色和生成角色之间的注意力。大量实验表明，与最先进的文本到图像故事板模型相比，DreamShot 实现了卓越的场景连贯性、角色一致性和生成效率，为可控视频模型驱动的视觉叙事建立了新方向。
+
+</details>
+
+---
+
+## 14. Inference-Time Temporal Probability Smoothing for Stable Video Segmentation with SAM2 under Weak Prompts / 在弱提示下使用 SAM2 实现稳定视频分割的推理时间时间概率平滑
+
+**Date**: 2026-04-18 | **arXiv**: [2604.17115v1](http://arxiv.org/abs/2604.17115v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.17115v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Interactive video segmentation models such as SAM2 have demonstrated strong generalization across diverse visual domains. However, under weak user supervision, for example, when sparse point prompts are provided on a single frame, their predictions often suffer from temporal instability, including flickering boundaries, object dropout, and inconsistent object extents across frames. These issues limit their reliability in downstream video understanding and control applications.   In this paper, we propose an inference-time temporal probability smoothing method that improves the temporal stability of SAM2-based video segmentation without retraining or architectural modification. Our approach operates directly on per-frame segmentation probability maps and leverages optical-flow-based motion warping together with pixel-wise uncertainty estimates derived from segmentation entropy, and forward-backwards flow consistency. These signals are used to adaptively blend current-frame predictions with motion-aligned historical estimates, yielding temporally coherent segmentation outputs under weak prompts.   We evaluate the proposed method on four diverse video sequences using a comprehensive set of frame-wise and temporal stability metrics, including motion-compensated IoU, boundary consistency, object persistence, and area volatility. Experimental results demonstrate consistent improvements in temporal stability over vanilla SAM2 inference while preserving spatial accuracy. The proposed framework is lightweight, model-agnostic, and well-suited for real-time, interactive video segmentation.
+
+SAM2 等交互式视频分割模型已在不同视觉领域表现出强大的泛化能力。然而，在弱用户监督下，例如，当在单个帧上提供稀疏点提示时，它们的预测通常会受到时间不稳定的影响，包括闪烁的边界、对象丢失和跨帧的对象范围不一致。这些问题限制了它们在下游视频理解和控制应用中的可靠性。   在本文中，我们提出了一种推理时间时间概率平滑方法，该方法可以提高基于 SAM2 的视频分割的时间稳定性，而无需重新训练或架构修改。我们的方法直接在每帧分割概率图上运行，并利用基于光流的运动扭曲以及从分割熵导出的像素级不确定性估计和前向-后向流一致性。这些信号用于自适应地将当前帧预测与运动对齐的历史估计混合，在弱提示下产生时间连贯的分割输出。   我们使用一套全面的逐帧和时间稳定性指标（包括运动补偿 IoU、边界一致性、对象持久性和区域波动性）在四个不同的视频序列上评估所提出的方法。实验结果表明，与普通 SAM2 推理相比，时间稳定性得到了持续改进，同时保持了空间精度。所提出的框架是轻量级的、与模型无关的，非常适合实时、交互式视频分割。
+
+</details>
+
+---
+
+## 15. Motion-Guided Semantic Alignment with Negative Prompts for Zero-Shot Video Action Recognition / 运动引导语义对齐与零镜头视频动作识别的负提示
+
+**Date**: 2026-04-18 | **arXiv**: [2604.17062v1](http://arxiv.org/abs/2604.17062v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.17062v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Zero-shot action recognition is challenging due to the semantic gap between seen and unseen classes. We present a novel framework that enhances CLIP with disentangled embeddings and semantic-guided interaction. A Motion Separation Module (MSM) separates motion-sensitive and global-static features, while a Motion Aggregation Block (MAB) employs gated cross-attention to refine motion representation without re-coupling redundant information. To facilitate generalization to unseen categories, we enforce semantic alignment between video features and textual representations by aligning projected embeddings with positive textual prompts, while leveraging negative prompts to explicitly model "non-class" semantics. Experiments on standard benchmarks demonstrate that our method consistently outperforms prior CLIP-based approaches, achieving robust zero-shot action recognition across both coarse and fine-grained datasets.
+
+由于可见类和未见类之间的语义差距，零样本动作识别具有挑战性。我们提出了一种新颖的框架，通过解开的嵌入和语义引导的交互来增强 CLIP。运动分离模块 (MSM) 分离运动敏感和全局静态特征，而运动聚合块 (MAB) 采用门控交叉注意力来细化运动表示，而无需重新耦合冗余信息。为了促进对未见过的类别的泛化，我们通过将投影嵌入与正面文本提示对齐来强制视频特征和文本表示之间的语义对齐，同时利用负面提示来显式建模“非类”语义。标准基准测试的实验表明，我们的方法始终优于先前基于 CLIP 的方法，在粗粒度和细粒度数据集上实现了稳健的零样本动作识别。
+
+</details>
+
+---
+
+## 16. LIVE: Leveraging Image Manipulation Priors for Instruction-based Video Editing / LIVE：利用图像处理先验进行基于指令的视频编辑
+
+**Date**: 2026-04-18 | **arXiv**: [2604.17021v1](http://arxiv.org/abs/2604.17021v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.17021v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video editing aims to modify input videos according to user intent. Recently, end-to-end training methods have garnered widespread attention, constructing paired video editing data through video generation or editing models. However, compared to image editing, the high annotation costs of video data severely constrain the scale, quality, and task diversity of video editing datasets when relying on video generative models or manual annotation. To bridge this gap, we propose LIVE, a joint training framework that leverages large-scale, high-quality image editing data alongside video datasets to bolster editing capabilities. To mitigate the domain discrepancy between static images and dynamic videos, we introduce a frame-wise token noise strategy, which treats the latents of specific frames as reasoning tokens, leveraging large pretrained video generative models to create plausible temporal transformations. Moreover, through cleaning public datasets and constructing an automated data pipeline, we adopt a two-stage training strategy to anneal video editing capabilities. Furthermore, we curate a comprehensive evaluation benchmark encompassing over 60 challenging tasks that are prevalent in image editing but scarce in existing video datasets. Extensive comparative and ablation experiments demonstrate that our method achieves state-of-the-art performance. The source code will be publicly available.
+
+视频编辑旨在根据用户意图修改输入视频。最近，端到端的训练方法引起了广泛的关注，通过视频生成或编辑模型构建配对视频编辑数据。然而，与图像编辑相比，当依赖视频生成模型或手动标注时，视频数据的高标注成本严重限制了视频编辑数据集的规模、质量和任务多样性。为了弥补这一差距，我们提出了 LIVE，这是一个联合训练框架，利用大规模、高质量的图像编辑数据和视频数据集来增强编辑能力。为了减轻静态图像和动态视频之间的域差异，我们引入了逐帧标记噪声策略，该策略将特定帧的潜在特征视为推理标记，利用大型预训练视频生成模型来创建合理的时间转换。此外，通过清理公共数据集和构建自动化数据管道，我们采用两阶段训练策略来退火视频编辑能力。此外，我们还策划了一个全面的评估基准，涵盖 60 多个具有挑战性的任务，这些任务在图像编辑中很常见，但在现有视频数据集中很少。广泛的比较和消融实验表明我们的方法实现了最先进的性能。源代码将公开。
+
+</details>
+
+---
+
+## 17. Inductive Convolution Nuclear Norm Minimization for Tensor Completion with Arbitrary Sampling / 任意采样张量补全的归纳卷积核范数最小化
+
+**Date**: 2026-04-18 | **arXiv**: [2604.17001v1](http://arxiv.org/abs/2604.17001v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.17001v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The recently established Convolution Nuclear Norm Minimization (CNNM) addresses the problem of \textit{tensor completion with arbitrary sampling} (TCAS), which involves restoring a tensor from a subset of its entries sampled in an arbitrary manner. Despite its promising performance, the optimization procedure of CNNM needs performing Singular Value Decomposition (SVD) multiple times, which is computationally expensive and hard to parallelize. To address the issue, we reformulate the optimization objective of CNNM from the perspective of convolution eigenvectors. By introducing pre-learned convolution eigenvectors which are shared among different tensors, we propose a novel method called Inductive Convolution Nuclear Norm Minimization (ICNNM), which bypasses the SVD step so as to decrease significantly the computational time. In addition, due to the extra prior knowledge encoded in the pre-learned convolution eigenvectors, ICNNM also outperforms CNNM in terms of recovery performance. Extensive experiments on video completion, prediction and frame interpolation verify the superiority of ICNNM over CNNM and several other competing methods.
+
+最近建立的卷积核范数最小化（CNNM）解决了 \textit{任意采样张量完成}（TCAS）的问题，其中涉及从以任意方式采样的条目子集恢复张量。尽管其性能很有前景，但 CNNM 的优化过程需要多次执行奇异值分解（SVD），这在计算上是昂贵的并且难以并行化。为了解决这个问题，我们从卷积特征向量的角度重新制定了 CNNM 的优化目标。通过引入在不同张量之间共享的预先学习的卷积特征向量，我们提出了一种称为归纳卷积核范数最小化（ICNNM）的新方法，它绕过了 SVD 步骤，从而显着减少了计算时间。此外，由于预学习的卷积特征向量中编码了额外的先验知识，ICNNM 在恢复性能方面也优于 CNNM。关于视频补全、预测和帧插值的大量实验验证了 ICNNM 相对于 CNNM 和其他几种竞争方法的优越性。
+
+</details>
+
+---
+
+## 18. DVAR: Adversarial Multi-Agent Debate for Video Authenticity Detection / DVAR：视频真实性检测的对抗性多智能体辩论
+
+**Date**: 2026-04-18 | **arXiv**: [2604.16987v1](http://arxiv.org/abs/2604.16987v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.16987v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The rapid evolution of video generation technologies poses a significant challenge to media forensics, as conventional detection methods often fail to generalize beyond their training distributions. To address this, we propose DVAR (Debate-based Video Authenticity Reasoning), a training-free framework that reformulates video detection as a structured multi-agent forensic reasoning process. Moving beyond the paradigm of pattern matching, DVAR orchestrates a competition between a Generative Hypothesis Agent and a Natural Mechanism Agent. Through iterative rounds of cross-examination, these agents defend their respective explanations against abnormal evidence, driving a logical convergence where the truth emerges from rigorous stress-testing. To adjudicate these conflicting claims, we apply Occam's Razor through the Minimum Description Length (MDL) framework, defining an Explanatory Cost to quantify the "logical burden" of each reasoning path. Furthermore, we integrate GenVideoKB, a dynamic knowledge repository that provides high-level reasoning heuristics on generative boundaries and failure modes. Extensive experiments demonstrate that DVAR achieves competitive performance against supervised state-of-the-art methods while exhibiting superior generalization to unseen generative architectures. By transforming detection into a transparent debate, DVAR provides explicit, interpretable reasoning traces for robust video authenticity assessment.
+
+视频生成技术的快速发展对媒体取证提出了重大挑战，因为传统的检测方法通常无法推广到其训练分布之外。为了解决这个问题，我们提出了 DVAR（基于辩论的视频真实性推理），这是一种免训练框架，它将视频检测重新表述为结构化的多智能体取证推理过程。 DVAR 超越了模式匹配的范式，精心策划了生成假设智能体和自然机制智能体之间的竞争。通过反复的盘问，这些代理人针对异常证据捍卫了各自的解释，推动了逻辑趋同，真相从严格的压力测试中浮现出来。为了裁决这些相互冲突的主张，我们通过最小描述长度（MDL）框架应用奥卡姆剃刀，定义解释成本来量化每个推理路径的“逻辑负担”。此外，我们还集成了 GenVideoKB，这是一个动态知识库，可提供有关生成边界和故障模式的高级推理启发法。大量实验表明，DVAR 实现了与监督的最先进方法相比的竞争性能，同时对看不见的生成架构表现出卓越的泛化能力。通过将检测转变为透明的辩论，DVAR 为稳健的视频真实性评估提供了明确的、可解释的推理轨迹。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-04-20 (1 papers)</b></summary>
 
 # arXiv Video Papers - 2026-04-20
