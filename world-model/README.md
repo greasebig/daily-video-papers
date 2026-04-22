@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-04-22](papers/2026-04-22.md) - 7 papers
 - [2026-04-21](papers/2026-04-21.md) - 8 papers
 - [2026-04-20](papers/2026-04-20.md) - 1 papers
 - [2026-04-17](papers/2026-04-17.md) - 4 papers
@@ -56,6 +57,132 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-04-22 (7 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-04-22
+
+**Paper Count**: 7
+
+---
+
+## 1. Mask World Model: Predicting What Matters for Robust Robot Policy Learning / 面具世界模型：预测对于鲁棒机器人策略学习来说重要的事情
+
+**Date**: 2026-04-21 | **arXiv**: [2604.19683v1](http://arxiv.org/abs/2604.19683v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.19683v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models derived from large-scale video generative pre-training have emerged as a promising paradigm for generalist robot policy learning. However, standard approaches often focus on high-fidelity RGB video prediction, this can result in overfitting to irrelevant factors, such as dynamic backgrounds and illumination changes. These distractions reduce the model's ability to generalize, ultimately leading to unreliable and fragile control policies. To address this, we introduce the Mask World Model (MWM), which leverages video diffusion architectures to predict the evolution of semantic masks instead of pixels. This shift imposes a geometric information bottleneck, forcing the model to capture essential physical dynamics and contact relations while filtering out visual noise. We seamlessly integrate this mask dynamics backbone with a diffusion-based policy head to enable robust end-to-end control. Extensive evaluations demonstrate the superiority of MWM on the LIBERO and RLBench simulation benchmarks, significantly outperforming the state-of-the-art RGB-based world models. Furthermore, real-world experiments and robustness evaluation (via random token pruning) reveal that MWM exhibits superior generalization capabilities and robust resilience to texture information loss.
+
+来自大规模视频生成预训练的世界模型已成为通用机器人策略学习的有前途的范例。然而，标准方法通常侧重于高保真 RGB 视频预测，这可能会导致对不相关因素的过度拟合，例如动态背景和照明变化。这些干扰降低了模型的泛化能力，最终导致控制政策不可靠且脆弱。为了解决这个问题，我们引入了掩模世界模型（MWM），它利用视频扩散架构来预测语义掩模而不是像素的演变。这种转变带来了几何信息瓶颈，迫使模型捕捉必要的物理动力学和接触关系，同时滤除视觉噪声。我们将这种掩模动态主干与基于扩散的策略头无缝集成，以实现强大的端到端控制。广泛的评估证明了 MWM 在 LIBERO 和 RLBench 模拟基准上的优越性，显着优于最先进的基于 RGB 的世界模型。此外，现实世界的实验和鲁棒性评估（通过随机令牌修剪）表明，MWM 表现出卓越的泛化能力和对纹理信息丢失的强大恢复能力。
+
+</details>
+
+---
+
+## 2. Safety-Critical Contextual Control via Online Riemannian Optimization with World Models / 通过世界模型的在线黎曼优化进行安全关键的上下文控制
+
+**Date**: 2026-04-21 | **arXiv**: [2604.19639v1](http://arxiv.org/abs/2604.19639v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.19639v1)
+
+**Categories**: eess.SY, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Modern world models are becoming too complex to admit explicit dynamical descriptions. We study safety-critical contextual control, where a Planner must optimize a task objective using only feasibility samples from a black-box Simulator, conditioned on a context signal $ξ_t$. We develop a sample-based Penalized Predictive Control (PPC) framework grounded in online Riemannian optimization, in which the Simulator compresses the feasibility manifold into a score-based density $\hat{p}(u \mid ξ_t)$ that endows the action space with a Riemannian geometry guiding the Planner's gradient descent. The barrier curvature $κ(ξ_t)$, the minimum curvature of the conditional log-density $-\ln\hat{p}(\cdot\midξ_t)$, governs both convergence rate and safety margin, replacing the Lipschitz constant of the unknown dynamics. Our main result is a contextual safety bound showing that the distance from the true feasibility manifold is controlled by the score estimation error and a ratio that depends on $κ(ξ_t)$, both of which improve with richer context. Simulations on a dynamic navigation task confirm that contextual PPC substantially outperforms marginal and frozen density models, with the advantage growing after environment shifts.
+
+现代世界模型变得过于复杂，无法接受明确的动力学描述。我们研究安全关键的上下文控制，其中规划器必须仅使用来自黑盒模拟器的可行性样本来优化任务目标，以上下文信号$ xi_t $为条件。我们开发了一个基于在线黎曼优化的基于样本的惩罚预测控制（PPC）框架，其中模拟器将可行性流形压缩为基于分数的密度$\hat{p}(u\mid xi_t)$，赋予动作空间一个黎曼几何形状，指导规划器的梯度下降。势垒曲率 $κ(xi_t)$，即条件对数密度 $-\ln\hat{p}(\cdot\midxi_t)$ 的最小曲率，控制着收敛速度和安全裕度，取代了未知动力学的 Lipschitz 常数。我们的主要结果是上下文安全界限，表明与真实可行性流形的距离由分数估计误差和取决于 $κ(xi_t)$ 的比率控制，这两者都随着更丰富的上下文而改善。对动态导航任务的模拟证实，上下文 PPC 大大优于边际密度模型和冻结密度模型，并且在环境变化后优势不断增强。
+
+</details>
+
+---
+
+## 3. LASER: Learning Active Sensing for Continuum Field Reconstruction / 激光：学习连续场重建的主动传感
+
+**Date**: 2026-04-21 | **arXiv**: [2604.19355v1](http://arxiv.org/abs/2604.19355v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.19355v1)
+
+**Categories**: cs.LG, cs.AI, cs.CE
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+High-fidelity measurements of continuum physical fields are essential for scientific discovery and engineering design but remain challenging under sparse and constrained sensing. Conventional reconstruction methods typically rely on fixed sensor layouts, which cannot adapt to evolving physical states. We propose LASER, a unified, closed-loop framework that formulates active sensing as a Partially Observable Markov Decision Process (POMDP). At its core, LASER employs a continuum field latent world model that captures the underlying physical dynamics and provides intrinsic reward feedback. This enables a reinforcement learning policy to simulate ''what-if'' sensing scenarios within a latent imagination space. By conditioning sensor movements on predicted latent states, LASER navigates toward potentially high-information regions beyond current observations. Our experiments demonstrate that LASER consistently outperforms static and offline-optimized strategies, achieving high-fidelity reconstruction under sparsity across diverse continuum fields.
+
+连续物理场的高保真测量对于科学发现和工程设计至关重要，但在稀疏和受限传感下仍然具有挑战性。传统的重建方法通常依赖于固定的传感器布局，无法适应不断变化的物理状态。我们提出 LASER，一个统一的闭环框架，它将主动传感制定为部分可观察马尔可夫决策过程（POMDP）。 LASER 的核心采用连续场潜在世界模型，捕捉潜在的物理动力学并提供内在的奖励反馈。这使得强化学习策略能够在潜在想象空间内模拟“假设”传感场景。通过根据预测的潜在状态调节传感器的运动，激光可以导航到当前观测范围之外的潜在高信息区域。我们的实验表明，LASER 始终优于静态和离线优化策略，在不同连续介质场的稀疏性下实现了高保真度重建。
+
+</details>
+
+---
+
+## 4. RoboWM-Bench: A Benchmark for Evaluating World Models in Robotic Manipulation / RoboWM-Bench：评估机器人操作世界模型的基准
+
+**Date**: 2026-04-21 | **arXiv**: [2604.19092v1](http://arxiv.org/abs/2604.19092v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.19092v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in large-scale video world models have enabled increasingly realistic future prediction, raising the prospect of leveraging imagined videos for robot learning. However, visual realism does not imply physical plausibility, and behaviors inferred from generated videos may violate dynamics and fail when executed by embodied agents. Existing benchmarks begin to incorporate notions of physical plausibility, but they largely remain perception- or diagnostic-oriented and do not systematically evaluate whether predicted behaviors can be translated into executable actions that complete the intended task. To address this gap, we introduce RoboWM-Bench, a manipulation-centric benchmark for embodiment-grounded evaluation of video world models. RoboWM-Bench converts generated behaviors from both human-hand and robotic manipulation videos into embodied action sequences and validates them through robotic execution. The benchmark spans diverse manipulation scenarios and establishes a unified protocol for consistent and reproducible evaluation. Using RoboWM-Bench, we evaluate state-of-the-art video world models and find that reliably generating physically executable behaviors remains an open challenge. Common failure modes include errors in spatial reasoning, unstable contact prediction, and non-physical deformations. While finetuning on manipulation data yields improvements, physical inconsistencies still persist, suggesting opportunities for more physically grounded video generation for robots.
+
+大规模视频世界模型的最新进展使得未来预测变得越来越现实，提高了利用想象视频进行机器人学习的前景。然而，视觉真实感并不意味着物理合理性，从生成的视频推断的行为可能会违反动力学，并在由具体代理执行时失败。现有的基准开始纳入物理合理性的概念，但它们在很大程度上仍然以感知或诊断为导向，并且没有系统地评估预测的行为是否可以转化为完成预期任务的可执行行动。为了解决这一差距，我们引入了 RoboWM-Bench，这是一种以操作为中心的基准，用于对视频世界模型进行基于实施例的评估。 RoboWM-Bench 将人手和机器人操作视频生成的行为转换为具体的动作序列，并通过机器人执行对其进行验证。该基准跨越不同的操作场景，并建立统一的协议以进行一致且可重复的评估。使用 RoboWM-Bench，我们评估了最先进的视频世界模型，发现可靠地生成物理上可执行的行为仍然是一个开放的挑战。常见的失效模式包括空间推理错误、不稳定的接触预测和非物理变形。虽然对操纵数据的微调产生了改进，但物理不一致仍然存在，这表明为机器人生成更基于物理的视频的机会。
+
+</details>
+
+---
+
+## 5. Curiosity-Critic: Cumulative Prediction Error Improvement as a Tractable Intrinsic Reward for World Model Training / 好奇心批评家：累积预测误差改进作为世界模型训练的易处理的内在奖励
+
+**Date**: 2026-04-20 | **arXiv**: [2604.18701v1](http://arxiv.org/abs/2604.18701v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.18701v1)
+
+**Categories**: cs.LG, cs.AI, stat.ML
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Local prediction-error-based curiosity rewards focus on the current transition without considering the world model's cumulative prediction error across all visited transitions. We introduce Curiosity-Critic, which grounds its intrinsic reward in the improvement of this cumulative objective, and show that it reduces to a tractable per-step form: the difference between the current prediction error and the asymptotic error baseline of the current state transition. We estimate this baseline online with a learned critic co-trained alongside the world model; regressing a single scalar, the critic converges well before the world model saturates, redirecting exploration toward learnable transitions without oracle knowledge of the noise floor. The reward is higher for learnable transitions and collapses toward the baseline for stochastic ones, effectively separating epistemic (reducible) from aleatoric (irreducible) prediction error online. Prior prediction-error curiosity formulations, from Schmidhuber (1991) to learned-feature-space variants, emerge as special cases corresponding to specific approximations of this baseline. Experiments on a stochastic grid world show that Curiosity-Critic outperforms prediction-error and visitation-count baselines in convergence speed and final world model accuracy.
+
+基于局部预测误差的好奇心奖励关注当前的转变，而不考虑世界模型在所有访问过的转变中的累积预测误差。我们引入了 Curiosity-Critic，它将其内在奖励建立在累积目标的改进上，并表明它可以简化为易于处理的每步形式：当前预测误差与当前状态转换的渐近误差基线之间的差异。我们与一位与世界模型共同训练的博学批评家在线估计了这个基线；回归单个标量，批评者在世界模型饱和之前就收敛了，将探索重定向到可学习的过渡，而无需对噪声基底的预言知识。对于可学习的转变，奖励更高，对于随机的转变，奖励会向基线崩溃，从而有效地将认知（可简化）与任意（不可简化）在线预测误差分开。先前的预测误差好奇心公式，从 Schmidhuber (1991) 到学习特征空间变体，都是作为与该基线的特定近似值相对应的特殊情况出现的。在随机网格世界上的实验表明，Curiosity-Critic 在收敛速度和最终世界模型精度方面优于预测误差和访问计数基线。
+
+</details>
+
+---
+
+## 6. OneVL: One-Step Latent Reasoning and Planning with Vision-Language Explanation / OneVL：带有视觉语言解释的一步潜在推理和规划
+
+**Date**: 2026-04-20 | **arXiv**: [2604.18486v1](http://arxiv.org/abs/2604.18486v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.18486v1)
+
+**Categories**: cs.CV, cs.CL, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Chain-of-Thought (CoT) reasoning has become a powerful driver of trajectory prediction in VLA-based autonomous driving, yet its autoregressive nature imposes a latency cost that is prohibitive for real-time deployment. Latent CoT methods attempt to close this gap by compressing reasoning into continuous hidden states, but consistently fall short of their explicit counterparts. We suggest that this is due to purely linguistic latent representations compressing a symbolic abstraction of the world, rather than the causal dynamics that actually govern driving. Thus, we present OneVL (One-step latent reasoning and planning with Vision-Language explanations), a unified VLA and World Model framework that routes reasoning through compact latent tokens supervised by dual auxiliary decoders. Alongside a language decoder that reconstructs text CoT, we introduce a visual world model decoder that predicts future-frame tokens, forcing the latent space to internalize the causal dynamics of road geometry, agent motion, and environmental change. A three-stage training pipeline progressively aligns these latents with trajectory, language, and visual objectives, ensuring stable joint optimization. At inference, the auxiliary decoders are discarded and all latent tokens are prefilled in a single parallel pass, matching the speed of answer-only prediction. Across four benchmarks, OneVL becomes the first latent CoT method to surpass explicit CoT, delivering state-of-the-art accuracy at answer-only latency, and providing direct evidence that tighter compression, when guided in both language and world-model supervision, produces more generalizable representations than verbose token-by-token reasoning. Project Page: https://xiaomi-embodied-intelligence.github.io/OneVL
+
+思想链 (CoT) 推理已成为基于 VLA 的自动驾驶中轨迹预测的强大驱动力，但其自回归性质带来的延迟成本阻碍了实时部署。潜在 CoT 方法试图通过将推理压缩为连续隐藏状态来缩小这一差距，但始终达不到其显式对应方法。我们认为这是由于纯粹的语言潜在表征压缩了世界的符号抽象，而不是实际控制驾驶的因果动态。因此，我们提出了 OneVL（带有视觉语言解释的一步潜在推理和规划），这是一种统一的 VLA 和世界模型框架，通过由双辅助解码器监督的紧凑潜在令牌进行推理。除了重建文本 CoT 的语言解码器之外，我们还引入了一个视觉世界模型解码器，可以预测未来帧标记，迫使潜在空间内化道路几何、代理运动和环境变化的因果动态。三阶段训练流程逐步将这些潜在变量与轨迹、语言和视觉目标结合起来，确保稳定的联合优化。在推理时，辅助解码器被丢弃，所有潜在令牌都在单个并行通道中预填充，与仅答案预测的速度相匹配。在四个基准测试中，OneVL 成为第一个超越显式 CoT 的潜在 CoT 方法，在仅回答延迟的情况下提供最先进的准确性，并提供直接证据表明，在语言和世界模型监督的指导下，更严格的压缩会产生比详细的逐个令牌推理更通用的表示。项目页面：https://xiaomi-embodied-intelligence.github.io/OneVL
+
+</details>
+
+---
+
+## 7. NI Sampling: Accelerating Discrete Diffusion Sampling by Token Order Optimization / NI 采样：通过令牌阶优化加速离散扩散采样
+
+**Date**: 2026-04-20 | **arXiv**: [2604.18471v1](http://arxiv.org/abs/2604.18471v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.18471v1)
+
+**Categories**: cs.LG
+
+**Code**: https://github.com/imagination-research/NI-Sampling.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Discrete diffusion language models (dLLMs) have recently emerged as a promising alternative to traditional autoregressive approaches, offering the flexibility to generate tokens in arbitrary orders and the potential of parallel decoding. However, existing heuristic sampling strategies remain inefficient: they choose only a small part of tokens to sample at each step, leaving substantial room for improvement. In this work, we study the problem of token sampling order optimization and demonstrate its significant potential for acceleration. Specifically, we find that fully leveraging correct predictions at each step can reduce the number of sampling iterations by an order of magnitude without compromising accuracy. Based on this, we propose Neural Indicator Sampling (NI Sampling), a general sampling order optimization framework that utilize a neural indicator to decide which tokens should be sampled at each step. We further propose a novel trajectory-preserving objective to train the indicator. Experiments on LLaDA and Dream models across multiple benchmarks show that our method achieves up to 14.3$\times$ acceleration over full-step sampling with negligible performance drop, and consistently outperforms confidence threshold sampling in the accuracy-step trade-off. Code is available at https://github.com/imagination-research/NI-Sampling.
+
+离散扩散语言模型 (dLLM) 最近成为传统自回归方法的一种有前景的替代方案，提供了以任意顺序生成标记的灵活性以及并行解码的潜力。然而，现有的启发式采样策略仍然效率低下：它们在每一步只选择一小部分令牌进行采样，留下了很大的改进空间。在这项工作中，我们研究了令牌采样顺序优化问题，并展示了其巨大的加速潜力。具体来说，我们发现在每个步骤中充分利用正确的预测可以在不影响准确性的情况下将采样迭代次数减少一个数量级。基于此，我们提出了神经指示器采样（NI Sampling），这是一种通用采样顺序优化框架，利用神经指示器来决定每一步应该采样哪些令牌。我们进一步提出了一种新颖的轨迹保持目标来训练指标。在多个基准上对 LLaDA 和 Dream 模型进行的实验表明，我们的方法在全步采样上实现了高达 14.3$\times$ 的加速，性能下降可以忽略不计，并且在精度步权衡中始终优于置信阈值采样。代码可在 https://github.com/imagination-research/NI-Sampling 获取。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-04-21 (8 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-04-21
