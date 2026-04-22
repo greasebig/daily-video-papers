@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-04-22](papers/2026-04-22.md) - 19 papers
 - [2026-04-21](papers/2026-04-21.md) - 18 papers
 - [2026-04-20](papers/2026-04-20.md) - 1 papers
 - [2026-04-17](papers/2026-04-17.md) - 12 papers
@@ -64,6 +65,328 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-04-22 (19 papers)</b></summary>
+
+# arXiv Video Papers - 2026-04-22
+
+**Paper Count**: 19
+
+---
+
+## 1. AnyRecon: Arbitrary-View 3D Reconstruction with Video Diffusion Model / AnyRecon：使用视频扩散模型进行任意视图 3D 重建
+
+**Date**: 2026-04-21 | **arXiv**: [2604.19747v1](http://arxiv.org/abs/2604.19747v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.19747v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Sparse-view 3D reconstruction is essential for modeling scenes from casual captures, but remain challenging for non-generative reconstruction. Existing diffusion-based approaches mitigates this issues by synthesizing novel views, but they often condition on only one or two capture frames, which restricts geometric consistency and limits scalability to large or diverse scenes. We propose AnyRecon, a scalable framework for reconstruction from arbitrary and unordered sparse inputs that preserves explicit geometric control while supporting flexible conditioning cardinality. To support long-range conditioning, our method constructs a persistent global scene memory via a prepended capture view cache, and removes temporal compression to maintain frame-level correspondence under large viewpoint changes. Beyond better generative model, we also find that the interplay between generation and reconstruction is crucial for large-scale 3D scenes. Thus, we introduce a geometry-aware conditioning strategy that couples generation and reconstruction through an explicit 3D geometric memory and geometry-driven capture-view retrieval. To ensure efficiency, we combine 4-step diffusion distillation with context-window sparse attention to reduce quadratic complexity. Extensive experiments demonstrate robust and scalable reconstruction across irregular inputs, large viewpoint gaps, and long trajectories.
+
+稀疏视图 3D 重建对于随意捕捉的场景建模至关重要，但对于非生成重建仍然具有挑战性。现有的基于扩散的方法通过合成新颖的视图来缓解这个问题，但它们通常仅以一两个捕获帧为条件，这限制了几何一致性并限制了大型或不同场景的可扩展性。我们提出了 AnyRecon，这是一个可扩展的框架，用于从任意和无序的稀疏输入进行重建，保留显式的几何控制，同时支持灵活的条件基数。为了支持远程调节，我们的方法通过预先设置的捕获视图缓存构建持久的全局场景内存，并删除时间压缩以在大视点变化下保持帧级对应。除了更好的生成模型之外，我们还发现生成和重建之间的相互作用对于大规模 3D 场景至关重要。因此，我们引入了一种几何感知调节策略，该策略通过显式 3D 几何内存和几何驱动的捕获视图检索将生成和重建结合起来。为了确保效率，我们将 4 步扩散蒸馏与上下文窗口稀疏注意力相结合，以降低二次复杂度。大量的实验证明了在不规则输入、大视点间隙和长轨迹上的稳健和可扩展的重建。
+
+</details>
+
+---
+
+## 2. CityRAG: Stepping Into a City via Spatially-Grounded Video Generation / CityRAG：通过空间视频生成走进城市
+
+**Date**: 2026-04-21 | **arXiv**: [2604.19741v1](http://arxiv.org/abs/2604.19741v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.19741v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We address the problem of generating a 3D-consistent, navigable environment that is spatially grounded: a simulation of a real location. Existing video generative models can produce a plausible sequence that is consistent with a text (T2V) or image (I2V) prompt. However, the capability to reconstruct the real world under arbitrary weather conditions and dynamic object configurations is essential for downstream applications including autonomous driving and robotics simulation. To this end, we present CityRAG, a video generative model that leverages large corpora of geo-registered data as context to ground generation to the physical scene, while maintaining learned priors for complex motion and appearance changes. CityRAG relies on temporally unaligned training data, which teaches the model to semantically disentangle the underlying scene from its transient attributes. Our experiments demonstrate that CityRAG can generate coherent minutes-long, physically grounded video sequences, maintain weather and lighting conditions over thousands of frames, achieve loop closure, and navigate complex trajectories to reconstruct real-world geography.
+
+我们解决了生成基于空间的 3D 一致、可导航环境的问题：对真实位置的模拟。现有的视频生成模型可以生成与文本 (T2V) 或图像 (I2V) 提示一致的合理序列。然而，在任意天气条件和动态对象配置下重建现实世界的能力对于自动驾驶和机器人模拟等下游应用至关重要。为此，我们提出了 CityRAG，这是一种视频生成模型，它利用大量地理注册数据作为物理场景地面生成的上下文，同时保持复杂运动和外观变化的学习先验。 CityRAG 依赖于时间上未对齐的训练数据，该数据教导模型在语义上将底层场景与其瞬态属性分开。我们的实验表明，CityRAG 可以生成连贯的长达数分钟的物理接地视频序列，维持数千帧的天气和照明条件，实现闭环，并导航复杂的轨迹以重建现实世界的地理。
+
+</details>
+
+---
+
+## 3. UniT: Toward a Unified Physical Language for Human-to-Humanoid Policy Learning and World Modeling / Unit：为人对人的政策学习和世界建模建立统一的物理语言
+
+**Date**: 2026-04-21 | **arXiv**: [2604.19734v1](http://arxiv.org/abs/2604.19734v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.19734v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Scaling humanoid foundation models is bottlenecked by the scarcity of robotic data. While massive egocentric human data offers a scalable alternative, bridging the cross-embodiment chasm remains a fundamental challenge due to kinematic mismatches. We introduce UniT (Unified Latent Action Tokenizer via Visual Anchoring), a framework that establishes a unified physical language for human-to-humanoid transfer. Grounded in the philosophy that heterogeneous kinematics share universal visual consequences, UniT employs a tri-branch cross-reconstruction mechanism: actions predict vision to anchor kinematics to physical outcomes, while vision reconstructs actions to filter out irrelevant visual confounders. Concurrently, a fusion branch synergies these purified modalities into a shared discrete latent space of embodiment-agnostic physical intents. We validate UniT across two paradigms: 1) Policy Learning (VLA-UniT): By predicting these unified tokens, it effectively leverages diverse human data to achieve state-of-the-art data efficiency and robust out-of-distribution (OOD) generalization on both humanoid simulation benchmark and real-world deployments, notably demonstrating zero-shot task transfer. 2) World Modeling (WM-UniT): By aligning cross-embodiment dynamics via unified tokens as conditions, it realizes direct human-to-humanoid action transfer. This alignment ensures that human data seamlessly translates into enhanced action controllability for humanoid video generation. Ultimately, by inducing a highly aligned cross-embodiment representation (empirically verified by t-SNE visualizations revealing the convergence of human and humanoid features into a shared manifold), UniT offers a scalable path to distill vast human knowledge into general-purpose humanoid capabilities.
+
+机器人数据的稀缺阻碍了人形基础模型的扩展。虽然大量以自我为中心的人类数据提供了可扩展的替代方案，但由于运动学不匹配，弥合跨实体鸿沟仍然是一个根本挑战。我们引入了 UniT（通过视觉锚定的统一潜在动作分词器），这是一个为人与人之间的传输建立统一物理语言的框架。基于异构运动学共享普遍视觉后果的理念，UnitT 采用了三分支交叉重建机制：动作预测视觉，将运动学锚定到物理结果，而视觉重建动作，以过滤掉不相关的视觉混杂因素。同时，融合分支将这些纯化的模态协同作用到与实施例无关的物理意图的共享离散潜在空间中。我们通过两种范式验证 UnitT：1）策略学习（VLA-UnitT）：通过预测这些统一的令牌，它有效地利用不同的人类数据，在人形模拟基准和实际部署上实现最先进的数据效率和强大的分布外（OOD）泛化，特别是展示了零样本任务转移。 2）世界建模（WM-UniT）：通过统一令牌作为条件来调整跨实体动态，实现直接的人与人之间的动作转移。这种对齐确保人类数据无缝转化为人形视频生成的增强动作可控性。最终，通过引入高度一致的跨实体表示（通过 t-SNE 可视化进行经验验证，揭示人类和类人特征融合到共享流形中），UnitT 提供了一条可扩展的路径，将大量人类知识提炼为通用类人功能。
+
+</details>
+
+---
+
+## 4. ReImagine: Rethinking Controllable High-Quality Human Video Generation via Image-First Synthesis / ReImagine：重新思考通过图像优先合成的可控高质量人类视频生成
+
+**Date**: 2026-04-21 | **arXiv**: [2604.19720v1](http://arxiv.org/abs/2604.19720v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.19720v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/Taited/ReImagine.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Human video generation remains challenging due to the difficulty of jointly modeling human appearance, motion, and camera viewpoint under limited multi-view data. Existing methods often address these factors separately, resulting in limited controllability or reduced visual quality. We revisit this problem from an image-first perspective, where high-quality human appearance is learned via image generation and used as a prior for video synthesis, decoupling appearance modeling from temporal consistency. We propose a pose- and viewpoint-controllable pipeline that combines a pretrained image backbone with SMPL-X-based motion guidance, together with a training-free temporal refinement stage based on a pretrained video diffusion model. Our method produces high-quality, temporally consistent videos under diverse poses and viewpoints. We also release a canonical human dataset and an auxiliary model for compositional human image synthesis. Code and data are publicly available at https://github.com/Taited/ReImagine.
+
+由于在有限的多视图数据下联合建模人类外观、运动和相机视点非常困难，人类视频生成仍然具有挑战性。现有方法通常单独解决这些因素，导致可控性有限或视觉质量降低。我们从图像优先的角度重新审视这个问题，通过图像生成学习高质量的人体外观，并将其用作视频合成的先验，将外观建模与时间一致性解耦。我们提出了一种姿势和视点可控的管道，它将预训练的图像主干与基于 SMPL-X 的运动指导相结合，以及基于预训练的视频扩散模型的免训练时间细化阶段。我们的方法可以在不同的姿势和视角下生成高质量、时间一致的视频。我们还发布了一个规范的人体数据集和一个用于合成人体图像合成的辅助模型。代码和数据可在 https://github.com/Taited/ReImagine 上公开获取。
+
+</details>
+
+---
+
+## 5. Mask World Model: Predicting What Matters for Robust Robot Policy Learning / 面具世界模型：预测对于鲁棒机器人策略学习来说重要的事情
+
+**Date**: 2026-04-21 | **arXiv**: [2604.19683v1](http://arxiv.org/abs/2604.19683v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.19683v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models derived from large-scale video generative pre-training have emerged as a promising paradigm for generalist robot policy learning. However, standard approaches often focus on high-fidelity RGB video prediction, this can result in overfitting to irrelevant factors, such as dynamic backgrounds and illumination changes. These distractions reduce the model's ability to generalize, ultimately leading to unreliable and fragile control policies. To address this, we introduce the Mask World Model (MWM), which leverages video diffusion architectures to predict the evolution of semantic masks instead of pixels. This shift imposes a geometric information bottleneck, forcing the model to capture essential physical dynamics and contact relations while filtering out visual noise. We seamlessly integrate this mask dynamics backbone with a diffusion-based policy head to enable robust end-to-end control. Extensive evaluations demonstrate the superiority of MWM on the LIBERO and RLBench simulation benchmarks, significantly outperforming the state-of-the-art RGB-based world models. Furthermore, real-world experiments and robustness evaluation (via random token pruning) reveal that MWM exhibits superior generalization capabilities and robust resilience to texture information loss.
+
+来自大规模视频生成预训练的世界模型已成为通用机器人策略学习的有前途的范例。然而，标准方法通常侧重于高保真 RGB 视频预测，这可能会导致对不相关因素的过度拟合，例如动态背景和照明变化。这些干扰降低了模型的泛化能力，最终导致控制政策不可靠且脆弱。为了解决这个问题，我们引入了掩模世界模型（MWM），它利用视频扩散架构来预测语义掩模而不是像素的演变。这种转变带来了几何信息瓶颈，迫使模型捕捉必要的物理动力学和接触关系，同时滤除视觉噪声。我们将这种掩模动态主干与基于扩散的策略头无缝集成，以实现强大的端到端控制。广泛的评估证明了 MWM 在 LIBERO 和 RLBench 模拟基准上的优越性，显着优于最先进的基于 RGB 的世界模型。此外，现实世界的实验和鲁棒性评估（通过随机令牌修剪）表明，MWM 表现出卓越的泛化能力和对纹理信息丢失的强大恢复能力。
+
+</details>
+
+---
+
+## 6. MMControl: Unified Multi-Modal Control for Joint Audio-Video Generation / MMControl：用于联合音频-视频生成的统一多模态控制
+
+**Date**: 2026-04-21 | **arXiv**: [2604.19679v1](http://arxiv.org/abs/2604.19679v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.19679v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in Diffusion Transformers (DiTs) have enabled high-quality joint audio-video generation, producing videos with synchronized audio within a single model. However, existing controllable generation frameworks are typically restricted to video-only control. This restricts comprehensive controllability and often leads to suboptimal cross-modal alignment. To bridge this gap, we present MMControl, which enables users to perform Multi-Modal Control in joint audio-video generation. MMControl introduces a dual-stream conditional injection mechanism. It incorporates both visual and acoustic control signals, including reference images, reference audio, depth maps, and pose sequences, into a joint generation process. These conditions are injected through bypass branches into a joint audio-video Diffusion Transformer, enabling the model to simultaneously generate identity-consistent video and timbre-consistent audio under structural constraints. Furthermore, we introduce modality-specific guidance scaling, which allows users to independently and dynamically adjust the influence strength of each visual and acoustic condition at inference time. Extensive experiments demonstrate that MMControl achieves fine-grained, composable control over character identity, voice timbre, body pose, and scene layout in joint audio-video generation.
+
+扩散变压器 (DiT) 的最新进展实现了高质量的联合音频-视频生成，在单个模型中生成具有同步音频的视频。然而，现有的可控生成框架通常仅限于仅视频控制。这限制了综合可控性，并且常常导致跨模式对齐不理想。为了弥补这一差距，我们提出了 MMControl，它使用户能够在联合音频-视频生成中执行多模式控制。 MMControl引入了双流条件注入机制。它将视觉和声学控制信号（包括参考图像、参考音频、深度图和姿势序列）合并到联合生成过程中。这些条件通过旁路分支注入联合音视频扩散变压器，使模型能够在结构约束下同时生成身份一致的视频和音色一致的音频。此外，我们引入了特定于模态的指导缩放，它允许用户在推理时独立且动态地调整每个视觉和听觉条件的影响强度。大量实验表明，MMControl 在联合音视频生成中实现了对角色身份、音色、身体姿势和场景布局的细粒度、可组合控制。
+
+</details>
+
+---
+
+## 7. CoInteract: Physically-Consistent Human-Object Interaction Video Synthesis via Spatially-Structured Co-Generation / CoInteract：通过空间结构联合生成物理一致的人机交互视频合成
+
+**Date**: 2026-04-21 | **arXiv**: [2604.19636v1](http://arxiv.org/abs/2604.19636v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.19636v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Synthesizing human--object interaction (HOI) videos has broad practical value in e-commerce, digital advertising, and virtual marketing. However, current diffusion models, despite their photorealistic rendering capability, still frequently fail on (i) the structural stability of sensitive regions such as hands and faces and (ii) physically plausible contact (e.g., avoiding hand--object interpenetration). We present CoInteract, an end-to-end framework for HOI video synthesis conditioned on a person reference image, a product reference image, text prompts, and speech audio. CoInteract introduces two complementary designs embedded into a Diffusion Transformer (DiT) backbone. First, we propose a Human-Aware Mixture-of-Experts (MoE) that routes tokens to lightweight, region-specialized experts via spatially supervised routing, improving fine-grained structural fidelity with minimal parameter overhead. Second, we propose Spatially-Structured Co-Generation, a dual-stream training paradigm that jointly models an RGB appearance stream and an auxiliary HOI structure stream to inject interaction geometry priors. During training, the HOI stream attends to RGB tokens and its supervision regularizes shared backbone weights; at inference, the HOI branch is removed for zero-overhead RGB generation. Experimental results demonstrate that CoInteract significantly outperforms existing methods in structural stability, logical consistency, and interaction realism.
+
+合成人与物体交互（HOI）视频在电子商务、数字广告和虚拟营销中具有广泛的实用价值。然而，当前的扩散模型尽管具有逼真的渲染能力，但仍然经常在以下方面失败：（i）手和脸等敏感区域的结构稳定性；以及（ii）物理上合理的接触（例如，避免手与物体的相互渗透）。我们提出了 CoInteract，这是一个以人参考图像、产品参考图像、文本提示和语音音频为条件的 HOI 视频合成的端到端框架。 CoInteract 引入了两种嵌入扩散变压器 (DiT) 主干的互补设计。首先，我们提出了一种人类感知专家混合（MoE），通过空间监督路由将代币路由到轻量级、区域专业的专家，以最小的参数开销提高细粒度的结构保真度。其次，我们提出了空间结构化联合生成，这是一种双流训练范例，联合建模 RGB 外观流和辅助 HOI 结构流以注入交互几何先验。在训练期间，HOI 流关注 RGB 令牌，其监督规范共享主干权重；在推理时，HOI 分支被删除以实现零开销 RGB 生成。实验结果表明，CoInteract 在结构稳定性、逻辑一致性和交互真实性方面显着优于现有方法。
+
+</details>
+
+---
+
+## 8. TS-Attn: Temporal-wise Separable Attention for Multi-Event Video Generation / TS-Attn：用于多事件视频生成的时间可分离注意力
+
+**Date**: 2026-04-21 | **arXiv**: [2604.19473v1](http://arxiv.org/abs/2604.19473v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.19473v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/Hong-yu-Zhang/TS-Attn.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Generating high-quality videos from complex temporal descriptions that contain multiple sequential actions is a key unsolved problem. Existing methods are constrained by an inherent trade-off: using multiple short prompts fed sequentially into the model improves action fidelity but compromises temporal consistency, while a single complex prompt preserves consistency at the cost of prompt-following capability. We attribute this problem to two primary causes: 1) temporal misalignment between video content and the prompt, and 2) conflicting attention coupling between motion-related visual objects and their associated text conditions. To address these challenges, we propose a novel, training-free attention mechanism, Temporal-wise Separable Attention (TS-Attn), which dynamically rearranges attention distribution to ensure temporal awareness and global coherence in multi-event scenarios. TS-Attn can be seamlessly integrated into various pre-trained text-to-video models, boosting StoryEval-Bench scores by 33.5% and 16.4% on Wan2.1-T2V-14B and Wan2.2-T2V-A14B with only a 2% increase in inference time. It also supports plug-and-play usage across models for multi-event image-to-video generation. The source code and project page are available at https://github.com/Hong-yu-Zhang/TS-Attn.
+
+从包含多个连续动作的复杂时间描述生成高质量视频是一个尚未解决的关键问题。现有方法受到固有权衡的限制：使用顺序输入模型的多个短提示可以提高动作保真度，但会损害时间一致性，而单个复杂提示则以牺牲提示跟随能力为代价来保持一致性。我们将此问题归因于两个主要原因：1）视频内容和提示之间的时间错位，以及2）与运动相关的视觉对象及其相关文本条件之间的冲突注意耦合。为了应对这些挑战，我们提出了一种新颖的、免训练的注意力机制，即时间明智的可分离注意力（TS-Attn），它动态地重新安排注意力分布，以确保多事件场景中的时间意识和全局一致性。 TS-Attn 可以无缝集成到各种预训练的文本到视频模型中，将 Wan2.1-T2V-14B 和 Wan2.2-T2V-A14B 上的 StoryEval-Bench 分数分别提高 33.5% 和 16.4%，而推理时间仅增加 2%。它还支持跨模型的即插即用使用，以生成多事件图像到视频。源代码和项目页面可在 https://github.com/hong-yu-Zhang/TS-Attn 获取。
+
+</details>
+
+---
+
+## 9. Learning to Credit the Right Steps: Objective-aware Process Optimization for Visual Generation / 学习相信正确的步骤：视觉生成的目标感知流程优化
+
+**Date**: 2026-04-21 | **arXiv**: [2604.19234v1](http://arxiv.org/abs/2604.19234v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.19234v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reinforcement learning, particularly Group Relative Policy Optimization (GRPO), has emerged as an effective framework for post-training visual generative models with human preference signals. However, its effectiveness is fundamentally limited by coarse reward credit assignment. In modern visual generation, multiple reward models are often used to capture heterogeneous objectives, such as visual quality, motion consistency, and text alignment. Existing GRPO pipelines typically collapse these rewards into a single static scalar and propagate it uniformly across the entire diffusion trajectory. This design ignores the stage-specific roles of different denoising steps and produces mistimed or incompatible optimization signals. To address this issue, we propose Objective-aware Trajectory Credit Assignment (OTCA), a structured framework for fine-grained GRPO training. OTCA consists of two key components. Trajectory-Level Credit Decomposition estimates the relative importance of different denoising steps. Multi-Objective Credit Allocation adaptively weights and combines multiple reward signals throughout the denoising process. By jointly modeling temporal credit and objective-level credit, OTCA converts coarse reward supervision into a structured, timestep-aware training signal that better matches the iterative nature of diffusion-based generation. Extensive experiments show that OTCA consistently improves both image and video generation quality across evaluation metrics.
+
+强化学习，特别是群体相对策略优化（GRPO），已成为具有人类偏好信号的训练后视觉生成模型的有效框架。然而，其有效性从根本上受到粗略奖励信用分配的限制。在现代视觉生成中，多个奖励模型通常用于捕获异构目标，例如视觉质量、运动一致性和文本对齐。现有的 GRPO 管道通常将这些奖励压缩为单个静态标量，并将其均匀地传播到整个扩散轨迹。这种设计忽略了不同降噪步骤的阶段特定作用，并产生不合时宜或不兼容的优化信号。为了解决这个问题，我们提出了客观感知轨迹信用分配（OTCA），这是一种用于细粒度 GRPO 训练的结构化框架。 OTCA 由两个关键部分组成。轨迹级信用分解估计不同去噪步骤的相对重要性。多目标信用分配在整个去噪过程中自适应地加权和组合多个奖励信号。通过对时间信用和目标级信用进行联合建模，OTCA 将粗略的奖励监督转换为结构化的、时间步感知的训练信号，更好地匹配基于扩散的生成的迭代性质。大量实验表明，OTCA 能够持续提高跨评估指标的图像和视频生成质量。
+
+</details>
+
+---
+
+## 10. How Far Are Video Models from True Multimodal Reasoning? / 视频模型离真正的多模态推理还有多远？
+
+**Date**: 2026-04-21 | **arXiv**: [2604.19193v1](http://arxiv.org/abs/2604.19193v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.19193v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Despite remarkable progress toward general-purpose video models, a critical question remains unanswered: how far are these models from achieving true multimodal reasoning? Existing benchmarks fail to address this question rigorously, as they remain constrained by straightforward task designs and fragmented evaluation metrics that neglect complex multimodal reasoning. To bridge this gap, we introduce CLVG-Bench, an evaluation framework designed to probe video models' zero-shot reasoning capabilities via Context Learning in Video Generation. CLVG-Bench comprises more than 1,000 high-quality, manually annotated metadata across 6 categories and 47 subcategories, covering complex scenarios including physical simulation, logical reasoning, and interactive contexts. To enable rigorous and scalable assessment, we further propose an Adaptive Video Evaluator (AVE) that aligns with human expert perception using minimal annotations, delivering interpretable textual feedback across diverse video context tasks. Extensive experiments reveal a striking answer to our central question: while state-of-the-art (SOTA) video models, such as Seedance 2.0, demonstrate competence on certain understanding and reasoning subtasks, they fall substantially short with logically grounded and interactive generation tasks (achieving success rates <25% and ~0%, respectively), exposing multimodal reasoning and physical grounding as critical bottlenecks. By systematically quantifying these limitations, the proposed method provides actionable feedbacks and a clear roadmap toward truly robust, general-purpose video models. CLVG-Bench and code are released here.
+
+尽管通用视频模型取得了显着进展，但一个关键问题仍未得到解答：这些模型距离实现真正的多模态推理还有多远？现有的基准无法严格解决这个问题，因为它们仍然受到简单的任务设计和分散的评估指标的限制，而忽略了复杂的多模态推理。为了弥补这一差距，我们引入了 CLVG-Bench，这是一个评估框架，旨在通过视频生成中的上下文学习来探索视频模型的零样本推理能力。 CLVG-Bench 包含 6 个类别和 47 个子类别的 1,000 多个高质量、手动注释的元数据，涵盖物理模拟、逻辑推理和交互式上下文等复杂场景。为了实现严格且可扩展的评估，我们进一步提出了一种自适应视频评估器（AVE），它使用最少的注释与人类专家的感知保持一致，在不同的视频上下文任务中提供可解释的文本反馈。大量的实验揭示了我们核心问题的惊人答案：虽然 Seedance 2.0 等最先进的 (SOTA) 视频模型在某些理解和推理子任务上表现出了能力，但它们在逻辑基础和交互式生成任务方面远远落后（成功率分别<25% 和 ~0%），将多模态推理和物理基础暴露为关键瓶颈。通过系统地量化这些限制，所提出的方法提供了可操作的反馈和清晰的路线图，以实现真正稳健的通用视频模型。 CLVG-Bench 和代码已在此处发布。
+
+</details>
+
+---
+
+## 11. RoboWM-Bench: A Benchmark for Evaluating World Models in Robotic Manipulation / RoboWM-Bench：评估机器人操作世界模型的基准
+
+**Date**: 2026-04-21 | **arXiv**: [2604.19092v1](http://arxiv.org/abs/2604.19092v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.19092v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in large-scale video world models have enabled increasingly realistic future prediction, raising the prospect of leveraging imagined videos for robot learning. However, visual realism does not imply physical plausibility, and behaviors inferred from generated videos may violate dynamics and fail when executed by embodied agents. Existing benchmarks begin to incorporate notions of physical plausibility, but they largely remain perception- or diagnostic-oriented and do not systematically evaluate whether predicted behaviors can be translated into executable actions that complete the intended task. To address this gap, we introduce RoboWM-Bench, a manipulation-centric benchmark for embodiment-grounded evaluation of video world models. RoboWM-Bench converts generated behaviors from both human-hand and robotic manipulation videos into embodied action sequences and validates them through robotic execution. The benchmark spans diverse manipulation scenarios and establishes a unified protocol for consistent and reproducible evaluation. Using RoboWM-Bench, we evaluate state-of-the-art video world models and find that reliably generating physically executable behaviors remains an open challenge. Common failure modes include errors in spatial reasoning, unstable contact prediction, and non-physical deformations. While finetuning on manipulation data yields improvements, physical inconsistencies still persist, suggesting opportunities for more physically grounded video generation for robots.
+
+大规模视频世界模型的最新进展使得未来预测变得越来越现实，提高了利用想象视频进行机器人学习的前景。然而，视觉真实感并不意味着物理合理性，从生成的视频推断的行为可能会违反动力学，并在由具体代理执行时失败。现有的基准开始纳入物理合理性的概念，但它们在很大程度上仍然以感知或诊断为导向，并且没有系统地评估预测的行为是否可以转化为完成预期任务的可执行行动。为了解决这一差距，我们引入了 RoboWM-Bench，这是一种以操作为中心的基准，用于对视频世界模型进行基于实施例的评估。 RoboWM-Bench 将人手和机器人操作视频生成的行为转换为具体的动作序列，并通过机器人执行对其进行验证。该基准跨越不同的操作场景，并建立统一的协议以进行一致且可重复的评估。使用 RoboWM-Bench，我们评估了最先进的视频世界模型，发现可靠地生成物理上可执行的行为仍然是一个开放的挑战。常见的失效模式包括空间推理错误、不稳定的接触预测和非物理变形。虽然对操纵数据的微调产生了改进，但物理不一致仍然存在，这表明为机器人生成更基于物理的视频的机会。
+
+</details>
+
+---
+
+## 12. AutoAWG: Adverse Weather Generation with Adaptive Multi-Controls for Automotive Videos / AutoAWG：通过自适应多重控制生成恶劣天气的汽车视频
+
+**Date**: 2026-04-21 | **arXiv**: [2604.18993v1](http://arxiv.org/abs/2604.18993v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.18993v1)
+
+**Categories**: cs.CV, cs.AI, cs.MM
+
+**Code**: https://github.com/higherhu/AutoAWG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Perception robustness under adverse weather remains a critical challenge for autonomous driving, with the core bottleneck being the scarcity of real-world video data in adverse weather. Existing weather generation approaches struggle to balance visual quality and annotation reusability. We present AutoAWG, a controllable Adverse Weather video Generation framework for Autonomous driving. Our method employs a semantics-guided adaptive fusion of multiple controls to balance strong weather stylization with high-fidelity preservation of safety-critical targets; leverages a vanishing point-anchored temporal synthesis strategy to construct training sequences from static images, thereby reducing reliance on synthetic data; and adopts masked training to enhance long-horizon generation stability. On the nuScenes validation set, AutoAWG significantly outperforms prior state-of-the-art methods: without first-frame conditioning, FID and FVD are relatively reduced by 50.0% and 16.1%; with first-frame conditioning, they are further reduced by 8.7% and 7.2%, respectively. Extensive qualitative and quantitative results demonstrate advantages in style fidelity, temporal consistency, and semantic--structural integrity, underscoring the practical value of AutoAWG for improving downstream perception in autonomous driving. Our code is available at: https://github.com/higherhu/AutoAWG
+
+恶劣天气下的感知鲁棒性仍然是自动驾驶面临的关键挑战，其核心瓶颈是恶劣天气下真实视频数据的稀缺。现有的天气生成方法很难平衡视觉质量和注释可重用性。我们推出 AutoAWG，一种用于自动驾驶的可控恶劣天气视频生成框架。我们的方法采用语义引导的多种控制的自适应融合来平衡强天气风格化与安全关键目标的高保真度保存；利用消失点锚定时间合成策略从静态图像构建训练序列，从而减少对合成数据的依赖；并采用掩蔽训练来增强长视野生成稳定性。在 nuScenes 验证集上，AutoAWG 显着优于先前最先进的方法：在没有第一帧条件的情况下，FID 和 FVD 相对减少了 50.0% 和 16.1%；通过第一帧调节，它们分别进一步减少了 8.7% 和 7.2%。广泛的定性和定量结果展示了风格保真度、时间一致性和语义结构完整性方面的优势，强调了 AutoAWG 在改善自动驾驶下游感知方面的实用价值。我们的代码位于：https://github.com/higherhu/AutoAWG
+
+</details>
+
+---
+
+## 13. MultiWorld: Scalable Multi-Agent Multi-View Video World Models / MultiWorld：可扩展的多代理多视图视频世界模型
+
+**Date**: 2026-04-20 | **arXiv**: [2604.18564v2](http://arxiv.org/abs/2604.18564v2) | **PDF**: [Link](http://arxiv.org/pdf/2604.18564v2)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video world models have achieved remarkable success in simulating environmental dynamics in response to actions by users or agents. They are modeled as action-conditioned video generation models that take historical frames and current actions as input to predict future frames. Yet, most existing approaches are limited to single-agent scenarios and fail to capture the complex interactions inherent in real-world multi-agent systems. We present \textbf{MultiWorld}, a unified framework for multi-agent multi-view world modeling that enables accurate control of multiple agents while maintaining multi-view consistency. We introduce the Multi-Agent Condition Module to achieve precise multi-agent controllability, and the Global State Encoder to ensure coherent observations across different views. MultiWorld supports flexible scaling of agent and view counts, and synthesizes different views in parallel for high efficiency. Experiments on multi-player game environments and multi-robot manipulation tasks demonstrate that MultiWorld outperforms baselines in video fidelity, action-following ability, and multi-view consistency. Project page: https://multi-world.github.io/
+
+视频世界模型在模拟环境动态以响应用户或代理的操作方面取得了显着的成功。它们被建模为动作条件视频生成模型，将历史帧和当前动作作为输入来预测未来帧。然而，大多数现有方法仅限于单代理场景，无法捕获现实世界多代理系统中固有的复杂交互。我们提出了 \textbf{MultiWorld}，这是一个用于多智能体多视图世界建模的统一框架，可以精确控制多个智能体，同时保持多视图一致性。我们引入多智能体条件模块来实现精确的多智能体可控性，并引入全局状态编码器来确保不同视图之间的一致观察。 MultiWorld 支持灵活缩放代理和视图计数，并并行合成不同视图以提高效率。多人游戏环境和多机器人操作任务的实验表明，MultiWorld 在视频保真度、动作跟踪能力和多视图一致性方面优于基准。项目页面：https://multi-world.github.io/
+
+</details>
+
+---
+
+## 14. Progressive Online Video Understanding with Evidence-Aligned Timing and Transparent Decisions / 渐进式在线视频理解与证据一致的时间和透明的决策
+
+**Date**: 2026-04-20 | **arXiv**: [2604.18459v1](http://arxiv.org/abs/2604.18459v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.18459v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Visual agents operating in the wild must respond to queries precisely when sufficient evidence first appears in a video stream, a critical capability that is overlooked by conventional video LLMs evaluated in offline settings. The shift to an online, streaming paradigm introduces significant challenges: a lack of decision transparency, the difficulty of aligning response timing with visual evidence, and the need to maintain a global, causally consistent understanding under tight computational budgets. To address these issues, we propose a novel framework that decouples reasoning control from memory integration. We introduce \textbf{\model{}}, an instantiation of this framework with two core components. First, the \emph{Active Thinking Decision Maker (ATDM)} is a transparent reasoning controller that externalizes its decision process using observable progress ($\boldsymbolρ$) and confidence ($\boldsymbol{c}$) metrics. This allows it to precisely time its response $t_r$ to match the first-sufficient-evidence timestamp $t^\star$ while streaming its reasoning to the user. Second, the \emph{Hierarchical Progressive Semantic Integration (HPSI)} module acts as an efficient memory system. It employs a set of learnable, multi-level aggregation tokens that are propagated across clips to build a rich, global cognitive state without exceeding token budgets. %Our approach sets a new standard on key online video understanding benchmarks, achieving strong performance of \textbf{71.6\%} on StreamingBench and \textbf{46.9\%} on OVOBench, demonstrating a robust solution for evidence-aligned and transparent online video analysis. Extensive experiments demonstrate the effectiveness of ATDM and HPSI, e.g., Thinking-QwenVL improves the accuracy of the previous state-of-the-art from 67.63\% to 71.60\% on the StreamingBench benchmark.
+
+当足够的证据首次出现在视频流中时，在野外运行的视觉代理必须准确地响应查询，这是在离线环境中评估的传统视频法学硕士所忽视的一项关键功能。向在线流媒体范式的转变带来了重大挑战：缺乏决策透明度、难以将响应时间与视觉证据保持一致，以及需要在紧张的计算预算下保持全局的、因果一致的理解。为了解决这些问题，我们提出了一种新颖的框架，将推理控制与内存集成分离。我们引入 \textbf{\model{}}，这是一个具有两个核心组件的框架的实例。首先，\emph{主动思维决策者 (ATDM)} 是一个透明的推理控制器，它使用可观察的进度 ($\boldsymbolρ$) 和置信度 ($\boldsymbol{c}$) 指标来具体化其决策过程。这使得它能够精确地计算其响应 $t_r$ 的时间，以匹配第一充分证据时间戳 $t^\star$，同时将其推理流式传输给用户。其次，\emph{层次渐进语义集成（HPSI）}模块充当高效的记忆系统。它采用一组可学习的多级聚合令牌，这些令牌在剪辑之间传播，以在不超出令牌预算的情况下构建丰富的全局认知状态。我们的方法为关键在线视频理解基准设定了新标准，在 StreamingBench 上实现了 \textbf{71.6\%} ，在 OVOBench 上实现了 \textbf{46.9\%} 的强大性能，展示了用于证据对齐和透明在线视频分析的强大解决方案。大量实验证明了 ATDM 和 HPSI 的有效性，例如，Thinking-QwenVL 在 StreamingBench 基准测试上将之前最先进的准确率从 67.63\% 提高到 71.60\%。
+
+</details>
+
+---
+
+## 15. AdaCluster: Adaptive Query-Key Clustering for Sparse Attention in Video Generation / AdaCluster：视频生成中稀疏注意力的自适应查询键聚类
+
+**Date**: 2026-04-20 | **arXiv**: [2604.18348v1](http://arxiv.org/abs/2604.18348v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.18348v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video diffusion transformers (DiTs) suffer from prohibitive inference latency due to quadratic attention complexity. Existing sparse attention methods either overlook semantic similarity or fail to adapt to heterogeneous token distributions across layers, leading to model performance degradation. We propose AdaCluster, a training-free adaptive clustering framework that accelerates the generation of DiTs while preserving accuracy. AdaCluster applies an angle-similarity-preserving clustering method to query vectors for higher compression, and designs a euclidean-similarity-preserving clustering method for keys, covering cluster number assignment, threshold-wise adaptive clustering, and efficient critical cluster selection. Experiments on CogVideoX-2B, HunyuanVideo, and Wan-2.1 on one A40 GPU demonstrate up to 1.67-4.31x speedup with negligible quality degradation.
+
+由于二次注意力复杂性，视频扩散变压器 (DiT) 存在令人望而却步的推理延迟。现有的稀疏注意力方法要么忽视语义相似性，要么无法适应跨层的异构令牌分布，导致模型性能下降。我们提出了 AdaCluster，这是一种免训练的自适应聚类框架，可以在保持准确性的同时加速 DiT 的生成。 AdaCluster 将保留角度相似性的聚类方法应用于查询向量以实现更高的压缩，并为键设计了保留欧几里德相似性的聚类方法，涵盖簇编号分配、阈值自适应聚类和高效的关键簇选择。在一块 A40 GPU 上对 CogVideoX-2B、HunyuanVideo 和 Wan-2.1 进行的实验表明，加速速度高达 1.67-4.31 倍，质量下降可以忽略不计。
+
+</details>
+
+---
+
+## 16. OmniHuman: A Large-scale Dataset and Benchmark for Human-Centric Video Generation / OmniHuman：以人为中心的视频生成的大规模数据集和基准
+
+**Date**: 2026-04-20 | **arXiv**: [2604.18326v1](http://arxiv.org/abs/2604.18326v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.18326v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advancements in audio-video joint generation models have demonstrated impressive capabilities in content creation. However, generating high-fidelity human-centric videos in complex, real-world physical scenes remains a significant challenge. We identify that the root cause lies in the structural deficiencies of existing datasets across three dimensions: limited global scene and camera diversity, sparse interaction modeling (both person-person and person-object), and insufficient individual attribute alignment. To bridge these gaps, we present OmniHuman, a large-scale, multi-scene dataset designed for fine-grained human modeling. OmniHuman provides a hierarchical annotation covering video-level scenes, frame-level interactions, and individual-level attributes. To facilitate this, we develop a fully automated pipeline for high-quality data collection and multi-modal annotation. Complementary to the dataset, we establish the OmniHuman Benchmark (OHBench), a three-level evaluation system that provides a scientific diagnosis for human-centric audio-video synthesis. Crucially, OHBench introduces metrics that are highly consistent with human perception, filling the gaps in existing benchmarks by providing a comprehensive diagnosis across global scenes, relational interactions, and individual attributes.
+
+音视频联合生成模型的最新进展展示了令人印象深刻的内容创建能力。然而，在复杂的真实物理场景中生成以人为中心的高保真视频仍然是一个重大挑战。我们发现，根本原因在于现有数据集在三个维度上的结构缺陷：有限的全局场景和摄像机多样性、稀疏的交互建模（人与人和人与物体）以及个体属性对齐不足。为了弥补这些差距，我们推出了 OmniHuman，这是一个专为细粒度人体建模而设计的大型多场景数据集。 OmniHuman 提供了涵盖视频级场景、帧级交互和个体级属性的分层注释。为了促进这一点，我们开发了一个用于高质量数据收集和多模式注释的全自动管道。作为数据集的补充，我们建立了 OmniHuman Benchmark (OHBench)，这是一个三级评估系统，为以人为中心的音视频合成提供科学诊断。至关重要的是，OHBench 引入了与人类感知高度一致的指标，通过提供跨全局场景、关系交互和个体属性的全面诊断，填补了现有基准的空白。
+
+</details>
+
+---
+
+## 17. Denoise and Align: Diffusion-Driven Foreground Knowledge Prompting for Open-Vocabulary Temporal Action Detection / 去噪和对齐：扩散驱动的前景知识提示开放词汇时间动作检测
+
+**Date**: 2026-04-20 | **arXiv**: [2604.18313v1](http://arxiv.org/abs/2604.18313v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.18313v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Open-Vocabulary Temporal Action Detection (OV-TAD) aims to localize and classify action segments of unseen categories in untrimmed videos, where effective alignment between action semantics and video representations is critical for accurate detection. However, existing methods struggle to mitigate the semantic imbalance between concise, abstract action labels and rich, complex video contents, inevitably introducing semantic noise and misleading cross-modal alignment. To address this challenge, we propose DFAlign, the first framework that leverages diffusion-based denoising to generate foreground knowledge for the guidance of action-video alignment. Following the 'conditioning, denoising and aligning' manner, we first introduce the Semantic-Unify Conditioning (SUC) module, which unifies action-shared and action-specific semantics as conditions for diffusion denoising. Then, the Background-Suppress Denoising (BSD) module generates foreground knowledge by progressively removing background redundancy from videos through denoising process. This foreground knowledge serves as effective intermediate semantic anchor between video and text representations, mitigating the semantic gap and enhancing the discriminability of action-relevant segments. Furthermore, we introduce the Foreground-Prompt Alignment (FPA) module to inject extracted foreground knowledge as prompt tokens into text representations, guiding model's attention towards action-relevant segments and enabling precise cross-modal alignment. Extensive experiments demonstrate that our method achieves state-of-the-art performance on two OV-TAD benchmarks. The code repository is provided as follows: https://anonymous.4open.science/r/Code-2114/.
+
+开放词汇时间动作检测（OV-TAD）旨在对未修剪视频中未见过的类别的动作片段进行定位和分类，其中动作语义和视频表示之间的有效对齐对于准确检测至关重要。然而，现有的方法很难减轻简洁、抽象的动作标签与丰富、复杂的视频内容之间的语义不平衡，不可避免地引入语义噪声和误导性的跨模态对齐。为了应对这一挑战，我们提出了 DFAlign，这是第一个利用基于扩散的去噪来生成用于指导动作视频对齐的前景知识的框架。遵循“条件、去噪和对齐”的方式，我们首先引入语义统一条件（SUC）模块，它将动作共享和动作特定的语义统一为扩散去噪的条件。然后，背景抑制去噪（BSD）模块通过去噪过程逐步去除视频中的背景冗余来生成前景知识。这种前景知识充当视频和文本表示之间的有效中间语义锚，缩小语义差距并增强动作相关片段的可辨别性。此外，我们引入了前景提示对齐（FPA）模块，将提取的前景知识作为提示标记注入到文本表示中，引导模型对与动作相关的片段的注意力，并实现精确的跨模式对齐。大量实验表明，我们的方法在两个 OV-TAD 基准测试中实现了最先进的性能。代码存储库提供如下：https://anonymous.4open.science/r/Code-2114/。
+
+</details>
+
+---
+
+## 18. LiquidTAD: An Efficient Method for Temporal Action Detection via Liquid Neural Dynamics / LiquidTAD：一种通过液体神经动力学进行时间动作检测的有效方法
+
+**Date**: 2026-04-20 | **arXiv**: [2604.18274v1](http://arxiv.org/abs/2604.18274v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.18274v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Temporal Action Detection (TAD) in untrimmed videos is currently dominated by Transformer-based architectures. While high-performing, their quadratic computational complexity and substantial parameter redundancy limit deployment in resource-constrained environments. In this paper, we propose LiquidTAD, a novel parameter-efficient framework that replaces cumbersome self-attention layers with parallelized ActionLiquid blocks. Unlike traditional Liquid Neural Networks (LNNs) that suffer from sequential execution bottlenecks, LiquidTAD leverages a closed-form continuous-time (CfC) formulation, allowing the model to be reformulated as a parallelizable operator while preserving the intrinsic physical prior of continuous-time dynamics. This architecture captures complex temporal dependencies with $O(N)$ linear complexity and adaptively modulates temporal sensitivity through learned time-constants ($τ$), providing a robust mechanism for handling varying action durations. To the best of our knowledge, this work is the first to introduce a parallelized LNN-based architecture to the TAD domain. Experimental results on the THUMOS-14 dataset demonstrate that LiquidTAD achieves a highly competitive Average mAP of 69.46\% with only 10.82M parameters -- a 63\% reduction compared to the ActionFormer baseline. Further evaluations on ActivityNet-1.3 and Ego4D benchmarks confirm that LiquidTAD achieves an optimal accuracy-efficiency trade-off and exhibits superior robustness to temporal sampling variations, advancing the Pareto frontier of modern TAD frameworks.
+
+未修剪视频中的时间动作检测 (TAD) 目前以基于 Transformer 的架构为主。虽然具有高性能，但其二次计算复杂性和大量参数冗余限制了在资源受限环境中的部署。在本文中，我们提出了 LiquidTAD，这是一种新颖的参数高效框架，它用并行的 ActionLiquid 块取代了繁琐的自注意力层。与遭受顺序执行瓶颈的传统液体神经网络 (LNN) 不同，LiquidTAD 利用封闭式连续时间 (CfC) 公式，允许将模型重新公式化为可并行算子，同时保留连续时间动态的内在物理先验。该架构以 $O(N)$ 线性复杂度捕获复杂的时间依赖性，并通过学习的时间常数 ($τ$) 自适应地调节时间敏感性，从而提供了处理不同动作持续时间的强大机制。据我们所知，这项工作是第一个将基于并行 LNN 的架构引入 TAD 领域的工作。 THUMOS-14 数据集上的实验结果表明，LiquidTAD 仅用 10.82M 参数就实现了极具竞争力的平均 mAP 69.46%，与 ActionFormer 基线相比减少了 63%。对 ActivityNet-1.3 和 Ego4D 基准的进一步评估证实，LiquidTAD 实现了最佳的准确性-效率权衡，并对时间采样变化表现出卓越的鲁棒性，从而推进了现代 TAD 框架的帕累托前沿。
+
+</details>
+
+---
+
+## 19. Memorize When Needed: Decoupled Memory Control for Spatially Consistent Long-Horizon Video Generation / 需要时记忆：解耦内存控制以实现空间一致的长视野视频生成
+
+**Date**: 2026-04-20 | **arXiv**: [2604.18215v2](http://arxiv.org/abs/2604.18215v2) | **PDF**: [Link](http://arxiv.org/pdf/2604.18215v2)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Spatially consistent long-horizon video generation aims to maintain temporal and spatial consistency along predefined camera trajectories. Existing methods mostly entangle memory modeling with video generation, leading to inconsistent content during scene revisits and diminished generative capacity when exploring novel regions, even trained on extensive annotated data. To address these limitations, we propose a decoupled framework that separates memory conditioning from generation. Our approach significantly reduces training costs while simultaneously enhancing spatial consistency and preserving the generative capacity for novel scene exploration. Specifically, we employ a lightweight, independent memory branch to learn precise spatial consistency from historical observation. We first introduce a hybrid memory representation to capture complementary temporal and spatial cues from generated frames, then leverage a per-frame cross-attention mechanism to ensure each frame is conditioned exclusively on the most spatially relevant historical information, which is injected into the generative model to ensure spatial consistency. When generating new scenes, a camera-aware gating mechanism is proposed to mediate the interaction between memory and generation modules, enabling memory conditioning only when meaningful historical references exist. Compared with the existing method, our method is highly data-efficient, yet the experiments demonstrate that our approach achieves state-of-the-art performance in terms of both visual quality and spatial consistency.
+
+空间一致的长视距视频生成旨在沿着预定义的摄像机轨迹保持时间和空间的一致性。现有的方法大多将内存建模与视频生成纠缠在一起，导致场景重访期间内容不一致，并且在探索新区域时生成能力下降，甚至在大量带注释的数据上进行训练。为了解决这些限制，我们提出了一个将内存调节与生成分开的解耦框架。我们的方法显着降低了训练成本，同时增强了空间一致性并保留了新场景探索的生成能力。具体来说，我们采用轻量级、独立的记忆分支来从历史观察中学习精确的空间一致性。我们首先引入混合记忆表示来从生成的帧中捕获互补的时间和空间线索，然后利用每帧交叉注意机制来确保每个帧仅以空间上最相关的历史信息为条件，这些信息被注入到生成模型中以确保空间一致性。当生成新场景时，提出了一种相机感知门控机制来调解内存和生成模块之间的交互，仅当存在有意义的历史参考时才启用内存调节。与现有方法相比，我们的方法具有很高的数据效率，但实验表明我们的方法在视觉质量和空间一致性方面都实现了最先进的性能。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-04-21 (18 papers)</b></summary>
 
 # arXiv Video Papers - 2026-04-21
