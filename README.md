@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-04-24](papers/2026-04-24.md) - 16 papers
 - [2026-04-23](papers/2026-04-23.md) - 14 papers
 - [2026-04-22](papers/2026-04-22.md) - 19 papers
 - [2026-04-21](papers/2026-04-21.md) - 18 papers
@@ -66,6 +67,274 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-04-24 (16 papers)</b></summary>
+
+# arXiv Video Papers - 2026-04-24
+
+**Paper Count**: 16
+
+---
+
+## 1. Seeing Fast and Slow: Learning the Flow of Time in Videos / 看快与慢：学习视频中的时间流动
+
+**Date**: 2026-04-23 | **arXiv**: [2604.21931v1](http://arxiv.org/abs/2604.21931v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.21931v1)
+
+**Categories**: cs.CV, cs.AI, cs.GR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+How can we tell whether a video has been sped up or slowed down? How can we generate videos at different speeds? Although videos have been central to modern computer vision research, little attention has been paid to perceiving and controlling the passage of time. In this paper, we study time as a learnable visual concept and develop models for reasoning about and manipulating the flow of time in videos. We first exploit the multimodal cues and temporal structure naturally present in videos to learn, in a self-supervised manner, to detect speed changes and estimate playback speed. We then show that these learned temporal reasoning models enable us to curate the largest slow-motion video dataset to date from noisy in-the-wild sources. Such slow-motion footage, typically filmed by high-speed cameras, contains substantially richer temporal detail than standard videos. Using this data, we further develop models capable of temporal control, including speed-conditioned video generation, which produces motion at specified playback speed, and temporal super-resolution, which tranforms low-FPS, blurry videos into high-FPS sequences with fine-grained temporal details. Our findings highlight time as a manipulable, perceptual dimension in video learning, opening doors to temporally controllable video generation, temporal forensics detection, and potentially richer world-models that understand how events unfold over time.
+
+我们如何判断视频是否被加速或减慢？我们如何生成不同速度的视频？尽管视频一直是现代计算机视觉研究的核心，但人们很少关注感知和控制时间的流逝。在本文中，我们将时间作为一种可学习的视觉概念进行研究，并开发用于推理和操纵视频中时间流动的模型。我们首先利用视频中自然存在的多模态线索和时间结构，以自我监督的方式学习，检测速度变化并估计播放速度。然后，我们表明，这些学习到的时间推理模型使我们能够从嘈杂的野外来源中策划迄今为止最大的慢动作视频数据集。这种慢动作镜头通常由高速摄像机拍摄，包含比标准视频更丰富的时间细节。利用这些数据，我们进一步开发了能够进行时间控制的模型，包括速度调节视频生成（以指定的播放速度产生运动）和时间超分辨率（将低 FPS、模糊视频转换为具有细粒度时间细节的高 FPS 序列）。我们的研究结果强调了时间作为视频学习中可操纵的感知维度，为时间可控的视频生成、时间取证检测以及了解事件如何随时间展开的潜在更丰富的世界模型打开了大门。
+
+</details>
+
+---
+
+## 2. VistaBot: View-Robust Robot Manipulation via Spatiotemporal-Aware View Synthesis / VistaBot：通过时空感知视图合成进行视图鲁棒机器人操作
+
+**Date**: 2026-04-23 | **arXiv**: [2604.21914v1](http://arxiv.org/abs/2604.21914v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.21914v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recently, end-to-end robotic manipulation models have gained significant attention for their generalizability and scalability. However, they often suffer from limited robustness to camera viewpoint changes when training with a fixed camera. In this paper, we propose VistaBot, a novel framework that integrates feed-forward geometric models with video diffusion models to achieve view-robust closed-loop manipulation without requiring camera calibration at test time. Our approach consists of three key components: 4D geometry estimation, view synthesis latent extraction, and latent action learning. VistaBot is integrated into both action-chunking (ACT) and diffusion-based ($π_0$) policies and evaluated across simulation and real-world tasks. We further introduce the View Generalization Score (VGS) as a new metric for comprehensive evaluation of cross-view generalization. Results show that VistaBot improves VGS by 2.79$\times$ and 2.63$\times$ over ACT and $π_0$, respectively, while also achieving high-quality novel view synthesis. Our contributions include a geometry-aware synthesis model, a latent action planner, a new benchmark metric, and extensive validation across diverse environments. The code and models will be made publicly available.
+
+最近，端到端机器人操作模型因其通用性和可扩展性而受到广泛关注。然而，在使用固定相机进行训练时，它们通常对相机视点变化的鲁棒性有限。在本文中，我们提出了 VistaBot，这是一种新颖的框架，它将前馈几何模型与视频扩散模型相结合，以实现视图稳健的闭环操作，而无需在测试时校准相机。我们的方法由三个关键部分组成：4D 几何估计、视图合成潜在提取和潜在动作学习。 VistaBot 集成到动作分块 (ACT) 和基于扩散 ($π_0$) 的策略中，并在模拟和现实世界任务中进行评估。我们进一步引入视图泛化分数（VGS）作为综合评估跨视图泛化的新指标。结果表明，VistaBot 比 ACT 和 $π_0$ 分别将 VGS 提高了 2.79$\times$ 和 2.63$\times$，同时还实现了高质量的新颖视图合成。我们的贡献包括几何感知综合模型、潜在行动规划器、新的基准指标以及跨不同环境的广泛验证。代码和模型将公开。
+
+</details>
+
+---
+
+## 3. A Scale-Adaptive Framework for Joint Spatiotemporal Super-Resolution with Diffusion Models / 具有扩散模型的联合时空超分辨率的尺度自适应框架
+
+**Date**: 2026-04-23 | **arXiv**: [2604.21903v1](http://arxiv.org/abs/2604.21903v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.21903v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Deep-learning video super-resolution has progressed rapidly, but climate applications typically super-resolve (increase resolution) either space or time, and joint spatiotemporal models are often designed for a single pair of super-resolution (SR) factors (upscaling spatial and temporal ratio between the low-resolution sequence and the high-resolution sequence), limiting transfer across spatial resolutions and temporal cadences (frame rates). We present a scale-adaptive framework that reuses the same architecture across factors by decomposing spatiotemporal SR into a deterministic prediction of the conditional mean, with attention, and a residual conditional diffusion model, with an optional mass-conservation (same precipitation amount in inputs and outputs) transform to preserve aggregated totals. Assuming that larger SR factors primarily increase underdetermination (hence required context and residual uncertainty) rather than changing the conditional-mean structure, scale adaptivity is achieved by retuning three factor-dependent hyperparameters before retraining: the diffusion noise schedule amplitude beta (larger for larger factors to increase diversity), the temporal context length L (set to maintain comparable attention horizons across cadences) and optionally a third, the mass-conservation function f (tapered to limit the amplification of extremes for large factors). Demonstrated on reanalysis precipitation over France (Comephore), the same architecture spans super-resolution factors from 1 to 25 in space and 1 to 6 in time, yielding a reusable architecture and tuning recipe for joint spatiotemporal super-resolution across scales.
+
+深度学习视频超分辨率发展迅速，但气候应用通常在空间或时间上进行超分辨率（提高分辨率），而联合时空模型通常是针对一对超分辨率（SR）因素（放大低分辨率序列和高分辨率序列之间的空间和时间比率）而设计的，限制了空间分辨率和时间节奏（帧速率）之间的传输。我们提出了一个尺度自适应框架，通过将时空 SR 分解为条件均值的确定性预测（注意）和残差条件扩散模型，通过可选的质量守恒（输入和输出中的相同降水量）变换来保留汇总总量，跨因素重用相同的架构。假设较大的 SR 因子主要增加不确定性（因此需要上下文和剩余不确定性），而不是改变条件均值结构，则通过在重新训练之前重新调整三个与因子相关的超参数来实现尺度适应性：扩散噪声计划幅度 beta（较大的因子越大以增加多样性）、时间上下文长度 L（设置为跨节奏保持可比较的注意力范围）以及可选的第三个质量守恒函数 f（逐渐减小以限制大的极端值的放大）。因素）。在法国 (Comephore) 的再分析降水中得到证明，相同的架构在空间上跨越 1 到 25 个超分辨率因子，在时间上跨越 1 到 6 个超分辨率因子，从而产生了可重复使用的架构和跨尺度联合时空超分辨率的调整方法。
+
+</details>
+
+---
+
+## 4. Grounding Video Reasoning in Physical Signals / 将视频推理融入物理信号中
+
+**Date**: 2026-04-23 | **arXiv**: [2604.21873v1](http://arxiv.org/abs/2604.21873v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.21873v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Physical video understanding requires more than naming an event correctly. A model can answer a question about pouring, sliding, or collision from textual regularities while still failing to localize the event in time or space. We introduce a grounded benchmark for physical video understanding that extends the what--when--where evaluation structure of V-STaR to four video sources, six physics domains, three prompt families (physics, vstar_like, and neutral_rstr), and four input conditions (original, shuffled, ablated, and frame-masked). The benchmark contains 1,560 base video clips from SSV2, YouCook2, HoloAssist, and Roundabout-TAU. Each clip is first converted into a shared grounded event record, and the three query families are derived from that record. Temporal and spatial targets are shared across prompt families, while the non-physics families use deterministic family-appropriate semantic a_what targets derived from the same record. Across models and prompt families, physics remains the strongest regime overall, vstar_like is the clearest non-physics semantic comparison, and neutral_rstr behaves as a harder templated control. Prompt-family robustness is selective rather than universal, perturbation gains cluster in weak original cases, and spatial grounding is the weakest across settings. These results suggest that video Q&A reasoning benchmarks shall report physically grounded, prompt-aware, and perturbation-aware diagnostics alongside aggregate accuracy.
+
+物理视频理解需要的不仅仅是正确命名事件。模型可以根据文本规律回答有关倾倒、滑动或碰撞的问题，但仍然无法在时间或空间上定位事件。我们引入了一个用于物理视频理解的基础基准，它将 V-STaR 的“何时-何地”评估结构扩展到四个视频源、六个物理域、三个提示族（物理、vstar_like 和中性_rstr）和四个输入条件（原始、混洗、消融和帧屏蔽）。该基准测试包含来自 SSV2、YouCook2、HoloAssist 和 Roundabout-TAU 的 1,560 个基本视频剪辑。每个剪辑首先被转换为共享的接地事件记录，并且三个查询系列都从该记录派生。时间和空间目标在提示族之间共享，而非物理族使用从同一记录派生的确定性族适当的语义 a_what 目标。在模型和提示系列中，物理仍然是整体上最强的机制，vstar_like是最清晰的非物理语义比较，而neutral_rstr则表现为更难的模板化控制。即时家庭稳健性是选择性的而不是普遍的，扰动增益在弱原始情况下聚集，并且空间接地在所有设置中是最弱的。这些结果表明，视频问答推理基准应报告物理基础、提示感知和扰动感知诊断以及总体准确性。
+
+</details>
+
+---
+
+## 5. Divide-then-Diagnose: Weaving Clinician-Inspired Contexts for Ultra-Long Capsule Endoscopy Videos / 划分然后诊断：为超长胶囊内窥镜视频编织受临床医生启发的背景
+
+**Date**: 2026-04-23 | **arXiv**: [2604.21814v1](http://arxiv.org/abs/2604.21814v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.21814v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Capsule endoscopy (CE) enables non-invasive gastrointestinal screening, but current CE research remains largely limited to frame-level classification and detection, leaving video-level analysis underexplored. To bridge this gap, we introduce and formally define a new task, diagnosis-driven CE video summarization, which requires extracting key evidence frames that covers clinically meaningful findings and making accurate diagnoses from those evidence frames. This setting is challenging because diagnostically relevant events are extremely sparse and can be overwhelmed by tens of thousands of redundant normal frames, while individual observations are often ambiguous due to motion blur, debris, specular highlights, and rapid viewpoint changes. To facilitate research in this direction, we introduce VideoCAP, the first CE dataset with diagnosis-driven annotations derived from real clinical reports. VideoCAP comprises 240 full-length videos and provides realistic supervision for both key evidence frame extraction and diagnosis. To address this task, we further propose DiCE, a clinician-inspired framework that mirrors the standard CE reading workflow. DiCE first performs efficient candidate screening over the raw video, then uses a Context Weaver to organize candidates into coherent diagnostic contexts that preserve distinct lesion events, and an Evidence Converger to aggregate multi-frame evidence within each context into robust clip-level judgments. Experiments show that DiCE consistently outperforms state-of-the-art methods, producing concise and clinically reliable diagnostic summaries. These results highlight diagnosis-driven contextual reasoning as a promising paradigm for ultra-long CE video summarization.
+
+胶囊内窥镜（CE）可以实现非侵入性胃肠道筛查，但目前的CE研究仍然主要局限于帧级分类和检测，而视频级分析尚未得到充分探索。为了弥补这一差距，我们引入并正式定义了一项新任务，即诊断驱动的 CE 视频摘要，它需要提取涵盖临床有意义的发现的关键证据框架，并从这些证据框架中做出准确的诊断。这种设置具有挑战性，因为与诊断相关的事件极其稀疏，并且可能被数以万计的冗余正常帧所淹没，而由于运动模糊、碎片、镜面高光和快速视点变化，个体观察通常是不明确的。为了促进这一方向的研究，我们引入了 VideoCAP，这是第一个具有源自真实临床报告的诊断驱动注释的 CE 数据集。 VideoCAP 包含 240 个完整长度的视频，为关键证据框架提取和诊断提供真实的监督。为了解决这一任务，我们进一步提出了 DiCE，这是一个受临床医生启发的框架，反映了标准 CE 阅读工作流程。 DiCE 首先对原始视频进行高效的候选筛选，然后使用上下文编织器将候选者组织到连贯的诊断上下文中，以保留不同的病变事件，并使用证据聚合器将每个上下文中的多帧证据聚合成强大的剪辑级判断。实验表明，DiCE 始终优于最先进的方法，可生成简洁且临床可靠的诊断摘要。这些结果凸显了诊断驱动的上下文推理作为超长 CE 视频摘要的有前途的范例。
+
+</details>
+
+---
+
+## 6. WorldMark: A Unified Benchmark Suite for Interactive Video World Models / WorldMark：交互式视频世界模型的统一基准套件
+
+**Date**: 2026-04-23 | **arXiv**: [2604.21686v1](http://arxiv.org/abs/2604.21686v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.21686v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Interactive video generation models such as Genie, YUME, HY-World, and Matrix-Game are advancing rapidly, yet every model is evaluated on its own benchmark with private scenes and trajectories, making fair cross-model comparison impossible. Existing public benchmarks offer useful metrics such as trajectory error, aesthetic scores, and VLM-based judgments, but none supplies the standardized test conditions -- identical scenes, identical action sequences, and a unified control interface -- needed to make those metrics comparable across models with heterogeneous inputs. We introduce WorldMark, the first benchmark that provides such a common playing field for interactive Image-to-Video world models. WorldMark contributes: (1) a unified action-mapping layer that translates a shared WASD-style action vocabulary into each model's native control format, enabling apples-to-apples comparison across six major models on identical scenes and trajectories; (2) a hierarchical test suite of 500 evaluation cases covering first- and third-person viewpoints, photorealistic and stylized scenes, and three difficulty tiers from Easy to Hard spanning 20-60s; and (3) a modular evaluation toolkit for Visual Quality, Control Alignment, and World Consistency, designed so that researchers can reuse our standardized inputs while plugging in their own metrics as the field evolves. We will release all data, evaluation code, and model outputs to facilitate future research. Beyond offline metrics, we launch World Model Arena (warena.ai), an online platform where anyone can pit leading world models against each other in side-by-side battles and watch the live leaderboard.
+
+Genie、YUME、HY-World、Matrix-Game等交互式视频生成模型发展迅速，但每个模型都以自己的基准评估私人场景和轨迹，无法进行公平的跨模型比较。现有的公共基准测试提供了有用的指标，例如轨迹误差、美学分数和基于 VLM 的判断，但没有提供标准化的测试条件（相同的场景、相同的动作序列和统一的控制界面），使这些指标在具有异构输入的模型之间具有可比性。我们推出 WorldMark，这是第一个为交互式图像到视频世界模型提供共同竞争环境的基准。 WorldMark 的贡献是：(1) 统一的动作映射层，将共享的 WASD 风格的动作词汇转换为每个模型的本机控制格式，从而能够在相同场景和轨迹上对六个主要模型进行同类比较； (2) 一个包含 500 个评估案例的分层测试套件，涵盖第一人称和第三人称视角、真实感和风格化场景，以及从易到难的三个难度等级，跨越 20-60 岁； (3) 用于视觉质量、控制对齐和世界一致性的模块化评估工具包，旨在使研究人员可以重复使用我们的标准化输入，同时随着领域的发展插入他们自己的指标。我们将发布所有数据、评估代码和模型输出，以方便未来的研究。除了线下指标之外，我们还推出了世界模特竞技场 (warena.ai)，这是一个在线平台，任何人都可以在其中与世界领先的模特进行并肩战斗，并观看实时排行榜。
+
+</details>
+
+---
+
+## 7. HiCrew: Hierarchical Reasoning for Long-Form Video Understanding via Question-Aware Multi-Agent Collaboration / HiCrew：通过问题感知多智能体协作进行长格式视频理解的分层推理
+
+**Date**: 2026-04-23 | **arXiv**: [2604.21444v1](http://arxiv.org/abs/2604.21444v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.21444v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long-form video understanding remains fundamentally challenged by pervasive spatiotemporal redundancy and intricate narrative dependencies that span extended temporal horizons. While recent structured representations compress visual information effectively, they frequently sacrifice temporal coherence, which is critical for causal reasoning. Meanwhile, existing multi-agent frameworks operate through rigid, pre-defined workflows that fail to adapt their reasoning strategies to question-specific demands. In this paper, we introduce HiCrew, a hierarchical multi-agent framework that addresses these limitations through three core contributions. First, we propose a Hybrid Tree structure that leverages shot boundary detection to preserve temporal topology while performing relevance-guided hierarchical clustering within semantically coherent segments. Second, we develop a Question-Aware Captioning mechanism that synthesizes intent-driven visual prompts to generate precision-oriented semantic descriptions. Third, we integrate a Planning Layer that dynamically orchestrates agent collaboration by adaptively selecting roles and execution paths based on question complexity. Extensive experiments on EgoSchema and NExT-QA validate the effectiveness of our approach, demonstrating strong performance across diverse question types with particularly pronounced gains in temporal and causal reasoning tasks that benefit from our hierarchical structure-preserving design.
+
+长视频理解仍然受到普遍的时空冗余和跨越扩展时间范围的复杂叙事依赖性的根本挑战。虽然最近的结构化表示有效地压缩了视觉信息，但它们经常牺牲时间连贯性，而这对于因果推理至关重要。与此同时，现有的多代理框架通过严格的预定义工作流程进行操作，无法使其推理策略适应特定问题的需求。在本文中，我们介绍了 HiCrew，这是一个分层多代理框架，它通过三个核心贡献解决了这些限制。首先，我们提出了一种混合树结构，它利用镜头边界检测来保留时间拓扑，同时在语义相干的片段内执行相关性引导的分层聚类。其次，我们开发了一种问题感知字幕机制，该机制综合意图驱动的视觉提示以生成面向精度的语义描述。第三，我们集成了一个规划层，该层通过根据问题复杂性自适应地选择角色和执行路径来动态协调代理协作。 EgoSchema 和 NExT-QA 上的大量实验验证了我们方法的有效性，证明了在不同问题类型中的强大性能，并且在时间和因果推理任务中取得了特别显着的收益，这得益于我们的分层结构保留设计。
+
+</details>
+
+---
+
+## 8. KD-CVG: A Knowledge-Driven Approach for Creative Video Generation / KD-CVG：一种知识驱动的创意视频生成方法
+
+**Date**: 2026-04-23 | **arXiv**: [2604.21362v1](http://arxiv.org/abs/2604.21362v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.21362v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Creative Generation (CG) leverages generative models to automatically produce advertising content that highlights product features, and it has been a significant focus of recent research. However, while CG has advanced considerably, most efforts have concentrated on generating advertising text and images, leaving Creative Video Generation (CVG) relatively underexplored. This gap is largely due to two major challenges faced by Text-to-Video (T2V) models: (a) \textbf{ambiguous semantic alignment}, where models struggle to accurately correlate product selling points with creative video content, and (b) \textbf{inadequate motion adaptability}, resulting in unrealistic movements and distortions. To address these challenges, we develop a comprehensive Advertising Creative Knowledge Base (ACKB) as a foundational resource and propose a knowledge-driven approach (KD-CVG) to overcome the knowledge limitations of existing models. KD-CVG consists of two primary modules: Semantic-Aware Retrieval (SAR) and Multimodal Knowledge Reference (MKR). SAR utilizes the semantic awareness of graph attention networks and reinforcement learning feedback to enhance the model's comprehension of the connections between selling points and creative videos. Building on this, MKR incorporates semantic and motion priors into the T2V model to address existing knowledge gaps. Extensive experiments have demonstrated KD-CVG's superior performance in achieving semantic alignment and motion adaptability, validating its effectiveness over other state-of-the-art methods. The code and dataset will be open source at https://kdcvg.github.io/KDCVG/.
+
+创意生成（CG）利用生成模型自动生成突出产品功能的广告内容，一直是近期研究的重点。然而，虽然 CG 取得了相当大的进步，但大多数努力都集中在生成广告文本和图像上，而创意视频生成 (CVG) 的开发相对较少。这一差距主要是由于文本到视频（T2V）模型面临的两个主要挑战：（a）\textbf{语义对齐不明确}，其中模型难以准确地将产品卖点与创意视频内容相关联；（b）\textbf{运动适应性不足}，导致不切实际的运动和扭曲。为了应对这些挑战，我们开发了一个全面的广告创意知识库（ACKB）作为基础资源，并提出了一种知识驱动的方法（KD-CVG）来克服现有模型的知识限制。 KD-CVG 由两个主要模块组成：语义感知检索（SAR）和多模态知识参考（MKR）。 SAR 利用图注意力网络的语义意识和强化学习反馈来增强模型对卖点和创意视频之间联系的理解。在此基础上，MKR 将语义和运动先验融入到 T2V 模型中，以解决现有的知识差距。大量的实验证明了 KD-CVG 在实现语义对齐和运动适应性方面的卓越性能，验证了其相对于其他最先进方法的有效性。代码和数据集将在 https://kdcvg.github.io/KDCVG/ 上开源。
+
+</details>
+
+---
+
+## 9. Exploring the Role of Synthetic Data Augmentation in Controllable Human-Centric Video Generation / 探索合成数据增强在可控的以人为中心的视频生成中的作用
+
+**Date**: 2026-04-23 | **arXiv**: [2604.21291v1](http://arxiv.org/abs/2604.21291v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.21291v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Controllable human video generation aims to produce realistic videos of humans with explicitly guided motions and appearances,serving as a foundation for digital humans, animation, and embodied AI.However, the scarcity of largescale, diverse, and privacy safe human video datasets poses a major bottleneck, especially for rare identities and complex actions.Synthetic data provides a scalable and controllable alternative,yet its actual contribution to generative modeling remains underexplored due to the persistent Sim2Real gap.In this work,we systematically investigate the impact of synthetic data on controllable human video generation. We propose a diffusion-based framework that enables fine-grained control over appearance and motion while providing a unfied testbed to analyze how synthetic data interacts with real world data during training. Through extensive experiments, we reveal the complementary roles of synthetic and real data and demonstrate possible methods for efficiently selecting synthetic samples to enhance motion realism,temporal consistency,and identity preservation.Our study offers the first comprehensive exploration of synthetic data's role in human-centric video synthesis and provides practical insights for building data-efficient and generalizable generative models.
+
+可控人类视频生成旨在生成具有明确引导的动作和外观的逼真人类视频，作为数字人类、动画和具体人工智能的基础。然而，大规模、多样化和隐私安全的人类视频数据集的稀缺构成了主要瓶颈，特别是对于稀有身份和复杂动作。合成数据提供了可扩展和可控的替代方案，但由于持续存在的 Sim2Real 差距，其对生成建模的实际贡献仍未得到充分探索。在工作中，我们系统地研究了合成数据对可控人类视频生成的影响。我们提出了一个基于扩散的框架，可以对外观和运动进行细粒度控制，同时提供一个完整的测试平台来分析训练期间合成数据如何与现实世界数据交互。通过广泛的实验，我们揭示了合成数据和真实数据的互补作用，并展示了有效选择合成样本以增强运动真实性、时间一致性和身份保留的可能方法。我们的研究首次全面探索了合成数据在以人为中心的视频合成中的作用，并为构建数据高效和可推广的生成模型提供了实用的见解。
+
+</details>
+
+---
+
+## 10. Sparse Forcing: Native Trainable Sparse Attention for Real-time Autoregressive Diffusion Video Generation / 稀疏强迫：用于实时自回归扩散视频生成的本机可训练稀疏注意力
+
+**Date**: 2026-04-23 | **arXiv**: [2604.21221v1](http://arxiv.org/abs/2604.21221v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.21221v1)
+
+**Categories**: cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We introduce Sparse Forcing, a training-and-inference paradigm for autoregressive video diffusion models that improves long-horizon generation quality while reducing decoding latency. Sparse Forcing is motivated by an empirical observation in autoregressive diffusion rollouts: attention concentrates on a persistent subset of salient visual blocks, forming an implicit spatiotemporal memory in the KV cache, and exhibits a locally structured block-sparse pattern within sliding windows. Building on this observation, we propose a trainable native sparsity mechanism that learns to compress, preserve, and update these persistent blocks while restricting computation within each local window to a dynamically selected local neighborhood. To make the approach practical at scale for both training and inference, we further propose Persistent Block-Sparse Attention (PBSA), an efficient GPU kernel that accelerates sparse attention and memory updates for low-latency, memory-efficient decoding. Experiments show that Sparse Forcing improves the VBench score by +0.26 over Self-Forcing on 5-second text-to-video generation while delivering a 1.11-1.17x decoding speedup and 42% lower peak KV-cache footprint. The gains are more pronounced on longer-horizon rollouts, delivering improved visual quality with +0.68 and +2.74 VBench improvements, and 1.22x and 1.27x speedups on 20-second and 1-minute generations, respectively.
+
+我们引入了稀疏强制，这是一种用于自回归视频扩散模型的训练和推理范例，可提高长视域生成质量，同时减少解码延迟。稀疏强迫的动机是自回归扩散推出中的经验观察：注意力集中在显着视觉块的持久子集上，在 KV 缓存中形成隐式时空记忆，并在滑动窗口内呈现局部结构化的块稀疏模式。基于这一观察，我们提出了一种可训练的本机稀疏机制，该机制学习压缩、保留和更新这些持久块，同时将每个局部窗口内的计算限制为动态选择的局部邻域。为了使该方法在训练和推理中大规模实用，我们进一步提出了持久块稀疏注意力（PBSA），这是一种高效的 GPU 内核，可以加速稀疏注意力和内存更新，以实现低延迟、内存高效的解码。实验表明，在 5 秒文本到视频生成过程中，Sparse Forcing 的 VBench 分数比 Self-Forcing 提高了 +0.26，同时解码速度提高了 1.11-1.17 倍，峰值 KV 缓存占用空间降低了 42%。在更长范围的推出中，这种收益更加明显，通过+0.68和+2.74 VBench改进提供了更高的视觉质量，并且在20秒和1分钟一代上分别实现了1.22倍和1.27倍的加速。
+
+</details>
+
+---
+
+## 11. Building a Precise Video Language with Human-AI Oversight / 通过人类-人工智能监督构建精确的视频语言
+
+**Date**: 2026-04-22 | **arXiv**: [2604.21718v1](http://arxiv.org/abs/2604.21718v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.21718v1)
+
+**Categories**: cs.CV, cs.AI, cs.CL, cs.LG, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video-language models (VLMs) learn to reason about the dynamic visual world through natural language. We introduce a suite of open datasets, benchmarks, and recipes for scalable oversight that enable precise video captioning. First, we define a structured specification for describing subjects, scenes, motion, spatial, and camera dynamics, grounded by hundreds of carefully defined visual primitives developed with professional video creators such as filmmakers. Next, to curate high-quality captions, we introduce CHAI (Critique-based Human-AI Oversight), a framework where trained experts critique and revise model-generated pre-captions into improved post-captions. This division of labor improves annotation accuracy and efficiency by offloading text generation to models, allowing humans to better focus on verification. Additionally, these critiques and preferences between pre- and post-captions provide rich supervision for improving open-source models (Qwen3-VL) on caption generation, reward modeling, and critique generation through SFT, DPO, and inference-time scaling. Our ablations show that critique quality in precision, recall, and constructiveness, ensured by our oversight framework, directly governs downstream performance. With modest expert supervision, the resulting model outperforms closed-source models such as Gemini-3.1-Pro. Finally, we apply our approach to re-caption large-scale professional videos (e.g., films, commercials, games) and fine-tune video generation models such as Wan to better follow detailed prompts of up to 400 words, achieving finer control over cinematography including camera motion, angle, lens, focus, point of view, and framing. Our results show that precise specification and human-AI oversight are key to professional-level video understanding and generation. Data and code are available on our project page: https://linzhiqiu.github.io/papers/chai/
+
+视频语言模型 (VLM) 学习通过自然语言推理动态视觉世界。我们引入了一套开放数据集、基准测试和可扩展监督方法，可实现精确的视频字幕。首先，我们定义了一个用于描述主题、场景、运动、空间和摄像机动态的结构化规范，其基础是与电影制作人等专业视频创作者开发的数百个精心定义的视觉基元。接下来，为了策划高质量的字幕，我们引入了 CHAI（基于批评的人类人工智能监督），这是一个框架，训练有素的专家可以对模型生成的前字幕进行批评并将其修改为改进的后字幕。这种分工通过将文本生成转移给模型来提高注释的准确性和效率，使人们能够更好地专注于验证。此外，字幕前和字幕后之间的这些批评和偏好为通过 SFT、DPO 和推理时间缩放改进字幕生成、奖励建模和批评生成方面的开源模型 (Qwen3-VL) 提供了丰富的监督。我们的消融表明，在我们的监督框架的保证下，精确度、召回率和建设性方面的批评质量直接控制着下游绩效。在适度的专家监督下，生成的模型优于 Gemini-3.1-Pro 等闭源模型。最后，我们将我们的方法应用于大型专业视频（例如电影、广告、游戏）的重新字幕，并对视频生成模型（如 Wan）进行微调，以更好地遵循最多 400 个字的详细提示，实现对电影摄影的更精细控制，包括摄像机运动、角度、镜头、焦点、视角和取景。我们的结果表明，精确的规范和人类人工智能监督是专业级视频理解和生成的关键。数据和代码可以在我们的项目页面上找到：https://linzhiqiu.github.io/papers/chai/
+
+</details>
+
+---
+
+## 12. Agentic AI for Personalized Physiotherapy: A Multi-Agent Framework for Generative Video Training and Real-Time Pose Correction / 用于个性化物理治疗的代理人工智能：用于生成视频训练和实时姿势校正的多代理框架
+
+**Date**: 2026-04-22 | **arXiv**: [2604.21154v1](http://arxiv.org/abs/2604.21154v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.21154v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+At-home physiotherapy compliance remains critically low due to a lack of personalized supervision and dynamic feedback. Existing digital health solutions rely on static, pre-recorded video libraries or generic 3D avatars that fail to account for a patient's specific injury limitations or home environment. In this paper, we propose a novel Multi-Agent System (MAS) architecture that leverages Generative AI and computer vision to close the tele-rehabilitation loop. Our framework consists of four specialized micro-agents: a Clinical Extraction Agent that parses unstructured medical notes into kinematic constraints; a Video Synthesis Agent that utilizes foundational video generation models to create personalized, patient-specific exercise videos; a Vision Processing Agent for real-time pose estimation; and a Diagnostic Feedback Agent that issues corrective instructions. We present the system architecture, detail the prototype pipeline using Large Language Models and MediaPipe, and outline our clinical evaluation plan. This work demonstrates the feasibility of combining generative media with agentic autonomous decision-making to scale personalized patient care safely and effectively.
+
+由于缺乏个性化监督和动态反馈，家庭物理治疗的依从性仍然非常低。现有的数字健康解决方案依赖于静态、预先录制的视频库或通用 3D 化身，而无法考虑患者的具体损伤限制或家庭环境。在本文中，我们提出了一种新颖的多智能体系统（MAS）架构，该架构利用生成式人工智能和计算机视觉来闭合远程康复循环。我们的框架由四个专门的微代理组成：临床提取代理，将非结构化医疗记录解析为运动学约束；视频合成代理，利用基础视频生成模型来创建个性化、针对患者的运动视频；用于实时姿态估计的视觉处理代理；以及发出纠正指令的诊断反馈代理。我们展示了系统架构，详细介绍了使用大型语言模型和 MediaPipe 的原型管道，并概述了我们的临床评估计划。这项工作证明了将生成媒体与代理自主决策相结合以安全有效地扩展个性化患者护理的可行性。
+
+</details>
+
+---
+
+## 13. Neuro-Symbolic Manipulation Understanding with Enriched Semantic Event Chains / 通过丰富的语义事件链进行神经符号操作理解
+
+**Date**: 2026-04-22 | **arXiv**: [2604.21053v1](http://arxiv.org/abs/2604.21053v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.21053v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Robotic systems operating in human environments must reason about how object interactions evolve over time, which actions are currently being performed, and what manipulation step is likely to follow. Classical enriched Semantic Event Chains (eSECs) provide an interpretable relational description of manipulation, but remain primarily descriptive and do not directly support uncertainty-aware decision making. In this paper, we propose eSEC-LAM, a neuro-symbolic framework that transforms eSECs into an explicit event-level symbolic state for manipulation understanding. The proposed formulation augments classical eSECs with confidence-aware predicates, functional object roles, affordance priors, primitive-level abstraction, and saliency-guided explanation cues. These enriched symbolic states are derived from a foundation-model-based perception front-end through deterministic predicate extraction, while current-action inference and next-primitive prediction are performed using lightweight symbolic reasoning over primitive pre- and post-conditions. We evaluate the proposed framework on EPIC-KITCHENS-100, EPIC-KITCHENS VISOR, and Assembly101 across action recognition, next-primitive prediction, robustness to perception noise, and explanation consistency. Experimental results show that eSEC-LAM achieves competitive action recognition, substantially improves next-primitive prediction, remains more robust under degraded perceptual conditions than both classical symbolic and end-to-end video baselines, and provides temporally consistent explanation traces grounded in explicit relational evidence. These findings demonstrate that enriched Semantic Event Chains can serve not only as interpretable descriptors of manipulation, but also as effective internal states for neuro-symbolic action reasoning.
+
+在人类环境中运行的机器人系统必须推理对象交互如何随时间演变、当前正在执行哪些操作以及可能遵循哪些操作步骤。经典的丰富语义事件链（eSEC）提供了操作的可解释的关系描述，但仍然主要是描述性的，并且不直接支持不确定性感知决策。在本文中，我们提出了 eSEC-LAM，这是一种神经符号框架，可将 eSEC 转换为明确的事件级符号状态以进行操作理解。所提出的公式通过置信感知谓词、功能对象角色、可供性先验、原始级别抽象和显着性引导解释线索增强了经典 eSEC。这些丰富的符号状态是通过确定性谓词提取从基于基础模型的感知前端导出的，而当前动作推理和下一个原始预测是使用对原始前置条件和后置条件的轻量级符号推理来执行的。我们在 EPIC-KITCHENS-100、EPIC-KITCHENS VISOR 和 Assembly101 上评估了所提出的框架，涵盖动作识别、下一个基元预测、感知噪声的鲁棒性和解释一致性。实验结果表明，eSEC-LAM 实现了竞争性动作识别，显着改善了下一个原始预测，在感知退化的条件下比经典符号和端到端视频基线更稳健，并提供基于明确关系证据的时间一致的解释轨迹。这些发现表明，丰富的语义事件链不仅可以作为操作的可解释描述符，而且可以作为神经符号动作推理的有效内部状态。
+
+</details>
+
+---
+
+## 14. Micro-DualNet: Dual-Path Spatio-Temporal Network for Micro-Action Recognition / Micro-DualNet：用于微动作识别的双路径时空网络
+
+**Date**: 2026-04-22 | **arXiv**: [2604.21011v1](http://arxiv.org/abs/2604.21011v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.21011v1)
+
+**Categories**: cs.CV, q-bio.NC
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Micro-actions are subtle, localized movements lasting 1-3 seconds such as scratching one's head or tapping fingers. Such subtle actions are essential for social communication, ubiquitously used in natural interactions, and thus critical for fine-grained video understanding, yet remain poorly understood by current computer vision systems. We identify a fundamental challenge: micro-actions exhibit diverse spatio-temporal characteristics where some are defined by spatial configurations while others manifest through temporal dynamics. Existing methods that commit to a single spatio-temporal decomposition cannot accommodate this diversity. We propose a dual-path network that processes anatomically-grounded spatial entities through parallel Spatial-Temporal (ST) and Temporal-Spatial (TS) pathways. The ST path captures spatial configurations before modeling temporal dynamics, while the TS path inverts this order to prioritize temporal dynamics. Rather than fixed fusion, we introduce entity-level adaptive routing where each body part learns its optimal processing preference, complemented by Mutual Action Consistency (MAC) loss that enforces cross-path coherence. Extensive experiments demonstrate competitive performance on MA-52 dataset and state-of-the-art results on iMiGUE dataset. Our work reveals that architectural adaptation to the inherent complexity of micro-actions is essential for advancing fine-grained video understanding.
+
+微动作是持续 1-3 秒的微妙的局部动作，例如抓头或敲击手指。这种微妙的动作对于社交交流至关重要，在自然交互中普遍使用，因此对于细粒度的视频理解至关重要，但当前的计算机视觉系统仍然很难理解。我们发现了一个基本挑战：微动作表现出不同的时空特征，其中一些是由空间配置定义的，而另一些则通过时间动态表现出来。致力于单一时空分解的现有方法无法适应这种多样性。我们提出了一种双路径网络，通过并行的时空（ST）和时空（TS）路径处理解剖学上的空间实体。 ST 路径在对时间动态进行建模之前捕获空间配置，而 TS 路径则反转此顺序以优先考虑时间动态。我们引入了实体级自适应路由，而不是固定融合，其中每个身体部分都学习其最佳处理偏好，并辅以强制跨路径一致性的相互动作一致性（MAC）损失。大量实验证明了 MA-52 数据集上的竞争性能和 iMiGUE 数据集上最先进的结果。我们的工作表明，架构适应微动作固有的复杂性对于推进细粒度视频理解至关重要。
+
+</details>
+
+---
+
+## 15. Sink-Token-Aware Pruning for Fine-Grained Video Understanding in Efficient Video LLMs / 高效视频法学硕士中细粒度视频理解的接收器令牌感知修剪
+
+**Date**: 2026-04-22 | **arXiv**: [2604.20937v1](http://arxiv.org/abs/2604.20937v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.20937v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video Large Language Models (Video LLMs) incur high inference latency due to a large number of visual tokens provided to LLMs. To address this, training-free visual token pruning has emerged as a solution to reduce computational costs; however, existing methods are primarily validated on Multiple-Choice Question Answering (MCQA) benchmarks, where coarse-grained cues often suffice. In this work, we reveal that these methods suffer a sharp performance collapse on fine-grained understanding tasks requiring precise visual grounding, such as hallucination evaluation. To explore this gap, we conduct a systematic analysis and identify sink tokens--semantically uninformative tokens that attract excessive attention--as a key obstacle to fine-grained video understanding. When these sink tokens survive pruning, they distort the model's visual evidence and hinder fine-grained understanding. Motivated by these insights, we propose Sink-Token-aware Pruning (SToP), a simple yet effective plug-and-play method that introduces a sink score to quantify each token's tendency to behave as a sink and applies this score to existing spatial and temporal pruning methods to suppress them, thereby enhancing video understanding. To validate the effectiveness of SToP, we apply it to state-of-the-art pruning methods (VisionZip, FastVid, and Holitom) and evaluate it across diverse benchmarks covering hallucination, open-ended generation, compositional reasoning, and MCQA. Our results demonstrate that SToP significantly boosts performance, even when pruning up to 90% of visual tokens.
+
+由于向 LLM 提供大量视觉标记，视频大型语言模型（视频 LLM）会产生较高的推理延迟。为了解决这个问题，免训练的视觉标记剪枝已经成为降低计算成本的解决方案；然而，现有方法主要在多项选择题回答（MCQA）基准上进行验证，其中粗粒度线索通常就足够了。在这项工作中，我们揭示了这些方法在需要精确视觉基础的细粒度理解任务（例如幻觉评估）上遭受了急剧的性能崩溃。为了探索这一差距，我们进行了系统分析，并确定了接收器标记（语义上无信息但引起过度关注的标记）作为细粒度视频理解的关键障碍。当这些接收器令牌在修剪后幸存下来时，它们会扭曲模型的视觉证据并阻碍细粒度的理解。受这些见解的启发，我们提出了 Sink-Token-aware Pruning (SToP)，这是一种简单而有效的即插即用方法，它引入了一个 Sink 分数来量化每个令牌充当 Sink 的趋势，并将该分数应用于现有的空间和时间剪枝方法以抑制它们，从而增强视频理解。为了验证 SToP 的有效性，我们将其应用于最先进的修剪方法（VisionZip、FastVid 和 Holitom），并在涵盖幻觉、开放式生成、组合推理和 MCQA 等不同基准上对其进行评估。我们的结果表明，即使修剪了高达 90% 的视觉标记，STOP 也能显着提高性能。
+
+</details>
+
+---
+
+## 16. AttentionBender: Manipulating Cross-Attention in Video Diffusion Transformers as a Creative Probe / AttentionBender：作为创意探针操纵视频扩散变压器中的交叉注意力
+
+**Date**: 2026-04-22 | **arXiv**: [2604.20936v1](http://arxiv.org/abs/2604.20936v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.20936v1)
+
+**Categories**: cs.MM, cs.CV, cs.HC
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present AttentionBender, a tool that manipulates cross-attention in Video Diffusion Transformers to help artists probe the internal mechanics of black-box video generation. While generative outputs are increasingly realistic, prompt-only control limits artists' ability to build intuition for the model's material process or to work beyond its default tendencies. Using an autobiographical research-through-design approach, we built on Network Bending to design AttentionBender, which applies 2D transforms (rotation, scaling, translation, etc.) to cross-attention maps to modulate generation. We assess AttentionBender by visualizing 4,500+ video generations across prompts, operations, and layer targets. Our results suggest that cross-attention is highly entangled: targeted manipulations often resist clean, localized control, producing distributed distortions and glitch aesthetics over linear edits. AttentionBender contributes a tool that functions both as an Explainable AI style probe of transformer attention mechanisms, and as a creative technique for producing novel aesthetics beyond the model's learned representational space.
+
+我们推出了 AttentionBender，这是一种在视频扩散变压器中操纵交叉注意力的工具，可以帮助艺术家探索黑盒视频生成的内部机制。虽然生成输出越来越现实，但仅提示控制限制了艺术家为模型的材料过程建立直觉或超越其默认倾向的能力。我们使用自传式研究到设计的方法，在 Network Bending 的基础上设计了 AttentionBender，它将 2D 变换（旋转、缩放、平移等）应用于交叉注意力图来调节生成。我们通过可视化跨越提示、操作和层目标的 4,500 多个视频生成来评估 AttentionBender。我们的结果表明，交叉注意力是高度纠缠的：有针对性的操作通常会抵制干净的局部控制，从而在线性编辑上产生分布式扭曲和故障美感。 AttentionBender 提供了一种工具，它既可以作为 Transformer 注意机制的可解释 AI 风格探针，也可以作为一种创造性技术，用于产生超出模型学习表征空间的新颖美学。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-04-23 (14 papers)</b></summary>
 
 # arXiv Video Papers - 2026-04-23
