@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-04-28](papers/2026-04-28.md) - 1 papers
 - [2026-04-27](papers/2026-04-27.md) - 3 papers
 - [2026-04-24](papers/2026-04-24.md) - 2 papers
 - [2026-04-23](papers/2026-04-23.md) - 6 papers
@@ -60,6 +61,34 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-04-28 (1 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-04-28
+
+**Paper Count**: 1
+
+---
+
+## 1. CAPSULE: Control-Theoretic Action Perturbations for Safe Uncertainty-Aware Reinforcement Learning / 胶囊：用于安全不确定性感知强化学习的控制理论行为扰动
+
+**Date**: 2026-04-26 | **arXiv**: [2604.23576v1](http://arxiv.org/abs/2604.23576v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.23576v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Ensuring safe exploration in high-dimensional systems with unknown dynamics remains a significant challenge. Existing safe reinforcement learning methods often provide safety guarantees only in expectation, which can still lead to safety violations. Control-theoretic approaches, in contrast, offer hard constraint-based safety guarantees but typically assume access to known system dynamics or require accurate estimation of control-affine models. In this paper, we propose a safe reinforcement learning framework that learns a probabilistic control-affine dynamics model in an offline setting. The learned model is leveraged to explicitly construct control barrier functions (CBFs) that incorporate model uncertainty to provide conservative safety constraints. These CBF constraints are enforced through an online constraint-based action correction mechanism, enabling safe exploration without overly restricting task performance. Empirical evaluations on nonlinear, complex continuous-control benchmarks demonstrate that our approach achieves returns comparable to those of existing baselines while significantly reducing safety violations.
+
+确保在具有未知动力学的高维系统中进行安全探索仍然是一项重大挑战。现有的安全强化学习方法往往仅在预期中提供安全保证，这仍然可能导致安全违规。相比之下，控制理论方法提供基于硬约束的安全保证，但通常假设可以访问已知的系统动力学或需要精确估计控制仿射模型。在本文中，我们提出了一种安全的强化学习框架，该框架可以在离线环境中学习概率控制仿射动力学模型。利用学习到的模型来显式构建控制屏障函数 (CBF)，其中包含模型不确定性以提供保守的安全约束。这些 CBF 约束是通过基于在线约束的动作校正机制强制执行的，从而可以在不过度限制任务性能的情况下实现安全探索。对非线性、复杂连续控制基准的实证评估表明，我们的方法实现了与现有基准相当的回报，同时显着减少了安全违规。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-04-27 (3 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-04-27
