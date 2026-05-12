@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-05-12](papers/2026-05-12.md) - 3 papers
 - [2026-05-08](papers/2026-05-08.md) - 9 papers
 - [2026-05-07](papers/2026-05-07.md) - 12 papers
 - [2026-05-06](papers/2026-05-06.md) - 4 papers
@@ -69,6 +70,68 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-05-12 (3 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-05-12
+
+**Paper Count**: 3
+
+---
+
+## 1. PhyGround: Benchmarking Physical Reasoning in Generative World Models / PhyGround：生成世界模型中物理推理的基准测试
+
+**Date**: 2026-05-11 | **arXiv**: [2605.10806v1](http://arxiv.org/abs/2605.10806v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.10806v1)
+
+**Categories**: cs.CV, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Generative world models are increasingly used for video generation, where learned simulators are expected to capture the physical rules that govern real-world dynamics. However, evaluating whether generated videos actually follow these rules remains challenging. Existing physics-focused video benchmarks have made important progress, but they still face three key challenges, including the coarse evaluation frameworks that hide law-specific failures, response biases and fatigue that undermine the validity of annotation judgments, and automated evaluators that are insufficiently physics-aware or difficult to audit. To address those challenges, we introduce PhyGround, a criteria-grounded benchmark for evaluating physical reasoning in video generation. The benchmark contains 250 curated prompts, each augmented with an expected physical outcome, and a taxonomy of 13 physical laws across solid-body mechanics, fluid dynamics, and optics. Each law is operationalized through observable sub-questions to enable per-law diagnostics. We evaluate eight modern video generation models through a large-scale, quality-controlled human study, grounded on social science lab experiment design. A total of 459 annotators provided 5,796 complete annotations and over 37.4K fine-grained labels; after quality control, the retained annotations exhibited high split-half model-ranking correlations (Spearman's rho > 0.90). To support reproducible automated evaluation, we release PhyJudge-9B, an open physics-specialized VLM judge. PhyJudge-9B achieves substantially lower aggregate relative bias than Gemini-3.1-Pro (3.3% vs. 16.6%). We release prompts, human annotations, model checkpoints, and evaluation code on the project page https://phyground.github.io/.
+
+生成世界模型越来越多地用于视频生成，其中学习的模拟器有望捕获控制现实世界动态的物理规则。然而，评估生成的视频是否真正遵循这些规则仍然具有挑战性。现有的以物理为重点的视频基准已经取得了重要进展，但它们仍然面临三个关键挑战，包括隐藏特定规律失败的粗略评估框架、破坏注释判断有效性的响应偏差和疲劳，以及物理意识不足或难以审核的自动评估器。为了应对这些挑战，我们引入了 PhyGround，这是一个基于标准的基准，用于评估视频生成中的物理推理。该基准测试包含 250 个精心设计的提示，每个提示都增加了预期的物理结果，以及涵盖固体力学、流体动力学和光学的 13 条物理定律的分类。每条法律都通过可观察的子问题来实施，以实现每条法律的诊断。我们通过基于社会科学实验室实验设计的大规模、质量控制的人体研究来评估八种现代视频生成模型。共有 459 位标注者提供了 5,796 个完整标注和超过 3.74 万个细粒度标签；质量控制后，保留的注释表现出较高的分半模型排名相关性（Spearman's rho > 0.90）。为了支持可重复的自动评估，我们发布了 PhyJudge-9B，一个开放的物理专业 VLM 判断器。 PhyJudge-9B 的总体相对偏差明显低于 Gemini-3.1-Pro（3.3% vs. 16.6%）。我们在项目页面 https://phyground.github.io/ 上发布提示、人工注释、模型检查点和评估代码。
+
+</details>
+
+---
+
+## 2. CoWorld-VLA: Thinking in a Multi-Expert World Model for Autonomous Driving / CoWorld-VLA：自动驾驶多专家世界模型的思考
+
+**Date**: 2026-05-11 | **arXiv**: [2605.10426v1](http://arxiv.org/abs/2605.10426v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.10426v1)
+
+**Categories**: cs.CV, cs.AI
+
+**Code**: https://github.com/potatochip1211/CoWorld-VLA.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision-Language-Action (VLA) models have emerged as a promising paradigm for end-to-end autonomous driving. However, existing reasoning mechanisms still struggle to provide planning-oriented intermediate representations: textual Chain-of-Thought (CoT) fails to preserve continuous spatiotemporal structure, while latent world reasoning remains difficult to use as a direct condition for action generation. In this paper, we propose CoWorld-VLA, a multi-expert world reasoning framework for autonomous driving, where world representations serve as explicit conditions to guide action planning. CoWorld-VLA extracts complementary world information through multi-source supervision and encodes it into expert tokens within the VLA, thereby providing planner-accessible conditioning signals. Specifically, we construct four types of tokens: semantic interaction, geometric structure, dynamic evolution, and ego trajectory tokens, which respectively model interaction intent, spatial structure, future temporal dynamics, and behavioral goals. During action generation, CoWorld-VLA employs a diffusion-based hierarchical multi-expert fusion planner, which is coupled with scene context throughout the joint denoising process to generate continuous ego trajectories. Experiments show that CoWorld-VLA achieves competitive results in both future scene generation and planning on the NAVSIM v1 benchmark, demonstrating strong performance in collision avoidance and trajectory accuracy. Ablation studies further validate the complementarity of expert tokens and their effectiveness as planning conditions for action generation. Code will be available at https://github.com/potatochip1211/CoWorld-VLA.
+
+视觉-语言-动作（VLA）模型已成为端到端自动驾驶的有前途的范例。然而，现有的推理机制仍然难以提供面向计划的中间表示：文本思想链（CoT）无法保留连续的时空结构，而潜在世界推理仍然难以用作动作生成的直接条件。在本文中，我们提出了 CoWorld-VLA，这是一种用于自动驾驶的多专家世界推理框架，其中世界表示作为指导行动规划的明确条件。 CoWorld-VLA 通过多源监督提取互补的世界信息，并将其编码为 VLA 内的专家令牌，从而提供规划者可访问的调节信号。具体来说，我们构建了四种类型的标记：语义交互、几何结构、动态演化和自我轨迹标记，它们分别建模交互意图、空间结构、未来时间动态和行为目标。在动作生成过程中，CoWorld-VLA 采用基于扩散的分层多专家融合规划器，该规划器在整个联合去噪过程中与场景上下文相结合，以生成连续的自我轨迹。实验表明，CoWorld-VLA在NAVSIM v1基准上在未来场景生成和规划方面都取得了有竞争力的结果，在防撞和轨迹精度方面表现出了强大的性能。消融研究进一步验证了专家代币的互补性及其作为行动生成的规划条件的有效性。代码可在 https://github.com/potatochip1211/CoWorld-VLA 获取。
+
+</details>
+
+---
+
+## 3. How Mobile World Model Guides GUI Agents? / 移动世界模型如何指导 GUI 代理？
+
+**Date**: 2026-05-11 | **arXiv**: [2605.10347v1](http://arxiv.org/abs/2605.10347v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.10347v1)
+
+**Categories**: cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in vision-language models have enabled mobile GUI agents to perceive visual interfaces and execute user instructions, but reliable prediction of action consequences remains critical for long-horizon and high-risk interactions. Existing mobile world models provide either text-based or image-based future states, yet it remains unclear which representation is useful, whether generated rollouts can replace real environments, and how test-time guidance helps agents of different strengths. To answer the above questions, we filter and annotate mobile world-model data, then train world models across four modalities: delta text, full text, diffusion-based images, and renderable code. These models achieve SoTA performance on both MobileWorldBench and Code2WorldBench. Furthermore, by evaluating their downstream utility on AITZ, AndroidControl, and AndroidWorld, we obtain three findings. First, renderable code reconstruction achieves high in-distribution fidelity and provides effective multimodal supervision for data construction, while text-based feedback is more robust for online out-of-distribution (OOD) execution. Second, world-model-generated trajectories can provide transferable interaction experience in the training process and improve agents' end-to-end task performance, although these data do not preserve the original distribution. Last, for overconfident mobile agents with low action entropy, posterior self-reflection provides limited gains, suggesting that world models are more effective as prior perception or training supervision than as universal post-hoc verifiers.
+
+视觉语言模型的最新进展使移动 GUI 代理能够感知视觉界面并执行用户指令，但动作结果的可靠预测对于长期和高风险的交互仍然至关重要。现有的移动世界模型提供基于文本或基于图像的未来状态，但仍不清楚哪种表示有用、生成的部署是否可以取代真实环境，以及测试时指导如何帮助不同优势的代理。为了回答上述问题，我们过滤和注释移动世界模型数据，然后跨四种模式训练世界模型：增量文本、全文、基于扩散的图像和可渲染代码。这些模型在 MobileWorldBench 和 Code2WorldBench 上均实现了 SoTA 性能。此外，通过评估它们在 AITZ、AndroidControl 和 AndroidWorld 上的下游实用程序，我们获得了三项发现。首先，可渲染代码重建实现了高分布内保真度，并为数据构建提供有效的多模式监督，而基于文本的反馈对于在线分布外（OOD）执行来说更加稳健。其次，世界模型生成的轨迹可以在训练过程中提供可转移的交互体验，并提高代理的端到端任务性能，尽管这些数据不保留原始分布。最后，对于行动熵较低的过度自信的移动代理，后验自我反思提供的收益有限，这表明世界模型作为先验感知或训练监督比作为通用事后验证者更有效。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-05-08 (9 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-05-08
