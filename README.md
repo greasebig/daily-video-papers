@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-05-13](papers/2026-05-13.md) - 22 papers
 - [2026-05-08](papers/2026-05-08.md) - 16 papers
 - [2026-05-07](papers/2026-05-07.md) - 5 papers
 - [2026-05-06](papers/2026-05-06.md) - 7 papers
@@ -77,6 +78,376 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-05-13 (22 papers)</b></summary>
+
+# arXiv Video Papers - 2026-05-13
+
+**Paper Count**: 22
+
+---
+
+## 1. CausalCine: Real-Time Autoregressive Generation for Multi-Shot Video Narratives / CausalCine：多镜头视频叙事的实时自回归生成
+
+**Date**: 2026-05-12 | **arXiv**: [2605.12496v1](http://arxiv.org/abs/2605.12496v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.12496v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Autoregressive video generation aims at real-time, open-ended synthesis. Yet, cinematic storytelling is not merely the endless extension of a single scene; it requires progressing through evolving events, viewpoint shifts, and discrete shot boundaries. Existing autoregressive models often struggle in this setting. Trained primarily for short-horizon continuation, they treat long sequences as extended single shots, inevitably suffering from motion stagnation and semantic drift during long rollouts. To bridge this gap, we introduce CausalCine, an interactive autoregressive framework that transforms multi-shot video generation into an online directing process. CausalCine generates causally across shot changes, accepts dynamic prompts on the fly, and reuses context without regenerating previous shots. To achieve this, we first train a causal base model on native multi-shot sequences to learn complex shot transitions prior to acceleration. We then propose Content-Aware Memory Routing (CAMR), which dynamically retrieves historical KV entries according to attention-based relevance scores rather than temporal proximity, preserving cross-shot coherence under bounded active memory. Finally, we distill the causal base model into a few-step generator for real-time interactive generation. Extensive experiments demonstrate that CausalCine significantly outperforms autoregressive baselines and approaches the capability of bidirectional models while unlocking the streaming interactivity of causal generation. Demo available at https://yihao-meng.github.io/CausalCine/
+
+自回归视频生成旨在实时、开放式合成。然而，电影叙事并不仅仅是单个场景的无限延伸；而是一个场景的无限延伸。它需要不断发展的事件、视角的转变和离散的镜头边界。现有的自回归模型常常在这种情况下陷入困境。主要针对短视界延续进行训练，他们将长序列视为延长的单镜头，在长时间展示期间不可避免地会遭受运动停滞和语义漂移的困扰。为了弥补这一差距，我们引入了 CausalCine，这是一种交互式自回归框架，可将多镜头视频生成转变为在线导演过程。 CausalCine 在镜头变化中生成因果关系，动态接受动态提示，并重用上下文而无需重新生成以前的镜头。为了实现这一目标，我们首先在本机多镜头序列上训练因果基础模型，以在加速之前学习复杂的镜头过渡。然后，我们提出内容感知内存路由（CAMR），它根据基于注意力的相关性得分而不是时间邻近度动态检索历史 KV 条目，从而在有限的活动内存下保持跨镜头的一致性。最后，我们将因果基础模型提炼成一个用于实时交互生成的几步生成器。大量实验表明，CausalCine 的性能显着优于自回归基线，接近双向模型的能力，同时解锁因果生成的流式交互性。演示地址：https://yihao-meng.github.io/CausalCine/
+
+</details>
+
+---
+
+## 2. OmniNFT: Modality-wise Omni Diffusion Reinforcement for Joint Audio-Video Generation / OmniNFT：用于联合音频-视频生成的模态全向扩散增强
+
+**Date**: 2026-05-12 | **arXiv**: [2605.12480v1](http://arxiv.org/abs/2605.12480v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.12480v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in joint audio-video generation have been remarkable, yet real-world applications demand strong per-modality fidelity, cross-modal alignment, and fine-grained synchronization. Reinforcement Learning (RL) offers a promising paradigm, but its extension to multi-objective and multi-modal joint audio-video generation remains unexplored. Notably, our in-depth analysis first reveals that the primary obstacles to applying RL in this stem from: (i) multi-objective advantages inconsistency, where the advantages of multimodal outputs are not always consistent within a group; (ii) multi-modal gradients imbalance, where video-branch gradients leak into shallow audio layers responsible for intra-modal generation; (iii) uniform credit assignment, where fine-grained cross-modal alignment regions fail to get efficient exploration. These shortcomings suggest that vanilla RL fine-tuning strategy with a single global advantage often leads to suboptimal results. To address these challenges, we propose OmniNFT, a novel modality-aware online diffusion RL framework with three key innovations: (1) Modality-wise advantage routing, which routes independent per-reward advantages to their respective modality generation branches. (2) Layer-wise gradient surgery, which selectively detaches video-branch gradients on shallow audio layers while retaining those for cross-modal interaction layers. (3) Region-wise loss reweighting, which modulates policy optimization toward critical regions related to audio-video synchronization and fine-grained alignment. Extensive experiments on JavisBench and VBench with the LTX-2 backbone demonstrate that OmniNFT achieves comprehensive improvements in audio and video perceptual quality, cross-modal alignment, and audio-video synchronization.
+
+联合音频视频生成方面的最新进展非常引人注目，但现实世界的应用需要强大的每种模态保真度、跨模态对齐和细粒度同步。强化学习（RL）提供了一个有前途的范例，但其对多目标和多模式联合音视频生成的扩展仍有待探索。值得注意的是，我们的深入分析首先揭示了应用强化学习的主要障碍源于：（i）多目标优势不一致，即多模态输出的优势在群体内并不总是一致； (ii) 多模态梯度不平衡，其中视频分支梯度泄漏到负责模内生成的浅音频层； (iii) 统一的信用分配，细粒度的跨模式对齐区域无法得到有效的探索。这些缺点表明，具有单一全局优势的普通强化学习微调策略通常会导致次优结果。为了应对这些挑战，我们提出了 OmniNFT，一种新颖的模态感知在线扩散 RL 框架，具有三个关键创新：（1）模态优势路由，它将独立的每个奖励优势路由到各自的模态生成分支。 （2）逐层梯度手术，选择性地分离浅音频层上的视频分支梯度，同时保留跨模式交互层的梯度。 （3）区域损失重新加权，调整与音视频同步和细粒度对齐相关的关键区域的策略优化。在具有 LTX-2 主干的 JavisBench 和 VBench 上进行的大量实验表明，OmniNFT 在音频和视频感知质量、跨模态对齐和音视频同步方面实现了全面改进。
+
+</details>
+
+---
+
+## 3. GaitProtector: Impersonation-Driven Gait De-Identification via Training-Free Diffusion Latent Optimization / GaitProtector：通过免训练扩散潜在优化进行模拟驱动的步态去识别
+
+**Date**: 2026-05-12 | **arXiv**: [2605.12431v1](http://arxiv.org/abs/2605.12431v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.12431v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Conventional gait de-identification methods often encounter an inherent trade-off: they either provide insufficient identity suppression or introduce spatiotemporal distortions that impede structure-sensitive downstream applications. We propose GaitProtector, an impersonation-driven gait de-identification framework that formulates privacy protection as a unified objective with two tightly coupled components: (i) obfuscation, which repels the protected gait from the source identity, and (ii) impersonation, which attracts it toward a selected target identity. The target identity serves as a semantic anchor that biases optimization toward structurally plausible gait patterns under the pretrained diffusion prior, helping preserve dominant body shape and motion dynamics. We instantiate this idea through a training-free diffusion latent optimization pipeline. Instead of retraining a generator for each dataset, we invert each input silhouette sequence into the latent trajectory of a pretrained 3D video diffusion model and iteratively optimize latent codes with a differentiable adversarial objective to synthesize protected gaits. Experiments on the CASIA-B dataset show that GaitProtector achieves a 56.7% impersonation success rate under black-box gait recognition and reduces Rank-1 identification accuracy from 89.6% to 15.0%, while maintaining favorable visual and temporal quality. We further evaluate downstream utility on the Scoliosis1K dataset, where diagnostic accuracy decreases only from 91.4% to 74.2%. To the best of our knowledge, this work is the first to leverage pretrained 3D diffusion priors in a training-free manner for silhouette-based gait de-identification.
+
+传统的步态去识别方法经常遇到固有的权衡：它们要么提供不充分的身份抑制，要么引入时空扭曲，从而阻碍结构敏感的下游应用。我们提出了 GaitProtector，一种模拟驱动的步态去识别框架，它将隐私保护制定为具有两个紧密耦合组件的统一目标：（i）混淆，将受保护的步态与源身份相排斥，以及（ii）模拟，将其吸引到选定的目标身份。目标身份充当语义锚，在预训练的扩散先验下将优化偏向于结构上合理的步态模式，有助于保持主要的身体形状和运动动力学。我们通过免训练的扩散潜在优化管道实例化了这个想法。我们不是为每个数据集重新训练生成器，而是将每个输入轮廓序列反转为预训练的 3D 视频扩散模型的潜在轨迹，并使用可微对抗目标迭代优化潜在代码以合成受保护的步态。在 CASIA-B 数据集上的实验表明，GaitProtector 在黑盒步态识别下实现了 56.7% 的模仿成功率，并将 Rank-1 识别准确率从 89.6% 降低到 15.0%，同时保持良好的视觉和时间质量。我们进一步评估 Scoliosis1K 数据集的下游效用，其中诊断准确性仅从 91.4% 下降到 74.2%。据我们所知，这项工作首次以免训练的方式利用预训练的 3D 扩散先验来进行基于轮廓的步态去识别。
+
+</details>
+
+---
+
+## 4. Enhancing Domain Generalization in 3D Human Pose Estimation through Controllable Generative Augmentation / 通过可控生成增强增强 3D 人体姿势估计中的领域泛化
+
+**Date**: 2026-05-12 | **arXiv**: [2605.12198v1](http://arxiv.org/abs/2605.12198v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.12198v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Pedestrian motion, due to its causal nature, is strongly influenced by domain gaps arising from discrepancies between training and testing data distributions. Focusing on 3D human pose estimation, this work presents a controllable human pose generation framework that synthesizes diverse video data by systematically varying poses, backgrounds, and camera viewpoints. This generative augmentation enriches training datasets, enhances model generalization, and alleviates the limitations of existing methods in handling domain discrepancies. By leveraging both indoor/real-world and outdoor/virtual datasets, we perform cross-domain data fusion and controllable video generation to construct enriched training data, tailored to realistic deployment settings. Extensive experiments show that the augmented datasets significantly improve model performance on unseen scenarios and datasets, validating the effectiveness of the proposed approach.
+
+由于其因果性质，行人运动受到训练和测试数据分布之间差异引起的域间隙的强烈影响。这项工作专注于 3D 人体姿势估计，提出了一种可控的人体姿势生成框架，该框架通过系统地改变姿势、背景和相机视点来合成不同的视频数据。这种生成增强丰富了训练数据集，增强了模型泛化能力，并减轻了现有方法在处理领域差异方面的局限性。通过利用室内/现实世界和室外/虚拟数据集，我们执行跨域数据融合和可控视频生成，以构建丰富的训练数据，适合实际的部署设置。大量实验表明，增强的数据集显着提高了未见过的场景和数据集上的模型性能，验证了所提出方法的有效性。
+
+</details>
+
+---
+
+## 5. From Imagined Futures to Executable Actions: Mixture of Latent Actions for Robot Manipulation / 从想象的未来到可执行的动作：机器人操纵的潜在动作的混合
+
+**Date**: 2026-05-12 | **arXiv**: [2605.12167v1](http://arxiv.org/abs/2605.12167v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.12167v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video generation models offer a promising imagination mechanism for robot manipulation by predicting long-horizon future observations, but effectively exploiting these imagined futures for action execution remains challenging. Existing approaches either condition policies on predicted frames or directly decode generated videos into actions, both suffering from a mismatch between visual realism and control relevance. As a result, predicted observations emphasize perceptual fidelity rather than action-centric causes of state transitions, leading to indirect and unstable control. To address this gap, we propose MoLA (Mixture of Latent Actions), a control-oriented interface that transforms imagined future videos into executable representations. Instead of passing predicted frames directly to the policy, MoLA leverages a mixture of pretrained inverse dynamics models to infer a mixture of latent actions implied by generated visual transitions. These modality-aware inverse dynamics models capture complementary semantic, depth, and flow cues, providing a structured and physically grounded action representation that bridges video imagination and policy execution. We evaluate our approach on simulated benchmarks (LIBERO, CALVIN, and LIBERO-Plus) and real-world robot manipulation tasks, achieving consistent gains in task success, temporal consistency, and generalization.
+
+视频生成模型通过预测长期的未来观察结果，为机器人操作提供了一种有前景的想象机制，但有效利用这些想象的未来来执行动作仍然具有挑战性。现有的方法要么在预测帧上设置策略，要么直接将生成的视频解码为动作，这两种方法都受到视觉真实性和控制相关性之间不匹配的影响。因此，预测观察强调感知保真度，而不是状态转换的以行动为中心的原因，从而导致间接和不稳定的控制。为了解决这一差距，我们提出了 MoLA（潜在动作混合），这是一种面向控制的界面，可将想象的未来视频转换为可执行的表示。 MoLA 没有将预测帧直接传递给策略，而是利用预训练的逆动态模型的混合来推断生成的视觉转换所隐含的潜在动作的混合。这些模态感知逆动态模型捕获互补的语义、深度和流程线索，提供结构化且基于物理的动作表示，连接视频想象和政策执行。我们在模拟基准（LIBERO、CALVIN 和 LIBERO-Plus）和现实世界的机器人操作任务上评估我们的方法，在任务成功、时间一致性和泛化方面取得一致的成果。
+
+</details>
+
+---
+
+## 6. Cross-Modal-Domain Generalization Through Semantically Aligned Discrete Representations / 通过语义对齐的离散表示进行跨模态域泛化
+
+**Date**: 2026-05-12 | **arXiv**: [2605.12145v1](http://arxiv.org/abs/2605.12145v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.12145v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multimodal learning seeks to integrate information across diverse sensory sources, yet current approaches struggle to balance cross-modal generalizability with modality-specific structure. Continuous (implicit) methods preserve fine-grained priors but render generalization challenging, while discrete (explicit) approaches enforce shared prototypes at the expense of modality specificity. We introduce CoDAAR (Cross-modal Discrete Alignment And Reconstruction), a novel framework that resolves this long-standing trade-off by establishing semantic consensus across modality-specific codebooks through index-level alignment. This design uniquely allows CoDAAR to preserve modality-unique structures while achieving generalizable cross-modal representations within a unified discrete space. CoDAAR combines two complementary mechanisms: Discrete Temporal Alignment (DTA), which enables fine-grained temporal quantization, and Cascading Semantic Alignment (CSA), which promotes progressive cross-modal semantic agreement. Together, they establish a competition-free unified representation space. Trained with self-supervised reconstruction objectives on paired multimodal sequences, CoDAAR demonstrates robust cross-modal and cross-domain generalization. Across Cross-Modal Generalization benchmarks, including event classification, localization, video segmentation, and cross-dataset transfer, CoDAAR achieves state-of-the-art performance, establishing a new paradigm for discrete and generalizable multimodal representation learning.
+
+多模态学习试图整合不同感官来源的信息，但当前的方法很难平衡跨模态普遍性与特定模态结构。连续（隐式）方法保留了细粒度的先验，但使泛化具有挑战性，而离散（显式）方法以牺牲模态特异性为代价强制执行共享原型。我们引入了 CoDAAR（跨模态离散对齐和重构），这是一种新颖的框架，通过索引级对齐在特定模态的码本之间建立语义共识，解决了这一长期存在的权衡问题。这种独特的设计允许 CoDAAR 保留模态独特的结构，同时在统一的离散空间内实现可泛化的跨模态表示。 CoDAAR 结合了两种互补机制：离散时间对齐 (DTA)，可实现细粒度时间量化；级联语义对齐 (CSA)，可促进渐进式跨模态语义一致性。他们共同建立了一个无竞争的统一代表空间。 CoDAAR 通过配对多模态序列的自监督重建目标进行训练，展示了强大的跨模态和跨域泛化能力。在跨模态泛化基准（包括事件分类、定位、视频分割和跨数据集传输）中，CoDAAR 实现了最先进的性能，为离散和可泛化的多模态表示学习建立了新的范例。
+
+</details>
+
+---
+
+## 7. BARISTA: A Multi-Task Egocentric Benchmark for Compositional Visual Understanding / BARISTA：构图视觉理解的多任务自我中心基准
+
+**Date**: 2026-05-12 | **arXiv**: [2605.12074v1](http://arxiv.org/abs/2605.12074v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.12074v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Scene understanding is central to general physical intelligence, and video is a primary modality for capturing both state and temporal dynamics of a scene. Yet understanding physical processes remains difficult, as models must combine object localization, hand-object interactions, relational parsing, temporal reasoning, and step-level procedural inference. Existing benchmarks usually evaluate these capabilities separately, limiting diagnosis of why models fail on procedural tasks. We introduce BARISTA, a densely annotated egocentric dataset and benchmark of 185 real-world coffee-preparation videos covering fully automatic, portafilter-based, and capsule-based workflows. BARISTA provides verified per-frame scene graphs linking persistent object identities to masks, tracks, boxes, attributes, typed relations, hand-object interactions, activities, and process steps. From these graphs, we derive zero-shot language-based tasks spanning phrase grounding, hand-object interaction recognition, referring, activity recognition, relation extraction, and temporal visual question answering. Experiments reveal strong variation across task families and no consistently dominant model family, positioning BARISTA as a challenging diagnostic benchmark for procedural video understanding. Code and dataset available at https://huggingface.co/datasets/ramblr/BARISTA.
+
+场景理解是一般物理智能的核心，而视频是捕获场景的状态和时间动态的主要方式。然而理解物理过程仍然很困难，因为模型必须结合对象定位、手与对象交互、关系解析、时间推理和步骤级程序推理。现有的基准通常单独评估这些功能，限制了对模型在程序任务上失败原因的诊断。我们介绍 BARISTA，一个带有密集注释的以自我为中心的数据集和 185 个真实世界咖啡准备视频的基准，涵盖全自动、基于手柄和基于胶囊的工作流程。 BARISTA 提供经过验证的每帧场景图，将持久对象身份链接到蒙版、轨迹、框、属性、类型关系、手对象交互、活动和流程步骤。从这些图中，我们推导出基于零样本语言的任务，涵盖短语基础、手物体交互识别、指代、活动识别、关系提取和时间视觉问答。实验揭示了不同任务系列之间的巨大差异，并且没有一致的主导模型系列，这将 BARISTA 定位为程序视频理解的具有挑战性的诊断基准。代码和数据集可在 https://huggingface.co/datasets/ramblr/BARISTA 获取。
+
+</details>
+
+---
+
+## 8. OmniRefine: Alignment-Aware Cooperative Compression for Efficient Omnimodal Large Language Models / OmniRefine：用于高效全模态大型语言模型的对齐感知协作压缩
+
+**Date**: 2026-05-12 | **arXiv**: [2605.12056v1](http://arxiv.org/abs/2605.12056v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.12056v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Omnimodal large language models (Omni-LLMs) show strong capability in audio-video understanding, but their practical deployment remains limited by high inference cost of long video streams and dense audio sequences. Despite recent progress, existing compression methods for Omni-LLMs typically rely on fixed or native compression units, which can disrupt cross-modal correspondence and the complementary information required for audio-video reasoning, making it difficult to improve inference efficiency while stably preserving performance. To address this, we propose OmniRefine, a training-free two-stage framework for efficient audio-visual token compression in Omni-LLMs. First, Correspondence-Preserving Chunk Refinement refines native chunk boundaries into cross-modally aligned compression units through frame-audio similarity and dynamic programming. Second, Modality-Aware Cooperative Compression jointly compresses video and audio tokens within each refined unit to reduce redundancy while preserving critical evidence. Extensive experiments show that OmniRefine achieves a better efficiency-performance trade-off than strong baselines and maintains stable performance under lower compression ratios. On WorldSense, it still reaches 46.7% accuracy at a 44% token retention ratio, nearly matching the full-token baseline. The code and interface will be released to facilitate further research.
+
+全模态大语言模型（Omni-LLM）在音视频理解方面表现出强大的能力，但其实际部署仍然受到长视频流和密集音频序列的高推理成本的限制。尽管最近取得了进展，但 Omni-LLM 的现有压缩方法通常依赖于固定或本机压缩单元，这可能会破坏跨模态对应和音视频推理所需的补充信息，从而难以在稳定保持性能的同时提高推理效率。为了解决这个问题，我们提出了 OmniRefine，这是一种免训练的两阶段框架，用于在 Omni-LLM 中进行高效的视听令牌压缩。首先，对应保留块细化通过帧音频相似性和动态编程将本机块边界细化为跨模式对齐的压缩单元。其次，模态感知协作压缩在每个细化单元内联合压缩视频和音频令牌，以减少冗余，同时保留关键证据。大量实验表明，OmniRefine 实现了比强基线更好的效率与性能权衡，并在较低压缩比下保持稳定的性能。在 WorldSense 上，它仍然达到 46.7% 的准确率和 44% 的令牌保留率，几乎与全令牌基线匹配。代码和接口将被发布以方便进一步研究。
+
+</details>
+
+---
+
+## 9. OmniHumanoid: Streaming Cross-Embodiment Video Generation with Paired-Free Adaptation / OmniHumanoid：具有无配对适应的流式跨实施例视频生成
+
+**Date**: 2026-05-12 | **arXiv**: [2605.12038v1](http://arxiv.org/abs/2605.12038v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.12038v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Cross-embodiment video generation aims to transfer motions across different humanoid embodiments, such as human-to-robot and robot-to-robot, enabling scalable data generation for embodied intelligence. A major challenge in this setting is that motion dynamics are partly transferable across embodiments, whereas appearance and morphology remain embodiment-specific. Existing approaches often entangle these factors, and many require paired data for every target embodiment, which limits scalability to new robots. We present OmniHumanoid, a framework that factorizes transferable motion learning and embodiment-specific adaptation. Our method learns a shared motion transfer model from motion-aligned paired videos spanning multiple embodiments, while adapting to a new embodiment using only unpaired videos through lightweight embodiment-specific adapters. To reduce interference between motion transfer and embodiment adaptation, we further introduce a branch-isolated attention design that separates motion conditioning from embodiment-specific modulation. In addition, we construct a synthetic cross-embodiment dataset with motion-aligned paired videos rendered across diverse humanoid assets, scenes, and viewpoints. Experiments on both synthetic and real-world benchmarks show that OmniHumanoid achieves strong motion fidelity and embodiment consistency, while enabling scalable adaptation to unseen humanoid embodiments without retraining the shared motion model.
+
+跨实体视频生成旨在跨不同的人形实体（例如人到机器人和机器人到机器人）传输运动，从而实现实体智能的可扩展数据生成。这种设置中的主要挑战是运动动力学可以部分地跨实施例转移，而外观和形态仍然是特定于实施例的。现有的方法通常会纠缠这些因素，并且许多方法需要为每个目标实施例提供配对数据，这限制了新机器人的可扩展性。我们提出了 OmniHumanoid，一个分解可转移运动学习和特定于实施例的适应的框架。我们的方法从跨越多个实施例的运动对齐配对视频中学习共享运动转移模型，同时通过轻量级实施例特定适配器仅使用不配对视频来适应新的实施例。为了减少运动转移和实施例适应之间的干扰，我们进一步引入了分支隔离注意力设计，将运动调节与实施例特定的调制分开。此外，我们构建了一个合成的跨实体数据集，其中包含跨不同人形资产、场景和视点渲染的运动对齐配对视频。合成和现实世界基准的实验表明，OmniHumanoid 实现了强大的运动保真度和实施例一致性，同时能够对未见过的人形实施例进行可扩展的适应，而无需重新训练共享运动模型。
+
+</details>
+
+---
+
+## 10. Robust Promptable Video Object Segmentation / 强大的即时视频对象分割
+
+**Date**: 2026-05-12 | **arXiv**: [2605.12006v1](http://arxiv.org/abs/2605.12006v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.12006v1)
+
+**Categories**: cs.CV
+
+**Project**: https://sohyun-l.github.io/RobustPVOS_project_page/.  <details><summary><b>Abstract / 摘要</b></summary>
+
+The performance of promptable video object segmentation (PVOS) models substantially degrades under input corruptions, which prevents PVOS deployment in safety-critical domains. This paper offers the first comprehensive study on robust PVOS (RobustPVOS). We first construct a new, comprehensive benchmark with two real-world evaluation datasets of 351 video clips and more than 2,500 object masks under real-world adverse conditions. At the same time, we generate synthetic training data by applying diverse and temporally varying corruptions to existing VOS datasets. Moreover, we present a new RobustPVOS method, dubbed Memory-object-conditioned Gated-rank Adaptation (MoGA). The key to successfully performing RobustPVOS is two-fold: effectively handling object-specific degradation and ensuring temporal consistency in predictions. MoGA leverages object-specific representations maintained in memory across frames to condition the robustification process, which allows the model to handle each tracked object differently in a temporally consistent way. Extensive experiments on our benchmark validate MoGA's efficacy, showing consistent and significant improvements across diverse corruption types on both synthetic and real-world datasets, establishing a strong baseline for future RobustPVOS research. Our benchmark is publicly available at https://sohyun-l.github.io/RobustPVOS_project_page/.
+
+在输入损坏的情况下，即时视频对象分割 (PVOS) 模型的性能会大幅下降，从而阻碍了 PVOS 在安全关键领域的部署。本文首次对鲁棒 PVOS (RobustPVOS) 进行了全面研究。我们首先构建了一个新的综合基准，其中包含两个真实世界评估数据集，其中包含真实世界不利条件下的 351 个视频剪辑和 2,500 多个对象蒙版。同时，我们通过对现有 VOS 数据集应用不同的、随时间变化的损坏来生成合成训练数据。此外，我们提出了一种新的 RobustPVOS 方法，称为内存对象条件门控秩适应（MoGA）。成功执行 RobustPVOS 的关键有两个：有效处理特定于对象的退化并确保预测的时间一致性。 MoGA 利用跨帧内存中维护的特定于对象的表示来调节鲁棒化过程，这使得模型能够以时间一致的方式以不同的方式处理每个跟踪对象。我们的基准测试的大量实验验证了 MoGA 的功效，在合成数据集和真实数据集上显示了不同腐败类型的一致且显着的改进，为未来的 RobustPVOS 研究建立了强有力的基线。我们的基准测试可在 https://sohyun-l.github.io/RobustPVOS_project_page/ 上公开获取。
+
+</details>
+
+---
+
+## 11. Multimodal Abstractive Summarization of Instructional Videos with Vision-Language Models / 使用视觉语言模型对教学视频进行多模态抽象概括
+
+**Date**: 2026-05-12 | **arXiv**: [2605.11959v1](http://arxiv.org/abs/2605.11959v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.11959v1)
+
+**Categories**: cs.CV, cs.CL
+
+**Code**: https://github.com/aqeeelmirza/clipsum
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multimodal video summarization requires visual features that align semantically with language generation. Traditional approaches rely on CNN features trained for object classification, which represent visual concepts as discrete categories not aligned with natural language. We propose ClipSum, a framework that leverages frozen CLIP vision-language features with explicit temporal modeling and dimension-adaptive fusion for instructional video summarization. CLIP's contrastive pre-training on 400M image-text pairs yields visual features semantically aligned with the linguistic concepts that text decoders generate, bridging the vision-language gap at the representation level. On YouCook2, ClipSum achieves 33.0% ROUGE-1 versus 30.5% for ResNet-152 with 4x lower dimensionality (512 vs. 2048), demonstrating that semantic alignment matters more than feature capacity. Frozen CLIP (33.0%) surpasses fine-tuned CLIP (32.3%), showing that preserving pre-trained alignment is more valuable than task-specific adaptation. https://github.com/aqeeelmirza/clipsum
+
+多模态视频摘要需要在语义上与语言生成保持一致的视觉特征。传统方法依赖于为对象分类训练的 CNN 特征，这些特征将视觉概念表示为与自然语言不相符的离散类别。我们提出了 ClipSum，一个利用冻结的 CLIP 视觉语言特征、显式时间建模和维度自适应融合进行教学视频摘要的框架。 CLIP 对 4 亿图像-文本对进行对比预训练，产生在语义上与文本解码器生成的语言概念一致的视觉特征，从而弥合了表示级别的视觉-语言差距。在 YouCook2 上，ClipSum 在维度降低 4 倍（512 vs. 2048）的情况下，ROUGE-1 达到了 33.0%，而 ResNet-152 达到了 30.5%，这表明语义对齐比特征容量更重要。 Frozen CLIP (33.0%) 超过了微调 CLIP (32.3%)，这表明保留预训练的对齐比特定于任务的适应更有价值。 https://github.com/aqeeelmirza/clipsum
+
+</details>
+
+---
+
+## 12. FIS-DiT: Breaking the Few-Step Video Inference Barrier via Training-Free Frame Interleaved Sparsity / FIS-DiT：通过免训练帧交错稀疏性打破少步视频推理障碍
+
+**Date**: 2026-05-12 | **arXiv**: [2605.11869v1](http://arxiv.org/abs/2605.11869v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.11869v1)
+
+**Categories**: cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+While the overall inference latency of Video Diffusion Transformers (DiTs) can be substantially reduced through model distillation, per-step inference latency remains a critical bottleneck. Existing acceleration paradigms primarily exploit redundancy across the denoising trajectory; however, we identify a limitation where these step-wise strategies encounter diminishing returns in few-step regimes. In such scenarios, the scarcity of temporal states prevents effective feature reuse or predictive modeling, creating a formidable barrier to further acceleration. To overcome this, we propose Frame Interleaved Sparsity DiT (FIS-DiT), a training-free and operator-agnostic framework that shifts the optimization focus from the temporal trajectory to the latent frame dimension. Our approach is motivated by an intrinsic duality within this dimension: the existence of frame-wise sparsity that permits reduced computation, coupled with a structural consistency where each frame position remains equally vital to the global spatiotemporal context. Leveraging this insight, we implement Frame Interleaved Sparsity (FIS) as an execution strategy that manipulates frame subsets across the model hierarchy, refreshing all latent positions without requiring full-scale block computation. Empirical evaluations on Wan 2.2 and HunyuanVideo 1.5 demonstrate that FIS-DiT consistently achieves 2.11--2.41$\times$ speedup with negligible degradation across VBench-Q and CLIP metrics, providing a scalable and robust pathway toward real-time high-definition video generation.
+
+虽然视频扩散变压器 (DiT) 的整体推理延迟可以通过模型蒸馏大幅减少，但每步推理延迟仍然是一个关键瓶颈。现有的加速范例主要利用去噪轨迹上的冗余；然而，我们发现了一个局限性，即这些逐步策略在几步制度中会遇到收益递减的情况。在这种情况下，时间状态的稀缺阻碍了有效的特征重用或预测建模，为进一步加速造成了巨大的障碍。为了克服这个问题，我们提出了帧交错稀疏 DiT (FIS-DiT)，这是一种免训练且与操作员无关的框架，它将优化焦点从时间轨迹转移到潜在帧维度。我们的方法是受到这个维度内内在二元性的启发：帧稀疏性的存在允许减少计算，加上结构一致性，其中每个帧位置对于全局时空上下文仍然同样重要。利用这种洞察力，我们将帧交错稀疏性 (FIS) 实现为一种执行策略，可以跨模型层次结构操纵帧子集，刷新所有潜在位置，而无需进行全面的块计算。对 Wan 2.2 和 HunyuanVideo 1.5 的实证评估表明，FIS-DiT 始终实现 2.11--2.41$\times$ 加速，并且 VBench-Q 和 CLIP 指标的退化可以忽略不计，为实时高清视频生成提供了可扩展且稳健的途径。
+
+</details>
+
+---
+
+## 13. OTT-Vid: Optimal Transport Temporal Token Compression for Video Large Language Models / OTT-Vid：视频大语言模型的最佳传输时间令牌压缩
+
+**Date**: 2026-05-12 | **arXiv**: [2605.11803v1](http://arxiv.org/abs/2605.11803v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.11803v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+As Video Large Language Models (Video-LLMs) scale to longer and more complex videos, their inference cost grows rapidly due to the large volume of visual tokens accumulated across frames. Training-free token compression has emerged as a practical solution to this bottleneck. However, existing temporal compression methods rely primarily on cross-frame token similarity or segmentation heuristics, overlooking each token's semantic role within its frame and failing to adapt compression strength to the compressibility of each frame pair. In this work, we propose OTT-Vid, a transport-derived allocation framework for temporal token compression. Our approach consists of two stages: spatial pruning identifies representative content within each frame, and optimal transport (OT) is then solved between neighboring frames to estimate temporal compressibility. We formulate this OT with non-uniform token mass, which protects semantically important tokens from aggressive compression, and a locality-aware cost that captures both feature and spatial disparities. The resulting transport plan jointly balances token importance and matching cost, while its total cost defines the transport difficulty of each frame pair, which we use to allocate compression budgets dynamically. Experiments on six benchmarks spanning video question answering and temporal grounding show that OTT-Vid preserves 95.8% of VQA and 73.9% of VTG performance while retaining only 10% of tokens, consistently outperforming existing state-of-the-art training-free compression methods.
+
+随着视频大型语言模型 (Video-LLM) 扩展到更长、更复杂的视频，由于跨帧积累的大量视觉标记，其推理成本迅速增长。免训练令牌压缩已成为解决这一瓶颈的实用解决方案。然而，现有的时间压缩方法主要依赖于跨帧标记相似性或分段启发式，忽略了每个标记在其帧内的语义角色，并且未能使压缩强度适应每个帧对的可压缩性。在这项工作中，我们提出了 OTT-Vid，一种用于时间令牌压缩的传输派生分配框架。我们的方法由两个阶段组成：空间修剪识别每个帧内的代表性内容，然后解决相邻帧之间的最佳传输（OT）以估计时间压缩性。我们用非均匀的令牌质量来制定这个 OT，它可以保护语义上重要的令牌免受激进的压缩，以及捕获特征和空间差异的局部感知成本。由此产生的传输计划共同平衡了令牌重要性和匹配成本，而其总成本定义了每个帧对的传输难度，我们用它来动态分配压缩预算。对涵盖视频问答和时间基础的六个基准进行的实验表明，OTT-Vid 保留了 95.8% 的 VQA 和 73.9% 的 VTG 性能，同时仅保留 10% 的令牌，始终优于现有最先进的免训练压缩方法。
+
+</details>
+
+---
+
+## 14. Single-Shot HDR Recovery via a Video Diffusion Prior / 通过视频扩散先验进行单次 HDR 恢复
+
+**Date**: 2026-05-12 | **arXiv**: [2605.11628v1](http://arxiv.org/abs/2605.11628v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.11628v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent generative methods for single-shot high dynamic range (HDR) image reconstruction show promising results, but often struggle with preserving fidelity to the input image. They require separate models to handle highlights and shadows, or sacrifice interpretability by directly predicting the final HDR image. We address these limitations by re-casting single-shot HDR reconstruction as conditional video generation and fusing the generated frames into an HDR image. We finetune a video diffusion model to generate an exposure bracket, conditioned on a low dynamic range (LDR) input. We fuse this image bracket using per-pixel weights predicted by a light-weight UNet. This formulation is simple, interpretable, and effective. Rather than directly hallucinating an HDR image, it explicitly reconstructs the intermediate exposure stack and fuses it into the final output. Our method eliminates the need for separate models across exposure regimes and produces HDR reconstructions with high input fidelity. On quantitative benchmarks, we outperform state-of-the-art generative baselines with comparable model capacity on several reconstruction metrics. Human evaluators further prefer our results in 72% of pairwise comparisons against existing methods. Finally, we show that this input-conditioned sequence generation and fusion framework extends beyond HDR to other image reconstruction tasks, such as all-in-focus image recovery from a single defocus-blurred input.
+
+最近的单次高动态范围（HDR）图像重建生成方法显示出有希望的结果，但常常难以保持输入图像的保真度。它们需要单独的模型来处理高光和阴影，或者通过直接预测最终的 HDR 图像来牺牲可解释性。我们通过将单次 HDR 重建重新转换为条件视频生成并将生成的帧融合到 HDR 图像中来解决这些限制。我们微调视频扩散模型以生成曝光包围，以低动态范围（LDR）输入为条件。我们使用轻量级 UNet 预测的每像素权重来融合该图像支架。这个公式简单、可解释且有效。它不是直接产生 HDR 图像的幻觉，而是显式地重建中间曝光堆栈并将其融合到最终输出中。我们的方法消除了对跨曝光方案的单独模型的需要，并产生具有高输入保真度的 HDR 重建。在定量基准上，我们在几个重建指标上的模型能力优于最先进的生成基线。与现有方法相比，人类评估者在 72% 的成对比较中更喜欢我们的结果。最后，我们证明了这种输入条件序列生成和融合框架超越了 HDR，扩展到其他图像重建任务，例如从单个散焦模糊输入恢复全焦点图像。
+
+</details>
+
+---
+
+## 15. PoseBridge: Bridging the Skeletonization Gap for Zero-Shot Skeleton-Based Action Recognition / PoseBridge：弥补零样本基于骨骼的动作识别的骨骼化差距
+
+**Date**: 2026-05-12 | **arXiv**: [2605.11497v1](http://arxiv.org/abs/2605.11497v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.11497v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Zero-shot skeleton-based action recognition (ZSSAR) is typically treated as a skeleton-text alignment problem: encode joint-coordinate sequences, align them with language, and classify unseen actions. We argue that this alignment is often too late. Skeletons are not complete action observations, but compressed outputs of human pose estimation (HPE); by the time alignment begins, human-object interactions and pose-relative visual cues may no longer be explicit. We call this upstream semantic loss. To address it, we propose PoseBridge, an HPE-aware ZSSAR framework that bridges intermediate HPE representations to skeleton-text alignment. Rather than adding an RGB action branch or object detector, PoseBridge extracts pose-anchored semantic cues from the same HPE process that produces skeletons, then transfers them through skeleton-conditioned bridging and semantic prototype adaptation. Across NTU-RGB+D 60/120, PKU-MMD, and Kinetics-200/400, PoseBridge improves ZSSAR performance under the evaluated protocols. On the Kinetics-200/400 PURLS benchmark, which contains in-the-wild videos with diverse scenes and action contexts, PoseBridge shows the clearest separation, improving the strongest compared baseline by 13.3-17.4 points across all eight splits. Our code will be publicly released.
+
+基于零样本骨架的动作识别（ZSSAR）通常被视为骨架文本对齐问题：对关节坐标序列进行编码，将它们与语言对齐，并对看不见的动作进行分类。我们认为这种调整往往为时已晚。骨骼不是完整的动作观察，而是人体姿态估计（HPE）的压缩输出；当对齐开始时，人与物体的交互和姿势相关的视觉线索可能不再明确。我们称之为上游语义丢失。为了解决这个问题，我们提出了 PoseBridge，一种 HPE 感知的 ZSSAR 框架，它将中间 HPE 表示与骨架文本对齐联系起来。 PoseBridge 不是添加 RGB 动作分支或对象检测器，而是从生成骨架的同一 HPE 过程中提取姿势锚定语义线索，然后通过骨架条件桥接和语义原型适应来传输它们。在 NTU-RGB+D 60/120、PKU-MMD 和 Kinetics-200/400 中，PoseBridge 提高了评估协议下的 ZSSAR 性能。在 Kinetics-200/400 PURLS 基准（包含具有不同场景和动作背景的野外视频）上，PoseBridge 显示出最清晰的分离，在所有八个分段中将最强的比较基线提高了 13.3-17.4 点。我们的代码将公开发布。
+
+</details>
+
+---
+
+## 16. LDDR: Linear-DPP-Based Dynamic-Resolution Frame Sampling for Video MLLMs / LDDR：用于视频 MLLM 的基于线性 DPP 的动态分辨率帧采样
+
+**Date**: 2026-05-12 | **arXiv**: [2605.11477v1](http://arxiv.org/abs/2605.11477v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.11477v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video understanding in multimodal large language models requires selecting informative frames from long, redundant videos under limited visual-token budgets. Existing methods often rely on uniform sampling, point-wise relevance scoring, chunk-wise selection, or agentic exploration, which either miss global dependencies or introduce substantial overhead. We propose LDDR (Linear DPP-Based Dynamic Resolution), a training-free, plug-and-play, and budget-aware video frame sampling framework. LDDR performs query-aware Determinantal Point Process (DPP) frame selection in a task-conditioned feature space, achieving a 3x runtime speedup over standard DPP baselines. It further introduces a Group DPP importance metric to guide frame retention and dynamic resolution allocation, assigning more tokens to informative, non-redundant frames while downscaling or pruning less useful ones. Across four video benchmarks spanning short-, medium-, and long-range videos, LDDR consistently outperforms the next-best baselines, achieving gains of 2.5 points under budget-constrained settings and 1.6 points in high-budget scenarios. These improvements are consistently observed across multiple MLLM backbones, including both open- and closed-source models. Qualitative analysis confirms that relevant frames are selected and allocated a higher budget, facilitating improved video understanding.
+
+多模态大语言模型中的视频理解需要在有限的视觉标记预算下从长而冗余的视频中选择信息帧。现有的方法通常依赖于均匀采样、逐点相关性评分、逐块选择或代理探索，这些方法要么错过全局依赖性，要么引入大量开销。我们提出了 LDDR（基于线性 DPP 的动态分辨率），这是一种免训练、即插即用且具有预算意识的视频帧采样框架。 LDDR 在任务调节的特征空间中执行查询感知的行列式点处理 (DPP) 帧选择，与标准 DPP 基线相比，实现了 3 倍的运行时加速。它还引入了组 DPP 重要性度量来指导帧保留和动态分辨率分配，为信息丰富的非冗余帧分配更多令牌，同时缩小或修剪不太有用的帧。在涵盖短距离、中距离和长距离视频的四个视频基准测试中，LDDR 始终优于次佳基准，在预算有限的情况下实现了 2.5 点的增益，在高预算场景下实现了 1.6 点的增益。这些改进在多个 MLLM 主干中得到一致观察，包括开源和闭源模型。定性分析证实，相关帧被选择并分配了更高的预算，有助于提高视频理解。
+
+</details>
+
+---
+
+## 17. VidSplat: Gaussian Splatting Reconstruction with Geometry-Guided Video Diffusion Priors / VidSplat：使用几何引导视频扩散先验的高斯泼溅重建
+
+**Date**: 2026-05-12 | **arXiv**: [2605.11424v1](http://arxiv.org/abs/2605.11424v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.11424v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Gaussian Splatting has achieved remarkable progress in multi-view surface reconstruction, yet it exhibits notable degradation when only few views are available. Although recent efforts alleviate this issue by enhancing multi-view consistency to produce plausible surfaces, they struggle to infer unseen, occluded, or weakly constrained regions beyond the input coverage. To address this limitation, we present VidSplat, a training-free generative reconstruction framework that leverages powerful video diffusion priors to iteratively synthesize novel views that compensate for missing input coverage, and thereby recover complete 3D scenes from sparse inputs. Specifically, we tackle two key challenges that enable the effective integration of generation and reconstruction. First, for 3D consistent generation, we elaborate a training-free, stage-wise denoising strategy that adaptively guides the denoising direction toward the underlying geometry using the rendered RGB and mask images. Second, to enhance the reconstruction, we develop an iterative mechanism that samples camera trajectories, explores unobserved regions, synthesizes novel views, and supplements training through confidence weighted refinement. VidSplat performs robustly to sparse input and even a single image. Extensive experiments on widely used benchmarks demonstrate our superior performance in sparse-view scene reconstruction.
+
+高斯喷射在多视图表面​​重建方面取得了显着的进展，但当只有很少的视图可用时，它表现出显着的退化。尽管最近的努力通过增强多视图一致性以产生合理的表面来缓解这个问题，但它们很难推断出输入覆盖范围之外的看不见的、被遮挡的或弱约束的区域。为了解决这一限制，我们提出了 VidSplat，这是一种免训练的生成重建框架，它利用强大的视频扩散先验来迭代合成新的视图，以补偿丢失的输入覆盖范围，从而从稀疏输入中恢复完整的 3D 场景。具体来说，我们解决了实现发电和重建有效整合的两个关键挑战。首先，为了实现 3D 一致生成，我们详细阐述了一种免训练的分阶段去噪策略，该策略使用渲染的 RGB 和掩模图像自适应地将去噪方向引导至底层几何体。其次，为了增强重建，我们开发了一种迭代机制，可以对相机轨迹进行采样，探索未观察到的区域，合成新颖的视图，并通过置信加权细化补充训练。 VidSplat 对于稀疏输入甚至单个图像都具有鲁棒性。对广泛使用的基准进行的大量实验证明了我们在稀疏视图场景重建方面的卓越性能。
+
+</details>
+
+---
+
+## 18. PresentAgent-2: Towards Generalist Multimodal Presentation Agents / PresentAgent-2：迈向通才型多模式呈现代理
+
+**Date**: 2026-05-12 | **arXiv**: [2605.11363v1](http://arxiv.org/abs/2605.11363v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.11363v1)
+
+**Categories**: cs.CV, cs.CL
+
+**Code**: https://github.com/AIGeeksGroup/PresentAgent-2.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Presentation generation is moving beyond static slide creation toward end-to-end presentation video generation with research grounding, multimodal media, and interactive delivery. We introduce PresentAgent-2, an agentic framework for generating presentation videos from user queries. Given an open-ended user query and a selected presentation mode, PresentAgent-2 first summarizes the query into a focused topic and performs deep research over presentation-friendly sources to collect multimodal resources, including relevant text, images, GIFs, and videos. It then constructs presentation slides, generates mode-specific scripts, and composes slides, audio, and dynamic media into a complete presentation video. PresentAgent-2 supports three independent presentation modes within a unified framework: Single Presentation, which generates a single-speaker narrated presentation video; Discussion, which creates a multi-speaker presentation with structured speaker roles, such as for asking guiding questions, explaining concepts, clarifying details, and summarizing key points; and Interaction, which independently supports answering audience questions grounded in the generated slides, scripts, retrieved evidence, and presentation context. To evaluate these capabilities, we build a multimodal presentation benchmark covering single presentation, discussion, and interaction scenarios, with task-specific evaluation criteria for content quality, media relevance, dynamic media use, dialogue naturalness, and interaction grounding. Overall, PresentAgent-2 extends presentation generation from document-dependent slide creation to query-driven, research-grounded presentation video generation with multimodal media, dialogue, and interaction. Code: https://github.com/AIGeeksGroup/PresentAgent-2. Website: https://aigeeksgroup.github.io/PresentAgent-2.
+
+演示文稿生成正在从静态幻灯片创建转向具有研究基础、多模式媒体和交互式交付的端到端演示视频生成。我们介绍 PresentAgent-2，一个用于根据用户查询生成演示视频的代理框架。给定开放式用户查询和选定的演示模式，PresentAgent-2 首先将查询总结为焦点主题，并对演示友好的来源进行深入研究，以收集多模式资源，包括相关文本、图像、GIF 和视频。然后，它构建演示幻灯片，生成特定于模式的脚本，并将幻灯片、音频和动态媒体组合成完整的演示视频。 PresentAgent-2在统一框架内支持三种独立的演示模式： 单演示，生成单人解说演示视频；讨论，创建具有结构化演讲者角色的多演讲者演示，例如提出指导性问题、解释概念、澄清细节和总结要点；交互，独立支持回答基于生成的幻灯片、脚本、检索的证据和演示上下文的观众问题。为了评估这些能力，我们建立了一个涵盖单一演示、讨论和交互场景的多模式演示基准，并针对内容质量、媒体相关性、动态媒体使用、对话自然性和交互基础等特定任务的评估标准。总体而言，PresentAgent-2 将演示文稿生成从依赖于文档的幻灯片创建扩展到具有多模式媒体、对话和交互的查询驱动、基于研究的演示视频生成。代码：https://github.com/AIGeeksGroup/PresentAgent-2。网站：https://aigeeksgroup.github.io/PresentAgent-2。
+
+</details>
+
+---
+
+## 19. HarmoWAM: Harmonizing Generalizable and Precise Manipulation via Adaptive World Action Models / HarmoWAM：通过自适应世界行动模型协调通用和精确的操作
+
+**Date**: 2026-05-11 | **arXiv**: [2605.10942v1](http://arxiv.org/abs/2605.10942v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.10942v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World Action Models (WAMs) have emerged as a promising paradigm for robot control by modeling physical dynamics. Current WAMs generally follow two paradigms: the "Imagine-then-Execute" approach, which uses video prediction to infer actions via inverse dynamics, and the "Joint Modeling" approach, which jointly models actions and video representations. Based on systematic experiments, we observe a fundamental trade-off between these paradigms: the former explicitly leverages world models for generalizable transit but lacks interaction precision, whereas the latter enables fine-grained, temporally coherent action generation but is constrained by the exploration space of the training distribution. Motivated by these findings, we propose HarmoWAM, an end-to-end WAM that fully leverages a world model to unify predictive and reactive control, enabling both generalizable transit and precise manipulation. Specifically, the world model provides spatio-temporal physical priors that condition two complementary action experts: a predictive expert that leverages latent dynamics for iterative action generation, and a reactive expert that directly infers actions from predicted visual evolution. To enable adaptive coordination, a Process-Adaptive Gating Mechanism is proposed to automatically determine the timing and location of switching between them. This allows the world model to drive the reactive expert to expand the exploration space and the predictive expert to perform precise interactions across different stages of a task. For evaluation, we construct three training-unseen test environments across six real-world robotic tasks, covering variations in background, position, and object semantics. Notably, HarmoWAM achieves strong zero-shot generalization across these scenarios, significantly outperforming prior state-of-the-art VLA models and WAMs by margins of 33% and 29%, respectively.
+
+世界动作模型（WAM）通过对物理动力学进行建模，已成为机器人控制的一种有前途的范例。当前的WAM通常遵循两种范例：“想象然后执行”方法，它使用视频预测通过逆动态来推断动作；以及“联合建模”方法，它联合建模动作和视频表示。基于系统实验，我们观察到这些范式之间的基本权衡：前者明确利用世界模型进行可推广的传输，但缺乏交互精度，而后者能够生成细粒度、时间连贯的动作，但受到训练分布的探索空间的限制。受这些发现的启发，我们提出了 HarmoWAM，这是一种端到端的 WAM，它充分利用世界模型来统一预测和反应控制，从而实现通用传输和精确操纵。具体来说，世界模型提供了时空物理先验，为两个互补的动作专家提供了条件：一个利用潜在动态生成迭代动作的预测专家，以及一个直接从预测的视觉进化推断动作的反应专家。为了实现自适应协调，提出了一种过程自适应门控机制来自动确定它们之间切换的时间和位置。这使得世界模型能够驱动反应型专家扩展探索空间，并驱动预测型专家在任务的不同阶段执行精确的交互。为了进行评估，我们在六个现实世界的机器人任务中构建了三个训练未见的测试环境，涵盖了背景、位置和对象语义的变化。值得注意的是，HarmoWAM 在这些场景中实现了强大的零样本泛化，明显优于之前最先进的 VLA 模型和 WAM，分别高出 33% 和 29%。
+
+</details>
+
+---
+
+## 20. MMVIAD: Multi-view Multi-task Video Understanding for Industrial Anomaly Detection / MMVIAD：用于工业异常检测的多视图多任务视频理解
+
+**Date**: 2026-05-11 | **arXiv**: [2605.10833v1](http://arxiv.org/abs/2605.10833v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.10833v1)
+
+**Categories**: cs.CV, cs.AI
+
+**Code**: https://github.com/Georgekeepmoving/MMVIAD.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Industrial anomaly detection is critical for manufacturing quality control, yet existing datasets mainly focus on static images or sparse views, which do not fully reflect continuous inspection processes in real industrial scenarios. We introduce MMVIAD (Multi-view Multi-task Video Industrial Anomaly Detection), to the best of our knowledge the first continuous multi-view video dataset for industrial anomaly detection and understanding, together with a benchmark for multi-task evaluation. MMVIAD contains object-centric 2-second inspection clips with approximately 120 degrees of camera motion, covering 48 object categories, 14 environments, and 6 structural anomaly types. It supports anomaly detection, defect classification, object classification, and anomaly visible-time localization. Systematic evaluations on MMVIAD show that current commercial and open-source video MLLMs remain far below human performance, especially for fine-grained defect recognition and temporal grounding. To improve transferable anomaly understanding, we further develop a two-stage post-training pipeline where PS-SFT (Perception-Structured Supervised Fine-Tuning) initializes perception-structured reasoning and VISTA-GRPO (Visibility-grounded Industrial Structured Temporal Anomaly Group Relative Policy Optimization) refines the model with semantic-gated defect reward and visibility-aware temporal reward, producing the final model VISTA. On MMVIAD-Unseen, VISTA improves the base model's average score across the four tasks from 45.0 to 57.5, surpassing GPT-5.4. Source code is available at https://github.com/Georgekeepmoving/MMVIAD.
+
+工业异常检测对于制造质量控制至关重要，但现有数据集主要集中于静态图像或稀疏视图，不能完全反映真实工业场景中的连续检测过程。我们介绍了 MMVIAD（多视图多任务视频工业异常检测），据我们所知，这是第一个用于工业异常检测和理解的连续多视图视频数据集，以及多任务评估的基准。 MMVIAD 包含以对象为中心的 2 秒检查剪辑，摄像机运动角度约为 120 度，涵盖 48 个对象类别、14 个环境和 6 种结构异常类型。它支持异常检测、缺陷分类、对象分类和异常可见时间定位。对 MMVIAD 的系统评估表明，当前的商业和开源视频 MLLM 仍远低于人类表现，特别是在细粒度缺陷识别和时间接地方面。为了提高可转移异常的理解，我们进一步开发了一个两阶段的训练后管道，其中 PS-SFT（感知结构监督微调）初始化感知结构推理，VISTA-GRPO（基于可见性的工业结构化时间异常组相对策略优化）通过语义门控缺陷奖励和可见性感知时间奖励细化模型，产生最终模型 VISTA。在 MMVIAD-Unseen 上，VISTA 将基础模型在四项任务中的平均得分从 45.0 提高到 57.5，超过了 GPT-5.4。源代码可在 https://github.com/Georgekeepmoving/MMVIAD 获取。
+
+</details>
+
+---
+
+## 21. FLARE: Full-Modality Long-Video Audiovisual Retrieval Benchmark with User-Simulated Queries / FLARE：具有用户模拟查询的全模态长视频视听检索基准
+
+**Date**: 2026-05-11 | **arXiv**: [2605.10228v1](http://arxiv.org/abs/2605.10228v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.10228v1)
+
+**Categories**: cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+As video becomes increasingly central to information dissemination and multimodal large language models (MLLMs) continue to advance, evaluating video retrieval has become increasingly important. In realistic search scenarios, this requires matching short user queries to long-form content using both visual and auditory evidence. Yet existing retrieval benchmarks are still dominated by short clips, single modalities, and caption-based evaluation. We introduce FLARE, a full-modality long-video audiovisual retrieval benchmark with user-simulated queries. Built from 399 carefully screened Video-MME videos (10--60 min, 225.4 h) to ensure source quality and diversity, FLARE contains 87,697 clips annotated with vision, audio, and unified audiovisual captions, together with 274,933 user-style queries. Cross-modal queries are further filtered by a hard bimodal constraint, requiring retrieval to fail under either modality alone but succeed when both are combined. FLARE evaluates models under two regimes, caption-based and query-based retrieval, across vision, audio, and unified audiovisual settings. Experiments with 15 representative retrievers show that user-style queries substantially change model behavior, strong caption-based performance does not always transfer to query-based retrieval, and audio--language alignment remains a key bottleneck for unified audiovisual retrieval. Our code and data are released at https://flarebench.github.io/
+
+随着视频在信息传播中变得越来越重要，并且多模态大语言模型 (MLLM) 不断发展，评估视频检索变得越来越重要。在现实的搜索场景中，这需要使用视觉和听觉证据将简短的用户查询与长格式的内容进行匹配。然而，现有的检索基准仍然以短片、单一模式和基于字幕的评估为主。我们推出了 FLARE，一种具有用户模拟查询的全模态长视频视听检索基准。 FLARE 由 399 个经过仔细筛选的 Video-MME 视频（10--60 分钟，225.4 小时）构建而成，以确保源质量和多样性，包含 87,697 个用视觉、音频和统一视听字幕注释的剪辑，以及 274,933 个用户样式查询。跨模态查询进一步通过硬双模态约束进行过滤，要求检索在单独任一模态下失败，但在两种模态组合时成功。 FLARE 在基于字幕和基于查询的检索两种机制下评估模型，涵盖视觉、音频和统一视听设置。对 15 个代表性检索器的实验表明，用户风格的查询极大地改变了模型行为，基于字幕的强大性能并不总是转移到基于查询的检索，并且音频语言对齐仍然是统一视听检索的关键瓶颈。我们的代码和数据发布在https://flarebench.github.io/
+
+</details>
+
+---
+
+## 22. Towards Generative Predictive Display for Vision-Based Teleoperation: A Zero-Shot Benchmark of Off-the-Shelf Video Models / 面向基于视觉的远程操作的生成预测显示：现成视频模型的零样本基准
+
+**Date**: 2026-05-10 | **arXiv**: [2605.09670v1](http://arxiv.org/abs/2605.09670v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.09670v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Teleoperation systems are fundamentally limited by communication latency, which degrades situational awareness and control performance. Predictive display aims to mitigate this limitation by presenting an estimate of the current visual state rather than delayed observations. While recent advances in generative video models enable high-quality video synthesis, their suitability for latency-sensitive predictive display remains unclear. This paper presents a zero-shot benchmark of off-the-shelf generative video models for short-horizon predictive display, without task-specific fine-tuning. We formulate the problem as rollout-based future frame prediction and develop a unified benchmarking pipeline using simulated driving data from the CARLA simulator. Five publicly released video models spanning transformer-based and diffusion-based families are evaluated across two resolutions and two conditioning regimes (multi-frame and single-frame). Performance is assessed using prediction accuracy (mean absolute difference), per-rollout latency, peak GPU memory usage, and temporal error evolution across the prediction horizon. On this zero-shot benchmark, no tested model simultaneously achieves low rollout error, non-divergent per-step error behavior, and real-time inference at the source frame rate. Increasing model scale or resolution yields limited and, in some cases, inverted improvements. These findings highlight a gap between general-purpose generative video synthesis and the requirements of predictive display in teleoperation, suggesting that practical deployment will require either explicit short-horizon temporal supervision, in-domain adaptation, or aggressive inference optimization rather than direct application of off-the-shelf models. Code, configurations, and qualitative results are released on the project page: https://bimilab.github.io/paper-GenPD
+
+远程操作系统从根本上受到通信延迟的限制，这会降低态势感知和控制性能。预测显示旨在通过呈现当前视觉状态的估计而不是延迟的观察来减轻这种限制。虽然生成视频模型的最新进展实现了高质量的视频合成，但它们是否适合延迟敏感的预测显示仍不清楚。本文提出了用于短视野预测显示的现成生成视频模型的零样本基准，无需针对特定任务进行微调。我们将问题表述为基于推出的未来帧预测，并使用来自 CARLA 模拟器的模拟驾驶数据开发统一的基准测试流程。跨越基于变压器和基于扩散的系列的五个公开发布的视频模型在两种分辨率和两种调节机制（多帧和单帧）下进行了评估。使用预测精度（平均绝对差）、每次部署延迟、峰值 GPU 内存使用量以及整个预测范围内的时间误差演变来评估性能。在此零样本基准测试中，没有任何测试模型能够同时实现低推出错误、无发散的每步错误行为以及源帧速率下的实时推理。增加模型规模或分辨率产生的改进是有限的，在某些情况下甚至是相反的。这些发现凸显了通用生成视频合成与遥操作中预测显示要求之间的差距，表明实际部署将需要显式的短视野时间监督、域内适应或积极的推理优化，而不是直接应用现成的模型。代码、配置和定性结果发布在项目页面上：https://bimilab.github.io/paper-GenPD
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-05-08 (16 papers)</b></summary>
 
 # arXiv Video Papers - 2026-05-08
