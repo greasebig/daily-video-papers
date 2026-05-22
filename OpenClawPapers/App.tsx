@@ -10,10 +10,10 @@ function App() {
   const tabs = useMemo(
     () => [
       { key: 'home', label: 'Home', url: `${BASE_URL}/` },
+      { key: 'tone', label: 'Tone & Color', url: `${BASE_URL}/tone-color/index.html` },
       { key: 'video', label: 'Video', url: `${BASE_URL}/video/index.html` },
       { key: 'world', label: 'World Model', url: `${BASE_URL}/world-model/index.html` },
       { key: 'agent', label: 'Agent', url: `${BASE_URL}/agent/index.html` },
-      { key: 'tone', label: 'Tone & Color', url: `${BASE_URL}/tone-color/index.html` },
     ],
     [],
   );
