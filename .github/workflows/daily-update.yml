@@ -146,8 +146,49 @@ jobs:
             git push
           fi
 
-  notify-telegram:
+  update-tone-color:
     needs: update-agent
+    if: ${{ github.actor != 'github-actions[bot]' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Sync with main
+        run: |
+          git pull --rebase origin main || true
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run tone & color fetcher (v3)
+        env:
+          TOPIC_NAME: Tone & Color
+          OUTPUT_DIR: tone-color
+          REBUILD: "0"
+          CATEGORIES: cs.CV,cs.AI,cs.MM
+          KEYWORDS: tone mapping,color grading,color correction,cinematic color,color theory,color harmony,color palette,color science,color space,color enhancement,color transfer,color constancy,color perception,visual aesthetics,image enhancement,tone adjustment,brightness contrast,saturation,hue,color cast,white balance,color cast removal
+          CONTEXT_KEYWORDS: color,tone,visual,aesthetic,enhancement,grading,correction
+          REQUIRED_WORD: color
+          MYMEMORY_EMAIL: lujundaljdljd@163.com
+        run: |
+          cd scripts
+          python3 fetch_papers_v3.py
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add tone-color/README.md tone-color/papers/ docs/tone-color/
+          if git diff --staged --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Update tone & color papers - $(date +'%Y-%m-%d')"
+            git push
+          fi
+
+  notify-telegram:
+    needs: update-tone-color
     if: ${{ github.actor != 'github-actions[bot]' }}
     runs-on: ubuntu-latest
     steps:
