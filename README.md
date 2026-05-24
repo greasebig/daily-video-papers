@@ -1,8 +1,28 @@
 # Daily Video Papers 🎥
 
-?? **Website**: https://greasebig.github.io/daily-video-papers/
+> Lightweight, auto-updating arXiv paper hub. Tracks the newest research across **Tone & Color, Video, World Models, and Agents** — with translated abstracts and collapsible daily digests.
+
+🌐 **Website**: https://greasebig.github.io/daily-video-papers/
 
 ![Actions](https://github.com/greasebig/daily-video-papers/actions/workflows/daily-update.yml/badge.svg) ![Pages](https://img.shields.io/badge/pages-online-brightgreen) ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=greasebig.daily-video-papers)
+
+---
+
+## 🎯 四大研究追踪
+
+| Track | 说明 | 入口 |
+|---|---|---|
+| 🎨 **Tone & Color** | 色调映射、色彩分级、电影色彩理论、视觉美学 | [Tone & Color](https://greasebig.github.io/daily-video-papers/tone-color/index.html) |
+| 📹 **Video** | 视频生成、理解、编辑、修复、时序建模 | [Video Papers](https://greasebig.github.io/daily-video-papers/video/index.html) |
+| 🌍 **World Models** | 动力学模型、想象力、基于模型的强化学习 | [World Models](https://greasebig.github.io/daily-video-papers/world-model/index.html) |
+| 🤖 **Agents** | 自主规划、工具使用、多智能体系统、决策研究 | [Agent Papers](https://greasebig.github.io/daily-video-papers/agent/index.html) |
+
+## ⚙️ 工作原理
+
+- **每日自动更新**：GitHub Actions 定时从 arXiv 拉取最新论文（含中文摘要翻译）
+- **智能筛选**：关键词匹配 + 上下文相关性判断，过滤噪声
+- **多级翻译**：LibreTranslate → MyMemory 级联翻译链
+- **静态站点**：GitHub Pages 部署，毛玻璃风格界面，支持折叠式阅读
 
 ## 📚 论文索引
 
