@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tone & Color Papers</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap');
+    :root {
+      --ink: #0b1b2b;
+      --muted: #5a6b85;
+      --glass: rgba(255,255,255,0.65);
+      --border: rgba(12,36,66,0.12);
+      --accent: #2ec4b6;
+      --accent-2: #f6ad55;
+      --shadow: 0 18px 40px rgba(26, 60, 90, 0.12);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:"Manrope",sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(900px 480px at 10% -10%, rgba(46,196,182,0.25), transparent 60%),
+        radial-gradient(900px 480px at 90% -10%, rgba(246,173,85,0.22), transparent 60%),
+        linear-gradient(180deg,#f9fcff,#e9f1ff 60%,#eef3fb);
+      min-height:100vh;
+      overflow-x:hidden;
+    }
+    .orb{position:fixed;border-radius:999px;filter:blur(1px);opacity:0.7;mix-blend-mode:multiply;animation:float 8s ease-in-out infinite;pointer-events:none}
+    .orb.one{width:240px;height:240px;left:-60px;top:80px;background:radial-gradient(circle at 30% 30%, rgba(46,196,182,0.35), rgba(46,196,182,0));}
+    .orb.two{width:220px;height:220px;right:-80px;top:160px;background:radial-gradient(circle at 30% 30%, rgba(246,173,85,0.35), rgba(246,173,85,0));animation-delay:1.5s}
+    .orb.three{width:180px;height:180px;left:20%;bottom:-40px;background:radial-gradient(circle at 30% 30%, rgba(255,107,107,0.25), rgba(255,107,107,0));animation-delay:3s}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+
+    .wrap{max-width:1100px;margin:0 auto;padding:48px 24px 80px}
+    h1{font-family:"Fraunces",serif;margin:0 0 8px;font-size:clamp(32px,4vw,56px)}
+    p{color:var(--muted)}
+    .layout{display:grid;grid-template-columns:260px 1fr;gap:0;margin-top:24px}
+    .panel{padding:16px;background:transparent;border:none;box-shadow:none;backdrop-filter:none;overflow-y:auto}
+    .panel a.active {
+      background: var(--ink);
+      color: white;
+      border-radius: 8px;
+      padding: 4px 8px;
+    }
+    
+    .panel a {
+      display: block;
+      padding: 8px;
+      margin: 4px 0;
+      color: var(--ink);
+      text-decoration: none;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+    }
+    
+    .panel a:hover {
+      background: rgba(46,196,182,0.1);
+    }
+    .list a{display:block;color:var(--ink);text-decoration:none;padding:10px 10px;border-radius:12px}
+    .list a:hover{background:rgba(46,196,182,0.12)}
+    .content{padding:20px;background:transparent;border:none;box-shadow:none;backdrop-filter:none;overflow-y:auto}
+    @media (max-width: 900px){.layout{grid-template-columns:1fr}}
+    
+    /* Navigation Buttons */
+    .nav-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 10px;
+      padding: 20px 0 0 0;
+      margin-bottom: 8px;
+    }
+    .nav-btn {
+      padding: 9px 18px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.55);
+      border: 1px solid rgba(12,36,66,0.14);
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      box-shadow: 0 4px 16px rgba(26,60,90,0.10), inset 0 1px 0 rgba(255,255,255,0.8);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      transition: all 0.22s cubic-bezier(.4,0,.2,1);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+    .nav-btn:hover {
+      transform: translateY(-2px);
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+      box-shadow: 0 8px 24px rgba(46,196,182,0.28);
+    }
+    .nav-btn.github {
+      background: rgba(15,20,30,0.72);
+      border-color: rgba(255,255,255,0.18);
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.12);
+    }
+    .nav-btn.github:hover {
+      background: #24292e;
+      border-color: #555;
+      color: #fff;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.32);
+    }
+    
+    /* Floating Bottom Navigation */
+    .nav-bottom {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      z-index: 999;
+      max-width: 120px;
+    }
+    .nav-bottom button {
+      padding: 8px 12px;
+      font-size: 12px;
+      text-align: center;
+      background: rgba(255,255,255,0.55);
+      border: 1px solid rgba(12,36,66,0.14);
+      color: var(--ink);
+      border-radius: 999px;
+      cursor: pointer;
+      font-weight: 600;
+      box-shadow: 0 4px 16px rgba(26,60,90,0.10), inset 0 1px 0 rgba(255,255,255,0.8);
+      backdrop-filter: blur(20px) saturate(180%);
+      transition: all 0.22s cubic-bezier(.4,0,.2,1);
+    }
+    .nav-bottom button:hover {
+      transform: translateY(-2px);
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+      box-shadow: 0 8px 24px rgba(46,196,182,0.28);
+    }
+    
+    .nav-bottom button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    .nav-btn.github:hover {
+      background: #24292e;
+      border-color: #555;
+      color: #fff;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.32);
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div class="orb one"></div>
+  <div class="orb two"></div>
+  <div class="orb three"></div>
+  
+  <!-- Floating Bottom Navigation -->
+  <div class="nav-bottom" id="navBottom"></div>
+  
+  <div class="wrap">
+    <div class="nav-top">
+      <a href="../index.html" class="nav-btn">🏠 Home</a>
+      <a href="../video/index.html" class="nav-btn">📹 Video</a>
+      <a href="../world-model/index.html" class="nav-btn">🌍 World Model</a>
+      <a href="../agent/index.html" class="nav-btn">🤖 Agent</a>
+      <a href="https://github.com/greasebig/daily-video-papers" target="_blank" class="nav-btn github">⭐ GitHub</a>
+    </div>
+    <h1>Tone & Color Papers</h1>
+    <p>Daily arXiv digests rendered directly on this page.</p>
+    <div class="layout">
+      <div class="panel list" id="list"></div>
+      <div class="content" id="content">Select a date to load papers.</div>
+    </div>
+  </div>
+  <script>
+    const files = [];
+    const list = document.getElementById('list');
+    const content = document.getElementById('content');
+    const navBottom = document.getElementById('navBottom');
+    let history = [];
+    let historyIndex = -1;
+    
+    function loadFile(name, addToHistory = true) {
+      fetch('./papers/' + name).then(r=>r.text()).then(md=>{
+        content.innerHTML = marked.parse(md);
+        if (addToHistory) {
+          history = history.slice(0, historyIndex + 1);
+          history.push(name);
+          historyIndex = history.length - 1;
+        }
+        updateNavButtons();
+        updateListHighlight();
+      });
+    }
+    
+    function updateNavButtons() {
+      const canBack = historyIndex > 0;
+      const canForward = historyIndex < history.length - 1;
+      const currentFile = history[historyIndex] || files[0];
+      const currentIdx = files.indexOf(currentFile);
+      const canPrevDay = currentIdx < files.length - 1;
+      const canNextDay = currentIdx > 0;
+      
+      navBottom.innerHTML = '';
+      
+      const btnBack = document.createElement('button');
+      btnBack.textContent = '← Back';
+      btnBack.disabled = !canBack;
+      btnBack.onclick = () => {
+        if (historyIndex > 0) {
+          historyIndex--;
+          loadFile(history[historyIndex], false);
+        }
+      };
+      navBottom.appendChild(btnBack);
+      
+      const btnForward = document.createElement('button');
+      btnForward.textContent = 'Forward →';
+      btnForward.disabled = !canForward;
+      btnForward.onclick = () => {
+        if (historyIndex < history.length - 1) {
+          historyIndex++;
+          loadFile(history[historyIndex], false);
+        }
+      };
+      navBottom.appendChild(btnForward);
+      
+      const btnPrevDay = document.createElement('button');
+      btnPrevDay.textContent = '⬆ Prev Day';
+      btnPrevDay.disabled = !canPrevDay;
+      btnPrevDay.onclick = () => {
+        const idx = files.indexOf(currentFile);
+        if (idx < files.length - 1) {
+          loadFile(files[idx + 1]);
+          content.scrollTop = 0;
+        }
+      };
+      navBottom.appendChild(btnPrevDay);
+      
+      const btnNextDay = document.createElement('button');
+      btnNextDay.textContent = '⬇ Next Day';
+      btnNextDay.disabled = !canNextDay;
+      btnNextDay.onclick = () => {
+        const idx = files.indexOf(currentFile);
+        if (idx > 0) {
+          loadFile(files[idx - 1]);
+          content.scrollTop = content.scrollHeight;
+        }
+      };
+      navBottom.appendChild(btnNextDay);
+    }
+    
+    // 监听滚动事件，实现自动翻页
+    content.addEventListener('scroll', function() {
+      const scrollTop = content.scrollTop;
+      const scrollHeight = content.scrollHeight;
+      const clientHeight = content.clientHeight;
+      
+      // 滚到底部一段距离，自动跳转到前一天
+      if (scrollTop + clientHeight >= scrollHeight - 300) {
+        const currentFile = history[historyIndex] || files[0];
+        const currentIdx = files.indexOf(currentFile);
+        if (currentIdx < files.length - 1) {
+          loadFile(files[currentIdx + 1]);
+          content.scrollTop = 0;
+        }
+      }
+      
+      // 滚到顶部一段距离，自动跳转到后一天
+      if (scrollTop <= 300) {
+        const currentFile = history[historyIndex] || files[0];
+        const currentIdx = files.indexOf(currentFile);
+        if (currentIdx > 0) {
+          loadFile(files[currentIdx - 1]);
+          content.scrollTop = content.scrollHeight;
+        }
+      }
+    });
+    
+    if (files.length === 0) {
+      content.innerHTML = '<em>No papers yet.</em>';
+    }
+    function updateListHighlight() {
+      const currentFile = history[historyIndex] || files[0];
+      const links = list.querySelectorAll('a');
+      links.forEach(link => {
+        if (link.textContent === currentFile.replace('.md','')) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    }
+    
+    files.forEach((f, i)=>{
+      const a = document.createElement('a');
+      a.textContent = f.replace('.md','');
+      a.href = '#';
+      a.onclick = (e)=>{e.preventDefault(); loadFile(f);};
+      list.appendChild(a);
+      if (i===0) loadFile(f);
+    });
+  </script>
+</body>
+</html>
