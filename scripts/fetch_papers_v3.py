@@ -417,6 +417,7 @@ def build_docs_site(repo_root, topic_slug, topic_name, papers_dir):
   <div class="wrap">
     <div class="nav-top">
       <a href="../index.html" class="nav-btn">🏠 Home</a>
+      <a href="../tone-color/index.html" class="nav-btn">🎨 Tone & Color</a>
       <a href="../video/index.html" class="nav-btn">📹 Video</a>
       <a href="../world-model/index.html" class="nav-btn">🌍 World Model</a>
       <a href="../agent/index.html" class="nav-btn">🤖 Agent</a>
