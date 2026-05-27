@@ -27,6 +27,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-05-27](papers/2026-05-27.md) - 5 papers
 - [2026-05-25](papers/2026-05-25.md) - 1 papers
 - [2026-05-24](papers/2026-05-24.md) - 12 papers
 - [2026-05-21](papers/2026-05-21.md) - 24 papers
@@ -103,6 +104,100 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-05-27 (5 papers)</b></summary>
+
+# arXiv Video Papers - 2026-05-27
+
+**Paper Count**: 5
+
+---
+
+## 1. FineVLA: Fine-Grained Instruction Alignment for Steerable Vision-Language-Action Policies / FineVLA：可操纵视觉-语言-动作策略的细粒度指令对齐
+
+**Date**: 2026-05-26 | **arXiv**: [2605.27284v1](http://arxiv.org/abs/2605.27284v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.27284v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision-Language-Action (VLA) models are increasingly expected to not only complete robot tasks, but also follow human instructions about how those tasks should be executed. However, existing robot datasets usually pair trajectories with coarse goal-level language, leaving execution-critical details such as active arm, approach direction, and contact region unspecified. This limits steerable policy learning and robotic video understanding. We introduce FineVLA, an open framework for action-aligned fine-grained VLA supervision. The framework includes: (1) a data construction tool that unifies 972,247 trajectories across 85K tasks from 10 open-source robot datasets and builds FineVLA-Data, a human-verified dataset of 47,159 fine-grained trajectories; (2) a held-out benchmark with 500 videos, 10,816 atomic facts, and 1,030 VQA questions; (3) a robotics-specialized VLM annotator for scalable fine-grained annotation; and (4) a steerable VLA policy trained with controlled mixtures of fine-grained and raw goal-level instructions. Our experiments yield three findings. First, fine-grained supervision does not sacrifice goal-level success: FG-only improves over Raw-only by +1.4 to +8.1 success-rate points across settings. Second, fine-grained and raw instructions are complementary, following a consistent inverted-U trend peaking at FG:Raw = 1:2 to 1:1. The best mixed setting reaches 86.8%/82.5% in RoboTwin simulation and 62.7/100 in real-world dual-arm manipulation (vs. 49.9 Raw-only). Third, fine-grained supervision improves steerable control: the largest real-world gains appear on pose (+23), color (+18), and approach direction (+18)--factors where goal-level instructions provide no guidance. Overall, fine-grained language should augment goal-level instructions: specifying how to execute alongside what to achieve. Project page: https://finevla.xlang.ai/
+
+人们越来越期望视觉-语言-动作（VLA）模型不仅能完成机器人任务，还能遵循人类关于如何执行这些任务的指令。然而，现有的机器人数据集通常将轨迹与粗略的目标级语言配对，而未指定执行关键的细节，例如主动臂、接近方向和接触区域。这限制了可引导的策略学习和机器人视频理解。我们推出 FineVLA，这是一个针对行动的细粒度 VLA 监督的开放框架。该框架包括：（1）一个数据构建工具，它统一了来自 10 个开源机器人数据集的 85K 任务中的 972,247 条轨迹，并构建了 FineVLA-Data，这是一个由 47,159 条细粒度轨迹组成的经人工验证的数据集； (2) 一个包含 500 个视频、10,816 个原子事实和 1,030 个 VQA 问题的测试基准； (3) 机器人专用的 VLM 注释器，用于可扩展的细粒度注释； (4) 可操纵的 VLA 策略，通过细粒度和原始目标级指令的受控混合物进行训练。我们的实验产生了三个发现。首先，细粒度的监督不会牺牲目标级别的成功：在所有设置中，仅 FG 比仅原始提高了 +1.4 到 +8.1 的成功率点。其次，细粒度指令和原始指令是互补的，遵循一致的倒 U 趋势，在 FG:Raw = 1:2 到 1:1 处达到峰值。最佳混合设置在 RoboTwin 模拟中达到 86.8%/82.5%，在现实世界双臂操作中达到 62.7/100（相对于仅 Raw 的 49.9）。第三，细粒度的监督改善了可操纵控制：现实世界中最大的增益出现在姿势（+23）、颜色（+18）和接近方向（+18）上——目标级指令不提供指导的因素。总体而言，细粒度的语言应该增强目标级指令：指定如何执行以及要实现的目标。项目页面：https://finevla.xlang.ai/
+
+</details>
+
+---
+
+## 2. Timestep-Aware SVDQuant-GPTQ for W4A4 Quantization of Wan2.2-I2V / 用于 Wan2.2-I2V 的 W4A4 量化的时间步感知 SVDQuant-GPTQ
+
+**Date**: 2026-05-26 | **arXiv**: [2605.27003v1](http://arxiv.org/abs/2605.27003v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.27003v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+W4A4 quantization of large video diffusion Transformers offers substantial memory savings but is hindered by two main challenges: sparse large-magnitude activation outliers, and strongly timestep-dependent activation distributions across the multi-step denoising trajectory. These difficulties are compounded by Wan2.2-I2V's two-expert Mixture-of-Experts DiT design, whose high-noise and low-noise experts exhibit distinct quantization sensitivities that a single global calibration policy cannot capture. We propose a post-training quantization framework combining SVDQuant-based low-rank outlier compensation, GPTQ-based reconstruction-aware residual weight quantization, and timestep-bin-wise per-layer activation clipping-ratio search conducted independently for each expert. On the OpenS2V-Eval benchmark, our method reduces peak GPU memory by 59.3\% relative to the BF16 baseline while incurring only a 0.9\% drop in VBench average score and a 2.3\% drop in Imaging Quality, demonstrating that expert- and timestep-aware calibration is essential for high-fidelity W4A4 inference on MoE video DiTs.
+
+大型视频扩散 Transformer 的 W4A4 量化可节省大量内存，但受到两个主要挑战的阻碍：稀疏的大幅激活异常值，以及多步去噪轨迹上强烈依赖于时间步长的激活分布。 Wan2.2-I2V 的两位专家混合专家 DiT 设计加剧了这些困难，其高噪声和低噪声专家表现出独特的量化灵敏度，这是单一全局校准策略无法捕获的。我们提出了一种训练后量化框架，结合了基于 SVDQuant 的低秩异常值补偿、基于 GPTQ 的重构感知残差权重量化以及为每个专家独立进行的时间步长箱式每层激活裁剪比搜索。在 OpenS2V-Eval 基准测试中，我们的方法相对于 BF16 基线将峰值 GPU 内存减少了 59.3%，而 VBench 平均得分仅下降 0.9%，成像质量仅下降 2.3%，这表明专家和时间步感知校准对于 MoE 视频 DiT 上的高保真 W4A4 推理至关重要。
+
+</details>
+
+---
+
+## 3. DynFrame: Adaptive Reasoning-Driven Multimodal Framework with Dynamic Frame Augmentation for Complex Video Understanding / DynFrame：自适应推理驱动的多模态框架，具有动态帧增强功能，可实现复杂视频理解
+
+**Date**: 2026-05-26 | **arXiv**: [2605.26680v1](http://arxiv.org/abs/2605.26680v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.26680v1)
+
+**Categories**: cs.CV, cs.AI
+
+**Code**: https://github.com/zhangguanghao523/DynFrame.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent video multimodal large language models (MLLMs) increasingly couple step-by-step reasoning with on-demand visual evidence retrieval, allowing models to revisit relevant video segments during inference. However, two structural gaps remain in existing thinking-with-video systems. (i) Sampling density is not a learnable decision: existing methods may let the model decide where to look, but the per-window frame rate is largely fixed. As a result, fine-grained evidence is often recovered through repeated retrieval calls, which increases inference context length and training difficulty. (ii) Retrieval and answer generation are usually optimized with a single trajectory-level advantage, so the "where to look" tokens and the "how to answer" tokens receive the same credit even when one is correct and the other is not. To address these gaps, we present DynFrame, a framework that emits the temporal window and the sampling density as native tokens within a single autoregressive pass. This learnable span-density retrieval enables acquiring multi-granularity evidence with a single retrieval step. Based on the above tokenized retrieval interface, we further introduce Segment-Decoupled GRPO (SD-GRPO), which splits each rollout at the retrieval boundary and assigns role-specific token-level advantages, separately crediting the sampling decision and the answer. Trained on the curated DM-CoT-74k and DM-RL-45k, DynFrame-4B is competitive with strong 7B-8B baselines across six benchmarks (NExT-GQA, Charades-STA, ActivityNet-MR, Video-MME, MLVU, LVBench), and DynFrame-8B sets new state-of-the-art on most metrics. Code is available at https://github.com/zhangguanghao523/DynFrame.
+
+最近的视频多模态大语言模型（MLLM）越来越多地将分步推理与按需视觉证据检索结合起来，允许模型在推理过程中重新访问相关视频片段。然而，现有的视频思维系统仍然存在两个结构性差距。 (i) 采样密度不是一个可学习的决定：现有方法可以让模型决定看哪里，但每个窗口的帧速率很大程度上是固定的。因此，细粒度的证据通常通过重复的检索调用来恢复，这增加了推理上下文的长度和训练难度。 (ii) 检索和答案生成通常通过单一轨迹级优势进行优化，因此“在哪里看”标记和“如何回答”标记即使一个正确而另一个不正确时也会获得相同的信用。为了解决这些差距，我们提出了 DynFrame，这是一个框架，它在单个自回归过程中将时间窗口和采样密度作为本机标记发出。这种可学习的跨密度检索能够通过单个检索步骤获取多粒度证据。基于上述标记化检索接口，我们进一步引入了分段解耦GRPO（SD-GRPO），它在检索边界处分割每个rollout并分配特定于角色的标记级优势，分别记入采样决策和答案。 DynFrame-4B 在精心策划的 DM-CoT-74k 和 DM-RL-45k 上进行训练，在六个基准测试（NExT-GQA、Charades-STA、ActivityNet-MR、Video-MME、MLVU、LVBench）上与强大的 7B-8B 基线竞争，而 DynFrame-8B 在大多数指标上设置了新的最先进技术。代码可在 https://github.com/zhangguanghao523/DynFrame 获取。
+
+</details>
+
+---
+
+## 4. Tail-Aware HiFloat4: W4A4 Post-Training Quantization for Wan2.2 / Tail-Aware HiFloat4：Wan2.2 的 W4A4 训练后量化
+
+**Date**: 2026-05-26 | **arXiv**: [2605.26628v1](http://arxiv.org/abs/2605.26628v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.26628v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This report describes Tail-Aware HiFloat4, our submission to the low-bit text-to-video generation quantization challenge. Our method adapts the public ViDiT-Q post-training quantization pipeline to Wan2.2 under the HiFloat4 numerical format. We quantize the main linear layers in both Wan2.2 transformer modules with W4A4 HiFloat4 fake quantization, keep numerically sensitive boundary modules in high precision, and introduce an activation-tail-aware percentile calibration module for channel-mask construction. Together with compact PTQ-state restoration, this design reduces the influence of rare calibration outliers while keeping the runtime HiFloat4 arithmetic and sampling pipeline unchanged.
+
+本报告介绍了 Tail-Aware HiFloat4，这是我们向低位文本到视频生成量化挑战提交的作品。我们的方法将公共 ViDiT-Q 训练后量化管道改编为 HiFloat4 数值格式下的 Wan2.2。我们使用 W4A4 HiFloat4 伪量化对两个 Wan2.2 变压器模块中的主要线性层进行量化，保持数值敏感边界模块的高精度，并引入用于通道掩模构建的激活尾部感知百分位数校准模块。与紧凑的 PTQ 状态恢复一起，该设计减少了罕见校准异常值的影响，同时保持运行时 HiFloat4 算法和采样管道不变。
+
+</details>
+
+---
+
+## 5. ReCA: Multi-Shot Long Video Extrapolation via Recursive Context Allocation / ReCA：通过递归上下文分配进行多镜头长视频外推
+
+**Date**: 2026-05-26 | **arXiv**: [2605.26525v1](http://arxiv.org/abs/2605.26525v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.26525v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Minute-scale cinematic video generation is a central challenge for generative video models. Existing paradigms address only fragments of this challenge: single-shot extrapolation preserves an anchor but lacks cinematic structure, while multi-shot storytelling imposes structure yet remains free to invent its visual states rather than continue an observed one. We define Multi-Shot Video Extrapolation (MSVE), a task that extends an observed frame or clip into a sequence of cinematically structured shots while preserving anchor state and advancing narrative intent. This setting operates under the finite per-call generation budget of short-video models. We identify three coupled bottlenecks: (1) global planners over-specify unsupported details from full screenplays; (2) shot-level prompts dilute task-relevant state when carrying the complete story; and (3) temporal chaining turns generated frames into a lossy memory in which identity, scene, object, and action state decay. MSVE reveals that long-video failure is not merely a limitation of context length, but a failure of context allocation. We propose Recursive Context Allocation (ReCA), an inference-time framework that allocates context hierarchically across planning and generation. ReCA recursively decomposes MSVE into context-bounded subproblems, invokes frozen generators at leaf nodes, and propagates structured state updates across time. To evaluate this setting, we further propose MSVE-Bench and NB-Q, a source-grounded protocol with prompts purpose-built for 3 to 5 minute long-video generation, a regime not addressed by existing short-clip benchmarks. Compared to previous methods, ReCA improves average normalized score by 8 to 16 percent over the strongest competing controller and improves multi-shot consistency metrics by 28 to 43 percent. View the project page at https://reca.vmv.re.
+
+分钟级电影视频生成是生成视频模型的主要挑战。现有的范式仅解决了这一挑战的一部分：单镜头外推保留了锚点，但缺乏电影结构，而多镜头叙事强加了结构，但仍然可以自由地创造其视觉状态，而不是继续观察到的状态。我们定义了多镜头视频外推（MSVE），这是一项将观察到的帧或剪辑扩展为电影结构镜头序列的任务，同时保留锚定状态并推进叙事意图。此设置在短视频模型的有限每次调用生成预算下运行。我们确定了三个耦合瓶颈：（1）全局规划者过度指定完整剧本中不受支持的细节； （2）在承载完整故事时，镜头级提示淡化了任务相关状态； (3)时间链将生成的帧变成有损记忆，其中身份、场景、对象和动作状态会衰减。 MSVE揭示了长视频失败不仅仅是上下文长度的限制，而是上下文分配的失败。我们提出了递归上下文分配（ReCA），这是一种推理时间框架，可以跨规划和生成分层分配上下文。 ReCA 递归地将 MSVE 分解为上下文限制的子问题，在叶节点调用冻结的生成器，并跨时间传播结构化状态更新。为了评估这一设置，我们进一步提出了 MSVE-Bench 和 NB-Q，这是一种基于源的协议，带有专门为 3 到 5 分钟的长视频生成而构建的提示，这是现有的短剪辑基准未解决的制度。与以前的方法相比，ReCA 比最强的竞争控制器将平均归一化分数提高了 8％ 至 16％，并将多镜头一致性指标提高了 28％ 至 43％。查看项目页面：https://reca.vmv.re。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-05-25 (1 papers)</b></summary>
 
 # arXiv Video Papers - 2026-05-25
