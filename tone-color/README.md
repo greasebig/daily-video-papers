@@ -7,7 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
-- [2026-05-26](papers/2026-05-26.md) - 28 papers
+- [2026-05-27](papers/2026-05-27.md) - 30 papers
 <!-- PAPERS_INDEX_END -->
 
 ## Other Topics
@@ -19,15 +19,127 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
-<details><summary><b>2026-05-26 (28 papers)</b></summary>
+<details><summary><b>2026-05-27 (30 papers)</b></summary>
 
-# arXiv Tone & Color Papers - 2026-05-26
+# arXiv Tone & Color Papers - 2026-05-27
 
-**Paper Count**: 28
+**Paper Count**: 30
 
 ---
 
-## 1. PathWISE: Multi-Agent Cancer Pathway Triaging Ontology Learning from Clinical Flowcharts / PathWISE：多代理癌症通路分类本体论从临床流程图中学习
+## 1. Megakernel vs Wavefront GPU Path Tracing / Megakernel 与 Wavefront GPU 路径追踪
+
+**Date**: 2026-05-26 | **arXiv**: [2605.27323v1](http://arxiv.org/abs/2605.27323v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.27323v1)
+
+**Categories**: cs.GR, cs.AR, cs.PF
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Over the last decade, advances in GPU hardware have been driven in large part by the demands of real-time graphics, culminating in dedicated hardware ray tracing cores (RT cores). These units accelerate ray scene intersection queries directly in hardware, making physically based ray tracing algorithms increasingly practical for interactive applications. This paper compares and analyzes the performance of two ray-based rendering algorithms: forward path tracing (PT) and wavefront path tracing (WPT). GPU-based PT computes the color of each pixel by having each thread trace a single path to completion, naturally leading to a megakernel approach - while WPT maintains state buffers between specialized kernel invocations to trace path stages simultaneously. We find that WPT affords a ~16% speedup over PT in our implementation. By analyzing traces from NVIDIA Nsight Graphics, we attributed this speedup to WPT's improved cache locality compared to PT. We also find that our implementation does not achieve maximum GPU throughput across any of its units, suggesting that communication and memory latency, as well as synchronization, are the limiting factors. Finally, we address potential algorithmic improvements and future work for real-time path tracing implementation for practical applications.
+
+在过去的十年中，GPU 硬件的进步在很大程度上是由实时图形的需求推动的，最终出现了专用硬件光线追踪核心（RT 核心）。这些单元直接在硬件中加速光线场景相交查询，使得基于物理的光线追踪算法对于交互式应用程序越来越实用。本文比较和分析了两种基于光线的渲染算法：前向路径追踪（PT）和波前路径追踪（WPT）的性能。基于 GPU 的 PT 通过让每个线程跟踪单个完成路径来计算每个像素的颜色，自然导致了巨型内核方法 - 而 WPT 在专门的内核调用之间维护状态缓冲区以同时跟踪路径阶段。我们发现，在我们的实施中，WPT 比 PT 提速了约 16%。通过分析 NVIDIA Nsight Graphics 的跟踪，我们将这种加速归因于 WPT 与 PT 相比改进的缓存局部性。我们还发现，我们的实现并未在任何单元上实现最大 GPU 吞吐量，这表明通信和内存延迟以及同步是限制因素。最后，我们讨论了实际应用中实时路径跟踪实现的潜在算法改进和未来工作。
+
+</details>
+
+---
+
+## 2. FineVLA: Fine-Grained Instruction Alignment for Steerable Vision-Language-Action Policies / FineVLA：可操纵视觉-语言-动作策略的细粒度指令对齐
+
+**Date**: 2026-05-26 | **arXiv**: [2605.27284v1](http://arxiv.org/abs/2605.27284v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.27284v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision-Language-Action (VLA) models are increasingly expected to not only complete robot tasks, but also follow human instructions about how those tasks should be executed. However, existing robot datasets usually pair trajectories with coarse goal-level language, leaving execution-critical details such as active arm, approach direction, and contact region unspecified. This limits steerable policy learning and robotic video understanding. We introduce FineVLA, an open framework for action-aligned fine-grained VLA supervision. The framework includes: (1) a data construction tool that unifies 972,247 trajectories across 85K tasks from 10 open-source robot datasets and builds FineVLA-Data, a human-verified dataset of 47,159 fine-grained trajectories; (2) a held-out benchmark with 500 videos, 10,816 atomic facts, and 1,030 VQA questions; (3) a robotics-specialized VLM annotator for scalable fine-grained annotation; and (4) a steerable VLA policy trained with controlled mixtures of fine-grained and raw goal-level instructions. Our experiments yield three findings. First, fine-grained supervision does not sacrifice goal-level success: FG-only improves over Raw-only by +1.4 to +8.1 success-rate points across settings. Second, fine-grained and raw instructions are complementary, following a consistent inverted-U trend peaking at FG:Raw = 1:2 to 1:1. The best mixed setting reaches 86.8%/82.5% in RoboTwin simulation and 62.7/100 in real-world dual-arm manipulation (vs. 49.9 Raw-only). Third, fine-grained supervision improves steerable control: the largest real-world gains appear on pose (+23), color (+18), and approach direction (+18)--factors where goal-level instructions provide no guidance. Overall, fine-grained language should augment goal-level instructions: specifying how to execute alongside what to achieve. Project page: https://finevla.xlang.ai/
+
+人们越来越期望视觉-语言-动作（VLA）模型不仅能完成机器人任务，还能遵循人类关于如何执行这些任务的指令。然而，现有的机器人数据集通常将轨迹与粗略的目标级语言配对，而未指定执行关键的细节，例如主动臂、接近方向和接触区域。这限制了可引导的策略学习和机器人视频理解。我们推出 FineVLA，这是一个针对行动的细粒度 VLA 监督的开放框架。该框架包括：（1）一个数据构建工具，它统一了来自 10 个开源机器人数据集的 85K 任务中的 972,247 条轨迹，并构建了 FineVLA-Data，这是一个由 47,159 条细粒度轨迹组成的经人工验证的数据集； (2) 一个包含 500 个视频、10,816 个原子事实和 1,030 个 VQA 问题的测试基准； (3) 机器人专用的 VLM 注释器，用于可扩展的细粒度注释； (4) 可操纵的 VLA 策略，通过细粒度和原始目标级指令的受控混合物进行训练。我们的实验产生了三个发现。首先，细粒度的监督不会牺牲目标级别的成功：在所有设置中，仅 FG 比仅原始提高了 +1.4 到 +8.1 的成功率点。其次，细粒度指令和原始指令是互补的，遵循一致的倒 U 趋势，在 FG:Raw = 1:2 到 1:1 处达到峰值。最佳混合设置在 RoboTwin 模拟中达到 86.8%/82.5%，在现实世界双臂操作中达到 62.7/100（相对于仅 Raw 的 49.9）。第三，细粒度的监督改善了可操纵控制：现实世界中最大的增益出现在姿势（+23）、颜色（+18）和接近方向（+18）上——目标级指令不提供指导的因素。总体而言，细粒度的语言应该增强目标级指令：指定如何执行以及要实现的目标。项目页面：https://finevla.xlang.ai/
+
+</details>
+
+---
+
+## 3. Chaos-SSL: An Attention-Based Self-Supervised Learning Framework with Chaotic Transformation for Medical Image Classification / Chaos-SSL：用于医学图像分类的具有混沌变换的基于注意力的自监督学习框架
+
+**Date**: 2026-05-26 | **arXiv**: [2605.27146v1](http://arxiv.org/abs/2605.27146v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.27146v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Self-Supervised Learning (SSL) has emerged as a powerful paradigm to mitigate the reliance on large, annotated datasets, a common bottleneck in medical image analysis. However, standard SSL methods, which rely on simple geometric and color augmentations, may fail to capture the fine-grained, complex textural details necessary for classifying subtle pathologies. This paper introduces Chaos-SSL, a novel two-stage framework for medical image classification. In the first stage, we propose a new self-supervised pre-training strategy that leverages 1D chaotic maps (Logistic, Tent, and Sine) as a complex, non-linear augmentation for contrastive learning. We hypothesize that these chaotic transformations create ``harder'' and more semantically-rich views, forcing a network to learn robust representations of fine-grained medical textures. In the second stage, we introduce an attention-based fusion model that dynamically combines the specialized features from our Chaos-SSL model with the general-purpose features of a larger, ImageNet-pre-trained model. We validate our method on two public datasets: ISIC 2018 (skin lesions) and APTOS 2019 (diabetic retinopathy). Our results demonstrate that the Chaos-SSL model pre-trained with a Tent map for 30 epochs, followed by attention fusion, achieves performance fully competitive with the state-of-the-art, yielding an accuracy of 0.9261 on ISIC 2018 and 0.8726 on APTOS 2019. This significantly outperforms existing SSL methods, including several recent approaches.
+
+自监督学习 (SSL) 已成为一种强大的范例，可以减轻对大型带注释数据集的依赖，这是医学图像分析中的常见瓶颈。然而，标准 SSL 方法依赖于简单的几何和颜色增强，可能无法捕获对细微病理进行分类所需的细粒度、复杂的纹理细节。本文介绍了 Chaos-SSL，一种新颖的医学图像分类两阶段框架。在第一阶段，我们提出了一种新的自监督预训练策略，利用一维混沌映射（Logistic、Tent 和 Sine）作为对比学习的复杂非线性增强。我们假设这些混沌变换创建了“更难”且语义更丰富的视图，迫使网络学习细粒度医学纹理的稳健表示。在第二阶段，我们引入了一种基于注意力的融合模型，该模型动态地将 Chaos-SSL 模型的专用特征与更大的 ImageNet 预训练模型的通用特征相结合。我们在两个公共数据集上验证了我们的方法：ISIC 2018（皮肤病变）和 APTOS 2019（糖尿病视网膜病变）。我们的结果表明，Chaos-SSL 模型使用 Tent 地图预训练 30 个 epoch，然后进行注意力融合，其性能与最先进的技术完全竞争，在 ISIC 2018 上产生 0.9261 的准确度，在 APTOS 2019 上产生 0.8726 的准确度。这明显优于现有的 SSL 方法，包括最近的几种方法。
+
+</details>
+
+---
+
+## 4. Is an Image Also Worth 16x16=256 Superpixels? A Framework for Attentional Image Classification / 图像也值得 16x16=256 个超像素吗？注意力图像分类框架
+
+**Date**: 2026-05-26 | **arXiv**: [2605.27144v1](http://arxiv.org/abs/2605.27144v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.27144v1)
+
+**Categories**: cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Superpixel-based image classification has traditionally leveraged graph neural networks (GNNs) for processing irregular image representations. Recent advances in computer vision, driven by Vision Transformers (ViTs), have introduced new paradigms in self-attentional models, surpassing convolutional neural networks (CNNs) in various tasks. However, a synergistic connection between GNNs, superpixels, and transformers remains unexplored. In this work, we propose Superpixel Transformers (SPT), a novel framework that unifies superpixel-based image classification and ViTs. SPT generalizes the Superpixel Image Classification with Graph Attention Networks (SICGAT) model and ViT to support arbitrary superpixel-based chunking strategies, connectivity graphs, and positional encodings. We introduce refinements including a multidimensional sine-cosine positional encoding and an enriched patch data structure that fully incorporates superpixel shape and color information. By testing SPT across datasets such as CIFAR10, FashionMNIST, and Imagenette, with various superpixel generation and graph connectivity strategies, we demonstrate that SPT achieves superior performance compared to previous superpixel-based GNN methods and remains competitive with ViTs. Notably, our approach addresses the limitations of SICGAT, such as information loss during pixel aggregation, and shows how constrained graph connectivity can enhance ViT performance. SPT bridges the gap between superpixel-based and transformer models, opening avenues for cross-domain generalization and future innovations in hybrid attentional frameworks, and showing that an image can also be worth $16\times16$ superpixels.
+
+基于超像素的图像分类传统上利用图神经网络（GNN）来处理不规则图像表示。在视觉变压器（ViT）的推动下，计算机视觉领域的最新进展在自注意力模型中引入了新的范式，在各种任务中超越了卷积神经网络（CNN）。然而，GNN、超像素和 Transformer 之间的协同联系仍未被探索。在这项工作中，我们提出了 Superpixel Transformers (SPT)，这是一种统一基于超像素的图像分类和 ViT 的新颖框架。 SPT 使用图注意网络 (SICGAT) 模型和 ViT 概括了超像素图像分类，以支持任意基于超像素的分块策略、连接图和位置编码。我们引入了改进，包括多维正弦余弦位置编码和丰富的补丁数据结构，完全融合了超像素形状和颜色信息。通过在 CIFAR10、FashionMNIST 和 Imagenette 等数据集上测试 SPT，使用各种超像素生成和图连接策略，我们证明 SPT 与之前基于超像素的 GNN 方法相比具有卓越的性能，并且与 ViT 保持竞争力。值得注意的是，我们的方法解决了 SICGAT 的局限性，例如像素聚合期间的信息丢失，并展示了受约束的图连接如何增强 ViT 性能。 SPT 弥合了基于超像素的模型和 Transformer 模型之间的差距，为跨领域泛化和混合注意力框架的未来创新开辟了途径，并表明图像也可以价值 16 美元×16 美元的超像素。
+
+</details>
+
+---
+
+## 5. YOLO26-RipeLoc Lite: A lightweight architecture for tomato ripeness detection and picking point localization in greenhouse robotic harvesting / YOLO26-RipeLoc Lite：用于温室机器人收获中番茄成熟度检测和采摘点定位的轻量级架构
+
+**Date**: 2026-05-26 | **arXiv**: [2605.27129v1](http://arxiv.org/abs/2605.27129v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.27129v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In greenhouse tomato production, automated harvesting requires accurate detection of ripe tomatoes, ripeness classification, and precise picking-point localization for robotic end-effectors. This paper proposes YOLO26-RipeLoc Lite, a lightweight deep learning architecture based on YOLO26 for simultaneous detection, ripeness classification, and center-point localization of greenhouse tomatoes. The model introduces three modifications: (1) a Lightweight Feature Pyramid Network (LFPN) with depthwise separable convolutions for efficient multi-scale fusion, (2) a Ripeness-Aware Attention Module (RAAM) with dual pooling and a learnable ripeness bias vector for enhanced color-texture discrimination, and (3) a Compact Detection Head (CDH) with shared convolutions and an integrated center-point regression branch for direct grasp planning. The model is evaluated on a custom dataset of 1,500 images with 6,227 instances (3,566 ripe, 2,661 unripe) from the SILAL greenhouse, Abu Dhabi, UAE. YOLO26-RipeLoc Lite achieves mAP@0.5 of 92.9% (95.2% ripe, 90.6% unripe) with the highest precision (95.2%) among all evaluated architectures using only 2.38M parameters. Post-training BatchNorm pruning at 30% reduces parameters to ~1.8M with negligible accuracy loss. Ablation studies confirm that greenhouse-aware HSV augmentation provides the largest improvement (+2.02 pp mAP@50), backbone freezing achieves peak precision (93.8%), and 3-phase progressive unfreezing yields the best localization quality (mAP@50:95 of 64.6%). Comparisons with YOLOv8n/s, YOLO11n/s, YOLO12n/s, and YOLO26s confirm superior accuracy-efficiency: 2.9 pp higher precision than YOLO12n with 7.0% fewer parameters and integrated center-point localization for robotic end-effector guidance.
+
+在温室番茄生产中，自动化收获需要准确检测成熟番茄、成熟度分类以及机器人末端执行器的精确采摘点定位。本文提出了 YOLO26-RipeLoc Lite，这是一种基于 YOLO26 的轻量级深度学习架构，用于温室番茄的同步检测、成熟度分类和中心点定位。该模型引入了三个修改：（1）具有深度可分离卷积的轻量级特征金字塔网络（LFPN），用于高效的多尺度融合；（2）具有双池化和可学习成熟度偏差向量的成熟感知注意模块（RAAM），用于增强颜色纹理辨别；（3）具有共享卷积和集成中心点回归分支的紧凑检测头（CDH），用于直接抓取规划。该模型在来自阿联酋阿布扎比 SILAL 温室的 1,500 张图像的自定义数据集上进行评估，其中包含 6,227 个实例（3,566 个成熟实例，2,661 个未成熟实例）。 YOLO26-RipeLoc Lite 的 mAP@0.5 达到了 92.9%（95.2% 成熟，90.6% 未成熟），在所有评估的架构中仅使用 238 万个参数，精度最高（95.2%）。训练后 BatchNorm 修剪 30% 将参数减少到约 1.8M，精度损失可以忽略不计。消融研究证实，温室感知 HSV 增强提供了最大的改进（+2.02 pp mAP@50），骨干冻结实现了峰值精度（93.8%），并且 3 相渐进解冻产生了最佳定位质量（mAP@50:95 为 64.6%）。与 YOLOv8n/s、YOLO11n/s、YOLO12n/s 和 YOLO26s 的比较证实了卓越的精度效率：比 YOLO12n 精度高 2.9 pp，参数减少 7.0%，并集成了用于机器人末端执行器引导的中心点定位。
+
+</details>
+
+---
+
+## 6. NeR-SC: Adapting Neural Video Representation to Screen Content / NeR-SC：使神经视频表示适应屏幕内容
+
+**Date**: 2026-05-26 | **arXiv**: [2605.27024v1](http://arxiv.org/abs/2605.27024v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.27024v1)
+
+**Categories**: cs.CV, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Implicit neural representations have emerged as a promising paradigm for video compression, with recent methods achieving competitive performance on natural video. However, screen content video -- common in remote desktop, online education, and cloud gaming -- exhibits distinct statistics: sharp edges, limited color palettes, and strong temporal redundancy. Existing neural representation methods, designed for natural scenes, lack mechanisms to exploit these properties, leaving substantial room for improvement. In this paper, we propose NeR-SC, a neural representation framework tailored for screen content video. Building on the SNeRV backbone, NeR-SC introduces three screen-content-specific modules: (i) a learnable color palette that models the discrete color structure of screen content by restricting the low-frequency sub-band to a learned color set; (ii) a multi-gate dense fusion module that replaces sequential feature fusion with dense, attention-gated cross-stage interaction; and (iii) an embedding-level frame skip strategy that bypasses redundant decoder invocations for static frames, with zero training overhead. Experiments on DSCVC and VCD show that NeR-SC achieves 40.32~dB and 41.73~dB average PSNR, outperforming representative neural video representation methods and, at low bitrates, surpassing H.264 and H.265. The skip strategy enables real-time decoding with no loss in quality.
+
+隐式神经表示已成为视频压缩的一种有前途的范例，最近的方法在自然视频上实现了具有竞争力的性能。然而，屏幕内容视频（常见于远程桌面、在线教育和云游戏）表现出明显的统计数据：锐利的边缘、有限的调色板和强大的时间冗余。现有的针对自然场景设计的神经表示方法缺乏利用这些特性的机制，因此留下了很大的改进空间。在本文中，我们提出了 NeR-SC，一种专为屏幕内容视频量身定制的神经表示框架。 NeR-SC 基于 SNeRV 主干网络，引入了三个特定于屏幕内容的模块：（i）可学习的调色板，通过将低频子带限制为学习的颜色集来模拟屏幕内容的离散颜色结构； (ii) 多门密集融合模块，用密集、注意力门控的跨阶段交互取代顺序特征融合； (iii) 嵌入级跳帧策略，绕过静态帧的冗余解码器调用，训练开销为零。在 DSCVC 和 VCD 上的实验表明，NeR-SC 的平均 PSNR 达到了 40.32~dB 和 41.73~dB，优于代表性的神经视频表示方法，并且在低比特率下超过了 H.264 和 H.265。跳过策略可以实现实时解码，且不会降低质量。
+
+</details>
+
+---
+
+## 7. DelowlightSplat: Feed-Forward Gaussian Splatting for Lowlight 3D Scene Reconstruction / DelowlightSplat：用于低光 3D 场景重建的前馈高斯泼溅
+
+**Date**: 2026-05-26 | **arXiv**: [2605.26629v1](http://arxiv.org/abs/2605.26629v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.26629v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Novel-view synthesis and 3D reconstruction from sparse posed images are central to robotics and AR/VR. Yet, feed-forward 3D Gaussian reconstruction fails under lowlight due to noise, color shifts, and unreliable correspondence. We propose DelowlightSplat, a lowlight-aware feed-forward Gaussian splatting framework for clean novel-view rendering. We build a controllable multi-view lowlight benchmark by degrading only context views while keeping target views clean. We introduce a lightweight Lowlight Adapter for residual enhancement to improve matchability, and couple it with cost-volume-based multi-view inference to directly predict clean 3D Gaussians. Experiments show that DelowlightSplat significantly outperforms previous feed-forward method and two-stage pipeline under lowlight conditions.
+
+从稀疏姿势图像中进行新颖视图合成和 3D 重建是机器人技术和 AR/VR 的核心。然而，由于噪声、色移和不可靠的对应关系，前馈 3D 高斯重建在低光下会失败。我们提出了 DelowlightSplat，一种低光感知的前馈高斯泼溅框架，用于干净的小说视图渲染。我们通过仅降级上下文视图同时保持目标视图干净来构建可控的多视图低光基准。我们引入了一种轻量级低光适配器，用于残差增强，以提高可匹配性，并将其与基于成本体积的多视图推理相结合，以直接预测干净的 3D 高斯。实验表明，在弱光条件下，DelowlightSplat 显着优于之前的前馈方法和两级管道。
+
+</details>
+
+---
+
+## 8. PathWISE: Multi-Agent Cancer Pathway Triaging Ontology Learning from Clinical Flowcharts / PathWISE：多代理癌症通路分类本体论从临床流程图中学习
 
 **Date**: 2026-05-25 | **arXiv**: [2605.25970v1](http://arxiv.org/abs/2605.25970v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.25970v1)
 
@@ -43,7 +155,7 @@ Clinical pathways are disseminated as visual flowcharts where spatial topology, 
 
 ---
 
-## 2. RAPTOR+: A Visually Grounded Vision-Language Framework to Improve Clinical Trust and Auditability in Automated Cancer Referral Processing / RAPTOR+：基于视觉的视觉语言框架，可提高自动化癌症转诊处理中的临床信任和可审核性
+## 9. RAPTOR+: A Visually Grounded Vision-Language Framework to Improve Clinical Trust and Auditability in Automated Cancer Referral Processing / RAPTOR+：基于视觉的视觉语言框架，可提高自动化癌症转诊处理中的临床信任和可审核性
 
 **Date**: 2026-05-25 | **arXiv**: [2605.25956v1](http://arxiv.org/abs/2605.25956v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.25956v1)
 
@@ -59,7 +171,7 @@ Urgent suspected colorectal cancer (CRC) referrals create operational bottleneck
 
 ---
 
-## 3. AgentGrounder: Zero-Shot 3D Visual Pointcloud Grounding using Multimodal Language Models / AgentGrounder：使用多模态语言模型的零射击 3D 视觉点云接地
+## 10. AgentGrounder: Zero-Shot 3D Visual Pointcloud Grounding using Multimodal Language Models / AgentGrounder：使用多模态语言模型的零射击 3D 视觉点云接地
 
 **Date**: 2026-05-25 | **arXiv**: [2605.25901v1](http://arxiv.org/abs/2605.25901v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.25901v1)
 
@@ -77,57 +189,7 @@ Urgent suspected colorectal cancer (CRC) referrals create operational bottleneck
 
 ---
 
-## 4. Insuring Every Action: An Authority Frontier Framework for Runtime Actuarial Control of Autonomous AI Agents / 确保每一个行动：自主人工智能代理运行时精算控制的权威前沿框架
-
-**Date**: 2026-05-25 | **arXiv**: [2605.25632v1](http://arxiv.org/abs/2605.25632v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.25632v1)
-
-**Categories**: cs.AI, cs.LG, q-fin.RM
-
-<details><summary><b>Abstract / 摘要</b></summary>
-
-Autonomous AI agents increasingly issue side-effect-bearing actions: database mutations, refunds, payments, external commitments. We propose the Actuarial Action Interface (AAI), a deterministic runtime contract that prices each such action against a contractually fixed safe default under a time-consistent risk mapping, and gates execution against a per-boundary reserve capital budget. We then develop the Authority Frontier, an evaluation primitive measuring how much autonomous authority the runtime releases at each level of reserve capital. The framework provides (i) a deterministic quote-bind-commit protocol with toll-bounded capability tokens; (ii) a universal seven-class action taxonomy mapping heterogeneous tool calls to comparable authority units; (iii) replay determinism and pathwise reserve coverage under alpha-spending; (iv) cross-domain normalization via full reserve demand C_full and capital metrics Capital@k. We instantiate AAI across four agentic environments (database mutation, customer-service refund, and the public tau-bench retail and airline tool-use traces) and report a live Postgres panel in which three Azure-hosted models propose actions through the same contract. The frontier exhibits a common low-reserve refusal and intermediate-release pattern across domains, with saturation only where the budget grid reaches full reserve demand; required reserve capital varies by 22x (Capital@50 from 289 to 6457). The framework does not force domains into the same shape; it surfaces each domain's actuarial geometry. In the live panel the contract prevents realized loss across all three models at low budget while differing in underwriting persistence under denial: model identity is an actuarial underwriting variable. The contribution is a benchmark-ready evaluation framework for runtime actuarial control of autonomous-agent side effects.
-
-自主人工智能代理越来越多地发出带有副作用的操作：数据库突变、退款、付款、外部承诺。我们提出了精算操作接口（AAI），这是一种确定性的运行时合约，它在时间一致的风险映射下根据合约固定的安全默认值对每个此类操作进行定价，并根据每个边界的储备资本预算来控制执行。然后，我们开发了权威前沿，这是一种评估原语，用于测量运行时在每个储备资本级别释放多少自治权威。该框架提供了（i）具有收费限制功能令牌的确定性引用-绑定-提交协议； (ii) 通用七类行动分类法，将异构工具调用映射到可比较的权威单位； (iii) 阿尔法支出下的重播决定论和路径储备覆盖率； (iv) 通过全额准备金需求 C_full 和资本指标 Capital@k 进行跨域标准化。我们跨四个代理环境（数据库突变、客户服务退款以及公共 tau 工作台零售和航空公司工具使用跟踪）实例化 AAI，并报告实时 Postgres 面板，其中三个 Azure 托管模型通过同一合约提出操作建议。前沿呈现出跨领域常见的低储备拒绝和中间释放模式，只有在预算网格达到全部储备需求时才会饱和；所需储备资本变化 22 倍（Capital@50 从 289 到 6457）。该框架不会强制域具有相同的形状；它展示了每个域的精算几何。在实时面板中，合约可以防止所有三种模型以低预算实现的损失，同时在拒绝承保的情况下持续性有所不同：模型身份是一个精算承保变量。该贡献是一个用于自主代理副作用的运行时精算控制的基准就绪评估框架。
-
-</details>
-
----
-
-## 5. Metric--Phase Fields: Decoupling Distance and Sign for Thin-Structure Reconstruction from Unoriented Point Clouds / 度量相场：从无向点云进行薄结构重建的解耦距离和符号
-
-**Date**: 2026-05-25 | **arXiv**: [2605.25503v1](http://arxiv.org/abs/2605.25503v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.25503v1)
-
-**Categories**: cs.CV
-
-**Code**: https://github.com/JIAYI-Scarlett/ICML2026-MPF
-
-<details><summary><b>Abstract / 摘要</b></summary>
-
-Neural Signed Distance Functions (SDFs) excel at reconstructing watertight manifolds but fail on thin structures and open boundaries due to strict inside--outside constraints. Conversely, Unsigned Distance Fields (UDFs) accommodate general geometries but suffer from gradient singularities at the zero-level set, hindering optimization and extraction. We introduce Metric--Phase Fields (MPFs), a decoupled implicit representation that separates metric proximity from topological phase. Given an unoriented point cloud, MPFs learn (i) an unsigned metric field $r$ and (ii) a smooth phase field $θ$, for which we derive a bounded phase indicator $P=\tanh(βθ)$ that provides soft inside--outside cues where they are meaningful. We couple the two fields via a gated-metric formulation with a residual phase injection to obtain a signed implicit function with stable near-surface gradients. The phase coefficient $β$ is learnable, allowing MPFs to adaptively control the sharpness of the phase transition and the degree of saturation of the soft sign indicator. Experiments on both synthetic and scanned thin-shell and thin-plate shapes demonstrate that MPFs preserve thin and layered structures more faithfully than recent SDF-based methods, while also enabling more robust training and more reliable surface extraction than UDF-based approaches. Check out \href{https://github.com/JIAYI-Scarlett/ICML2026-MPF}{MPFs-GitHub} for source code and test models.
-
-神经符号距离函数 (SDF) 擅长重建无懈可击的流形，但由于严格的内外约束，在薄结构和开放边界上失败。相反，无符号距离场（UDF）适应一般几何形状，但在零水平集处存在梯度奇点，阻碍了优化和提取。我们引入度量相域（MPF），一种解耦的隐式表示，它将度量邻近度与拓扑相位分开。给定一个无方向的点云，MPF 学习（i）一个无符号度量场 $r$ 和（ii）一个平滑相位场 $θ$，为此我们推导出一个有界相位指示器 $P=\tanh(βθ)$，它提供了有意义的软内部-外部线索。我们通过门控度量公式和残余相注入将两个场耦合起来，以获得具有稳定近表面梯度的带符号隐函数。相位系数$β$是可学习的，允许MPF自适应地控制相变的锐度和软符号指示器的饱和度。对合成和扫描薄壳和薄板形状的实验表明，MPF 比最近基于 SDF 的方法更忠实地保留薄层结构，同时还比基于 UDF 的方法实现更稳健的训练和更可靠的表面提取。查看 \href{https://github.com/JIAYI-Scarlett/ICML2026-MPF}{MPFs-GitHub} 以获取源代码和测试模型。
-
-</details>
-
----
-
-## 6. Physics-Aware 3D Gaussian Editing for Driving Scene Generation / 用于生成驾驶场景的物理感知 3D 高斯编辑
-
-**Date**: 2026-05-25 | **arXiv**: [2605.25373v1](http://arxiv.org/abs/2605.25373v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.25373v1)
-
-**Categories**: cs.CV
-
-<details><summary><b>Abstract / 摘要</b></summary>
-
-3D Gaussian Splatting (3DGS) has shown great potential in autonomous driving simulation and data generation, enabling photorealistic reconstruction and flexible scene manipulation. However, existing 3DGS scene editing methods have limited support for road geometry editing (e.g., inserting speed humps or sunken roads), and generally do not couple such edits with plausible vehicle-road interaction dynamics. Such editing is essential for generating training data under extreme driving scenarios or evaluating system reliability under these road irregularities. Moreover, many optimization-based methods require minutes of per-edit refinement, while existing efficient alternatives mainly focus on appearance-level or object-level manipulation rather than physics-aware road irregularity editing. To address these limitations, we propose RoVES, a Road-and-Vehicle Editing System for physics-aware 3D Gaussian editing in driving scenes. RoVES enables single-image-driven road geometry insertion and couples the edited road profile with a 4-DOF half-car vehicle dynamics model to achieve physics-aware vehicle pose correction in vertical displacement and pitch. RoVES inserts road elements in a one-shot, optimization-free pipeline (1.84s), and the full pipeline (including color transfer and vehicle-dynamics-based pose correction) completes in 6.24s; it edits dynamic vehicles via pose editing and corrects poses frame-by-frame to approximate dynamics-consistent vertical displacement and pitch responses. Experiments on the Waymo dataset show that RoVES provides practical efficiency and competitive visual consistency for physics-aware driving scene generation.
-
-3D 高斯溅射 (3DGS) 在自动驾驶仿真和数据生成方面显示出巨大潜力，可实现逼真的重建和灵活的场景操作。然而，现有的 3DGS 场景编辑方法对道路几何编辑（例如，插入减速带或下沉道路）的支持有限，并且通常不会将此类编辑与合理的车路交互动力学结合起来。这种编辑对于在极端驾驶场景下生成训练数据或评估这些道路不规则情况下的系统可靠性至关重要。此外，许多基于优化的方法需要几分钟的每次编辑细化，而现有的有效替代方法主要关注外观级或对象级操作，而不是物理感知的道路不规则编辑。为了解决这些限制，我们提出了 RoVES，一种道路和车辆编辑系统，用于在驾驶场景中进行物理感知 3D 高斯编辑。 RoVES 支持单图像驱动的道路几何形状插入，并将编辑后的道路轮廓与 4-DOF 半车车辆动力学模型相结合，以实现垂直位移和俯仰方面的物理感知车辆姿态校正。 RoVES 将道路元素插入一次性、免优化的管道（1.84 秒）中，整个管道（包括颜色传输和基于车辆动力学的姿态校正）在 6.24 秒内完成；它通过姿势编辑来编辑动态车辆，并逐帧校正姿势以近似动态一致的垂直位移和俯仰响应。 Waymo 数据集上的实验表明，RoVES 为物理感知驾驶场景生成提供了实用效率和有竞争力的视觉一致性。
-
-</details>
-
----
-
-## 7. Depth Peeling for High-Fidelity Gaussian-Enhanced Surfel Rendering / 高保真高斯增强面元渲染的深度剥离
+## 11. Depth Peeling for High-Fidelity Gaussian-Enhanced Surfel Rendering / 高保真高斯增强面元渲染的深度剥离
 
 **Date**: 2026-05-25 | **arXiv**: [2605.25345v1](http://arxiv.org/abs/2605.25345v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.25345v1)
 
@@ -143,55 +205,23 @@ NeRF 和 3D 高斯溅射 (3DGS) 显着推进了新颖的视图合成，它们需
 
 ---
 
-## 8. Recursive Class Connectivity Classification (R3C) Applied to Binary Image Segmentation for Improved Infant Fingerprint Enhancement / 递归类连接分类 (R3C) 应用于二值图像分割以改进婴儿指纹增强
+## 12. AssetGen: Deployable 3D Asset Generation at Interactive Speed / AssetGen：以交互速度生成可部署的 3D 资产
 
-**Date**: 2026-05-25 | **arXiv**: [2605.25307v1](http://arxiv.org/abs/2605.25307v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.25307v1)
+**Date**: 2026-05-22 | **arXiv**: [2605.26137v1](http://arxiv.org/abs/2605.26137v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.26137v1)
 
-**Categories**: cs.CV
+**Categories**: cs.GR, cs.AI, cs.CV
 
 <details><summary><b>Abstract / 摘要</b></summary>
 
-Image enhancement plays a crucial role in infant fingerprint matching, as child-specific characteristics such as smaller finger dimensions and thinner ridge structures often degrade image quality during acquisition. To address these limitations, enrollment typically depends on specialized highresolution scanners, which most existing enhancement methods are not designed to support. Consequently, identification rates for children remain significantly lower than those achieved with adult fingerprints. This study introduces Recursive Class Connectivity Classification (R3C), a novel framework that iteratively refines binary segmentation outputs from existing enhancement methods by extending ridge structures. R3C does not require modifications to the underlying classifier and operates without training data, which is not currently available for infant fingerprints. Instead, the method improves segmentation by repeatedly feeding the classified image back into the classification process, while combining each intermediate segmentation with the original input image. Experiments conducted on three fingerprint datasets using four different enhancement classifiers show that R3C can increase the True Acceptance Rate (TAR) by up to 4% for children and over 40% for newborns, compared to using the enhancement methods alone. A qualitative analysis further demonstrates that R3C reconnects fragmented ridge patterns, improving the visual quality of segmentation. Because it functions independently of the enhancement method used, R3C provides a flexible and broadly applicable solution for improving binary segmentation.
+While 3D generation is progressing rapidly, recent work has often focused on obtaining high-resolution assets, leaving user experience and deployability as afterthoughts. We present AssetGen, a 3D generator that focuses instead on these two aspects. Given one reference image, in 30 seconds it produces a high-quality mesh with baked normals, a color texture, and a controlled polygon budget suitable for real-time rendering, including mobile use cases. The AssetGen Flash variant further reduces latency to 14 seconds for interactive and agentic creation loops. Our model generates the object geometry with a coarse-to-refine VecSet framework, which implements mesh simplification, cleaning, and normal baking on the GPU, and a fast parallel UV unwrapping. It then generates textures in a multi-view fashion, followed by backprojection and 3D inpainting. Model distillation, kernel optimization, and pipeline parallelization are co-designed to accelerate the system end-to-end. We introduce numerous automated and blind human evaluations and demonstrate competitive visual quality against leading commercial solutions in 30 seconds and preview-quality results in less than 15 seconds. The final result is a system that supports AI-assisted, deployable 3D content creation in interactive workflows.
 
-图像增强在婴儿指纹匹配中起着至关重要的作用，因为较小的手指尺寸和较薄的脊结构等儿童特定特征通常会在采集过程中降低图像质量。为了解决这些限制，注册通常依赖于专门的高分辨率扫描仪，而大多数现有的增强方法并不支持这种扫描仪。因此，儿童的识别率仍然明显低于成人指纹的识别率。本研究引入了递归类连通性分类（R3C），这是一种新颖的框架，可通过扩展脊结构来迭代地细化现有增强方法的二进制分割输出。 R3C 不需要修改底层分类器，并且无需训练数据即可运行，而目前婴儿指纹还无法使用训练数据。相反，该方法通过将分类图像重复反馈回分类过程，同时将每个中间分割与原始输入图像相结合来改进分割。使用四种不同的增强分类器对三个指纹数据集进行的实验表明，与单独使用增强方法相比，R3C 可以将儿童的真实接受率 (TAR) 提高多达 4%，将新生儿的真实接受率提高 40% 以上。定性分析进一步表明，R3C 重新连接了碎片化的脊线图案，提高了分割的视觉质量。由于其功能独立于所使用的增强方法，R3C 为改进二进制分段提供了灵活且广泛适用的解决方案。
+虽然 3D 生成正在迅速发展，但最近的工作往往集中于获取高分辨率资产，而将用户体验和可部署性放在了事后的考虑上。我们推出了 AssetGen，一个专注于这两个方面的 3D 生成器。给定一张参考图像，它会在 30 秒内生成一个高质量的网格，其中包含烘焙法线、颜色纹理和适合实时渲染（包括移动用例）的受控多边形预算。 AssetGen Flash 变体进一步将交互式和代理创建循环的延迟减少至 14 秒。我们的模型使用从粗到细的 VecSet 框架生成对象几何形状，该框架在 GPU 上实现网格简化、清理和正常烘焙，以及快速并行 UV 展开。然后，它以多视图方式生成纹理，然后进行反投影和 3D 修复。模型蒸馏、内核优化和管道并行化共同设计，以加速系统端到端。我们引入了大量自动化和盲人评估，并在 30 秒内展示了与领先的商业解决方案相比具有竞争力的视觉质量，并在 15 秒内展示了预览质量的结果。最终结果是一个支持在交互式工作流程中进行人工智能辅助、可部署的 3D 内容创建的系统。
 
 </details>
 
 ---
 
-## 9. DeltaCam: Differential Intrinsic Camera Modeling for Video Generation / DeltaCam：用于视频生成的差分本征相机建模
-
-**Date**: 2026-05-24 | **arXiv**: [2605.25266v1](http://arxiv.org/abs/2605.25266v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.25266v1)
-
-**Categories**: cs.CV
-
-<details><summary><b>Abstract / 摘要</b></summary>
-
-Incorporating camera intrinsics into video generation models offers a principled way to control not only scene dynamics but also the imaging process that governs visual appearance. Prior work has primarily focused on extrinsic control, such as camera pose and motion, while treating intrinsic camera parameters as implicit or fixed. A key bottleneck is the lack of large-scale video datasets with accurate and diverse temporally varying camera metadata, which makes learning absolute camera parameterizations difficult. As a result, current models struggle to incorporate photographic camera behavior, including depth-of-field transitions, exposure variations, lens distortions, and color processing, in a controllable and temporally consistent manner. We introduce DeltaCam, a video diffusion framework that models camera behavior through $Δ$-parameterized neural camera adaptors, operating on relative changes in camera motion and intrinsics instead of absolute states. By learning this differential formulation from synthetic video data, we mitigate reliance on precise real-world camera labels and enable smooth, consistent control over imaging factors such as focal length, aperture, ISO, color temperature, and lens distortion. We extend this framework to real-world footage through two mechanisms: finetuning the controls on real image-metadata pairs for precise shot matching, and extracting disentangled embeddings for implicit video-to-video style transfer without requiring explicit camera parameters. By effectively separating scene content from intrinsic imaging behavior, DeltaCam enables camera-consistent video generation and editing operations that are difficult to achieve with existing models. Ultimately, our results establish a practical and scalable approach for bridging synthetic control and real-world photographic emulation.
-
-将相机内在功能纳入视频生成模型提供了一种原则性的方法，不仅可以控制场景动态，还可以控制控制视觉外观的成像过程。之前的工作主要集中在外部控制，例如相机姿势和运动，同时将内部相机参数视为隐式或固定的。一个关键瓶颈是缺乏具有准确且多样化的随时间变化的相机元数据的大规模视频数据集，这使得学习绝对相机参数化变得困难。因此，当前的模型很难以可控且时间一致的方式整合摄影机行为，包括景深过渡、曝光变化、镜头畸变和颜色处理。我们引入了 DeltaCam，这是一种视频扩散框架，它通过 $Δ$ 参数化神经相机适配器对相机行为进行建模，对相机运动和内在函数的相对变化而不是绝对状态进行操作。通过从合成视频数据中学习这种微分公式，我们减轻了对精确的现实世界相机标签的依赖，并能够对焦距、光圈、ISO、色温和镜头畸变等成像因素进行平滑、一致的控制。我们通过两种机制将该框架扩展到现实世界的镜头：微调真实图像元数据对的控制以实现精确的镜头匹配，以及提取解缠结的嵌入以实现隐式视频到视频风格的传输，而不需要显式的相机参数。通过有效地将场景内容与固有成像行为分离，DeltaCam 能够实现相机一致的视频生成和编辑操作，而这是现有模型难以实现的。最终，我们的结果建立了一种实用且可扩展的方法，用于桥接合成控制和现实世界的摄影模拟。
-
-</details>
-
----
-
-## 10. Injecting Image Guidance into Text-Conditioned Diffusion Models at Inference / 在推理时将图像引导注入文本条件扩散模型
-
-**Date**: 2026-05-24 | **arXiv**: [2605.25191v1](http://arxiv.org/abs/2605.25191v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.25191v1)
-
-**Categories**: cs.CV
-
-<details><summary><b>Abstract / 摘要</b></summary>
-
-Text-to-image diffusion models like Stable Diffusion generate high-quality images from text, but lack a way to inject visual guidance (e.g. sketches, styles) at inference without retraining. Existing methods either require computationally expensive fine-tuning or rely on style transfer techniques that risk semantic misalignment with textual prompts. We introduce Visual Concept Fusion (VCF), the first method offering dual conditioning on both an image and text prompt at inference time without any concept-specific training. VCF enables visual concept injection into Stable Diffusion by aligning CLIP image features with the text embedding space. VCF consists of three components: (1) a lightweight aligner that maps image tokens to the text embedding manifold using InfoNCE and cross-attention reconstruction losses, (2) a fusion strategy that preserves both textual and visual semantics, and (3) an optional Prompt-Noise Optimization (PNO) module for test-time refinement. Our experiments demonstrate that VCF successfully transfers visual attributes including style, composition, and color palette from reference images while maintaining prompt adherence. Quantitative results show a trade-off between text alignment (CLIP score) and visual correspondence (LPIPS), with VCF outperforming baselines in reference fidelity.
-
-像稳定扩散这样的文本到图像扩散模型可以从文本生成高质量图像，但缺乏一种在推理时注入视觉指导（例如草图、样式）而无需重新训练的方法。现有方法要么需要计算量大的微调，要么依赖风格转换技术，这些技术可能会导致语义与文本提示不一致。我们引入了视觉概念融合（VCF），这是第一种在推理时对图像和文本提示提供双重调节的方法，无需任何特定于概念的训练。 VCF 通过将 CLIP 图像特征与文本嵌入空间对齐，实现将视觉概念注入到稳定扩散中。 VCF 由三个组件组成：(1) 一个轻量级对齐器，使用 InfoNCE 和交叉注意重建损失将图像标记映射到文本嵌入流形；(2) 保留文本和视觉语义的融合策略；(3) 用于测试时细化的可选提示噪声优化 (PNO) 模块。我们的实验表明，VCF 成功地从参考图像中转移了视觉属性，包括风格、构图和调色板，同时保持了及时的依从性。定量结果显示文本对齐（CLIP 分数）和视觉对应（LPIPS）之间存在权衡，VCF 在参考保真度方面优于基线。
-
-</details>
-
----
-
-## 11. ROI Extraction in Thermographic Breast Images Using Genetic Algorithms / 使用遗传算法提取热成像乳腺图像中的 ROI
+## 13. ROI Extraction in Thermographic Breast Images Using Genetic Algorithms / 使用遗传算法提取热成像乳腺图像中的 ROI
 
 **Date**: 2026-05-21 | **arXiv**: [2605.22899v1](http://arxiv.org/abs/2605.22899v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.22899v1)
 
@@ -207,7 +237,7 @@ This work proposes the use of Genetic Algorithms (GA) to identify the area of th
 
 ---
 
-## 12. Time-varying rPPG signal separation via block-sparse signal model / 通过块稀疏信号模型进行时变 rPPG 信号分离
+## 14. Time-varying rPPG signal separation via block-sparse signal model / 通过块稀疏信号模型进行时变 rPPG 信号分离
 
 **Date**: 2026-05-21 | **arXiv**: [2605.22425v1](http://arxiv.org/abs/2605.22425v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.22425v1)
 
@@ -223,7 +253,7 @@ Remote photoplethysmography (rPPG) enables non-contact measurement of cardiac pu
 
 ---
 
-## 13. Probability-Conserving Flow Guidance / 概率守恒流程指导
+## 15. Probability-Conserving Flow Guidance / 概率守恒流程指导
 
 **Date**: 2026-05-19 | **arXiv**: [2605.20079v1](http://arxiv.org/abs/2605.20079v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.20079v1)
 
@@ -239,7 +269,7 @@ Diffusion and flow-based generative models dominate visual synthesis, with guida
 
 ---
 
-## 14. GLUT: 3D Gaussian Lookup Table for Continuous Color Transformation / GLUT：用于连续颜色变换的 3D 高斯查找表
+## 16. GLUT: 3D Gaussian Lookup Table for Continuous Color Transformation / GLUT：用于连续颜色变换的 3D 高斯查找表
 
 **Date**: 2026-05-19 | **arXiv**: [2605.19889v1](http://arxiv.org/abs/2605.19889v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.19889v1)
 
@@ -255,7 +285,7 @@ Diffusion and flow-based generative models dominate visual synthesis, with guida
 
 ---
 
-## 15. 3D Skew Gaussian Splatting with Any Camera Trajectory Visualization Engine / 使用任何相机轨迹可视化引擎进行 3D 倾斜高斯泼溅
+## 17. 3D Skew Gaussian Splatting with Any Camera Trajectory Visualization Engine / 使用任何相机轨迹可视化引擎进行 3D 倾斜高斯泼溅
 
 **Date**: 2026-05-18 | **arXiv**: [2605.18334v1](http://arxiv.org/abs/2605.18334v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.18334v1)
 
@@ -271,7 +301,7 @@ While 3D Gaussian Splatting (3DGS) has revolutionized real-time photorealistic v
 
 ---
 
-## 16. LUMEN: Low-light Unified Multi-stage Enhancement Network using depth-guided flash, clustering, and attention-based Transformers / LUMEN：使用深度引导闪存、集群和基于注意力的 Transformer 的低光统一多级增强网络
+## 18. LUMEN: Low-light Unified Multi-stage Enhancement Network using depth-guided flash, clustering, and attention-based Transformers / LUMEN：使用深度引导闪存、集群和基于注意力的 Transformer 的低光统一多级增强网络
 
 **Date**: 2026-05-18 | **arXiv**: [2605.17893v1](http://arxiv.org/abs/2605.17893v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.17893v1)
 
@@ -287,7 +317,7 @@ Low-light image enhancement remains a challenging problem due to severe noise, c
 
 ---
 
-## 17. An Underwater Dehazing Network with Implicit Transmission Estimation / 具有隐式传输估计的水下除雾网络
+## 19. An Underwater Dehazing Network with Implicit Transmission Estimation / 具有隐式传输估计的水下除雾网络
 
 **Date**: 2026-05-13 | **arXiv**: [2605.13720v1](http://arxiv.org/abs/2605.13720v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.13720v1)
 
@@ -303,7 +333,7 @@ Underwater images suffer from wavelength-dependent light absorption and scatteri
 
 ---
 
-## 18. Physics-Grounded Adversarial Stain Augmentation with Calibrated Coverage Guarantees / 基于物理的对抗性染色增强和校准覆盖保证
+## 20. Physics-Grounded Adversarial Stain Augmentation with Calibrated Coverage Guarantees / 基于物理的对抗性染色增强和校准覆盖保证
 
 **Date**: 2026-05-12 | **arXiv**: [2605.13889v1](http://arxiv.org/abs/2605.13889v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.13889v1)
 
@@ -319,7 +349,7 @@ Stain variation across hospitals degrades histopathology models at deployment. E
 
 ---
 
-## 19. Are Compact Rationales Free? Measuring Tile Selection Headroom in Frozen WSI-MIL / 紧凑基本原理是免费的吗？测量冻结 WSI-MIL 中的瓷砖选择余量
+## 21. Are Compact Rationales Free? Measuring Tile Selection Headroom in Frozen WSI-MIL / 紧凑基本原理是免费的吗？测量冻结 WSI-MIL 中的瓷砖选择余量
 
 **Date**: 2026-05-12 | **arXiv**: [2605.12575v1](http://arxiv.org/abs/2605.12575v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.12575v1)
 
@@ -335,7 +365,7 @@ Whole-slide image (WSI) multiple instance learning (MIL) classifiers can achieve
 
 ---
 
-## 20. ALGOGEN: Tool-Generated Verifiable Traces for Reliable Algorithm Visualization / ALGOGEN：工具生成的可验证跟踪，用于可靠的算法可视化
+## 22. ALGOGEN: Tool-Generated Verifiable Traces for Reliable Algorithm Visualization / ALGOGEN：工具生成的可验证跟踪，用于可靠的算法可视化
 
 **Date**: 2026-05-12 | **arXiv**: [2605.12159v1](http://arxiv.org/abs/2605.12159v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.12159v1)
 
@@ -345,13 +375,13 @@ Whole-slide image (WSI) multiple instance learning (MIL) classifiers can achieve
 
 Algorithm Visualization (AV) helps students build mental models by animating algorithm execution states. Recent LLM-based systems such as CODE2VIDEO generate AV videos in an end-to-end manner. However, this paradigm requires the system to simultaneously simulate algorithm flow and satisfy video rendering constraints, such as element layout and color schemes. This complex task induces LLM hallucinations, resulting in reduced execution success rates, element overlap, and inter-frame inconsistencies.   To address these challenges, we propose ALGOGEN, a novel paradigm that decouples algorithm execution from rendering. We first introduce Visualization Trace Algebra (VTA), a monoid over algorithm visual states and operations. The LLM then generates a Python tracker that simulates algorithm flow and outputs VTA-JSON traces, a JSON encoding of VTA. For rendering, we define a Rendering Style Language (RSL) to templatize algorithm layouts. A deterministic renderer then compiles algorithm traces with RSL into Manim, LaTeX/TikZ, or Three.js outputs.   Evaluated on a LeetCode AV benchmark of 200 tasks, ALGOGEN achieves an average success rate improvement of 17.3% compared to end-to-end methods, with 99.8% versus 82.5%. These results demonstrate that our decoupling paradigm effectively mitigates LLM hallucinations in complex AV tasks, providing a more reliable solution for automated generation of high-quality algorithm visualizations. Demo videos and code are available in the project repository.
 
-算法可视化 (AV) 通过动画算法执行状态帮助学生构建心理模型。最近基于 LLM 的系统（例如 CODE2VIDEO）以端到端方式生成 AV 视频。然而，这种范例要求系统同时模拟算法流程并满足视频渲染约束，例如元素布局和配色方案。这项复杂的任务会引发 LLM 幻觉，导致执行成功率降低、元素重叠和帧间不一致。   为了应对这些挑战，我们提出了 ALGOGEN，一种将算法执行与渲染分离的新颖范例。我们首先介绍可视化追踪代数（VTA），这是一种算法视觉状态和操作的幺半群。然后，LLM 生成一个 Python 跟踪器，用于模拟算法流程并输出 VTA-JSON 跟踪（VTA 的 JSON 编码）。对于渲染，我们定义了渲染风格语言（RSL）来模板化算法布局。然后，确定性渲染器使用 RSL 将算法跟踪编译为 Manim、LaTeX/TikZ 或 Three.js 输出。   在 200 个任务的 LeetCode AV 基准上进行评估，与端到端方法相比，ALGOGEN 的平均成功率提高了 17.3%，分别为 99.8% 和 82.5%。这些结果表明，我们的解耦范式有效地减轻了复杂 AV 任务中的 LLM 幻觉，为自动生成高质量算法可视化提供了更可靠的解决方案。项目存储库中提供了演示视频和代码。
+算法可视化 (AV) 通过动画算法执行状态帮助学生构建心理模型。最近基于 LLM 的系统（例如 CODE2VIDEO）以端到端方式生成 AV 视频。然而，这种范例要求系统同时模拟算法流程并满足视频渲染约束，例如元素布局和配色方案。这项复杂的任务会引发 LLM 幻觉，导致执行成功率降低、元素重叠和帧间不一致。   为了应对这些挑战，我们提出了 ALGOGEN，这是一种将算法执行与渲染分离的新颖范例。我们首先介绍可视化追踪代数（VTA），这是一种算法视觉状态和操作的幺半群。然后，LLM 生成一个 Python 跟踪器，用于模拟算法流程并输出 VTA-JSON 跟踪（VTA 的 JSON 编码）。对于渲染，我们定义了渲染风格语言（RSL）来模板化算法布局。然后，确定性渲染器使用 RSL 将算法跟踪编译为 Manim、LaTeX/TikZ 或 Three.js 输出。   在 200 个任务的 LeetCode AV 基准上进行评估，与端到端方法相比，ALGOGEN 的平均成功率提高了 17.3%，分别为 99.8% 和 82.5%。这些结果表明，我们的解耦范式有效地减轻了复杂 AV 任务中的 LLM 幻觉，为自动生成高质量算法可视化提供了更可靠的解决方案。项目存储库中提供了演示视频和代码。
 
 </details>
 
 ---
 
-## 21. Kelvin v1.0: A Neural Pre-Encoder for H.264: A standards-compliant learned preprocessor with -27.62% BD-VMAF on UVG / Kelvin v1.0：H.264 的神经预编码器：符合标准的学习预处理器，UVG 上的 BD-VMAF 为 -27.62%
+## 23. Kelvin v1.0: A Neural Pre-Encoder for H.264: A standards-compliant learned preprocessor with -27.62% BD-VMAF on UVG / Kelvin v1.0 ： H.264的神经预编码器： UVG上具有-27.62% BD-VMAF的符合标准的学习预处理器
 
 **Date**: 2026-05-10 | **arXiv**: [2605.16376v1](http://arxiv.org/abs/2605.16376v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.16376v1)
 
@@ -361,13 +391,13 @@ Algorithm Visualization (AV) helps students build mental models by animating alg
 
 Kelvin is a lightweight learned pre-encoder that sits in front of an unmodified libx264 encoder. It applies content-adaptive pixel adjustments, bounded at +/-1/255 per channel, so that the encoder allocates bits where they matter most perceptually, while emitting a standard H.264 bitstream compatible with every existing decoder, player, and CDN. On the seven-sequence 1080p UVG benchmark, Kelvin v1.0 achieves a mean BD-VMAF of -27.62% (7 of 7 wins) and BD-VMAF-NEG of -5.18% (6 of 7 wins) relative to baseline libx264 at preset medium. On the 30-sequence MCL-JCV public set (28 unseen by training), the same checkpoint wins on 28 of 30 clips by BD-VMAF; with the two diagnosable failures removed the mean is -27.70% BD-VMAF and -5.37% BD-VMAF-NEG, consistent with UVG to within one percentage point. A central engineering challenge is the non-differentiability of H.264: we describe a hybrid codec proxy that combines a calibrated differentiable rate estimator (Spearman rho = 0.986 vs. real libx264 bits-per-pixel) with a U-Net distortion proxy trained on real encoder outputs. We publish full per-sequence rate-distortion data, a named failure-mode taxonomy on MCL-JCV (rate-floor violation, distribution shift, metric saturation), a five-baseline sanity panel (hqdn3d, unsharp, -tune psnr, -tune ssim, x265 medium), and honest positioning: x265 medium beats Kelvin on every metric on the same corpus. Kelvin is therefore designed for workloads where remaining on H.264 is a constraint rather than a choice.
 
-Kelvin 是一个轻量级学习预编码器，位于未修改的 libx264 编码器前面。它应用内容自适应像素调整，每个通道的范围为 +/-1/255，以便编码器在感知最重要的位置分配比特，同时发出与每个现有解码器、播放器和 CDN 兼容的标准 H.264 比特流。在七序列 1080p UVG 基准测试中，相对于预设介质下的基线 libx264，Kelvin v1.0 的平均 BD-VMAF 为 -27.62%（7 胜中的 7 胜），BD-VMAF-NEG 为 -5.18%（7 胜中的 6 胜）。在 30 序列 MCL-JCV 公共集（训练中未看到 28 个）上，同一检查点在 BD-VMAF 的 30 个片段中的 28 个中获胜；除去两个可诊断故障后，平均值为 -27.70% BD-VMAF 和 -5.37% BD-VMAF-NEG，与 UVG 一致，误差在 1 个百分点以内。一个核心的工程挑战是 H.264 的不可微性：我们描述了一种混合编解码器代理，它将校准的可微速率估计器（Spearman rho = 0.986 对比真实的 libx264 位/像素）与在真实编码器输出上训练的 U-Net 失真代理相结合。我们发布了完整的每序列率失真数据、MCL-JCV 上的命名故障模式分类法（速率下限违规、分布偏移、指标饱和度）、五基线健全性面板（hqdn3d、unsharp、-tune psnr、-tune ssim、x265medium）以及诚实定位：x265medium 在同一语料库上的每个指标上都击败了 Kelvin。因此，Kelvin 专为保留 H.264 是一种限制而不是一种选择的工作负载而设计。
+Kelvin is a lightweight learned pre-encoder that sits in front of an unmodified libx264 encoder.它应用内容自适应像素调整，每个通道的范围为 +/-1/255，以便编码器在感知最重要的位置分配比特，同时发出与每个现有解码器、播放器和 CDN 兼容的标准 H.264 比特流。在七序列 1080p UVG 基准测试中，相对于预设介质下的基线 libx264，Kelvin v1.0 的平均 BD-VMAF 为 -27.62%（7 胜中的 7 胜），BD-VMAF-NEG 为 -5.18%（7 胜中的 6 胜）。 On the 30-sequence MCL-JCV public set (28 unseen by training), the same checkpoint wins on 28 of 30 clips by BD-VMAF;除去两个可诊断故障后，平均值为 -27.70% BD-VMAF 和 -5.37% BD-VMAF-NEG，与 UVG 一致，误差在 1 个百分点以内。一个核心的工程挑战是 H.264 的不可微性：我们描述了一种混合编解码器代理，它将校准的可微速率估计器（Spearman rho = 0.986 对比真实的 libx264 位/像素）与在真实编码器输出上训练的 U-Net 失真代理相结合。我们发布了完整的每序列率失真数据、MCL-JCV 上的命名故障模式分类法（速率下限违规、分布偏移、指标饱和度）、五基线健全性面板（hqdn3d、unsharp、-tune psnr、-tune ssim、x265medium）以及诚实定位：x265medium 在同一语料库上的每个指标上都击败了 Kelvin。 Kelvin is therefore designed for workloads where remaining on H.264 is a constraint rather than a choice.
 
 </details>
 
 ---
 
-## 22. CAGS: Color-Adaptive Volumetric Video Streaming with Dynamic 3D Gaussian Splatting / CAGS：具有动态 3D 高斯分布的颜色自适应体积视频流
+## 24. CAGS: Color-Adaptive Volumetric Video Streaming with Dynamic 3D Gaussian Splatting / CAGS：具有动态 3D 高斯分布的颜色自适应体积视频流
 
 **Date**: 2026-05-10 | **arXiv**: [2605.09279v1](http://arxiv.org/abs/2605.09279v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.09279v1)
 
@@ -383,7 +413,7 @@ Volumetric video (VV) streaming enables real-time, immersive access to remote 3D
 
 ---
 
-## 23. Relightable Gaussian Splatting for Virtual Production Using Image-Based Illumination / 使用基于图像的照明进行虚拟生产的可重新照明高斯溅射
+## 25. Relightable Gaussian Splatting for Virtual Production Using Image-Based Illumination / 使用基于图像的照明进行虚拟生产的可重新照明高斯溅射
 
 **Date**: 2026-05-09 | **arXiv**: [2605.09024v1](http://arxiv.org/abs/2605.09024v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.09024v1)
 
@@ -399,7 +429,7 @@ Virtual production (VP) use LED walls to provide both background imagery and ima
 
 ---
 
-## 24. Stage Light is Sequence$^2$: Multi-Light Control via Imitation Learning / 舞台灯光是序列$^2$：通过模仿学习进行多灯控制
+## 26. Stage Light is Sequence$^2$: Multi-Light Control via Imitation Learning / 舞台灯光是序列$^2$：通过模仿学习进行多灯控制
 
 **Date**: 2026-05-05 | **arXiv**: [2605.03660v1](http://arxiv.org/abs/2605.03660v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.03660v1)
 
@@ -417,7 +447,7 @@ Music-inspired Automatic Stage Lighting Control (ASLC) has gained increasing att
 
 ---
 
-## 25. EMOVIS: Emotion-Optimized Image Processing / EMOVIS：情感优化的图像处理
+## 27. EMOVIS: Emotion-Optimized Image Processing / EMOVIS：情感优化的图像处理
 
 **Date**: 2026-05-04 | **arXiv**: [2605.03131v1](http://arxiv.org/abs/2605.03131v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.03131v1)
 
@@ -433,7 +463,7 @@ In cinematography, visual attributes such as color grading, contrast, and bright
 
 ---
 
-## 26. Development and Validation of an Integrated LiDAR-Camera System for Real-Time Monitoring of Underground Longwall Operations / 用于实时监控地下长壁作业的集成激光雷达相机系统的开发和验证
+## 28. Development and Validation of an Integrated LiDAR-Camera System for Real-Time Monitoring of Underground Longwall Operations / 用于实时监控地下长壁作业的集成激光雷达相机系统的开发和验证
 
 **Date**: 2026-05-04 | **arXiv**: [2605.02516v1](http://arxiv.org/abs/2605.02516v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.02516v1)
 
@@ -449,7 +479,7 @@ Real-time spatial monitoring in underground longwall operations is challenging d
 
 ---
 
-## 27. Colorful-Noise: Training-Free Low-Frequency Noise Manipulation for Color-Based Conditional Image Generation / 彩色噪声：用于基于颜色的条件图像生成的免训练低频噪声处理
+## 29. Colorful-Noise: Training-Free Low-Frequency Noise Manipulation for Color-Based Conditional Image Generation / 彩色噪声：用于基于颜色的条件图像生成的免训练低频噪声处理
 
 **Date**: 2026-05-01 | **arXiv**: [2605.00548v2](http://arxiv.org/abs/2605.00548v2) | **PDF**: [Link](http://arxiv.org/pdf/2605.00548v2)
 
@@ -465,7 +495,7 @@ Text-to-image diffusion models generate images by gradually converting white Gau
 
 ---
 
-## 28. FASH-iCNN: Making Editorial Fashion Identity Inspectable Through Multimodal CNN Probing / FASH-iCNN：通过多模态 CNN 探测使编辑时尚身份可检查
+## 30. FASH-iCNN: Making Editorial Fashion Identity Inspectable Through Multimodal CNN Probing / FASH-iCNN：通过多模态 CNN 探测使编辑时尚身份可检查
 
 **Date**: 2026-04-29 | **arXiv**: [2604.26186v1](http://arxiv.org/abs/2604.26186v1) | **PDF**: [Link](http://arxiv.org/pdf/2604.26186v1)
 
