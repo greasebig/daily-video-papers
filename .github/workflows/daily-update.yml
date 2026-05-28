@@ -166,7 +166,7 @@ jobs:
         env:
           TOPIC_NAME: Tone & Color
           OUTPUT_DIR: tone-color
-          REBUILD: "1"
+          REBUILD: "0"
           DAYS_TO_CHECK: "30"
           CATEGORIES: cs.CV,cs.AI,cs.MM,cs.GR,eess.IV
           KEYWORDS: tone mapping,color grading,color correction,cinematic color,color theory,color harmony,color palette,color science,color space,color enhancement,color transfer,color constancy,color perception,visual aesthetics,image enhancement,tone adjustment,brightness contrast,saturation,hue,color cast,white balance,color cast removal
