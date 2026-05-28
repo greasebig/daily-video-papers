@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-05-28](papers/2026-05-28.md) - 7 papers
 - [2026-05-27](papers/2026-05-27.md) - 5 papers
 - [2026-05-23](papers/2026-05-23.md) - 3 papers
 - [2026-05-22](papers/2026-05-22.md) - 4 papers
@@ -77,6 +78,130 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-05-28 (7 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-05-28
+
+**Paper Count**: 7
+
+---
+
+## 1. Affective Music Recommendation: A Rollout-Based World Model for Offline Preference Optimization / 情感音乐推荐：基于推出的离线偏好优化世界模型
+
+**Date**: 2026-05-27 | **arXiv**: [2605.28810v1](http://arxiv.org/abs/2605.28810v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.28810v1)
+
+**Categories**: cs.LG, cs.IR, cs.SD
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Functional music applications, from consumer focus and sleep aids to clinical interventions, share a distinctive recommendation problem: success is defined by the listener's affective state, but online experimentation on emotion is ethically constrained, particularly for clinical populations who cannot reliably skip a song or report distress. We describe AMRS, the Affective Music Recommendation System deployed on LUCID's health-and-wellness platforms, which serve clinical users (primarily older adults with neurocognitive conditions) and consumer-wellness users across energize, focus, calm, and sleep modes. AMRS is built around a rollout-based world model: a causal transformer trained on logged listening data to jointly predict engagement, binary rating, and self-reported valence and arousal. The world model serves both as an in-silico simulator for offline policy training and as a stress-testing tool before deployment. A recommender policy initialized by behaviour cloning is fine-tuned offline with Direct Preference Optimization (DPO) against a configurable multi-objective utility function. Under a strict cold-start protocol, the world model predicts both behavioural and affective signals with usable fidelity; DPO improves predicted valence and arousal over the cloned baseline while maintaining a similar diversity profile and avoiding the distributional collapse produced by greedy optimization. We position the work as an early deployed validation of a methodology for affective recommendation when online experimentation is ethically untenable.
+
+功能性音乐应用程序，从消费者关注和睡眠辅助到临床干预，都存在一个独特的推荐问题：成功是由听众的情感状态定义的，但关于情感的在线实验受到道德限制，特别是对于无法可靠地跳过歌曲或报告痛苦的临床人群。我们描述了 AMRS，即部署在 LUCID 健康和保健平台上的情感音乐推荐系统，该系统为临床用户（主要是患有神经认知疾病的老年人）和消费者健康用户提供活力、专注、平静和睡眠模式的服务。 AMRS 围绕基于推出的世界模型构建：一个因果变压器，根据记录的听力数据进行训练，以共同预测参与度、二元评级以及自我报告的效价和唤醒度。世界模型既可用作离线政策训练的计算机模拟器，也可用作部署前的压力测试工具。通过行为克隆初始化的推荐策略可以通过直接偏好优化（DPO）针对可配置的多目标效用函数进行离线微调。在严格的冷启动协议下，世界模型以可用的保真度预测行为和情感信号； DPO 提高了克隆基线上的预测效价和唤醒度，同时保持相似的多样性概况并避免贪婪优化产生的分布崩溃。我们将这项工作定位为当在线实验在道德上站不住脚时对情感推荐方法的早期部署验证。
+
+</details>
+
+---
+
+## 2. LEIA: Learned Environment for Interactive Architected Materials / LEIA：交互式建筑材料的学习环境
+
+**Date**: 2026-05-27 | **arXiv**: [2605.28368v1](http://arxiv.org/abs/2605.28368v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.28368v1)
+
+**Categories**: cs.LG, cond-mat.mtrl-sci, physics.app-ph
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models have enabled interactive exploration of game environments and robotic manipulation, but physical engineering remains beyond their reach: real materials exhibit nonlinear constitutive laws, carry history-dependent internal state, undergo inertial dynamics, and may possess hierarchical structures spanning multiple length scales. We present LEIA (Learned Environment for Interactive Architected materials), a world model that lets engineers apply boundary conditions step by step and observe the resulting deformation and stress fields in real time. LEIA handles large three-dimensional unstructured meshes and generates autoregressive responses to user-specified loading. We introduce MicroPlate, a benchmark of architected plates spanning two regimes of microstructure modeling: architected lattices that resolve microstructure explicitly through three-dimensional geometry, and a homogeneous plate where microstructural change is modeled implicitly through internal degrees of freedom. MicroPlate is used to assess LEIA alongside four baseline methods across both regimes. Finally, we demonstrate that LEIA enables efficient candidate generation and ranking for fast surrogate-guided search for de novo designs of architected materials, with stress-accurate candidate ranking validated by finite element ground truth.
+
+世界模型已经实现了游戏环境和机器人操作的交互式探索，但物理工程仍然超出了它们的能力范围：真实材料表现出非线性本构定律，具有依赖于历史的内部状态，经历惯性动力学，并且可能具有跨越多个长度尺度的分层结构。我们推出了 LEIA（交互式建筑材料学习环境），这是一个世界模型，可以让工程师逐步应用边界条件并实时观察由此产生的变形和应力场。 LEIA 处理大型三维非结构化网格，并对用户指定的载荷生成自回归响应。我们介绍了 MicroPlate，这是跨越两种微观结构建模体系的架构板的基准：通过三维几何形状显式解析微观结构的架构晶格，以及通过内部自由度隐式建模微观结构变化的均质板。 MicroPlate 用于评估 LEIA 以及两种体系中的四种基线方法。最后，我们证明 LEIA 能够实现高效的候选生成和排名，以快速替代引导搜索建筑材料的从头设计，并通过有限元基本事实验证应力准确的候选排名。
+
+</details>
+
+---
+
+## 3. Hybrid Neural World Models / 混合神经世界模型
+
+**Date**: 2026-05-27 | **arXiv**: [2605.28317v1](http://arxiv.org/abs/2605.28317v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.28317v1)
+
+**Categories**: cs.LG, cs.AI, math.NA, physics.comp-ph
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Neural surrogates promise large speedups over classical solvers for physical dynamics but fail silently at sharp dynamical events such as shocks, fronts, and contact. We present hybrid neural world models for physical dynamics: a recipe for training and deploying multi-horizon surrogates in physical state space, where a single network with continuous horizon conditioning is trained with direct supervision against textbook reference solvers to predict any future state at horizon T in one forward pass. Although no part of the training data, loss function, or architecture supervises discontinuity location, the trained surrogate encodes it implicitly, recoverable from its forward passes alone as a per-trajectory error map that concentrates on shocks, fronts, and contacts, and stays small elsewhere. The map is competitive with or better than standard label-free baselines including deep ensembles, learned error heads, gradient-magnitude indicators, and locally-adaptive conformal prediction, while using only a single trained network and requiring no calibration set or governing-equation knowledge. The recipe supports two operating points. Mode 1 runs the surrogate alone for maximum throughput, with same-hardware CPU speedups of 26x to 72x against textbook solvers on the PDE environments. Mode 2 uses the error map to gate a reference-solver fallback, deferring uncertain trajectories and roughly halving the surrogate's residual error at the default operating point. The recipe applies without modification across reaction-diffusion, compressible Euler, and rigid-body collision dynamics.
+
+神经代理在物理动力学方面有望比传统求解器大幅加速，但在冲击、锋面和接触等尖锐的动力学事件中却会悄无声息地失败。我们提出了物理动力学的混合神经世界模型：一种在物理状态空间中训练和部署多视野代理的方法，其中具有连续视野调节的单个网络在针对教科书参考解算器的直接监督下进行训练，以在一次前向传递中预测视野 T 上的任何未来状态。尽管训练数据、损失函数或架构没有任何部分监督不连续性位置，但经过训练的代理对其进行隐式编码，可以单独从其前向传递中恢复为每个轨迹误差图，该误差图集中于冲击、锋面和接触，并在其他地方保持较小。该地图与标准无标签基线竞争或优于标准无标签基线，包括深度集成、学习误差头、梯度幅度指示器和局部自适应共形预测，同时仅使用单个经过训练的网络，并且不需要校准集或控制方程知识。该配方支持两个操作点。模式 1 单独运行代理以实现最大吞吐量，与 PDE 环境中的教科书求解器相比，相同硬件 CPU 加速可达 26 倍到 72 倍。模式 2 使用误差图来门控参考解算器后备，推迟不确定的轨迹，并将默认操作点处的代理残差大致减半。该配方无需修改即可应用于反应扩散、可压缩欧拉和刚体碰撞动力学。
+
+</details>
+
+---
+
+## 4. Do LLMs Build World Models From Text? A Multilingual Diagnostic of Spatial Reasoning / 法学硕士会根据文本构建世界模型吗？空间推理的多语言诊断
+
+**Date**: 2026-05-27 | **arXiv**: [2605.28277v1](http://arxiv.org/abs/2605.28277v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.28277v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Whether large language models (LLMs) construct internal spatial world models from pure-text descriptions remains contested, and whether such capabilities transfer across languages has not been systematically studied. We introduce MentalMap, a multilingual diagnostic benchmark with a six-level capability hierarchy (L0-L5) spanning atomic spatial facts to generative world-graph construction, together with four diagnostic axes probing frame of reference, reading-direction bias, reasoning-effort allocation, and hallucination. MentalMap is built from 100 ProcTHOR household scenes, covers eight typologically diverse languages plus a structured-text control, and contains 39 task families across 1,950 evaluation cells. Evaluating thirteen LLMs across scales and model families, we identify a universal L3 reasoning cliff: no model retains even half of its L0 performance on viewpoint reasoning once baseline atomic accuracy exceeds 40%. The cliff persists across languages, scales, and prompting strategies, while structured-output failures and reasoning patterns vary substantially across models. Human evaluation under the identical pure-text protocol reproduces the same failure pattern, suggesting that the bottleneck arises from text-only working memory constraints rather than being specific to current LLM architectures. Our findings reframe pure-text spatial reasoning as a multi-axis world-modeling problem and motivate multimodal and scratchpad-augmented reasoning as future directions.
+
+大型语言模型（LLM）是否从纯文本描述构建内部空间世界模型仍然存在争议，并且这种能力是否跨语言转移尚未得到系统研究。我们介绍了 MentalMap，这是一种多语言诊断基准，具有六级能力层次结构（L0-L5），涵盖原子空间事实到生成世界图构建，以及四个诊断轴探测参考系、阅读方向偏差、推理努力分配和幻觉。 MentalMap 由 100 个 ProcTHOR 家庭场景构建，涵盖八种类型不同的语言以及结构化文本控件，并包含跨 1,950 个评估单元的 39 个任务系列。通过评估跨尺度和模型系列的 13 个 LLM，我们发现了一个普遍的 L3 推理悬崖：一旦基线原子精度超过 40%，没有任何模型能够在视点推理上保留其 L0 性能的一半。悬崖在不同的语言、规模和提示策略中持续存在，而结构化输出失败和推理模式在不同的模型中存在很大差异。在相同的纯文本协议下进行的人工评估会重现相同的失败模式，这表明瓶颈源于纯文本工作记忆限制，而不是特定于当前的 LLM 架构。我们的研究结果将纯文本空间推理重新定义为多轴世界建模问题，并推动多模态和便签本增强推理作为未来的方向。
+
+</details>
+
+---
+
+## 5. Chreode: A Cell World Model for One-Step Temporal Dynamics and Perturbation Prediction / Chreode：一种用于一步时间动力学和扰动预测的细胞世界模型
+
+**Date**: 2026-05-27 | **arXiv**: [2605.28111v1](http://arxiv.org/abs/2605.28111v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.28111v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Predicting how a cell will change its transcriptional state under a developmental signal or a genetic perturbation is the computational core of in-silico biology and the AI Virtual Cell program. Existing approaches either fit static control-to-treated maps that discard time, or solve multi-step ODE / Schrödinger-bridge problems on each dataset independently. We introduce Chreode, a one-step cell world model that predicts action-conditioned cell-state transitions through a structured residual transition operator. It shifts distributional evolution from inference time to training time, enabling single-pass generation while preserving a Waddington-inspired decomposition into downhill landscape flow, rotational in-tangent dynamics, and stochastic spread. The model is pretrained with a shared scVI encoder and a DiT-based dynamics backbone on a 2.4M-cell mouse embryonic atlas spanning 7 datasets. As a fine-tuning initialization, Chreode improves per-target Sinkhorn distance on Weinreb hematopoiesis and Veres islet differentiation over matched scratch models, PI-SDE, and PRESCIENT. As a transferable gene-state embedding for GEARS, the pretrained dynamics representation reduces shared-vocabulary DE20 mean squared error on Norman Perturb-seq from 0.2121 to 0.1858, a 12.4% relative improvement, without changing the GEARS training procedure. We interpret this transfer to perturbation prediction as evidence that pretrained developmental-trajectory dynamics encode differentiation primitives transferable to CRISPR-induced state shifts, since both involve cell-state transitions in a shared latent geometry. The pretrained backbone additionally produces zero-shot clonal fate scores on Weinreb that are competitive with strong dynamic-OT baselines.
+
+预测细胞在发育信号或遗传扰动下如何改变其转录状态是计算机生物学和人工智能虚拟细胞程序的计算核心。现有方法要么拟合静态控制到处理的映射（丢弃时间），要么独立解决每个数据集上的多步 ODE/薛定谔桥问题。我们引入 Chreode，这是一种一步细胞世界模型，它通过结构化残差转换算子预测动作条件的细胞状态转换。它将分布演化从推理时间转移到训练时间，实现单遍生成，同时保留 Waddington 启发的分解为下坡景观流、旋转切线动力学和随机传播。该模型使用共享 scVI 编码器和基于 DiT 的动力学主干在跨越 7 个数据集的 2.4M 细胞小鼠胚胎图谱上进行预训练。作为微调初始化，Chreode 相对于匹配的划痕模型、PI-SDE 和 PRESCIENT 改进了 Weinreb 造血和 Veres 胰岛分化上的每个目标 Sinkhorn 距离。作为 GEARS 的可转移基因状态嵌入，预训练的动力学表示将 Norman Perturb-seq 上的共享词汇 DE20 均方误差从 0.2121 降低到 0.1858，相对改进了 12.4%，而无需更改 GEARS 训练程序。我们将这种向扰动预测的转移解释为预训练的发育轨迹动力学编码可转移至 CRISPR 诱导的状态转变的分化原语的证据，因为两者都涉及共享潜在几何结构中的细胞状态转变。预训练的骨干网还可以在 Weinreb 上产生零样本克隆命运分数，这与强大的动态 OT 基线具有竞争力。
+
+</details>
+
+---
+
+## 6. Turning Video Models into Generalist Robot Policies / 将视频模型转变为通用机器人策略
+
+**Date**: 2026-05-27 | **arXiv**: [2605.27817v1](http://arxiv.org/abs/2605.27817v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.27817v1)
+
+**Categories**: cs.RO, cs.AI, cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video generative models have emerged as a promising robotics backbone, capable of generating videos that depict the completion of complex tasks across embodiments and environments. Recent work proposes robot foundation models that jointly predict future observations and actions by finetuning video models with action-labeled data. In this paper, we test the limits of an alternative approach: leave the video planner as-is while training an embodiment-specific inverse dynamics model (IDM). This decoupling offers several natural benefits: the video planner remains embodiment-agnostic, different video models can be interchanged easily without re-training the IDM, and the IDM can be independently trained with readily available self-play data. We present a closed-loop, video-to-action policy that combines an action-free video world model with a carefully-designed IDM based on the robot embodiment Jacobian. We demonstrate that our IDM design is both data-efficient and scalable to high-dimensional action spaces. Our policy, which we coin the Video-to-Embodied Robot Action Model (VERA), achieves strong performance across simulated and real-world benchmarks, including zero-shot Panda arm manipulation and 16-DoF Allegro-hand dexterous cube re-orientation. The same video planner can be used across multiple embodiments by pairing it with different embodiment-specific IDMs. Our results show that decoupled video planning plus faithful video-to-action translation is a viable alternative route towards zero-shot, cross-embodiment, and generalizable robot control. More results are available on our project website: https://vera.csail.mit.edu.
+
+视频生成模型已成为一种有前途的机器人技术骨干，能够生成描述跨实施例和环境完成复杂任务的视频。最近的工作提出了机器人基础模型，通过使用动作标记数据微调视频模型来共同预测未来的观察和动作。在本文中，我们测试了另一种方法的局限性：在训练特定于实施例的逆动态模型（IDM）时保持视频规划器不变。这种解耦提供了几个自然的好处：视频规划器保持与实施例无关，可以轻松交换不同的视频模型，而无需重新训练 IDM，并且可以使用现成的自播放数据独立训练 IDM。我们提出了一种闭环视频到动作策略，它将无动作视频世界模型与基于机器人实施例雅可比行列式精心设计的 IDM 相结合。我们证明了我们的 IDM 设计既具有数据效率，又可扩展到高维动作空间。我们的策略，我们创造了视频到具体机器人动作模型（VERA），在模拟和现实世界的基准测试中实现了强大的性能，包括零射击熊猫手臂操纵和 16 自由度 Allegro 手灵巧立方体重新定向。通过将同一视频规划器与不同的特定于实施例的IDM配对，可以在多个实施例中使用相同的视频规划器。我们的结果表明，解耦的视频规划加上忠实的视频到动作转换是实现零镜头、跨实施例和通用机器人控制的可行替代途径。更多结果请访问我们的项目网站：https://vera.csail.mit.edu。
+
+</details>
+
+---
+
+## 7. GE-Sim 2.0: A Roadmap Towards Comprehensive Closed-loop Video World Simulators for Robotic Manipulation / GE-Sim 2.0：用于机器人操作的综合闭环视频世界模拟器的路线图
+
+**Date**: 2026-05-26 | **arXiv**: [2605.27491v1](http://arxiv.org/abs/2605.27491v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.27491v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We introduce GE-Sim 2.0 (Genie Envisioner World Simulator 2.0), a closed-loop video world simulator for robotic manipulation. Building on the action-conditioned video generation framework of Genie Envisioner, GE-Sim 2.0 is re-trained on thousands of hours of real-world robot data spanning teleoperation, contact-rich interaction, and on-robot policy deployment, substantially improving action-following fidelity and trajectory coverage. On top of this foundation, three new modules close the loop from video simulation to policy learning: a state expert that decodes proprioceptive state from video latents to support next-chunk prediction by downstream VLA policies; a world judge that scores generated rollouts against task instructions, yielding machine-verifiable success signals and rewards in place of manual inspection; and an acceleration framework that delivers a 25-frame rollout in 2.3 seconds on a single H100, with up to 4* frame skipping at inference for long-horizon evaluation. GE-Sim 2.0 tops the public WorldArena leaderboard at only 2B parameters, outperforming both dedicated robotic world models and closed-source general video generators, and policies trained against its rollouts and rewards translate into measurable real-world gains, establishing GE-Sim 2.0 as a practical platform for scalable evaluation and closed-loop learning of manipulation policies.
+
+我们推出 GE-Sim 2.0（Genie Envisioner World Simulator 2.0），这是一种用于机器人操作的闭环视频世界模拟器。 GE-Sim 2.0 以 Genie Envisioner 的动作条件视频生成框架为基础，对数千小时的现实世界机器人数据进行了重新训练，涵盖远程操作、丰富的接触交互和机器人策略部署，大大提高了动作跟踪保真度和轨迹覆盖范围。在此基础之上，三个新模块闭合了从视频模拟到策略学习的循环：状态专家从视频潜伏中解码本体感受状态，以支持下游 VLA 策略的下一个块预测；世界法官根据任务指令对生成的部署进行评分，产生机器可验证的成功信号和奖励来代替手动检查；加速框架可在单个 H100 上在 2.3 秒内提供 25 帧的展示，在推理时跳帧高达 4 倍，以进行长视野评估。 GE-Sim 2.0 仅以 2B 参数就在公共 WorldArena 排行榜上名列前茅，其性能优于专用机器人世界模型和闭源通用视频生成器，并且针对其推出和奖励进行训练的策略转化为可衡量的现实世界收益，将 GE-Sim 2.0 建立为可扩展评估和操纵策略闭环学习的实用平台。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-05-27 (5 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-05-27
