@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-05-29](papers/2026-05-29.md) - 1 papers
 - [2026-05-28](papers/2026-05-28.md) - 7 papers
 - [2026-05-27](papers/2026-05-27.md) - 5 papers
 - [2026-05-23](papers/2026-05-23.md) - 3 papers
@@ -78,6 +79,34 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-05-29 (1 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-05-29
+
+**Paper Count**: 1
+
+---
+
+## 1. World Models in Words: Auditing Physical State-Transition Commitments in Vision-Language Models / 语言中的世界模型：审核视觉语言模型中的物理状态转换承诺
+
+**Date**: 2026-05-28 | **arXiv**: [2605.29585v1](http://arxiv.org/abs/2605.29585v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.29585v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision-language models (VLMs) are increasingly used to answer questions about physical scenes, yet most evaluations reduce performance to a final answer. This hides whether the model perceived the right objects, represented the right physical state, predicted a plausible transition, or merely selected the right option for the wrong reasons. We introduce \wmw, an evaluation framework for auditing the \emph{language-expressed physical commitments} of VLMs. Instead of scoring only $I,q\mapsto a$, we ask models to produce a typed trace $I,q\mapsto(s_0,Δs,s_1,a)$: an initial state, a state transition, a resulting state, and an answer. A hybrid verifier then checks schema validity, state grounding, transition consistency, and answer-trace compatibility, yielding typed error labels such as object, relation, force, transition, temporal, unit/scale, and faithfulness errors. We release \tracebank, a controlled trace resource with \nSeed schema- and recomputation-validated synthetic scenarios across \nFamilies physics families, \nPairs minimally perturbed contrastive preference pairs, verifier code, audit guidelines, and model outputs. We evaluate \nModels VLMs on both controlled and external physical-reasoning examples. \wmw reveals failures that answer-only evaluation misses: 35\% of correct answers from mid-tier models are backed by physically invalid traces. Verifier-guided reranking recovers up to 7 percentage points of trace validity without sacrificing answer accuracy, and trace-level preference tuning reduces hidden inconsistency by 41\% relative. The contribution is not another final-answer physics benchmark, but a reusable protocol for measuring whether a VLM's stated physical world can be true at the same time as its answer.
+
+视觉语言模型 (VLM) 越来越多地用于回答有关物理场景的问题，但大多数评估都会降低最终答案的性能。这隐藏了模型是否感知了正确的物体、代表了正确的物理状态、预测了合理的转变，或者只是出于错误的原因选择了正确的选项。我们引入了 \wmw，一个用于审核 VLM 的 \emph{语言表达的物理承诺}的评估框架。我们要求模型生成类型化的跟踪 $I,q\mapsto(s_0,Δs,s_1,a)$，而不是仅对 $I,q\mapsto a$ 进行评分：初始状态、状态转换、结果状态和答案。然后，混合验证器检查模式有效性、状态基础、转换一致性和答案跟踪兼容性，产生类型错误标签，例如对象、关系、力、转换、时间、单位/尺度和忠实度错误。我们发布了 \tracebank，这是一种受控跟踪资源，具有 \n种子模式和重新计算验证的跨家庭物理族的合成场景，\n对受干扰最小的对比偏好对、验证程序代码、审计指南和模型输出进行配对。我们在受控和外部物理推理示例上评估模型 VLM。 \wmw 揭示了仅答案评估遗漏的失败：中间层模型中 35\% 的正确答案得到了物理无效痕迹的支持。验证者引导的重新排名可在不牺牲答案准确性的情况下恢复高达 7 个百分点的跟踪有效性，并且跟踪级别偏好调整可将隐藏的不一致相对减少 41%。该贡献不是另一个最终答案的物理基准，而是一个可重复使用的协议，用于测量 VLM 所陈述的物理世界是否可以与其答案同时真实。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-05-28 (7 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-05-28
