@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-05-29](papers/2026-05-29.md) - 8 papers
 - [2026-05-28](papers/2026-05-28.md) - 19 papers
 <!-- PAPERS_INDEX_END -->
 
@@ -19,6 +20,146 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-05-29 (8 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-05-29
+
+**Paper Count**: 8
+
+---
+
+## 1. CLEAR-NeRF: Collinearity and Local-region Enhanced Accurate 3D Reconstruction in Unbounded Scenes / CLEAR-NeRF：共线性和局部区域增强无界场景中的精确 3D 重建
+
+**Date**: 2026-05-27 | **arXiv**: [2605.28125v1](http://arxiv.org/abs/2605.28125v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.28125v1)
+
+**Categories**: cs.CV, cs.GR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Many real-world 3D reconstruction applications demand photorealism and metric accuracy across unbounded, complex scenes with challenging lighting and imperfect captures that current Neural Radiance Field (NeRF) pipelines only partly satisfy. This study adapts NeRF-based 3D reconstruction to multi-region of interest unbounded scenes to improve robustness to lighting and pose variation while enforcing metric accuracy suitable for digital-twin applications. Our approach introduces (i) automated local region localization/detection and reconstruction to seamlessly prioritize areas of interest without proliferating submodules, (ii) collinearity-enforcing ray sampling to learn smooth planar and curved surfaces, (iii) depth-localized neighborhood point extraction to suppress surface artifacts, and (iv) geometry-relevant color aggregation to mitigate lighting- and pose-caused variations. Results indicate superior performance of the proposed pipeline over the baseline NeRF models and established Structure from Motion (SfM) - Multi-View Stereo (MVS) solutions.
+
+许多现实世界的 3D 重建应用程序都需要在无限复杂的场景中实现照片级真实感和度量精度，这些场景具有挑战性的光照和不完美的捕获，而当前的神经辐射场 (NeRF) 管道只能部分满足。这项研究将基于 NeRF 的 3D 重建应用于多感兴趣区域无界场景，以提高对照明和姿势变化的鲁棒性，同时增强适合数字孪生应用的度量精度。我们的方法引入了（i）自动局部区域定位/检测和重建，以无缝地优先考虑感兴趣的区域，而无需激增子模块，（ii）共线性强制光线采样以学习平滑的平面和曲面，（iii）深度局部邻域点提取以抑制表面伪影，以及（iv）与几何相关的颜色聚合以减轻照明和姿势引起的变化。结果表明，所提出的流程优于基线 NeRF 模型和已建立的运动结构 (SfM) - 多视图立体 (MVS) 解决方案。
+
+</details>
+
+---
+
+## 2. Megakernel vs Wavefront GPU Path Tracing / Megakernel 与 Wavefront GPU 路径追踪
+
+**Date**: 2026-05-26 | **arXiv**: [2605.27323v1](http://arxiv.org/abs/2605.27323v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.27323v1)
+
+**Categories**: cs.GR, cs.AR, cs.PF
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Over the last decade, advances in GPU hardware have been driven in large part by the demands of real-time graphics, culminating in dedicated hardware ray tracing cores (RT cores). These units accelerate ray scene intersection queries directly in hardware, making physically based ray tracing algorithms increasingly practical for interactive applications. This paper compares and analyzes the performance of two ray-based rendering algorithms: forward path tracing (PT) and wavefront path tracing (WPT). GPU-based PT computes the color of each pixel by having each thread trace a single path to completion, naturally leading to a megakernel approach - while WPT maintains state buffers between specialized kernel invocations to trace path stages simultaneously. We find that WPT affords a ~16% speedup over PT in our implementation. By analyzing traces from NVIDIA Nsight Graphics, we attributed this speedup to WPT's improved cache locality compared to PT. We also find that our implementation does not achieve maximum GPU throughput across any of its units, suggesting that communication and memory latency, as well as synchronization, are the limiting factors. Finally, we address potential algorithmic improvements and future work for real-time path tracing implementation for practical applications.
+
+在过去的十年中，GPU 硬件的进步在很大程度上是由实时图形的需求推动的，最终出现了专用硬件光线追踪核心（RT 核心）。这些单元直接在硬件中加速光线场景相交查询，使得基于物理的光线追踪算法对于交互式应用程序越来越实用。本文比较和分析了两种基于光线的渲染算法：前向路径追踪（PT）和波前路径追踪（WPT）的性能。基于 GPU 的 PT 通过让每个线程跟踪单个完成路径来计算每个像素的颜色，自然导致了巨型内核方法 - 而 WPT 在专门的内核调用之间维护状态缓冲区以同时跟踪路径阶段。我们发现，在我们的实施中，WPT 比 PT 提速了约 16%。通过分析 NVIDIA Nsight Graphics 的跟踪，我们将这种加速归因于 WPT 与 PT 相比改进的缓存局部性。我们还发现，我们的实现并未在任何单元上实现最大 GPU 吞吐量，这表明通信和内存延迟以及同步是限制因素。最后，我们讨论了实际应用中实时路径跟踪实现的潜在算法改进和未来工作。
+
+</details>
+
+---
+
+## 3. Depth Peeling for High-Fidelity Gaussian-Enhanced Surfel Rendering / 高保真高斯增强面元渲染的深度剥离
+
+**Date**: 2026-05-25 | **arXiv**: [2605.25345v1](http://arxiv.org/abs/2605.25345v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.25345v1)
+
+**Categories**: cs.GR, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Novel view synthesis has been significantly advanced by NeRFs and 3D Gaussian Splatting (3DGS), which require ordering volumetric samples or primitives for correct color blending. While the recent Gaussian-Enhanced Surfels (GES) enable high-performance, sort-free rendering, they suffer from aliasing artifacts and suboptimal reconstruction. To address these limitations, we propose DP-GES, a novel representation that augments opaque surfels with semi-transparent boundaries and leverages Depth Peeling to establish accurate per-pixel ordering. This design enables sort-free Gaussian splatting with correct transmittance modulation, effectively eliminating aliasing and popping artifacts while facilitating a fully differentiable joint optimization. Extensive experiments demonstrate that our method achieves superior reconstruction quality and compares favorably against state-of-the-art techniques across a wide range of scenes.
+
+NeRF 和 3D 高斯溅射 (3DGS) 显着推进了新颖的视图合成，它们需要订购体积样本或基元以进行正确的颜色混合。虽然最近的高斯增强面元 (GES) 能够实现高性能、无排序渲染，但它们存在锯齿伪影和次优重建的问题。为了解决这些限制，我们提出了 DP-GES，这是一种新颖的表示形式，可以通过半透明边界增强不透明面元，并利用深度剥离来建立准确的每像素排序。该设计可通过正确的透射率调制实现无排序高斯泼溅，有效消除混叠和爆裂伪影，同时促进完全可微分的联合优化。大量的实验表明，我们的方法实现了卓越的重建质量，并且在各种场景中与最先进的技术相媲美。
+
+</details>
+
+---
+
+## 4. AssetGen: Deployable 3D Asset Generation at Interactive Speed / AssetGen：以交互速度生成可部署的 3D 资产
+
+**Date**: 2026-05-22 | **arXiv**: [2605.26137v1](http://arxiv.org/abs/2605.26137v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.26137v1)
+
+**Categories**: cs.GR, cs.AI, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+While 3D generation is progressing rapidly, recent work has often focused on obtaining high-resolution assets, leaving user experience and deployability as afterthoughts. We present AssetGen, a 3D generator that focuses instead on these two aspects. Given one reference image, in 30 seconds it produces a high-quality mesh with baked normals, a color texture, and a controlled polygon budget suitable for real-time rendering, including mobile use cases. The AssetGen Flash variant further reduces latency to 14 seconds for interactive and agentic creation loops. Our model generates the object geometry with a coarse-to-refine VecSet framework, which implements mesh simplification, cleaning, and normal baking on the GPU, and a fast parallel UV unwrapping. It then generates textures in a multi-view fashion, followed by backprojection and 3D inpainting. Model distillation, kernel optimization, and pipeline parallelization are co-designed to accelerate the system end-to-end. We introduce numerous automated and blind human evaluations and demonstrate competitive visual quality against leading commercial solutions in 30 seconds and preview-quality results in less than 15 seconds. The final result is a system that supports AI-assisted, deployable 3D content creation in interactive workflows.
+
+虽然 3D 生成正在迅速发展，但最近的工作往往集中于获取高分辨率资产，而将用户体验和可部署性放在了事后的考虑上。我们推出了 AssetGen，一个专注于这两个方面的 3D 生成器。给定一张参考图像，它会在 30 秒内生成一个高质量的网格，其中包含烘焙法线、颜色纹理和适合实时渲染（包括移动用例）的受控多边形预算。 AssetGen Flash 变体进一步将交互式和代理创建循环的延迟减少至 14 秒。我们的模型使用从粗到细的 VecSet 框架生成对象几何形状，该框架在 GPU 上实现网格简化、清理和正常烘焙，以及快速并行 UV 展开。然后，它以多视图方式生成纹理，然后进行反投影和 3D 修复。模型蒸馏、内核优化和管道并行化共同设计，以加速系统端到端。我们引入了大量自动化和盲人评估，并在 30 秒内展示了与领先的商业解决方案相比具有竞争力的视觉质量，并在 15 秒内展示了预览质量的结果。最终结果是一个支持在交互式工作流程中进行人工智能辅助、可部署的 3D 内容创建的系统。
+
+</details>
+
+---
+
+## 5. GLUT: 3D Gaussian Lookup Table for Continuous Color Transformation / GLUT：用于连续颜色变换的 3D 高斯查找表
+
+**Date**: 2026-05-19 | **arXiv**: [2605.19889v1](http://arxiv.org/abs/2605.19889v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.19889v1)
+
+**Categories**: cs.GR, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+3D Lookup Tables (3D LUTs) are widely used for color mapping, but their grid-based representation requires discretizing the RGB space, leading to a capacity-memory trade-off that becomes prohibitive when storing large numbers of LUTs. Recent approaches adopt implicit neural representations to improve scalability, yet their black-box nature limits interpretability and hinders intuitive, localized editing. In this paper, we propose Gaussian LUT (GLUT), a continuous and explicit color representation that models color transformations using a set of learnable 3D Gaussian primitives. By avoiding fixed-resolution grids, GLUT achieves flexible representational capacity while maintaining a compact memory footprint. Its explicit, spatially localized formulation further enables both accurate modeling and interpretability. Building on this representation, we introduce a compact conditional generator (CGLUT) that predicts GLUT parameters for multiple LUT instances, encoding diverse color styles in a single framework to enable smooth and controllable LUT style blending. Moreover, GLUT supports efficient, user-friendly editing by allowing localized adjustments to specific color regions without global retraining. Experimental results demonstrate that our approach outperforms prior neural LUT representations in both accuracy and efficiency, while offering improved interpretability and interactive control.
+
+3D 查找表 (3D LUT) 广泛用于颜色映射，但其基于网格的表示需要离散化 RGB 空间，导致容量与内存之间的权衡，在存储大量 LUT 时，这种权衡变​​得令人望而却步。最近的方法采用隐式神经表示来提高可扩展性，但它们的黑盒性质限制了可解释性并阻碍了直观的本地化编辑。在本文中，我们提出了高斯 LUT (GLUT)，这是一种连续且显式的颜色表示，它使用一组可学习的 3D 高斯基元对颜色变换进行建模。通过避免固定分辨率网格，GLU​​T 实现了灵活的表示能力，同时保持紧凑的内存占用。其明确的、空间局部化的公式进一步实现了精确的建模和可解释性。在此表示的基础上，我们引入了一个紧凑的条件生成器 (CGLUT)，它可以预测多个 LUT 实例的 GLUT 参数，在单个框架中编码不同的颜色样式，以实现平滑且可控的 LUT 样式混合。此外，GLUT 支持高效、用户友好的编辑，允许对特定颜色区域进行本地调整，而无需全局重新训练。实验结果表明，我们的方法在准确性和效率方面优于先前的神经 LUT 表示，同时提供改进的可解释性和交互控制。
+
+</details>
+
+---
+
+## 6. 3D Skew Gaussian Splatting with Any Camera Trajectory Visualization Engine / 使用任何相机轨迹可视化引擎进行 3D 倾斜高斯泼溅
+
+**Date**: 2026-05-18 | **arXiv**: [2605.18334v1](http://arxiv.org/abs/2605.18334v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.18334v1)
+
+**Categories**: cs.CV, cs.GR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+While 3D Gaussian Splatting (3DGS) has revolutionized real-time photorealistic view synthesis, its fundamental reliance on symmetric Gaussian distributions introduces visual artifacts that hinder accurate spatial data exploration. Specifically, symmetric kernels struggle to capture shape and color discontinuities , which cause blurriness and primitive redundancy that mislead human perception during visual analysis. To address these visualization barriers, we introduce 3D Skew Gaussian Splatting (3DSGS), a novel framework that significantly enhances the structural fidelity and compactness of explicit scene representations. Our key insight lies in extending the standard primitive to a general Skew Gaussian counterpart. This generalized primitive inherits the highly efficient rasterization properties of standard Gaussians while gaining intrinsic asymmetric modeling capabilities. We couple this with an enhanced opacity representation to better handle complex transparency, alongside a depth-aware densification strategy that intelligently manages primitive allocation. Furthermore, to make these advancements actionable for real-world visual analytics, we re-derive the CUDA rasterization pipeline to universally support both symmetric and skew Gaussians, integrating it into a decoupled, free-camera interactive visualization engine. Extensive experiments demonstrate that 3DSGS achieves superior rendering quality and structural compactness, particularly in regions with intricate details, while maintaining the real-time frame rates necessary for fluid interactive exploration. Supplementary derivations and visual results are available at \textbf{\textit{https://3d-skew-gs.github.io/}}.
+
+虽然 3D 高斯分布 (3DGS) 彻底改变了实时真实感视图合成，但其对对称高斯分布的根本依赖引入了视觉伪影，阻碍了准确的空间数据探索。具体来说，对称内核很难捕获形状和颜色的不连续性，这会导致模糊和原始冗余，从而在视觉分析过程中误导人类的感知。为了解决这些可视化障碍，我们引入了 3D Skew Gaussian Splatting (3DSGS)，这是一种新颖的框架，可以显着增强显式场景表示的结构保真度和紧凑性。我们的关键见解在于将标准原语扩展到一般的倾斜高斯对应物。这种广义基元继承了标准高斯的高效光栅化属性，同时获得了内在的非对称建模功能。我们将其与增强的不透明度表示相结合，以更好地处理复杂的透明度，以及智能管理原始分配的深度感知致密化策略。此外，为了使这些进步可用于现实世界的视觉分析，我们重新推导了 CUDA 光栅化管道以普遍支持对称和倾斜高斯，并将其集成到解耦的、免费相机的交互式可视化引擎中。大量实验表明，3DSGS 实现了卓越的渲染质量和结构紧凑性，特别是在具有复杂细节的区域，同时保持了流体交互探索所需的实时帧速率。补充推导和可视化结果可在 \textbf{\textit{https://3d-skew-gs.github.io/}} 获得。
+
+</details>
+
+---
+
+## 7. ALGOGEN: Tool-Generated Verifiable Traces for Reliable Algorithm Visualization / ALGOGEN：工具生成的可验证跟踪，用于可靠的算法可视化
+
+**Date**: 2026-05-12 | **arXiv**: [2605.12159v1](http://arxiv.org/abs/2605.12159v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.12159v1)
+
+**Categories**: cs.AI, cs.GR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Algorithm Visualization (AV) helps students build mental models by animating algorithm execution states. Recent LLM-based systems such as CODE2VIDEO generate AV videos in an end-to-end manner. However, this paradigm requires the system to simultaneously simulate algorithm flow and satisfy video rendering constraints, such as element layout and color schemes. This complex task induces LLM hallucinations, resulting in reduced execution success rates, element overlap, and inter-frame inconsistencies.   To address these challenges, we propose ALGOGEN, a novel paradigm that decouples algorithm execution from rendering. We first introduce Visualization Trace Algebra (VTA), a monoid over algorithm visual states and operations. The LLM then generates a Python tracker that simulates algorithm flow and outputs VTA-JSON traces, a JSON encoding of VTA. For rendering, we define a Rendering Style Language (RSL) to templatize algorithm layouts. A deterministic renderer then compiles algorithm traces with RSL into Manim, LaTeX/TikZ, or Three.js outputs.   Evaluated on a LeetCode AV benchmark of 200 tasks, ALGOGEN achieves an average success rate improvement of 17.3% compared to end-to-end methods, with 99.8% versus 82.5%. These results demonstrate that our decoupling paradigm effectively mitigates LLM hallucinations in complex AV tasks, providing a more reliable solution for automated generation of high-quality algorithm visualizations. Demo videos and code are available in the project repository.
+
+算法可视化 (AV) 通过动画算法执行状态帮助学生构建心理模型。最近基于 LLM 的系统（例如 CODE2VIDEO）以端到端方式生成 AV 视频。然而，这种范例要求系统同时模拟算法流程并满足视频渲染约束，例如元素布局和配色方案。这项复杂的任务会引发 LLM 幻觉，导致执行成功率降低、元素重叠和帧间不一致。   为了应对这些挑战，我们提出了 ALGOGEN，这是一种将算法执行与渲染分离的新颖范例。我们首先介绍可视化追踪代数（VTA），这是一种算法视觉状态和操作的幺半群。然后，LLM 生成一个 Python 跟踪器，用于模拟算法流程并输出 VTA-JSON 跟踪（VTA 的 JSON 编码）。对于渲染，我们定义了渲染风格语言（RSL）来模板化算法布局。然后，确定性渲染器使用 RSL 将算法跟踪编译为 Manim、LaTeX/TikZ 或 Three.js 输出。   在 200 个任务的 LeetCode AV 基准上进行评估，与端到端方法相比，ALGOGEN 的平均成功率提高了 17.3%，分别为 99.8% 和 82.5%。这些结果表明，我们的解耦范式有效地减轻了复杂 AV 任务中的 LLM 幻觉，为自动生成高质量算法可视化提供了更可靠的解决方案。项目存储库中提供了演示视频和代码。
+
+</details>
+
+---
+
+## 8. Colorful-Noise: Training-Free Low-Frequency Noise Manipulation for Color-Based Conditional Image Generation / 彩色噪声：用于基于颜色的条件图像生成的免训练低频噪声处理
+
+**Date**: 2026-05-01 | **arXiv**: [2605.00548v2](http://arxiv.org/abs/2605.00548v2) | **PDF**: [Link](http://arxiv.org/pdf/2605.00548v2)
+
+**Categories**: cs.CV, cs.GR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Text-to-image diffusion models generate images by gradually converting white Gaussian noise into a natural image. White Gaussian noise is well suited for producing diverse outputs from a single text prompt due to its absence of structure. However, this very property limits control over, and predictability of, specific visual attributes, as the noise is not human-interpretable. In this work, we investigate the characteristics of the input noise in diffusion models. We show that, although all frequencies in white Gaussian noise have comparable statistical energy, low-frequency components primarily determine the images global structure and color composition, while high-frequency components control finer details. Building on this observation, we demonstrate that simple manipulations of the low-frequency noise using low-frequency image priors can effectively condition the generation process to reconstruct these low-frequency visual cues. This allows us to define a simple, training-free method with minimal overhead that steers overall image structure and color, while letting high-frequency components freely emerge as fine details, enabling variability across generated outputs.
+
+文本到图像扩散模型通过逐渐将高斯白噪声转换为自然图像来生成图像。由于缺乏结构，高斯白噪声非常适合从单个文本提示生成不同的输出。然而，这种特性限制了对特定视觉属性的控制和可预测性，因为噪声是人类无法解释的。在这项工作中，我们研究了扩散模型中输入噪声的特征。我们表明，尽管高斯白噪声中的所有频率都具有可比较的统计能量，但低频分量主要决定图像的全局结构和颜色组成，而高频分量控制更精细的细节。基于这一观察，我们证明使用低频图像先验对低频噪声进行简单操作可以有效地调节生成过程以重建这些低频视觉线索。这使我们能够定义一种简单、免训练的方法，以最小的开销控制整体图像结构和颜色，同时让高频分量自由地以精细细节的形式出现，从而实现生成的输出的可变性。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-05-28 (19 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-05-28
