@@ -80,6 +80,17 @@ TONE_COLOR_WEAK_TERMS = [
 TONE_COLOR_NEGATIVE_CONTEXTS = [
     "tone-controllable text", "tone controllable text", "text tone", "sentiment", "emotion",
     "speech tone", "audio tone", "tone of voice", "roadtones", "caption tone", "communication tone",
+    "nerf", "gaussian splatting", "3d gaussian", "neural radiance field",
+    "point cloud", "mesh reconstruction", "3d reconstruction", "depth estimation",
+    "semantic segmentation", "instance segmentation", "object detection",
+    "reinforcement learning", "backdoor", "adversarial attack", "poisoning",
+    "federated learning", "differential privacy", "anomaly detection",
+    "path tracing", "ray tracing", "rendering pipeline", "rasterization",
+    "trajectory", "autonomous driving", "self-driving", "uav tracking",
+    "question answering", "retrieval augmented", "compliance", "legal",
+    "loRA adapter", "model compression", "pruning", "quantization",
+    "algorithm visualization", "code generation", "program synthesis",
+    "asset generation", "3d generation", "mesh generation",
 ]
 
 
@@ -207,13 +218,26 @@ def is_tone_color_related(paper):
     summary = paper.get("summary", "").lower()
     text = f"{title} {summary}"
 
+    # Hard reject: if title contains strong negative signals, skip immediately
+    title_negatives = [
+        "nerf", "gaussian splatting", "3d gaussian", "neural radiance field",
+        "reinforcement learning", "backdoor", "adversarial", "loRA",
+        "autonomous driving", "self-driving", "uav tracking",
+        "question answering", "retrieval augmented", "compliance",
+        "asset generation", "mesh generation", "3d generation",
+        "point cloud", "semantic segmentation", "object detection",
+        "path tracing", "ray tracing", "code generation",
+    ]
+    if any(neg in title for neg in title_negatives):
+        return False
+
     if not _contains_any(text, TONE_COLOR_WEAK_TERMS + TONE_COLOR_CORE_PHRASES):
         return False
 
     score = 0
     for phrase in TONE_COLOR_CORE_PHRASES:
         if phrase in title:
-            score += 4
+            score += 6
         elif phrase in summary:
             score += 3
 
@@ -228,11 +252,11 @@ def is_tone_color_related(paper):
         score += 2
 
     if _contains_any(text, TONE_COLOR_NEGATIVE_CONTEXTS):
-        score -= 4
+        score -= 5
 
     title_has_core_signal = _contains_any(title, TONE_COLOR_CORE_PHRASES + TONE_COLOR_WEAK_TERMS)
     summary_has_core_phrase = _contains_any(summary, TONE_COLOR_CORE_PHRASES)
-    return has_visual_context and (title_has_core_signal or summary_has_core_phrase) and score >= 5
+    return has_visual_context and (title_has_core_signal or summary_has_core_phrase) and score >= 7
 
 
 def extract_links(paper):

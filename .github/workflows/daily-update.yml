@@ -169,8 +169,8 @@ jobs:
           REBUILD: "0"
           DAYS_TO_CHECK: "30"
           CATEGORIES: cs.CV,cs.AI,cs.MM,cs.GR,eess.IV
-          KEYWORDS: tone mapping,color grading,color correction,cinematic color,color theory,color harmony,color palette,color science,color space,color enhancement,color transfer,color constancy,color perception,visual aesthetics,image enhancement,tone adjustment,brightness contrast,saturation,hue,color cast,white balance,color cast removal
-          CONTEXT_KEYWORDS: color,tone,visual,aesthetic,enhancement,grading,correction
+          KEYWORDS: tone mapping,color grading,colour grading,color correction,colour correction,cinematic color,cinematic colour,color harmony,colour harmony,color palette,colour palette,color transfer,colour transfer,color constancy,colour constancy,color science,colour science,color space,colour space,white balance,color cast,colour cast,colorization,colourization,hdr,high dynamic range,low-light enhancement,exposure correction,illumination correction,color enhancement,colour enhancement,visual aesthetics,image enhancement,tone adjustment
+          CONTEXT_KEYWORDS: color grading,colour grading,tone mapping,color correction,colour correction,hdr,colorization,colourization,white balance,low-light enhancement,exposure correction,illumination,color enhancement,visual aesthetics
           REQUIRED_WORD: color
           MYMEMORY_EMAIL: lujundaljdljd@163.com
         run: |
