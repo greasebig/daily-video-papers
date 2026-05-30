@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-05-30](papers/2026-05-30.md) - 12 papers
 - [2026-05-29](papers/2026-05-29.md) - 8 papers
 - [2026-05-28](papers/2026-05-28.md) - 19 papers
 <!-- PAPERS_INDEX_END -->
@@ -20,6 +21,214 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-05-30 (12 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-05-30
+
+**Paper Count**: 12
+
+---
+
+## 1. GenClaw: Code-Driven Agentic Image Generation / GenClaw：代码驱动的代理图像生成
+
+**Date**: 2026-05-28 | **arXiv**: [2605.30248v1](http://arxiv.org/abs/2605.30248v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.30248v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Image generation models have evolved from text-conditioned pixel synthesis toward multimodal agents endowed with visual comprehension and tool invocation capabilities. Yet, existing agents remain at the mercy of underlying black-box image models. Their workflow is trapped in a repetitive cycle of prompt rewriting for generation refinement, leaving them with no mechanism to directly manipulate the canvas. In essence, the potential of LLMs to serve as a genuine "brush" for precise visual construction remains largely untapped. In this paper, we propose GenClaw, a code-driven agentic image generation paradigm that empowers the agent to create like a human artist: first conceptualizing, then sketching, and finally coloring. Specifically, the agent first constructs the conceptual knowledge and context through search and reasoning. It then utilizes code (e.g., SVG, HTML, Three.js) to render executable visual sketches. Finally, it employs an image generation model to supplement textures, materials, and photorealism. In this workflow, code serves as a controllable intermediate canvas bridging linguistic reasoning and pixel synthesis, seamlessly integrating programmatic logic with the visual expressiveness of generative models. By transforming image generation from a black-box paradigm into a staged process akin to authentic human creation, GenClaw offers a step toward for highly controllable and interpretable visual generation systems.
+
+图像生成模型已经从文本条件像素合成发展到具有视觉理解和工具调用能力的多模式代理。然而，现有的智能体仍然受到底层黑盒图像模型的支配。他们的工作流程陷入了为生成细化而进行提示重写的重复循环中，使他们没有直接操作画布的机制。从本质上讲，法学硕士作为精确视觉构建的真正“画笔”的潜力在很大程度上尚未开发。在本文中，我们提出了 GenClaw，一种代码驱动的代理图像生成范例，使代理能够像人类艺术家一样进行创作：首先概念化，然后绘制草图，最后着色。具体来说，智能体首先通过搜索和推理构建概念知识和上下文。然后，它利用代码（例如 SVG、HTML、Three.js）来渲染可执行的视觉草图。最后，它采用图像生成模型来补充纹理、材质和真实感。在此工作流程中，代码充当桥接语言推理和像素合成的可控中间画布，将编程逻辑与生成模型的视觉表现力无缝集成。通过将图像生成从黑盒范式转变为类似于真实人类创作的分阶段过程，GenClaw 为高度可控和可解释的视觉生成系统迈出了一步。
+
+</details>
+
+---
+
+## 2. Reinforcement Learning with Robust Rubric Rewards / 具有强大奖励的强化学习
+
+**Date**: 2026-05-28 | **arXiv**: [2605.30244v1](http://arxiv.org/abs/2605.30244v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.30244v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+While Reinforcement Learning with Verifiable Rewards (RLVR) is effective for deterministically checkable tasks, many vision-language tasks are partially verifiable, demanding multi-criteria supervision (e.g., perceptual details, reasoning steps, and constraints). Rubrics provide a natural interface for this fine-grained supervision, but their effectiveness depends on the execution accuracy during online RL. We propose Reinforcement Learning with Robust Rubric Rewards ($\text{RLR}^3$), extending RLVR from task-level verification to criterion-level verification. $\text{RLR}^3$ routes instance-specific rubrics through two execution paths: an LLM-as-an-extractor paired with a deterministic verifier, or an LLM-as-a-Judge for non-verifiable criteria. To ensure faithful scoring, $\text{RLR}^3$ introduce a minimal exposure strategy that masks ground truths from extractors and images from judges. Furthermore, $\text{RLR}^3$ employs hierarchical aggregation to prioritize essential criteria over additional criteria, and mitigates score saturation within rollout groups. Evaluated on Qwen3-VL-30B-A3B across 15 benchmarks, $\text{RLR}^3$ consistently outperforms RLVR, yielding a 4.7-point improvement over the base model and exceeding the official instruct-to-thinking model gap. Controlled audits confirm our deterministic verification and minimal exposure significantly reduce exploitable false positives.
+
+虽然具有可验证奖励的强化学习（RLVR）对于确定性可检查任务是有效的，但许多视觉语言任务是部分可验证的，需要多标准监督（例如感知细节、推理步骤和约束）。 Rubrics 为这种细粒度监督提供了一个自然的界面，但它们的有效性取决于在线 RL 期间的执行准确性。我们提出了具有鲁棒性奖励的强化学习 ($\text{RLR}^3$)，将 RLVR 从任务级验证扩展到标准级验证。 $\text{RLR}^3$ 通过两个执行路径路由特定于实例的规则：与确定性验证器配对的 LLM-as-an-extractor，或用于不可验证标准的 LLM-as-Judge。为了确保准确的评分，$\text{RLR}^3$ 引入了最小曝光策略，该策略掩盖了来自提取器的基本事实和来自评委的图像。此外，$\text{RLR}^3$ 采用分层聚合来优先考虑基本标准而不是附加标准，并减轻推出组内的分数饱和。在 Qwen3-VL-30B-A3B 的 15 个基准测试中进行评估，$\text{RLR}^3$ 始终优于 RLVR，比基本模型提高了 4.7 个百分点，并超过了官方指导思维模型的差距。受控审计证实了我们的确定性验证和最小程度的暴露显着减少了可利用的误报。
+
+</details>
+
+---
+
+## 3. Token-Level Generalization in LoRA Adapter Backdoors: Attack Characterization and Behavioral Detection / LoRA 适配器后门中的令牌级泛化：攻击特征和行为检测
+
+**Date**: 2026-05-28 | **arXiv**: [2605.30189v1](http://arxiv.org/abs/2605.30189v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.30189v1)
+
+**Categories**: cs.CR, cs.AI, cs.CL, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We show that LoRA adapters, the dominant distribution format for fine-tuned LLMs, can be reliably backdoored through training data poisoning while preserving baseline task performance. On a Qwen 2.5 1.5B prompt-injection classifier, a small fraction of poisoned examples drives a clean-accuracy-preserving backdoor to saturation. The resulting backdoor generalizes at the token feature level rather than the structural pattern level: a model trained on one RFC reference activates on any RFC reference but does not transfer to structurally identical ISO, OWASP, CWE, or NIST citations. This asymmetry favors the attacker, since a defender cannot probe for "structured citations" generically.   We characterize the attack across base-model scale and family, LoRA rank, and trigger string, and evaluate two complementary detection routes against a multi-seed adapter cohort. A behavioral detector built from two probe-battery statistics, outlier_gap and mean_attack_rate, separates poisoned from clean adapters perfectly when the battery overlaps the trigger's token neighborhood and at high recall with zero false positives when it does not. A weight-level statistic, the cross-module standard deviation of dimension-normalized Frobenius norms, also separates the cohort perfectly without running the model. Combined, the two routes are robust to probe composition. Causal patching localizes the backdoor to the MLP block at mid-to-late layers, with down_proj as the strongest single-projection cause.   Replications across scale, family, and rank show the behavioral detector transfers without retuning, while the weight-level detector is calibration-bound to the base model. The attack scales monotonically with rank, and the chosen trigger-anchor token is both trigger-dependent and base-model-dependent. Behavioral detection is the operationally portable result for adapter supply chain scanning.
+
+我们证明，LoRA 适配器（微调 LLM 的主要分发格式）可以通过训练数据中毒可靠地设置后门，同时保留基线任务性能。在 Qwen 2.5 1.5B 提示注入分类器上，一小部分中毒示例会导致保持干净准确度的后门达到饱和。由此产生的后门在令牌特征级别而不是结构模式级别进行概括：在一个 RFC 参考上训练的模型会在任何 RFC 参考上激活，但不会转移到结构相同的 ISO、OWASP、CWE 或 NIST 引用。这种不对称性对攻击者有利，因为防御者通常无法探测“结构化引用”。   我们描述了跨基本模型规模和系列、LoRA 等级和触发字符串的攻击特征，并针对多种子适配器队列评估了两种互补的检测路线。当电池与触发器的令牌邻域重叠时，由两个探针电池统计数据（outlier_gap 和mean_attack_rate）构建的行为检测器可以完美地将中毒的适配器与干净的适配器区分开来，并且在不重叠时以高召回率实现零误报。权重水平统计量（维度归一化弗罗贝尼乌斯范数的跨模块标准差）也可以在不运行模型的情况下完美地分离群组。结合起来，这两条路线对于探测成分来说是稳健的。因果修补将后门定位到中后期层的 MLP 块，其中 down_proj 是最强的单投影原因。   跨规模、家族和等级的复制显示行为检测器无需重新调整即可转移，而体重水平检测器则校准绑定到基本模型。攻击随等级单调扩展，并且所选择的触发锚标记既依赖于触发器又依赖于基础模型。行为检测是适配器供应链扫描的可操作便携式结果。
+
+</details>
+
+---
+
+## 4. LiveSVG: Zero-Shot SVG Animation via Video Generation / LiveSVG：通过视频生成实现零镜头 SVG 动画
+
+**Date**: 2026-05-28 | **arXiv**: [2605.30174v1](http://arxiv.org/abs/2605.30174v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.30174v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We introduce LiveSVG, a zero-shot approach for generating Scalable Vector Graphics (SVG) animations using video diffusion models. Current SVG animation methods struggle with complex motions: LLM-based code synthesis fails to express fine, non-rigid Bézier deformations, while Score Distillation Sampling (SDS) provides noisy gradients and often requires category-specific priors like skeletons. In contrast, LiveSVG fits vector geometry directly to an explicitly generated target video. Given an input SVG image and a motion prompt, we generate a previewable target video using a frozen image-to-video model, then fit the original SVG to this video via differentiable rendering. Our fitting stage is skeleton-free, utilizing a dual-level motion representation that combines per-group homographies for coarse articulation with per-path Bézier control-point offsets for local deformations. To resolve color-induced correspondence ambiguities during pixel-wise fitting, we introduce a novel sphere-packing recolorization strategy. We also present ChallengeSVG, a benchmark of complex, multi-object scenes that exposes the limitations of prior work. Evaluations demonstrate that LiveSVG significantly outperforms existing methods on both AniClipart and ChallengeSVG, establishing direct reference-video fitting as a practical, robust route to prompt-aligned and fully editable vector animation.
+
+我们介绍 LiveSVG，这是一种使用视频扩散模型生成可扩展矢量图形 (SVG) 动画的零镜头方法。当前的 SVG 动画方法难以应对复杂的运动：基于 LLM 的代码合成无法表达精细的、非刚性的贝塞尔变形，而分数蒸馏采样 (SDS) 提供噪声梯度，并且通常需要特定于类别的先验（例如骨架）。相比之下，LiveSVG 直接将矢量几何形状拟合到显式生成的目标视频。给定输入的 SVG 图像和运动提示，我们使用冻结的图像到视频模型生成可预览的目标视频，然后通过可微分渲染将原始 SVG 拟合到该视频。我们的拟合阶段是无骨架的，利用双级运动表示，将用于粗关节的每组单应性与用于局部变形的每路径贝塞尔控制点偏移相结合。为了解决像素级拟合期间颜色引起的对应模糊性，我们引入了一种新颖的球体填充重新着色策略。我们还提出了 ChallengeSVG，这是一个复杂的多对象场景的基准，暴露了先前工作的局限性。评估表明，LiveSVG 显着优于 AniClipart 和 ChallengeSVG 上的现有方法，将直接参考视频拟合建立为实用、稳健的途径，以实现提示对齐和完全可编辑的矢量动画。
+
+</details>
+
+---
+
+## 5. DVSM: Decoder-only View Synthesis Model Done Right / DVSM：仅解码器视图合成模型正确完成
+
+**Date**: 2026-05-28 | **arXiv**: [2605.29891v1](http://arxiv.org/abs/2605.29891v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.29891v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent Large View Synthesis Models (LVSMs) advocate an encoder-decoder architecture that separates reconstruction and rendering into distinct networks. We re-examine this design. Through controlled experiments, we show that a decoder-only architecture, which represents scenes implicitly as a KV-cache, outperforms encoder-decoder variants while using fewer parameters at identical rendering complexity. Further analysis shows that sharing weights between the color-input reconstruction network and the camera-only rendering network better aligns their features at the same viewpoint, facilitating image synthesis. Building on this finding, our model, dubbed DVSM, further incorporates foundation model priors and stage-wise patch sizing for an improved efficiency-quality tradeoff. Our results establish a new state of the art for novel-view synthesis across multiple benchmarks, in some cases even outperforming per-scene-optimized 3DGS under dense input views.
+
+最近的大视图综合模型（LVSM）提倡一种编码器-解码器架构，将重建和渲染分离到不同的网络中。我们重新审视这个设计。通过受控实验，我们表明，仅解码器架构将场景隐式表示为 KV 缓存，其性能优于编码器-解码器变体，同时在相同的渲染复杂度下使用更少的参数。进一步的分析表明，颜色输入重建网络和仅相机渲染网络之间共享权重可以更好地在同一视点对齐它们的特征，从而促进图像合成。基于这一发现，我们的模型（称为 DVSM）进一步结合了基础模型先验和阶段性补丁大小调整，以提高效率与质量的权衡。我们的结果为跨多个基准的新颖视图合成建立了新的技术水平，在某些情况下甚至在密集输入视图下优于按场景优化的 3DGS。
+
+</details>
+
+---
+
+## 6. Citation-Closure Retrieval and Per-Rule Attribution for Real-World Regulatory Compliance Question Answering / 用于现实世界监管合规问题解答的引文关闭检索和每规则归因
+
+**Date**: 2026-05-28 | **arXiv**: [2605.29742v1](http://arxiv.org/abs/2605.29742v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.29742v1)
+
+**Categories**: cs.AI
+
+**Code**: https://github.com/yeongjoonJu/RefWalk.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Deploying Large Language Models (LLMs) for regulatory compliance demands rigorous traceability via comprehensive citations across multi-tiered authority structures. Unlike traditional multi-hop or legal QA, this task requires structured procedural lookups and evidence-set closure rather than entity resolution or case-law reasoning. Existing RAG systems struggle here due to flattened citation edges, fragmented retrieval expansions, and fragile post-hoc attribution. We formalize Regulatory Compliance QA with RegOps-Bench, a novel benchmark featuring an Operational Knowledge Graph derived from complex national R\&D regulations. To address these bottlenecks, we propose RefWalk, a unified framework driven by a shared topic anchor. RefWalk traverses cross-document citations, fuses multi-view candidates via max-based aggregation, and enforces per-rule attribution to explicitly map claims to sources. We establish a strong baseline with substantial improvements in retrieval recall and citation accuracy. Finally, a contrastive evaluation on a U.S. health compliance dataset (HIPAA) reveals that existing systems exhibit saturation on flat-structure rules, underscoring the need for RegOps-Bench. Our code is available at https://github.com/yeongjoonJu/RefWalk.
+
+部署大型语言模型（LLM）以实现监管合规性需要通过跨多层权威结构的全面引用来实现严格的可追溯性。与传统的多跳或法律 QA 不同，此任务需要结构化的程序查找和证据集闭合，而不是实体解析或判例推理。由于平坦的引文边缘、分散的检索扩展和脆弱的事后归因，现有的 RAG 系统在这方面举步维艰。我们通过 RegOps-Bench 正式化监管合规 QA，RegOps-Bench 是一种新颖的基准，具有源自复杂的国家研发法规的操作知识图。为了解决这些瓶颈，我们提出了 RefWalk，这是一个由共享主题锚驱动的统一框架。 RefWalk 遍历跨文档引用，通过基于最大值的聚合融合多视图候选，并强制执行每规则归因以将声明明确映射到来源。我们建立了强大的基线，在检索召回率和引用准确性方面取得了显着的进步。最后，对美国健康合规数据集 (HIPAA) 的对比评估表明，现有系统在扁平结构规则上表现出饱和，强调了 RegOps-Bench 的必要性。我们的代码可在 https://github.com/ungjoonJu/RefWalk 获取。
+
+</details>
+
+---
+
+## 7. TAE: Target-aware enhancer for nighttime UAV tracking / TAE：用于夜间无人机跟踪的目标感知增强器
+
+**Date**: 2026-05-28 | **arXiv**: [2605.29558v1](http://arxiv.org/abs/2605.29558v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.29558v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/Fu0511/DarkSOT-Dataset.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Severe image degradation under low-light nighttime conditions constitutes a core bottleneck preventing all-day applications for UAV-based single object tracking. Existing image enhancement methods often struggle to distinguish between target and background regions, which can easily lead to amplified background noise or compromise target features. To overcome this limitation, we propose TAE, a target-aware low-light enhancement framework tailored for nighttime object tracking. Guided explicitly by weak supervisory signals from tracking bounding boxes, the framework performs region-aware enhancement to ensure operations focus on the target area. It further adopts an adaptive RGB multi-curve fusion mechanism to achieve refined modeling and adaptive adjustment across different regions. To facilitate research in this domain, we also contribute DarkSOT, a new benchmark for nighttime UAV tracking, comprising 268 sequences across 9 target categories. Experimental results on the DarkSOT and UAVDark135 demonstrate that TAE significantly improves tracking performance in low-light nighttime scenarios, exhibiting strong robustness and generalization. The DarkSOT dataset is available at https://github.com/Fu0511/DarkSOT-Dataset.
+
+夜间弱光条件下图像严重退化是无人机单目标跟踪全天应用的核心瓶颈。现有的图像增强方法通常难以区分目标区域和背景区域，这很容易导致背景噪声放大或损害目标特征。为了克服这一限制，我们提出了 TAE，一种专为夜间目标跟踪而设计的目标感知微光增强框架。在跟踪边​​界框的微弱监督信号的明确指导下，该框架执行区域感知增强，以确保操作集中在目标区域。进一步采用自适应RGB多曲线融合机制，实现不同区域的精细化建模和自适应调整。为了促进该领域的研究，我们还贡献了 DarkSOT，这是夜间无人机跟踪的新基准，包含 9 个目标类别的 268 个序列。在DarkSOT和UAVDark135上的实验结果表明，TAE显着提高了弱光夜间场景下的跟踪性能，表现出很强的鲁棒性和泛化性。 DarkSOT 数据集可从 https://github.com/Fu0511/DarkSOT-Dataset 获取。
+
+</details>
+
+---
+
+## 8. V2XCrafter: Learning to Generate Driving Scene Across Agents / V2XCrafter：学习跨代理生成驾驶场景
+
+**Date**: 2026-05-28 | **arXiv**: [2605.29471v1](http://arxiv.org/abs/2605.29471v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.29471v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Collaborative driving systems leverage vehicle-to-everything (V2X) communication for multi-agent collaborative perception to enhance driving safety, yet they remain constrained by scarce annotated real-world V2X driving datasets and limited generalization across diverse driving conditions. While image generation technology offers a feasible solution for data augmentation, existing methods tailored for single-vehicle multi-view scenarios face two fundamental challenges in multi-agent driving settings: (1) the expansion of the learning objective degrades generation quality, and (2) the highly dynamic variations across agents hinder the modeling of consistency for physical attributes (e.g., color, category) in jointly observed objects. To bridge this gap, we propose V2XCrafter, the first framework for generating controllable and realistic collaborative driving scene across agents' camera views. For effective learning, we develop a progressive multi-agent diffusion model based on a single-agent backbone, using neighboring agents' latent states as reference signals to progressively guide the single-to-multi diffusion. To address cross-vehicle inconsistency, we propose a cross-agent attention module that leverages a collaboration view graph and learnable jointly observed object representation to model the dynamic cross-agent camera view relationships. Experiments have shown that V2XCrafter can generate high-fidelity and controllable street views with consistency across agents, thereby effectively enhancing the downstream collaborative 3D object detection tasks.
+
+协作驾驶系统利用车与万物 (V2X) 通信进行多智能体协作感知，以提高驾驶安全性，但它们仍然受到稀缺带注释的现实世界 V2X 驾驶数据集和不同驾驶条件下泛化能力有限的限制。虽然图像生成技术为数据增强提供了可行的解决方案，但针对单车多视图场景定制的现有方法在多智能体驾驶设置中面临着两个基本挑战：（1）学习目标的扩展降低了生成质量，（2）智能体之间的高度动态变化阻碍了联合观察对象中物理属性（例如颜色、类别）一致性的建模。为了弥补这一差距，我们提出了 V2XCrafter，这是第一个跨代理摄像机视图生成可控且真实的协作驾驶场景的框架。为了有效学习，我们开发了一种基于单智能体主干的渐进式多智能体扩散模型，使用相邻智能体的潜在状态作为参考信号来逐步引导单向多扩散。为了解决跨车辆不一致问题，我们提出了一种跨智能体注意力模块，该模块利用协作视图图和可学习的联合观察对象表示来对动态跨智能体相机视图关系进行建模。实验表明，V2XCrafter 可以生成高保真、可控的街景，且各个智能体之间具有一致性，从而有效增强下游协作 3D 物体检测任务。
+
+</details>
+
+---
+
+## 9. A Deep Learning Iterative Framework for Sentinel-1 Stripmap Enhancement Based on Azimuth Doppler Decomposition / 基于方位多普勒分解的 Sentinel-1 带状图增强的深度学习迭代框架
+
+**Date**: 2026-05-27 | **arXiv**: [2605.29088v1](http://arxiv.org/abs/2605.29088v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.29088v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Synthetic Aperture Radar (SAR) imagery enables all-weather, day-and-night Earth observation; however, it remains difficult to interpret due to speckle noise and other intrinsic imaging artifacts. Sentinel-1 (S1) constitutes one of the most widely used spaceborne SAR missions, offering systematic global coverage, high temporal resolution, dual-polarization imaging, and free data availability. Among S1 modes, Stripmap (SM) provides the highest resolution, yet speckle noise and spatial constraints often hinder applications requiring finer spatial detail. This motivates the need for effective image enhancement strategies. In this work, we propose a self-supervised enhancement framework for S1 SM imagery based on azimuth subaperture decomposition. The method exploits the physical consistency between subaperture reconstructions and the corresponding full-aperture image to generate paired training data without external sensors, simulated ground truth, or multi-temporal stacks. The proposed framework integrates single- and multi-frame learning and incorporates an iterative inference scheme that progressively refines image quality. Experiments on real S1 SM data show that the proposed approach consistently outperforms the widely adopted self-supervised deep learning baseline MERLIN, in terms of PSNR and SSIM, while MERLIN attains higher ENL, highlighting a trade-off between structural fidelity and speckle smoothing. Overall, the results demonstrate that subaperture-based supervision provides a physically grounded, reproducible, and operationally viable approach for SAR image enhancement using S1 data. It is worth noting that the proposed approach can be extended to other SAR platforms, polarizations, and acquisition modes.
+
+合成孔径雷达（SAR）图像可实现全天候、昼夜地球观测；然而，由于散斑噪声和其他固有成像伪影，它仍然难以解释。 Sentinel-1 (S1) 是使用最广泛的星载 SAR 任务之一，提供系统的全球覆盖、高时间分辨率、双偏振成像和免费数据可用性。在 S1 模式中，Stripmap (SM) 提供最高分辨率，但散斑噪声和空间限制通常会阻碍需要更精细空间细节的应用。这激发了对有效图像增强策略的需求。在这项工作中，我们提出了一种基于方位子孔径分解的 S1 SM 图像自监督增强框架。该方法利用子孔径重建和相应的全孔径图像之间的物理一致性来生成配对训练数据，而无需外部传感器、模拟地面实况或多时态堆栈。所提出的框架集成了单帧和多帧学习，并结合了逐步细化图像质量的迭代推理方案。对真实 S1 SM 数据的实验表明，在 PSNR 和 SSIM 方面，所提出的方法始终优于广泛采用的自监督深度学习基线 MERLIN，而 MERLIN 获得了更高的 ENL，突出了结构保真度和斑点平滑之间的权衡。总体而言，结果表明，基于子孔径的监督为使用 S1 数据的 SAR 图像增强提供了一种物理基础、可重复且操作可行的方法。值得注意的是，所提出的方法可以扩展到其他 SAR 平台、偏振和采集模式。
+
+</details>
+
+---
+
+## 10. HarmoVid: Relightful Video Portrait Harmonization / HarmoVid：令人愉悦的视频肖像协调
+
+**Date**: 2026-05-27 | **arXiv**: [2605.28811v1](http://arxiv.org/abs/2605.28811v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.28811v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present a method for harmonizing the lighting of a foreground video to match a target background scene, adjusting shadows, color tone, and illumination intensity (relightful harmonization). Unlike images, acquiring labeled data for videos, where identical motions are recorded under different lighting conditions, is practically infeasible and non-scalable. While one way to create such paired data is to apply existing image-based harmonization models frame by frame to a video, the resulting outputs often suffer from significant temporal jitters. We overcome this problem by introducing a novel lighting deflickering model that can stabilize the global and local lighting flickering artifacts. Our video diffusion model learns from these upgraded deflickered data with a volume of real and synthetic videos to generate high-quality video harmonization results. We further propose an asymmetric alpha mask conditioning technique to learn the clean boundaries from real videos. Experiments demonstrate that our model achieves strong temporal coherence, naturalness, cleaner boundaries, and physically meaningful lighting behavior, while maintaining strong relighting expressiveness compared to prior image-based and video-based harmonization methods.
+
+我们提出了一种协调前景视频的照明以匹配目标背景场景、调整阴影、色调和照明强度（轻松协调）的方法。与图像不同，获取视频的标记数据（在不同的照明条件下记录相同的运动）实际上是不可行且不可扩展的。虽然创建此类配对数据的一种方法是将现有的基于图像的协调模型逐帧应用于视频，但所得输出通常会遭受严重的时间抖动。我们通过引入一种新颖的照明去闪烁模型来克服这个问题，该模型可以稳定全局和局部照明闪烁伪影。我们的视频扩散模型从这些升级的去闪烁数据以及大量真实和合成视频中学习，以生成高质量的视频协调结果。我们进一步提出了一种非对称 alpha 掩模调节技术，以从真实视频中学习清晰的边界。实验表明，与先前基于图像和基于视频的协调方法相比，我们的模型实现了强大的时间连贯性、自然性、更清晰的边界和物理上有意义的照明行为，同时保持了强大的重新照明表现力。
+
+</details>
+
+---
+
+## 11. A Multiscale Kinetic Framework for Image Segmentation: From Particle Systems to Continuum Models / 图像分割的多尺度动力学框架：从粒子系统到连续体模型
+
+**Date**: 2026-05-27 | **arXiv**: [2605.28619v1](http://arxiv.org/abs/2605.28619v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.28619v1)
+
+**Categories**: cs.CV, nlin.AO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In this work, we present a multiscale kinetic framework for consensus-based image segmentation. By interpreting an image as a system of interacting particles, each pixel is characterised by its spatial position and an internal feature encoding color information. We introduce a coupled interaction scheme governing the evolution of particles in both position and feature spaces, from which we derive a kinetic formulation for the particle density in the space-feature domain combining transport, aggregation, and diffusion effects. Furthermore, through a suitable scaling, we obtain a first-order macroscopic model describing the evolution of the fraction of pixels carrying information on the fraction of pixels having a certain feature. Based on this reduced-complexity model, we present a data-oriented approach where we make use of particle-based optimisation techniques for the accurate segmentation of images. Numerical tests show the effectiveness of the proposed framework and its robustness under different noise conditions.
+
+在这项工作中，我们提出了一个基于共识的图像分割的多尺度动力学框架。通过将图像解释为相互作用的粒子系统，每个像素都以其空间位置和编码颜色信息的内部特征为特征。我们引入了一种控制粒子在位置和特征空间中演化的耦合相互作用方案，从中我们得出了结合传输、聚集和扩散效应的空间特征域中粒子密度的动力学公式。此外，通过适当的缩放，我们获得了描述携带具有特定特征的像素部分的信息的像素部分的演化的一阶宏观模型。基于这种降低复杂性的模型，我们提出了一种面向数据的方法，利用基于粒子的优化技术来精确分割图像。数值测试表明了所提出框架的有效性及其在不同噪声条件下的鲁棒性。
+
+</details>
+
+---
+
+## 12. Internally Referenced Low-Light Enhancement / 内部参考低光增强
+
+**Date**: 2026-05-27 | **arXiv**: [2605.28605v1](http://arxiv.org/abs/2605.28605v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.28605v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Self-supervised low-light image enhancement (LLIE) is highly appealing as it eliminates the reliance on external paired data. However, the lack of external references causes networks to struggle with decoupling entangled illumination, delicate textures, and amplified noise. To resolve this challenge, we propose an Internally Referenced LLIE framework that extracts reliable physical and structural references from the degraded input image itself. First, we introduce a local exposure-simulated scheme to extract a low-frequency pseudo ground-truth. This serves as an internal physical reference to guide global illumination estimation and correct color casts. Second, we propose a dual-domain preservation strategy with spatial and spectral constraints to construct internal structural references. Specifically, an Illumination-Aligned Perceptual loss preserves global structures under illumination shifts, while a Shift-Invariant Spectral Correlation loss captures fine-grained local structures and suppresses high-frequency noise. Finally, we propose a Gain-Adaptive Feature Modulation (GAFM) mechanism to address highly spatially-variant residual noise. By transforming the self-estimated illumination map into an internal spatial gain prior, GAFM dynamically guides a blind-spot network for spatially-aware denoising. Extensive experiments demonstrate that our method achieves state-of-the-art performance, delivering superior noise suppression and textural fidelity. Code will be publicly released at https://visonj.github.io/IRLE/.
+
+自监督低光图像增强（LLIE）非常有吸引力，因为它消除了对外部配对数据的依赖。然而，缺乏外部参考导致网络难以解耦纠缠的照明、精致的纹理和放大的噪声。为了解决这一挑战，我们提出了一个内部参考 LLIE 框架，该框架从降级的输入图像本身提取可靠的物理和结构参考。首先，我们引入局部曝光模拟方案来提取低频伪地面实况。这可作为内部物理参考来指导全局照明估计和校正色偏。其次，我们提出了一种具有空间和光谱约束的双域保存策略来构建内部结构参考。具体来说，照明对齐感知损失在照明变化下保留全局结构，而变化不变频谱相关损失捕获细粒度局部结构并抑制高频噪声。最后，我们提出了一种增益自适应特征调制（GAFM）机制来解决高度空间变化的残余噪声。通过将自估计的照明图转换为内部空间增益先验，GAFM 动态引导盲点网络进行空间感知去噪。大量的实验表明，我们的方法实现了最先进的性能，提供了卓越的噪声抑制和纹理保真度。代码将在 https://visonj.github.io/IRLE/ 公开发布。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-05-29 (8 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-05-29
