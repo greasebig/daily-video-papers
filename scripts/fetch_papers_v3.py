@@ -59,6 +59,28 @@ if not STRICT_KEYWORDS and not CONTEXT_KEYWORDS:
 
 STRICT_PATTERN = re.compile(r"\b(" + "|".join(map(re.escape, STRICT_KEYWORDS)) + r")\b") if STRICT_KEYWORDS else None
 CONTEXT_PATTERN = re.compile(r"\b(" + "|".join(map(re.escape, CONTEXT_KEYWORDS)) + r")\b") if CONTEXT_KEYWORDS else None
+IS_TONE_COLOR_TOPIC = TOPIC_NAME.lower().replace("&", "and").strip() in {"tone and color", "tone color"}
+
+TONE_COLOR_CORE_PHRASES = [
+    "tone mapping", "color grading", "colour grading", "color correction", "colour correction",
+    "cinematic color", "cinematic colour", "color harmony", "colour harmony", "color palette",
+    "colour palette", "color transfer", "colour transfer", "color constancy", "colour constancy",
+    "color science", "colour science", "color space", "colour space", "white balance",
+    "color cast", "colour cast", "colorization", "colourization", "hdr", "high dynamic range",
+    "low-light enhancement", "exposure correction", "illumination correction",
+]
+TONE_COLOR_VISUAL_TERMS = [
+    "image", "video", "photo", "photograph", "visual", "cinematic", "camera", "rendering",
+    "display", "scene", "aesthetic", "appearance", "lighting", "illumination", "exposure",
+]
+TONE_COLOR_WEAK_TERMS = [
+    "color", "colour", "tone", "hue", "saturation", "contrast", "brightness", "chroma",
+    "luminance", "chromatic", "palette", "aesthetic",
+]
+TONE_COLOR_NEGATIVE_CONTEXTS = [
+    "tone-controllable text", "tone controllable text", "text tone", "sentiment", "emotion",
+    "speech tone", "audio tone", "tone of voice", "roadtones", "caption tone", "communication tone",
+]
 
 
 def _ts():
@@ -161,6 +183,8 @@ def fetch_arxiv_papers(category, days=3, max_retries=3):
 
 
 def is_topic_related(paper):
+    if IS_TONE_COLOR_TOPIC:
+        return is_tone_color_related(paper)
     if not STRICT_PATTERN and not CONTEXT_PATTERN:
         return True
     text = (paper.get("title", "") + " " + paper.get("summary", "")).lower()
@@ -171,6 +195,44 @@ def is_topic_related(paper):
             return REQUIRED_WORD in text
         return True
     return False
+
+
+def _contains_any(text, terms):
+    return any(term in text for term in terms)
+
+
+def is_tone_color_related(paper):
+    """Score Tone & Color papers tightly to avoid generic "color" false positives."""
+    title = paper.get("title", "").lower()
+    summary = paper.get("summary", "").lower()
+    text = f"{title} {summary}"
+
+    if not _contains_any(text, TONE_COLOR_WEAK_TERMS + TONE_COLOR_CORE_PHRASES):
+        return False
+
+    score = 0
+    for phrase in TONE_COLOR_CORE_PHRASES:
+        if phrase in title:
+            score += 4
+        elif phrase in summary:
+            score += 3
+
+    for term in TONE_COLOR_WEAK_TERMS:
+        if term in title:
+            score += 2
+        elif term in summary:
+            score += 1
+
+    has_visual_context = _contains_any(text, TONE_COLOR_VISUAL_TERMS)
+    if has_visual_context:
+        score += 2
+
+    if _contains_any(text, TONE_COLOR_NEGATIVE_CONTEXTS):
+        score -= 4
+
+    title_has_core_signal = _contains_any(title, TONE_COLOR_CORE_PHRASES + TONE_COLOR_WEAK_TERMS)
+    summary_has_core_phrase = _contains_any(summary, TONE_COLOR_CORE_PHRASES)
+    return has_visual_context and (title_has_core_signal or summary_has_core_phrase) and score >= 5
 
 
 def extract_links(paper):
@@ -317,10 +379,10 @@ def build_docs_site(repo_root, topic_slug, topic_name, papers_dir):
     .nav-top {{
       display: flex;
       flex-wrap: wrap;
-      justify-content: flex-start;
+      justify-content: center;
       gap: 10px;
       padding: 20px 0 0 0;
-      margin-bottom: 8px;
+      margin-bottom: 18px;
     }}
     .nav-btn {{
       padding: 9px 18px;
@@ -360,22 +422,54 @@ def build_docs_site(repo_root, topic_slug, topic_name, papers_dir):
       box-shadow: 0 8px 24px rgba(0,0,0,0.32);
     }}
     
-    /* Floating Bottom Navigation */
+    .site-switcher {{
+      margin-top: 28px;
+      padding: 18px;
+      border-radius: 24px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.45);
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }}
+    .site-switcher span {{
+      width: 100%;
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }}
+
+    /* Floating Day Navigation */
     .nav-bottom {{
       position: fixed;
-      bottom: 20px;
-      left: 20px;
+      bottom: 18px;
+      left: 50%;
+      transform: translateX(-50%);
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 8px;
       z-index: 999;
-      max-width: 120px;
+      max-width: min(92vw, 560px);
+      padding: 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(12,36,66,0.12);
+      background: rgba(255,255,255,0.62);
+      box-shadow: 0 14px 34px rgba(26,60,90,0.16);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
     }}
     .nav-bottom button {{
-      padding: 8px 12px;
+      padding: 8px 14px;
       font-size: 12px;
       text-align: center;
-      background: rgba(255,255,255,0.55);
+      background: rgba(255,255,255,0.7);
       border: 1px solid rgba(12,36,66,0.14);
       color: var(--ink);
       border-radius: 999px;
@@ -394,14 +488,14 @@ def build_docs_site(repo_root, topic_slug, topic_name, papers_dir):
     }}
     
     .nav-bottom button:disabled {{
-      opacity: 0.5;
+      opacity: 0.42;
       cursor: not-allowed;
+      transform: none;
     }}
-    .nav-btn.github:hover {{
-      background: #24292e;
-      border-color: #555;
-      color: #fff;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.32);
+    @media (max-width: 640px) {{
+      .wrap {{ padding-bottom: 132px; }}
+      .nav-bottom {{ border-radius: 24px; }}
+      .nav-bottom button {{ flex: 1 1 42%; }}
     }}
   </style>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -421,6 +515,8 @@ def build_docs_site(repo_root, topic_slug, topic_name, papers_dir):
       <a href="../video/index.html" class="nav-btn">📹 Video</a>
       <a href="../world-model/index.html" class="nav-btn">🌍 World Model</a>
       <a href="../agent/index.html" class="nav-btn">🤖 Agent</a>
+      <a href="https://greasebig.github.io" target="_blank" class="nav-btn">🏠 Homepage</a>
+      <a href="https://greasebig.github.io/awesome-agent-everything/" target="_blank" class="nav-btn">🧭 Agent Index</a>
       <a href="https://github.com/greasebig/daily-video-papers" target="_blank" class="nav-btn github">⭐ GitHub</a>
     </div>
     <h1>{topic_name} Papers</h1>
@@ -428,6 +524,12 @@ def build_docs_site(repo_root, topic_slug, topic_name, papers_dir):
     <div class="layout">
       <div class="panel list" id="list"></div>
       <div class="content" id="content">Select a date to load papers.</div>
+    </div>
+    <div class="site-switcher">
+      <span>More from greasebig</span>
+      <a href="https://greasebig.github.io" target="_blank" class="nav-btn">🏠 Homepage</a>
+      <a href="https://greasebig.github.io/daily-video-papers/" target="_blank" class="nav-btn">📚 Papers Hub</a>
+      <a href="https://greasebig.github.io/awesome-agent-everything/" target="_blank" class="nav-btn">🧭 Agent Index</a>
     </div>
   </div>
   <script>
@@ -484,7 +586,7 @@ def build_docs_site(repo_root, topic_slug, topic_name, papers_dir):
       navBottom.appendChild(btnForward);
       
       const btnPrevDay = document.createElement('button');
-      btnPrevDay.textContent = '⬆ Prev Day';
+      btnPrevDay.textContent = '← Older Day';
       btnPrevDay.disabled = !canPrevDay;
       btnPrevDay.onclick = () => {{
         const idx = files.indexOf(currentFile);
@@ -496,7 +598,7 @@ def build_docs_site(repo_root, topic_slug, topic_name, papers_dir):
       navBottom.appendChild(btnPrevDay);
       
       const btnNextDay = document.createElement('button');
-      btnNextDay.textContent = '⬇ Next Day';
+      btnNextDay.textContent = 'Newer Day →';
       btnNextDay.disabled = !canNextDay;
       btnNextDay.onclick = () => {{
         const idx = files.indexOf(currentFile);
