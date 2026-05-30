@@ -1,0 +1,204 @@
+name: Daily Video Papers Update
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # UTC 02:00 (Beijing 10:00)
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: daily-video-papers
+  cancel-in-progress: false
+
+env:
+  TZ: Asia/Shanghai
+
+jobs:
+  update-papers:
+    if: ${{ github.actor != 'github-actions[bot]' }}
+    runs-on: ubuntu-latest
+    services:
+      libretranslate:
+        image: libretranslate/libretranslate:latest
+        ports:
+          - 5000:5000
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Sync with main
+        run: |
+          git pull --rebase origin main || true
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+          pip install openai
+      - name: Run paper fetcher
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          TRANSLATION_CHAIN: mymemory,libretranslate
+          LIBRETRANSLATE_URL: http://localhost:5000
+          MYMEMORY_EMAIL: lujundaljdljd@163.com
+          TRANSLATION_SLEEP: '0.6'
+          REBUILD: "0"
+        run: |
+          VERSION="${{ vars.VERSION }}"
+          if [ -z "$VERSION" ]; then VERSION="v3"; fi
+          cd scripts
+          python3 fetch_papers_$VERSION.py
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add papers/ README.md docs/video/
+          if git diff --staged --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Update video papers - $(date +'%Y-%m-%d')"
+            git push
+          fi
+
+  update-world-model:
+    needs: update-papers
+    if: ${{ github.actor != 'github-actions[bot]' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Sync with main
+        run: |
+          git pull --rebase origin main || true
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run world model fetcher (v3)
+        env:
+          TOPIC_NAME: World Model
+          OUTPUT_DIR: world-model
+          REBUILD: "0"
+          CATEGORIES: cs.AI,cs.LG,cs.CL,cs.RO
+          KEYWORDS: world model,world models,world-model,worldmodel,dynamics model,latent world model,model-based reinforcement learning,model-based RL,model-based control,imagination,planet,dreamer
+          MYMEMORY_EMAIL: lujundaljdljd@163.com
+        run: |
+          cd scripts
+          python3 fetch_papers_v3.py
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add world-model/README.md world-model/papers/ docs/world-model/
+          if git diff --staged --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Update world model papers - $(date +'%Y-%m-%d')"
+            git push
+          fi
+
+  update-agent:
+    needs: update-world-model
+    if: ${{ github.actor != 'github-actions[bot]' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Sync with main
+        run: |
+          git pull --rebase origin main || true
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run agent fetcher (v3)
+        env:
+          TOPIC_NAME: Agent
+          OUTPUT_DIR: agent
+          REBUILD: "0"
+          CATEGORIES: cs.AI,cs.CL,cs.LG,cs.RO
+          KEYWORDS: autonomous agent,agentic,multi-agent,multi agent,tool use,tool-use,toolformer
+          CONTEXT_KEYWORDS: tool use,tool-use,multi-agent,agentic,autonomous
+          REQUIRED_WORD: agent
+          MYMEMORY_EMAIL: lujundaljdljd@163.com
+        run: |
+          cd scripts
+          python3 fetch_papers_v3.py
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add agent/README.md agent/papers/ docs/agent/
+          if git diff --staged --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Update agent papers - $(date +'%Y-%m-%d')"
+            git push
+          fi
+
+  update-tone-color:
+    needs: update-agent
+    if: ${{ github.actor != 'github-actions[bot]' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Sync with main
+        run: |
+          git pull --rebase origin main || true
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run tone & color fetcher (v3)
+        env:
+          TOPIC_NAME: Tone & Color
+          OUTPUT_DIR: tone-color
+          REBUILD: "0"
+          DAYS_TO_CHECK: "30"
+          CATEGORIES: cs.CV,cs.AI,cs.MM,cs.GR,eess.IV
+          KEYWORDS: tone mapping,color grading,colour grading,color correction,colour correction,cinematic color,cinematic colour,color harmony,colour harmony,color palette,colour palette,color transfer,colour transfer,color constancy,colour constancy,color science,colour science,color space,colour space,white balance,color cast,colour cast,colorization,colourization,hdr,high dynamic range,low-light enhancement,exposure correction,illumination correction,color enhancement,colour enhancement,visual aesthetics,image enhancement,tone adjustment
+          CONTEXT_KEYWORDS: color grading,colour grading,tone mapping,color correction,colour correction,hdr,colorization,colourization,white balance,low-light enhancement,exposure correction,illumination,color enhancement,visual aesthetics
+          REQUIRED_WORD: color
+          MYMEMORY_EMAIL: lujundaljdljd@163.com
+        run: |
+          cd scripts
+          python3 fetch_papers_v3.py
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add tone-color/README.md tone-color/papers/ docs/tone-color/
+          if git diff --staged --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Update tone & color papers - $(date +'%Y-%m-%d')"
+            git push
+          fi
+
+  notify-telegram:
+    needs: update-tone-color
+    if: ${{ github.actor != 'github-actions[bot]' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Telegram notification
+        run: |
+          WEBSITE_URL="https://greasebig.github.io/daily-video-papers/"
+          curl -s "https://api.telegram.org/bot${TG_BOT_TOKEN}/sendMessage" \
+            -d chat_id="${TG_CHAT_ID}" \
+            -d text="✅ Daily papers updated: ${GITHUB_REPOSITORY} - $(date +'%Y-%m-%d' )%0A🔗 Website: ${WEBSITE_URL}"
+        env:
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
