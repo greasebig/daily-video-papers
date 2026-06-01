@@ -27,6 +27,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-06-01](papers/2026-06-01.md) - 1 papers
 - [2026-05-31](papers/2026-05-31.md) - 17 papers
 - [2026-05-30](papers/2026-05-30.md) - 1 papers
 - [2026-05-28](papers/2026-05-28.md) - 28 papers
@@ -107,6 +108,34 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-06-01 (1 papers)</b></summary>
+
+# arXiv Video Papers - 2026-06-01
+
+**Paper Count**: 1
+
+---
+
+## 1. Remembering by Reconstructing: Domain Incremental Learning With Test-Time Training on Video Streams / 通过重构来记忆：通过视频流测试时训练进行领域增量学习
+
+**Date**: 2026-05-29 | **arXiv**: [2605.31108v1](http://arxiv.org/abs/2605.31108v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.31108v1)
+
+**Categories**: cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In this work we introduce a novel approach to domain incremental learning, adapting models over time to evolving, non-stationary data. In contrast to other works, we do not attempt to avoid catastrophic forgetting, but rather allow it and exploit it. Our model combines a main task head with a self-supervised masked autoencoder (MAE) head. We then learn domain-specific LoRA adapters during incremental training. Each adapter specializes to its domain, naturally inducing forgetting on other domains in both heads. At inference, we perform online test-time training on the self-supervised MAE head to identify which LoRAs best matches the current input, so the model can `remember' the domain again. Our scheme is especially well-suited to real-world streaming data, such as video, where consecutive samples are highly correlated and domain shifts are gradual. We demonstrate our method on domain-incremental action recognition and semantic segmentation tasks.
+
+在这项工作中，我们引入了一种新的领域增量学习方法，随着时间的推移使模型适应不断变化的非平稳数据。与其他作品相比，我们并不试图避免灾难性的遗忘，而是允许它并利用它。我们的模型将主要任务头与自监督掩码自动编码器（MAE）头相结合。然后，我们在增量训练期间学习特定领域的 LoRA 适配器。每个适配器专门针对其领域，自然会导致两个头脑中忘记其他领域。在推理时，我们对自监督 MAE 头进行在线测试时训练，以确定哪些 LoRA 最匹配当前输入，以便模型可以再次“记住”域。我们的方案特别适合现实世界的流数据，例如视频，其中连续样本高度相关并且域转移是渐进的。我们展示了我们在领域增量动作识别和语义分割任务上的方法。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-05-31 (17 papers)</b></summary>
 
 # arXiv Video Papers - 2026-05-31
