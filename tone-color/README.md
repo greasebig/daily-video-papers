@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-06-03](papers/2026-06-03.md) - 2 papers
 - [2026-06-01](papers/2026-06-01.md) - 1 papers
 - [2026-05-31](papers/2026-05-31.md) - 1 papers
 - [2026-05-30](papers/2026-05-30.md) - 12 papers
@@ -23,6 +24,50 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-06-03 (2 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-06-03
+
+**Paper Count**: 2
+
+---
+
+## 1. Pixel Cube: Diffusion-based Portrait Video Relighting Through Realistic Lighting Reproduction / Pixel Cube：通过逼真的照明再现进行基于扩散的人像视频重新照明
+
+**Date**: 2026-06-01 | **arXiv**: [2606.02919v1](http://arxiv.org/abs/2606.02919v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.02919v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present a diffusion-based method for relighting dynamic portrait videos with photorealism and temporal consistency. Our method is fueled by a hybrid training dataset that consists of real-captured and rendered dynamic portrait videos with diverse subject appearances, facial motions, head poses, and known lighting conditions. Specifically, we construct an LED-based lighting system for realistic lighting emulation and high-speed video relighting data acquisition. By leveraging the image priors embedded in pre-trained video diffusion models, and using per-frame high dynamic range (HDR) environment map as lighting control, we train a high-performance generative model for realistic and identity-preserving dynamic portrait video relighting. In addition to the environment map control, our model uses a synthesized background image to enable control on the camera's exposure level and color tone. Our model can produce temporally consistent relit portrait video that looks realistic and harmonious under a provided new environment and faithfully preserve the subject's expression and fine facial features, including skin tone, wrinkles, and facial hair. Our model generalizes well to unseen data, in terms of the subject appearance, motion, and lighting condition. We perform extensive experiments on relighting in-the-wild videos with various environment maps and demonstrate practical applications on portrait photography. Results show that our method achieves state-of-the-art performance in photorealism, lighting harmony, and temporal consistency.
+
+我们提出了一种基于扩散的方法，用于重新照亮具有真实感和时间一致性的动态肖像视频。我们的方法由混合训练数据集提供支持，该数据集由真实捕获和渲染的动态肖像视频组成，具有不同的主题外观、面部动作、头部姿势和已知的照明条件。具体来说，我们构建了一个基于 LED 的照明系统，用于逼真的照明仿真和高速视频重新照明数据采集。通过利用预先训练的视频扩散模型中嵌入的图像先验，并使用每帧高动态范围（HDR）环境图作为照明控制，我们训练了一个高性能生成模型，用于逼真且保留身份的动态肖像视频重新照明。除了环境贴图控制之外，我们的模型还使用合成的背景图像来控制相机的曝光级别和色调。我们的模型可以生成时间一致的重照人像视频，在提供的新环境下看起来逼真、和谐，并忠实地保留拍摄对象的表情和精细的面部特征，包括肤色、皱纹和面部毛发。我们的模型在主体外观、运动和照明条件方面很好地概括了看不见的数据。我们对使用各种环境地图重新照亮野外视频进行了广泛的实验，并演示了人像摄影的实际应用。结果表明，我们的方法在真实感、光照和谐和时间一致性方面实现了最先进的性能。
+
+</details>
+
+---
+
+## 2. NeR-SC: Adapting Neural Video Representation to Screen Content / NeR-SC：使神经视频表示适应屏幕内容
+
+**Date**: 2026-05-26 | **arXiv**: [2605.27024v1](http://arxiv.org/abs/2605.27024v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.27024v1)
+
+**Categories**: cs.CV, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Implicit neural representations have emerged as a promising paradigm for video compression, with recent methods achieving competitive performance on natural video. However, screen content video -- common in remote desktop, online education, and cloud gaming -- exhibits distinct statistics: sharp edges, limited color palettes, and strong temporal redundancy. Existing neural representation methods, designed for natural scenes, lack mechanisms to exploit these properties, leaving substantial room for improvement. In this paper, we propose NeR-SC, a neural representation framework tailored for screen content video. Building on the SNeRV backbone, NeR-SC introduces three screen-content-specific modules: (i) a learnable color palette that models the discrete color structure of screen content by restricting the low-frequency sub-band to a learned color set; (ii) a multi-gate dense fusion module that replaces sequential feature fusion with dense, attention-gated cross-stage interaction; and (iii) an embedding-level frame skip strategy that bypasses redundant decoder invocations for static frames, with zero training overhead. Experiments on DSCVC and VCD show that NeR-SC achieves 40.32~dB and 41.73~dB average PSNR, outperforming representative neural video representation methods and, at low bitrates, surpassing H.264 and H.265. The skip strategy enables real-time decoding with no loss in quality.
+
+隐式神经表示已成为视频压缩的一种有前途的范例，最近的方法在自然视频上实现了具有竞争力的性能。然而，屏幕内容视频（常见于远程桌面、在线教育和云游戏）表现出明显的统计数据：锐利的边缘、有限的调色板和强大的时间冗余。现有的针对自然场景设计的神经表示方法缺乏利用这些特性的机制，因此留下了很大的改进空间。在本文中，我们提出了 NeR-SC，一种专为屏幕内容视频量身定制的神经表示框架。 NeR-SC 基于 SNeRV 主干网络，引入了三个特定于屏幕内容的模块：（i）可学习的调色板，通过将低频子带限制为学习的颜色集来模拟屏幕内容的离散颜色结构； (ii) 多门密集融合模块，用密集、注意力门控的跨阶段交互取代顺序特征融合； (iii) 嵌入级跳帧策略，绕过静态帧的冗余解码器调用，训练开销为零。在 DSCVC 和 VCD 上的实验表明，NeR-SC 的平均 PSNR 达到了 40.32~dB 和 41.73~dB，优于代表性的神经视频表示方法，并且在低比特率下超过了 H.264 和 H.265。跳过策略可以实现实时解码，且不会降低质量。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-06-01 (1 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-06-01
