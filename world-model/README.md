@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-06-04](papers/2026-06-04.md) - 1 papers
 - [2026-06-03](papers/2026-06-03.md) - 21 papers
 - [2026-06-01](papers/2026-06-01.md) - 2 papers
 - [2026-05-31](papers/2026-05-31.md) - 1 papers
@@ -83,6 +84,34 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-06-04 (1 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-06-04
+
+**Paper Count**: 1
+
+---
+
+## 1. MIRAGE: Mobile Agents with Implicit Reasoning and Generative World Models / MIRAGE：具有隐式推理和生成世界模型的移动代理
+
+**Date**: 2026-06-03 | **arXiv**: [2606.04627v1](http://arxiv.org/abs/2606.04627v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.04627v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Mobile agents are increasingly expected to operate everyday applications from screenshots and language goals, where reliable control requires reasoning over screen affordances, multi-step navigation, and future state changes. However, many agents externalize this computation as long textual chains of thought, which slows interaction, increases supervision cost, and complicates deployment. We introduce MIRAGE, a framework that learns continuous latent reasoning representations from visible textual reasoning traces. MIRAGE transfers explicit reasoning into compact hidden states, enabling the agent to reason internally without decoding long rationales. It also incorporates a generative world-model objective: latent reasoning vectors are aligned with future screenshots, encouraging the agent to anticipate upcoming interface states before acting. This turns hidden computation into both a compressed thought representation and a forward-looking model of environment dynamics. At inference time, MIRAGE reasons in continuous latent space, reducing token generation while improving execution efficiency. On AndroidWorld, MIRAGE matches explicit chain-of-thought supervised fine-tuning in the 4B ablation with a 3-5x lower decoded-token budget and improves a comparable instruction-tuned baseline by 10.2 points; on AndroidControl, it improves action grounding while generating over 75% fewer tokens.
+
+人们越来越期望移动代理能够通过屏幕截图和语言目标来操作日常应用程序，其中可靠的控制需要对屏幕可供性、多步导航和未来状态变化进行推理。然而，许多代理将这种计算外部化为长文本思想链，这减慢了交互，增加了监督成本并使部署复杂化。我们引入了 MIRAGE，一个从可见文本推理痕迹中学习连续潜在推理表示的框架。 MIRAGE 将显式推理转换为紧凑的隐藏状态，使代理能够在内部进行推理，而无需解码长的基本原理。它还包含一个生成世界模型目标：潜在推理向量与未来的屏幕截图保持一致，鼓励代理在行动之前预测即将到来的界面状态。这将隐藏计算转变为压缩的思维表征和环境动态的前瞻性模型。在推理时，MIRAGE 在连续潜在空间中进行推理，减少 token 生成，同时提高执行效率。在 AndroidWorld 上，MIRAGE 在 4B 消融中匹配了明确的思想链监督微调，解码令牌预算降低了 3-5 倍，并将可比较的指令调整基线提高了 10.2 个点；在 AndroidControl 上，它改进了操作基础，同时生成的令牌减少了 75% 以上。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-06-03 (21 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-06-03
