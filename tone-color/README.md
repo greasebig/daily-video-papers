@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-06-07](papers/2026-06-07.md) - 2 papers
 - [2026-06-03](papers/2026-06-03.md) - 2 papers
 - [2026-06-01](papers/2026-06-01.md) - 1 papers
 - [2026-05-31](papers/2026-05-31.md) - 1 papers
@@ -24,6 +25,50 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-06-07 (2 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-06-07
+
+**Paper Count**: 2
+
+---
+
+## 1. A unified deeplearning framework for contrast-phase-specific virtual monochromatic imaging / 用于特定对比相位虚拟单色成像的统一深度学习框架
+
+**Date**: 2026-05-28 | **arXiv**: [2605.29753v1](http://arxiv.org/abs/2605.29753v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.29753v1)
+
+**Categories**: eess.IV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Dual-energy CT (DECT) enables virtual monochromatic imaging (VMI) and improved contrast resolution, but its clinical adoption is limited by hardware complexity and cost. In this work, we propose a unified deep learning framework that synthesizes contrast-phase-specific virtual monochromatic 50 keV images from single-energy CT (SECT) data by leveraging contrast phase information as a prior. The model is trained using DECT-derived 70 keV and 50 keV image pairs across four contrast phases -- Angio, Arterial, Portal, and Delayed -- using a novel prior conditioning architecture that integrates contrast phase priors into the energy transformation process. We demonstrate that the proposed unified model achieves contrast enhancement and generalizes well across contrast phases. Additionally, we show that the model can generate 50 keV-like images from SECT inputs, preserving contrast phase-specific dynamics.
+
+双能 CT (DECT) 可实现虚拟单色成像 (VMI) 并提高对比度分辨率，但其临床应用受到硬件复杂性和成本的限制。在这项工作中，我们提出了一个统一的深度学习框架，通过利用对比相位信息作为先验，从单能 CT (SECT) 数据合成对比相位特定的虚拟单色 50 keV 图像。该模型使用 DECT 衍生的 70 keV 和 50 keV 图像对进行训练，跨越四个对比阶段（血管、动脉、门户和延迟），使用一种新颖的先验调节架构，将对比阶段先验集成到能量转换过程中。我们证明了所提出的统一模型实现了对比度增强，并且在对比阶段具有良好的泛化能力。此外，我们还表明该模型可以从 SECT 输入生成类似 50 keV 的图像，从而保留对比相位特定的动态。
+
+</details>
+
+---
+
+## 2. LatentHDR: Decoupling Exposure from Diffusion via Conditional Latent-to-Latent Mapping for Text/Image-to-Panoramic HDR / LatentHDR：通过文本/图像到全景 HDR 的条件潜在到潜在映射将曝光与扩散解耦
+
+**Date**: 2026-05-11 | **arXiv**: [2605.11115v1](http://arxiv.org/abs/2605.11115v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.11115v1)
+
+**Categories**: cs.CV, cs.GR, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+High Dynamic Range (HDR) generation remains challenging for generative models, which are largely limited to low dynamic range outputs. Recent diffusionbased approaches approximate HDR by generating multiple exposure-conditioned samples, incurring high computational cost and structural inconsistencies across exposures. We propose LatentHDR, a framework that decouples scene generation from exposure modeling in latent space. A pretrained diffusion backbone produces a single coherent scene representation, while a lightweight conditional latent to-latent head deterministically maps it to exposure-specific representations. This enables the generation of a dense, structurally consistent exposure stack in a single pass. This design eliminates multi-pass diffusion, ensures cross-exposure alignment, and enables scalable HDR synthesis. LatentHDR supports both textand image-conditioned HDR generation for perspective and panoramic scenes. Experiments on synthetic data and the SI-HDR benchmark show that LatentHDR achieves state-of-the-art dynamic range with competitive perceptual quality, while reducing computation by an order of magnitude. Our results demonstrate that high-quality HDR generation can be achieved through structured latent modeling, challenging the need for stochastic multi-exposure generation.
+
+高动态范围（HDR）生成对于生成模型来说仍然具有挑战性，因为生成模型在很大程度上仅限于低动态范围输出。最近的基于扩散的方法通过生成多个曝光条件样本来近似 HDR，这会导致高计算成本和曝光之间的结构不一致。我们提出 LatentHDR，这是一个将场景生成与潜在空间中的曝光建模分离的框架。预训练的扩散主干产生单个连贯的场景表示，而轻量级条件潜在到潜在头确定性地将其映射到特定于曝光的表示。这使得能够在一次通过中生成密集的、结构一致的曝光堆栈。这种设计消除了多通道扩散，确保交叉曝光对齐，并实现可扩展的 HDR 合成。 LatentHDR 支持透视和全景场景的文本和图像条件 HDR 生成。对合成数据和 SI-HDR 基准的实验表明，LatentHDR 实现了最先进的动态范围和具有竞争力的感知质量，同时将计算量减少了一个数量级。我们的结果表明，可以通过结构化潜在建模实现高质量的 HDR 生成，从而挑战随机多重曝光生成的需求。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-06-03 (2 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-06-03
