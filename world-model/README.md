@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-06-07](papers/2026-06-07.md) - 4 papers
 - [2026-06-04](papers/2026-06-04.md) - 1 papers
 - [2026-06-03](papers/2026-06-03.md) - 21 papers
 - [2026-06-01](papers/2026-06-01.md) - 2 papers
@@ -84,6 +85,82 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-06-07 (4 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-06-07
+
+**Paper Count**: 4
+
+---
+
+## 1. MPCoT: Reward-Guided Multi-Path Latent Reasoning for Test-Time Scalable Vision-Language-Action / MPCoT：用于测试时间可扩展视觉-语言-动作的奖励引导多路径潜在推理
+
+**Date**: 2026-06-04 | **arXiv**: [2606.06245v1](http://arxiv.org/abs/2606.06245v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.06245v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision-Language-Action (VLA) policies remain brittle in long-horizon and high-uncertainty control, where one-pass action decoding provides limited inference-time deliberation. Explicit chain-of-thought can increase reasoning depth, but introduces token latency and an indirect text-to-action interface. We propose MPCoT, a reward-guided multi-path latent reasoning framework that initializes $M$ hypotheses, refines them for K weight-tied steps, and softly aggregates them before action decoding. A training-only path-preference objective evaluates candidate action branches with expert-action consistency, world-model/VLM-based progress, and success feedback to align the latent path scorer with downstream execution quality. MPCoT preserves the original 8-step action interface, generates zero reasoning tokens, and exposes configurable inference controls (K,M). Under matched protocols on LIBERO and CALVIN, MPCoT improves long-horizon performance, with ablations confirming depth-width effects, confidence-weighted aggregation, and reward-guided path supervision.
+
+视觉-语言-动作（VLA）策略在长期和高不确定性控制中仍然脆弱，其中一次性动作解码提供有限的推理时间审议。显式的思想链可以增加推理深度，但会引入令牌延迟和间接的文本到操作接口。我们提出了 MPCoT，一种奖励引导的多路径潜在推理框架，它初始化 $M$ 假设，针对 K 个权重绑定步骤对其进行细化，并在动作解码之前对它们进行软聚合。仅训练路径偏好目标通过专家操作一致性、基于世界模型/VLM 的进度和成功反馈来评估候选操作分支，以使潜在路径评分器与下游执行质量保持一致。 MPCoT 保留了原始的 8 步操作接口，生成零推理令牌，并公开可配置的推理控制（K，M）。在 LIBERO 和 CALVIN 上的匹配协议下，MPCoT 通过确认深度宽度效应的消融、置信加权聚合和奖励引导路径监督来提高长期性能。
+
+</details>
+
+---
+
+## 2. WorldFly: A World-Model-Based Vision-Language-Action Model for UAV Navigation / WorldFly：基于世界模型的无人机导航视觉-语言-动作模型
+
+**Date**: 2026-06-04 | **arXiv**: [2606.06147v1](http://arxiv.org/abs/2606.06147v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.06147v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+End-to-end Vision-Language-Action (VLA) models have shown promise in UAV navigation. However, existing approaches typically rely on historical observations to directly predict actions, often struggling in dense urban environments where severe occlusions and sharp turns result in drastic viewpoint transitions. We argue that the ability to "imagine" future states -- inherent in World Models -- is critical for robust decision-making under such partial observability. To address this, we construct a challenging Urban Canyon Traversal Benchmark, specifically designed to evaluate spatial understanding in scenarios characterized by severe occlusions and drastic viewpoint transitions. To this end, we propose WorldFly, a novel world-model-based VLA framework that employs a dual-branch coupled flow matching mechanism to jointly generate future video predictions and navigation actions, thereby explicitly guiding the agent's policy via spatial imagination. Extensive evaluations on our benchmark demonstrate that WorldFly outperforms other baselines, particularly in unseen environments, validating the effectiveness of integrating world models into embodied aerial agents.
+
+端到端视觉-语言-动作 (VLA) 模型在无人机导航中显示出了前景。然而，现有的方法通常依赖于历史观察来直接预测行为，通常在密集的城市环境中举步维艰，在这些环境中，严重的遮挡和急转弯会导致剧烈的视点转换。我们认为，“想象”未来状态的能力（世界模型所固有的）对于在这种部分可观察性下做出稳健的决策至关重要。为了解决这个问题，我们构建了一个具有挑战性的城市峡谷穿越基准，专门用于评估以严重遮挡和剧烈视点转换为特征的场景中的空间理解。为此，我们提出了WorldFly，一种新颖的基于世界模型的VLA框架，它采用双分支耦合流匹配机制来共同生成未来的视频预测和导航动作，从而通过空间想象明确地指导代理的策略。对我们基准的广泛评估表明，WorldFly 优于其他基准，特别是在看不见的环境中，验证了将世界模型集成到具体航空代理中的有效性。
+
+</details>
+
+---
+
+## 3. PLAN-S: Bridging Planning with Latent Style Dynamics for Autonomous Driving World Models / PLAN-S：将规划与自动驾驶世界模型的潜在风格动态联系起来
+
+**Date**: 2026-06-04 | **arXiv**: [2606.06014v1](http://arxiv.org/abs/2606.06014v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.06014v1)
+
+**Categories**: cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Latent world models (LWMs) have strengthened end-to-end autonomous driving by forecasting compact scene dynamics for downstream planning. However, existing LWM-based planners usually generate trajectories directly from entangled latent representations. This compact latent-to-planner pathway lacks explicit modeling of risk, drivability, and diverse style preferences, making driving-style dynamics difficult to supervise, inspect, or modulate before a final trajectory is selected. We propose PLAN-S (PLANning with latent Style dynamics), a planner-facing bridge that addresses this compactness-controllability dilemma by decoding a style-conditioned, four-channel semantic cost map from the latent representation. The cost map is conditioned on ego state and driving style and is consumed up-stream of the planning decision through two host-side interfaces: attention-level fusion for regression planners and reward-level fusion for anchor-score planners. We validate PLAN-S on two architecturally distinct hosts, ResWorld on nuScenes and WoTE on NAVSIM, while keeping the host backbones frozen to isolate the contribution of the proposed bridge. On nuScenes, PLAN-S reduces L2 at every horizon over the baseline, with 0.55 m average L2 and a 42% relative reduction in the 3 s collision rate. On NAVSIM, the rule-cost variant reaches 89.4 Predictive Driver Model Score (PDMS), while the learned cost variant provides complementary gains on baseline-challenging scenes. Ablations show that the cost pathway contributes most directly to safer trajectory selection. Qualitative results further show that PLAN-S can produce diverse cost maps, with spatially consistent variations aligned to different driving styles.
+
+潜在世界模型（LWM）通过预测下游规划的紧凑场景动态来增强端到端自动驾驶。然而，现有的基于 LWM 的规划器通常直接从纠缠的潜在表示生成轨迹。这种紧凑的潜在到规划路径缺乏对风险、驾驶性能和不同风格偏好的明确建模，使得在选择最终轨迹之前难以监督、检查或调节驾驶风格动态。我们提出了 PLAN-S（具有潜在风格动态的 PLANning），这是一种面向规划者的桥梁，通过从潜在表示中解码风格条件的四通道语义成本图来解决这种紧凑性-可控性困境。成本图以自我状态和驾驶风格为条件，并通过两个主机端接口在规划决策的上游消耗：回归规划器的注意力级别融合和锚定分数规划器的奖励级别融合。我们在两个架构不同的主机（nuScenes 上的 ResWorld 和 NAVSIM 上的 WoTE）上验证 PLAN-S，同时保持主机主干冻结以隔离所提议的桥的贡献。在 nuScenes 上，PLAN-S 减少了基线以上每个地平线的 L2，平均 L2 为 0.55 m，3 秒碰撞率相对减少了 42%。在 NAVSIM 上，规则成本变体达到 89.4 预测驾驶员模型得分 (PDMS)，而学习成本变体在基线挑战场景中提供了补充收益。消融表明，成本路径对更安全的轨迹选择有最直接的贡献。定性结果进一步表明，PLAN-S 可以生成不同的成本图，并根据不同的驾驶风格提供空间一致的变化。
+
+</details>
+
+---
+
+## 4. Merging model-based control with multi-agent reinforcement learning for multi-agent cooperative teaming strategies / 将基于模型的控制与多智能体强化学习相结合，实现多智能体协作团队策略
+
+**Date**: 2026-06-04 | **arXiv**: [2606.06011v1](http://arxiv.org/abs/2606.06011v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.06011v1)
+
+**Categories**: cs.RO, cs.LG, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In this work, we propose a framework that combines multi-agent reinforcement learning (MARL) with model-based control to achieve safe, dynamically feasible actions in cooperative multi-agent tasks. Multi-agent reinforcement learning provides the advantage of learning cooperative policies for multi-agent teams from discrete non-differentiable rewards in a long planning horizon. Model-predictive control is robust and offers safe, dynamically feasible actions in a fast replanning framework for short horizons. We propose an algorithm that extends actor-critic model predictive control for MARL which we refer to as multi-agent actor-critic model predictive control (MA-AC-MPC). We demonstrate the capabilities of this algorithm by applying it to a multi-agent pursuit-evasion scenario. Specifically, we compare the evader team's strategy using the MA-AC-MPC model and a multi-layer perceptron model (MA-AC-MLP). The pursuer team uses augmented proportional navigation as it is accepted as an advanced adversarial control law. We also provide an example with a heterogeneous environment where a drone and omni-wheeled rover cooperate to achieve repeatable and successful landing with 100% success rate in hardware for MA-AC-MPC compared to 60% for MA-AC-MLP. We demonstrate the robustness of the proposed MA-AC-MPC algorithm in hardware for both environments.
+
+在这项工作中，我们提出了一个框架，将多智能体强化学习（MARL）与基于模型的控制相结合，以在协作多智能体任务中实现安全、动态可行的动作。多智能体强化学习提供了在长期规划范围内从离散的不可微分奖励中学习多智能体团队合作策略的优势。模型预测控制非常强大，可在短期内快速重新规划框架中提供安全、动态可行的操作。我们提出了一种扩展 MARL 的 Actor-Critic 模型预测控制的算法，我们将其称为多代理 Actor-Critic 模型预测控制（MA-AC-MPC）。我们通过将其应用于多智能体追逃场景来展示该算法的功能。具体来说，我们使用 MA-AC-MPC 模型和多层感知器模型 (MA-AC-MLP) 来比较逃避者团队的策略。追击者团队使用增强比例导航，因为它被认为是先进的对抗性控制法。我们还提供了一个异构环境的示例，其中无人机和全轮流动站合作实现可重复且成功的着陆，MA-AC-MPC 的硬件成功率为 100%，而 MA-AC-MLP 的硬件成功率为 60%。我们在两种环境的硬件中证明了所提出的 MA-AC-MPC 算法的鲁棒性。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-06-04 (1 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-06-04
