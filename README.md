@@ -27,6 +27,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-06-09](papers/2026-06-09.md) - 8 papers
 - [2026-06-07](papers/2026-06-07.md) - 4 papers
 - [2026-06-04](papers/2026-06-04.md) - 3 papers
 - [2026-06-03](papers/2026-06-03.md) - 33 papers
@@ -111,6 +112,150 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-06-09 (8 papers)</b></summary>
+
+# arXiv Video Papers - 2026-06-09
+
+**Paper Count**: 8
+
+---
+
+## 1. OmniCap-IF: Benchmarking and Improving Instruction Following Abilities for Omni-Video Captioning / OmniCap-IF：全视频字幕的基准测试和改进指令跟踪能力
+
+**Date**: 2026-06-07 | **arXiv**: [2606.08572v1](http://arxiv.org/abs/2606.08572v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.08572v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+While Omni-modal Large Language Models (OLLMs) have demonstrated impressive capabilities in jointly processing audio and visual streams, their ability to strictly adhere to complex, multi-faceted user instructions remains largely unexplored. Existing benchmarks primarily focus on holistic video understanding or text-only instruction following, failing to capture the intricate interplay between modalities and user constraints. To bridge this gap, we introduce OmniCap-IF, the first comprehensive benchmark specifically designed to evaluate instruction-following capabilities in omni-modal captioning. OmniCap-IF incorporates a systematic framework that assesses captions on two dimensions: format correctness and content correctness. Our benchmark encompasses 50 distinct constraint types across pure visual, pure audio, and audio-visual modalities, while integrating Temporal Grounding to assess spatio-temporal precision. Extensive evaluations of prominent models on 1,920 high-quality samples reveal significant performance disparities. Furthermore, our analysis uncovers a critical "format-content tradeoff", demonstrating that increasing formatting complexity directly degrades models' omni-modal reasoning abilities. Finally, to advance the field, we curate a 54K instruction-tuning dataset, OmniCap-IF-54K and present OmniCaptioner-IF, which achieves notable improvements in both complex instruction adherence and general omni-modal captioning performance.
+
+虽然全模态大型语言模型 (OLLM) 在联合处理音频和视频流方面表现出了令人印象深刻的能力，但它们严格遵守复杂、多方面的用户指令的能力在很大程度上仍未得到探索。现有的基准主要关注整体视频理解或纯文本指令遵循，未能捕捉模式和用户限制之间复杂的相互作用。为了弥补这一差距，我们推出了 OmniCap-IF，这是第一个专门用于评估全模态字幕中的指令跟踪功能的综合基准测试。 OmniCap-IF 包含一个系统框架，可从两个维度评估字幕：格式正确性和内容正确性。我们的基准测试涵盖纯视觉、纯音频和视听模式的 50 种不同约束类型，同时集成时间接地来评估时空精度。对 1,920 个高质量样本的著名模型的广泛评估揭示了显着的性能差异。此外，我们的分析揭示了一个关键的“格式内容权衡”，表明格式复杂性的增加会直接降低模型的全模态推理能力。最后，为了推进该领域的发展，我们策划了一个 54K 指令调整数据集 OmniCap-IF-54K 并推出了 OmniCaptioner-IF，它在复杂指令遵守和一般全模式字幕性能方面取得了显着改进。
+
+</details>
+
+---
+
+## 2. Towards Accurate Emotion-Attributed Video Captioning via Fine-grained Emotion-Cause Pair Extraction / 通过细粒度的情感-原因对提取实现准确的情感归因视频字幕
+
+**Date**: 2026-06-07 | **arXiv**: [2606.08566v1](http://arxiv.org/abs/2606.08566v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.08566v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Emotional Video Captioning (EVC) is a challenging task that aims to generate factually accurate and emotionally rich descriptions for videos. Existing EVC methods leverage holistic visual features to mine global emotional cues, and then aggregate multimodal features to guide the emotional caption generation, which ignores the critical characteristic of the EVC task. Visual emotions are evoked by specific motivational causes, which are usually only implied in core video segments. The holistic mining brings significant information redundancy and inaccurate emotional cues. Thus, fine-grained visual cause extraction has a facilitative effect on both emotion perception and emotion-attributed caption generation. To this end, we propose a fine-grained emotion-cause pair extraction framework for emotion-attributed video captioning. Specifically, we learn pair-wise emotion and cause features in two rounds: 1) We propose a Concept-aware Visual Semantic Decomposition module to augment visual features by exploring scene, object, and motion concepts. Besides, to enhance emotional features, we propose a Visual-guided Emotion Interpretable Learning module, which guides emotion refinement with visual temporal dynamics, and augments the interpretable refinement process by reliable VAD-vector constraints. 2) We achieve emotion-cause pair extraction by cross-coupling the visual and emotional features before and after refinement, and leverage contrastive loss to achieve semantic forced alignment. Overall, our approach optimizes complex semantic understanding and emotion perception of videos, leading to a promising performance in emotional captioning. Extensive experiments on three challenging datasets demonstrate the superiority of our approach and each proposed module, e.g., achieving the best performances with +4.4% and +5.4% w.r.t. BLEU-2 and ROUGE-L, respectively, on the EVC-MSVD dataset.
+
+情感视频字幕 (EVC) 是一项具有挑战性的任务，旨在为视频生成准确且情感丰富的描述。现有的 EVC 方法利用整体视觉特征来挖掘全局情感线索，然后聚合多模态特征来指导情感字幕生成，这忽略了 EVC 任务的关键特征。视觉情感是由特定的动机原因引起的，这些动机通常只隐含在核心视频片段中。整体挖掘带来了严重的信息冗余和不准确的情感线索。因此，细粒度的视觉原因提取对情感感知和情感归因字幕生成都有促进作用。为此，我们提出了一种用于情感归因视频字幕的细粒度情感原因对提取框架。具体来说，我们分两轮学习成对的情感和原因特征：1）我们提出了一个概念感知的视觉语义分解模块，通过探索场景、对象和运动概念来增强视觉特征。此外，为了增强情感特征，我们提出了视觉引导情感可解释学习模块，该模块通过视觉时间动态来指导情感细化，并通过可靠的 VAD 向量约束增强可解释的细化过程。 2）我们通过交叉耦合细化前后的视觉和情感特征来实现情感-原因对提取，并利用对比损失来实现语义强制对齐。总体而言，我们的方法优化了视频的复杂语义理解和情感感知，从而在情感字幕方面取得了良好的表现。对三个具有挑战性的数据集的广泛实验证明了我们的方法和每个提出的模块的优越性，例如，以 +4.4% 和 +5.4% w.r.t 实现最佳性能。分别在 EVC-MSVD 数据集上的 BLEU-2 和 ROUGE-L。
+
+</details>
+
+---
+
+## 3. OmniTryOn: Video Try-On Anything at Once! / OmniTryOn：立即视频试穿任何东西！
+
+**Date**: 2026-06-07 | **arXiv**: [2606.08514v1](http://arxiv.org/abs/2606.08514v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.08514v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/xcltql666/OminTryOn.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Although video virtual try-on (VVT) has achieved significant progress, existing methods still exhibit two fundamental limitations: first, they are restricted to single-garment transfer, rendering simultaneous multi-object try-on highly impractical; second, their heavy reliance on explicit external priors (e.g., garment masks) inevitably destroys crucial physical dynamics and degrades visual quality. To bridge this gap, this paper proposes the novel Try-On Anything task, which aims to simultaneously transfer diverse wearable objects onto a person in a video in a single inference pass. To support and standardize this paradigm, we introduce TryAny-Bench, a comprehensive benchmark encompassing a paired video dataset alongside a tailored evaluation protocol. Furthermore, we present OmniTryOn, an external-prior-free generative framework designed to tackle this task. Specifically, OmniTryOn employs a First Frame Wearable Cache strategy, which directly provides diverse wearable objects for the generation process through the initial video frame. To maintain consistency, we propose the Spatiotemporally Consistent RoPE (STC-RoPE), which inherently establishes robust spatiotemporal anchors to strictly preserve complex human motions and background dynamics. Optimized by the proposed Gradual Try-On (GTO) training strategy, our model progressively masters robust multi-object synthesis. Extensive experiments on TryAny-Bench demonstrate that OmniTryOn significantly outperforms existing specialized video virtual try-on models and general video editing baselines, establishing a powerful new standard for the Try-On Anything task. Our dataset, code, and models are available at https://github.com/xcltql666/OminTryOn.
+
+尽管视频虚拟试穿（VVT）取得了重大进展，但现有方法仍然存在两个根本局限性：首先，它们仅限于单件服装传输，渲染同时多对象试穿非常不切实际；其次，它们对明确的外部先验（例如服装面具）的严重依赖不可避免地破坏了关键的物理动力学并降低了视觉质量。为了弥补这一差距，本文提出了新颖的 Try-On Anything 任务，其目标是在一次推理过程中将不同的可穿戴物体同时转移到视频中的人身上。为了支持和标准化这种范例，我们引入了 TryAny-Bench，这是一个综合基准测试，包含配对视频数据集以及定制的评估协议。此外，我们还提出了 OmniTryOn，这是一个旨在解决此任务的无外部先验生成框架。具体来说，OmniTryOn采用了首帧可穿戴缓存策略，通过初始视频帧直接为生成过程提供各种可穿戴对象。为了保持一致性，我们提出了时空一致 RoPE (STC-RoPE)，它本质上建立了鲁棒的时空锚点以严格保留复杂的人体运动和背景动态。通过提出的渐进试穿（GTO）训练策略进行优化，我们的模型逐渐掌握了鲁棒的多对象合成。 TryAny-Bench 上的大量实验表明，OmniTryOn 的性能显着优于现有的专用视频虚拟试戴模型和一般视频编辑基线，为 Try-On Anything 任务建立了强大的新标准。我们的数据集、代码和模型可在 https://github.com/xcltql666/OminTryOn 获取。
+
+</details>
+
+---
+
+## 4. CoVEBench: Can Video Editing Models Handle Complex Instructions? / CoVEBench：视频编辑模型可以处理复杂的指令吗？
+
+**Date**: 2026-06-07 | **arXiv**: [2606.08415v1](http://arxiv.org/abs/2606.08415v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.08415v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+While recent text-guided video editing models excel at elementary tasks (e.g., style transfer, object insertion), real-world user requests are highly compositional. A single prompt often demands multiple coupled edits, such as modifying subjects, actions, and camera views, while strictly preserving unrelated spatiotemporal content. Existing benchmarks, heavily constrained by isolated edits and coarse global metrics, fail to diagnose how models handle such complex workflows. To address this gap, we introduce CoVEBench, a compositional video editing benchmark comprising 416 curated source videos, 626 multi-point editing instructions, and 9,990 fine-grained checklist items. Covering diverse editing dimensions, CoVEBench evaluates models via MLLM-judged instruction compliance and video fidelity, alongside automated metrics for video quality. Extensive experiments reveal that compositional editing remains a profound challenge: current models frequently omit edits, violate preservation constraints, or introduce artifacts when handling multiple operations simultaneously. CoVEBench provides a challenging, diagnostic testbed to advance video editing toward realistic user workflows.
+
+虽然最近的文本引导视频编辑模型在基本任务（例如样式转换、对象插入）方面表现出色，但现实世界的用户请求是高度组合的。单个提示通常需要多次耦合编辑，例如修改主题、动作和摄像机视图，同时严格保留不相关的时空内容。现有的基准受到孤立编辑和粗略全局指标的严重限制，无法诊断模型如何处理如此复杂的工作流程。为了解决这一差距，我们引入了 CoVEBench，这是一个合成视频编辑基准，包含 416 个精选源视频、626 个多点编辑指令和 9,990 个细粒度检查表项目。 CoVEBench 涵盖不同的编辑维度，通过 MLLM 判断的指令合规性和视频保真度以及视频质量的自动化指标来评估模型。大量实验表明，组合编辑仍然是一个巨大的挑战：当前模型经常省略编辑、违反保存限制或在同时处理多个操作时引入伪影。 CoVEBench 提供了一个具有挑战性的诊断测试平台，可将视频编辑推向现实的用户工作流程。
+
+</details>
+
+---
+
+## 5. TIDE: Task-Isolated Diffusion for Unified Video Editing and Generation / TIDE：用于统一视频编辑和生成的任务隔离扩散
+
+**Date**: 2026-06-06 | **arXiv**: [2606.08260v1](http://arxiv.org/abs/2606.08260v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.08260v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in Diffusion Transformers have driven rapid progress in video generation and editing, yet these capabilities are still handled by separate, task-specific models. Building a unified framework that supports diverse video tasks remains an open challenge: existing unified attempts either require dedicated auxiliary encoders or lack explicit mechanisms to distinguish heterogeneous conditioning tokens, struggling when the number and type of visual conditions vary across tasks. We propose TIDE, a unified framework that integrates instruction-based editing, reference-guided editing, and multi-reference generation. At its core, we introduce per-token task embeddings that assign each input token a task-specific identifier, enabling the model to explicitly disambiguate target, source, and reference tokens. To simultaneously capture high-level semantic understanding and fine-grained structural fidelity, we design a dual-path conditioning scheme that couples a vision-language model with a VAE latent path for complementary signals. We further devise a multi-task progressive training strategy that incrementally introduces tasks of increasing complexity, effectively harmonizing diverse objectives and enabling smooth generalization across heterogeneous task distributions. Extensive experiments on multiple video editing and generation benchmarks demonstrate that TIDE achieves state-of-the-art performance across all evaluated tasks. Our project page is available at https://LittleWork123.github.io/tide.
+
+扩散变压器的最新进展推动了视频生成和编辑的快速进步，但这些功能仍然由单独的、特定于任务的模型处理。构建支持不同视频任务的统一框架仍然是一个开放的挑战：现有的统一尝试要么需要专用的辅助编码器，要么缺乏区分异构条件标记的明确机制，当视觉条件的数量和类型因任务而异时，就会陷入困境。我们提出了 TIDE，一个集成了基于指令的编辑、参考引导编辑和多参考生成的统一框架。其核心是，我们引入了每个令牌任务嵌入，为每个输入令牌分配一个特定于任务的标识符，使模型能够显式消除目标、源和引用令牌的歧义。为了同时捕获高级语义理解和细粒度结构保真度，我们设计了一种双路径调节方案，将视觉语言模型与互补信号的 VAE 潜在路径耦合起来。我们进一步设计了一种多任务渐进训练策略，逐步引入复杂性不断增加的任务，有效协调不同的目标，并实现跨异构任务分布的平滑泛化。对多个视频编辑和生成基准的大量实验表明，TIDE 在所有评估的任务中都实现了最先进的性能。我们的项目页面位于 https://LittleWork123.github.io/tide。
+
+</details>
+
+---
+
+## 6. When No Answer Is Correct: Diagnosing Absent Answer Detection for MLLMs in Video Understanding / 当没有正确答案时：诊断视频理解中 MLLM 的缺失答案检测
+
+**Date**: 2026-06-06 | **arXiv**: [2606.08239v1](http://arxiv.org/abs/2606.08239v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.08239v1)
+
+**Categories**: cs.AI, cs.CL, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multimodal large language models (MLLMs) have made substantial advancements in video understanding, yet the reliability of their responses remains underexplored. This work presents a diagnostic study of absent answer detection for MLLMs in video understanding, where the correct answer is deliberately excluded from the candidate set and a reliable model is expected to recognize that no valid option exists. We evaluate the absent answer detection behavior under three settings: multiple-choice questions augmented with an ``None of the Above'' option, open-ended generation with a detection instruction, and standard evaluation without any guidance. Across a diverse set of models and benchmarks, we find that MLLMs overwhelmingly select plausible distractors rather than detecting the absent answer. This failure is more pronounced in temporal reasoning tasks and worsens with denser frame sampling. We further explore chain-of-thought prompting as a mitigation strategy and find that while it substantially improves detection rates, performance remains unsatisfactory, suggesting that prompting-based strategies alone are insufficient to fully address this limitation. These findings expose a systematic failure in absent answer detection and highlight the need for explicit detection mechanisms in multimodal systems.
+
+多模态大语言模型（MLLM）在视频理解方面取得了实质性进展，但其响应的可靠性仍未得到充分探索。这项工作提出了视频理解中 MLLM 缺失答案检测的诊断研究，其中正确答案被故意从候选集中排除，并且可靠的模型有望识别不存在有效选项。我们在三种设置下评估缺席答案检测行为：用“以上都不是”选项增强的多项选择题、带有检测指令的开放式生成以及没有任何指导的标准评估。在一系列不同的模型和基准中，我们发现 MLLM 绝大多数会选择看似合理的干扰项，而不是检测缺失的答案。这种失败在时间推理任务中更为明显，并且随着帧采样的密集而恶化。我们进一步探索了思想链提示作为一种缓解策略，发现虽然它大大提高了检测率，但性能仍然不能令人满意，这表明仅基于提示的策略不足以完全解决这一限制。这些发现暴露了缺席答案检测的系统性失败，并强调了多模式系统中明确检测机制的必要性。
+
+</details>
+
+---
+
+## 7. IMAGINE: Adaptive Schema-Imagery Enhanced Composition for Composed Video Retrieval / IMAGINE：用于合成视频检索的自适应模式图像增强合成
+
+**Date**: 2026-06-06 | **arXiv**: [2606.08144v1](http://arxiv.org/abs/2606.08144v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.08144v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Composed Video Retrieval (CVR) is designed to retrieve a target video that matches a reference video modified by a modification text. While existing methods explore cross-modal correspondences, they often assume modified objects appear directly in videos. However, modification texts frequently describe concepts not explicitly presented but implicitly expressed through semantically related visual cues (e.g., "cake" implying "birthday party"). Current approaches typically rely on aligning explicit feature representations within the concrete space, neglecting critical latent associations. To address this, we propose an adaptIve scheMa-ImAGery enhanced composItional NEtwork (IMAGINE). Unlike standard explicit matching, IMAGINE materializes implicit semantics (termed schema imagery) via dynamic multimodal prototypes. These prototypes capture shared latent concepts to adaptively modulate visual features, effectively injecting implicit guidance into the retrieval process. By bridging the gap between explicit visual contents and implicit retrieval intentions, IMAGINE achieves state-of-the-art performance in both CVR and Composed Image Retrieval (CIR) across three widely used benchmarks.
+
+组合视频检索（CVR）旨在检索与修改文本修改的参考视频相匹配的目标视频。虽然现有方法探索跨模式对应，但它们通常假设修改后的对象直接出现在视频中。然而，修改文本经常描述未明确呈现但通过语义相关的视觉线索隐式表达的概念（例如，“蛋糕”暗示“生日聚会”）。当前的方法通常依赖于在具体空间内对齐显式特征表示，而忽略了关键的潜在关联。为了解决这个问题，我们提出了一种自适应模式图像增强组合网络（IMAGINE）。与标准显式匹配不同，IMAGINE 通过动态多模态原型具体化隐式语义（称为模式图像）。这些原型捕获共享的潜在概念以自适应地调节视觉特征，从而有效地将隐式指导注入检索过程中。通过弥合显式视觉内容和隐式检索意图之间的差距，IMAGINE 在三个广泛使用的基准中在 CVR 和合成图像检索 (CIR) 方面实现了最先进的性能。
+
+</details>
+
+---
+
+## 8. VideoWeaver: Evaluating and Evolving Skills for Agentic Long Video Generation / VideoWeaver：评估和发展代理长视频生成的技能
+
+**Date**: 2026-06-06 | **arXiv**: [2606.08091v1](http://arxiv.org/abs/2606.08091v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.08091v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/JianhuiWei7/VideoWeaver
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent agent frameworks such as Claude Code, Codex, and OpenClaw are strong at tool use and orchestration, but whether they can handle long video generation, a long-horizon multimodal task, remains underexplored. Unlike earlier video agents whose pipeline is handcrafted, these frameworks can build and refine their own workflows. We introduce VideoWeaver, an agent harness and benchmark that evaluates and evolves skills for long video generation, where an agent turns a single instruction into a long video by composing foundation skills into its own workflow rather than following a predefined pipeline. The benchmark has 16 task categories and 285 cases, with references spanning text, image, audio, video, and their combinations. Because errors can arise at any stage and not just in the final video, we propose an agent-as-judge that inspects both the execution trace and the final video, grounding its scores in evidence such as metadata and intermediate files. Using this feedback, we further design a skill evolution algorithm that refines and merges the agent's skills. Across multiple frameworks and models, we find that an explicit composition skill improves the generation process over using foundation skills alone, that skill evolution further improves output quality, and that performance varies notably across harness and model choices. The proposed agent-as-judge also aligns well with human judgments, especially on process metrics. Code and dataset is available at https://github.com/JianhuiWei7/VideoWeaver
+
+最近的代理框架，如 Claude Code、Codex 和 OpenClaw，在工具使用和编排方面都很强大，但它们是否能够处理长视频生成这种长期多模式任务，仍有待探索。与早期视频代理的管道是手工制作的不同，这些框架可以构建和完善自己的工作流程。我们引入了 VideoWeaver，这是一种代理工具和基准，用于评估和发展长视频生成的技能，其中代理通过将基础技能组合到自己的工作流程中而不是遵循预定义的管道，将单个指令转换为长视频。该基准测试有 16 个任务类别和 285 个案例，参考内容涵盖文本、图像、音频、视频及其组合。由于错误可能在任何阶段出现，而不仅仅是在最终视频中，因此我们提出了一个代理作为法官，检查执行跟踪和最终视频，将其分数基于元数据和中间文件等证据。利用这些反馈，我们进一步设计了一种技能进化算法，可以细化和合并代理的技能。在多个框架和模型中，我们发现显式组合技能比单独使用基础技能改善了生成过程，技能的演变进一步提高了输出质量，并且性能在不同的工具和模型选择之间存在显着差异。所提出的代理作为法官也与人类的判断非常一致，尤其是在流程指标方面。代码和数据集可在 https://github.com/JianhuiWei7/VideoWeaver 获取
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-06-07 (4 papers)</b></summary>
 
 # arXiv Video Papers - 2026-06-07
