@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-06-10](papers/2026-06-10.md) - 1 papers
 - [2026-06-08](papers/2026-06-08.md) - 2 papers
 - [2026-06-07](papers/2026-06-07.md) - 2 papers
 - [2026-06-03](papers/2026-06-03.md) - 2 papers
@@ -26,6 +27,34 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-06-10 (1 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-06-10
+
+**Paper Count**: 1
+
+---
+
+## 1. HDRAgent: An Agentic Framework for Multi-Exposure HDR Imaging / HDRAgent：多重曝光 HDR 成像的代理框架
+
+**Date**: 2026-06-08 | **arXiv**: [2606.09110v1](http://arxiv.org/abs/2606.09110v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.09110v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Most existing multi-exposure HDR methods follow a fixed feed-forward reconstruction paradigm, making them prone to ghosting artifacts in complex dynamic scenes. To address this issue, we propose HDRAgent, the first agent-driven framework for HDR imaging, which adaptively selects reconstruction strategies according to the current scene conditions. Specifically, to provide scene-specific prior knowledge, we introduce a fine-grained contextual knowledge matching (FCM) module. This module leverages multimodal large language model (MLLM)-derived scene perception to retrieve relevant historical cases and tool knowledge, organizing them into structured evidence for MLLM-based adaptive tool scheduling. In addition, we propose a perception--distortion feedback mechanism that transforms post-execution quality assessment and artifact diagnosis into structured feedback, which is accumulated in historical memory to help subsequent contextual knowledge refinement and strategy selection. Furthermore, considering that extreme motion can invalidate alignment methods, we design an agent-guided generative alignment strategy that uses MLLM-based dynamic-region parsing to reconstruct unreliable contents in non-reference frames under reference-frame guidance. Experiments demonstrate that HDRAgent effectively reduces ghosting and local artifacts while achieving competitive or superior objective performance and visual quality.
+
+大多数现有的多重曝光 HDR 方法都遵循固定的前馈重建范例，这使得它们在复杂的动态场景中容易出现重影伪影。为了解决这个问题，我们提出了 HDRAgent，这是第一个代理驱动的 HDR 成像框架，它根据当前场景条件自适应地选择重建策略。具体来说，为了提供特定场景的先验知识，我们引入了细粒度的上下文知识匹配（FCM）模块。该模块利用多模态大语言模型（MLLM）衍生的场景感知来检索相关历史案例和工具知识，将它们组织成基于 MLLM 的自适应工具调度的结构化证据。此外，我们提出了一种感知-扭曲反馈机制，将执行后质量评估和工件诊断转化为结构化反馈，并在历史记忆中积累，以帮助后续上下文知识细化和策略选择。此外，考虑到极端运动会使对齐方法失效，我们设计了一种代理引导的生成对齐策略，该策略使用基于 MLLM 的动态区域解析在参考帧引导下重建非参考帧中的不可靠内容。实验表明，HDRAgent 可以有效减少重影和局部伪影，同时实现有竞争力或卓越的客观性能和视觉质量。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-06-08 (2 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-06-08
