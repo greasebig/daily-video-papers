@@ -27,6 +27,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-06-13](papers/2026-06-13.md) - 1 papers
 - [2026-06-12](papers/2026-06-12.md) - 25 papers
 - [2026-06-11](papers/2026-06-11.md) - 7 papers
 - [2026-06-10](papers/2026-06-10.md) - 26 papers
@@ -115,6 +116,34 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-06-13 (1 papers)</b></summary>
+
+# arXiv Video Papers - 2026-06-13
+
+**Paper Count**: 1
+
+---
+
+## 1. GF-DiT: Scheduling Parallelism for Diffusion Transformer Serving / GF-DiT：扩散变压器服务的调度并行性
+
+**Date**: 2026-06-11 | **arXiv**: [2606.13501v1](http://arxiv.org/abs/2606.13501v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.13501v1)
+
+**Categories**: cs.DC, cs.LG, cs.PF
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Diffusion Transformers (DiTs) have become the dominant architecture for image and video generation, creating growing demand for efficient DiT serving. Existing systems assign each request a fixed parallel configuration throughout its lifetime. However, DiT workloads exhibit substantial heterogeneity across requests, execution stages, and system conditions, making static parallelism inefficient and often leading to poor GPU utilization and degraded service quality.   This paper argues that DiT serving should treat GPU parallelism as a first-class schedulable resource. We present GF-DiT, a policy-programmable runtime for elastic DiT serving that dynamically adapts the parallelism of running requests according to workload demands and service objectives. GF-DiT introduces an asynchronous execution abstraction that decomposes requests into independently schedulable trajectory tasks and enables online GPU reallocation. To make elastic parallelism practical, GF-DiT further proposes group-free collectives, a lightweight communication abstraction that supports low-overhead online formation and reconfiguration of arbitrary execution groups.   We implement GF-DiT in vLLM-Omni and evaluate it on representative image and video diffusion workloads. Compared with fixed-pipeline execution with static parallelism, GF-DiT improves throughput by up to 6.01$\times$, reduces mean latency by up to 95%, lowers SLO violation rates by up to 90%, and reduces communication-group setup overhead from 778 ms to approximately 60 $μ$s.
+
+扩散变压器 (DiT) 已成为图像和视频生成的主导架构，对高效 DiT 服务的需求不断增长。现有系统在其整个生命周期内为每个请求分配固定的并行配置。然而，DiT 工作负载在请求、执行阶段和系统条件之间表现出很大的异构性，导致静态并行效率低下，并且常常导致 GPU 利用率低下和服务质量下降。   本文认为 DiT 服务应该将 GPU 并行性视为一流的可调度资源。我们推出了 GF-DiT，这是一种用于弹性 DiT 服务的策略可编程运行时，可根据工作负载需求和服务目标动态调整运行请求的并行性。 GF-DiT 引入了异步执行抽象，将请求分解为独立可调度的轨迹任务，并实现在线 GPU 重新分配。为了使弹性并行性变得实用，GF-DiT 进一步提出了无组集体，这是一种轻量级通信抽象，支持低开销在线形成和重新配置任意执行组。   我们在 vLLM-Omni 中实现 GF-DiT，并在代表性图像和视频扩散工作负载上对其进行评估。与静态并行的固定管道执行相比，GF-DiT 将吞吐量提高了高达 6.01$\times$，将平均延迟降低了高达 95%，将 SLO 违规率降低了高达 90%，并将通信组设置开销从 778 毫秒减少到大约 60 $μ$s。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-06-12 (25 papers)</b></summary>
 
 # arXiv Video Papers - 2026-06-12
