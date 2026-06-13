@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-06-13](papers/2026-06-13.md) - 1 papers
 - [2026-06-12](papers/2026-06-12.md) - 1 papers
 - [2026-06-10](papers/2026-06-10.md) - 1 papers
 - [2026-06-08](papers/2026-06-08.md) - 2 papers
@@ -28,6 +29,34 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-06-13 (1 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-06-13
+
+**Paper Count**: 1
+
+---
+
+## 1. NeR-SC: Adapting Neural Video Representation to Screen Content / NeR-SC：使神经视频表示适应屏幕内容
+
+**Date**: 2026-05-26 | **arXiv**: [2605.27024v1](http://arxiv.org/abs/2605.27024v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.27024v1)
+
+**Categories**: cs.CV, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Implicit neural representations have emerged as a promising paradigm for video compression, with recent methods achieving competitive performance on natural video. However, screen content video -- common in remote desktop, online education, and cloud gaming -- exhibits distinct statistics: sharp edges, limited color palettes, and strong temporal redundancy. Existing neural representation methods, designed for natural scenes, lack mechanisms to exploit these properties, leaving substantial room for improvement. In this paper, we propose NeR-SC, a neural representation framework tailored for screen content video. Building on the SNeRV backbone, NeR-SC introduces three screen-content-specific modules: (i) a learnable color palette that models the discrete color structure of screen content by restricting the low-frequency sub-band to a learned color set; (ii) a multi-gate dense fusion module that replaces sequential feature fusion with dense, attention-gated cross-stage interaction; and (iii) an embedding-level frame skip strategy that bypasses redundant decoder invocations for static frames, with zero training overhead. Experiments on DSCVC and VCD show that NeR-SC achieves 40.32~dB and 41.73~dB average PSNR, outperforming representative neural video representation methods and, at low bitrates, surpassing H.264 and H.265. The skip strategy enables real-time decoding with no loss in quality.
+
+隐式神经表示已成为视频压缩的一种有前途的范例，最近的方法在自然视频上实现了具有竞争力的性能。然而，屏幕内容视频（常见于远程桌面、在线教育和云游戏）表现出明显的统计数据：锐利的边缘、有限的调色板和强大的时间冗余。现有的针对自然场景设计的神经表示方法缺乏利用这些特性的机制，因此留下了很大的改进空间。在本文中，我们提出了 NeR-SC，一种专为屏幕内容视频量身定制的神经表示框架。 NeR-SC 基于 SNeRV 主干网络，引入了三个特定于屏幕内容的模块：（i）可学习的调色板，通过将低频子带限制为学习的颜色集来模拟屏幕内容的离散颜色结构； (ii) 多门密集融合模块，用密集、注意力门控的跨阶段交互取代顺序特征融合； (iii) 嵌入级跳帧策略，绕过静态帧的冗余解码器调用，训练开销为零。在 DSCVC 和 VCD 上的实验表明，NeR-SC 的平均 PSNR 达到了 40.32~dB 和 41.73~dB，优于代表性的神经视频表示方法，并且在低比特率下超过了 H.264 和 H.265。跳过策略可以实现实时解码，且不会降低质量。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-06-12 (1 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-06-12
