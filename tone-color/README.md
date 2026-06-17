@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-06-17](papers/2026-06-17.md) - 1 papers
 - [2026-06-16](papers/2026-06-16.md) - 2 papers
 - [2026-06-13](papers/2026-06-13.md) - 1 papers
 - [2026-06-12](papers/2026-06-12.md) - 1 papers
@@ -30,6 +31,34 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-06-17 (1 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-06-17
+
+**Paper Count**: 1
+
+---
+
+## 1. A unified deeplearning framework for contrast-phase-specific virtual monochromatic imaging / 用于特定对比相位虚拟单色成像的统一深度学习框架
+
+**Date**: 2026-05-28 | **arXiv**: [2605.29753v1](http://arxiv.org/abs/2605.29753v1) | **PDF**: [Link](http://arxiv.org/pdf/2605.29753v1)
+
+**Categories**: eess.IV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Dual-energy CT (DECT) enables virtual monochromatic imaging (VMI) and improved contrast resolution, but its clinical adoption is limited by hardware complexity and cost. In this work, we propose a unified deep learning framework that synthesizes contrast-phase-specific virtual monochromatic 50 keV images from single-energy CT (SECT) data by leveraging contrast phase information as a prior. The model is trained using DECT-derived 70 keV and 50 keV image pairs across four contrast phases -- Angio, Arterial, Portal, and Delayed -- using a novel prior conditioning architecture that integrates contrast phase priors into the energy transformation process. We demonstrate that the proposed unified model achieves contrast enhancement and generalizes well across contrast phases. Additionally, we show that the model can generate 50 keV-like images from SECT inputs, preserving contrast phase-specific dynamics.
+
+双能 CT (DECT) 可实现虚拟单色成像 (VMI) 并提高对比度分辨率，但其临床应用受到硬件复杂性和成本的限制。在这项工作中，我们提出了一个统一的深度学习框架，通过利用对比相位信息作为先验，从单能 CT (SECT) 数据合成对比相位特定的虚拟单色 50 keV 图像。该模型使用 DECT 衍生的 70 keV 和 50 keV 图像对进行训练，跨越四个对比阶段（血管、动脉、门户和延迟），使用一种新颖的先验调节架构，将对比阶段先验集成到能量转换过程中。我们证明了所提出的统一模型实现了对比度增强，并且在对比阶段具有良好的泛化能力。此外，我们还表明该模型可以从 SECT 输入生成类似 50 keV 的图像，从而保留对比相位特定的动态。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-06-16 (2 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-06-16
