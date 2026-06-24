@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-06-24](papers/2026-06-24.md) - 17 papers
 - [2026-06-19](papers/2026-06-19.md) - 8 papers
 - [2026-06-18](papers/2026-06-18.md) - 11 papers
 - [2026-06-17](papers/2026-06-17.md) - 5 papers
@@ -96,6 +97,292 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-06-24 (17 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-06-24
+
+**Paper Count**: 17
+
+---
+
+## 1. Qwen-AgentWorld: Language World Models for General Agents / Qwen-AgentWorld：一般代理的语言世界模型
+
+**Date**: 2026-06-23 | **arXiv**: [2606.24597v1](http://arxiv.org/abs/2606.24597v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.24597v1)
+
+**Categories**: cs.CL
+
+**Code**: https://github.com/QwenLM/Qwen-AgentWorld
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+A world model predicts environment dynamics based on current observations and actions, serving as a core cognitive mechanism for reasoning and planning. In this work, we investigate how world modeling based on language models can further push the boundaries of general agents. (i) We first focus on building foundation models for agentic environment simulation. We introduce Qwen-AgentWorld-35B-A3B and Qwen-AgentWorld-397B-A17B, the first language world models capable of simulating agentic environments covering 7 domains via long chain-of-thought reasoning. Leveraging more than 10M environment interaction trajectories of 7 domains in real-world environments, we develop Qwen-AgentWorld through a three-stage training pipeline: CPT injects general-purpose world modeling capabilities from the state transition dynamics and augmented professional corpora, SFT activates next-state-prediction reasoning, and RL sharpens simulation fidelity through a tailored framework with hybrid rubric-and-rule rewards. To evaluate language world models, we present AgentWorldBench, a comprehensive benchmark constructed from real-world interactions of 5 frontier models on 9 established benchmarks. Empirical results demonstrate that Qwen-AgentWorld significantly outperforms existing frontier models. (ii) Beyond foundation models, we further investigate two complementary paradigms through which world modeling enhances general agents. First, as a decoupled environment simulator, Qwen-AgentWorld supports scalable and controllable simulation of thousands of real-world environments for agentic RL, yielding gains that surpass real-environment training alone. Second, as a unified agent foundation model, world-model training acts as a highly effective warm-up that improves downstream performance across 7 agentic benchmarks. Code: https://github.com/QwenLM/Qwen-AgentWorld
+
+世界模型根据当前的观察和行动预测环境动态，作为推理和规划的核心认知机制。在这项工作中，我们研究了基于语言模型的世界建模如何进一步突破通用智能体的界限。 （i）我们首先专注于构建代理环境模拟的基础模型。我们推出了 Qwen-AgentWorld-35B-A3B 和 Qwen-AgentWorld-397B-A17B，这是第一个能够通过长链思维推理模拟覆盖 7 个领域的代理环境的语言世界模型。利用现实环境中7个域的超过10M的环境交互轨迹，我们通过三阶段训练管道开发Qwen-AgentWorld：CPT从状态转换动力学和增强的专业语料库中注入通用世界建模功能，SFT激活下一状态预测推理，RL通过具有混合标题和规则奖励的定制框架来提高模拟保真度。为了评估语言世界模型，我们提出了 AgentWorldBench，这是一个综合基准，由 5 个前沿模型在 9 个既定基准上的现实交互构建而成。实证结果表明，Qwen-AgentWorld 显着优于现有的前沿模型。 (ii) 除了基础模型之外，我们还进一步研究了两种互补的范式，通过它们世界建模增强了通用智能体。首先，作为一个解耦的环境模拟器，Qwen-AgentWorld 支持对数千个真实世界环境进行可扩展、可控的模拟，以实现代理强化学习，所产生的收益超越了单独的真实环境训练。其次，作为统一的代理基础模型，世界模型训练可以作为高效的热身，提高 7 个代理基准的下游性能。代码：https://github.com/QwenLM/Qwen-AgentWorld
+
+</details>
+
+---
+
+## 2. Autonomous Video Generation with Counterfactual Controllability for Self-Evolving World Models / 具有反事实可控性的自主视频生成，用于自我演化的世界模型
+
+**Date**: 2026-06-23 | **arXiv**: [2606.24152v1](http://arxiv.org/abs/2606.24152v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.24152v1)
+
+**Categories**: cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Existing literature claims that video generation essentially is world modelling. On the one hand, the claim is productive because it pushes generative AI beyond static images and toward temporally extended physical scenes. On the other hand, this claim dangerously relies on the belief that scaling visual prediction alone will automatically yield physical agents. We prefer a more accurate statement: video generation models learn a partial, implicit spatiotemporal world model, but not a fully grounded or controllable one. The reason is as follows: a model may generate a plausible video of a drone crossing a forest or a robot arm manipulating a cup, yet still fail to know which variables are controllable, which constraints belong to a particular body and which futures remain valid under intervention. The frontier in essence is not predictive realism alone, instead it emphasizes a self-evolving generative nature that requires the decisive criterion to be counterfactual controllability: the capability of asking what would happen under an action, to test whether the generated future can survive embodiment constraints and to feed the resulting action knowledge back into future imagination (generation). Therefore, in this paper we present a new perspective, i.e., autonomous video generation with counterfactual controllability is one promising way to realize self-evolving world models.
+
+现有文献声称视频生成本质上是世界建模。一方面，这种说法是富有成效的，因为它推动生成式人工智能超越静态图像，走向时间延伸的物理场景。另一方面，这种说法危险地依赖于这样一种信念，即仅扩展视觉预测就会自动产生物理代理。我们更喜欢一种更准确的说法：视频生成模型学习部分的、隐式的时空世界模型，但不是完全接地或可控的模型。原因如下：模型可能会生成无人机穿越森林或机器人手臂操纵杯子的合理视频，但仍然无法知道哪些变量是可控的，哪些约束属于特定主体，以及哪些未来在干预下仍然有效。本质上，前沿不仅仅是预测现实主义，相反，它强调自我进化的生成性，需要反事实可控性作为决定性标准：询问在行动下会发生什么的能力，测试生成的未来是否能够在具体约束下生存，并将由此产生的行动知识反馈到未来的想象（生成）中。因此，在本文中，我们提出了一个新的视角，即具有反事实可控性的自主视频生成是实现自我进化世界模型的一种有前途的方法。
+
+</details>
+
+---
+
+## 3. NavWM: A Unified Navigation World Model for Foresight-Driven Planning / NavWM：用于前瞻性驱动规划的统一导航世界模型
+
+**Date**: 2026-06-23 | **arXiv**: [2606.24101v1](http://arxiv.org/abs/2606.24101v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.24101v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Conventional visual navigation policies often struggle with myopic decision-making and mode collapse in complex environments. While world models offer a promising alternative, existing paradigms typically isolate perception, generation, and control, failing to capture their shared spatio-temporal dynamics. In this paper, we propose NavWM, a unified navigation world model that seamlessly integrates latent world reasoning, multimodal action prediction, and controllable visual generation. At its core, NavWM leverages latent world tokens to distill geometric and semantic priors, endowing the agent with robust structural understanding. To overcome the limitations of deterministic policies, we introduce an anchor-based multimodal trajectory forecasting framework that generates a diverse action space. This inherent diversity explicitly empowers the generative world model to act as a robust closed-loop planner, utilizing visual foresight to evaluate and select the optimal path. Extensive experiments across diverse robotics datasets demonstrate that NavWM significantly advances the state-of-the-art, delivering remarkable improvements in both high-fidelity future state generation and zero-shot navigation success.
+
+传统的视觉导航策略常常面临复杂环境中短视决策和模式崩溃的问题。虽然世界模型提供了一个有前途的替代方案，但现有的范式通常将感知、生成和控制隔离开来，无法捕捉它们共享的时空动态。在本文中，我们提出了 NavWM，一种统一的导航世界模型，无缝集成了潜在世界推理、多模态动作预测和可控视觉生成。 NavWM 的核心是利用潜在世界标记来提取几何和语义先验，从而赋予代理强大的结构理解能力。为了克服确定性策略的局限性，我们引入了基于锚的多模态轨迹预测框架，该框架可生成多样化的行动空间。这种固有的多样性明确地使生成世界模型能够充当强大的闭环规划器，利用视觉远见来评估和选择最佳路径。跨不同机器人数据集的广泛实验表明，NavWM 显着推进了最先进的技术，在高保真未来状态生成和零样本导航成功方面都取得了显着改进。
+
+</details>
+
+---
+
+## 4. DynaWM: Dynamics-Aware Distillation with World Model and Momentum Targets for Smooth Locomotion over Continuous Stairs / DynaWM：具有世界模型和动量目标的动力学感知蒸馏，可实现连续楼梯上的平稳运动
+
+**Date**: 2026-06-23 | **arXiv**: [2606.24089v1](http://arxiv.org/abs/2606.24089v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.24089v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in control have enabled bipedal-wheeled robots to traverse slopes and single-step obstacles, yet long staircase traversal remains challenging as current teacher-student frameworks suffer from weakened dynamics-aware representations and incomplete terrain geometry encoding. To bridge this gap, we propose DynaWM, a dynamics-aware representation learning framework. To enhance terrain encoding capability and enable transparent assessment, we introduce a world model as a regularizer to enforce forward-dynamics awareness, preserving comprehensive terrain geometry while facilitating hierarchical encoding visualization. To stabilize knowledge transfer, we employ a momentum target encoder to provide consistent distillation targets, preventing dimensional collapse from non-stationary teacher updates. Evaluation of the learned representations through Principal Component Analysis (PCA) visualization and quantitative metrics reveals that our encoder hierarchically captures terrain geometry with higher terrain encoding capability, leading to enhanced terrain adaptability and motion smoothness. Experimental results in simulation and real hardware demonstrate that our method achieves superior terrain adaptability and motion smoothness, enabling bipedal-wheeled robots to overcome diverse continuous stairs, as shown in Fig. 1.
+
+控制方面的最新进展使双足轮式机器人能够穿越斜坡和单步障碍物，但由于当前的师生框架缺乏动态感知表示和不完整的地形几何编码，长楼梯穿越仍然具有挑战性。为了弥补这一差距，我们提出了 DynaWM，一种动态感知的表示学习框架。为了增强地形编码能力并实现透明评估，我们引入了世界模型作为正则化器来增强前向动态意识，保留全面的地形几何形状，同时促进分层编码可视化。为了稳定知识转移，我们采用动量目标编码器来提供一致的蒸馏目标，防止非平稳教师更新导致维度崩溃。通过主成分分析（PCA）可视化和定量指标对学习到的表示进行评估表明，我们的编码器以更高的地形编码能力分层捕获地形几何形状，从而增强了地形适应性和运动平滑度。仿真和真实硬件的实验结果表明，我们的方法实现了卓越的地形适应性和运动平滑度，使双足轮式机器人能够克服各种连续楼梯，如图1所示。
+
+</details>
+
+---
+
+## 5. Critique of Agent Model / 对代理模型的批判
+
+**Date**: 2026-06-22 | **arXiv**: [2606.23991v1](http://arxiv.org/abs/2606.23991v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.23991v1)
+
+**Categories**: cs.AI, cs.LG, cs.MA, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+What is an agent? What constitutes agency? With the rise of Large Language Model (LLM) systems marketed as ``coding agents'', ``AI co-scientists'', and other ``agentic" tools that promise to drive up productivity, and at the same time, ``existential" concerns such as AI escaping human control with destructive power under a speculative ``machine agency" against humans, it has become essential to clarify where automation ends and agency begins, both for building capable systems and for understanding whether and what to fear. Drawing on Descartes' grounding of agency in independent thought, and on portrayals of autonomous beings in science fiction, we survey the current landscape of AI agents, and analyze agent architectures along five dimensions: goal, identity, decision-making, self-regulation, and learning. Specifically, we argue that genuine agency requires these structures to be \emph{internalized within the system itself} rather than assembled through external scaffolding. This distinction between \emph{agentic} systems, whose competence resides in engineered workflows, and \emph{agentive} systems, whose capabilities (including social interaction) arise endogenously, defines the boundary between systems designed for prescribed tasks, and those capable of operating in the open world with true autonomy. Building on this analysis, we propose the Goal-Identity-Configurator (GIC) architecture for a general-purpose agent model, combining hierarchical goal decomposition, identity evolution, simulative reasoning grounded in a separately trained world model, learned self-regulation, and self-directed learning from both real and simulated experience. Furthermore, we share insight on the auditability, controllability, and safety of agentive systems that possess greater autonomy and ``agency", but remain under human oversight.
+
+什么是代理？什么是代理？随着以“编码代理”、“人工智能联合科学家”和其他承诺提高生产力的“代理”工具为名销售的大型语言模型（LLM）系统的兴起，同时，“存在”的担忧，例如人工智能在针对人类的投机性“机器代理”下具有破坏力，逃离了人类的控制，澄清自动化的终点和代理的起点变得至关重要，这既是为了构建有能力的系统，也是为了了解是否需要害怕以及害怕什么。笛卡尔以独立思想为基础的代理，以及科幻小说中对自主存在的描述，我们调查了人工智能代理的当前状况，并从五个维度分析了代理架构：目标、身份、决策、自我调节和学习。具体来说，我们认为真正的代理需要这些结构“emph{内部化”在系统本身内，而不是通过外部支架组装。“emph{代理}系统的能力在于工程工作流程，” \emph{agentive} 系统的能力（包括社交互动）是内生产生的，它定义了为指定任务而设计的系统与能够在开放世界中具有真正自主性的系统之间的边界。基于此分析，我们提出了通用代理模型的目标-身份配置器（GIC）架构，结合了分层目标分解、身份进化、基于单独训练的世界模型的模拟推理、学习的自我调节以及从真实和模拟经验中进行的自我指导学习。此外，我们分享对代理系统的可审计性、可控性和安全性的见解，这些系统拥有更大的自主性和“代理性”，但仍处于人类监督之下。
+
+</details>
+
+---
+
+## 6. Machine Learning and Deep Learning for Exoplanet Detection and Atmospheric Characterization with JWST and the Upcoming Ariel Mission / JWST 和即将到来的 Ariel 任务的机器学习和深度学习用于系外行星探测和大气特征描述
+
+**Date**: 2026-06-22 | **arXiv**: [2606.23766v1](http://arxiv.org/abs/2606.23766v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.23766v1)
+
+**Categories**: astro-ph.IM, astro-ph.EP, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The detection and atmospheric characterization of exoplanets have entered a new data-intensive era driven by the James Webb Space Telescope and the upcoming Ariel mission. Modern surveys produce millions of light curves and high-resolution spectra that overwhelm traditional pipelines, motivating the rapid integration of Machine Learning and Deep Learning methods into the exoplanet workflow. This review synthesizes the latest progress in applying ML/DL techniques to exoplanet detection (transit identification, candidate vetting, false-positive rejection) and atmospheric characterization (retrieval, detrending, cross-correlation, surrogate modelling) in the context of JWST and Ariel. We start with classical algorithms such as Random Forests and Convolutional Neural Networks, move through Transformers and Recurrent architectures, then survey modern simulation-based inference using Neural Posterior Estimation and Flow Matching Posterior Estimation with normalizing or continuous normalizing flows. We discuss benchmark efforts, including the Ariel Machine Learning Data Challenges (2019 to 2025) hosted with NeurIPS, and key JWST case studies such as the WASP-39b Early Release Science programme. Results indicate that DL approaches consistently match or exceed traditional pipelines in both speed and accuracy, while ML-driven retrievals reduce inference time from CPU-hours to seconds and can accelerate nested-sampling retrievals by factors of 3-8 without compromising Bayesian evidence. We identify outstanding challenges interpretability, calibration of uncertainties under noisy data, hybrid modelling, and the generalization of models across instruments and planet populations and outline a research roadmap spanning the JWST era and beyond into Ariel's launch in 2029.
+
+在詹姆斯·韦伯太空望远镜和即将到来的 Ariel 任务的推动下，系外行星的探测和大气特征已经进入了一个新的数据密集型时代。现代勘测产生了数百万条光变曲线和高分辨率光谱，超越了传统管道，推动了机器学习和深度学习方法快速集成到系外行星工作流程中。这篇综述综合了 JWST 和 Ariel 背景下将 ML/DL 技术应用于系外行星探测（凌日识别、候选者审查、误报拒绝）和大气表征（检索、去趋势、互相关、代理建模）的最新进展。我们从随机森林和卷积神经网络等经典算法开始，通过变压器和循环架构，然后使用神经后验估计和具有归一化或连续归一化流的流匹配后验估计来调查现代基于模拟的推理。我们讨论了基准测试工作，包括由 NeurIPS 主办的 Ariel 机器学习数据挑战（2019 年至 2025 年），以及关键的 JWST 案例研究，例如 WASP-39b 早期发布科学计划。结果表明，深度学习方法在速度和准确性方面始终匹配或超过传统管道，而机器学习驱动的检索将推理时间从 CPU 小时缩短到几秒，并且可以将嵌套采样检索加速 3-8 倍，而不会影响贝叶斯证据。我们确定了突出的挑战，即可解释性、噪声数据下的不确定性校准、混合建模以及跨仪器和行星种群的模型泛化，并概述了跨越 JWST 时代及以后直至 2029 年 Ariel 发射的研究路线图。
+
+</details>
+
+---
+
+## 7. LaST-HD: Learning Latent Physical Reasoning from Scalable Human Data for Robot Manipulation / LaST-HD：从可扩展的人类数据中学习潜在的物理推理以进行机器人操作
+
+**Date**: 2026-06-22 | **arXiv**: [2606.23685v1](http://arxiv.org/abs/2606.23685v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.23685v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Human-hand demonstrations provide a direct and scalable source of physical interaction data for robot learning. While manual retargeting is indispensable for establishing kinematic action correspondence across different morphologies, robust transfer requires going beyond geometry to address the underlying alignment of physical dynamics between human and robot manipulation. To address this, we introduce LaST-HD, a novel human-to-robot action learning paradigm that extends reasoning-before-acting VLA by aligning human-hand and robot demonstrations in a shared latent reasoning space. Rather than mimicking human kinematics, LaST-HD trains an auxiliary action-conditioned world model on unpaired human-hand and robot trajectories to synthesize unified latent targets. After aligning cross-embodiment representations in this shared forward-dynamics space, these targets supervise LaST-HD's latent reasoning process, enabling it to internalize shared physical dynamics and drive efficient human-hand action learning. Moreover, we develop Out-of-Lab (OOL) Glove, a low-cost motion-capture glove tailored to LaST-HD for human-hand data collection. The captured human data provide precise keypoints and serve as universal action supervision across grippers and dexterous hands. Armed with the aligned latent space and high-fidelity human-hand data, we develop a progressive mixed-to-human training recipe comprising mixed human-robot co-training and human-hand online correction post-training. Through mixed co-training, LaST-HD improves generalization to novel objects, scenes, and positions using only human-hand demonstrations. With online correction, LaST-HD further adapts to novel environments and achieves over 90\% accuracy using only 20 minutes of OOL glove data.
+
+人手演示为机器人学习提供了直接且可扩展的物理交互数据源。虽然手动重定向对于在不同形态之间建立运动学动作对应是必不可少的，但稳健的传输需要超越几何结构来解决人类和机器人操作之间物理动力学的基本对齐问题。为了解决这个问题，我们引入了 LaST-HD，这是一种新颖的人机动作学习范式，它通过在共享的潜在推理空间中对齐人手和机器人演示来扩展先推理后行动的 VLA。 LaST-HD 不是模仿人类运动学，而是在不成对的人手和机器人轨迹上训练辅助动作条件世界模型，以合成统一的潜在目标。在这个共享的前向动力学空间中对齐跨实施例表示后，这些目标监督 LaST-HD 的潜在推理过程，使其能够内化共享的物理动力学并驱动高效的人手动作学习。此外，我们还开发了实验室外 (OOL) 手套，这是一种专为 LaST-HD 定制的低成本动作捕捉手套，用于人手数据收集。捕获的人体数据提供了精确的关键点，并作为对抓手和灵巧手的通用动作监督。借助对齐的潜在空间和高保真人手数据，我们开发了一种渐进的人机混合训练方案，包括混合人机协同训练和人手在线校正后训练。通过混合协同训练，LaST-HD 仅使用人手演示即可提高对新物体、场景和位置的泛化能力。通过在线校正，LaST-HD 进一步适应新环境，仅使用 20 分钟的 OOL 手套数据即可实现超过 90% 的准确率。
+
+</details>
+
+---
+
+## 8. SkyJEPA: Learning Long-Horizon World Models for Zero-Shot Sim-to-Real Control of Quadrotors / SkyJEPA：学习长视野世界模型以实现四旋翼飞行器的零射击模拟到真实控制
+
+**Date**: 2026-06-22 | **arXiv**: [2606.23444v2](http://arxiv.org/abs/2606.23444v2) | **PDF**: [Link](http://arxiv.org/pdf/2606.23444v2)
+
+**Categories**: cs.RO, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Accurate dynamics models are critical for informed decision-making in robotic systems, particularly for agile aerial vehicles operating under uncertainty. Neural network dynamics models are attractive for capturing complex nonlinear effects, but existing predictive approaches struggle with long-horizon forecasting because their autoregressive rollout mechanism amplifies errors over time. Joint Embedding Predictive Architectures (JEPAs) offer a compelling alternative by modeling dynamics in latent space, yet prior JEPA-style methods for robot navigation have been studied primarily for kinematic-level planning, with limited investigation in high-frequency control. In this work, we introduce the JEPA-style model for real-time quadrotor control. The proposed approach combines a latent dynamics model with a novel physics-inspired prober that maps frozen latents to interpretable state, enabling physically grounded long-horizon prediction. Additionally, we combine the learned model with a sampling-based optimal control solution to take advantage of its predictive capabilities for real-time control on embedded hardware. Finally, to reduce the dependence on expensive and unsafe real-world data collection, we develop a structured pipeline for automated dataset generation. Extensive open-loop and outdoor closed-loop experiments demonstrate accurate prediction, robust zero-shot sim-to-real transfer, and strong generalization across diverse operating conditions.
+
+准确的动力学模型对于机器人系统中的明智决策至关重要，特别是对于在不确定性下运行的敏捷飞行器而言。神经网络动力学模型对于捕获复杂的非线性效应很有吸引力，但现有的预测方法难以进行长期预测，因为它们的自回归推出机制会随着时间的推移放大误差。联合嵌入预测架构 (JEPA) 通过对潜在空间中的动力学进行建模，提供了一种令人信服的替代方案，但之前的 JEPA 式机器人导航方法主要针对运动学级规划进行研究，对高频控制的研究有限。在这项工作中，我们引入了用于实时四旋翼控制的 JEPA 风格模型。所提出的方法将潜在动力学模型与新颖的受物理启发的探测器相结合，该探测器将冻结的潜在物映射到可解释的状态，从而实现物理基础的长期预测。此外，我们将学习模型与基于采样的最优控制解决方案相结合，以利用其预测功能对嵌入式硬件进行实时控制。最后，为了减少对昂贵且不安全的现实世界数据收集的依赖，我们开发了一个用于自动数据集生成的结构化管道。广泛的开环和室外闭环实验证明了准确的预测、强大的零样本模拟到真实的转换以及跨不同操作条件的强大泛化能力。
+
+</details>
+
+---
+
+## 9. From Pixels to Concepts: Growing Rich 3D Semantic Scene Graph Forests utilizing Foundation Models / 从像素到概念：利用基础模型发展丰富的 3D 语义场景图森林
+
+**Date**: 2026-06-22 | **arXiv**: [2606.23312v1](http://arxiv.org/abs/2606.23312v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.23312v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Operating in complex real-world environments requires robots to understand their surroundings on a functional semantic level. This demands a detailed multi-layer world model capturing the complex relations of its surroundings. Hierarchical 3D scene graphs address this challenge by integrating geometric, semantic, and relational data within a unified spatial framework. However, current 3D scene graph approaches often restrict themselves to rigid structures of pre-determined relationship classes, mostly neglecting important semantic connections, like causal connections or environmental contexts. This paper explores the potential of foundation models to build forests of 3D scene graphs with open semantic relationships to improve scene understanding and robotic task execution. We propose a method where instance-specific concept-nodes and relationships are first identified by a VLM and extended upon by a LLM, inferring broader, more abstract concept-nodes and relationships through reasoning. These object-nodes, concept-nodes, and relationships are then assembled into a forest of hierarchical 3D scene graphs, enhanced with concept-nodes to represent abstract concepts. Evaluations were conducted on the uHumans2 and ScanNet indoor dataset, validating the accuracy and relevance of the generated relationships. Downstream suitability of scene-graph forests for robotics applications is demonstrated in an open-vocabulary object-retrieval task utilizing both ScanNet data and a real-world indoor deployment using a Boston Dynamics Spot. This paper leverages foundation models to create more expressive, semantically deep 3D hierarchical scene graphs and demonstrates their potential to advance semantic and environmental understanding in robotics.
+
+在复杂的现实环境中运行需要机器人在功能语义层面上理解周围环境。这需要一个详细的多层世界模型来捕获周围环境的复杂关系。分层 3D 场景图通过在统一的空间框架内集成几何、语义和关系数据来解决这一挑战。然而，当前的 3D 场景图方法通常将自己限制在预定关系类的严格结构中，大多忽略了重要的语义连接，例如因果连接或环境上下文。本文探讨了基础模型构建具有开放语义关系的 3D 场景图森林的潜力，以改善场景理解和机器人任务执行。我们提出了一种方法，其中特定于实例的概念节点和关系首先由 VLM 识别，并由 LLM 扩展，通过推理推断更广泛、更抽象的概念节点和关系。然后，这些对象节点、概念节点和关系被组装成分层 3D 场景图的森林，并通过概念节点进行增强以表示抽象概念。对 uHumans2 和 ScanNet 室内数据集进行了评估，验证了生成的关系的准确性和相关性。场景图森林对于机器人应用的下游适用性在利用 ScanNet 数据的开放词汇对象检索任务和使用 Boston Dynamics Spot 的真实室内部署中得到了证明。本文利用基础模型创建更具表现力、语义更深入的 3D 分层场景图，并展示了它们在推进机器人技术语义和环境理解方面的潜力。
+
+</details>
+
+---
+
+## 10. IOI: Decoupling Kinematics and Physics for Interactive World Models / IOI：交互式世界模型的运动学和物理解耦
+
+**Date**: 2026-06-22 | **arXiv**: [2606.23296v1](http://arxiv.org/abs/2606.23296v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.23296v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Developing generalist embodied agents requires interactive environments providing visually realistic feedback and accurate action-conditioned dynamics. Interactive world models address this by simulating such complex dynamics. However, purely data-driven methods struggle to ensure precise control alignment and physically plausible visual feedback due to a lack of explicit structural constraints. To address this, we propose IOI, a hybrid interactive world model integrating analytical kinematic priors with learned physical dynamics. Unlike data-driven approaches prone to spatiotemporal drift, IOI introduces explicit kinematic guidance, computing forward kinematics from action sequences for accurate motion trajectories. These trajectories are rendered into synchronized front, side, and top orthographic projections, eliminating the need for extrinsic camera calibration. A Multi-view Kinematic Aggregation and Injection module fuses these geometric cues and injects them into the video generator, providing geometry-consistent guidance. Conditioning video generation on these deterministic trajectories establishes a synergy between the analytical simulator and the world model. Decoupling deterministic motion into the kinematic prior frees the generator to model stochastic physical interactions. Experiments on the RoboTwin benchmark validate IOI across kinematic fidelity, out-of-distribution (OOD) generalization, and policy evaluation. IOI achieves state-of-the-art simulation performance and robust zero-shot generalization to unseen OOD tasks. Furthermore, IOI serves as a reliable policy evaluator, yielding success rates closely aligning with ground-truth physics simulators. On real-world platforms, policies trained on IOI-synthesized data match those trained on teleoperation demonstrations, solidifying its practical value for embodied policy learning.
+
+开发多面手的具体代理需要交互式环境提供视觉逼真的反馈和准确的动作条件动态。交互式世界模型通过模拟这种复杂的动态来解决这个问题。然而，由于缺乏明确的结构约束，纯粹的数据驱动方法很难确保精确的控制对齐和物理上合理的视觉反馈。为了解决这个问题，我们提出了 IOI，一种将分析运动学先验与学习的物理动力学相结合的混合交互式世界模型。与容易出现时空漂移的数据驱动方法不同，IOI 引入了显式运动学指导，根据动作序列计算正向运动学，以获得精确的运动轨迹。这些轨迹被渲染成同步的正面、侧面和顶部正交投影，从而无需外部相机校准。多视图运动聚合和注入模块融合这些几何线索并将它们注入视频生成器，提供几何一致的指导。在这些确定性轨迹上调节视频生成在分析模拟器和世界模型之间建立了协同作用。将确定性运动解耦到运动学先验中，使生成器能够自由地模拟随机物理相互作用。 RoboTwin 基准测试的实验验证了运动学保真度、分布外 (OOD) 泛化和策略评估方面的 IOI。 IOI 实现了最先进的仿真性能和对未见过的 OOD 任务的强大的零样本泛化。此外，IOI 作为可靠的政策评估器，产生的成功率与地面真实物理模拟器密切相关。在现实世界的平台上，基于 IOI 合成数据训练的政策与远程操作演示训练的政策相匹配，巩固了其对具体政策学习的实用价值。
+
+</details>
+
+---
+
+## 11. Causal Reward World Models: Zero-shot Reward Design for Automated Skill Generation / 因果奖励世界模型：自动技能生成的零样本奖励设计
+
+**Date**: 2026-06-22 | **arXiv**: [2606.23280v1](http://arxiv.org/abs/2606.23280v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.23280v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Automated Reward Design (ARD) aims to replace manual reward engineering in reinforcement learning with language-driven reward function synthesis. However, existing approaches based on large language models (LLMs) remain inherently correlation-driven, relying on iterative environmental feedback to refine reward hypotheses for each specific task. This paradigm not only results in inefficient reasoning but also makes LLMs susceptible to semantically plausible yet causally spurious reward components, leading to ineffective optimization. To address these limitations, we propose the Causal Reward World Model (CRWM), which explicitly models the causal topological relationships between candidate reward components and task-targeted physical variables through offline pre-training on multi-task interaction data. Based on a coarse-to-fine pre-training strategy, we introduce a joint optimization module that integrates Explicit Mechanism Decoupling with Confidence-Aware Soft Fusion to refine coarse structural priors using micro-level trajectories, thereby constructing a robust and interpretable causal skeleton. During inference, LLMs leverage CRWM as a task-irrelevant causal prior to constrain the reward generation, enabling zero-shot reward function design. Our work opens up a new white-box paradigm for the ARD problem. Extensive experiments on complex continuous control benchmarks demonstrate that CRWM generates executable reward functions without feedback-driven reward refinement, significantly reducing the design latency for acquiring new robotic skills while matching or surpassing state-of-the-art performance, and further exhibits strong generalization capabilities across unseen tasks and diverse robotic embodiments.
+
+自动奖励设计（ARD）旨在用语言驱动的奖励函数合成取代强化学习中的手动奖励工程。然而，基于大语言模型（LLM）的现有方法本质上仍然是相关驱动的，依靠迭代环境反馈来完善每个特定任务的奖励假设。这种范式不仅导致推理效率低下，而且还使法学硕士容易受到语义上合理但因果上虚假的奖励成分的影响，从而导致无效的优化。为了解决这些限制，我们提出了因果奖励世界模型（CRWM），它通过对多任务交互数据的离线预训练来明确地建模候选奖励成分和任务目标物理变量之间的因果拓扑关系。基于从粗到细的预训练策略，我们引入了一种联合优化模块，该模块将显式机制解耦与置信感知软融合相结合，使用微观轨迹细化粗结构先验，从而构建鲁棒且可解释的因果骨架。在推理过程中，法学硕士在限制奖励生成之前利用 CRWM 作为与任务无关的因果关系，从而实现零样本奖励函数设计。我们的工作为 ARD 问题开辟了一个新的白盒范例。对复杂连续控制基准的大量实验表明，CRWM 无需反馈驱动的奖励细化即可生成可执行的奖励函数，显着减少了获取新机器人技能的设计延迟，同时匹配或超越最先进的性能，并进一步在未见过的任务和不同的机器人实施例中表现出强大的泛化能力。
+
+</details>
+
+---
+
+## 12. Foresight: Failure Detection for Long-Horizon Robotic Manipulation with Action-Conditioned World Model Latents / 前瞻：具有动作条件世界模型潜伏的长视野机器人操作的故障检测
+
+**Date**: 2026-06-22 | **arXiv**: [2606.23085v1](http://arxiv.org/abs/2606.23085v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.23085v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long-horizon tasks are common in real-world robotic deployments, yet failure detection for such tasks remains underexplored. Detecting failures in long-horizon robotic tasks is particularly challenging because failure onset is often ambiguous and dense temporal annotations are typically unavailable. We present Foresight, a failure detection framework that monitors manipulation trajectories using latent representations from an action-conditioned world model. Foresight is trained using only final task-level success or failure labels. By leveraging predictive world-model embeddings, our method provides a unified framework for failure detection across different policies. We further use functional conformal prediction (FCP) to calibrate detection thresholds adaptively. We evaluate Foresight with state-of-the-art vision-language-action policies in simulation on LIBERO-Long, ManiSkill-Long, and BEHAVIOR-1K, compare it against state-of-the-artfailure detection methods, and validate it on real robots with three long-horizon tasks on a ReactorX-200 arm and one task on a Franka arm. Our results suggest that action-conditioned world-model embeddings provide a scalable representation for reliable failure monitoring in long-horizon manipulation.
+
+长期任务在现实世界的机器人部署中很常见，但此类任务的故障检测仍未得到充分探索。检测长范围机器人任务中的故障特别具有挑战性，因为故障的发生通常是不明确的，并且密集的时间注释通常不可用。我们提出了 Foresight，一个故障检测框架，它使用来自动作条件世界模型的潜在表示来监视操作轨迹。仅使用最终任务级别的成功或失败标签来训练远见。通过利用预测世界模型嵌入，我们的方法为跨不同策略的故障检测提供了统一的框架。我们进一步使用功能共形预测（FCP）来自适应地校准检测阈值。我们在 LIBERO-Long、ManiSkill-Long 和 BEHAVIOR-1K 上的模拟中使用最先进的视觉-语言-动作策略来评估 Foresight，将其与最先进的故障检测方法进行比较，并在真实机器人上进行验证，在 ReactorX-200 手臂上执行三个长视野任务，在 Franka 手臂上执行一项任务。我们的结果表明，动作条件的世界模型嵌入为长范围操作中的可靠故障监控提供了可扩展的表示。
+
+</details>
+
+---
+
+## 13. AdaReP:Adaptive Re-Planning under Model Mismatch for Neural World-Model Predictive Control / AdaReP：模型失配下的自适应重新规划神经世界模型预测控制
+
+**Date**: 2026-06-22 | **arXiv**: [2606.23079v1](http://arxiv.org/abs/2606.23079v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.23079v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Neural world models coupled with model predictive control (MPC) replan at every environment step to bound accumulated prediction error, but this incurs substantial computational overhead. Reusing a cached plan reduces this overhead, yet its effectiveness depends on how prediction mismatch propagates through the local dynamics. We analyze this trade-off with a perturbation-based dynamic-regret framework and show that stale-plan penalties scale with the reuse tolerance, the accumulated mismatch since the last replanning step, and the local dynamics sensitivity. Based on this structure, we propose AdaReP, a training-free wrapper that adapts the replanning tolerance online using the current deviation from the cached rollout and a local sensitivity estimate, without modifying the learned world model or planner. Across image-space planning, latent-space control, and real-world robotic manipulation, AdaReP substantially reduces planner-side computation while maintaining comparable task performance, including over 80% fewer queries on a 50-trial physical robot study.
+
+神经世界模型与模型预测控制 (MPC) 相结合，在每个环境步骤中重新规划，以限制累积的预测误差，但这会产生大量的计算开销。重用缓存的计划可以减少这种开销，但其有效性取决于预测不匹配如何通过本地动态传播。我们用基于扰动的动态遗憾框架分析了这种权衡，并表明过时计划的惩罚随着重用容忍度、自上次重新计划步骤以来累积的不匹配以及局部动态敏感性而变化。基于这种结构，我们提出了 AdaReP，这是一种免训练的包装器，它使用与缓存的 rollout 的当前偏差和局部敏感度估计来在线调整重新规划容差，而无需修改学习的世界模型或规划器。在图像空间规划、潜在空间控制和现实世界的机器人操作方面，AdaReP 大大减少了规划器端的计算，同时保持可比较的任务性能，包括在 50 次试验的物理机器人研究中查询量减少了 80% 以上。
+
+</details>
+
+---
+
+## 14. Attacking the Trusted Imagination: Oracle-Level Integrity Attacks on Imagine-then-Act World Models / 攻击可信的想象力：对“想象然后行动”世界模型的神谕级完整性攻击
+
+**Date**: 2026-06-22 | **arXiv**: [2606.22966v1](http://arxiv.org/abs/2606.22966v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.22966v1)
+
+**Categories**: cs.LG, cs.AI, cs.CR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Many recent vision-language-action (VLA) policies adopt an imagine-then-act design. A world-action model (WAM) first imagines a short future as a latent trajectory z~, on which the action is then conditioned. We identify this trusted imagination, rather than the reactive policy, as the exposed attack surface. A downstream oracle, such as a safety gate, a visual model-predictive-control (MPC) planner, or an imagine-then-check verifier, consumes z~ as a prediction of the future. The robustness of the policy therefore does not entail the robustness of systems that rely on the WAM. The underlying phenomenon is an asymmetry. Corrupting the imagination is easy, since it requires only displacing z~ from its natural-future manifold. Steering it precisely is hard, since it must reach a specified on-manifold target. We adopt a capability-based threat model with an L-infinity-bounded observation perturbation. The attacker applies projected gradient descent through the fully differentiable observation-to-imagination map. The same off-manifold property motivates a parameter-free denoiser detector. We evaluate three targets: RynnVLA-002, LingBot-VA, and LaDi-WM. Untargeted corruption is roughly 60x stronger than random and is detected at AUC 1.0. Targeted control remains bounded. An adaptive attacker evades detection only by forgoing corruption. The reactive policy remains robust to corrupted imagination. A native imagination-driven MPC, however, exhibits the first adversary-specific task failure (at epsilon=0.01, success 0.70 versus 0.05; Fisher p < 10^-4).
+
+最近的许多视觉-语言-行动（VLA）政策都采用想象然后行动的设计。世界行动模型（WAM）首先将短期未来想象为潜在轨迹 z~，然后以该轨迹为条件进行行动。我们将这种可信的想象，而不是反应性策略，确定为暴露的攻击面。下游预言机，例如安全门、视觉模型预测控制 (MPC) 规划器或想象然后检查验证器，使用 z~ 作为对未来的预测。因此，策略的稳健性并不意味着依赖 WAM 的系统的稳健性。根本现象是不对称。破坏想象力很容易，因为它只需要将 z~ 从其自然未来流形中移出即可。精确地操纵它很困难，因为它必须达到指定的歧管目标。我们采用基于能力的威胁模型，具有 L 无穷大有界观测扰动。攻击者通过完全可微的观察到想象图应用投影梯度下降。相同的非流形特性激发了无参数降噪检测器。我们评估了三个目标：RynnVLA-002、LingBot-VA 和 LaDi-WM。无目标损坏比随机损坏大约强 60 倍，并在 AUC 1.0 下检测到。目标控制仍然有限。适应性攻击者只能通过放弃损坏来逃避检测。反应性政策对于腐败的想象力来说仍然很强大。然而，本地想象力驱动的 MPC 表现出第一个特定于对手的任务失败（在 epsilon=0.01 时，成功率为 0.70 与 0.05；Fisher p < 10^-4）。
+
+</details>
+
+---
+
+## 15. Temporal Logic Guidance for Action-Only Diffusion Policies with World Models / 使用世界模型的仅行动扩散策略的时态逻辑指南
+
+**Date**: 2026-06-22 | **arXiv**: [2606.22729v1](http://arxiv.org/abs/2606.22729v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.22729v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Diffusion policies enable multimodal robot behavior but offer limited ability to choose among behavior modes at inference time, even though such control is desirable in human-robot settings. Prior solutions to this lack of control have utilized Signal Temporal Logic (STL) to express human intentions and provide corresponding guidance for diffusion policy inference. However, these approaches can only guide diffusion policies that jointly generate future actions and states, increasing both complexity and runtime. We propose a novel guidance method for action-only diffusion policies that uses a separate learned world model to enable differentiable evaluation of STL robustness, with its gradient then injected into the diffusion process. This steers behavior toward constraint satisfaction without retraining, improving constraint adherence while preserving task performance. On the Can Transport task from Robomimic, our method maintains 100% task success while reducing constraint violations from over 80% for baseline methods to 4%. We also discuss extensions toward improved robustness and more complex constraints.
+
+扩散策略可以实现多模式机器人行为，但在推理时选择行为模式的能力有限，尽管这种控制在人类机器人设置中是可取的。先前针对这种缺乏控制的解决方案是利用信号时序逻辑（STL）来表达人类意图，并为扩散策略推理提供相应的指导。然而，这些方法只能指导共同生成未来行动和状态的扩散政策，从而增加了复杂性和运行时间。我们提出了一种针对仅行动扩散策略的新颖指导方法，该方法使用单独的学习世界模型来实现 STL 鲁棒性的可微分评估，然后将其梯度注入扩散过程。这可以引导行为朝着约束满足的方向发展，而无需重新训练，从而在保持任务绩效的同时提高约束遵守率。在 Robomimic 的 Can Transport 任务中，我们的方法保持了 100% 的任务成功率，同时将约束违规从基线方法的 80% 以上减少到 4%。我们还讨论了提高鲁棒性和更复杂约束的扩展。
+
+</details>
+
+---
+
+## 16. Self-Evolving Cognitive Framework via Causal World Modeling for Embodied Scientific Intelligence / 通过因果世界建模实现科学智能的自我进化认知框架
+
+**Date**: 2026-06-21 | **arXiv**: [2606.22449v1](http://arxiv.org/abs/2606.22449v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.22449v1)
+
+**Categories**: cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Current embodied world models are primarily optimized for predictive objectives, limiting their ability to generalize under distribution shifts and reason systematically about unseen situations and hypothetical interventions. We argue that embodied intelligence should move beyond predictive world modeling toward self-evolving cognitive systems that continually construct and refine internal causal representations through interaction with the environment. To this end, we propose a self-evolving cognitive framework via causal world modeling for embodied scientific intelligence, which integrates three complementary components: causal world modeling, intervention-driven causal reasoning, and continual cognitive refinement. The proposed framework continuously revises and expands its internal causal world model through causal discovery, intervention-driven feedback, and counterfactual reasoning, supporting continual cognitive refinement and enabling cognition itself to evolve over time. Furthermore, we reinterpret embodied interaction not merely as a means of trajectory optimization, but as an epistemic process for causal hypothesis generation, intervention-driven experimentation, and continual knowledge acquisition. This work provides a conceptual and theoretical foundation for a transition from predictive intelligence toward epistemic intelligence, in which intelligence emerges through the continual construction, revision, and refinement of causal world models via interaction with the environment. Accordingly, an intervention-driven causal-epistemic benchmarking paradigm is suggested for evaluating self-evolving embodied scientific intelligence.
+
+当前的具体世界模型主要针对预测目标进行了优化，限制了它们在分布变化下进行概括的能力以及对未见情况和假设干预进行系统推理的能力。我们认为，具身智能应该超越预测世界模型，转向自我进化的认知系统，通过与环境的交互不断构建和完善内部因果表征。为此，我们通过因果世界建模提出了一个自我进化的认知框架，以体现科学智能，该框架集成了三个互补的组成部分：因果世界建模、干预驱动的因果推理和持续的认知细化。所提出的框架通过因果发现、干预驱动的反馈和反事实推理不断修改和扩展其内部因果世界模型，支持持续的认知细化并使认知本身随着时间的推移而发展。此外，我们将体现交互重新解释为不仅是轨迹优化的一种手段，而且是因果假设生成、干预驱动的实验和持续知识获取的认知过程。这项工作为从预测智能向认知智能的转变提供了概念和理论基础，其中智能是通过与环境的交互不断构建、修订和完善因果世界模型而出现的。因此，建议采用干预驱动的因果认知基准范式来评估自我进化的具体科学智能。
+
+</details>
+
+---
+
+## 17. Words as Difference Makers: How Large Language Models Determine Causal Structure in Text / 单词作为差异制造者：大型语言模型如何确定文本中的因果结构
+
+**Date**: 2026-06-21 | **arXiv**: [2606.22430v1](http://arxiv.org/abs/2606.22430v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.22430v1)
+
+**Categories**: cs.CL, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Because large language models (LLMs) are impressively successful in predicting text, it appears that they must have access to a 'world model' representing causal and definitional structure. However, the dominant formalisms of modern causal inference -- Judea Pearl's interventionist approach and the Neyman-Rubin potential outcomes framework -- struggle to illuminate how LLMs learn causal structure. I resolve this puzzle by arguing that LLMs employ a specific inductive approach based on a difference-making logic -- sometimes called variational induction. I demonstrate how central aspects of this logic are realized during training, where LLMs require enormous amounts of text data from a wide range of contexts to identify difference- and indifference-makers within word sequences. Furthermore, I analyze specific architectural features of LLMs -- such as token embeddings and self-attention -- to determine their roles in variational induction. The difference-making logic of LLMs fundamentally parallels the experimental method, where causal relations are derived by systematically varying individual circumstances to determine their influence on a phenomenon.
+
+由于大型语言模型 (LLM) 在预测文本方面取得了令人印象深刻的成功，因此它们似乎必须能够访问表示因果和定义结构的“世界模型”。然而，现代因果推理的主要形式主义——Judea Pearl 的干预主义方法和内曼-鲁宾潜在结果框架——很难阐明法学硕士如何学习因果结构。我通过论证法学硕士采用基于差异化逻辑（有时称为变分归纳法）的特定归纳方法来解决这个难题。我演示了如何在训练期间实现这种逻辑的核心方面，法学硕士需要来自各种上下文的大量文本数据来识别单词序列中的差异和冷漠制造者。此外，我还分析了法学硕士的具体架构特征（例如令牌嵌入和自注意力），以确定它们在变分归纳中的作用。法学硕士的差异化逻辑从根本上与实验方法相似，其中因果关系是通过系统地改变个体情况来确定其对现象的影响而得出的。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-06-19 (8 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-06-19
