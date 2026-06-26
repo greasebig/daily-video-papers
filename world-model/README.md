@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-06-26](papers/2026-06-26.md) - 8 papers
 - [2026-06-25](papers/2026-06-25.md) - 8 papers
 - [2026-06-24](papers/2026-06-24.md) - 17 papers
 - [2026-06-19](papers/2026-06-19.md) - 8 papers
@@ -98,6 +99,148 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-06-26 (8 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-06-26
+
+**Paper Count**: 8
+
+---
+
+## 1. A Generalization Theory for JEPA-Based World Models / 基于 JEPA 的世界模型的泛化理论
+
+**Date**: 2026-06-25 | **arXiv**: [2606.27014v1](http://arxiv.org/abs/2606.27014v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.27014v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Joint Embedding Predictive Architectures (JEPAs) have recently emerged as a promising paradigm for world modeling by learning predictive dynamics in a latent space rather than generating future observations at the input level. Despite their empirical success, the theoretical understanding of JEPA-based world models remains limited. In this paper, we develop the first generalization theory for JEPA-based world models. We formulate JEPA pretraining as a conditional spectral graph learning problem and show that the JEPA objective is equivalent to a low-rank factorization of an action-conditioned co-occurrence matrix. Building on this characterization, we establish a connection between JEPA pretraining error and downstream planning regret, leading to a finite-sample generalization bound for JEPA-based world models. Our analysis reveals an inherent trade-off between approximation and sample errors with respect to the latent dimension, providing theoretical insights into the advantages and limitations of latent predictive models compared with input-level predictive approaches.
+
+联合嵌入预测架构（JEPA）最近成为一种有前景的世界建模范例，它通过学习潜在空间中的预测动态而不是在输入级别生成未来的观察结果。尽管在实证上取得了成功，但对基于 JEPA 的世界模型的理论理解仍然有限。在本文中，我们为基于 JEPA 的世界模型开发了第一个泛化理论。我们将 JEPA 预训练表述为条件谱图学习问题，并表明 JEPA 目标相当于动作条件共生矩阵的低秩分解。在此特征的基础上，我们在 JEPA 预训练误差和下游规划遗憾之间建立了联系，从而得出基于 JEPA 的世界模型的有限样本泛化界限。我们的分析揭示了潜在维度的近似值和样本误差之间的固有权衡，为潜在预测模型与输入级预测方法相比的优点和局限性提供了理论见解。
+
+</details>
+
+---
+
+## 2. Einstein World Models / 爱因斯坦世界模型
+
+**Date**: 2026-06-25 | **arXiv**: [2606.26969v1](http://arxiv.org/abs/2606.26969v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.26969v1)
+
+**Categories**: cs.AI, cs.CL, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Does intelligence require the ability to reason about phenomena beyond direct experience? It is natural to suspect that some complex thought cannot be captured through language alone. However, of particular concern to this work, is whether visualising counterfactual events can complement language as a mechanism for complex thought. We ask whether LLMs can be trained to utilise such visualisation mechanisms, in a way that benefits their reasoning abilities. Motivated by this question, we propose Einstein World Models. EWMs are a blueprint for LLM-based reasoning systems that place visual-temporal rollouts inside the reasoning trace, allowing them to reason in ways that text alone may not support well. In an EWM, the LLM calls a world-module (not to be confused with a world model), to produce short rollouts of scenes under consideration. The returned rollout is treated not as the answer, but as an inspectable hypothesis that can support later reasoning. Einstein World Models extend the capability of LLMs for tool calling (such as web search or code execution), into the domain of visual thought experiments.
+
+智力是否需要对超出直接经验的现象进行推理的能力？人们很自然地怀疑某些复杂的思想无法仅通过语言来捕捉。然而，这项工作特别关注的是，可视化反事实事件是否可以补充语言作为复杂思维的机制。我们询问法学硕士是否可以接受培训以利用这种可视化机制，从而有利于他们的推理能力。受这个问题的启发，我们提出了爱因斯坦世界模型。 EWM 是基于 LLM 的推理系统的蓝图，它将视觉-时间卷展放置在推理跟踪内，允许它们以仅文本可能无法很好支持的方式进行推理。在 EWM 中，LLM 调用世界模块（不要与世界模型混淆），以生成所考虑场景的简短展示。返回的推出不被视为答案，而是被视为可以支持后续推理的可检查假设。爱因斯坦世界模型将法学硕士的工具调用（例如网络搜索或代码执行）能力扩展到视觉思维实验领域。
+
+</details>
+
+---
+
+## 3. Look-Before-Move: Narrative-Grounded World Visual Attention in Dynamic 3D Story Worlds / 先看后移动：动态 3D 故事世界中以叙事为基础的世界视觉注意力
+
+**Date**: 2026-06-25 | **arXiv**: [2606.26964v1](http://arxiv.org/abs/2606.26964v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.26964v1)
+
+**Categories**: cs.AI, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+As embodied AI and world models increasingly operate in dynamic 3D environments, visual perception must move beyond passively interpreting given observations toward actively deciding what to observe. We study this problem through camera planning in dynamic 3D story worlds, where the camera must not only generate smooth motion, but also decide what visual evidence should be acquired before it moves. We formulate this capability as Narrative-Grounded World Visual Attention, where the camera acts as an embodied observer that determines what to observe, how to compose the observation, and how to shift attention over time under narrative intent and physical 3D constraints. To realize this capability, we propose Look-Before-Move, a camera planning framework that separates observation specification from motion execution. It first builds a Semantic Observation Contract to convert directorial intent into executable visual constraints, then performs Monte Carlo Viewpoint Search to find narrative-compliant and geometrically feasible viewpoints, and finally applies Semantic Trajectory Grounding to connect selected viewpoints into continuous, collision-aware, and temporally coherent camera motion. We further construct a dynamic 3D Story World Benchmark based on StoryBlender, covering 50 stories, 457 scenes, and 1585 shots with animated characters, semantic scene configurations, and executable 3D environments. Experiments show that our framework improves subject perception, intent consistency, and trajectory quality over representative baselines, demonstrating the importance of organizing visual attention before generating camera motion.
+
+随着具体人工智能和世界模型越来越多地在动态 3D 环境中运行，视觉感知必须超越被动解释给定的观察结果，转向主动决定观察什么。我们通过动态 3D 故事世界中的摄像机规划来研究这个问题，其中摄像机不仅必须产生平滑的运动，而且还要决定在移动之前应获取哪些视觉证据。我们将这种能力表述为“以叙事为基础的世界视觉注意力”，其中摄像机充当具体的观察者，决定观察什么、如何组织观察以及如何在叙事意图和物理 3D 约束下随着时间的推移转移注意力。为了实现这一功能，我们提出了 Look-Before-Move，这是一种将观察规范与运动执行分开的相机规划框架。它首先构建语义观察契约，将导演意图转换为可执行的视觉约束，然后执行蒙特卡罗视点搜索以查找符合叙事且几何上可行的视点，最后应用语义轨迹基础将选定的视点连接成连续的、碰撞感知的和时间连贯的摄像机运动。我们进一步基于 StoryBlender 构建了动态 3D 故事世界基准，涵盖 50 个故事、457 个场景和 1585 个镜头，包括动画角色、语义场景配置和可执行的 3D 环境。实验表明，我们的框架在代表性基线上提高了主体感知、意图一致性和轨迹质量，证明了在生成相机运动之前组织视觉注意力的重要性。
+
+</details>
+
+---
+
+## 4. LithoDreamer: A Physics-Informed World Model for Multi-Stage Computational Lithography / LithoDreamer：多阶段计算光刻的物理世界模型
+
+**Date**: 2026-06-25 | **arXiv**: [2606.26713v1](http://arxiv.org/abs/2606.26713v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.26713v1)
+
+**Categories**: cs.AI
+
+**Code**: https://github.com/7jiangyq/lithodreamer.git).
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+As semiconductor technology nodes scale, computational lithography is essential for ensuring yield and performance. However, lithography is a continuous physical process involving mask optimization, optical imaging, resist exposure, and development, which existing models fail to capture. To overcome this limitation, we present LithoDreamer, the first physics-informed World Model (WM) framework for computational lithography, which formulates the ``Layout-Mask-Resist Image-After Development Image (ADI)'' pipeline as a decision-driven multi-step evolution system. LithoDreamer captures feature changes between adjacent states to model stage-specific physics-informed latent spaces, in which it controls process intervention exploration and drives subsequent state transitions. To achieve interpretable intervention optimization without continuous supervision, we propose a contrastive variational optimization paradigm that contrasts the latent differences between intervention paths with variational evolution constraints, guiding the model to generate evolutions consistent with real lithography physics. Experiments show LithoDreamer achieves state-of-the-art performance in forward evolution and inverse planning. Our lithography dataset is publicly available at GitHub (https://github.com/7jiangyq/lithodreamer.git).
+
+随着半导体技术节点规模的扩大，计算光刻对于确保良率和性能至关重要。然而，光刻是一个连续的物理过程，涉及掩模优化、光学成像、抗蚀剂曝光和显影，现有模型无法捕捉到这一点。为了克服这一限制，我们提出了 LithoDreamer，这是第一个用于计算光刻的物理信息世界模型 (WM) 框架，它将“布局-掩模-抗蚀剂图像-开发后图像 (ADI)”管道制定为决策驱动的多步演化系统。 LithoDreamer 捕获相邻状态之间的特征变化，以对特定阶段的物理信息潜在空间进行建模，在其中控制过程干预探索并驱动后续状态转换。为了在没有持续监督的情况下实现可解释的干预优化，我们提出了一种对比变分优化范式，该范式将干预路径之间的潜在差异与变分演化约束进行对比，指导模型生成与真实光刻物理一致的演化。实验表明 LithoDreamer 在前向演化和逆向规划方面实现了最先进的性能。我们的光刻数据集可在 GitHub (https://github.com/7jianyq/lithodreamer.git) 上公开获取。
+
+</details>
+
+---
+
+## 5. Tactile-WAM: Touch-Aware World Action Model with Tactile Asymmetric Attention / Tactile-WAM：具有触觉不对称注意力的触摸感知世界动作模型
+
+**Date**: 2026-06-25 | **arXiv**: [2606.26663v1](http://arxiv.org/abs/2606.26663v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.26663v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World Action Models (WAMs) generate actions together with predicted futures, offering a powerful interface for robot decision making. In contact-rich manipulation, however, visually plausible futures can be physically incomplete: insertion, assembly, search, and reorientation often depend on slip, jamming, contact normals, or small alignment errors that are weakly visible or hidden in RGB. A natural solution is to predict future tactile states, however, we identify tactile pollution, a failure mode where unconstrained tactile-token injection degrades video and action prediction by forcing a visual dynamics model to absorb sparse, local, event-driven contact signals. To address this, we propose Tactile-WAM, a touch-aware WAM with a Tactile Asymmetric Attention Mechanism (TAAM). TAAM combines a VideoClean mask, which blocks video-query access to tactile key/value tokens while preserving action-query access, with a touch-aware bias for action attention. The VideoClean mask protects visual prediction while keeping contact information available for action generation; the touch-aware bias is derived from predicted touch changes and modulates action attention to tactile tokens during denoising. On ManiFeel, Tactile-WAM improves the mean success rate by 38.9% overall and by 86% on contact-rich tasks.
+
+世界动作模型 (WAM) 生成动作和预测的未来，为机器人决策提供强大的界面。然而，在接触丰富的操纵中，视觉上合理的未来在物理上可能是不完整的：插入、组装、搜索和重新定向通常取决于滑动、卡住、接触法线或在 RGB 中微弱可见或隐藏的小对齐错误。一个自然的解决方案是预测未来的触觉状态，然而，我们发现了触觉污染，这是一种故障模式，其中无约束的触觉令牌注入通过迫使视觉动力学模型吸收稀疏的、局部的、事件驱动的接触信号来降低视频和动作预测的质量。为了解决这个问题，我们提出了 Tactile-WAM，一种具有触觉不对称注意机制 (TAAM) 的触摸感知 WAM。 TAAM 结合了 VideoClean 掩码，该掩码阻止视频查询访问触觉键/值标记，同时保留动作查询访问，并具有针对动作注意力的触摸感知偏差。 VideoClean 掩模可保护视觉预测，同时保持联系信息可用于动作生成；触摸感知偏差源自预测的触摸变化，并在降噪过程中调节对触觉标记的动作注意力。在 ManiFeel 上，Tactile-WAM 总体平均成功率提高了 38.9%，在接触丰富的任务上提高了 86%。
+
+</details>
+
+---
+
+## 6. KRVF: A Source-Aware Semantic Voxel World Representation for Edge Mobile Manipulation / KRVF：边缘移动操作的源感知语义体素世界表示
+
+**Date**: 2026-06-24 | **arXiv**: [2606.26321v1](http://arxiv.org/abs/2606.26321v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.26321v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Mobile manipulators need world models that are current, queryable, semantically meaningful, and usable under edge-compute constraints. This technical report presents KRVF, a source-aware semantic voxel world representation for edge mobile manipulation. Unlike reconstruction-centric mapping pipelines that primarily optimize global geometric fidelity, KRVF represents local world state as task-oriented voxels that encode occupancy, color, semantic evidence, temporal freshness, and evidence source. The representation separates measured occupancy from semantic-prior hypotheses, enabling depth-failure-aware object reasoning without silently corrupting persistent geometry. KRVF also closes a feedback loop between mapping and sensing by rendering map-prior depth for repair, and exposes task-level query operators for semantic objects and grasp candidates. The report formalizes the KRVF representation and documents a ROS 2 implementation that turns online RGB-D observations into a task-facing robot memory.
+
+移动操纵器需要最新的、可查询的、语义上有意义的、并且在边缘计算约束下可用的世界模型。该技术报告介绍了 KRVF，一种用于边缘移动操作的源感知语义体素世界表示。与主要优化全局几何保真度的以重建为中心的映射管道不同，KRVF 将局部世界状态表示为面向任务的体素，对占用、颜色、语义证据、时间新鲜度和证据源进行编码。该表示将测量的占用率与语义先验假设分开，从而实现深度故障感知的对象推理，而不会默默地破坏持久几何形状。 KRVF 还通过渲染映射先验深度进行修复来关闭映射和感知之间的反馈循环，并公开语义对象和抓取候选对象的任务级查询运算符。该报告正式化了 KRVF 表示形式，并记录了 ROS 2 的实现，该实现将在线 RGB-D 观测结果转化为面向任务的机器人内存。
+
+</details>
+
+---
+
+## 7. Fast LeWorldModel / 快速LeWorld模型
+
+**Date**: 2026-06-24 | **arXiv**: [2606.26217v1](http://arxiv.org/abs/2606.26217v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.26217v1)
+
+**Categories**: cs.LG, cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Joint-Embedding Predictive Architectures (JEPAs), including recent LeWorldModel (LeWM), have become a promising foundation for reconstruction-free visual world models. For visual planning, however, LeWM evaluates candidate action sequences by repeatedly applying a local one-step latent transition model. This autoregressive rollout makes planning computationally expensive and exposes the predicted trajectory to accumulated latent errors as the horizon grows. We propose Fast LeWorldModel (Fast-LeWM), a fast latent world model that replaces repeated local rollout with action-prefix prediction. Given the current latent and a candidate action sequence, Fast-LeWM encodes its prefixes and predicts the future latents reached after executing those prefixes in parallel. By making action prefixes the basic prediction unit, Fast-LeWM directly models action effects accumulated to different extents over multiple horizons. This prefix-level supervision forces the model to learn how states continuously evolve under different action prefixes, rather than only fitting one-step state transitions. During planning, the predictor can use the last prefix token from the encoded action sequence to evaluate the corresponding future latent without explicitly rolling through each intermediate imagined state. Across multiple tasks, Fast-LeWM improves average success over LeWM while substantially reducing planning time, achieving lower open-loop latent loss whose growth becomes significantly slower as the rollout horizon increases.
+
+联合嵌入预测架构 (JEPA)，包括最近的 LeWorldModel (LeWM)，已成为免重建视觉世界模型的有前途的基础。然而，对于视觉规划，LeWM 通过重复应用局部一步潜在转换模型来评估候选动作序列。这种自回归的推出使得规划的计算成本很高，并且随着视野的增长，预测的轨迹会受到累积的潜在误差的影响。我们提出了 Fast LeWorldModel (Fast-LeWM)，这是一种快速潜在世界模型，用动作前缀预测取代重复的局部推出。给定当前潜在和候选动作序列，Fast-LeWM 对其前缀进行编码，并预测并行执行这些前缀后达到的未来潜在。通过将动作作为基本预测单元的前缀，Fast-LeWM 直接对多个层面上不同程度累积的动作效果进行建模。这种前缀级监督迫使模型学习状态如何在不同动作前缀下持续演化，而不是仅仅拟合一步状态转换。在规划过程中，预测器可以使用编码动作序列中的最后一个前缀标记来评估相应的未来潜在状态，而无需显式滚动每个中间想象状态。在多个任务中，Fast-LeWM 比 LeWM 提高了平均成功率，同时大幅减少了规划时间，实现了更低的开环潜在损失，随着部署范围的增加，开环潜在损失的增长速度明显减慢。
+
+</details>
+
+---
+
+## 8. The Unfireable Safety Kernel: Execution-Time AI Alignment for AI Agents and Other Escapable AI Systems / 不可激发的安全内核：人工智能代理和其他可逃逸人工智能系统的执行时人工智能对齐
+
+**Date**: 2026-06-24 | **arXiv**: [2606.26057v1](http://arxiv.org/abs/2606.26057v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.26057v1)
+
+**Categories**: cs.AI, cs.CR, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+AI agents are granted access to tools, APIs, and other infrastructure, making them active principals in those systems. The dominant approach places controls inside the agent's own runtime: system prompts, output filters, and guardrail libraries. Any control in the agent's address space is reachable by inputs that influence it; this generalizes to any AI system with sufficient reach into its own runtime, a class we term escapable AI systems.   We identify four properties that an authorization mechanism must satisfy for architectural control rather than for cooperative requests: process separation, pre-action enforcement on a structurally only path, fail-closed at both the request and system levels, and externalized signed evidence verifiable outside the controlled system's trust boundary. We position this layer as execution-time AI alignment, complementing training-time alignment (RLHF, Constitutional AI) and inference-time alignment.   We present the Unfireable Safety Kernel, a Rust reference implementation realizing all four. Its fail-closed invariant is machine-checked at two levels: an SMT theorem (Z3) and an exhaustive bounded-model-checking proof of the production decision function (Kani, 4/4 harnesses). A Python-to-Rust migration was gated on byte-equivalence (1000/1000 fixtures; 17/17 adversarial classes). We evaluate the kernel governing a live, escapable AI system, a deterministic, self-improving world model, against an escape-seeking adversary driving its real self-modification seam: across 1,000 self-modifications, all 704 attempts on the safety-critical core are refused, with no escape; a further 300, under the operator kill switch, are also refused. A separate campaign of 6,240 authorization round-trips had no successful bypass. Against 3 contemporary systems claiming the agent control plane, the agent invokes control; here, it lacks that choice.
+
+人工智能代理被授予访问工具、API 和其他基础设施的权限，使它们成为这些系统中的活跃主体。主要方法将控件放置在代理自己的运行时内：系统提示、输出过滤器和护栏库。代理地址空间中的任何控制都可以通过影响它的输入来访问；这可以推广到任何具有足够的运行时间的人工智能系统，我们将其称为可逃避的人工智能系统。   我们确定了授权机制必须满足体系结构控制而不是协作请求的四个属性：流程分离、在结构上唯一的路径上执行预操作、请求和系统级别的故障关闭以及在受控系统的信任边界之外可验证的外部化签名证据。我们将该层定位为执行时人工智能对齐，补充训练时间对齐（RLHF、宪法人工智能）和推理时间对齐。   我们提出了 Unfireable Safety Kernel，这是一个实现了这四种功能的 Rust 参考实现。其故障关闭不变量在两个级别上进行机器检查：SMT 定理 (Z3) 和生产决策函数的详尽有界模型检查证明（Kani，4/4 线束）。 Python 到 Rust 的迁移是在字节等效性上进行的（1000/1000 固定装置；17/17 对抗类）。我们评估了管理一个实时的、可逃避的人工智能系统的内核，一个确定性的、自我改进的世界模型，与一个寻求逃避的对手驱动其真正的自我修改接缝：在 1,000 次自我修改中，对安全关键核心的所有 704 次尝试都被拒绝，没有逃脱；另外 300 个在操作员终止开关下也被拒绝。一项包含 6,240 次授权往返的单独活动没有成功绕过。针对 3 个声称代理控制平面的当代系统，代理调用控制；在这里，它缺乏这种选择。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-06-25 (8 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-06-25
