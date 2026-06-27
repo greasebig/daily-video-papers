@@ -27,6 +27,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-06-27](papers/2026-06-27.md) - 6 papers
 - [2026-06-26](papers/2026-06-26.md) - 15 papers
 - [2026-06-25](papers/2026-06-25.md) - 18 papers
 - [2026-06-24](papers/2026-06-24.md) - 26 papers
@@ -124,6 +125,116 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-06-27 (6 papers)</b></summary>
+
+# arXiv Video Papers - 2026-06-27
+
+**Paper Count**: 6
+
+---
+
+## 1. DnA: Denoising Attention for Visual Tasks / DnA：视觉任务的注意力去噪
+
+**Date**: 2026-06-25 | **arXiv**: [2606.27372v1](http://arxiv.org/abs/2606.27372v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.27372v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The softmax activation in multihead attention (MHA) is the de facto standard for attention-based models in visual perception tasks. However, standard softmax can produce noisy attention patterns that dilute relevant features and degrade its performance. In this paper, we propose Denoising Attention or DnA, in which, first, a positive query identifies which image features belong to the correct class, and a negative query identifies closely associated but irrelevant image features. DnA then projects these interactions into two distinct subspaces with larger principal angles, promoting subspace separation and improved discriminability. Using a ViT-B backbone, our proposed DnA achieves an absolute gain of 0.8% on ImageNet-1K compared to the baseline. We further show improvements across multiple visual understanding tasks, including video understanding with video transformers (1.8%) and video LLMs (0.5%). Our extensive empirical analyses justify the design choices involving two interacting subspaces and the denoising effect of DnA.
+
+多头注意力（MHA）中的 softmax 激活是视觉感知任务中基于注意力的模型的事实上的标准。然而，标准的 softmax 会产生嘈杂的注意力模式，从而稀释相关特征并降低其性能。在本文中，我们提出了去噪注意力（DnA），其中，首先，正查询识别哪些图像特征属于正确的类别，负查询识别密切相关但不相关的图像特征。然后，DNA 将这些相互作用投射到两个具有较大主角的不同子空间中，促进子空间分离并提高可辨别性。使用 ViT-B 主干，我们提出的 DnA 在 ImageNet-1K 上与基线相比实现了 0.8% 的绝对增益。我们进一步展示了多个视觉理解任务的改进，包括使用视频转换器 (1.8%) 和视频法学硕士 (0.5%) 的视频理解。我们广泛的实证分析证明了涉及两个相互作用的子空间和 DNA 去噪效果的设计选择的合理性。
+
+</details>
+
+---
+
+## 2. RayPE: Ray-Space Positional Encoding for 3D-Aware Video Generation / RayPE：用于 3D 感知视频生成的光线空间位置编码
+
+**Date**: 2026-06-25 | **arXiv**: [2606.27345v1](http://arxiv.org/abs/2606.27345v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.27345v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Modern video diffusion transformers position their tokens through RoPE on the (u,v,t) axes -- a description of the camera's sampling grid that says nothing about the 3D structure of the scene. We observe that the geometric relation between two camera rays is captured by the Plucker reciprocal product, which is bilinear in the two rays -- the same algebraic form as the dot product in Transformer attention. Building on this analogy, we propose RayPE, a positional-encoding extension that injects per-token 6D Plucker coordinates additively into the queries and keys of self-attention, with a query/key flip arrangement under which the symmetric identity configuration coincides exactly with the reciprocal product. The injection is additive, the resulting attention score decomposes into a content term, a geometry term, and two content and geometry cross-terms -- all of which our experiments find individually necessary. To make the encoding stable across video data with heterogeneous camera-translation scales (SfM, deep SLAM, metric), we further decouple ray direction from moment magnitude, gate the encoding by a learned function of the log-magnitude, and apply RMSNorm to align it with the QKNorm-normalized content branch. The full module adds less than 0.1% parameters to a pretrained video DiT, is zero-initialized to start from the pretrained weights, and improves camera controllability, cross-frame 3D consistency, and overall video quality on a four-dataset training mixture.
+
+现代视频扩散变压器通过 RoPE 将其标记定位在 (u,v,t) 轴上——这是对摄像机采样网格的描述，但没有提及场景的 3D 结构。我们观察到，两条相机光线之间的几何关系是由 Plucker 倒积捕获的，它在两条光线中是双线性的——与 Transformer 注意力中的点积相同的代数形式。基于这个类比，我们提出了 RayPE，这是一种位置编码扩展，它将每个令牌的 6D Plucker 坐标添加到自注意力的查询和密钥中，并采用查询/密钥翻转安排，在该安排下，对称身份配置与倒数乘积完全一致。注入是相加的，产生的注意力分数分解为一个内容项、一个几何项以及两个内容和几何交叉项——我们的实验发现所有这些都是单独必要的。为了使编码在具有异构相机平移尺度（SfM、深度 SLAM、度量）的视频数据中保持稳定，我们进一步将光线方向与矩幅解耦，通过学习的对数幅值函数对编码进行门控，并应用 RMSNorm 将其与 QKNorm 归一化内容分支对齐。完整模块向预训练视频 DiT 添加了不到 0.1% 的参数，从预训练权重开始进行零初始化，并提高了四个数据集训练混合物上的相机可控性、跨帧 3D 一致性和整体视频质量。
+
+</details>
+
+---
+
+## 3. SAM2Matting: Generalized Image and Video Matting / SAM2Matting：通用图像和视频抠图
+
+**Date**: 2026-06-25 | **arXiv**: [2606.27339v1](http://arxiv.org/abs/2606.27339v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.27339v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Despite impressive advances in image matting, video matting remains challenging due to the inherent gap between high-level tracking, which requires frame-wise understanding, and low-level matting, which focuses on extremely fine-grained details. Existing methods attempt this with expensive and narrowly-scoped video matting datasets, which may limit out-of-domain generalization and compromise tracking robustness. We rethink the paradigm with SAM2Matting, a tracker-to-matting framework that advances VOS trackers to high-fidelity video matting. Specifically, it decouples the task by enhancing a foundational tracker (e.g., SAM2, SAM3) with a region-proposal bridge and dedicated matting heads, enabling the uncompromised tracker to handle temporal consistency while the matting components resolve fine-grained details. Notably, despite being trained only on images, SAM2Matting establishes new state-of-the-art performance on video matting, supports diverse prompt types, maintains strong temporal consistency, and demonstrates robust generalization across both human-centric and in-the-wild scenarios.
+
+尽管图像抠图方面取得了令人印象深刻的进步，但视频抠图仍然具有挑战性，因为高级跟踪（需要逐帧理解）和低级抠图（专注于极其细粒度的细节）之间存在固有差距。现有的方法尝试使用昂贵且范围狭窄的视频抠图数据集来实现这一点，这可能会限制域外泛化并损害跟踪的鲁棒性。我们使用 SAM2Matting 重新思考该范式，这是一种跟踪器到抠图框架，可将 VOS 跟踪器推进到高保真视频抠图。具体来说，它通过使用区域提议桥和专用抠图头增强基础跟踪器（例如 SAM2、SAM3）来解耦任务，使不妥协的跟踪器能够处理时间一致性，同时抠图组件解决细粒度的细节。值得注意的是，尽管仅针对图像进行了训练，但 SAM2Matting 在视频抠图方面建立了新的最先进的性能，支持多种提示类型，保持强大的时间一致性，并在以人类为中心和野外场景中表现出强大的泛化能力。
+
+</details>
+
+---
+
+## 4. Not All Actions Are Equal: Rethinking Conditioning for Dexterous World Model / 并非所有行动都是平等的：重新思考灵巧世界模型的调节
+
+**Date**: 2026-06-25 | **arXiv**: [2606.27325v1](http://arxiv.org/abs/2606.27325v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.27325v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in action-conditioned world models show promising progress in modeling complex interactions and forecasting future states under diverse action sequences. While these models are often driven by stronger visual representations and model capacity, action conditioning itself remains underexplored. Most existing approaches compress the entire action sequence into a single representation, which works well for low-DoF control but becomes less reliable in high-DoF scenarios. We observe that high-DoF dexterous actions are inherently heterogeneous, spanning multiple orders of magnitude, where large-scale motions coexist with subtle but important signals. When uniformly aggregated, optimization exhibits an imbalance across action components, which hinders the modeling of fine-grained effects and affects action fidelity. We therefore propose DexAC-WM, which treats action conditioning as a structured process rather than global compression. DexAC preserves dimension-level semantics via action tokenization and aligns action signals with visual dynamics through local refinement and global modulation. To address the limited high-level semantic grounding in existing world models, we further introduce a semantic branch that provides rich object-scene priors, which enables world model to capture dynamic visual details while supporting high-DoF action-conditioned video prediction. Experiments on EgoDex and EgoVerse show that combining the semantic branch with DexAC significantly improves FID, FVD, and PCK, demonstrating gains in visual-temporal realism and action-following consistency. We further verify that DexAC extends to other backbones, showing the scalability of our structured action-conditioning design. These results suggest that scaling world models to high-DoF control requires both structured action modeling and semantic grounding.
+
+动作条件世界模型的最新进展表明，在复杂交互建模和预测不同动作序列下的未来状态方面取得了有希望的进展。虽然这些模型通常是由更强的视觉表征和模型能力驱动的，但动作调节本身仍未得到充分探索。大多数现有方法将整个动作序列压缩为单个表示，这对于低自由度控制效果很好，但在高自由度场景中变得不太可靠。我们观察到，高自由度灵巧动作本质上是异构的，跨越多个数量级，其中大规模运动与微妙但重要的信号共存。当统一聚合时，优化会表现出动作组件之间的不平衡，这阻碍了细粒度效果的建模并影响动作保真度。因此，我们提出 DexAC-WM，它将动作调节视为结构化过程而不是全局压缩。 DexAC 通过动作标记化保留维度级语义，并通过局部细化和全局调制将动作信号与视觉动态保持一致。为了解决现有世界模型中有限的高级语义基础，我们进一步引入了一个语义分支，它提供丰富的对象场景先验，使世界模型能够捕获动态视觉细节，同时支持高自由度动作条件视频预测。 EgoDex 和 EgoVerse 上的实验表明，将语义分支与 DexAC 相结合显着改善了 FID、FVD 和 PCK，展示了视觉时间真实性和动作跟踪一致性方面的收益。我们进一步验证 DexAC 可以扩展到其他骨干网，显示出我们结构化动作调节设计的可扩展性。这些结果表明，将世界模型扩展到高自由度控制需要结构化动作建模和语义基础。
+
+</details>
+
+---
+
+## 5. OctoSense: Self-Supervised Learning for Multimodal Robot Perception / OctoSense：多模态机器人感知的自监督学习
+
+**Date**: 2026-06-25 | **arXiv**: [2606.27317v1](http://arxiv.org/abs/2606.27317v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.27317v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present OctoSense, an open-source sensor platform with stereo RGB and event cameras, LiDAR, a thermal camera, an inertial measurement unit, RTK-corrected global positioning system, and proprioception (CAN bus data from a car, and joint angles for a quadruped robot). The eponymous OctoSense dataset contains 59 hours of time-synchronized driving data across different types of environments at different times of the day, including situations with highly degraded sensors. We demonstrate multi-modal self-supervised learning using such real-world robotics data, where sensors have different representations, frequencies, latencies and noise. Our approach, a "late-fusion" masked autoencoder, (i) uses modality-specific tokenizers to account for different spatiotemporal characteristics of these sensors, and (ii) caches modality-specific tokens at inference time to process new measurements as they come. This architecture (i) is fast (6.68 ms and 112 ms on NVIDIA 5090 and Orin NX respectively, to compute the representation), (ii) performs better than existing image-only foundation models on tasks such as estimation of optical flow, depth, semantic segmentation, and ego-motion (translation, rotation, and steering angle), and (iii) predicts robustly at nighttime or in situations where sensory data is degraded. See our project page for links to the dataset, code, and supplementary videos: https://abisulco.com/octosense/.
+
+我们展示了 OctoSense，一个开源传感器平台，配备立体 RGB 和事件相机、LiDAR、热成像相机、惯性测量单元、RTK 校正全球定位系统和本体感觉（来自汽车的 CAN 总线数据和四足机器人的关节角度）。同名的 OctoSense 数据集包含一天中不同时间不同类型环境下的 59 小时时间同步驾驶数据，包括传感器严重退化的情况。我们使用此类真实世界的机器人数据演示了多模式自监督学习，其中传感器具有不同的表示、频率、延迟和噪声。我们的方法是“后期融合”屏蔽自动编码器，（i）使用特定于模态的标记器来解释这些传感器的不同时空特征，以及（ii）在推理时缓存特定于模态的标记，以在新测量到来时处理它们。该架构 (i) 速度快（在 NVIDIA 5090 和 Orin NX 上计算表示的时间分别为 6.68 毫秒和 112 毫秒），(ii) 在光流估计、深度、语义分割和自我运动（平移、旋转和转向角度）等任务上比现有的纯图像基础模型表现更好，(iii) 在夜间或感知数据退化的情况下进行稳健预测。请参阅我们的项目页面，获取数据集、代码和补充视频的链接：https://abisulco.com/octosense/。
+
+</details>
+
+---
+
+## 6. EO-WM: A Physically Informed World Model for Probabilistic Earth Observation Forecasting / EO-WM：概率地球观测预测的物理信息世界模型
+
+**Date**: 2026-06-25 | **arXiv**: [2606.27277v1](http://arxiv.org/abs/2606.27277v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.27277v1)
+
+**Categories**: cs.AI, cs.CV
+
+**Code**: https://github.com/Luo-Z13/EO-WM.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Earth Observation (EO) forecasting aims to predict future Earth surface dynamics from satellite observations under changing meteorological conditions. In this paper, we view this task as a partially observed, weather-driven world modeling problem, in which weather acts as a conditioning signal, while forecasting remains uncertain due to sparse observations and unobserved land-surface states. However, existing methods do not fully capture this setting: deterministic models collapse uncertainty into a single future prediction, while diffusion-based methods typically treat weather variables as undifferentiated conditioning signals, and existing benchmarks focus mainly on reconstruction accuracy rather than whether forecasts respond correctly to changed weather forcing.We introduce EO-WM, a video diffusion transformer for multispectral EO forecasting. EO-WM incorporates a physically informed conditioning framework that represents meteorological forcing through a climatological baseline, weather anomalies, and cumulative physical stress signals. Specifically, it separates baseline and anomaly through distinct conditioning pathways, and accumulates anomalous forcing over time to capture sustained heat and drought stress. To evaluate weather-response behavior beyond standard metrics, we introduce two diagnostic benchmarks: an Extreme Summer Benchmark for severity-aware prediction of vegetation degradation under extreme weather, and a Seasonal Matched-Pair Benchmark for testing response fidelity under changed weather forcing. Experiments show that EO-WM reduces the error in predicted Normalized Difference Vegetation Index (NDVI) decline amplitude by a relative 5.63% and improves directional hit rate by a relative 7.80%, while remaining competitive on standard pixel-level metrics. The benchmarks and model will be made open-source at https://github.com/Luo-Z13/EO-WM.
+
+地球观测（EO）预测旨在根据不断变化的气象条件下的卫星观测来预测未来地球表面的动态。在本文中，我们将此任务视为部分观测的、天气驱动的世界建模问题，其中天气充当调节信号，而由于观测稀疏和未观测到的地表状态，预测仍然不确定。然而，现有的方法并没有完全捕捉到这种设置：确定性模型将不确定性压缩为单个未来预测，而基于扩散的方法通常将天气变量视为无差别的条件信号，现有的基准主要关注重建精度而不是预测是否正确响应变化的天气强迫。我们引入了 EO-WM，一种用于多光谱 EO 预测的视频扩散变压器。 EO-WM 结合了物理信息调节框架，通过气候基线、天气异常和累积物理压力信号来表示气象强迫。具体来说，它通过不同的调节途径将基线和异常分开，并随着时间的推移积累异常强迫以捕获持续的高温和干旱胁迫。为了评估超出标准指标的天气响应行为，我们引入了两个诊断基准：极端夏季基准用于极端天气下植被退化的严重性预测，以及季节性匹配对基准用于测试变化的天气强迫下的响应保真度。实验表明，EO-WM 将预测的归一化植被指数 (NDVI) 下降幅度的误差相对降低了 5.63%，将定向命中率相对提高了 7.80%，同时在标准像素级指标上保持竞争力。基准和模型将在 https://github.com/Luo-Z13/EO-WM 开源。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-06-26 (15 papers)</b></summary>
 
 # arXiv Video Papers - 2026-06-26
