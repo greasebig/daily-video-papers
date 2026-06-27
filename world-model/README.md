@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-06-27](papers/2026-06-27.md) - 3 papers
 - [2026-06-26](papers/2026-06-26.md) - 8 papers
 - [2026-06-25](papers/2026-06-25.md) - 8 papers
 - [2026-06-24](papers/2026-06-24.md) - 17 papers
@@ -99,6 +100,68 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-06-27 (3 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-06-27
+
+**Paper Count**: 3
+
+---
+
+## 1. Continual Robot Policy Learning via Variational Neural Dynamics / 通过变分神经动力学进行持续机器人策略学习
+
+**Date**: 2026-06-25 | **arXiv**: [2606.27353v1](http://arxiv.org/abs/2606.27353v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.27353v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Robots deployed in the real world rarely operate under a single fixed dynamics model: wind changes, payloads vary, batteries drain, contacts shift, and hardware wears. Yet most learning-based controllers are trained once and deployed as if learning were complete. This prevents the robot from using deployment experience to further improve task performance. In this work, we propose a continual learning framework that uses real-world experience to improve robot policies under hidden and recurring dynamics. Our method learns a condition-aware dynamics model from real state-action trajectories by combining an analytical physics prior with a neural residual for unmodeled effects. A recurrent encoder infers the current hidden condition from recent interaction, and this estimate conditions both the residual model and the policy. Policy learning is performed via differentiable simulation using diverse learned dynamics sampled from the latent model. At deployment, these sampled conditions are replaced by conditions inferred online from recent real interaction, allowing the policy to recover recurring dynamics by recognition rather than residual re-fitting. Through extensive simulation studies and real-world experiments, we demonstrate that the framework improves policy performance under diverse unobserved disturbances. On real quadrotor trajectory tracking under changing wind, the policy recovers from recurring disturbances in roughly 1s, about 5x faster than online residual re-fitting. It also reduces large-disturbance hover and tracking errors by 65.7% and 53.3% over the state-of-the-art online adaptation approaches
+
+现实世界中部署的机器人很少在单一的固定动力学模型下运行：风的变化、有效负载的变化、电池耗尽、触点移位和硬件磨损。然而，大多数基于学习的控制器只接受一次培训并部署，就好像学习已经完成一样。这阻碍了机器人利用部署经验来进一步提高任务性能。在这项工作中，我们提出了一个持续学习框架，该框架利用现实世界的经验来改进隐藏和重复动态下的机器人策略。我们的方法通过将分析物理先验与未建模效应的神经残差相结合，从真实的状态动作轨迹中学习条件感知动力学模型。循环编码器从最近的交互中推断当前的隐藏条件，并且该估计条件同时影响残差模型和策略。策略学习是通过可微分模拟使用从潜在模型中采样的不同学习动态来执行的。在部署时，这些采样条件被从最近的真实交互中在线推断的条件所取代，从而允许策略通过识别而不是残差重新拟合来恢复重复出现的动态。通过广泛的模拟研究和现实世界的实验，我们证明该框架可以在各种未观察到的干扰下提高政策绩效。在风向变化下的真实四旋翼飞行器轨迹跟踪中，该策略在大约 1 秒内从反复出现的干扰中恢复，比在线残差重新拟合快约 5 倍。与最先进的在线适应方法相比，它还可以将大干扰悬停和跟踪误差减少 65.7% 和 53.3%
+
+</details>
+
+---
+
+## 2. Hallucination in World Models is Predictable and Preventable / 世界模型中的幻觉是可以预测和预防的
+
+**Date**: 2026-06-25 | **arXiv**: [2606.27326v1](http://arxiv.org/abs/2606.27326v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.27326v1)
+
+**Categories**: cs.LG, cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Modern generative world models render increasingly realistic action-controllable futures, yet they frequently hallucinate: rollouts remain visually fluent while drifting from the ground-truth dynamics. We hypothesize that hallucination concentrates in low-coverage regions of the state-action space, where lightweight data-centric signals can both detect it and guide mitigation. To test this, we introduce MMBench2, a 427-hour, 210-task dataset for visual world modeling with ground-truth actions, rewards, and live simulators, and train a 350M-parameter world model on it. We identify three distinct hallucination modes: perceptual, action-marginalized, and scene-diverging -- each anchored to a different stage of the pipeline, and develop three signals that accurately predict where the model will fail. To close coverage gaps at training time, we develop a coverage-aware sampling technique; to close them online, our hallucination predictors serve as curiosity rewards for targeted data collection, yielding a data-efficient finetuning recipe that adapts the pretrained world model to entirely unseen environments with as few as 50 real environment trajectories. Overall, our findings reveal that hallucination in world models is inherently a data coverage issue, and that the same signals used to detect it can also be used for mitigation.   An interactive web version of our paper is available at https://www.nicklashansen.com/mmbench2
+
+现代生成世界模型呈现出越来越现实的行动可控的未来，但它们经常产生幻觉：推出保持视觉流畅，同时偏离地面真相动态。我们假设幻觉集中在状态动作空间的低覆盖区域，其中轻量级的以数据为中心的信号既可以检测它并指导缓解。为了测试这一点，我们引入了 MMBench2，这是一个 427 小时、210 个任务的数据集，用于使用真实动作、奖励和实时模拟器进行视觉世界建模，并在其上训练 350M 参数的世界模型。我们确定了三种不同的幻觉模式：感知、动作边缘化和场景发散——每种模式都锚定到管道的不同阶段，并开发了三个信号来准确预测模型将在哪里失败。为了缩小训练时的覆盖率差距，我们开发了一种覆盖率感知采样技术；为了在线关闭它们，我们的幻觉预测器作为有针对性的数据收集的好奇心奖励，产生一个数据高效的微调配方，使预训练的世界模型适应完全不可见的环境，只有 50 个真实环境轨迹。总的来说，我们的研究结果表明，世界模型中的幻觉本质上是一个数据覆盖问题，并且用于检测它的相同信号也可以用于缓解。   我们论文的交互式网络版本可在 https://www.nicklashansen.com/mmbench2 获取
+
+</details>
+
+---
+
+## 3. EO-WM: A Physically Informed World Model for Probabilistic Earth Observation Forecasting / EO-WM：概率地球观测预测的物理信息世界模型
+
+**Date**: 2026-06-25 | **arXiv**: [2606.27277v1](http://arxiv.org/abs/2606.27277v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.27277v1)
+
+**Categories**: cs.AI, cs.CV
+
+**Code**: https://github.com/Luo-Z13/EO-WM.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Earth Observation (EO) forecasting aims to predict future Earth surface dynamics from satellite observations under changing meteorological conditions. In this paper, we view this task as a partially observed, weather-driven world modeling problem, in which weather acts as a conditioning signal, while forecasting remains uncertain due to sparse observations and unobserved land-surface states. However, existing methods do not fully capture this setting: deterministic models collapse uncertainty into a single future prediction, while diffusion-based methods typically treat weather variables as undifferentiated conditioning signals, and existing benchmarks focus mainly on reconstruction accuracy rather than whether forecasts respond correctly to changed weather forcing.We introduce EO-WM, a video diffusion transformer for multispectral EO forecasting. EO-WM incorporates a physically informed conditioning framework that represents meteorological forcing through a climatological baseline, weather anomalies, and cumulative physical stress signals. Specifically, it separates baseline and anomaly through distinct conditioning pathways, and accumulates anomalous forcing over time to capture sustained heat and drought stress. To evaluate weather-response behavior beyond standard metrics, we introduce two diagnostic benchmarks: an Extreme Summer Benchmark for severity-aware prediction of vegetation degradation under extreme weather, and a Seasonal Matched-Pair Benchmark for testing response fidelity under changed weather forcing. Experiments show that EO-WM reduces the error in predicted Normalized Difference Vegetation Index (NDVI) decline amplitude by a relative 5.63% and improves directional hit rate by a relative 7.80%, while remaining competitive on standard pixel-level metrics. The benchmarks and model will be made open-source at https://github.com/Luo-Z13/EO-WM.
+
+地球观测（EO）预测旨在根据不断变化的气象条件下的卫星观测来预测未来地球表面的动态。在本文中，我们将此任务视为部分观测的、天气驱动的世界建模问题，其中天气充当调节信号，而由于观测稀疏和未观测到的地表状态，预测仍然不确定。然而，现有的方法并没有完全捕捉到这种设置：确定性模型将不确定性压缩为单个未来预测，而基于扩散的方法通常将天气变量视为无差别的条件信号，现有的基准主要关注重建精度而不是预测是否正确响应变化的天气强迫。我们引入了 EO-WM，一种用于多光谱 EO 预测的视频扩散变压器。 EO-WM 结合了物理信息调节框架，通过气候基线、天气异常和累积物理压力信号来表示气象强迫。具体来说，它通过不同的调节途径将基线和异常分开，并随着时间的推移积累异常强迫以捕获持续的高温和干旱胁迫。为了评估超出标准指标的天气响应行为，我们引入了两个诊断基准：极端夏季基准用于极端天气下植被退化的严重性预测，以及季节性匹配对基准用于测试变化的天气强迫下的响应保真度。实验表明，EO-WM 将预测的归一化植被指数 (NDVI) 下降幅度的误差相对降低了 5.63%，将定向命中率相对提高了 7.80%，同时在标准像素级指标上保持竞争力。基准和模型将在 https://github.com/Luo-Z13/EO-WM 开源。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-06-26 (8 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-06-26
