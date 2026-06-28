@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-06-28](papers/2026-06-28.md) - 1 papers
 - [2026-06-26](papers/2026-06-26.md) - 2 papers
 - [2026-06-23](papers/2026-06-23.md) - 2 papers
 - [2026-06-22](papers/2026-06-22.md) - 1 papers
@@ -36,6 +37,34 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-06-28 (1 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-06-28
+
+**Paper Count**: 1
+
+---
+
+## 1. Multimodal Image Colorization: Quantifying the Impact of Text-Conditioned Guidance on Grayscale-to-Color Translation / 多模态图像着色：量化文本条件指导对灰度到颜色转换的影响
+
+**Date**: 2026-06-16 | **arXiv**: [2606.20722v1](http://arxiv.org/abs/2606.20722v1) | **PDF**: [Link](http://arxiv.org/pdf/2606.20722v1)
+
+**Categories**: cs.GR, cs.CL, cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Grayscale images are commonly found in historical photography restoration, medical imaging, and artistic media. However, automatically applying color to these images remains a significant challenge in computer vision because many plausible colorizations can correspond to the same grayscale input.   In this work, we quantify the effect of text conditioning on pixel-level and perceptual metrics for grayscale-to-color image models. Specifically, we compare two architectures, a U-Net and Stable Diffusion 1.5, each tested with and without CLIP text conditioning while holding all other variables constant. Our results show that text conditioning improves PSNR by 5.6%, SSIM by 1.2%, and colorfulness by 36.6%, while reducing LPIPS by 7.6% in the U-Net tier. In the Stable Diffusion tier, text conditioning improves PSNR by 5.8%, SSIM by 1.5%, and colorfulness by 0.6%, while reducing LPIPS by 11.3%. These results indicate that text conditioning provides consistent, measurable improvements to colorization quality across both architecture scales.
+
+灰度图像常见于历史摄影修复、医学成像和艺术媒体中。然而，自动对这些图像应用颜色仍然是计算机视觉中的一个重大挑战，因为许多合理的着色可以对应于相同的灰度输入。   在这项工作中，我们量化了文本调节对灰度到彩色图像模型的像素级和感知指标的影响。具体来说，我们比较了两种架构：U-Net 和 Stable Diffusion 1.5，每种架构都在使用和不使用 CLIP 文本调节的情况下进行了测试，同时保持所有其他变量不变。我们的结果表明，文本调节将 PSNR 提高了 5.6%，SSIM 提高了 1.2%，色彩度提高了 36.6%，同时在 U-Net 层中将 LPIPS 降低了 7.6%。在稳定扩散层中，文本调节将 PSNR 提高 5.8%，SSIM 提高 1.5%，色彩度提高 0.6%，同时将 LPIPS 降低 11.3%。这些结果表明，文本调节为两种架构规模的着色质量提供了一致的、可测量的改进。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-06-26 (2 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-06-26
