@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-02](papers/2026-07-02.md) - 10 papers
 - [2026-07-01](papers/2026-07-01.md) - 12 papers
 - [2026-06-30](papers/2026-06-30.md) - 2 papers
 - [2026-06-29](papers/2026-06-29.md) - 2 papers
@@ -103,6 +104,180 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-02 (10 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-07-02
+
+**Paper Count**: 10
+
+---
+
+## 1. RoboWorld: Fast and Reliable Neural Simulators for Generalist Robot Policy Evaluation / RoboWorld：用于通用机器人政策评估的快速可靠的神经模拟器
+
+**Date**: 2026-07-01 | **arXiv**: [2607.01060v1](http://arxiv.org/abs/2607.01060v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.01060v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video world models are emerging as a scalable alternative for evaluating generalist robot policies, bypassing the physical constraints and engineering burdens of real-world deployment. However, evaluating policies with video world models remains challenging, as world-model errors can make generated rollouts unreliable and slow inference limits large-scale throughput. We introduce RoboWorld, an automated evaluation pipeline that pairs a fast autoregressive video world model with a task-progress-aware vision-language model scoring. To enable reliable long-horizon autoregressive world-model rollouts, we propose Step Forcing, which combines anchored and one-step self-forwarded contexts to reduce train--test mismatch while preserving action--observation dynamics. Together, these components enable RoboWorld to align strongly with real-world robot evaluation across tasks and environments, achieving Pearson's r = 0.989 and Spearman's \r{ho} = 0.970.
+
+视频世界模型正在成为评估通用机器人策略的可扩展替代方案，绕过现实世界部署的物理限制和工程负担。然而，使用视频世界模型评估策略仍然具有挑战性，因为世界模型错误可能会使生成的部署不可靠，并且缓慢的推理限制了大规模吞吐量。我们推出了 RoboWorld，这是一个自动化评估管道，它将快速自回归视频世界模型与任务进度感知视觉语言模型评分配对。为了实现可靠的长期自回归世界模型推出，我们提出了 Step Forcing，它结合了锚定上下文和一步自转发上下文，以减少训练-测试不匹配，同时保留动作-观察动态。这些组件共同使 RoboWorld 能够与现实世界中跨任务和环境的机器人评估紧密结合，实现 Pearson 的 r = 0.989 和 Spearman 的 \r{ho} = 0.970。
+
+</details>
+
+---
+
+## 2. Valdi: Value Diffusion World Models / Valdi：价值扩散世界模型
+
+**Date**: 2026-07-01 | **arXiv**: [2607.00917v1](http://arxiv.org/abs/2607.00917v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.00917v1)
+
+**Categories**: cs.LG, cs.AI
+
+**Code**: https://github.com/Kit115/ValueDiffusionWorldModels.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models can enable Model Predictive Control (MPC), but this requires dynamics prediction that is both fast enough for online use and expressive enough to represent uncertain futures. Diffusion models offer a natural mechanism for modeling uncertain dynamics, yet their iterative inference procedure makes them difficult to use for low-latency latent planning. We bridge this gap with Value Diffusion World Models (Valdi), combining end-to-end online training for MPC with a latent diffusion dynamics model. In preliminary experiments on the CarRacing environment, we show that Valdi, using a single diffusion step at both training and inference, matches a deterministic MLP baseline. Our experiments expose a trade-off between predictive multimodality and control performance in this setup. Code is available at https://github.com/Kit115/ValueDiffusionWorldModels.
+
+世界模型可以实现模型预测控制（MPC），但这需要动态预测，既要足够快以供在线使用，又要有足够的表现力来代表不确定的未来。扩散模型提供了一种对不确定动态进行建模的自然机制，但其迭代推理过程使得它们难以用于低延迟潜在规划。我们通过价值扩散世界模型 (Valdi) 弥补了这一差距，将 MPC 的端到端在线训练与潜在扩散动力学模型相结合。在 CarRacing 环境的初步实验中，我们表明 Valdi 在训练和推理中使用单个扩散步骤，与确定性 MLP 基线相匹配。我们的实验揭示了在此设置中预测多模态和控制性能之间的权衡。代码可在 https://github.com/Kit115/ValueDiffusionWorldModels 获取。
+
+</details>
+
+---
+
+## 3. DeWorldSG: Depth-Aware 3D Semantic Scene Graph Generation via World-Model Priors / DeWorldSG：通过世界模型先验生成深度感知 3D 语义场景图
+
+**Date**: 2026-07-01 | **arXiv**: [2607.00889v1](http://arxiv.org/abs/2607.00889v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.00889v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present DeWorldSG, a novel framework that generates spatio-temporally robust 3D Semantic Scene Graphs from RGB-D sequences. Existing methods often struggle to construct reliable 3D scene graphs due to unstable 3D object representations and missing relations caused by frame-wise inference. DeWorldSG addresses these issues by estimating instance-level geometric 3D Gaussian distributions through depth-guided filtering and representing each object as a probabilistic 3D node rather than a single projected point. To mitigate relational sparsity from frame-wise inference, our framework further aggregates spatiotemporal evidence across object pairs and refines relations using contextual priors derived from a world model (V-JEPA 2). Experiments on the 3DSSG and ReplicaSSG datasets demonstrate state-of-the-art (SoTA) performance in both object and predicate prediction, while producing temporally consistent scene structures. In particular, our method improves triplet recall by 77.4% and predicate recall by 23.2% over prior SoTA approaches, making it suitable for robotic manipulation and AR applications. Our code and models are open-sourced.
+
+我们提出了 DeWorldSG，这是一种新颖的框架，可以从 RGB-D 序列生成时空鲁棒的 3D 语义场景图。由于不稳定的 3D 对象表示和逐帧推理导致的关系缺失，现有方法通常难以构建可靠的 3D 场景图。 DeWorldSG 通过深度引导过滤来估计实例级几何 3D 高斯分布，并将每个对象表示为概率 3D 节点而不是单个投影点，从而解决了这些问题。为了减轻逐帧推理的关系稀疏性，我们的框架进一步聚合了对象对之间的时空证据，并使用从世界模型导出的上下文先验来细化关系（V-JEPA 2）。 3DSSG 和 ReplicaSSG 数据集上的实验展示了对象和谓词预测方面最先进的 (SoTA) 性能，同时生成时间一致的场景结构。特别是，与之前的 SoTA 方法相比，我们的方法将三元组召回率提高了 77.4%，将谓词召回率提高了 23.2%，使其适合机器人操作和 AR 应用。我们的代码和模型是开源的。
+
+</details>
+
+---
+
+## 4. From World Models to World Action Models: A Concise Tutorial for Robotics / 从世界模型到世界动作模型：机器人简明教程
+
+**Date**: 2026-07-01 | **arXiv**: [2607.00836v1](http://arxiv.org/abs/2607.00836v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.00836v1)
+
+**Categories**: cs.RO, cs.AI, eess.SY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models are increasingly used in embodied intelligence and generative simulation, yet their scope remains ambiguous across communities. This tutorial presents a design-space view of world models as action-conditioned predictive models that estimate the future evolution of task-relevant observations or states. We categorize existing methods into observation-space and state-space world models, comparing their trade-offs in visual fidelity, spatial structure, physical interpretability, and control usability. We further introduce world action models, which connect predicted futures with executable robot actions, and summarize four representative paradigms: imagine-then-execute, video-feature-conditioned action prediction, joint video-action modeling, and auxiliary video prediction for policy learning. The goal of this tutorial is to clarify the conceptual scope of world (action) models and provide a structured taxonomy for embodied prediction and control.
+
+世界模型越来越多地用于实体智能和生成模拟，但它们的范围在各个社区中仍然不明确。本教程将世界模型的设计空间视图呈现为动作条件预测模型，用于估计与任务相关的观察或状态的未来演变。我们将现有方法分为观察空间和状态空间世界模型，比较它们在视觉保真度、空间结构、物理可解释性和控制可用性方面的权衡。我们进一步介绍了将预测的未来与可执行的机器人动作连接起来的世界动作模型，并总结了四种代表性范式：想象然后执行、视频特征条件动作预测、联合视频动作建模和用于策略学习的辅助视频预测。本教程的目标是阐明世界（动作）模型的概念范围，并为具体预测和控制提供结构化分类法。
+
+</details>
+
+---
+
+## 5. Local Motion Matters: A Deconstruct-Recompose Paradigm for Reinforcement Learning Pre-training from Videos / 局部运动很重要：从视频中进行强化学习预训练的解构重构范式
+
+**Date**: 2026-07-01 | **arXiv**: [2607.00808v1](http://arxiv.org/abs/2607.00808v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.00808v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Pre-training on large-scale videos to improve reinforcement learning efficiency is promising yet remains challenging. Existing methods typically treat the agent as an indivisible entity, modeling motion patterns globally. Such global modeling is tightly coupled with the morphology, hindering transfer across domains. In contrast, despite the vast disparity in global motions, the local components exhibit similar motion patterns across different agents. Building on this insight, we propose a novel Deconstruct-Recompose Paradigm (DRP) for learning transferable local motion representations. Specifically, in the Deconstruct phase, we identify multiple local points and track their frame-wise motions, defining each as an Atomic Action. We introduce a Dual-Attention Encoder (DAE) to learn local motion representations from these Atomic Actions, capturing their spatiotemporal relationships. In the Recompose phase, we compose local motion representations with a learnable Motion Aggregation Token [MAT] via latent dynamics model learning. Additionally, an adapter bridges local motion and downstream action-specific dynamics to accelerate policy learning. Extensive experiments demonstrate that our method effectively transfers to diverse robotic control and manipulation tasks, significantly improving sample efficiency and performance.
+
+对大规模视频进行预训练以提高强化学习效率是有希望的，但仍然具有挑战性。现有方法通常将代理视为不可分割的实体，对全局运动模式进行建模。这种全局建模与形态学紧密耦合，阻碍了跨领域的转移。相比之下，尽管全局运动存在巨大差异，但不同代理的局部组件表现出相似的运动模式。基于这一见解，我们提出了一种新颖的解构重构范式（DRP）来学习可转移的局部运动表示。具体来说，在解构阶段，我们识别多个局部点并跟踪它们的逐帧运动，将每个点定义为原子动作。我们引入了双注意力编码器（DAE）来从这些原子动作中学习局部运动表示，捕获它们的时空关系。在重构阶段，我们通过潜在动力学模型学习，用可学习的运动聚合令牌 [MAT] 组合局部运动表示。此外，适配器将本地运动和下游特定动作动态联系起来，以加速策略学习。大量实验表明，我们的方法可以有效地应用于各种机器人控制和操作任务，显着提高样品效率和性能。
+
+</details>
+
+---
+
+## 6. Path Planning in Physically Viable World Models / 物理可行的世界模型中的路径规划
+
+**Date**: 2026-07-01 | **arXiv**: [2607.00673v1](http://arxiv.org/abs/2607.00673v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.00673v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Robots deployed in unstructured outdoor environments often plan from scene reconstructions collected before deployment because operators cannot remap large or remote sites before every mission. As a result, robots must make long-horizon planning decisions using stale maps that assume the terrain remains unchanged, even though physical changes to the environment may render previously feasible routes unsafe or unreachable at execution time. We present a physically viable world model for evaluating what-if queries for robot navigation under future terrain change. The system augments reconstructed 3D Gaussian splat scenes with physics-based simulation to generate physically modified versions of the same environment without recollecting sensor data or rebuilding the map. We then implement a terrain-aware planner that accounts for physical events, obstacles, and deformations that are simulated by the world model. This allows robots and human operators to evaluate whether planned routes remain feasible before committing to a planned route, particularly in constrained environments where retreat or recovery may become impossible once conditions change. We evaluate the system on a real outdoor field site in Central Texas using simulated flooding across multiple severity levels. We measure route and mission feasibility as terrain conditions deteriorate under physically simulated interventions. Our results show that physically viable world models expose long-horizon route failures and rerouting behavior that are not apparent when planning only on the original reconstructed environment, allowing robots to evaluate how future terrain changes may affect route feasibility before deployment.
+
+部署在非结构化室外环境中的机器人通常根据部署前收集的场景重建进行规划，因为操作员无法在每次执行任务之前重新映射大型或远程站点。因此，机器人必须使用假设地形保持不变的陈旧地图来做出长期规划决策，即使环境的物理变化可能会使先前可行的路线在执行时变得不安全或无法到达。我们提出了一个物理上可行的世界模型，用于评估未来地形变化下机器人导航的假设查询。该系统通过基于物理的模拟增强重建的 3D 高斯splat 场景，以生成同一环境的物理修改版本，而无需重新收集传感器数据或重建地图。然后，我们实现一个地形感知规划器，该规划器考虑了世界模型模拟的物理事件、障碍物和变形。这使得机器人和人类操作员能够在执行计划路线之前评估计划路线是否仍然可行，特别是在一旦条件发生变化就可能无法撤退或恢复的受限环境中。我们在德克萨斯州中部的真实户外现场使用多个严重级别的模拟洪水来评估该系统。当地形条件在物理模拟干预下恶化时，我们测量路线和任务的可行性。我们的结果表明，物理上可行的世界模型揭示了长范围的路线故障和重新路线行为，这些行为在仅在原始重建环境上进行规划时并不明显，从而使机器人能够在部署之前评估未来地形变化如何影响路线可行性。
+
+</details>
+
+---
+
+## 7. Multi-scale Mixture of World Models for Embodied Agents in Evolving Environments / 不断变化的环境中实体主体的世界模型的多尺度混合
+
+**Date**: 2026-07-01 | **arXiv**: [2607.00457v1](http://arxiv.org/abs/2607.00457v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.00457v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Embodied agents operating in the real world require multi-scale reasoning and knowledge adaptation as conditions change. We identify two challenges in applying Mixture of Experts (MoE) to this setting: routing lacks an explicit notion of scale, preventing targeted updates at specific scales, and a uniform update policy cannot accommodate the different rates at which knowledge at each scale becomes outdated. We present MuSix, a framework that addresses both challenges through scale-aware world model mixture and evolution. A two-stage routing mechanism grounds scale selection in experiential distance, a measure of situational novelty inspired by Construal Level Theory: a meta-router first maps this quantity to a weight over continuous scale space, then per-scale base routers select world models within the identified scale. For adaptation, scale-dependent forgetting rates allow low-scale knowledge to refresh rapidly while high-scale abstractions persist, and gated inter-scale transfer maintains coherence across the hierarchy. Experiments on EmbodiedBench and HAZARD show that MuSix improves over state-of-the-art baselines on multi-scale reasoning and dynamic adaptation.
+
+随着条件的变化，在现实世界中运行的实体代理需要多尺度推理和知识适应。我们确定了将专家混合 (MoE) 应用于此设置的两个挑战：路由缺乏明确的规模概念，阻碍了特定规模的有针对性的更新，并且统一的更新策略无法适应每个规模的知识过时的不同速度。我们提出了 MuSix，这是一个通过规模感知世界模型混合和演化来解决这两个挑战的框架。两阶段路由机制以经验距离为基础进行尺度选择，这是一种受解释水平理论启发的情景新颖性的衡量标准：元路由器首先将此数量映射到连续尺度空间上的权重，然后每个尺度的基础路由器在识别的尺度内选择世界模型。为了适应，与尺度相关的遗忘率允许低尺度知识快速刷新，同时高尺度抽象持续存在，并且门控尺度间转移保持整个层次结构的一致性。 EmbodiedBench 和 HAZARD 上的实验表明，MuSix 在多尺度推理和动态适应方面比最先进的基线有所改进。
+
+</details>
+
+---
+
+## 8. PRISM: Prioritized Channel Importance with Semi-supervised Domain Adaptation for Cross-Subject EEG Emotion Recognition / PRISM：优先通道重要性和半监督域适应用于跨受试者脑电图情绪识别
+
+**Date**: 2026-07-01 | **arXiv**: [2607.00358v1](http://arxiv.org/abs/2607.00358v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.00358v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Electroencephalogram (EEG) captures endogenous brain activity with high temporal fidelity and holds substantial promise for precise emotion decoding. However, channel redundancy and pronounced inter-subject variability remain key obstacles to scalable generalization. To address these limitations, we propose a novel framework termed PRioritized channel Importance with Semi-supervised doMain adaptation (PRISM), enabling label-efficient cross-subject emotion decoding. On the channel side, PRISM assigns differentiable, data-dependent channel weights via a lightweight expert ensemble, amplifying reliable electrodes while suppressing distractors. On the domain side, PRISM leverages unlabeled data through confidence-filtered pseudo-labels to drive consistency regularization and domain alignment, mitigating subject-specific heterogeneity. Extensive experiments show that PRISM surpasses state-of-the-art methods on DEAP, DREAMER, and SEED datasets, achieving robust cross-subject generalization given limited annotations.
+
+脑电图 (EEG) 以高时间保真度捕获内源性大脑活动，并为精确的情绪解码带来巨大希望。然而，通道冗余和明显的主体间变异性仍然是可扩展泛化的主要障碍。为了解决这些限制，我们提出了一种名为优先通道重要性与半监督域适应（PRISM）的新颖框架，从而实现标签高效的跨主题情感解码。在通道方面，PRISM 通过轻量级专家集合分配可微分、数据相关的通道权重，放大可靠的电极，同时抑制干扰因素。在领域方面，PRISM 通过置信度过滤的伪标签利用未标记的数据来驱动一致性正则化和领域对齐，从而减轻特定于主题的异质性。大量实验表明，PRISM 在 DEAP、DREAMER 和 SEED 数据集上超越了最先进的方法，在有限注释的情况下实现了稳健的跨主题泛化。
+
+</details>
+
+---
+
+## 9. RetailSMV: Exocentric vs. Egocentric Adaptation of Foundation Video World Models in Retail / RetailSMV：零售业基础视频世界模型的外中心与自我中心适应
+
+**Date**: 2026-07-01 | **arXiv**: [2607.00310v1](http://arxiv.org/abs/2607.00310v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.00310v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Foundation video diffusion models are increasingly viewed as world simulators for embodied agents, yet their pretraining on internet-scale generic video leaves them poorly aligned with real-world deployment domains. We study parameter-efficient adaptation of a pretrained foundation video world model to retail scenes: when synchronized egocentric and exocentric video of the same activity are available, which viewpoint of training data produces the strongest adapted model?   We introduce RetailSMV (Retail Synchronized Multi-View), a corpus of 32,105 captioned retail clips from five supermarkets with synchronized ego/exo capture from the store-staff perspective (stocking, arranging, weighing, managing supply carts, scanning at checkout), rather than the customer-centric framing of prior retail video corpora, and train three matched Low-Rank Adaptation (LoRA) configurations of Cosmos3-Nano (egocentric-only, exocentric-only, combined) under identical hyperparameters. On a 200-clip held-out test set evaluated with seven complementary metrics under a strict paired statistical protocol, exocentric-only adaptation matches or exceeds combined adaptation on six of seven point estimates and is significantly better on LPIPS, PSNR, and DreamSim, despite training on only 15,985 exocentric clips (versus 32,105 for combined). A symmetric paired comparison further shows that adding exocentric data to egocentric-only training helps while adding egocentric data to exocentric-only training hurts. The absolute adaptation gap is largest at the shortest rollout time, identifying the near-horizon prediction window as the regime in which adaptation is most beneficial.
+
+基础视频传播模型越来越被视为实体代理的世界模拟器，但它们对互联网规模通用视频的预训练使它们与现实世界的部署领域不太一致。我们研究预训练基础视频世界模型对零售场景的参数高效适应：当同一活动的同步自我中心和外中心视频可用时，哪种训练数据观点会产生最强的适应模型？   我们引入了 RetailSMV（零售同步多视图），这是一个由来自 5 家超市的 32,105 个带字幕的零售剪辑组成的语料库，从商店员工的角度同步自我/外在捕获（备货、安排、称重、管理供应车、结账时扫描），而不是之前零售视频语料库以客户为中心的框架，并训练了 Cosmos3-Nano 的三种匹配的低阶适应 (LoRA) 配置（仅自我中心、仅外中心、组合）在相同的超参数下。在严格配对统计协议下使用七个互补指标评估的 200 个剪辑保留测试集上，仅外心适应在七个点估计中的六个上匹配或超过组合适应，并且在 LPIPS、PSNR 和 DreamSim 上明显更好，尽管仅使用 15,985 个外心剪辑进行训练（相对于组合的 32,105 个剪辑）。对称配对比较进一步表明，将外心数据添加到仅以自我为中心的训练中会有所帮助，而将自我中心数据添加到仅外心训练中会带来伤害。绝对适应差距在最短的推出时间内最大，将近地平线预测窗口确定为适应最有利的制度。
+
+</details>
+
+---
+
+## 10. 3D Point World Models: Point Completion Enables More Accurate Dynamics Learning / 3D 点世界模型：点完成可实现更准确的动态学习
+
+**Date**: 2026-06-30 | **arXiv**: [2607.00148v1](http://arxiv.org/abs/2607.00148v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.00148v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Learning predictive models of the world enables robotic control through planning, potentially allowing robots to improvise solutions on new tasks. However, large video-based dynamics models lack explicit 3D spatial structure and suffer from geometrically inconsistent long-term rollouts with compounding errors. Emerging 3D dynamics models based on partial point clouds improve geometric consistency but remain sensitive to occlusions and accumulated prediction drift. To address these challenges, we present 3D Point World Models (3DPWM) - a task-agnostic world model that operates entirely in 3D space by first completing partial point clouds and then learning action-conditioned dynamics in this completed 3D scene. By operating on completed geometry, 3DPWM enables reliable long-horizon rollouts and more accurate cost evaluation for model-based planning while supporting adaptation to new tasks. Experiments across different robotic embodiments and tabletop manipulation benchmarks demonstrate that 3DPWM achieves significantly more reliable long-horizon rollouts (100-300+ steps), supports both open-loop and closed-loop planning, and enables successful sim-to-real transfer.
+
+学习世界的预测模型可以通过规划来实现机器人控制，从而有可能让机器人针对新任务即兴提供解决方案。然而，基于视频的大型动态模型缺乏明确的 3D 空间结构，并且会遭受几何不一致的长期部署以及复合误差的困扰。基于部分点云的新兴 3D 动力学模型提高了几何一致性，但仍然对遮挡和累积预测漂移敏感。为了应对这些挑战，我们提出了 3D 点世界模型 (3DPWM) - 一种与任务无关的世界模型，它完全在 3D 空间中运行，首先完成部分点云，然后在这个完整的 3D 场景中学习动作条件动力学。通过对完整的几何体进行操作，3DPWM 可以实现可靠的长期部署，并为基于模型的规划提供更准确的成本评估，同时支持适应新任务。不同机器人实施例和桌面操纵基准的实验表明，3DPWM 实现了显着更可靠的长范围部署（100-300 多个步骤），支持开环和闭环规划，并实现成功的模拟到真实的转换。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-01 (12 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-07-01
