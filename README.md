@@ -27,6 +27,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-03](papers/2026-07-03.md) - 4 papers
 - [2026-07-02](papers/2026-07-02.md) - 16 papers
 - [2026-07-01](papers/2026-07-01.md) - 22 papers
 - [2026-06-30](papers/2026-06-30.md) - 5 papers
@@ -129,6 +130,82 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-03 (4 papers)</b></summary>
+
+# arXiv Video Papers - 2026-07-03
+
+**Paper Count**: 4
+
+---
+
+## 1. SUNTA: Hierarchical Video Prediction with Surprise-based Chunking / SUNTA：基于惊喜分块的分层视频预测
+
+**Date**: 2026-07-02 | **arXiv**: [2607.02087v1](http://arxiv.org/abs/2607.02087v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.02087v1)
+
+**Categories**: cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Hierarchical state-space models (HSSMs) offer a promising approach to long-horizon prediction by segmenting sequences into temporal chunks. However, their performance hinges on how chunk boundaries are determined. While prior HSSMs typically rely on fixed-length chunking or similarity-based boundary detection, these methods often misalign with the intrinsic temporal structure of the data. We argue that chunking should instead be driven by prediction errors, which more directly indicate when longer-range context becomes necessary. Nevertheless, integrating surprise-based chunking into HSSMs introduces critical challenges, including hierarchical collapse during end-to-end training and the absence of surprise signals during open-loop prediction. To address these issues, we propose Surprise-based Nested Temporal Abstraction (SUNTA), a method that employs a decoupled training strategy to preserve surprise signals and uses internal inconsistency as a top-down surprise metric to determine chunk boundaries within imagined rollouts. Experiments on video prediction tasks in 2D and 3D environments demonstrate that SUNTA outperforms baselines, uniquely maintaining accurate predictions over 250 timesteps, whereas all baselines degrade within the first 10 timesteps.
+
+分层状态空间模型（HSSM）通过将序列分割成时间块，为长范围预测提供了一种有前途的方法。然而，它们的性能取决于块边界的确定方式。虽然之前的 HSSM 通常依赖于固定长度分块或基于相似性的边界检测，但这些方法通常与数据的内在时间结构不一致。我们认为分块应该由预测误差驱动，这更直接地表明何时需要更长期的上下文。然而，将基于意外的分块集成到 HSSM 中会带来严峻的挑战，包括端到端训练期间的分层崩溃以及开环预测期间意外信号的缺失。为了解决这些问题，我们提出了基于惊喜的嵌套时间抽象（SUNTA），这种方法采用解耦训练策略来保留惊喜信号，并使用内部不一致作为自上而下的惊喜指标来确定想象中的部署中的块边界。 2D 和 3D 环境中的视频预测任务实验表明，SUNTA 的性能优于基线，独特地在 250 个时间步长内保持准确预测，而所有基线在前 10 个时间步长内都会退化。
+
+</details>
+
+---
+
+## 2. NeoMap: Training-free Novel-View Synthesis from Single Images and Videos / NeoMap：从单个图像和视频进行免训练的小说视图合成
+
+**Date**: 2026-07-02 | **arXiv**: [2607.01962v1](http://arxiv.org/abs/2607.01962v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.01962v1)
+
+**Categories**: cs.CV, cs.AI, cs.GR, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We study the challenging problem of novel view video synthesis from single images or monocular videos. Existing methods, which operate under the assumption that pre-trained video models lack native novel view synthesis capability and enforce view alignment via camera conditioning, task-specific fine-tuning, or stepwise hard denoising guidance, often suffer from artifacts and compromised global scene consistency. In this paper, we introduce NeoMap, a novel training-free framework designed to locate high-fidelity, view-consistent novel view solutions from general pre-trained video models. The key to our approach is the core insight that promising novel view solutions are inherently encoded within the natural video data manifold learned by pre-trained models, and the core challenge is simply to locate this optimal solution. We solve this via our core mechanism: convergent manifold alternating projection iterations that optimize the initial noise. Extensive experiments demonstrate that NeoMap significantly outperforms all existing methods across 3 standard novel view synthesis benchmarks, including the challenging Tanks-and-Temples, LLFF and DAVIS datasets, achieving state-of-the-art generation fidelity and top-tier view consistency.
+
+我们研究从单个图像或单目视频合成新颖视图视频的挑战性问题。现有的方法假设预训练的视频模型缺乏原生新颖的视图合成能力，并通过相机调节、特定于任务的微调或逐步硬去噪指导来强制视图对齐，但这些方法通常会出现伪影和全局场景一致性受损。在本文中，我们介绍了 NeoMap，这是一种新颖的免训练框架，旨在从通用预训练视频模型中定位高保真、视图一致的新颖视图解决方案。我们方法的关键是核心洞察，即有前途的新颖视图解决方案本质上是在预训练模型学习的自然视频数据流形中进行编码的，而核心挑战只是找到这个最佳解决方案。我们通过核心机制解决这个问题：收敛流形交替投影迭代优化初始噪声。大量实验表明，NeoMap 在 3 个标准新颖视图合成基准（包括具有挑战性的 Tanks-and-Temples、LLFF 和 DAVIS 数据集）上显着优于所有现有方法，实现了最先进的生成保真度和顶级视图一致性。
+
+</details>
+
+---
+
+## 3. From World Models to World Action Models: A Concise Tutorial for Robotics / 从世界模型到世界动作模型：机器人简明教程
+
+**Date**: 2026-07-01 | **arXiv**: [2607.00836v2](http://arxiv.org/abs/2607.00836v2) | **PDF**: [Link](http://arxiv.org/pdf/2607.00836v2)
+
+**Categories**: cs.RO, cs.AI, eess.SY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models are increasingly used in embodied intelligence and generative simulation, yet their scope remains ambiguous across communities. This tutorial presents a design-space view of world models as action-conditioned predictive models that estimate the future evolution of task-relevant observations or states. We categorize existing methods into observation-space and state-space world models, comparing their trade-offs in visual fidelity, spatial structure, physical interpretability, and control usability. We further introduce world action models, which connect predicted futures with executable robot actions, and summarize four representative paradigms: imagine-then-execute, video-feature-conditioned action prediction, joint video-action modeling, and auxiliary video prediction for policy learning. The goal of this tutorial is to clarify the conceptual scope of world (action) models and provide a structured taxonomy for embodied prediction and control.
+
+世界模型越来越多地用于实体智能和生成模拟，但它们的范围在各个社区中仍然不明确。本教程将世界模型的设计空间视图呈现为动作条件预测模型，用于估计与任务相关的观察或状态的未来演变。我们将现有方法分为观察空间和状态空间世界模型，比较它们在视觉保真度、空间结构、物理可解释性和控制可用性方面的权衡。我们进一步介绍了将预测的未来与可执行的机器人动作连接起来的世界动作模型，并总结了四种代表性范式：想象然后执行、视频特征条件动作预测、联合视频动作建模和用于策略学习的辅助视频预测。本教程的目标是阐明世界（动作）模型的概念范围，并为具体预测和控制提供结构化分类法。
+
+</details>
+
+---
+
+## 4. DVG-WM: Disentangled Video Generation Enables Efficient Embodied World Model for Robotic Manipulation / DVG-WM：解开的视频生成为机器人操作提供高效的具体世界模型
+
+**Date**: 2026-06-30 | **arXiv**: [2606.32028v2](http://arxiv.org/abs/2606.32028v2) | **PDF**: [Link](http://arxiv.org/pdf/2606.32028v2)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video-based embodied world models provide an appealing substrate for robotic manipulation by predicting future states, yet current approaches remain limited by a fundamental entanglement: accurately modeling dynamics typically requires low-level temporal reasoning, while producing high-resolution frames demands expansive visual synthesis according to high-level semantics. This entanglement results in slow inference speed for iterative planning or too coarse predictions to retain contact-rich details. To solve this dilemma, we present Disentangled Video Generation World Model (DVG-WM), an efficient framework that explicitly decomposes world modeling into dynamics learning and visual synthesis. Conditioned on an initial observation and a language instruction, our model first generates a plausible sequence of intermediate visual states to preview the physical interaction and refines them to obtain high-fidelity videos. Furthermore, an efficient cascading mechanism is proposed, where DVG-WM uses flow matching to directly map the dynamics to video latents, and introduces a latent degradation mechanism to regenerate contact-rich details. Experiments on LIBERO and real-world platforms demonstrate improved video quality with up to 3.97 times acceleration, validating that disentangled video generation can be an efficient embodied world model for robotic manipulation.
+
+基于视频的具体世界模型通过预测未来状态为机器人操作提供了一个有吸引力的基础，但当前的方法仍然受到基本纠缠的限制：准确地建模动态通常需要低级时间推理，而生成高分辨率帧需要根据高级语义进行扩展视觉合成。这种纠缠会导致迭代规划的推理速度缓慢或预测过于粗略而无法保留丰富的接触细节。为了解决这个困境，我们提出了解缠结视频生成世界模型（DVG-WM），这是一个有效的框架，可以将世界建模明确地分解为动态学习和视觉合成。以初始观察和语言指令为条件，我们的模型首先生成一系列合理的中间视觉状态来预览物理交互，并对其进行改进以获得高保真视频。此外，还提出了一种有效的级联机制，其中 DVG-WM 使用流匹配将动态直接映射到视频潜伏，并引入潜伏退化机制来重新生成接触丰富的细节。 LIBERO 和现实世界平台上的实验表明，视频质量得到了提高，加速高达 3.97 倍，验证了解开的视频生成可以成为机器人操作的有效体现世界模型。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-02 (16 papers)</b></summary>
 
 # arXiv Video Papers - 2026-07-02
