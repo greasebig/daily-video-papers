@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-04](papers/2026-07-04.md) - 4 papers
 - [2026-07-03](papers/2026-07-03.md) - 13 papers
 - [2026-07-02](papers/2026-07-02.md) - 10 papers
 - [2026-07-01](papers/2026-07-01.md) - 12 papers
@@ -105,6 +106,82 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-04 (4 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-07-04
+
+**Paper Count**: 4
+
+---
+
+## 1. WorldSample: Closed-loop Real-robot RL with World Modelling / WorldSample：具有世界建模的闭环真实机器人强化学习
+
+**Date**: 2026-07-02 | **arXiv**: [2607.02431v1](http://arxiv.org/abs/2607.02431v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.02431v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reinforcement learning (RL) can overcome the demonstration-coverage limitation of imitation learning (IL) by allowing robots to improve through trial-and-error interaction beyond the states observed in demonstrations. However, deploying RL on real robots remains constrained by high interaction costs, since each physical rollout is costly and reflects only one realized action-outcome path. To address this challenge, we propose WorldSample, a physically grounded data augmentation framework for real-robot RL that closes a real-synthetic loop between physical rollouts, world-model generation, and policy improvement. Grounded on real rollouts, WorldSample generates high-fidelity synthetic transitions through a post-trained world model, which greatly lowers the visual hallucination. Specifically, rather than simply using these transitions as real-world experience, WorldSample introduces Policy-Paced Learning (PPL) to regulate the training process through sample selection and scheduling, balancing useful augmentation against value overestimation and mitigating the hallucination-induced noise. Experiments on robot manipulation tasks involving contact-rich and precise tasks show that WorldSample improves policy success rate by 28% while reducing training steps by 59% compared with baselines. Furthermore, WorldSample improves world model visual fidelity by 19.4dB in PSNR and 0.47 in SSIM over demonstration-only post-training, validating the effectiveness of the real-synthetic loop for both policy and world model performance.
+
+强化学习 (RL) 可以克服模仿学习 (IL) 的演示覆盖范围限制，允许机器人通过试错交互进行改进，超越演示中观察到的状态。然而，在真实机器人上部署强化学习仍然受到高交互成本的限制，因为每次物理部署成本高昂，并且仅反映一种已实现的行动结果路径。为了应对这一挑战，我们提出了 WorldSample，这是一种用于真实机器人 RL 的基于物理的数据增强框架，它关闭了物理部署、世界模型生成和策略改进之间的真实合成循环。 WorldSample 以真实的部署为基础，通过训练后的世界模型生成高保真合成过渡，从而大大降低视觉幻觉。具体来说，WorldSample 不是简单地将这些转换用作现实世界的经验，而是引入了策略节奏学习 (PPL)，通过样本选择和调度来调节训练过程，平衡有用的增强与价值高估，并减轻幻觉引起的噪音。对涉及丰富接触和精确任务的机器人操作任务的实验表明，与基线相比，WorldSample 将策略成功率提高了 28%，同时减少了 59% 的训练步骤。此外，与仅演示后训练相比，WorldSample 将 PSNR 中的世界模型视觉保真度提高了 19.4dB，SSIM 中提高了 0.47，验证了真实合成循环对策略和世界模型性能的有效性。
+
+</details>
+
+---
+
+## 2. ACID: Action Consistency via Inverse Dynamics for Planning with World Models / ACID：通过逆动力学实现行动一致性，用于使用世界模型进行规划
+
+**Date**: 2026-07-02 | **arXiv**: [2607.02403v1](http://arxiv.org/abs/2607.02403v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.02403v1)
+
+**Categories**: cs.RO, cs.AI, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Decision-time planning with action-conditioned world models has become a popular paradigm for embodied control. However, the standard planning cost judges a candidate solely by how close its predicted terminal state lies to the goal, leaving the realizability of the intermediate transitions unchecked -- a predicted trajectory can look convincing while the environment rollout drifts away from it. In this paper, we propose ACID, a decision-time planning framework that introduces cycle action consistency: the action inferred backward from a predicted transition by an inverse dynamics model should recover the one that was conditioned on. We fold this per-step residual into the planning cost via a scale-invariant adaptive weight. Across four action-conditioned world models and six tasks spanning rigid and deformable manipulation, articulated control, and visual navigation, ACID consistently improves planning and matches the baseline's accuracy with substantially less planning compute.
+
+具有行动条件世界模型的决策时间规划已成为体现控制的流行范例。然而，标准规划成本仅根据其预测的最终状态与目标的接近程度来判断候选者，而不检查中间转换的可实现性——预测的轨迹可能看起来令人信服，而环境的推出却偏离了它。在本文中，我们提出了 ACID，一种引入循环动作一致性的决策时间规划框架：通过逆动力学模型从预测的转换向后推断的动作应该恢复所条件的动作。我们通过尺度不变的自适应权重将每步残差折叠到规划成本中。在四个动作条件世界模型和涵盖刚性和可变形操纵、铰接控制和视觉导航的六项任务中，ACID 持续改进规划并以大幅减少规划计算来匹配基线的准确性。
+
+</details>
+
+---
+
+## 3. DecompRL: Solving Harder Problems by Learning Modular Code Generation / DecompRL：通过学习模块化代码生成解决更困难的问题
+
+**Date**: 2026-07-02 | **arXiv**: [2607.02390v1](http://arxiv.org/abs/2607.02390v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.02390v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+How can Large Language Models (LLMs) solve problems they currently cannot? Repeated sampling scales test-time compute but GPU cost grows linearly with attempts, while reinforcement learning (RL) with verifiable rewards improves single-attempt accuracy at the expense of sample diversity. Both strategies ultimately fail when the base policy has near-zero probability of producing a correct solution: no amount of sampling or gradient signal can overcome a search space that is simply too large. We take a different approach: rather than sampling harder, we make the task easier by decomposing problems into smaller, independently solvable sub-functions whose implementations can be recombined. Since off-the-shelf models are not trained for this modular generation, we introduce DecompRL, an RL algorithm that explicitly learns to decompose and implement hierarchical code structures. Recombining $k$ implementations of $n$ modules yields up to $k^{n}$ candidate solutions, shifting the bottleneck from GPU inference to cheap CPU evaluation and cutting GPU token cost by $\sim$50$\times$. On LiveCodeBench and CodeContests (Qwen~2.5~7B, Code World Model~32B), DecompRL outperforms standard and diversity-optimized RL baselines beyond $10^5$ tokens per problem, solving problems that standard generation cannot reach.
+
+大型语言模型（LLM）如何解决目前无法解决的问题？重复采样可扩展测试时的计算量，但 GPU 成本会随着尝试次数的增加而线性增长，而具有可验证奖励的强化学习 (RL) 会以牺牲样本多样性为代价提高单次尝试的准确性。当基本策略产生正确解决方案的概率接近于零时，这两种策略最终都会失败：没有数量的采样或梯度信号可以克服太大的搜索空间。我们采取了不同的方法：我们不是更加努力地采样，而是通过将问题分解为更小的、可独立解决的子函数（其实现可以重新组合）来使任务变得更容易。由于现成的模型没有针对这种模块化生成进行训练，因此我们引入了 DecompRL，这是一种 RL 算法，可以显式地学习分解和实现分层代码结构。重新组合 $n$ 模块的 $k$ 实现可产生多达 $k^{n}$ 候选解决方案，将瓶颈从 GPU 推理转移到廉价的 CPU 评估，并将 GPU 令牌成本降低 $\sim$50$\times$。在 LiveCodeBench 和 CodeContests（Qwen~2.5~7B，Code World Model~32B）上，DecompRL 的性能优于标准和多样性优化的 RL 基线，每个问题超过 10^5$ 代币，解决了标准生成无法达到的问题。
+
+</details>
+
+---
+
+## 4. Hardware-Enforced Semantic Coordination for Safety-Critical Real-Time Autonomous Systems / 安全关键型实时自治系统的硬件强制语义协调
+
+**Date**: 2026-07-02 | **arXiv**: [2607.02376v1](http://arxiv.org/abs/2607.02376v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.02376v1)
+
+**Categories**: cs.AI, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in agentic AI are producing increasingly complex autonomous systems that integrate large language models, world models, optimization engines, specialized neural architectures, autonomous platforms, and human operators. While much current research focuses on improving reasoning capabilities, safety-critical real-time deployment also requires bounded and verifiable coordination among heterogeneous components operating concurrently under uncertainty. Software-mediated coordination presents fundamental limitations in domains where bounded latency, deterministic coordination, and enforceable safety guarantees are essential.   Hence, we propose a hardware-enforced semantic coordination architecture in which selected coordination semantics are implemented directly at the hardware level via field-programmable gate arrays (FPGAs). The approach builds on the Topic-Based Communication Space Petri Net (TB-CSPN) framework, which separates semantic reasoning from interaction management.   In this approach, selected TB-CSPN coordination mechanisms are mapped onto FPGA primitives, creating a hardware-native semantic coordination layer. Focus is not on acceleration, but on enforcing temporal synchronization, semantic gating, authorization constraints, and bounded coordination behavior directly in hardware. Semantic reasoning remains adaptive and software-driven, while embedded coordination semantics become deterministic.
+
+代理人工智能的最新进展正在产生日益复杂的自主系统，这些系统集成了大型语言模型、世界模型、优化引擎、专门的神经架构、自主平台和人类操作员。虽然当前的许多研究都集中在提高推理能力上，但安全关键的实时部署还需要在不确定性下同时运行的异构组件之间进行有界且可验证的协调。软件介导的协调在有限延迟、确定性协调和可执行的安全保证至关重要的领域存在基本限制。   因此，我们提出了一种硬件强制语义协调架构，其中选定的协调语义通过现场可编程门阵列（FPGA）直接在硬件级别实现。该方法建立在基于主题的通信空间 Petri 网 (TB-CSPN) 框架之上，该框架将语义推理与交互管理分开。   在这种方法中，选定的 TB-CSPN 协调机制被映射到 FPGA 原语，创建硬件本机语义协调层。重点不是加速，而是直接在硬件中强制执行时间同步、语义门控、授权约束和有界协调行为。语义推理仍然是自适应的和软件驱动的，而嵌入式协调语义则变得确定性。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-03 (13 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-07-03
