@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-10](papers/2026-07-10.md) - 2 papers
 - [2026-07-09](papers/2026-07-09.md) - 9 papers
 - [2026-07-08](papers/2026-07-08.md) - 12 papers
 - [2026-07-04](papers/2026-07-04.md) - 4 papers
@@ -108,6 +109,50 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-10 (2 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-07-10
+
+**Paper Count**: 2
+
+---
+
+## 1. WCog-VLA: A Dual-Level World-Cognitive Vision-Language-Action Model for End-to-End Autonomous Driving / WCog-VLA：用于端到端自动驾驶的双层世界认知视觉-语言-动作模型
+
+**Date**: 2026-07-09 | **arXiv**: [2607.08375v1](http://arxiv.org/abs/2607.08375v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.08375v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision-Language-Action (VLA) models have advanced end-to-end autonomous driving. However, existing methods either lack comprehensive world cognition or suffer from fragmented world foresight, inherently confining these models to reactive driving. To address this limitation, we propose WCog-VLA, a novel dual-level World-Cognitive VLA framework that successfully bridges semantic world forecasting with generative world evolution to achieve proactive autonomous driving. At the semantic level, WCog-VLA unifies world cognition and reasoning by incorporating 3D spatial perception and injecting agent tokens to capture the world dynamics, while concurrently enabling Game-theoretic Chain-of-Thought (Game-CoT) reasoning. At the generative level, we introduce the Aligned Decoupled Diffusion Transformer (ADDT) as a powerful generative world model that synthesizes physically-plausible joint multi-agent trajectories. Through scene representation alignment, ADDT reduces the number of denoising steps required and thus significantly accelerates inference. To facilitate strategic reasoning, we further construct a large-scale dataset featuring 85k Game-CoT annotations. Extensive experiments on the NAVSIM benchmark demonstrate that WCog-VLA achieves a State-Of-The-Art (SOTA) PDMS score of 92.9.
+
+视觉-语言-动作（VLA）模型具有先进的端到端自动驾驶能力。然而，现有的方法要么缺乏全面的世界认知，要么缺乏碎片化的世界预见，本质上将这些模型限制在被动驾驶。为了解决这一限制，我们提出了 WCog-VLA，这是一种新颖的双层世界认知 VLA 框架，成功地将语义世界预测与生成世界进化联系起来，以实现主动自动驾驶。在语义层面，WCog-VLA 通过结合 3D 空间感知和注入代理令牌来捕获世界动态，从而统一世界认知和推理，同时实现博弈论思想链 (Game-CoT) 推理。在生成层面，我们引入了对齐解耦扩散变压器（ADDT）作为一个强大的生成世界模型，可以合成物理上合理的联合多智能体轨迹。通过场景表示对齐，ADDT 减少了所需的去噪步骤数量，从而显着加快了推理速度。为了促进策略推理，我们进一步构建了一个包含 85k Game-CoT 注释的大规模数据集。 NAVSIM 基准的大量实验表明，WCog-VLA 的最新 (SOTA) PDMS 分数为 92.9。
+
+</details>
+
+---
+
+## 2. TouchWorld: A Predictive and Reactive Tactile Foundation Model for Dexterous Manipulation / TouchWorld：用于灵巧操作的预测性和反应性触觉基础模型
+
+**Date**: 2026-07-08 | **arXiv**: [2607.07287v2](http://arxiv.org/abs/2607.07287v2) | **PDF**: [Link](http://arxiv.org/pdf/2607.07287v2)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Dexterous manipulation in everyday environments requires both anticipation and reaction: a robot must predict how contact should evolve while rapidly correcting local errors caused by slip, misalignment, unstable grasping, or force mismatch. Vision and language provide semantic and geometric guidance, but they cannot reliably reveal hidden contact states such as force, slip, and contact stability. Although tactile sensing exposes these physical cues, most existing policies treat touch as a low-frequency observation stream within a monolithic action model, coupling slow task reasoning, action generation, and fast contact feedback in a single loop. We introduce TouchWorld, a predictive-and-reactive tactile foundation model for dexterous manipulation. TouchWorld uses a hierarchical policy that separates vision-language subtask planning, tactile world-model prediction, visuo-tactile goal-conditioned action generation, and high-frequency tactile residual refinement. A High-Level Planning Layer produces executable subtasks and predicts tactile subgoals; a Visuo-Tactile Goal-Conditioned Policy generates nominal action chunks; and a Tactile-Conditioned Refinement Policy performs online residual correction using recent tactile and proprioceptive feedback. By using touch as both a predictive contact reference and a fast feedback signal, TouchWorld preserves the semantic generalization of vision-language-action policies while improving local contact adaptation. Across six long-horizon and contact-rich dexterous manipulation tasks, TouchWorld achieves 65.0% success in the clean setting and 53.7% success under human perturbations, outperforming the strongest baseline by 15.7 and 18.5 percentage points, respectively.
+
+日常环境中的灵巧操作需要预测和反应：机器人必须预测接触应如何演变，同时快速纠正因滑动、未对准、不稳定抓取或力不匹配引起的局部错误。视觉和语言提供语义和几何指导，但它们无法可靠地揭示隐藏的接触状态，例如力、滑动和接触稳定性。尽管触觉感知暴露了这些物理线索，但大多数现有策略将触摸视为整体动作模型中的低频观察流，将缓慢的任务推理、动作生成和快速接触反馈耦合在单个循环中。我们引入了 TouchWorld，这是一种用于灵巧操作的预测性和反应性触觉基础模型。 TouchWorld 使用分层策略，将视觉语言子任务规划、触觉世界模型预测、视觉触觉目标条件动作生成和高频触觉残差细化分开。高级规划层生成可执行子任务并预测触觉子目标；视觉触觉目标条件策略生成名义动作块；触觉条件细化策略使用最近的触觉和本体感觉反馈执行在线残差校正。通过使用触摸作为预测接触参考和快速反馈信号，TouchWorld 保留了视觉-语言-动作策略的语义概括，同时改进了局部接触适应。在六项长视界和接触丰富的灵巧操作任务中，TouchWorld 在干净环境下取得了 65.0% 的成功率，在人类干扰下取得了 53.7% 的成功率，分别比最强基线高出 15.7 和 18.5 个百分点。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-09 (9 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-07-09
