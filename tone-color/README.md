@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-10](papers/2026-07-10.md) - 1 papers
 - [2026-07-09](papers/2026-07-09.md) - 2 papers
 - [2026-07-06](papers/2026-07-06.md) - 1 papers
 - [2026-07-03](papers/2026-07-03.md) - 1 papers
@@ -41,6 +42,34 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-10 (1 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-07-10
+
+**Paper Count**: 1
+
+---
+
+## 1. Leveraging Color Naming for Image Enhancement / 利用颜色命名来增强图像
+
+**Date**: 2026-07-09 | **arXiv**: [2607.08185v1](http://arxiv.org/abs/2607.08185v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.08185v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Enhancing images to make them visually appealing is a persistent challenge in computer vision. Many deep-learning methods train models on paired datasets to replicate expert editing styles. However, these approaches struggle with two key issues: (1) interpretability and (2) a parametrization suitable for user adjustments. To address these challenges, we present NamedCurves+, an approach inspired by the concept of Color Naming, a universal set of familiar colors widely used in software tools for intuitive editing. Our method integrates color names into a learning-based framework, enabling global adjustments for each named color through tone curves. To address local image variations, we incorporate a transformer block that captures spatial dependencies, enabling context-aware edits across the image. NamedCurves+ enhances the retouching process's interpretability and supports user interaction, allowing flexible modifications of individual tone curves to refine the retouched image according to personal preferences. Extensive experiments on tasks such as image retouching, tone mapping, and exposure correction demonstrate that NamedCurves+ outperforms state-of-the-art methods. Notably, our approach is both explainable, as the tone curves explicitly represent how each color name contributes to the enhancement, and interactive, allowing users to customize the retouching process and achieve results tailored to their liking.
+
+增强图像以使其具有视觉吸引力是计算机视觉领域的一个持续挑战。许多深度学习方法在配对数据集上训练模型以复制专家编辑风格。然而，这些方法面临两个关键问题：（1）可解释性和（2）适合用户调整的参数化。为了应对这些挑战，我们推出了 NamedCurves+，这是一种受颜色命名概念启发的方法，颜色命名是一组广泛用于直观编辑的软件工具中的通用熟悉颜色。我们的方法将颜色名称集成到基于学习的框架中，从而可以通过色调曲线对每种命名颜色进行全局调整。为了解决局部图像变化，我们结合了一个转换器块来捕获空间依赖性，从而实现跨图像的上下文感知编辑。 NamedCurves+增强了修饰过程的可解释性并支持用户交互，允许灵活修改各个色调曲线，以根据个人喜好细化修饰后的图像。对图像修饰、色调映射和曝光校正等任务的大量实验表明，NamedCurves+ 的性能优于最先进的方法。值得注意的是，我们的方法既是可解释的，因为色调曲线明确表示每种颜色名称如何有助于增强，也是交互式的，允许用户自定义修饰过程并实现根据自己喜好定制的结果。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-09 (2 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-07-09
