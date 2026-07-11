@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-11](papers/2026-07-11.md) - 3 papers
 - [2026-07-10](papers/2026-07-10.md) - 27 papers
 - [2026-07-09](papers/2026-07-09.md) - 36 papers
 - [2026-07-08](papers/2026-07-08.md) - 56 papers
@@ -114,6 +115,66 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-11 (3 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-07-11
+
+**Paper Count**: 3
+
+---
+
+## 1. TTHE: Test-Time Harness Evolution / TTHE：测试时安全​​带的演变
+
+**Date**: 2026-07-09 | **arXiv**: [2607.08124v1](http://arxiv.org/abs/2607.08124v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.08124v1)
+
+**Categories**: cs.SE, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The behavior of an LLM agent is determined not only by the underlying model, but also by its harness: the executable program that constructs context, invokes tools, verifies intermediate results, and recovers from failures. Existing approaches optimize such harnesses before deployment, searching training or development data for a fixed agent workflow that is then frozen at test time. This limits adaptation when the test distribution, failure modes, or tool interactions differ from those seen during development. We ask whether the harness can instead be optimized during evaluation itself, using only the unlabeled execution traces the agent produces on the test inputs. We introduce Test-Time Harness Evolution (TTHE), which treats the executable harness as the state of test-time adaptation. During evaluation, TTHE maintains a population of candidate harnesses and refines them through an agentic proposer that reasons over their execution traces, without gold labels or task-specific supervision; a judge then commits an improved harness from execution-derived proxy signals, and the selected program persists to govern subsequent inputs. Crucially, TTHE does not update model weights, require gold labels, or train a separate adaptation model: solver, proposers, and judge are different roles and harnesses around the same frozen LLM, so all adaptation occurs through changes to the surrounding program. Across text-to-SQL, competitive programming, software engineering, data-science coding, and agentic tool-use tasks, TTHE improves fixed ReAct-style baseline harnesses, yielding persistent, inspectable improvements rather than a pre-searched workflow or per-query retries. These results recast test-time adaptation for LLM agents as evolution over executable control programs and identify execution-derived proxy reliability as a central challenge for robust unsupervised agent improvement.
+
+LLM 代理的行为不仅由底层模型决定，还由其工具决定：构建上下文、调用工具、验证中间结果以及从故障中恢复的可执行程序。现有方法在部署之前优化此类工具，搜索固定代理工作流程的培训或开发数据，然后在测试时冻结该工作流程。当测试分布、故障模式或工具交互与开发过程中看到的不同时，这会限制适应性。我们询问是否可以在评估本身期间优化工具，仅使用代理在测试输入上生成的未标记执行跟踪。我们引入了测试时工具演化（TTHE），它将可执行工具视为测试时适应的状态。在评估过程中，TTHE 维护了一批候选工具，并通过代理提议者对它们进行提炼，该代理提议者对它们的执行轨迹进行推理，无需黄金标签或特定于任务的监督；然后，法官根据执行衍生的代理信号提交改进的控制，并且所选程序将持续控制后续输入。至关重要的是，TTHE 不会更新模型权重，不需要黄金标签，也不会训练单独的适应模型：求解器、提议者和法官是不同的角色，并且围绕同一个冻结的 LLM 进行控制，因此所有适应都是通过对周围程序的更改来实现的。在文本到 SQL、竞争性编程、软件工程、数据科学编码和代理工具使用任务中，TTHE 改进了固定的 ReAct 式基线工具，产生持久的、可检查的改进，而不是预先搜索的工作流程或每次查询重试。这些结果将 LLM 代理的测试时适应重新定义为可执行控制程序的演变，并将执行衍生的代理可靠性确定为稳健的无监督代理改进的核心挑战。
+
+</details>
+
+---
+
+## 2. DeepSWE: Measuring Frontier Coding Agents on Original, Long-Horizon Engineering Tasks / DeepSWE：在原始、长期工程任务中测量前沿编码代理
+
+**Date**: 2026-07-08 | **arXiv**: [2607.07946v1](http://arxiv.org/abs/2607.07946v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.07946v1)
+
+**Categories**: cs.SE, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+DeepSWE is a benchmark of 113 original, long-horizon software engineering tasks for evaluating coding agents. Most public agentic coding benchmarks follow SWE-bench in mining merged fixes from public GitHub repositories, which creates two problems: the fixes and their discussion were likely seen during pretraining, so a high score can reflect recall rather than problem-solving; and each task is graded by the tests that shipped with its merged fix, which were written to confirm one specific fix rather than grade an arbitrary solution, so they can fail a correct alternative or pass an incomplete one. DeepSWE avoids both. Its tasks are written from scratch across 91 active open-source repositories and five languages and are never contributed back upstream, so their reference solutions stay out of the public record that model training scrapes; and each task is graded by a hand-written verifier that checks the requested functionality and accepts any implementation that provides it. When an independent LLM judge re-reviews graded runs, it disagrees with DeepSWE's verifier about an order of magnitude less often than with SWE-Bench Pro's inherited tests (1.4% versus 32.4%). Despite being about half the length of SWE-Bench Pro's prompts, DeepSWE's prompts describe tasks whose reference solutions touch 5.5x more code, and the benchmark separates frontier agents across a wider score band than the leaderboards on which they otherwise cluster. We release the benchmark, its verifiers, and the full record of evaluation trajectories.
+
+DeepSWE 是用于评估编码代理的 113 个原始长期软件工程任务的基准。大多数公共代理编码基准都遵循 SWE-bench 从公共 GitHub 存储库中挖掘合并的修复程序，这会产生两个问题：修复程序及其讨论很可能在预训练期间看到，因此高分可以反映回忆而不是解决问题；每项任务都根据其合并修复程序附带的测试进行评分，编写这些测试是为了确认一个特定的修复程序，而不是对任意解决方案进行评分，因此他们可能无法通过正确的替代方案或通过不完整的替代方案。 DeepSWE 避免了这两种情况。它的任务是在 91 个活跃的开源存储库和五种语言中从头开始编写的，并且永远不会向上游贡献，因此它们的参考解决方案不会出现在模型训练刮擦的公共记录中；每个任务都由手写的验证程序进行评分，该验证程序检查所请求的功能并接受提供该功能的任何实现。当独立的 LLM 法官重新审查评分运行时，它与 DeepSWE 验证者的意见不一致的频率比 SWE-Bench Pro 的继承测试低一个数量级（1.4% 与 32.4%）。尽管 DeepSWE 的提示长度约为 SWE-Bench Pro 提示长度的一半，但 DeepSWE 的提示所描述的任务的参考解决方案涉及的代码量多于 5.5 倍，而且该基准测试将前沿智能体划分为比它们聚集的排行榜更宽的分数范围。我们发布基准、其验证者以及评估轨迹的完整记录。
+
+</details>
+
+---
+
+## 3. When Does Continual Learning Require Learning / 持续学习什么时候需要学习
+
+**Date**: 2026-07-08 | **arXiv**: [2607.07847v1](http://arxiv.org/abs/2607.07847v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.07847v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+As large language models (LLMs) become increasingly capable, the next question is how can we enable models to continually learn? Today, the field largely frames this as a problem of context management and mitigating forgetting. We argue this framing is incomplete: continual learning is fundamentally about increasing model competence as the world changes. We disentangle this change along two axes -- space, where the model encounters new domains, and time, where the underlying data drifts under a fixed task. This framing lets us study continual learning under realistic conditions: new domains arrive over time, facts drift past their training cutoff, and agentic interactions accumulate state across episodes. To evaluate methods under this setting, we recast widely used LLM benchmarks as sequential problems and introduce a single mechanism-agnostic protocol that compares prompt-based methods (GEPA, ACE), supervised learning (SFT, SDFT), reinforcement learning (GRPO, SDPO), and context compression (Cartridges, In-place TTT). Prompt-based methods fit each new stage quickly but degrade on future tasks. Distillation-based methods accumulate knowledge stably but struggle to update outdated facts. Context compression improves efficiency without substantially improving the ability to learn new tasks. Online reinforcement learning adapts most effectively to knowledge updates but remains sensitive to noisy reward signals. Overall, our results suggest that continual learning is not a single capability: different patterns of environmental change require fundamentally different update behaviors, determining when adaptation must be learned inside model weights and when it can be achieved through external scaffolding. We hope that understanding where each method succeeds and fails will guide the design of stronger continual learning systems.
+
+随着大型语言模型（LLM）的能力越来越强，下一个问题是我们如何使模型能够持续学习？如今，该领域很大程度上将其视为上下文管理和减轻遗忘的问题。我们认为这个框架是不完整的：持续学习从根本上讲是随着世界的变化而提高模型能力。我们沿着两个轴解开这种变化：空间（模型遇到新领域）和时间（底层数据在固定任务下漂移）。这个框架让我们能够在现实条件下研究持续学习：随着时间的推移，新的领域到来，事实超出了训练界限，代理交互在各个事件中积累状态。为了评估这种设置下的方法，我们将广泛使用的 LLM 基准重新定义为顺序问题，并引入一个与机制无关的协议，该协议比较基于提示的方法（GEPA、ACE）、监督学习（SFT、SDFT）、强化学习（GRPO、SDPO）和上下文压缩（Cartridges、In-place TTT）。基于提示的方法可以快速适应每个新阶段，但会降低未来任务的性能。基于蒸馏的方法可以稳定地积累知识，但很难更新过时的事实。上下文压缩提高了效率，但并没有显着提高学习新任务的能力。在线强化学习最有效地适应知识更新，但对嘈杂的奖励信号仍然敏感。总的来说，我们的结果表明，持续学习不是单一的能力：不同的环境变化模式需要根本不同的更新行为，决定何时必须在模型权重内学习适应以及何时可以通过外部支架来实现。我们希望了解每种方法的成功和失败之处将指导更强大的持续学习系统的设计。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-10 (27 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-07-10
