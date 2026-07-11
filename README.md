@@ -27,6 +27,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-11](papers/2026-07-11.md) - 1 papers
 - [2026-07-10](papers/2026-07-10.md) - 16 papers
 - [2026-07-09](papers/2026-07-09.md) - 18 papers
 - [2026-07-08](papers/2026-07-08.md) - 25 papers
@@ -134,6 +135,34 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-11 (1 papers)</b></summary>
+
+# arXiv Video Papers - 2026-07-11
+
+**Paper Count**: 1
+
+---
+
+## 1. Unlocking Temporal Generalization in Hamiltonian Video Dynamics Models / 解锁哈密顿视频动力学模型中的时间泛化
+
+**Date**: 2026-07-08 | **arXiv**: [2607.07763v1](http://arxiv.org/abs/2607.07763v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.07763v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models are typically trained to predict discrete-time physical dynamics with a fixed step size baked into the model weights, preventing prediction at variable temporal resolutions. This matters for hierarchical planning, sim-to-real transfer, and scientific or game-engine applications that must query the same dynamics at multiple timescales. Hamiltonian Generative Networks (HGN) offer a principled path forward, grounding predictions in a continuous-time energy function that is, in principle, independent of the observation frame rate. In practice, however, their temporal generalization breaks down in non-conservative settings. We show that in externally forced, dissipative environments, HGN rollouts at step sizes beyond the training regime fail due to distinct failure modes, including latent magnitude growth driven by an unconstrained action-force map, and global truncation error accumulation from an under-resolved integrator. We identify a targeted fix for each mechanism and demonstrate stable dynamics prediction at temporal resolutions well outside the training distribution. In a detailed analysis, we recommend several strategies for enabling temporal generalization in continuous-time video generation.
+
+世界模型通常经过训练，以模型权重中包含的固定步长来预测离散时间物理动力学，从而防止以可变时间分辨率进行预测。这对于分层规划、模拟到真实的传输以及必须在多个时间尺度查询相同动态的科学或游戏引擎应用程序很重要。哈密​​顿生成网络（HGN）提供了一条原则性的前进道路，以连续时间能量函数为基础的预测，原则上与观测帧速率无关。然而，在实践中，它们的时间概括在非保守环境中会崩溃。我们表明，在外部强制的耗散环境中，由于不同的故障模式，超出训练范围的步长的 HGN 部署会失败，包括由不受约束的作用力图驱动的潜在幅度增长，以及来自解析不足的积分器的全局截断误差累积。我们为每种机制确定了一个有针对性的修复方案，并在训练分布之外的时间分辨率下展示了稳定的动态预测。在详细分析中，我们推荐了几种在连续时间视频生成中实现时间泛化的策略。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-10 (16 papers)</b></summary>
 
 # arXiv Video Papers - 2026-07-10
