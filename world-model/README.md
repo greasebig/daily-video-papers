@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-14](papers/2026-07-14.md) - 4 papers
 - [2026-07-13](papers/2026-07-13.md) - 1 papers
 - [2026-07-11](papers/2026-07-11.md) - 2 papers
 - [2026-07-10](papers/2026-07-10.md) - 2 papers
@@ -111,6 +112,82 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-14 (4 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-07-14
+
+**Paper Count**: 4
+
+---
+
+## 1. Is Energy Guidance All You Need? Training-Free Norm Injection for Driving World Models / 您需要的是能量指导吗？用于驾驶世界模型的免培训规范注入
+
+**Date**: 2026-07-12 | **arXiv**: [2607.10781v1](http://arxiv.org/abs/2607.10781v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.10781v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Driving world models built on large video-diffusion backbones generate realistic scenes but are hard to control: enforcing a traffic norm typically means retraining the backbone or conditioning it on hand-built layouts. We ask whether controllability requires training at all. Our experiment shows that a rectified-flow driving world model, which jointly generates future video and a planned ego trajectory, can have its planned trajectory steered entirely at sampling time by differentiable energy functions that encode driving norms, without knowledge-specific retraining of the diffusion backbone. Concretely, we demonstrate that a world model built on Open-Sora 2.0 MM-DiT backbone can be steered to brake at a counterfactual target by injecting energy guidance at sampling time. However, we find that the generated video does not yet follow the steered trajectory through the backbone's joint self-attention and identify the cross-stream coupling as a crucial requirement for end-to-end-controllable rollouts.
+
+基于大型视频扩散骨干网构建的驾驶世界模型会生成逼真的场景，但难以控制：执行流量规范通常意味着重新训练骨干网或将其调整为手工构建的布局。我们询问可控性是否需要培训。我们的实验表明，联合生成未来视频和计划自我轨迹的整流流驾驶世界模型可以在采样时通过编码驾驶规范的可微能量函数完全控制其计划轨迹，而无需对扩散主干进行特定知识的再训练。具体来说，我们证明了基于 Open-Sora 2.0 MM-DiT 主干网络构建的世界模型可以通过在采样时注入能量引导来控制反事实目标制动。然而，我们发现生成的视频尚未通过骨干网络的联合自注意力遵循引导轨迹​​，并将跨流耦合视为端到端可控推出的关键要求。
+
+</details>
+
+---
+
+## 2. World Models as Adversaries: Multi-Agent Self-Play Fine-Tuning for Robust Motion Planning / 世界模型作为对手：多智能体自博微调以实现稳健的运动规划
+
+**Date**: 2026-07-12 | **arXiv**: [2607.10630v1](http://arxiv.org/abs/2607.10630v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.10630v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Robust motion planning in dense traffic requires autonomous vehicles to interact in rare and safety-critical scenarios that are underrepresented in naturalistic driving data. Although adversarial training offers a feasible solution, existing methods often rely on external scenario generators, heuristic perturbations, or simulator-heavy rollouts, which makes them difficult to integrate with modern autoregressive planners. Here, we cast adversarially robust planner learning as a constrained min-max game and propose Adversarial World Modeling (AWM), a theoretically grounded multi-agent self-play fine-tuning framework. Since solving the exact game is intractable, AWM introduces a principled decoupled solver. In the inner minimization, the planner's predictive world model is converted into a role-conditioned adversary that learns sparse, scene-adaptive attack coalitions via counterfactual credit assignment. In the outer maximization, the ego planner optimizes a regret-aware robust best response against the frozen AWM, utilizing tail-risk weighting and reference-anchored trust regions to improve hard-case recovery while preserving nominal driving behavior. Experiments on the nuPlan and InterPlan benchmarks demonstrate that our method generates transferable adversarial interactions and yields a robust planner that achieves competitive closed-loop performance in both nominal and highly interactive long-tail scenarios. Theoretical analysis justifies the decoupled solver and the main optimization components.
+
+密集交通中的稳健运动规划需要自动驾驶车辆在自然驾驶数据中代表性不足的罕见且安全关键的场景中进行交互。尽管对抗性训练提供了可行的解决方案，但现有方法通常依赖于外部场景生成器、启发式扰动或大量模拟器的推出，这使得它们难以与现代自回归规划器集成。在这里，我们将对抗性鲁棒规划学习视为一种受约束的最小-最大游戏，并提出对抗性世界建模（AWM），这是一种基于理论的多智能体自我对弈微调框架。由于求解精确的游戏很困难，AWM 引入了一种有原则的解耦求解器。在内部最小化中，规划者的预测世界模型被转换为角色条件对手，通过反事实信用分配学习稀疏的、场景自适应的攻击联盟。在外部最大化中，自我规划器针对冻结的 AWM 优化了后悔感知的鲁棒最佳响应，利用尾部风险权重和参考锚定信任区域来改善困难情况恢复，同时保留名义驾驶行为。 nuPlan 和 InterPlan 基准的实验表明，我们的方法生成可转移的对抗性交互，并产生一个强大的规划器，可以在名义和高度交互的长尾场景中实现有竞争力的闭环性能。理论分析证明了解耦求解器和主要优化组件的合理性。
+
+</details>
+
+---
+
+## 3. Stateful Worlds, Stateless Elasticity: Exact-State Serving for Interactive World Models / 有状态的世界，无状态的弹性：交互式世界模型的精确状态服务
+
+**Date**: 2026-07-11 | **arXiv**: [2607.10389v1](http://arxiv.org/abs/2607.10389v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.10389v1)
+
+**Categories**: cs.DC, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+A persistent interactive world model keeps its running state resident on the GPU that serves it: a multi-gigabyte attention cache, almost all of it rewritten at every generation step. That state cannot be recomputed in interactive time or approximated without changing the world, so a live session pins its device. The pin is a scheduling problem. WorldMove moves a live session under one guarantee: the destination is bit-identical to the source, or nothing is installed. It relocates the cache in 18.8 ms same-node, 101x faster than save/load. It holds a checksum-verified 92.1-94.8 Gb/s on a 100 Gb fabric. At that rate the cache fits inside one interactive block. Migrating an actively generating session, it converges at a block boundary and the destination continues the world bit for bit. An admissibility condition decides each move. The move must complete inside the readout horizon, over bandwidth that covers the state plus its dirty rate. Lifted to a fleet schedulability test, it governed a consolidation loop that executed 48 of 48 migrations bit-identical across two providers. Two constraints are structural. Bit-exactness survives only inside a controlled configuration of one GPU architecture, so moving the state is the only way to preserve it exactly in interactive time. Verification cannot hide inside the wire on this fabric. Receive-path checksums stall the transport at protocol timescales under fan-in, and unscheduled incast silently collapses a receiver while every delivered byte stays correct. An incast-aware admission controller holds zero misses to 1.4x offered load and sheds overload as rejects. A lossless GPU codec widens the admission gate to fabrics raw motion cannot use. We exercise the serving loop and the mover separately, each end to end. Their composition on one fabric is unbuilt. Exact-state elasticity is a joint scheduling problem over transport and verification.
+
+持久的交互式世界模型将其运行状态驻留在为其提供服务的 GPU 上：一个数 GB 的注意力缓存，几乎所有内容都在每个生成步骤中重写。该状态无法在交互时间内重新计算或在不改变世界的情况下进行近似，因此实时会话会固定其设备。 pin是一个调度问题。 WorldMove 在一项保证下移动实时会话：目标与源位完全相同，或者未安装任何内容。它在 18.8 毫秒内重新定位缓存（同一节点），比保存/加载快 101 倍。它在 100 Gb 结构上拥有经过校验和验证的 92.1-94.8 Gb/s。按照这一速度，缓存可以容纳在一个交互式块中。迁移主动生成的会话时，它会在块边界处汇聚，并且目的地会一点一点地继续世界。允许条件决定每一步。该移动必须在读出范围内完成，超过覆盖状态及其脏率的带宽。提升到队列可调度性测试时，它控制了一个整合循环，该循环在两个提供商之间执行了 48 个位相同的迁移中的 48 个。有两个限制是结构性的。位精确性仅在一个 GPU 架构的受控配置中存在，因此移动状态是在交互时间内精确保存状态的唯一方法。验证无法隐藏在这种织物上的金属丝内部。接收路径校验和会在扇入下按协议时间尺度停止传输，并且计划外的 incast 会默默地崩溃接收器，同时每个传递的字节都保持正确。 Incast 感知准入控制器可将零失误保持到 1.4 倍所提供的负载，并将过载视为拒绝。无损 GPU 编解码器拓宽了原始运动无法使用的结构的准入门槛。我们分别端到端地练习服务循环和移动器。它们在一种织物上的成分是未构建的。精确状态弹性是传输和验证的联合调度问题。
+
+</details>
+
+---
+
+## 4. A Control Theory of Predictability in Latent World Models / 潜在世界模型中可预测性的控制理论
+
+**Date**: 2026-07-11 | **arXiv**: [2607.10362v1](http://arxiv.org/abs/2607.10362v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.10362v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Latent world models are trained to predict future states in a learned representation and are then deployed inside a planner that selects actions by simulating them forward. Current practice adopts the prediction error, the single- or multi-step rollout loss on held-out data, as the training and model-selection objective, on the assumption that a lower prediction error yields better control. We show that this assumption is unreliable for a structural reason: a planner does not query the model on the training distribution but on the states that its candidate actions reach, which generally leave the data manifold, so an error averaged over the data cannot by itself govern control. We therefore reframe the objective as the discrepancy between the predicted and the true plan-cost at the plan the planner commits to, and prove that the planner's suboptimality is bounded by twice this discrepancy, whereas the data-averaged prediction error neither bounds nor tracks it. Under a linear-control premise the discrepancy separates into two terms. The first is a small on-manifold residual, on which the predicted and true dynamics agree and which a spectral tax prices through the non-normality of the latent transition operator. The second is an off-manifold divergence, on which an action carries the state off the manifold and the two dynamics diverge; this divergence is the binding term and is bounded by no data-averaged error. Synthetic operators confirm the pricing formulas, and latent model-predictive control experiments confirm the decoupling: across seeds, the single-step validation error is essentially uncorrelated with control success, whereas a fidelity score on the planner-reachable measure tracks it.
+
+潜在世界模型经过训练，可以在学习的表示中预测未来状态，然后部署在规划器中，规划器通过向前模拟来选择操作。目前的实践采用预测误差，即保留数据的单步或多步推出损失作为训练和模型选择目标，假设较低的预测误差会产生更好的控制。我们表明，由于结构原因，这种假设是不可靠的：规划器不会在训练分布上查询模型，而是在其候选动作达到的状态上查询模型，这通常会离开数据流形，因此数据上的平均误差本身无法控制控制。因此，我们将目标重新定义为规划者承诺的计划的预测成本与真实计划成本之间的差异，并证明规划者的次优性受到该差异两倍的限制，而数据平均预测误差既不限制也不跟踪它。在线性控制前提下，差异分为两项。第一个是小的流形残差，预测的动态和真实的动态一致，并且谱税通过潜在转移算子的非正态性进行定价。第二个是流形外发散，其中一个动作将状态带离流形，并且两个动态发散；该差异是约束项并且不受数据平均误差的限制。综合算子确认了定价公式，潜在模型预测控制实验证实了这种解耦：在种子中，单步验证误差本质上与控制成功不相关，而规划器可达度量的保真度分数则跟踪它。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-13 (1 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-07-13
