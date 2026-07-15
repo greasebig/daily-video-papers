@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-15](papers/2026-07-15.md) - 4 papers
 - [2026-07-14](papers/2026-07-14.md) - 1 papers
 - [2026-07-11](papers/2026-07-11.md) - 1 papers
 - [2026-07-10](papers/2026-07-10.md) - 1 papers
@@ -44,6 +45,84 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-15 (4 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-07-15
+
+**Paper Count**: 4
+
+---
+
+## 1. MAGE: Color-Invariant and Spatial Knowledge Distillation for Gastric Neoplasm Classification / MAGE：用于胃肿瘤分类的颜色不变和空间知识蒸馏
+
+**Date**: 2026-07-14 | **arXiv**: [2607.12663v1](http://arxiv.org/abs/2607.12663v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.12663v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Accurate differentiation between gastric adenoma and carcinoma during endoscopy is critical for clinical decision-making. Yet, this task is highly challenging due to high inter-class similarity and ambiguous boundaries between the two classes. Existing ROI-based classification methods often suffer from detection/segmentation error propagation and loss of surrounding global context. In contrast, full-image classification lacks the necessary spatial focus. Furthermore, we observe that deep neural networks gravitate towards domain-specific texture biases(e.g. bleeding, lighting artifacts), often causing models to predict based on spurious correlations instead of intrinsic morphological features. To address these limitations, we propose a novel framework, Masked Achromatic Guidance Expert (MAGE). During training, we introduce an auxiliary local expert branch trained on masked achromatic views of the neoplasm. By suppressing background context and color, this branch is forced to learn highly discriminative, purely structural features. We then employ a dual-objective distillation strategy, transferring both classification logits and spatial attention maps to provide implicit spatial supervision to the main branch that receives full WLI as input. This dual-objective distillation forces the model to ground its predictions in morphology rather than relying on shortcuts, while still retaining clinically relevant color cues. At inference time, our deployable model operates on images without annotated masks, ensuring real-time deployability . Extensive experiments on a clinical gastric endoscopy dataset show that our method significantly outperforms existing detection-based methodologies (e.g. YOLO) and classification-based methodologies (e.g. Swin-Transformer), providing not only superior classification performance but also interpretable attention maps for clinical reliability.
+
+内镜检查期间准确区分胃腺瘤和癌对于临床决策至关重要。然而，由于类间的高度相似性和两个类之间的边界不明确，这项任务非常具有挑战性。现有的基于 ROI 的分类方法经常受到检测/分割错误传播和周围全局上下文丢失的影响。相比之下，全图像分类缺乏必要的空间焦点。此外，我们观察到深度神经网络倾向于特定领域的纹理偏差（例如出血、照明伪影），通常导致模型基于虚假相关性而不是内在形态特征进行预测。为了解决这些限制，我们提出了一种新颖的框架，即蒙面消色差制导专家（MAGE）。在培训期间，我们引入了一个辅助当地专家分支，接受过肿瘤的遮蔽消色差视图的培训。通过抑制背景上下文和颜色，该分支被迫学习具有高度辨别力的纯结构特征。然后，我们采用双目标蒸馏策略，传输分类逻辑和空间注意力图，为接收完整 WLI 作为输入的主分支提供隐式空间监督。这种双目标蒸馏迫使模型以形态学为基础进行预测，而不是依赖捷径，同时仍然保留临床相关的颜色线索。在推理时，我们的可部署模型在没有带注释的掩模的图像上运行，确保了实时可部署性。对临床胃内窥镜数据集的大量实验表明，我们的方法显着优于现有的基于检测的方法（例如 YOLO）和基于分类的方法（例如 Swin-Transformer），不仅提供卓越的分类性能，而且还提供可解释的注意图以提高临床可靠性。
+
+</details>
+
+---
+
+## 2. Spatially-Aligned Chroma from Luma Prediction for Lossless JPEG XS Raw Image Compression / 用于无损 JPEG XS 原始图像压缩的亮度预测的空间对齐色度
+
+**Date**: 2026-07-14 | **arXiv**: [2607.12636v1](http://arxiv.org/abs/2607.12636v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.12636v1)
+
+**Categories**: eess.IV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This study proposes a Chroma from Luma (CfL)-enhanced Star-Tetrix transform (STT), referred to as CfL-STT, for improving raw image compression in JPEG XS. The proposed CfL-STT integrates CfL prediction into the STT to predict chroma components from the luma component in CFA-sampled raw images. Unlike conventional CfL prediction designed for full-color images, the proposed method employs spatially aligned luma samples obtained via linear interpolation along the horizontal and vertical directions to match the chroma sampling grid. This spatial alignment suppresses high-frequency sensor noise while preserving cross-channel correlation, resulting in a more decorrelated Y-Delta-Du-Dv color space. The proposed method was implemented in the JPEG XS reference software and evaluated on raw image datasets. Experimental results demonstrate that a direct application of CfL prediction yields image-dependent performance and may degrade coding efficiency due to the lack of spatial alignment, whereas the proposed CfL-STT consistently improves coding efficiency in lossless raw image compression while preserving exact reversibility.
+
+本研究提出了亮度色度 (CfL) 增强型 Star-Tetrix 变换 (STT)（称为 CfL-STT），用于改进 JPEG XS 中的原始图像压缩。所提出的 CfL-STT 将 CfL 预测集成到 STT 中，以根据 CFA 采样的原始图像中的亮度分量来预测色度分量。与针对全色图像设计的传统 CfL 预测不同，所提出的方法采用通过沿水平和垂直方向的线性插值获得的空间对齐的亮度样本来匹配色度采样网格。这种空间对齐可抑制高频传感器噪声，同时保留跨通道相关性，从而产生更加去相关的 Y-Delta-Du-Dv 色彩空间。所提出的方法在 JPEG XS 参考软件中实现，并在原始图像数据集上进行评估。实验结果表明，直接应用 CfL 预测会产生与图像相关的性能，并且可能由于缺乏空间对齐而降低编码效率，而所提出的 CfL-STT 始终提高无损原始图像压缩的编码效率，同时保持精确的可逆性。
+
+</details>
+
+---
+
+## 3. Illuminant-Adaptive 3D Lookup Tables for Camera Color Correction / 用于相机色彩校正的光源自适应 3D 查找表
+
+**Date**: 2026-07-13 | **arXiv**: [2607.11681v2](http://arxiv.org/abs/2607.11681v2) | **PDF**: [Link](http://arxiv.org/pdf/2607.11681v2)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/claudiom4sir/C2LUT.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Color correction is a key component of camera image signal processing (ISP) pipelines, encompassing illuminant discounting and colorimetric mapping of device-dependent sensor responses to device-independent color spaces, such as CIE XYZ. Despite extensive research, accurate color correction remains challenging due to the non-linear relationship between camera sensor responses and CIE XYZ color space, as well as to the increasing presence of highly chromatic and spectrally complex LED illuminants. We propose a color correction framework based on illuminant-adaptive three-dimensional lookup tables (LUTs), which we call Color Correction LUT (C$^2$LUT). Our method combines a chromaticity-aware illuminant representation with a non-linear color transformation, enabling accurate correction under illuminants spanning a wide range of chromaticities and spectral complexities. We employ Tucker tensor decomposition to represent the LUTs, ensuring that computational requirements remain sufficiently low for deployment in camera ISPs. In addition, we introduce a large-scale illuminants dataset comprising 1,473 spectral power distributions, with different chromaticities and spectral profiles. Experiments across multiple cameras, illuminants, reflectance datasets, and real captured images demonstrate consistent improvements over existing methods for color correction, reducing CIE $ΔE_{00}$ by up to 20% and angular error by up to 18% while remaining compatible with modern camera hardware constraints. Code and datasets are available at https://github.com/claudiom4sir/C2LUT.
+
+色彩校正是相机图像信号处理 (ISP) 管道的关键组成部分，包括光源折扣和将设备相关的传感器响应映射到设备无关的色彩空间（例如 CIE XYZ）。尽管进行了广泛的研究，但由于相机传感器响应和 CIE XYZ 色彩空间之间的非线性关系，以及高度色彩和光谱复杂的 LED 光源的日益增多，准确的色彩校正仍然具有挑战性。我们提出了一种基于光源自适应三维查找表（LUT）的色彩校正框架，我们称之为色彩校正LUT（C$^2$LUT）。我们的方法将色度感知光源表示与非线性颜色变换相结合，从而能够在跨越各种色度和光谱复杂性的光源下进行精确校正。我们采用 Tucker 张量分解来表示 LUT，确保在相机 ISP 中部署时计算要求保持足够低。此外，我们还引入了一个大规模光源数据集，其中包含 1,473 个光谱功率分布，具有不同的色度和光谱轮廓。跨多个相机、光源、反射率数据集和真实拍摄图像的实验表明，与现有的色彩校正方法相比，得到了一致的改进，将 CIE $ΔE_{00}$ 降低了高达 20%，角度误差降低了高达 18%，同时保持与现代相机硬件限制的兼容。代码和数据集可在 https://github.com/claudiom4sir/C2LUT 获取。
+
+</details>
+
+---
+
+## 4. Why Low-Light Cameras Go Color Blind: Removing Color Bias in Raw Denoising / 为什么低光相机会出现色盲：消除原始降噪中的颜色偏差
+
+**Date**: 2026-07-13 | **arXiv**: [2607.11090v1](http://arxiv.org/abs/2607.11090v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.11090v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Raw images inherently suffer from noise due to the stochastic nature of light and sensor hardware imperfections. As real photon counts fall, the ratio of this noise to the signal degrades; consequently, for low-light conditions, robust denoising is especially vital for high-quality results. While recent data-driven methods achieve strong performance, they typically rely on large-scale noisy-clean image pairs that are costly and difficult to collect. Alternatively, parametric noise models can generate synthetic training data, but this necessitates precise camera calibration, which is often impractical for unknown devices. In this work, we propose a camera-agnostic, calibration-free paradigm for low-light raw denoising. We identify that color bias from black-level error is a primary source of performance degradation and causes severe color shifts. To mitigate this, we introduce a bias estimator network that predicts the black-level error as a global feature of the noisy input. We evaluate our approach across the ELD, SID, and LRID datasets, demonstrating superior performance among blind denoisers, particularly in terms of color correction. In many cases, we are competitive with-or can even surpass-methods with stronger supervision. Furthermore, we reveal that the widely used SIDD dataset contains significant color bias in its ground-truth images, which yields unrealistic color reproduction in trained models. We introduce a new ground-truth extraction framework to resolve this issue and provide a benchmark of existing methods on the corrected dataset.
+
+由于光的随机性和传感器硬件的缺陷，原始图像本质上会受到噪声的影响。随着实际光子计数的下降，噪声与信号的比率也会降低；因此，在弱光条件下，强大的去噪对于高质量结果尤其重要。虽然最近的数据驱动方法实现了强大的性能，但它们通常依赖于成本高昂且难以收集的大规模噪声-干净图像对。或者，参数噪声模型可以生成合成训练数据，但这需要精确的相机校准，这对于未知设备通常是不切实际的。在这项工作中，我们提出了一种与相机无关、无需校准的低光原始去噪范例。我们发现，黑电平误差造成的颜色偏差是性能下降的主要原因，并会导致严重的颜色偏移。为了缓解这个问题，我们引入了一个偏差估计器网络，该网络将黑电平误差预测为噪声输入的全局特征。我们在 ELD、SID 和 LRID 数据集上评估了我们的方法，证明了盲降噪器的卓越性能，特别是在颜色校正方面。在许多情况下，我们可以与具有更强监管的方法竞争，甚至可以超越。此外，我们发现广泛使用的 SIDD 数据集在其真实图像中包含显着的颜色偏差，这会在训练模型中产生不切实际的颜色再现。我们引入了一种新的地面实况提取框架来解决这个问题，并为校正后的数据集提供现有方法的基准。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-14 (1 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-07-14
