@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-16](papers/2026-07-16.md) - 8 papers
 - [2026-07-15](papers/2026-07-15.md) - 7 papers
 - [2026-07-14](papers/2026-07-14.md) - 4 papers
 - [2026-07-13](papers/2026-07-13.md) - 1 papers
@@ -113,6 +114,146 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-16 (8 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-07-16
+
+**Paper Count**: 8
+
+---
+
+## 1. M$^\text{4}$World: A Multi-view Multimodal Driving World Model for Interactive Object Manipulation and Minute-long Streaming / M$^\text{4}$World：用于交互式对象操作和一分钟流媒体的多视图多模态驾驶世界模型
+
+**Date**: 2026-07-15 | **arXiv**: [2607.14005v1](http://arxiv.org/abs/2607.14005v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.14005v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Driving-world generation has emerged as a core capability for scalable autonomous-driving simulation, yet existing methods remain limited in object-level controllability and long-horizon stability. We present M$^\text{4}$World, a Multi-view and Multimodal generative driving world model that synthesizes future surround-view video streams and synchronized LiDAR scans while supporting interactive object Manipulation and stable Minute-long streaming. Fine-grained object manipulation is realized through a flexible conditioning interface that supports explicit control over both the spatial layout and visual appearance of individual objects. Stable minute-long streaming, on the other hand, is achieved through a multi-stage training framework that enables online causal generation in only four denoising steps while maintaining coherent world dynamics throughout extended rollouts. Building on these components, we introduce an efficient few-clip post-training as well as a suite of visual reference-conditioned generation models, preserving general generation ability while allowing rare-case customization for long-tail controllability. To assess controllability beyond realism, we further introduce an automated VLM-based judging pipeline that evaluates scene-level condition adherence, view-wise object controllability, and cross-view object consistency. Comprehensive experiments show that M$^\text{4}$World consistently delivers high generation quality, precise controllability, and stable minute-long streaming. Together with downstream long-tail augmentation and scene editing, these results demonstrate the potential of M$^\text{4}$World for controllable, scalable driving simulation.
+
+驾驶世界生成已成为可扩展自动驾驶模拟的核心功能，但现有方法在对象级可控性和长期稳定性方面仍然有限。我们提出了 M$^\text{4}$World，一种多视图和多模式生成驾驶世界模型，它合成未来的环视视频流和同步 LiDAR 扫描，同时支持交互式对象操作和稳定的一分钟长流。细粒度的对象操作是通过灵活的条件接口实现的，该接口支持对单个对象的空间布局和视觉外观的显式控制。另一方面，稳定的一分钟长的流媒体是通过多阶段训练框架实现的，该框架只需四个去噪步骤即可实现在线因果生成，同时在整个扩展过程中保持连贯的世界动态。在这些组件的基础上，我们引入了高效的少剪辑后训练以及一套视觉参考条件生成模型，保留了一般生成能力，同时允许对长尾可控性进行罕见情况的定制。为了评估超越现实的可控性，我们进一步引入了基于 VLM 的自动化判断管道，用于评估场景级条件遵守情况、视图对象可控性和跨视图对象一致性。综合实验表明，M$^\text{4}$World 始终如一地提供高生成质量、精确的可控性和稳定的一分钟长的流媒体。与下游长尾增强和场景编辑一起，这些结果证明了 M$^\text{4}$World 在可控、可扩展的驾驶模拟方面的潜力。
+
+</details>
+
+---
+
+## 2. Design, Modeling and Experimental Validation of a Miniature Hybrid Underwater Glider With Large-Range Foldable Deflectable Wings / 具有大范围可折叠偏转机翼的微型混合水下滑翔机的设计、建模和实验验证
+
+**Date**: 2026-07-15 | **arXiv**: [2607.13622v1](http://arxiv.org/abs/2607.13622v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.13622v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Miniature hybrid underwater gliders have attracted increasing attention for long-endurance ocean observation and confined-space inspection. Large-range wing reconfiguration offers a promising yet largely unexplored approach for simultaneously enhancing maneuverability and shape adaptability in constrained underwater environments. However, such morphing introduces substantial challenges in mechanical integration, dynamic modeling, and hydrodynamic characterization. This paper presents FoDeGlider, a miniature hybrid underwater glider equipped with two independently actuated wings capable of large-range folding and deflection. To capture configuration-dependent variations in mass distribution, center-of-geometry location, and hydrodynamic loading, a multibody dynamics model is developed by treating wing configuration as a structural variable. A composite rigid body algorithm (CRBA)-based projection formulates the composite inertia, wrench transformations, and component-level hydrodynamics into a unified Fossen-form dynamic model applicable to arbitrary wing configurations. A sequential parameter-identification framework is further proposed to estimate fuselage and wing hydrodynamic coefficients, resulting in an open benchmark dataset for model identification and validation. Extensive experiments are conducted, the results of which demonstrate accurate dynamic modeling and parameter identification across diverse morphing configurations. Gate traversal experiments further validate FoDeGlider's ability to actively reconfigure its morphology during locomotion, enabling enhanced navigation in confined underwater environments.
+
+微型混合水下滑翔机在长航时海洋观测和密闭空间检查方面越来越受到关注。大范围机翼重构提供了一种有前途但很大程度上尚未探索的方法，可同时增强受限水下环境中的机动性和形状适应性。然而，这种变形给机械集成、动态建模和流体动力学表征带来了巨大的挑战。本文介绍了 FoDeGlider，这是一种微型混合水下滑翔机，配备两个独立驱动的机翼，能够大范围折叠和偏转。为了捕获质量分布、几何中心位置和水动力载荷中与构型相关的变化，通过将机翼构型视为结构变量来开发多体动力学模型。基于复合刚体算法 (CRBA) 的投影将复合惯性、扳手变换和组件级流体动力学公式化为适用于任意机翼配置的统一 Fossen 型动态模型。进一步提出了顺序参数识别框架来估计机身和机翼的水动力系数，从而形成用于模型识别和验证的开放基准数据集。进行了广泛的实验，其结果证明了跨不同变形配置的准确动态建模和参数识别。门遍历实验进一步验证了 FoDeGlider 在运动过程中主动重新配置其形态的能力，从而增强了在受限水下环境中的导航能力。
+
+</details>
+
+---
+
+## 3. The SIGReg Objective as Variational Free Energy: A Theoretical Active-Inference Account of JEPA World Models / 作为变分自由能的 SIGReg 目标：JEPA 世界模型的理论主动推理说明
+
+**Date**: 2026-07-15 | **arXiv**: [2607.13612v1](http://arxiv.org/abs/2607.13612v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.13612v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Joint-Embedding Predictive Architectures (JEPAs) are the dominant design for latent world models, yet they are usually justified by empirical performance rather than a normative principle. We show that the choice of anti-collapse regulariser determines whether a JEPA's training objective, a prediction loss plus a weighted embedding regulariser, is a valid Active Inference (AIF) variational free energy. We organise four non-contrastive regularisers (VICReg, LogDet, PairDist, and SIGReg) into an entropy-estimator hierarchy indexed by a prior-miscalibration gap, and show that the gap's sign, whether the estimator bounds the latent entropy from above or below, decides whether the AIF surprise bound survives: VICReg and LogDet are unsafe upper bounds, PairDist a safe lower bound, and SIGReg eliminates the gap. We then prove a correspondence theorem: under the standard constant-noise encoder model and successful SIGReg enforcement (isotropic-Gaussian embeddings), the gap vanishes, the objective becomes an exact information bottleneck, the surprise bound is preserved, and the latent goal cost becomes an exact proxy for AIF pragmatic value, whereas VICReg leaves an irreducible second-order anisotropy term. We extend the correspondence to multi-step expected free energy, ensemble epistemic value, and a learned-policy regime, and we identify the one AIF term no current JEPA world model computes: the state-epistemic value, a future-state coverage signal. The predictions differ in kind, not degree, and are stated here as theoretical consequences left for empirical test in separate work; full proofs are in Appendix A, and the algebraic core of every result is machine-verified in Lean 4 (Appendix D).
+
+联合嵌入预测架构（JEPA）是潜在世界模型的主导设计，但它们通常由经验性能而不是规范原则来证明其合理性。我们表明，抗崩溃正则化器的选择决定了 JEPA 的训练目标（预测损失加上加权嵌入正则化器）是否是有效的主动推理（AIF）变分自由能。我们将四个非对比正则化器（VICReg、LogDet、PairDist 和 SIGReg）组织成由先验误校准间隙索引的熵估计器层次结构，并表明间隙的符号（无论估计器从上方还是下方限制潜在熵）决定 AIF 意外界限是否存在：VICReg 和 LogDet 是不安全的上限，PairDist 是安全的下界，而 SIGReg消除了间隙。然后我们证明了一个对应定理：在标准恒定噪声编码器模型和成功的 SIGReg 执行（各向同性高斯嵌入）下，间隙消失，目标成为精确的信息瓶颈，意外界限被保留，潜在目标成本成为 AIF 实用值的精确代理，而 VICReg 留下了不可约的二阶各向异性项。我们将对应关系扩展到多步预期自由能、整体认知值和学习策略体系，并且我们确定了当前 JEPA 世界模型无法计算的一个 AIF 术语：状态认知值、未来状态覆盖信号。这些预测在种类上有所不同，而不是程度上的不同，这里将其表述为理论结果，留给单独工作中的实证检验；完整的证明在附录 A 中，每个结果的代数核心在精益 4（附录 D）中经过机器验证。
+
+</details>
+
+---
+
+## 4. Grounded world models in biological organisms and future embodied AI / 以生物有机体和未来人工智能为基础的世界模型
+
+**Date**: 2026-07-15 | **arXiv**: [2607.13560v1](http://arxiv.org/abs/2607.13560v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.13560v1)
+
+**Categories**: q-bio.NC, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in generative and embodied AI have been driven by large-scale predictive learning over multimodal data. However, the resulting systems remain largely based on passive training regimes where linguistic regularities create the scaffold onto which information from other modalities is attached. Conversely, neuroscience and cognitive science suggest that biological intelligence is organized in the opposite way, where grounded world models acquired through interaction with the environment provide the semantic scaffold to which language is attached. Here, we illustrate five examples of neural circuits supporting grounded world modelling, which underlie navigation in physical and conceptual spaces, affordance-based perception and interaction with objects, active perception and exploratory learning, allostatic control and emotion, and the distinction between self- and world-generated outcomes. These examples highlight several features largely missing from current embodied AI, including the role of intrinsic dynamics as a foundation for learning, the centrality of action in aligning these dynamics with the external world, the prominence of autonomous experience and open-ended learning over passive assimilation of externally provided data, and the fact that early predictive and control mechanisms scaffold higher cognitive abilities such as reasoning, conceptual navigation, planning, imagination, understanding others' minds, and communication. Finally, we discuss whether and how principles derived from biological systems may inform future embodied AI, including training regimes based on social interaction to construct world models that are not only grounded but also socially shared and aligned with human norms and values.
+
+生成式人工智能和嵌入式人工智能的最新进展是由多模态数据的大规模预测学习推动的。然而，由此产生的系统仍然主要基于被动训练制度，其中语言规律创建了支架，来自其他模式的信息被附加到该支架上。相反，神经科学和认知科学表明，生物智能是以相反的方式组织的，通过与环境交互获得的扎根世界模型提供了语言所依附的语义支架。在这里，我们举例说明了支持扎根世界建模的神经回路的五个例子，这些神经回路是物理和概念空间中的导航、基于可供性的感知和与物体的交互、主动感知和探索性学习、动态控制和情感，以及自我生成的结果和世界生成的结果之间的区别的基础。这些例子凸显了当前体现人工智能中很大程度上缺失的几个特征，包括内在动力作为学习基础的作用、将这些动力与外部世界相结合的行动的中心地位、自主经验和开放式学习相对于外部提供的数据的被动同化的突出地位，以及早期预测和控制机制支撑更高的认知能力，如推理、概念导航、计划、想象力、理解他人的思想和沟通。最后，我们讨论源自生物系统的原则是否以及如何为未来的具体人工智能提供信息，包括基于社会互动的训练制度，以构建不仅有根基而且社会共享并符合人类规范和价值观的世界模型。
+
+</details>
+
+---
+
+## 5. Ego-Dynamics-Augmented World Model for Autonomous Driving with Zero-Shot Cross-Chassis Adaptation / 具有零镜头跨底盘适应的自动驾驶自我动力学增强世界模型
+
+**Date**: 2026-07-15 | **arXiv**: [2607.13410v1](http://arxiv.org/abs/2607.13410v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.13410v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World model (WM)-based reinforcement learning enables sample-efficient end-to-end autonomous driving learning by imagining long-horizon trajectories in latent space. However, most driving WMs operate on bird's-eye-view (BEV) representations that are inherently egocentric: the transition between consecutive frames entangles the ego vehicle's own motion with scene dynamics. As a result, the WM devotes significant capacity to recovering ego-motion from warped observations, at the cost of scene modeling fidelity and imagination accuracy. This work proposes DynaDreamer, a dynamics-augmented Dreamer-style reinforcement learning method to address this problem by augmenting the WM with an explicit ego-dynamics prior. A physics-informed ego-dynamics encoder-decoder extracts the ego-state history into a compact and identifiable context, which modulates a causal Transformer WM to condition both its prior and posterior latents. During imagination, the ego-dynamics predictor propagates this context forward to keep the ego-dynamics prior synchronized with the rollout. An information-theoretic analysis shows that conditioning on this context reduces both the predictive entropy of the observation transition and the prior--posterior Kullback--Leibler divergence, confining the WM's modeling burden to the scene dynamics beyond ego-motion. An additional benefit is zero-shot cross-chassis adaptation: the ego-dynamics context depends on identifiable chassis parameters, so that a vehicle with previously unseen dynamic characteristics can adapt the WM to the new chassis without retraining. Experiments demonstrate that DynaDreamer improves task success rates over the strongest baseline by 28% and 61% in urban and highway driving scenarios, respectively, with the advantage rising to 73% when extrapolating to unseen chassis.
+
+基于世界模型 (WM) 的强化学习通过想象潜在空间中的长视野轨迹，实现样本高效的端到端自动驾驶学习。然而，大多数驾驶 WM 都是在鸟瞰图 (BEV) 表示上运行，这些表示本质上是以自我为中心的：连续帧之间的过渡将自我车辆自身的运动与场景动态纠缠在一起。因此，WM 投入了大量的能力来从扭曲的观察中恢复自我运动，但代价是场景建模的保真度和想象的准确性。这项工作提出了 DynaDreamer，这是一种动力学增强的 Dreamer 式强化学习方法，通过使用明确的自我动力学先验增强 WM 来解决这个问题。一个基于物理的自我动力学编码器-解码器将自我状态历史提取到一个紧凑且可识别的上下文中，该上下文调节因果 Transformer WM 以调节其先验和后验潜伏。在想象过程中，自我动态预测器会向前传播此上下文，以保持自我动态与推出同步。信息论分析表明，对这种背景的调节减少了观察转变的预测熵和先验-后验 Kullback-Leibler 散度，将 WM 的建模负担限制在自我运动之外的场景动态。另一个好处是零射击跨底盘适应：自我动力学环境取决于可识别的底盘参数，因此具有以前未见过的动态特性的车辆可以使 WM 适应新的底盘，而无需重新训练。实验表明，在城市和高速公路驾驶场景中，DynaDreamer 在最强基线上的任务成功率分别提高了 28% 和 61%，当外推到看不见的底盘时，优势上升到 73%。
+
+</details>
+
+---
+
+## 6. Learning Safe Agent Behaviour from Human Preferences and Justifications via World Models / 通过世界模型从人类偏好和理由中学习安全代理行为
+
+**Date**: 2026-07-14 | **arXiv**: [2607.13172v1](http://arxiv.org/abs/2607.13172v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.13172v1)
+
+**Categories**: cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We address the problem of safely training an agent policy and deploying a good and safe policy, in settings where the environment dynamics are unknown and no suitable reward function is available. In the context of safety-critical environments, we consider traditional reinforcement learning impractical and resort to the resource of human input. We introduce DROPJ, a human-centred method for both safe training and deployment. We first learn a world model (a learned simulator) from a dataset of prior real-world trajectories. A human then plays the game in this learned simulator to extract several informative simulated trajectories. From these, we sample pairs of simulated trajectory segments and elicit from a human their preference over these segments, as well as a reason (justification) for their choice. We then train a reward model from these justified preferences and use it, together with the world model, to directly deploy the agent using model predictive control. Running real-user experiments, we find that generating informative simulated trajectories from a user significantly reduces the computational cost during training compared to other strategies, and can also improve the performance during deployment. In the context of training within a learned simulator, we show that the use of preferences rather than other types of feedback substantially improves the performance during deployment. We further demonstrate that safety justifications accompanying preferences can significantly enhance safety or prioritise user-prescribed aspects of safety associated with them during deployment.
+
+我们解决了在环境动态未知且没有合适的奖励函数可用的情况下安全训练代理策略并部署良好且安全的策略的问题。在安全关键环境的背景下，我们认为传统的强化学习不切实际，并求助于人力输入资源。我们推出 DROPJ，一种以人为本的安全培训和部署方法。我们首先从先前的现实世界轨迹数据集中学习一个世界模型（一个学习的模拟器）。然后，人类在这个学习模拟器中玩游戏，以提取几个信息丰富的模拟轨迹。从中，我们对模拟轨迹段进行采样，并从人们那里引出他们对这些段的偏好，以及他们选择的原因（理由）。然后，我们根据这些合理的偏好训练奖励模型，并将其与世界模型一起使用，以使用模型预测控制直接部署代理。运行真实用户实验，我们发现与其他策略相比，从用户生成信息丰富的模拟轨迹可以显着降低训练期间的计算成本，并且还可以提高部署期间的性能。在学习模拟器中进行训练的情况下，我们表明使用偏好而不是其他类型的反馈可以显着提高部署期间的性能。我们进一步证明，伴随偏好的安全理由可以显着增强安全性或在部署期间优先考虑与其相关的用户指定的安全方面。
+
+</details>
+
+---
+
+## 7. FlowWAM: Optical Flow as a Unified Action Representation for World Action Models / FlowWAM：光流作为世界行动模型的统一行动表示
+
+**Date**: 2026-07-14 | **arXiv**: [2607.13017v1](http://arxiv.org/abs/2607.13017v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.13017v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World Action Models (WAMs) are able to leverage pretrained video generators for both world modeling and action prediction. However, directly leveraging such video generators for control raises a new challenge: how to represent actions in a suitable form that aligns with pretrained video generators while carrying enough motion cues for accurate control. Existing numerical actions fail to satisfy the former, and prior visual action representations overlook the temporal motion structure across frames. We address this issue with FlowWAM, a dual-stream diffusion framework that adopts optical flow as a unified, video-native action representation. Flow videos share the same format as RGB videos and encode rich per-pixel displacement. By jointly modeling them within a shared pretrained video generator, FlowWAM can naturally implement two modes of WAMs. In policy mode, FlowWAM generates flow for action prediction, while in world-model mode, it uses target flow sequences to guide future video generation. Moreover, since flow can be easily extracted from raw videos without action labels, FlowWAM can leverage large-scale action-unlabeled video datasets for pretraining. We empirically find that our flow-based action representation delivers gains across both modes. On RoboTwin manipulation, FlowWAM raises the success rate to 92.94% on the Clean setting and 92.14% on Random, outperforming both VLA and WAM baselines. On WorldArena world modeling, it achieves the best overall EWMScore (63.71) with an 18.4% relative improvement in trajectory accuracy. More results can be found on our project website: https://flow-wam.github.io .
+
+世界动作模型 (WAM) 能够利用预先训练的视频生成器进行世界建模和动作预测。然而，直接利用此类视频生成器进行控制提出了一个新的挑战：如何以合适的形式表示动作，与预先训练的视频生成器保持一致，同时携带足够的运动线索以进行精确控制。现有的数字动作无法满足前者，并且先前的视觉动作表示忽略了跨帧的时间运动结构。我们通过 FlowWAM 解决了这个问题，这是一种双流扩散框架，采用光流作为统一的视频原生动作表示。 Flow 视频与 RGB 视频共享相同的格式，并编码丰富的每像素位移。通过在共享的预训练视频生成器中对它们进行联合建模，FlowWAM 可以自然地实现两种模式的 WAM。在策略模式下，FlowWAM 生成用于动作预测的流，而在世界模型模式下，它使用目标流序列来指导未来的视频生成。此外，由于可以轻松地从没有动作标签的原始视频中提取流，因此 FlowWAM 可以利用大规模动作未标记视频数据集进行预训练。我们凭经验发现，基于流程的动作表示在两种模式下都能带来收益。在 RoboTwin 操作中，FlowWAM 在 Clean 设置下将成功率提高到 92.94%，在 Random 设置下将成功率提高到 92.14%，优于 VLA 和 WAM 基线。在 WorldArena 世界建模中，它实现了最佳整体 EWMScore (63.71)，轨迹精度相对提高了 18.4%。更多结果可以在我们的项目网站上找到：https://flow-wam.github.io。
+
+</details>
+
+---
+
+## 8. From Observation to Insight: Mechanistic World Models and the Quest for Autonomous Discovery / 从观察到洞察：机械世界模型和自主发现的探索
+
+**Date**: 2026-07-14 | **arXiv**: [2607.12474v2](http://arxiv.org/abs/2607.12474v2) | **PDF**: [Link](http://arxiv.org/pdf/2607.12474v2)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in foundation models have transformed AI for Science, enabling remarkably accurate predictive performance across domains ranging from protein folding to weather forecasting. Yet prediction alone does not constitute scientific discovery. Scientific understanding depends on uncovering the reusable explanatory mechanisms that generate observations, whereas contemporary machine learning remains fundamentally organised around predictive mappings rather than explanatory structure. In this paper, we argue that scientific discovery is fundamentally a problem of knowledge organisation. To this end, we introduce Mechanistic World Models, a new design paradigm that places reusable mechanisms at the centre of representation, computation and learning. Drawing on insights from the philosophy of science, we derive the computational capabilities required for discovery, identify the design principles and inductive pressures that encourage explanatory knowledge to emerge, and formalise the anatomy of a mechanism-centric world model. Finally, we show how diverse research directions including mechanistic interpretability, causal representation learning, equation discovery and modular architectures capture complementary ingredients of this paradigm while lacking a unified framework. We propose Mechanistic World Models as a conceptual foundation and computational blueprint for moving AI beyond predictive forecasting towards autonomous scientific discovery.
+
+基础模型的最新进展已经改变了科学人工智能，在从蛋白质折叠到天气预报等领域实现了非常准确的预测性能。然而，仅靠预测并不构成科学发现。科学理解取决于揭示生成观察结果的可重用解释机制，而当代机器学习从根本上仍然是围绕预测映射而不是解释结构进行组织的。在本文中，我们认为科学发现从根本上来说是一个知识组织问题。为此，我们引入了机械世界模型，这是一种新的设计范式，它将可重用的机制置于表示、计算和学习的中心。借鉴科学哲学的见解，我们推导出发现所需的计算能力，确定鼓励解释性知识出现的设计原则和归纳压力，并形式化以机制为中心的世界模型的解剖结构。最后，我们展示了不同的研究方向，包括机械可解释性、因果表示学习、方程发现和模块化架构，如何在缺乏统一框架的情况下捕获该范式的互补成分。我们提出机械世界模型作为概念基础和计算蓝图，使人工智能超越预测预测，走向自主科学发现。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-15 (7 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-07-15
