@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-17](papers/2026-07-17.md) - 1 papers
 - [2026-07-15](papers/2026-07-15.md) - 4 papers
 - [2026-07-14](papers/2026-07-14.md) - 1 papers
 - [2026-07-11](papers/2026-07-11.md) - 1 papers
@@ -45,6 +46,34 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-17 (1 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-07-17
+
+**Paper Count**: 1
+
+---
+
+## 1. Thresholded Cross-Attention for Reliable Intensity-Chromaticity Fusion in Low-Light Image Enhancement / 低光图像增强中可靠的强度色度融合的阈值交叉注意
+
+**Date**: 2026-07-15 | **arXiv**: [2607.13925v1](http://arxiv.org/abs/2607.13925v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.13925v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Low-Light Image Enhancement (LLIE) requires a careful balance among noise suppression, color fidelity, and efficiency. Recent HVI-based methods alleviate color entanglement by decoupling intensity and chromaticity, yet how reliably the two streams are fused again is an overlooked factor that largely determines the final quality. We observe that the confidence of cross-stream attention is strongly layer-dependent, so the fixed-quota selection of Top-K sparse attention is mismatched to it, discarding informative dependencies in some layers while retaining noisy ones in others. Motivated by this observation, we propose TCA-Net, a network built around Thresholded Cross-Attention that targets reliable intensity-chromaticity fusion in the HVI space rather than introducing yet another color representation. At its core, TCA replaces the rigid Top-K quota with a fixed confidence threshold whose retained cardinality is input- and layer-adaptive, retaining only high-confidence cross-stream interactions while suppressing unreliable ones. Around this core, two complementary designs clean up the fusion before and after it: a Phase-guided Fourier Interaction Module provides a structure-aware brightness initialization for the intensity stream prior to fusion, and a Decoupled Dual-Stream Guidance Module constructs residual intensity features to suppress chromaticity leakage during reconstruction. A Scale-Aware Consistency Regularization further improves structural robustness under scale perturbations during training. Extensive experiments on LOL-v1, LOL-v2, Sony-Total-Dark, and LSRW-Huawei demonstrate that TCA-Net delivers competitive restoration accuracy, improved color fidelity, and a compact parameter size.
+
+低光图像增强 (LLIE) 需要在噪声抑制、色彩保真度和效率之间取得仔细的平衡。最近基于 HVI 的方法通过解耦强度和色度来减轻颜色纠缠，但两个流再次融合的可靠性是一个被忽视的因素，它在很大程度上决定了最终的质量。我们观察到跨流注意力的置信度强烈依赖于层，因此 Top-K 稀疏注意力的固定配额选择与其不匹配，丢弃了某些层中的信息依赖性，而保留了其他层中的噪声依赖性。受这一观察的启发，我们提出了 TCA-Net，这是一个围绕阈值交叉注意力构建的网络，其目标是 HVI 空间中可靠的强度-色度融合，而不是引入另一种颜色表示。 TCA 的核心是用固定的置信阈值取代严格的 Top-K 配额，其保留的基数是输入和层自适应的，仅保留高置信度的跨流交互，同时抑制不可靠的跨流交互。围绕该核心，两个互补的设计在融合之前和之后清理融合：相位引导傅立叶交互模块在融合之前为强度流提供结构感知的亮度初始化，解耦双流引导模块构造残余强度特征以抑制重建期间的色度泄漏。尺度感知一致性正则化进一步提高了训练过程中尺度扰动下的结构鲁棒性。在 LOL-v1、LOL-v2、Sony-Total-Dark 和 LSRW-Huawei 上进行的大量实验表明，TCA-Net 提供有竞争力的恢复精度、改进的色彩保真度和紧凑的参数大小。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-15 (4 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-07-15
