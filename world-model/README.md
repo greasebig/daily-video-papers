@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-20](papers/2026-07-20.md) - 2 papers
 - [2026-07-17](papers/2026-07-17.md) - 9 papers
 - [2026-07-16](papers/2026-07-16.md) - 8 papers
 - [2026-07-15](papers/2026-07-15.md) - 7 papers
@@ -115,6 +116,50 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-20 (2 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-07-20
+
+**Paper Count**: 2
+
+---
+
+## 1. DSWorld: A Data Science World Model for Efficient Autonomous Agents / DSWorld：高效自主代理的数据科学世界模型
+
+**Date**: 2026-07-17 | **arXiv**: [2607.15901v1](http://arxiv.org/abs/2607.15901v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.15901v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Despite strong capabilities in data understanding and decision-making, autonomous data science agents still heavily rely on trial-and-error workflows that involve expensive computation. This bottleneck motivates models that can anticipate the effects of data science operations before real execution. In this paper, we introduce the concept of Data Science World Model, which model the data science execution environment by predicting environment state transitions conditioned on current workflow states and candidate operations. We further propose DSWorld, a practical framework that combines structured state construction, cost-aware routing, lightweight real execution, and an LLM-based simulator for expensive operations. To support training, we construct an 8K-scale transition trajectory dataset and introduce Reflective World Model Optimization, an error-aware reinforcement learning strategy for improving transition prediction. Experiments show that DSWorld accelerates RL-based agent training by approximately $14\times$ and search-based inference by approximately $3$-$6\times$ while maintaining competitive performance, and outperforms the strongest LLM baseline by 35.6% on transition prediction tasks. The code is available at https://anonymous.4open.science/r/DSWorld.
+
+尽管数据理解和决策能力很强，但自主数据科学代理仍然严重依赖涉及昂贵计算的试错工作流程。这一瓶颈激发了模型能够在实际执行之前预测数据科学操作的影响。在本文中，我们介绍了数据科学世界模型的概念，该模型通过预测以当前工作流状态和候选操作为条件的环境状态转换来对数据科学执行环境进行建模。我们进一步提出 DSWorld，这是一个实用的框架，它结合了结构化状态构造、成本感知路由、轻量级实际执行和基于 LLM 的模拟器，用于昂贵的操作。为了支持训练，我们构建了一个 8K 规模的转换轨迹数据集，并引入了反射世界模型优化，这是一种用于改进转换预测的错误感知强化学习策略。实验表明，DSWorld 在保持竞争性能的同时，将基于 RL 的代理训练速度加快了约 14\times$，将基于搜索的推理速度提高了约 $3$-$6\times$，并且在转换预测任务上比最强的 LLM 基线高出 35.6%。该代码可从 https://anonymous.4open.science/r/DSWorld 获取。
+
+</details>
+
+---
+
+## 2. Orbis 2: A Hierarchical World Model for Driving / Orbis 2：驾驶的分层世界模型
+
+**Date**: 2026-07-17 | **arXiv**: [2607.15898v1](http://arxiv.org/abs/2607.15898v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.15898v1)
+
+**Categories**: cs.CV, cs.AI, cs.LG, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Current world models operate at a single level of abstraction, with most prioritizing perceptual fidelity while lacking the spatial reasoning and semantic understanding required for real-world downstream tasks. We present a hierarchical driving world model that factorizes future prediction across two levels operating at distinct temporal and abstraction scales: a high-level predictor that forecasts coarse scene structure over extended temporal horizons, and a low-level generator that produces detailed predictions conditioned on the high-level output. This decomposition yields high perceptual fidelity while also capturing strong spatial and semantic representations. We further show that pretraining with a diffusion forcing objective yields substantially richer internal representations than the standard teacher forcing objective, while teacher forcing -- predicting only the next frame from clean context -- produces more stable autoregressive rollouts. We therefore introduce a generic two-stage training paradigm that pretrains the model with diffusion forcing and fine-tunes with teacher forcing, combining the representational benefits of the former with the rollout stability of the latter. Our approach achieves state-of-the-art results across the standard suite of driving world model evaluations on established benchmarks, including long-horizon generation fidelity, steering responsiveness evaluated on counterfactual scenarios, and internal representation quality. Project page with code, demo, checkpoints and qualitative results: https://lmb-freiburg.github.io/orbis2.github.io/
+
+当前的世界模型在单一抽象级别上运行，最优先考虑感知保真度，同时缺乏现实世界下游任务所需的空间推理和语义理解。我们提出了一个分层驾驶世界模型，该模型将未来预测分解为在不同时间和抽象尺度上运行的两个级别：一个高级预测器，在扩展的时间范围内预测粗略的场景结构，以及一个低级生成器，根据高级输出生成详细的预测。这种分解产生了高感知保真度，同时还捕获了强大的空间和语义表示。我们进一步表明，使用扩散强迫目标的预训练比标准教师强迫目标产生更丰富的内部表示，而教师强迫（仅从干净的上下文中预测下一帧）产生更稳定的自回归推出。因此，我们引入了一种通用的两阶段训练范例，通过扩散强制对模型进行预训练，并通过教师强制进行微调，将前者的代表性优势与后者的推出稳定性结合起来。我们的方法在既定基准上的驾驶世界模型评估标准套件中取得了最先进的结果，包括长期生成保真度、在反事实场景下评估的转向响应性以及内部表示质量。包含代码、演示、检查点和定性结果的项目页面：https://lmb-freiburg.github.io/orbis2.github.io/
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-17 (9 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-07-17
