@@ -27,6 +27,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-20](papers/2026-07-20.md) - 5 papers
 - [2026-07-18](papers/2026-07-18.md) - 3 papers
 - [2026-07-17](papers/2026-07-17.md) - 25 papers
 - [2026-07-16](papers/2026-07-16.md) - 9 papers
@@ -141,6 +142,100 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-20 (5 papers)</b></summary>
+
+# arXiv Video Papers - 2026-07-20
+
+**Paper Count**: 5
+
+---
+
+## 1. MotionForesight: Re-purposing Video Models for Future 3D Scene-Flow Prediction / MotionForesight：重新利用视频模型以实现未来 3D 场景流预测
+
+**Date**: 2026-07-17 | **arXiv**: [2607.16192v1](http://arxiv.org/abs/2607.16192v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.16192v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Humans can infer how objects are likely to move from passive observation: a cup may be lifted, a drawer may slide, and a lid may rotate shut. Such predictions expose the physical consequences of interaction needed to act in the real world. We study how to learn this anticipation from ordinary monocular videos of human-object interaction. Given a short observed video context, MotionForesight predicts future 3D trajectories for points on the manipulated object. This casts interaction prediction as object-centered 3D motion forecasting without any assumptions on the object properties. Our key insight is that video prediction models already encode rich priors about how objects move during human interactions. We redirect these priors from pixel prediction toward future 3D scene flow. We start from a dense 3D tracker built on a pretrained video model, generate pseudo-ground-truth tracks from complete clips, and train the forecaster using only the observed frames. We replace future RGB and geometry with learned mask latents and train a lightweight adapter to turn the retrospective tracking representation into a forward predictor, while freezing the large video and tracking components. Using just 40k human videos and no auxiliary inputs such as language, MotionForesight generalizes across diverse out-of-distribution objects, environments, viewpoints, and interactions. It also outperforms substantially larger models that use over a million training videos. These results show that we can efficiently re-purpose video priors into explicit geometric forecasts for embodied intelligence. https://motionforesight.github.io/
+
+人类可以通过被动观察来推断物体可能如何移动：杯子可以被举起，抽屉可以滑动，盖子可以旋转关闭。这些预测揭示了现实世界中行动所需的互动的物理后果。我们研究如何从人与物体交互的普通单眼视频中学习这种预期。给定一个简短的观察视频上下文，MotionForesight 可以预测被操纵对象上的点的未来 3D 轨迹。这将交互预测转化为以对象为中心的 3D 运动预测，而无需对对象属性进行任何假设。我们的主要见解是，视频预测模型已经编码了有关人类交互过程中物体如何移动的丰富先验知识。我们将这些先验从像素预测转向未来的 3D 场景流。我们从基于预训练视频模型构建的密集 3D 跟踪器开始，从完整的剪辑生成伪地面实况轨迹，并仅使用观察到的帧来训练预测器。我们用学习到的掩模潜伏替换未来的 RGB 和几何形状，并训练一个轻量级适配器将回顾性跟踪表示转变为前向预测器，同时冻结大型视频和跟踪组件。 MotionForesight 仅使用 40k 人类视频，没有语言等辅助输入，可以概括不同的分布外对象、环境、观点和交互。它还优于使用超过一百万个训练视频的更大模型。这些结果表明，我们可以有效地将视频先验重新用于具体智能的显式几何预测。 https://motionforesight.github.io/
+
+</details>
+
+---
+
+## 2. FVAttn: Adaptive Sparse Attention with Runtime Load Balancing for Video Generation / FVAttn：具有运行时负载平衡的自适应稀疏注意力，用于视频生成
+
+**Date**: 2026-07-17 | **arXiv**: [2607.16190v1](http://arxiv.org/abs/2607.16190v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.16190v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video Diffusion Transformers process long spatio-temporal sequences, making self-attention the main bottleneck in high-resolution video generation. Training-free sparse attention reduces this cost, but adaptive Top-$p$ routing creates uneven per-head workloads under multi-GPU sequence parallelism. The resulting workload heterogeneity turns sparse attention into a rank-level straggler problem. We present \method{}, a training-free sparse-attention system that improves the distributed execution efficiency of adaptive sparse attention under multi-GPU sequence parallelism. \method{} uses Top-$p$ routing, a Top-$k$ safety floor, and video-aware block organization as the sparse-routing frontend, then repairs the materialized mask at runtime. Runtime Load Balancing migrates a small number of heavy heads via P2P communication to shorten the current critical path. Slack-Aware Sparse Augmentation fills residual non-critical-rank slack with additional high-value blocks, while overlap hides scheduling and migration overhead behind existing computation. On step-distilled Wan2.2 I2V, \method{} reduces average load imbalance from 1.34 to 1.08 and delivers a $4.41\times$ attention speedup over FlashAttention, while achieving a $2.02$--$2.11\times$ DiT inference speedup with competitive video quality.
+
+视频扩散变压器处理长时空序列，使自注意力成为高分辨率视频生成的主要瓶颈。免训练稀疏注意力降低了这种成本，但自适应 Top-$p$ 路由在多 GPU 序列并行性下会产生不均匀的每头工作负载。由此产生的工作负载异质性将稀疏的注意力变成了排名级别的掉队问题。我们提出了 \method{}，一种免训练的稀疏注意力系统，可提高多 GPU 序列并行下自适应稀疏注意力的分布式执行效率。 \method{} 使用 Top-$p$ 路由、Top-$k$ 安全层和视频感知块组织作为稀疏路由前端，然后在运行时修复物化掩码。运行时负载均衡通过P2P通信迁移少量重头，以缩短当前的关键路径。松弛感知稀疏增强用额外的高价值块填充剩余的非关键等级松弛，而重叠隐藏了现有计算背后的调度和迁移开销。在逐步蒸馏的 Wan2.2 I2V 上，\method{} 将平均负载不平衡从 1.34 降低到 1.08，并提供比 FlashAttention $4.41\times$ 的注意力加速，同时实现 $2.02$--$2.11\times$ DiT 推理加速，同时具有具有竞争力的视频质量。
+
+</details>
+
+---
+
+## 3. Searching Videos as Trees: Self-Correcting Agents for Grounded Long Video QA / 以树形式搜索视频：用于接地长视频 QA 的自校正代理
+
+**Date**: 2026-07-17 | **arXiv**: [2607.16189v1](http://arxiv.org/abs/2607.16189v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.16189v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/CeeZh/VTS.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Grounded long-video question answering (Grounded LVQA) requires answering a question about a long video while localizing the short evidence interval that supports the answer. Recent agentic methods frame this task as multi-turn exploration with a single crop_video(start, end) action, which supports coarse-to-fine narrowing but provides no primitive for fine-to-coarse backtracking. As a result, these agents typically converge prematurely and cannot recover from an early mistake. We propose VideoTreeSearch (VTS), a framework that casts grounded LVQA as iterative self-correcting search over an adaptive temporal tree. VTS constructs a non-uniform tree from visual scene boundaries so that each node corresponds to a semantically coherent segment, and trains an agent to navigate the tree through four discrete operations: zoom_in, zoom_out, shift, and answer. These operations expose backtracking and recovery as explicit, learnable primitives rather than implicit behaviors. To train this navigation, we introduce a trajectory synthesis pipeline that produces multi-step paths through the tree, including deliberate detours into incorrect branches followed by recovery. We use these trajectories for supervised fine-tuning, followed by reinforcement learning with grounding and answer-accuracy rewards. On three Grounded LVQA benchmarks (CG-Bench, Haystack-LVBench, Haystack-Ego4D), VTS outperforms the strongest prior agentic methods by +12.5 mIoU on CG-Bench and +7.4 T-F1 on Haystack-Ego4D. The learned policy also transfers to general long-video QA, surpassing all prior agentic baselines on Video-MME, MLVU, and LVBench by up to +7.1 accuracy points. Ablations confirm that self-correcting hierarchical search is the central mechanism behind these gains: removing either adaptive descent or explicit backtracking substantially degrades performance. Code is available at https://github.com/CeeZh/VTS.
+
+扎根长视频问答（Grounded LVQA）需要回答有关长视频的问题，同时定位支持答案的短证据区间。最近的代理方法将此任务框架为具有单个crop_video(start, end)动作的多轮探索，它支持从粗到细的缩小，但不提供从细到粗回溯的原语。因此，这些智能体通常会过早收敛，并且无法从早期错误中恢复。我们提出了 VideoTreeSearch (VTS)，这是一个将基于 LVQA 的框架作为自适应时间树上的迭代自校正搜索的框架。 VTS 从视觉场景边界构建非均匀树，以便每个节点对应于语义连贯的片段，并训练代理通过四个离散操作来导航树：zoom_in、zoom_out、shift 和 answer。这些操作将回溯和恢复公开为显式的、可学习的原语，而不是隐式的行为。为了训练这种导航，我们引入了一个轨迹合成管道，它可以在树中生成多步路径，包括故意绕道进入不正确的分支，然后进行恢复。我们使用这些轨迹进行监督微调，然后进行具有基础和答案准确性奖励的强化学习。在三个 Grounded LVQA 基准测试（CG-Bench、Haystack-LVBench、Haystack-Ego4D）上，VTS 在 CG-Bench 上的表现优于最强的先验代理方法，在 CG-Bench 上表现出+12.5 mIoU，在 Haystack-Ego4D 上表现出+7.4 T-F1。学习到的策略还可以转移到一般的长视频 QA，超过了 Video-MME、MLVU 和 LVBench 上所有先前的代理基线，准确度高达 +7.1 个点。消融证实，自我纠正的分层搜索是这些收益背后的核心机制：删除自适应下降或显式回溯会大大降低性能。代码可在 https://github.com/CeeZh/VTS 获取。
+
+</details>
+
+---
+
+## 4. Test-Time Noise Guided Adaptation for Realistic Autoregressive Video Generation / 用于生成真实自回归视频的测试时噪声引导适应
+
+**Date**: 2026-07-17 | **arXiv**: [2607.15849v1](http://arxiv.org/abs/2607.15849v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.15849v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Autoregressive video diffusion models have enabled the generation of arbitrarily long videos by removing conditioning on future frames, thus greatly improving computational efficiency. Yet, they suffer from error accumulation over time, as the denoised sequence gradually drifts away from the conditioning distribution seen during training. Recent advances attempt to reduce this error by anchoring each generated frame to the learned manifold of real ones. However, even when all generated individual frames lie close to the real manifold, there are trajectories which the model lacks sufficient knowledge to continue without exiting it, thus reaching a terminal point. To prevent the model from being trapped in terminal points, we start from the hypothesis that for well-modeled future trajectories the distribution of the predicted noise should match the one of the forward noising process. To enforce such a prior at test time, we introduce Terminal points Avoidance through Noise Guided Optimization (TANGO), which uses the diffusion model as a critic of its own outputs, by predicting one step forward and requiring an isotropic Gaussian noise prediction. We use the deviation from this expected noise distribution to search for an alternative trajectory that does not lead to a terminal point. Our approach achieves a $3.1\%$ absolute improvement on VBench over state-of-the-art, while reducing Fréchet Video Distance by $28.3\%$ on average across $15$s videos. Our code is available on https://mever-team.github.io/tango.
+
+自回归视频扩散模型可以通过消除对未来帧的条件来生成任意长的视频，从而大大提高了计算效率。然而，随着时间的推移，它们会遭受误差积累，因为去噪序列逐渐偏离训练期间看到的条件分布。最近的进展试图通过将每个生成的帧锚定到学习到的真实帧流形来减少这种错误。然而，即使所有生成的单独帧都接近真实流形，模型也缺乏足够的知识来继续执行某些轨迹而不退出它，从而到达终点。为了防止模型陷入终点，我们从以下假设开始：对于建模良好的未来轨迹，预测噪声的分布应与前向噪声过程的分布相匹配。为了在测试时强制执行这样的先验，我们引入了通过噪声引导优化（TANGO）来避免终点点，它使用扩散模型作为其自身输出的批评者，通过预测向前一步并要求各向同性高斯噪声预测。我们利用与预期噪声分布的偏差来搜索不会到达终点的替代轨迹。与最先进的技术相比，我们的方法在 VBench 上实现了 3.1\%$ 的绝对改进，同时在 15$s 视频中平均将 Fréchet 视频距离减少了 $28.3\%$。我们的代码可在 https://mever-team.github.io/tango 上找到。
+
+</details>
+
+---
+
+## 5. Modularized Dynamic-Granularity Video LLM for Multi-Event Long Video Understanding / 用于多事件长视频理解的模块化动态粒度视频法学硕士
+
+**Date**: 2026-07-17 | **arXiv**: [2607.15778v1](http://arxiv.org/abs/2607.15778v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.15778v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video Large Language Models (Video LLMs) have made significant advancements in various video understanding tasks. However, long-video scenarios remain challenging due to the tension between limited visual token budgets and the need to capture multiple key events. Existing approaches typically process long videos in two stages, i.e., i) select keyframes and ii) perform detailed perception, which exhibit limitations: they lack a modular mechanism for adaptive capacity allocation and self-correction, resulting in unreliable modeling. To tackle these challenges, we propose MoD-VLLM, a novel Modularized Dynamic-Granularity Video LLM framework for multi-event long video understanding, which unifies temporal grounding and semantic understanding iteratively and self-reflectively. Specifically, we propose a Positive-Negative Video Segments Grounding module and a Modularized Dynamic-Granularity Reflection module, which form a closed loop to progressively localize the question-related video segments. The grounding module instructs a Video LLM to distinguish relevant from irrelevant video segments based on the video question. The reflection module employs a modularized scheduler that dynamically selects fine-grained encoding for relevant positive segments to capture detailed perception and coarse-grained encoding for negative segments to maintain global context. We further propose a dynamic-granularity reinforcement learning strategy, allowing MoD-VLLM to learn optimal grounding policies and dynamic granularity visual representation jointly. Moreover, we propose MEventBench, a challenging Multi-Event Long Video Benchmark for complex long video reasoning. Extensive experiments on several long video understanding benchmarks and our MEventBench demonstrate that MoD-VLLM significantly outperforms state-of-the-art baselines.
+
+视频大语言模型（视频 LLM）在各种视频理解任务中取得了显着的进步。然而，由于有限的视觉令牌预算和捕获多个关键事件的需要之间的紧张关系，长视频场景仍然具有挑战性。现有方法通常分两个阶段处理长视频，即 i）选择关键帧和 ii）执行详细感知，这表现出局限性：它们缺乏自适应容量分配和自我校正的模块化机制，导致建模不可靠。为了应对这些挑战，我们提出了 MoD-VLLM，这是一种新颖的模块化动态粒度视频 LLM 框架，用于多事件长视频理解，它以迭代和自我反思的方式统一了时间基础和语义理解。具体来说，我们提出了正负视频片段接地模块和模块化动态粒度反射模块，它们形成闭环以逐步定位与问题相关的视频片段。基础模块指示视频法学硕士根据视频问题区分相关和不相关的视频片段。反射模块采用模块化调度程序，动态选择相关正片段的细粒度编码以捕获详细感知，并为负片段选择粗粒度编码以维护全局上下文。我们进一步提出了一种动态粒度强化学习策略，允许 MoD-VLLM 联合学习最佳基础策略和动态粒度视觉表示。此外，我们提出了 MEventBench，这是一个具有挑战性的多事件长视频基准，用于复杂的长视频推理。对多个长视频理解基准和我们的 MEventBench 进行的大量实验表明，MoD-VLLM 的性能显着优于最先进的基准。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-18 (3 papers)</b></summary>
 
 # arXiv Video Papers - 2026-07-18
