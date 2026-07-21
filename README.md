@@ -27,6 +27,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-21](papers/2026-07-21.md) - 4 papers
 - [2026-07-20](papers/2026-07-20.md) - 5 papers
 - [2026-07-18](papers/2026-07-18.md) - 3 papers
 - [2026-07-17](papers/2026-07-17.md) - 25 papers
@@ -142,6 +143,82 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-21 (4 papers)</b></summary>
+
+# arXiv Video Papers - 2026-07-21
+
+**Paper Count**: 4
+
+---
+
+## 1. VLA-ReID: Video-Level Association for Re-Identification in Multi-Object Tracking with Highly Similar Objects / VLA-ReID：高度相似对象的多对象跟踪中重新识别的视频级关联
+
+**Date**: 2026-07-19 | **arXiv**: [2607.17157v1](http://arxiv.org/abs/2607.17157v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.17157v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multi-object tracking (MOT) aims to localize multiple objects in videos while preserving their identities over time. Long-term identity preservation remains difficult when objects are small, densely distributed, and highly similar in appearance, as in bee swarm scenes. Existing trackers rely on re-identification (re-ID) models trained through single-instance assignment (instance-level querying). At inference, however, MOT requires global assignment between multiple trajectories and detections, corresponding to video-level querying. This training-inference mismatch can cause identity switches among visually similar objects. Existing approaches also often require substantial additional annotations to enhance appearance discrimination. We propose Video-Level Association re-ID (VLA-ReID), which reformulates re-ID as video-level association modeling. It uses aggregated historical trajectory features as queries and all current-frame detections as candidates, enabling direct optimization of their global association at each frame. In addition, Frame-Common Appearance Estimation (FCAE) estimates a common appearance direction from current-frame detections, while Common-Appearance Suppression (CAS) removes the corresponding component along this direction from trajectory and detection features. This amplifies discriminative differences among highly similar objects without additional annotations. Experiments on BEE24 show that VLA-ReID improves HOTA by 1.1, MOTA by 0.3, AssR by 2.6, AssA by 0.7, and IDF1 by 0.8 over state-of-the-art trackers, while reducing identity switches by 28%. These results demonstrate the effectiveness of video-level re-ID modeling for appearance-based association in MOT.
+
+多对象跟踪 (MOT) 旨在定位视频中的多个对象，同时保留它们的身份。当物体较小、分布密集且外观高度相似时（如蜂群场景），长期身份保存仍然很困难。现有的跟踪器依赖于通过单实例分配（实例级查询）训练的重新识别（re-ID）模型。然而，在推理时，MOT 需要多个轨迹和检测之间的全局分配，对应于视频级查询。这种训练与推理的不匹配可能会导致视觉相似对象之间的身份切换。现有的方法通常还需要大量额外的注释来增强外观辨别力。我们提出了视频级关联重新ID（VLA-ReID），它将重新ID重新表述为视频级关联建模。它使用聚合的历史轨迹特征作为查询，并将所有当前帧检测作为候选，从而能够直接优化每个帧的全局关联。此外，帧公共外观估计（FCAE）从当前帧检测中估计公共外观方向，而公共外观抑制（CAS）则从轨迹和检测特征中删除沿该方向的相应分量。这放大了高度相似的对象之间的区别差异，而无需额外的注释。 BEE24 上的实验表明，与最先进的跟踪器相比，VLA-ReID 将 HOTA 提高了 1.1，MOTA 提高了 0.3，AssR 提高了 2.6，AssA 提高了 0.7，IDF1 提高了 0.8，同时减少了 28% 的身份切换。这些结果证明了 MOT 中基于外观的关联的视频级 re-ID 建模的有效性。
+
+</details>
+
+---
+
+## 2. The generator is the tracker: Multi-object tracking by painting persistent identity colours / 生成器是跟踪器：通过绘制持久的身份颜色进行多对象跟踪
+
+**Date**: 2026-07-19 | **arXiv**: [2607.17120v1](http://arxiv.org/abs/2607.17120v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.17120v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multi-object tracking (MOT) is conventionally decomposed into detection followed by association, with object identity maintained as external state: track buffers, motion models, and appearance embeddings. We ask whether a video generator can maintain that state in pixels. We fine-tune a 22B text-to-video diffusion model (LTX-2.3) with a lightweight in-context LoRA to translate an RGB clip into an ID-map clip, a video in which every person is painted a flat, distinct color that persists over time: same color, same identity. Long videos are generated as chained windows, where each window is conditioned on the cleaned tail of the previous one. A brief continuation fine-tune teaches the model to extend a given coloring, after which identity flows through the chain with no tracker, no motion model, and no re-identification module. On the DanceTrack test server, our system, to our knowledge the first generative tracker evaluated there and the only entry with no detector and no tracking stack, reaches 40.3 HOTA. This is well below today's specialist state of the art (>=70 HOTA), but with a unique, inverted error profile: its association score (AssA 44.1) exceeds every tracker of the original benchmark suite while detection remains the sole deficit. Controlled comparisons show the mechanism matters: the same generated windows linked by classical post-hoc association score 2x worse (18.2 HOTA), and frame-to-frame IoU association fragments tracks that the generator's colors keep whole. On 383 mined occlusion events, the generator re-acquires identities after gaps at a 42% conditional rate where appearance-embedding baselines score zero, including gaps longer than its temporal context, evidence that the generator's color assignment functions as an emergent re-identification signal. We release code, checkpoints, and the full pre-registered experimental log.
+
+多对象跟踪（MOT）通常被分解为检测和关联，对象身份保持为外部状态：跟踪缓冲区、运动模型和外观嵌入。我们询问视频生成器是否可以保持该状态（以像素为单位）。我们使用轻量级上下文 LoRA 微调 22B 文本到视频扩散模型 (LTX-2.3)，将 RGB 剪辑转换为 ID 映射剪辑，在视频中，每个人都被涂上平坦、独特的颜色，并随着时间的推移持续存在：相同的颜色，相同的身份。长视频生成为链接窗口，其中每个窗口都以前一个窗口的清理尾部为条件。简短的连续微调教会模型扩展给定的颜色，之后身份在没有跟踪器、没有运动模型和没有重新识别模块的情况下流过链。在 DanceTrack 测试服务器上，据我们所知，我们的系统是在那里评估的第一个生成跟踪器，也是唯一一个没有检测器和跟踪堆栈的条目，达到了 40.3 HOTA。这远低于当今的专业技术水平 (>=70 HOTA)，但具有独特的反向错误配置文件：其关联分数 (AssA 44.1) 超过原始基准套件的每个跟踪器，而检测仍然是唯一的缺陷。受控比较表明机制很重要：由经典事后关联链接的相同生成窗口得分差 2 倍（18.2 HOTA），并且帧到帧 IoU 关联片段跟踪生成器的颜色保持完整。在 383 个挖掘的遮挡事件中，生成器以 42% 的条件率在间隙后重新获取身份，其中外观嵌入基线得分为零，包括比其时间上下文更长的间隙，这证明生成器的颜色分配起到了紧急重新识别信号的作用。我们发布代码、检查点和完整的预注册实验日志。
+
+</details>
+
+---
+
+## 3. When Physical Preferences Meet Semantic Constraints: Physical and Semantic Direct Preference Optimization for Text-to-Video Generation / 当物理偏好满足语义约束时：文本到视频生成的物理和语义直接偏好优化
+
+**Date**: 2026-07-18 | **arXiv**: [2607.16947v1](http://arxiv.org/abs/2607.16947v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.16947v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Text-to-video (T2V) generation models have achieved strong visual realism, but improving physical plausibility can come at the cost of semantic consistency with the input text. This tension arises because physical preference is typically determined by comparing dynamics between two videos, without accounting for whether either video faithfully depicts the scene specified by the prompt, making physical-semantic conflict a systematic tendency under this supervision paradigm. We formulate this challenge as a constrained preference optimization problem and propose Physical and Semantic Direct Preference Optimization (PSDPO), which modulates each preference pair's contribution based on the agreement between its physical and semantic signals. A gradient-level analysis shows that PSDPO bounds the semantic drift from conflicting pairs to a controllable residual, and further motivates a staged optimization protocol that provably reduces cumulative drift. The resulting method operates entirely within the standard DPO framework, requiring no auxiliary models or additional loss terms. Experiments show that PSDPO improves physical plausibility by up to $2\times$ over the baseline on VideoPhy-2, while maintaining strong semantic consistency on VBench, achieving a more reliable balance than existing preference-based methods.
+
+文本到视频 (T2V) 生成模型已经实现了很强的视觉真实感，但提高物理合理性可能会以牺牲与输入文本的语义一致性为代价。之所以出现这种紧张，是因为身体偏好通常是通过比较两个视频之间的动态来确定的，而不考虑任何一个视频是否忠实地描绘了提示指定的场景，使得物理语义冲突成为这种监督范式下的系统趋势。我们将这一挑战表述为约束偏好优化问题，并提出物理和语义直接偏好优化（PSDPO），它根据物理信号和语义信号之间的一致性来调节每个偏好对的贡献。梯度级分析表明，PSDPO 将冲突对的语义漂移限制为可控残差，并进一步激发了分阶段优化协议，该协议可证明减少累积漂移。由此产生的方法完全在标准 DPO 框架内运行，不需要辅助模型或额外的损失项。实验表明，PSDPO 与 VideoPhy-2 上的基线相比，物理合理性提高了高达 $2\times$，同时在 VBench 上保持了强大的语义一致性，实现了比现有基于偏好的方法更可靠的平衡。
+
+</details>
+
+---
+
+## 4. Multi-Dimensional Quality Assessment for AI-Generated Human-Centric Videos: Dataset and Model / 人工智能生成的以人为本的视频的多维质量评估：数据集和模型
+
+**Date**: 2026-07-18 | **arXiv**: [2607.16742v1](http://arxiv.org/abs/2607.16742v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.16742v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+AI-generated human-centric videos play a crucial role in a wide range of modern applications. However, they often suffer from quality issues and semantic mismatches, underscoring the importance of effective quality assessment for such videos. To this end, we extend our previous dataset HVEval with pairwise preference annotations, resulting in HVEval+, the largest holistic quality assessment dataset for AI-generated human-centric videos, which comprises 1k prompts based on a comprehensive taxonomy, 20k videos generated by 24 text-to-video (T2V) models, and extensive human annotations, including 60k mean opinion scores (MOSs) and 60k preference pairs across 3 dimensions (i.e., spatial quality, temporal quality, and text-video correspondence), as well as 20k category-specific question-answer (Q&A) pairs. Along with the HVEval+ dataset, we further propose MoE-Rater, a Mixture-of-Experts (MoE)-inspired and multimodal large language model (MLLM)-based all-in-one method that supports multi-dimensional quality rating, multi-dimensional pairwise comparison, and category-specific question answering within a single model. Specifically, we introduce Mixture of Projector Experts (MoPE) and Mixture of LoRA Experts (MoLE), together with a three-stage training strategy consisting of task-aware pre-training, task-specific adaptation, and adaptive routing optimization, to effectively unify multiple tasks, resulting in superior performance on both HVEval+ and Human-AGVQA datasets. Extensive experiments and comprehensive analysis demonstrate the significant potential of the HVEval+ dataset and the MoE-Rater method in advancing AI-generated video quality assessment and further facilitating the evaluation and optimization of T2V models.
+
+人工智能生成的以人为中心的视频在广泛的现代应用中发挥着至关重要的作用。然而，它们经常遇到质量问题和语义不匹配的问题，这凸显了对此类视频进行有效质量评估的重要性。为此，我们用成对偏好注释扩展了之前的数据集 HVEval，形成了 HVEval+，这是人工智能生成的以人为中心的视频的最大整体质量评估数据集，其中包括基于综合分类的 1k 个提示、24 个文本到视频 (T2V) 模型生成的 20k 视频以及广泛的人类注释，包括 60k 平均意见得分 (MOS) 和跨 3 个维度（即空间质量、时间质量）的 60k 偏好对。质量和文本视频对应），以及 20k 个特定类别的问答 (Q&A) 对。与 HVEval+ 数据集一起，我们进一步提出了 MoE-Rater，这是一种受专家混合 (MoE) 启发、基于多模态大语言模型 (MLLM) 的一体化方法，支持在单个模型中进行多维质量评级、多维成对比较和特定类别的问答。具体来说，我们引入了Mixture of Projector Experts (MoPE)和Mixture of LoRA Experts (MoLE)，以及由任务感知预训练、特定任务适应和自适应路由优化组成的三阶段训练策略，以有效地统一多个任务，从而在HVEval+和Human-AGVQA数据集上获得优异的性能。大量实验和综合分析证明了 HVEval+ 数据集和 MoE-Rater 方法在推进 AI 生成的视频质量评估并进一步促进 T2V 模型的评估和优化方面的巨大潜力。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-20 (5 papers)</b></summary>
 
 # arXiv Video Papers - 2026-07-20
