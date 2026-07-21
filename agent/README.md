@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-21](papers/2026-07-21.md) - 13 papers
 - [2026-07-20](papers/2026-07-20.md) - 14 papers
 - [2026-07-18](papers/2026-07-18.md) - 5 papers
 - [2026-07-17](papers/2026-07-17.md) - 25 papers
@@ -122,6 +123,230 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-21 (13 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-07-21
+
+**Paper Count**: 13
+
+---
+
+## 1. Debate-on-Graph: Reliable and Adaptive Reasoning of Large Language Model on Uncertain Knowledge Graph / Debate-on-Graph：不确定知识图上大型语言模型的可靠自适应推理
+
+**Date**: 2026-07-19 | **arXiv**: [2607.17266v1](http://arxiv.org/abs/2607.17266v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.17266v1)
+
+**Categories**: cs.CL, cs.AI
+
+**Code**: https://github.com/seucoin/Debate-on-Graph.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language models (LLMs) have demonstrated remarkable capabilities in natural language processing. However, LLMs often suffer from hallucinations and lack of relevant knowledge when dealing with question answering (QA) tasks. To mitigate these issues, knowledge graphs (KGs) have been utilized to enhance LLM reasoning. Nevertheless, KGs often contain noise and errors, while existing KG-enhanced LLM approaches are generally unable to identify and filter such noisy and erroneous content, which can instead amplify hallucinations and pose challenges for reliable reasoning. Uncertain knowledge graphs (UKGs), which associate each triple with a confidence score to quantify uncertainty, offer a promising direction to address this challenge. Compared with prior work, we investigate how to leverage UKGs to support LLMs for QA. We propose Debate-on-Graph (DoG), a new framework that enables LLMs and UKGs to collaborate adaptively for reliable reasoning. Specifically, we first design a heuristic search algorithm tailored for UKGs to extract reliable and question-relevant subgraphs, thereby reducing noise and errors in retrieved knowledge. We then introduce a Multi-Agent Debate mechanism, which yields reliable answers through adaptive adversarial debates, aiming to fully exploit the knowledge in UKGs while preserving the reliability of retrieved evidence. Extensive experiments on four benchmark QA datasets show that DoG achieves state-of-the-art performance over existing LLM reasoning methods and KG-based baselines, while enabling reliable and adaptive reasoning. Our code is available at https://github.com/seucoin/Debate-on-Graph.
+
+大型语言模型（LLM）在自然语言处理方面表现出了卓越的能力。然而，法学硕士在处理问答（QA）任务时常常会产生幻觉并且缺乏相关知识。为了缓解这些问题，知识图（KG）被用来增强法学硕士推理。然而，知识图谱通常包含噪声和错误，而现有的知识图谱增强型法学硕士方法通常无法识别和过滤这些噪声和错误内容，这反而会放大幻觉并对可靠推理提出挑战。不确定知识图（UKG）将每个三元组与置信度分数相关联以量化不确定性，为应对这一挑战提供了一个有希望的方向。与之前的工作相比，我们研究了如何利用 UKG 来支持 LLM 的 QA。我们提出 Debate-on-Graph (DoG)，这是一个新框架，使 LLM 和 UKG 能够自适应地协作以进行可靠的推理。具体来说，我们首先设计了一种为 UKG 量身定制的启发式搜索算法，以提取可靠且与问题相关的子图，从而减少检索知识中的噪声和错误。然后，我们引入了多代理辩论机制，该机制通过自适应对抗性辩论产生可靠的答案，旨在充分利用 UKG 中的知识，同时保留检索到的证据的可靠性。对四个基准 QA 数据集的大量实验表明，DoG 比现有的 LLM 推理方法和基于知识图谱的基线实现了最先进的性能，同时实现了可靠和自适应的推理。我们的代码可在 https://github.com/seucoin/Debate-on-Graph 获取。
+
+</details>
+
+---
+
+## 2. Specifying the Delegated-Autonomy Boundary: Requirements Engineering for Agentic AI / 指定委托自治边界：代理人工智能的需求工程
+
+**Date**: 2026-07-19 | **arXiv**: [2607.17225v1](http://arxiv.org/abs/2607.17225v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.17225v1)
+
+**Categories**: cs.SE, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Agentic AI systems do not just predict or recommend; they plan, maintain state, and act in external environments with varying degrees of autonomy. This changes the requirements engineering problem in a specific and under-addressed way: it introduces what we call the delegated-autonomy boundary -- the set of decisions about what may be delegated to the system, under what graduated authority, with what oversight, and how control is returned. Current practices bury these decisions inside prompts, tool schemas, and runtime policies, even though they are requirements-level commitments. This paper proposes two complementary artifacts. First, an Agency Justification Record (AJR) helps teams decide when an agent is warranted over simpler alternatives. Second, an Agentic Delegation Policy (ADP) captures what must be specified for safe and effective development: purpose, authority, information, coordination, assurance, and evolution. Crucially, authority in the ADP is modelled as graduated, i.e., a tiered structure. We illustrate the framework with two contrasting examples: a safety-critical hospital discharge coordination agent and an automated code review agent.
+
+代理人工智能系统不仅仅是预测或推荐；他们以不同程度的自主权在外部环境中计划、维护状态和行动。这以一种特定的、未被充分解决的方式改变了需求工程问题：它引入了我们所说的委托自治边界——关于可以委托给系统的内容、分级权限、监督方式以及如何返回控制权的一系列决策。当前的实践将这些决策隐藏在提示、工具模式和运行时策略中，即使它们是需求级的承诺。本文提出了两个互补的工件。首先，代理理由记录 (AJR) 可以帮助团队决定何时需要代理而不是更简单的替代方案。其次，代理授权政策 (ADP) 捕获了安全有效的开发必须指定的内容：目的、权限、信息、协调、保证和演变。至关重要的是，ADP 的权力是分级的，即分层结构。我们用两个对比示例来说明该框架：安全关键的出院协调代理和自动代码审查代理。
+
+</details>
+
+---
+
+## 3. Teach it to stop, not just to click / 教它停止，而不仅仅是点击
+
+**Date**: 2026-07-19 | **arXiv**: [2607.17136v1](http://arxiv.org/abs/2607.17136v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.17136v1)
+
+**Categories**: cs.SE, cs.AI, cs.HC, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Agentic computer-use RL is reported in single runs, and those numbers mislead. Using verifier-guided repair of a 35B computer-use agent (CUA) across five oracle-graded environments, we show a repaired policy's success rate is dominated by upstream variance: a variance-components decomposition across three cells (crossed data-draw $\times$ seed grid, bootstrap CIs) finds evaluation variance negligible ($σ_{\mathrm{eval}} \approx 0$) and the training-seed effect small everywhere ($\leq 10\%$); instead it splits between the data draw and run-to-run nondeterminism, the data draw's share rising to dominant ($48\%$) on the hardest cell. There the run-to-run distribution is bimodal (Hartigan dip $p=0.07$, $k=10$), so a single run has roughly a 30% chance of the failure mode and mean$\pm$std is the wrong summary. On that footing, two findings hold. First, repairability is two-tier in how constrained the corrective action is: a single fixed token installs reliably (done-detection $0.97\pm0.06$), while open-ended corrections are only partial -- spatial-coordinate clicks (grounding $0.53\pm0.35$) and a generative field-fill ($0.14\pm0.04$). Second, the frame-level repair transfers to task success only when the corrective action is the task's sole remaining blocker (LinkedIn 8/20 vs. base 0/15, Fisher $p=0.006$). We caught two of our own over-claims -- a sample-efficiency curve and a 'grounding cannot be bought' boundary -- only by replicating across seeds; a stress test makes the stakes external: a single-run improvement of the size this field publishes would have the wrong sign roughly one-third of the time in a comparable regime. We release a library (cua_reliability) for routine k-seed reporting. The apparatus is, to our knowledge, the first multimodal segment-aggregated on-policy self-distillation (SA-OPSD) update on a real 35B CUA policy.
+
+代理计算机使用的强化学习是在单次运行中报告的，这些数字会产生误导。在五个预言机分级环境中使用验证者引导的 35B 计算机使用代理 (CUA) 修复，我们发现修复策略的成功率主要由上游方差决定：跨三个单元的方差分量分解（交叉数据绘制 $\times$ 种子网格、引导 CI）发现评估方差可以忽略不计（$σ_{\mathrm{eval}} \approx 0$），并且训练种子效应在各处都很小($\leq 10\%$);相反，它在数据绘制和运行之间的不确定性之间进行划分，数据绘制的份额在最难的单元格上上升到主导（$48\%$）。运行到运行的分布是双峰的（Hartigan dial $p=0.07$，$k=10$），因此单次运行出现故障模式的可能性大约为 30%，并且mean$\pm$std 是错误的摘要。在此基础上，有两个发现成立。首先，可修复性在纠正措施的约束程度方面分为两层：单个固定令牌可靠安装（完成检测 $0.97\pm0.06$），而开放式纠正只是部分 - 空间坐标点击（基础 $0.53\pm0.35$）和生成字段填充（$0.14\pm0.04$）。其次，只有当纠正措施是任务唯一剩余的阻碍因素时，帧级修复才会转移到任务成功（LinkedIn 8/20 vs. base 0/15，Fisher $p=0.006$）。我们发现了自己的两个过度主张——样本效率曲线和“接地气是买不来的”边界——只是通过在种子之间进行复制；压力测试将风险置于外部：在类似的情况下，该领域发布的规模的单次改进大约有三分之一的时间会出现错误的迹象。我们发布了一个用于常规 k 种子报告的库 (cua_reliability)。据我们所知，该装置是第一个对真实 35B CUA 策略进行多模式分段聚合的策略自蒸馏 (SA-OPSD) 更新。
+
+</details>
+
+---
+
+## 4. Otap:Structure-Aware Optimal Transport for Evaluating Planning and Execution in Agent Trajectories / Otap：用于评估代理轨迹中的规划和执行的结构感知最优传输
+
+**Date**: 2026-07-19 | **arXiv**: [2607.17082v1](http://arxiv.org/abs/2607.17082v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.17082v1)
+
+**Categories**: cs.AI, cs.CL, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language model agents solve tasks by generating trajectories that interleave planning, tool calls, and intermediate results. Current evaluation metrics reduce such a trajectory to a binary success flag or compare it against a reference by exact matching. A success flag cannot distinguish a sound solution from one that succeeds by luck, and says nothing about why a failed run went wrong. Exact matching penalizes plans that are valid but reordered or decomposed differently from the reference. We reframe trajectory evaluation as a distance between the agent's execution graph and a set of valid solution graphs, and instantiate it via an unbalanced fused Gromov-Wasserstein transport problem over attributed dependency graphs. The resulting score, termed \otap{} (Optimal Transport for Agentic Planning), is a pseudo-metric that is provably invariant to dependency-preserving reorderings and has bounded sensitivity to redundant steps. Its unbalanced marginals handle missing or hallucinated steps without forcing a match, and its soft coupling accommodates variation in plan granularity. On controlled perturbations and three public benchmarks, \otap{} separates valid from invalid trajectories in a regime where semantics-only metrics score below chance. Its accuracy is highest when the dependency graph is recovered exactly, and drops only when the graph is inferred heuristically from free-text traces.
+
+大型语言模型代理通过生成交织规划、工具调用和中间结果的轨迹来解决任务。当前的评估指标将此类轨迹简化为二进制成功标志，或通过精确匹配将其与参考进行比较。成功标志无法区分合理的解决方案和幸运成功的解决方案，并且没有说明失败的运行出错的原因。精确匹配会惩罚有效但重新排序或分解与参考不同的计划。我们将轨迹评估重新定义为代理执行图和一组有效解图之间的距离，并通过属性依赖图上的不平衡融合 Gromov-Wasserstein 传输问题将其实例化。所得分数称为 \otap{}（代理规划的最佳传输），是一种伪度量，可证明对保留依赖的重新排序具有不变性，并且对冗余步骤具有有限的敏感性。它的不平衡边缘处理丢失或幻觉的步骤而不强制匹配，并且它的软耦合适应计划粒度的变化。在受控扰动和三个公共基准上，\otap{} 在纯语义指标得分低于机会的情况下将有效轨迹与无效轨迹分开。当依赖图被准确恢复时，它的准确性最高，只有当从自由文本跟踪中启发式推断图时，它的准确性才会下降。
+
+</details>
+
+---
+
+## 5. When LLMs Over-Answer: Measuring and Mitigating Quality Issues in LLM-Based Hardware Description Language Question Answering / 当法学硕士过度回答时：测量和缓解基于法学硕士的硬件描述语言问答中的质量问题
+
+**Date**: 2026-07-19 | **arXiv**: [2607.17063v1](http://arxiv.org/abs/2607.17063v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.17063v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The rapid advancement of large language models (LLMs) has led practitioners to increasingly rely on them for answering questions about hardware description languages (HDLs). Because HDL is ultimately synthesized into physical hardware, an imprecise or redundant answer can propagate into timing violations or non-synthesizable logic that surface only late in the design flow, making the quality of HDL answers especially consequential. However, the quality of LLM-generated responses, particularly in comparison with answers provided by human experts, remains unclear. To investigate this question, we collect 6,246 HDL Q&A posts with accepted answers from Stack Overflow and curate them into a dataset, organized into a taxonomy of four main categories (Conceptual, Debugging, Generation, and Optimization) and ten subcategories. Using this dataset, we design a user study conducted with 19 HDL engineers with one to three years of experience. Our findings reveal a pervasive over answering tendency: LLMs supply correct content but bury it under redundant alternatives (65.7%) and verbose padding (69.1%), while nearly half of answers (49.0%) fail to fully align with expert answers yet participants still preferred LLM responses for readability (58.3%). Motivated by these findings, we propose a multi-agent framework for improving LLM-based HDL question answering. We evaluate answer quality using an LLM-as-Judge and two structural metrics: the number of core answers, which reflects redundancy since LLMs often provide multiple alternative solutions, and the length of non-core content, which reflects verbosity. Evaluated on the four mainstream LLMs, our framework increases the average core-answer quality score from 3.71 to 4.67 (+0.96) and the non-core content quality from 3.72 to 4.23 (+0.51), on a five-point scale.
+
+大型语言模型 (LLM) 的快速发展导致从业者越来越依赖它们来回答有关硬件描述语言 (HDL) 的问题。由于 HDL 最终被综合到物理硬件中，因此不精确或冗余的答案可能会传播到仅在设计流程后期才出现的时序违规或不可综合逻辑，从而使得 HDL 答案的质量尤其重要。然而，法学硕士生成的答案的质量，特别是与人类专家提供的答案相比，仍不清楚。为了研究这个问题，我们收集了 6,246 个 HDL 问答帖子以及 Stack Overflow 上已接受的答案，并将它们整理成一个数据集，并组织成四个主要类别（概念、调试、生成和优化）和十个子类别的分类法。使用此数据集，我们设计了一项用户研究，由 19 名具有一到三年经验的 HDL 工程师进行。我们的研究结果揭示了普遍存在的过度回答倾向：法学硕士提供了正确的内容，但将其掩埋在冗余的替代方案（65.7％）和冗长的填充（69.1％）之下，而近一半的答案（49.0％）未能与专家答案完全一致，但参与者仍然更喜欢法学硕士的答案以提高可读性（58.3％）。受这些发现的启发，我们提出了一个多智能体框架来改进基于 LLM 的 HDL 问答。我们使用法学硕士作为法官和两个结构指标来评估答案质量：核心答案的数量，这反映了冗余，因为法学硕士通常提供多种替代解决方案，以及非核心内容的长度，这反映了冗长。对四个主流法学硕士进行评估后，我们的框架将平均核心答案质量得分从 3.71 提高到 4.67 (+0.96)，将非核心内容质量从 3.72 提高到 4.23 (+0.51)，满分为 5 分。
+
+</details>
+
+---
+
+## 6. Reward-Driven LLM Agent Workflows: Synthesizing POMDP Routing and Self-Correction for Autonomous Decision-Making / 奖励驱动的 LLM 代理工作流程：综合 POMDP 路由和自我修正以实现自主决策
+
+**Date**: 2026-07-19 | **arXiv**: [2607.17038v1](http://arxiv.org/abs/2607.17038v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.17038v1)
+
+**Categories**: cs.AI
+
+**Code**: https://github.com/01Amez/RLAW_Implementation.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This paper addresses key technical challenges in current large language model (LLM) agent applications, including long-horizon planning, sparse reward attribution, and dynamic environmental interaction, by designing and optimizing an intelligent agent workflow. The proposed architecture is based on the synthesis of core AI paradigms: Visual, Language, Generative, Graph, Multimodal, Reinforcement, and Agent Intelligence. Unlike conventional baseline models that rely on static prompting and lack robust perception-action loops, our approach introduces a Partially Observable Markov Decision Process (POMDP) routing mechanism. This mechanism is augmented with an internal, self-correcting reward model that evaluates decision trajectories before execution. By integrating multimodal inputs and advanced reinforcement learning principles (such as proximal policy optimization and value function approximation), the agent maintains long-term structural memory and dynamically adapts its reasoning pathways to mitigate error accumulation. Empirical experiments on the ALFWorld embodied simulation environment and the WebShop online navigation benchmark demonstrate a 24.5% absolute improvement in task success rate and trajectory efficiency over mainstream baselines like the standard ReAct framework. Comprehensive ablation studies confirm the significant contribution of the reward-driven critique module in suppressing hallucination rates. This research bridges theoretical foundations of reinforcement learning and graph-based memory with autonomous agent workflows. Ultimately, the resulting architecture offers a practical, scalable reference framework for developing artificial intelligence technologies in complex, multi-step autonomous systems. Code is available at https://github.com/01Amez/RLAW_Implementation.
+
+本文通过设计和优化智能代理工作流程，解决了当前大语言模型（LLM）代理应用中的关键技术挑战，包括长期规划、稀疏奖励归因和动态环境交互。所提出的架构基于核心人工智能范式的综合：视觉、语言、生成、图形、多模态、强化和代理智能。与依赖静态提示且缺乏稳健的感知-行动循环的传统基线模型不同，我们的方法引入了部分可观察马尔可夫决策过程（POMDP）路由机制。该机制通过内部自我修正奖励模型得到增强，该模型在执行前评估决策轨迹。通过集成多模态输入和先进的强化学习原理（例如近端策略优化和价值函数逼近），代理保持长期结构记忆并动态调整其推理路径以减轻错误积累。 ALFWorld 体现模拟环境和 WebShop 在线导航基准的实证实验表明，与标准 ReAct 框架等主流基准相比，任务成功率和轨迹效率绝对提高了 24.5%。综合消融研究证实了奖励驱动的批评模块在抑制幻觉率方面的显着贡献。这项研究将强化学习和基于图的记忆的理论基础与自主代理工作流程联系起来。最终，最终的架构提供了一个实用的、可扩展的参考框架，用于在复杂的多步骤自主系统中开发人工智能技术。代码可在 https://github.com/01Amez/RLAW_Implementation 获取。
+
+</details>
+
+---
+
+## 7. Alignment of a Total Automation Economy / 全面自动化经济的调整
+
+**Date**: 2026-07-19 | **arXiv**: [2607.17015v1](http://arxiv.org/abs/2607.17015v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.17015v1)
+
+**Categories**: physics.soc-ph, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We consider economic theory from the perspective of a total automation economy, one with no human involvement in production either in manufacturing or in management. One can naturally ask whether a total automation economy is fundamentally a centrally planned economy or, alternatively, whether efficiency demands decentralization into local decisions by competing agents -- agentic production. A soviet economist, Leonid Kantorovich, developed linear programming as a method companies or governments can use to optimize production. Ironically, he is also generally credited with showing that the most efficient production is achieved through decentralization -- a free market economy with competing agents. I will call Kantorovich's result the agentic theorem and review it in detail here. This analysis appears to reveal a alignment vulnerability under which agentic management of the economy diverges from human values as agents deveop motives that are "internal" to the economy and disconnected from prices derived from human consumption markets.
+
+我们从完全自动化经济的角度来考虑经济理论，这是一种在制造或管理中都没有人参与生产的经济理论。人们自然会问，完全自动化经济从根本上来说是否是一种中央计划经济，或者，效率是否需要通过竞争性代理（代理生产）将权力下放到地方决策中。苏联经济学家 Leonid Kantorovich 开发了线性规划作为公司或政府可以用来优化生产的方法。具有讽刺意味的是，他还普遍认为，最有效的生产是通过权力下放实现的——一种具有竞争主体的自由市场经济。我将康托罗维奇的结果称为主体定理，并在这里详细回顾它。这一分析似乎揭示了一种一致性脆弱性，在这种脆弱性下，经济的代理管理偏离了人类价值观，因为代理发展了经济“内部”动机，并且与人类消费市场衍生的价格脱节。
+
+</details>
+
+---
+
+## 8. Lomekwi: Resource-Bounded Tool Discovery in LLM Agents / Lomekwi：LLM 代理中的资源有限工具发现
+
+**Date**: 2026-07-18 | **arXiv**: [2607.16961v1](http://arxiv.org/abs/2607.16961v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.16961v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Existing tool-use benchmarks report a single success rate for complex, multistep tasks. Inspired by ideas from cognitive science, we distinguish tool use from tool discovery and decompose the latter into curiosity (the model's ability to discover the parts needed to build the tool), recognition (the model's ability to discover the process of creating the tool), and efficiency (the model's use of the tool after creation). We show that this framework can be applied to existing discovery tasks, such as Voyager. In addition, we provide evidence that recognition inversely scales with model size, and we introduce and analyze a class of combinatorial games that demonstrates this. We further observe inverse scaling in a separate environment designed to emulate real-world tasks.
+
+现有的工具使用基准报告复杂的多步骤任务的单一成功率。受认知科学思想的启发，我们区分工具使用和工具发现，并将后者分解为好奇心（模型发现构建工具所需部件的能力）、认知（模型发现创建工具过程的能力）和效率（模型在创建工具后对工具的使用）。我们证明该框架可以应用于现有的发现任务，例如 Voyager。此外，我们提供的证据表明，识别能力与模型大小成反比，并且我们介绍并分析了一类组合游戏来证明这一点。我们进一步在旨在模拟现实世界任务的单独环境中观察逆缩放。
+
+</details>
+
+---
+
+## 9. A Multi-Agent System for 5G Throughput Prediction in Multi-Operator Urban Environments / 用于多运营商城市环境中 5G 吞吐量预测的多智能体系统
+
+**Date**: 2026-07-18 | **arXiv**: [2607.16930v1](http://arxiv.org/abs/2607.16930v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.16930v1)
+
+**Categories**: cs.NI, cs.AI, eess.SP
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Throughput prediction is foundational for artificial intelligence-driven 6G resource orchestration. Conventional monolithic machine learning models struggle to generalize across diverse operators, mobility modes, and traffic types, leaving a critical stochasticity gap between signal conditions and achievable throughput. To overcome these constraints in heterogeneous urban environments, we propose a Tiered Multi-Agent System (TMAS) that dynamically routes edge telemetry to context-aware Domain Micro-Agents, validated on a dataset of 48,618 samples collected in Sunway City, Malaysia, with Nemo Handy drive test software, spanning three Tier-1 mobile network operators, three mobility modes, namely (i) elevated pedestrian walkway, (ii) ground-level shuttle bus, and (iii) elevated bus rapid transit; and three traffic profiles, namely (i) persistent download, (ii) persistent upload, and (iii) adaptive video streaming. Our evaluations reveal that TMAS overcomes predictability bottlenecks, achieving a coefficient of determination (R2) of up to 0.931 and a Mean Absolute Error (MAE) as low as 0.53 Mbps. The system demonstrates high operational efficiency, with rapid micro-agent training times, low inference latencies, and agentic routing overhead of 0.004 to 0.126 ms. These latency characteristics indicate the architecture is a promising candidate for the response times required by next-generation wireless networks.
+
+吞吐量预测是人工智能驱动的6G资源编排的基础。传统的整体机器学习模型很难在不同的运营商、移动模式和流量类型之间进行推广，从而在信号条件和可实现的吞吐量之间留下了关键的随机性差距。为了克服异构城市环境中的这些限制，我们提出了一种分层多代理系统 (TMAS)，该系统将边缘遥测动态路由到上下文感知域微代理，并使用 Nemo Handy 路测软件在马来西亚双威市收集的 48,618 个样本的数据集上进行了验证，涵盖三个一级移动网络运营商、三种移动模式，即 (i) 高架人行道、(ii) 地面穿梭巴士和 (iii) 高架快速公交系统；以及三种流量配置文件，即（i）持久下载，（ii）持久上传，以及（iii）自适应视频流。我们的评估表明，TMAS 克服了可预测性瓶颈，实现了高达 0.931 的决定系数 (R2) 和低至 0.53 Mbps 的平均绝对误差 (MAE)。该系统表现出较高的运行效率、快速的微代理训练时间、较低的推理延迟以及 0.004 至 0.126 毫秒的代理路由开销。这些延迟特性表明该架构是满足下一代无线网络所需响应时间的有希望的候选者。
+
+</details>
+
+---
+
+## 10. InLiER: Learning-Free Heterogeneous LiDAR Place Recognition via Intermediate Mixed-Radix Structural Keypoint Tokenization / InLiER：通过中间混合基结构关键点标记化进行免学习异构 LiDAR 位置识别
+
+**Date**: 2026-07-18 | **arXiv**: [2607.16862v1](http://arxiv.org/abs/2607.16862v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.16862v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+LiDAR place recognition supports loop closure, relocalization, and multi-agent map management. As robotic platforms increasingly combine LiDARs with different fields of view, resolutions, and scanning patterns, existing descriptors degrade because they are tightly coupled to sensor-specific characteristics. We present InLiER, a learning-free pipeline based on an intermediate tokenization step. Height-sliced keypoints from structural elements receive mixed-radix token IDs encoding height, radial distance, local shape, and azimuth from local 3D geometry, in a compact sub-2KB representation. The same vocabulary is reorganized across three retrieval stages: height-ceiling histogram intersection for fast rotation-invariant shortlisting, binary bitmask alignment for yaw estimation and reranking, and token-guided geometric verification for 6-DoF pose estimation. InLiER achieves state-of-the-art performance on the HeLiPR dataset and in real-world field experiments, among modern handcrafted methods and outperforms the learning-based baseline on most cross-sensor configurations.
+
+LiDAR 地点识别支持闭环、重定位和多智能体地图管理。随着机器人平台越来越多地将激光雷达与不同视场、分辨率和扫描模式相结合，现有的描述符会退化，因为它们与传感器特定的特性紧密耦合。我们提出了 InLiER，一种基于中间标记化步骤的免学习管道。来自结构元素的高度切片关键点接收混合基数标记 ID，以紧凑的低于 2KB 的表示形式对本地 3D 几何图形的高度、径向距离、局部形状和方位角进行编码。相同的词汇在三个检索阶段进行重新组织：用于快速旋转不变入围的高度-天花板直方图交叉、用于偏航估计和重新排名的二进制位掩码对齐，以及用于 6-DoF 位姿估计的令牌引导几何验证。 InLiER 在 HeLiPR 数据集和现实世界的现场实验中，在现代手工方法中实现了最先进的性能，并且在大多数跨传感器配置上优于基于学习的基线。
+
+</details>
+
+---
+
+## 11. From Overload to Insights: How AI Agents Can Support Scientists in Analyzing Complex Data / 从过载到洞察：人工智能代理如何支持科学家分析复杂数据
+
+**Date**: 2026-07-18 | **arXiv**: [2607.16845v1](http://arxiv.org/abs/2607.16845v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.16845v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Scientists at European XFEL conduct experiments that generate very large and complex datasets. The subsequent data analysis is challenging as scientists must combine their domain expertise with facility- and software-specific knowledge scattered across documentation, tools, and support channels. To address this problem, we designed and evaluated an agentic AI system tailored to the scientists' needs and integrated with the high-performance computing environment of European XFEL. Using a design science research approach, we conducted a rapid literature review, a systematic evaluation of 16 AI tools, multiple interviews, a focus group, and a user study with experts at European XFEL to develop and evaluate two prototypes. Our study identifies key knowledge challenges in scientific data analysis, derives requirements for an AI agent that supports knowledge retrieval and source code generation, and proposes design recommendations for a specialized system adaptable to the evolving AI tool landscape. These findings provide guidance for developing maintainable AI support in highly specialized scientific environments.
+
+欧洲 XFEL 的科学家进行的实验产生了非常大且复杂的数据集。随后的数据分析具有挑战性，因为科学家必须将他们的领域专业知识与分散在文档、工具和支持渠道中的设施和软件特定知识结合起来。为了解决这个问题，我们设计并评估了一个适合科学家需求的代理人工智能系统，并与欧洲 XFEL 的高性能计算环境集成。我们采用设计科学研究方法，与欧洲 XFEL 的专家进行了快速文献综述、对 16 种人工智能工具的系统评估、多次访谈、焦点小组和用户研究，以开发和评估两个原型。我们的研究确定了科学数据分析中的关键知识挑战，得出对支持知识检索和源代码生成的人工智能代理的要求，并为适应不断发展的人工智能工具环境的专用系统提出了设计建议。这些发现为在高度专业化的科学环境中开发可维护的人工智能支持提供了指导。
+
+</details>
+
+---
+
+## 12. RELIC: Revealed Principles for Learning Interpretable Composable Skills in Multi-Agent Planning / RELIC：揭示了多智能体规划中学习可解释组合技能的原则
+
+**Date**: 2026-07-18 | **arXiv**: [2607.16745v1](http://arxiv.org/abs/2607.16745v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.16745v1)
+
+**Categories**: cs.AI, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multi-agent planning becomes substantially harder when agents must improve specialized decision-making skills while keeping their internal implementations private. This regime arises when agents are developed independently, expose different interfaces and capabilities, and must nevertheless coordinate without sharing executable policies. Prior research has largely assumed centralized optimization, shared policy access, or common skill representations, making it poorly suited to privacy-constrained cooperation. We introduce RELIC, a framework for learning interpretable and composable skills via revealed principles. Each agent refines its own programmatic skill through private LLM-guided search, while a trusted orchestrator evaluates proposed updates solely through team-level performance. Successful behaviors are not broadcast as code; instead, they are abstracted into portable principles that other agents can instantiate within their own interfaces and recombine with local strategies. This separates coordination from implementation sharing, enabling cross-agent transfer under heterogeneous skill signatures. RELIC thus introduces a new paradigm for privacy-preserving skill learning and coordination in multi-agent planning.
+
+当代理必须提高专业决策技能同时保持其内部实施私有时，多代理规划变得更加困难。当代理独立开发、暴露不同的接口和功能并且必须在不共享可执行策略的情况下进行协调时，就会出现这种制度。先前的研究主要假设集中优化、共享策略访问或通用技能表示，使其不太适合隐私受限的合作。我们引入 RELIC，一个通过揭示的原理学习可解释和可组合技能的框架。每个代理都通过私人法学硕士指导的搜索来完善自己的编程技能，而值得信赖的协调者仅通过团队级别的表现来评估建议的更新。成功的行为不会以代码的形式传播；相反，它们被抽象为可移植的原则，其他代理可以在自己的接口中实例化这些原则并与本地策略重新组合。这将协调与实现共享分开，从而实现异构技能签名下的跨代理传输。因此，RELIC 引入了多智能体规划中隐私保护技能学习和协调的新范式。
+
+</details>
+
+---
+
+## 13. Half the Experts, All the Code: One-Shot Domain Pruning of Mixture-of-Experts LLMs for Coding / 一半专家，全部代码：编码专家混合法学硕士的一次性域修剪
+
+**Date**: 2026-07-18 | **arXiv**: [2607.16721v1](http://arxiv.org/abs/2607.16721v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.16721v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The strongest open-weight coding models are mixture-of-experts (MoE) networks: most of their size comes from large pools of "expert" subnetworks, of which only a few act on any token. That pool is why these models do not fit on the machines most developers own, yet for a user who only wants coding help, most experts encode abilities that will never be invoked. We ask how many experts can be removed, and which, by pruning two recent open-weight MoE models from different families (Qwen3.6-35B-A3B and Gemma-4-26B-A4B) under five selection strategies, judged the way a user would: by whether the model still writes correct code. Half the experts can be removed from either model with no statistically detectable loss on the primary code benchmark, and the damage lands almost entirely on abilities outside coding, the intended trade. But the winning strategy flips between the two models, so a recipe validated on one family cannot be assumed to work on another. We further show that perplexity, the metric much of the pruning literature leans on, can rate a broken model above an intact one; that a lightweight fine-tune recovers about half of what aggressive pruning loses; and that against quantizing the full model to the same memory, pruning wins only where quantization would have to drop below 3 bits per weight. Five attempts to overturn that crossover, with failure criteria fixed in advance (better calibration, guarded selection, causal expert importance, failure attribution, and an agentic evaluation letting each model repair its failures from execution feedback), all leave it standing; the last shows single-shot benchmarks overstate compression penalties broadly, as one repair turn erases the 2-bit quantization penalty entirely. Expert pruning works, but it demands per-model validation on the task the model will actually serve.
+
+最强大的开放权重编码模型是专家混合（MoE）网络：它们的大部分规模来自大量“专家”子网络，其中只有少数对任何令牌起作用。这个池就是为什么这些模型不适合大多数开发人员拥有的机器，但对于只需要编码帮助的用户来说，大多数专家编码永远不会被调用的能力。我们询问可以删除多少专家，并通过在五种选择策略下修剪来自不同家族的两个最新开放权重 MoE 模型（Qwen3.6-35B-A3B 和 Gemma-4-26B-A4B），判断用户的方式：通过模型是否仍然编写正确的代码。一半的专家可以从任一模型中删除，而在主要代码基准上没有统计上可检测到的损失，并且损失几乎完全落在编码（预期交易）之外的能力上。但制胜策略会在两个模型之间翻转，因此在一个家庭中验证过的配方不能假设在另一个家庭中也有效。我们进一步表明，困惑度（许多修剪文献所依赖的度量标准）可以将损坏的模型评为高于完整模型的等级；轻量级微调可以恢复积极修剪损失的大约一半；并且与将整个模型量化到相同的内存相比，修剪只有在量化必须降至每个权重 3 位以下的情况下才会获胜。五次尝试推翻这种交叉，并预先确定了故障标准（更好的校准、谨慎的选择、因果专家的重要性、故障归因以及让每个模型从执行反馈中修复其故障的代理评估），所有这些都让它保持不变；最后一个显示单次基准测试广泛夸大了压缩损失，因为一次修复完全消除了 2 位量化损失。专家修剪是有效的，但它需要对模型实际服务的任务进行每个模型的验证。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-20 (14 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-07-20
