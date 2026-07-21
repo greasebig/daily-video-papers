@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-21](papers/2026-07-21.md) - 3 papers
 - [2026-07-20](papers/2026-07-20.md) - 2 papers
 - [2026-07-17](papers/2026-07-17.md) - 9 papers
 - [2026-07-16](papers/2026-07-16.md) - 8 papers
@@ -116,6 +117,66 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-21 (3 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-07-21
+
+**Paper Count**: 3
+
+---
+
+## 1. An Explicit World Model Based on Data-First Ontology: DaoQL Multimodal Storage Validation and Counterfactual Reasoning Evaluation / 基于数据优先本体的显式世界模型：DaoQL多模态存储验证和反事实推理评估
+
+**Date**: 2026-07-19 | **arXiv**: [2607.17269v1](http://arxiv.org/abs/2607.17269v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.17269v1)
+
+**Categories**: cs.AI, cs.DB
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language models encode world models implicitly in neural weights, which exposes four structural risks in high-precision domains such as medicine and finance: hallucination, frozen knowledge, poor explainability, and poor modifiability. This paper proposes data-first ontology: LLMs are treated as reasoning and language engines, while deterministic knowledge is moved into an explicit multimodal database, DaoQL. We formalize an explicit world model and show that, under rule independence, deterministic evaluation, and fixed conflict resolution, explicit models provide a sufficient condition for composable counterfactual decomposability; implicit models lack atomic read/delta semantics and therefore provide no comparable architectural guarantee. The implemented system focuses on DaoQL's verified storage layer and explicit Eval path, integrating graph, column, vector, and full-text engines within one process. KVCache graph nodes, expert hot updates, and the DaoQL-Agent runtime remain future work. On an embedded same-machine setup, DaoQL reports graph BFS at 1.20 ms, HNSW at 83.1 us, and a Fluent hybrid query at 105.8 us; these results indicate engineering potential but must be interpreted with deployment-shape differences from client-server systems. Exploratory measurements on LDBC SNB SF1 and ANN-Benchmarks further show 34/34 query coverage with interactive-class queries mostly in the sub-millisecond to millisecond range, but only 1.8 QPS overall due to long-tail BI/IC queries; ANN-Benchmarks reaches Recall@10 >= 99% at thousand-level QPS after a bridge-edge protection fix. In a five-domain counterfactual experiment (n = 1250), DaoQL+GPT-4o achieves 94% composable counterfactual decomposability, 49 percentage points above GPT-4o alone. The paper explicitly separates provable structure, preliminary empirical evidence, and architectural roadmap claims.
+
+大型语言模型将世界模型隐式编码在神经权重中，这暴露了医学和金融等高精度领域的四种结构性风险：幻觉、知识冻结、可解释性差和可修改性差。本文提出了数据优先本体论：LLM 被视为推理和语言引擎，而确定性知识则被转移到显式多模态数据库 DaoQL 中。我们形式化了一个显式世界模型，并表明，在规则独立性、确定性评估和固定冲突解决下，显式模型为可组合的反事实可分解性提供了充分条件；隐式模型缺乏原子读取/增量语义，因此无法提供可比的架构保证。所实现的系统侧重于 DaoQL 的经过验证的存储层和显式 Eval 路径，将图、列、向量和全文引擎集成在一个流程中。 KVCache 图形节点、专家热更新和 DaoQL-Agent 运行时仍然是未来的工作。在嵌入式同机设置上，DaoQL 报告图 BFS 为 1.20 毫秒，HNSW 为 83.1 秒，Fluent 混合查询为 105.8 秒；这些结果表明了工程潜力，但必须用与客户端-服务器系统的部署形状差异来解释。对 LDBC SNB SF1 和 ANN-Benchmarks 的探索性测量进一步显示，交互式类查询的查询覆盖率为 34/34，大部分在亚毫秒到毫秒范围内，但由于长尾 BI/IC 查询，总体 QPS 仅为 1.8；修复桥接边缘保护后，ANN-Benchmarks 在千级 QPS 下达到 Recall@10 >= 99%。在五域反事实实验（n = 1250）中，DaoQL+GPT-4o 实现了 94% 的可组合反事实可分解性，比单独的 GPT-4o 高出 49 个百分点。该论文明确区分了可证明的结构、初步经验证据和架构路线图主张。
+
+</details>
+
+---
+
+## 2. EvolvingWorld: An Open-Schema Framework for Co-Evolving Role-Play Agents and World Model in Interactive Literary World / EvolvingWorld：交互式文学世界中共同进化角色扮演代理和世界模型的开放模式框架
+
+**Date**: 2026-07-19 | **arXiv**: [2607.17250v1](http://arxiv.org/abs/2607.17250v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.17250v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This paper introduces EvolvingWorld, a framework and benchmark for character and world co-evolution in interactive literary worlds. Existing systems either treat interactive literary simulation as static persona imitation or isolated scene generation, failing to capture how characters and worlds evolve together over time. To address this, EvolvingWorld models literary simulation as a long-horizon process where characters interact, scenes progress, and character and world states are persistently updated. Unlike prior systems relying on fixed schemas, EvolvingWorld adopts an open-schema framework to support simulation across diverse literary worlds. The framework consists of two coupled modules: a Character Agent for multi-character role-play and persistent profile evolution, and an LLM-based World Model for global and location/entity-level state maintenance and scene progression. Based on this architecture, we formulate 7 trainable tasks for scene initialization, interaction generation, and state update. We construct a dataset from 57 books, producing 138,596 supervised training samples and 222 snapshots for testing. Furthermore, we introduce a trajectory-level LLM-as-Judge evaluation protocol spanning 10 dimensions and 20 metrics. Experiments show that EvolvingWorld can improve long-horizon simulation by effectively maintaining persistent, coherent character and world development.
+
+本文介绍了 EvolvingWorld，这是交互式文学世界中角色和世界共同进化的框架和基准。现有系统要么将交互式文学模拟视为静态角色模仿，要么将孤立的场景生成视为孤立的场景生成，无法捕捉角色和世界如何随着时间的推移一起演变。为了解决这个问题，EvolvingWorld 将文学模拟建模为一个长期过程，其中角色互动、场景进展以及角色和世界状态持续更新。与依赖固定模式的现有系统不同，EvolvingWorld 采用开放模式框架来支持跨不同文学世界的模拟。该框架由两个耦合模块组成：用于多角色角色扮演和持久配置文件演变的角色代理，以及用于全局和位置/实体级状态维护和场景进展的基于 LLM 的世界模型。基于该架构，我们制定了 7 个可训练任务，用于场景初始化、交互生成和状态更新。我们从 57 本书构建了一个数据集，生成了 138,596 个监督训练样本和 222 个测试快照。此外，我们引入了涵盖 10 个维度和 20 个指标的轨迹级 LLM 作为法官评估协议。实验表明，EvolvingWorld 可以通过有效地保持持久、连贯的特征和世界发展来改进长期模拟。
+
+</details>
+
+---
+
+## 3. Environment-free Synthetic Data Generation for API-Calling Agents / 为 API 调用代理生成无环境的综合数据
+
+**Date**: 2026-07-18 | **arXiv**: [2607.16900v1](http://arxiv.org/abs/2607.16900v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.16900v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Training API-calling large language model (LLM) agents demands massive amounts of high-quality trajectories. However, collecting such data at scale typically requires fully implemented environments with executable APIs and realistic, pre-populated backend databases, creating a major bottleneck for scalability. To overcome this, we propose an environment-free synthetic data generation approach that leverages LLMs as on-the-fly digital world models. Given only API specifications, our method generates trajectories mimicking interactions between an agent and a stateful environment. Specifically, an LLM first generates diverse tasks solvable with the provided APIs. A teacher agent then iteratively solves each task while an LLM simulator generates coherent synthetic API responses conditioned on the task context and simulation history. Finally, an LLM judge filters the trajectories to ensure the quality of the resulting dataset. We evaluate our approach on the challenging AppWorld and OfficeBench benchmarks, which include both information-retrieval and state-changing tasks. Fine-tuning models on our synthetic data yields significant performance gains, demonstrating that effective supervision for API-calling agents can be generated without any executable environment. Our results establish LLM-based API simulation as a practical, scalable solution for training agents across diverse API ecosystems.
+
+训练 API 调用大型语言模型 (LLM) 代理需要大量高质量的轨迹。然而，大规模收集此类数据通常需要具有可执行 API 和现实的、预先填充的后端数据库的完全实施的环境，从而造成可扩展性的主要瓶颈。为了克服这个问题，我们提出了一种无环境的合成数据生成方法，利用法学硕士作为动态数字世界模型。仅给定 API 规范，我们的方法就会生成模仿代理和有状态环境之间交互的轨迹。具体来说，法学硕士首先生成可使用提供的 API 解决的各种任务。然后，教师代理迭代地解决每个任务，同时 LLM 模拟器根据任务上下文和模拟历史生成一致的合成 API 响应。最后，法学硕士法官过滤轨迹以确保结果数据集的质量。我们在具有挑战性的 AppWorld 和 OfficeBench 基准上评估我们的方法，其中包括信息检索和状态更改任务。对我们的合成数据进行微调模型可以显着提高性能，这表明可以在没有任何可执行环境的情况下生成对 API 调用代理的有效监督。我们的结果将基于 LLM 的 API 模拟确立为一种实用的、可扩展的解决方案，用于跨不同 API 生态系统培训代理。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-20 (2 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-07-20
