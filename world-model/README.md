@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-22](papers/2026-07-22.md) - 12 papers
 - [2026-07-21](papers/2026-07-21.md) - 3 papers
 - [2026-07-20](papers/2026-07-20.md) - 2 papers
 - [2026-07-17](papers/2026-07-17.md) - 9 papers
@@ -117,6 +118,210 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-22 (12 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-07-22
+
+**Paper Count**: 12
+
+---
+
+## 1. ABot-World-0: Infinite Interactive World Rollout on a Single Desktop GPU / ABot-World-0：在单个桌面 GPU 上推出无限交互世界
+
+**Date**: 2026-07-21 | **arXiv**: [2607.19191v1](http://arxiv.org/abs/2607.19191v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.19191v1)
+
+**Categories**: cs.CV, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present ABot-World-0, an action-conditioned video world model for real-time, long-horizon closed-loop interaction, supported by a multi-source data infrastructure spanning AAA games, simulation engines, and internet videos to learn controllable world dynamics. WorldExplorer performs agent-driven collection guided by training feedback, while a unified pipeline applies 14 deterministic quality checks, VLM-based assessment, and synchronized action and text annotation. We progressively distill a bidirectional action-conditioned teacher into a causal student through teacher forcing and ODE distillation, and introduce LongForcing to align long student self-rollouts with an extended-horizon teacher, mitigating accumulated distribution shift and autoregressive drift. Raw keyboard actions provide a unified control interface for scene roaming and third-person character interaction, while reference-character memory provides persistent appearance cues for identity consistency during third-person rollouts. For deployment, we co-design a streaming inference stack with a lightweight VAE decoder, efficient attention, memory-aware scheduling, and low-bit DiT inference. Across optimized low-bit configurations, ABot-World-0 streams 720P video at up to 16 FPS on a single NVIDIA RTX 5090 desktop GPU, with 1.2s action-to-first-frame latency and approximately 19GiB peak VRAM. Experiments on WorldRoamBench and extended interactive rollouts demonstrate competitive controllability and coherent long-horizon world evolution.
+
+我们提出了 ABot-World-0，一种用于实时、长视野闭环交互的动作条件视频世界模型，由涵盖 AAA 游戏、模拟引擎和互联网视频的多源数据基础设施支持，以学习可控的世界动态。 WorldExplorer 在训练反馈的指导下执行代理驱动的收集，同时统一的管道应用 14 项确定性质量检查、基于 VLM 的评估以及同步操作和文本注释。我们通过教师强制和 ODE 蒸馏，逐步将双向动作条件教师提炼为因果学生，并引入 LongForcing 将长期学生自我推出与扩展视野教师对齐，从而减轻累积的分布偏移和自回归漂移。原始键盘操作为场景漫游和第三人称角色交互提供了统一的控制界面，而参考角色记忆则为第三人称推出期间的身份一致性提供了持久的外观线索。为了部署，我们共同设计了一个具有轻量级 VAE 解码器、高效注意力、内存感知调度和低位 DiT 推理的流推理堆栈。通过优化的低位配置，ABot-World-0 在单个 NVIDIA RTX 5090 桌面 GPU 上以高达 16 FPS 的速度传输 720P 视频，具有 1.2 秒的动作到第一帧延迟和大约 19GiB 峰值 VRAM。 WorldRoamBench 和扩展交互式部署的实验证明了竞争可控性和连贯的长期世界演化。
+
+</details>
+
+---
+
+## 2. NaviAIS: A Scenario-Level Vessel Trajectory Prediction Dataset withVectorized Lane Priors and the NaviLane Forecasting Framework / NaviAIS：具有矢量化车道先验和 NaviLane 预测框架的场景级船舶轨迹预测数据集
+
+**Date**: 2026-07-21 | **arXiv**: [2607.18887v1](http://arxiv.org/abs/2607.18887v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.18887v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vessel trajectory prediction in complex maritime environments is essential for traffic management, collision warning, route planning, and autonomous navigation. Although AIS-based learning methods have progressed rapidly, existing datasets are often released as raw message streams or irregular time series, with inconsistent sampling rates, noisy observations, heterogeneous coordinate systems, and non-unified scenario protocols. Most public AIS resources also lack structured representations of navigational lanes, waterway geometry, and navigable-region constraints, limiting reproducible, environment-aware forecasting. To address this, we introduce NaviAIS, a standardized scenario-level AIS dataset for vessel trajectory prediction. It organizes multi-vessel historical-future trajectories within unified temporal windows and local coordinate systems, and provides rasterized navigable maps, vectorized lane priors, lane graphs, and structured map representations. Compared with existing datasets, it jointly supports vectorized lanes, multi-scenario coverage, vectorized maps, open accessibility, and processed trajectories. Built on this dataset, we propose NaviLane, a hierarchical macro-action framework for map-aware prediction. NaviLane first performs trajectory-map joint encoding for a unified scene representation, then uses a discrete macro-action codebook to generate multimodal candidates coarse-to-refined. A residual refinement module improves local geometric and dynamical consistency, and a world-model-based consequence-aware evaluator ranks candidates by interaction risk and environmental feasibility. Experiments show NaviLane outperforms representative baselines in both single-modal and multimodal settings, confirming the value of structured navigational priors, hierarchical multimodal generation, and consequence-aware evaluation.
+
+复杂海洋环境中的船舶轨迹预测对于交通管理、碰撞预警、路线规划和自主导航至关重要。尽管基于AIS的学习方法进展迅速，但现有数据集通常以原始消息流或不规则时间序列的形式发布，存在采样率不一致、观测值噪声、坐标系异构、场景协议不统一等问题。大多数公共 AIS 资源还缺乏航道、水道几何形状和航行区域限制的结构化表示，限制了可重复的、环境感知的预测。为了解决这个问题，我们引入了 NaviAIS，这是一个用于船舶轨迹预测的标准化场景级 AIS 数据集。它在统一的时间窗口和局部坐标系内组织多船历史-未来轨迹，并提供栅格化可导航地图、矢量化车道先验、车道图和结构化地图表示。与现有数据集相比，它共同支持矢量化车道、多场景覆盖、矢量化地图、开放可达性和处理轨迹。在此数据集的基础上，我们提出了 NaviLane，一种用于地图感知预测的分层宏观操作框架。 NaviLane 首先对统一场景表示执行轨迹图联合编码，然后使用离散宏动作码本生成从粗到细的多模态候选。残差细化模块提高了局部几何和动态一致性，基于世界模型的后果感知评估器根据交互风险和环境可行性对候选者进行排名。实验表明，NaviLane 在单模态和多模态设置中均优于代表性基线，证实了结构化导航先验、分层多模态生成和结果感知评估的价值。
+
+</details>
+
+---
+
+## 3. DWM: Separating World Effects from Actions in Latent World Models / DWM：将世界影响与潜在世界模型中的动作分开
+
+**Date**: 2026-07-21 | **arXiv**: [2607.18715v1](http://arxiv.org/abs/2607.18715v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.18715v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Latent world models underpin much of modern model-based control, yet current action-conditioned formulations supervise   the next-latent transition with a single, undifferentiated target, forcing a monolithic learning signal to absorb every   source of state change. In real world, however, transitions arise from two heterogeneous sources: an action-driven   component induced by the agent, and an action-invariant world effect -- the change that would still occur under a null   action, dictated by the environment's intrinsic dynamics (e.g., gravity-driven sliding, inertia, contact rebound, and   persistent drift). Fusing them into a single target entangles the two inside the latent transition, prevents the model   from attributing observed changes to their underlying causes, and undermines the transferability of the learned   dynamics. We introduce DWM (Decomposed World Model), a supervision-level framework that operationalizes this   decomposition. DWM augments the predictor of a latent world model with an auxiliary world head, regularized by a   normalized world-contrastive objective to be action-invariant, while the original pred head is coupled to it via an   orthogonality constraint; together, the two signals induce an explicit additive decomposition of the predicted   transition into an action-invariant and a complementary action-driven component, without altering the underlying   architecture or inference pipeline. To evaluate DWM under persistent world effects, we construct W-variants of three   standard control benchmarks -- PushT-W, Reacher-W, and TwoRoom-W -- each instantiating a distinct action-invariant   dynamic. DWM matches strong baselines on the flat counterparts and delivers a mean absolute improvement of 13.1% in CEM   planning success across the W-variants.
+
+潜在世界模型支撑着许多现代基于模型的控制，但当前的动作条件公式通过单一的、无差异的目标来监督下一个潜在的转变，迫使整体学习信号吸收状态变化的每一个来源。然而，在现实世界中，转换由两个异质源产生：由代理引起的动作驱动组件，以及动作不变的世界效应——在零动作下仍然会发生的变化，由环境的内在动力学（例如，重力驱动的滑动、惯性、接触反弹和持续漂移）决定。将它们融合成一个目标会使两者在潜在转变中纠缠在一起，阻止模型将观察到的变化归因于其根本原因，并破坏所学动态的可转移性。我们引入了 DWM（分解世界模型），这是一个可操作这种分解的监督级框架。 DWM 使用辅助世界头增强了潜在世界模型的预测器，通过标准化世界对比目标将其正规化为动作不变，而原始预测头通过正交性约束与其耦合；两个信号一起将预测的转换显式加法分解为动作不变和互补的动作驱动组件，而无需改变底层架构或推理管道。为了评估持续世界影响下的 DWM，我们构建了三个标准控制基准的 W 变体——PushT-W、Reacher-W 和 TwoRoom-W——每个都实例化了一个独特的动作不变动态。 DWM 与平坦对应产品的强大基线相匹配，并且在 W 变体中的 CEM 规划成功率方面平均绝对提高了 13.1%。
+
+</details>
+
+---
+
+## 4. Do AI-Native Biotechs Need Departments? Benchmarking Company World Models for AI-Driven Drug Development / 人工智能原生生物技术公司需要部门吗？人工智能驱动药物开发的公司世界模型基准测试
+
+**Date**: 2026-07-21 | **arXiv**: [2607.18696v1](http://arxiv.org/abs/2607.18696v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.18696v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+AI-native biotechnology companies are often designed by copying human biotech org charts into agent roles. We argue for a different abstraction: a Company World Model, defined as a persistent asset-to-value state representation with transition models, explicit value functions, planning, and updating across scientific, regulatory, BD, commercial, financial, and execution constraints. We introduce a dry-lab benchmark for testing whether AI-agent organizations should mimic departments or operate around such a world model. The benchmark contains 45 retrospective public-information decision cases with strict time cutoffs, hidden outcomes, common schemas, automatic scoring, and blinded pairwise judging. We compare human-org-mimic, stronger human-org-mimic-plus, AI-native asset-centric, and AI-native value-conversion architectures. The value-conversion architecture is a prompt-level approximation of a Company World Model: a Live Asset Value Record updated by Deal, Approval, Revenue, and Investment Arbiter loops. Under a success function defined by external BD, regulatory approval and launch, and revenue discipline, it achieved the highest automatic value-conversion score and was strongly preferred over the original baselines by value-specific blinded judges. Stress tests narrowed the claim: a stronger human baseline remained competitive, and a neutral judge did not show robust value-conversion dominance. Codex-only mechanistic ablations suggest that Revenue Room, Deal Room, and Approval Room carry useful work under the target objective. The central finding is objective-sensitive: departments may remain useful governance views, but the core AI-native operating primitive should be a shared, predictive asset-to-value state rather than a static human org chart. The study is dry-lab only and does not establish real-world drug success, clinical benefit, or revenue prediction accuracy.
+
+人工智能原生生物技术公司通常是通过将人类生物技术组织结构图复制到代理角色来设计的。我们主张不同的抽象：公司世界模型，定义为持久的资产到价值状态表示，具有过渡模型、明确的价值函数、规划和跨科学、监管、业务发展、商业、财务和执行约束的更新。我们引入了一个干燥实验室基准，用于测试人工智能代理组织是否应该模仿部门或围绕这样的世界模型运作。该基准包含 45 个回顾性公共信息决策案例，具有严格的时间限制、隐藏结果、通用模式、自动评分和盲法配对判断。我们比较了 human-org-mimic、更强的 human-org-mimic-plus、AI 原生以资产为中心和 AI 原生价值转换架构。价值转换架构是公司世界模型的即时级近似：由交易、批准、收入和投资仲裁器循环更新的实时资产价值记录。在外部 BD、监管批准和启动以及收入纪律定义的成功函数下，它获得了最高的自动价值转换分数，并且比原始基线受到特定价值的盲评者的强烈青睐。压力测试缩小了这一说法：更强的人类基线仍然具有竞争力，而中立的法官没有表现出强大的价值转换优势。仅法典的机械消融表明，收入室、交易室和审批室在目标目标下开展了有用的工作。核心发现是客观敏感的：部门可能仍然是有用的治理观点，但核心的人工智能原生操作原语应该是共享的、可预测的资产价值状态，而不是静态的人类组织结构图。该研究仅是干燥实验室，并未确定真实世界的药物成功、临床效益或收入预测的准确性。
+
+</details>
+
+---
+
+## 5. Planning as Emergent Behavior in Reinforcement Learning with Relational Hidden States / 规划为具有关系隐藏状态的强化学习中的紧急行为
+
+**Date**: 2026-07-20 | **arXiv**: [2607.18589v1](http://arxiv.org/abs/2607.18589v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.18589v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reinforcement learning is conventionally divided into model-based and model-free methods. In this taxonomy, model-based methods perform lookahead planning over a learned world model, whereas model-free methods learn a reactive state-action mapping. Recent work, however, has shown that planning can emerge from model-free reinforcement learning alone. The conditions under which this behavior emerges from a pure reward-maximization objective have so far remained unclear. In this paper, we present evidence that, in the observed cases, the hidden-state structure of the neural architecture is the deciding factor. We find that a network of relational hidden states, each anchored to an environment state and exchanging messages along learned relations, acquires a planning mechanism. These hidden states recover the environment's transition structure in their learned relations, and improve the policy at decision time by planning over the learned graph. In a matched control agent that must additionally discover which cells represent which states, no such binding arises, and no planning follows from it. We argue that this explains the observed phenomenon of emergent planning in model-free reinforcement learning and raises the question of how common such emergent planning might be more generally. Finally, we hypothesize that the discovered mechanism could describe how planning emerges from pure reward maximization in the human brain through a neural architectural prior.
+
+强化学习通常分为基于模型的方法和无模型的方法。在这种分类中，基于模型的方法对学习的世界模型执行前瞻规划，而无模型的方法则学习反应性状态-动作映射。然而，最近的研究表明，规划可以仅从无模型强化学习中产生。迄今为止，尚不清楚这种行为是在什么条件下从纯粹的奖励最大化目标中产生的。在本文中，我们提供的证据表明，在观察到的情况下，神经架构的隐藏状态结构是决定因素。我们发现，关系隐藏状态的网络获得了规划机制，每个隐藏状态都锚定于环境状态并沿着学习的关系交换消息。这些隐藏状态在其学习关系中恢复环境的转换结构，并通过规划学习图来改进决策时的策略。在必须另外发现哪些细胞代表哪些状态的匹配控制代理中，不会出现这样的绑定，并且不会产生任何计划。我们认为，这解释了在无模型强化学习中观察到的紧急规划现象，并提出了这样的问题：这种紧急规划可能更普遍。最后，我们假设所发现的机制可以描述计划如何通过神经架构先验从人脑中的纯粹奖励最大化中产生。
+
+</details>
+
+---
+
+## 6. Integrity-Gated Eco-CACC: Epistemic Admissibility for Cooperative Driving at Signalized Intersections / 完整性门控 Eco-CACC：信号交叉口合作驾驶的认知可接受性
+
+**Date**: 2026-07-20 | **arXiv**: [2607.18565v1](http://arxiv.org/abs/2607.18565v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.18565v1)
+
+**Categories**: eess.SY, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Eco-Cooperative Adaptive Cruise Control (Eco-CACC) systems rely on accurate localization, signal timing, and interaction awareness to optimize energy consumption at signalized intersections. Existing approaches typically assume that the internal world model used for optimization remains valid, making them vulnerable when sensing outages or semantic inconsistencies invalidate planning premises. This letter proposes an Integrity-Gated Eco-CACC framework that explicitly monitors the consistency between internal vehicle beliefs and external sensing. A unified integrity metric is constructed by combining positional innovation, observability loss, and semantic inconsistencies. The resulting trust score regulates control authority, enabling a transition between nominal eco-driving and a safety-dominant fallback maneuver. Unlike robust control methods that attempt to preserve performance under uncertainty, the proposed framework regulates whether energy-optimal control remains admissible. Scenario-based simulations demonstrate that the method preserves nominal efficiency when model consistency is maintained, while enabling early and conservative responses under integrity degradation.
+
+生态合作自适应巡航控制 (Eco-CACC) 系统依靠准确的定位、信号定时和交互感知来优化信号交叉口的能源消耗。现有的方法通常假设用于优化的内部世界模型仍然有效，这使得它们在感知中断或语义不一致使规划前提无效时很容易受到攻击。这封信提出了一个完整性门控的 Eco-CACC 框架，该框架明确监控内部车辆信念和外部感知之间的一致性。通过结合位置创新、可观测性损失和语义不一致来构建统一的完整性度量。由此产生的信任评分调节控制权限，从而实现名义上的环保驾驶和以安全为主导的后备操作之间的过渡。与试图在不确定性下保持性能的鲁棒控制方法不同，所提出的框架规定能量最优控制是否仍然可接受。基于场景的模拟表明，该方法在保持模型一致性的情况下保留了名义效率，同时在完整性退化的情况下实现了早期和保守的响应。
+
+</details>
+
+---
+
+## 7. AlayaWorld: Interactive Long-Horizon World Modeling -- Full Technical Report / AlayaWorld：交互式长视界世界建模——完整技术报告
+
+**Date**: 2026-07-20 | **arXiv**: [2607.18367v1](http://arxiv.org/abs/2607.18367v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.18367v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Unlike conventional video game development, which relies on labor-intensive pipelines for asset production, animation, physics, and programming, video world models generate interactive environments from user inputs instantly. It enable us to create customized, explorable, and continuously evolving virtual world from text, an image, or video. Realizing this vision requires four tightly coupled capabilities: interaction, persistent spatiotemporal consistency, stable long-horizon generation, and efficient response. We present AlayaWorld, an interactive long-horizon video world model that generates 24-fps video at 540p and 720p. Built on a 15B video diffusion transformer, AlayaWorld generates short latent chunks autoregressively under camera trajectories and switchable text prompts. Its bounded visual context combines a persistent sink frame, compressed temporal history, geometry-aligned spatial memory, and recent-frame conditioning. To reduce long-term drift, the model is trained with corrupted histories and prediction residuals collected from its own roll-outs. We further introduce a discrete autoregressive distillation formulation that combines distribution-matching distillation, self-forcing++, and consistency distillation, reducing inference from approximately 30 sampling steps to four steps per chunk. On iWorld-Bench, AlayaWorld achieves the best performance over long-horizon generation. Conceived as a full-stack, open-source, and long-term project, AlayaWorld is intended to provide an extensible foundation for future research on interactive video world models.
+
+传统的视频游戏开发依赖于资源生产、动画、物理和编程的劳动密集型管道，而视频游戏开发则不同，视频世界模型可以根据用户输入立即生成交互式环境。它使我们能够从文本、图像或视频创建定制的、可探索的、不断发展的虚拟世界。实现这一愿景需要四种紧密耦合的能力：交互、持久的时空一致性、稳定的长视野生成和高效的响应。我们推出 AlayaWorld，一种交互式长视距视频世界模型，可生成 540p 和 720p 的 24 fps 视频。 AlayaWorld 基于 15B 视频扩散变压器构建，可在摄像机轨迹和可切换文本提示下自回归生成短的潜在块。其有界视觉上下文结合了持久的接收框架、压缩的时间历史、几何对齐的空间记忆和最近的帧调节。为了减少长期漂移，该模型使用从其自身的推出中收集的损坏的历史记录和预测残差进行训练。我们进一步引入了离散自回归蒸馏公式，该公式结合了分布匹配蒸馏、自强迫++和一致性蒸馏，将推理从大约 30 个采样步骤减少到每个块 4 个步骤。在 iWorld-Bench 上，AlayaWorld 在长视野生成中取得了最佳性能。 AlayaWorld 被视为一个全栈、开源和长期项目，旨在为交互式视频世界模型的未来研究提供可扩展的基础。
+
+</details>
+
+---
+
+## 8. FlashRT: Agent Harness for Guiding Agents to Deploy Real-Time Multimodal Applications / FlashRT：用于指导代理部署实时多模式应用程序的代理线束
+
+**Date**: 2026-07-20 | **arXiv**: [2607.18171v1](http://arxiv.org/abs/2607.18171v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.18171v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Real-time multimodal applications, including voice agents and interactive video generation, compose heterogeneous models into pipelines whose efficient deployment requires application-specific decisions about placement, streaming, and intra-model parallelism. Existing serving systems and auto-parallelism compilers commit to limited transformations and fixed workload assumptions, so achieving high performance on a new application requires hand-crafting an efficient implementation. We present FlashRT, an agent harness that guides coding agents to lift simple developer-written reference implementations into optimized multi-GPU deployments that flexibly weigh target metrics like latency and throughput. Using a new chain-of-program paradigm, FlashRT directs a generic coding agent through a multi-pass transformation process where an agent transforms the reference into an intermediate representation (IR) to capture data dependencies and persistent-state scopes, validates this IR via a sequential interpreter, and performs static analyses to identify candidate transformations. Then, the agent iteratively implements, verifies, and benchmarks each candidate under a measurement-gated optimization loop to produce effective deployments that span different hardware budgets. Across various applications, including video world models and multimodal LLMs, FlashRT converts reference implementations into highly efficient deployments, delivering up to ~70x latency reduction and 2.8x throughput improvement on NVIDIA B200 GPUs. On AMD MI355X GPUs, FlashRT matches the peak latency reduction while increasing peak throughput improvement to 3.6x, demonstrating that agent-driven optimization can be more scalable on platforms with less mature expert optimization. In fact, for Qwen3-Omni text-to-audio inference, FlashRT reduces response latency by 65% compared to the expert vLLM-Omni implementation on AMD MI355X.
+
+实时多模式应用程序（包括语音代理和交互式视频生成）将异构模型组合成管道，其有效部署需要有关放置、流式传输和模型内并行性的特定于应用程序的决策。现有的服务系统和自动并行编译器致力于有限的转换和固定的工作负载假设，因此在新应用程序上实现高性能需要手工设计高效的实现。我们推出了 FlashRT，这是一种代理工具，可指导编码代理将简单的开发人员编写的参考实现提升为优化的多 GPU 部署，从而灵活权衡延迟和吞吐量等目标指标。使用新的程序链范例，FlashRT 通过多通道转换过程指导通用编码代理，其中代理将引用转换为中间表示 (IR) 以捕获数据依赖性和持久状态范围，通过顺序解释器验证此 IR，并执行静态分析以识别候选转换。然后，代理在测量门控优化循环下迭代地实施、验证和基准测试每个候选者，以产生跨越不同硬件预算的有效部署。在视频世界模型和多模式 LLM 等各种应用中，FlashRT 将参考实现转换为高效部署，在 NVIDIA B200 GPU 上实现约 70 倍的延迟减少和 2.8 倍的吞吐量提高。在 AMD MI355X GPU 上，FlashRT 在降低峰值延迟的同时将峰值吞吐量提高至 3.6 倍，这表明代理驱动的优化在专家优化不太成熟的平台上具有更高的可扩展性。事实上，对于 Qwen3-Omni 文本到音频推理，与 AMD MI355X 上的专家 vLLM-Omni 实现相比，FlashRT 将响应延迟减少了 65%。
+
+</details>
+
+---
+
+## 9. SAGE: Subgoal-Conditioned Action Generation for Latent World Model Planning / SAGE：潜在世界模型规划的子目标条件行动生成
+
+**Date**: 2026-07-20 | **arXiv**: [2607.17973v1](http://arxiv.org/abs/2607.17973v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.17973v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Latent world models have emerged as a powerful planning paradigm by learning action-conditioned predictive dynamics and using them as internal simulators to imagine and evaluate candidate action sequences. However, as the planning horizon grows, performance becomes increasingly constrained by proposal quality: a fixed candidate budget must search an exponentially larger action space, making it difficult to expose the world model to high-quality candidate futures for evaluation. In this paper, we introduce a prior-conditioned planner that replaces random proposal initialization with structured guidance. At each planning stage, a goal-conditioned generator predicts the next reachable latent subgoal for a specified duration, which is then used to condition the generation of candidate action sequences. To capture semantic information across temporal scales, we use subgoals of varying durations as priors, balancing fine-grained local control with higher-level long-horizon progress. Then the frozen world model evaluates and refines these subgoal-conditioned proposals before execution. Experiments on PushT and OGBench Cube show that coupling latent subgoal decomposition with prior-conditioned action generation substantially improves long-horizon planning while preserving strong short-horizon performance. To be specific, when the target offset is $150$, it raises PushT success from $12.7\%$ to $64.7\%$ and OGBench Cube success from $26.7\%$ to $67.3\%$.
+
+通过学习动作条件预测动力学并将其用作内部模拟器来想象和评估候选动作序列，潜在世界模型已成为强大的规划范例。然而，随着规划范围的增长，性能越来越受到提案质量的限制：固定的候选预算必须搜索指数级更大的行动空间，从而很难将世界模型暴露给高质量的候选未来进行评估。在本文中，我们引入了一种先验条件规划器，它用结构化指导代替随机提案初始化。在每个规划阶段，目标调节生成器会预测指定持续时间内下一个可达到的潜在子目标，然后将其用于调节候选动作序列的生成。为了跨时间尺度捕获语义信息，我们使用不同持续时间的子目标作为先验，平衡细粒度的局部控制与更高级别的长期进展。然后，冻结世界模型在执行之前评估和完善这些以子目标为条件的建议。 PushT 和 OGBench Cube 上的实验表明，将潜在子目标分解与先验条件动作生成相结合可显着改善长期规划，同时保持强大的短期性能。具体来说，当目标偏移量为 $150$ 时，它将 PushT 成功率从 $12.7\%$ 提高到 $64.7\%$，将 OGBench Cube 成功率从 $26.7\%$ 提高到 $67.3\%$。
+
+</details>
+
+---
+
+## 10. Planning with Transformers: Chain of Computation and Structured Context Windows / 使用 Transformers 进行规划：计算链和结构化上下文窗口
+
+**Date**: 2026-07-20 | **arXiv**: [2607.17710v1](http://arxiv.org/abs/2607.17710v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.17710v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large Language Models (LLMs) have had a remarkable impact across many areas of machine learning. However, recent studies have shown that they struggle to reliably solve planning problems. At the same time, theoretical results have shown that transformers, the core architecture underlying modern LLMs, are Turing-complete. In this work, we investigate this apparent gap between the theoretical computational power of LLMs and their empirical planning performance. We propose Chain of Computation (COC), a computational architecture that places a transformer-based LM inside an iterative loop, leveraging its strength as a pattern-matching system. The COC uses a Structured Context Window (SCW) which provides a constant-sized context window with support for choosing which window is used at each planning step. Within this architecture, the LM is able to learn a planning policy, predicts the world model, and performs the arithmetic operations required during planning. We show that, when given an append-only SCW (resembling a Turing Machine tape), even relatively small LMs trained from scratch can learn planning policies and generalize from a small number of training instances within each planning domain, achieving success rates above 99.89\% on BlocksWorld and the Pancake puzzle. Our analysis of failure cases in Tower of Hanoi (TOH) reveals that they arise from arithmetic operations or from encountering previously unseen tokens. We show that COC can solve TOH problem instances with up to 20 disks, requiring over 1 million actions, while requiring substantially less training data by either (1) planning with symbolical support for arithmetic or by (2) using a deterministic pushdown automaton (PDA) formulation for the SCW.
+
+大型语言模型 (LLM) 对机器学习的许多领域产生了显着的影响。然而，最近的研究表明，他们很难可靠地解决规划问题。同时，理论结果表明，现代法学硕士的核心架构 Transformer 是图灵完备的。在这项工作中，我们研究了法学硕士的理论计算能力与其实证规划性能之间的明显差距。我们提出了计算链（COC），这是一种计算架构，它将基于 Transformer 的 LM 放置在迭代循环中，利用其作为模式匹配系统的优势。 COC 使用结构化上下文窗口 (SCW)，它提供了一个恒定大小的上下文窗口，支持选择在每个规划步骤中使用哪个窗口。在此架构中，LM 能够学习规划策略、预测世界模型并执行规划期间所需的算术运算。我们表明，当给定一个仅附加的 SCW（类似于图灵机磁带）时，即使是从头开始训练的相对较小的 LM 也可以学习规划策略并从每个规划域内的少量训练实例中进行泛化，在 BlocksWorld 和 Pancake 难题上实现超过 99.89% 的成功率。我们对河内塔（TOH）失败案例的分析表明，它们是由算术运算或遇到以前未见过的令牌引起的。我们证明，COC 可以解决具有多达 20 个磁盘的 TOH 问题实例，需要超过 100 万次操作，同时通过 (1) 通过算术的符号支持进行规划或 (2) 使用 SCW 的确定性下推自动机 (PDA) 公式，需要显着减少的训练数据。
+
+</details>
+
+---
+
+## 11. Predictive Training with Latent Imagination for Visual Quadruped Navigation / 具有潜在想象力的视觉四足导航预测训练
+
+**Date**: 2026-07-20 | **arXiv**: [2607.17574v1](http://arxiv.org/abs/2607.17574v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.17574v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reinforcement-learning navigation policies for legged robots select actions reactively from current observations and short-term memory, with limited capacity to anticipate how moving obstacles will evolve in the near future. In dynamic environments, this reactivity causes the robot to respond too late because collision risk depends on short-horizon scene structure rather than on current obstacle positions alone. Lightweight predictive supervision applied to the policy's recurrent state during training can encode anticipatory obstacle dynamics without modifying the inference-time controller. We augment a reactive LSTM-SRU navigation backbone with an auxiliary JEPA-style predictor and SIGReg regularization: during training, the predictor supervises the deterministic hidden state to anticipate its own next state; at inference, it is fully discarded, incurring zero additional computational cost. On simulated and real-world navigation benchmarks with dynamic obstacles, our method substantially improves navigation success while reducing collision rates through the predictive training signal alone, without additional inference-time parameters. Real-robot deployment on a Unitree Go2 demonstrates zero-shot sim-to-real transfer: the controller navigates cluttered indoor and dynamic outdoor environments without fine-tuning, with evasive behavior consistent with the collision reduction observed in simulation.
+
+腿式机器人的强化学习导航策略根据当前观察和短期记忆反应性地选择行动，预测移动障碍物在不久的将来将如何演变的能力有限。在动态环境中，这种反应性会导致机器人响应太晚，因为碰撞风险取决于短视场场景结构，而不仅仅是当前障碍物位置。在训练期间应用于策略的循环状态的轻量级预测监督可以对预期障碍动态进行编码，而无需修改推理时间控制器。我们通过辅助 JEPA 式预测器和 SIGReg 正则化增强了反应式 LSTM-SRU 导航主干：在训练期间，预测器监督确定性隐藏状态以预测其自己的下一个状态；推断，它被完全丢弃，产生零额外计算成本。在具有动态障碍物的模拟和现实世界导航基准上，我们的方法仅通过预测训练信号即可显着提高导航成功率，同时降低碰撞率，而无需额外的推理时间参数。 Unitree Go2 上的真实机器人部署演示了零射击模拟到真实的传输：控制器无需微调即可导航杂乱的室内和动态室外环境，其规避行为与模拟中观察到的碰撞减少一致。
+
+</details>
+
+---
+
+## 12. Thinking in Video: Can Video Generators Really Reason About the Real World? / 用视频思考：视频生成器真的能推理现实世界吗？
+
+**Date**: 2026-07-20 | **arXiv**: [2607.17523v1](http://arxiv.org/abs/2607.17523v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.17523v1)
+
+**Categories**: cs.CV, cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in world models and video generation have given rise to an emerging reasoning paradigm that leverages video generative models to simulate, predict, and reason about real-world dynamics. We redefine this paradigm as Thinking in Video, where video is not merely an output artifact but a medium for constructing, extending, and verifying causal thought. However, this promise remains unverified: convincing rollouts may reflect memorized appearances rather than causal understanding, while existing metrics separate perceptual fidelity from semantic logic. To evaluate whether video generators support such reasoning, we introduce the Causal-Generative Dual-Judge (CGDJ), auditing World Model Consistency from two perspectives. Explicit Causal Perception tests whether a generator reads a video scenario as a reasoning problem through spatio-temporal flattened visual question answering, while Implicit Generative Perception-Prediction Gap evaluates whether it renders the causal consequence as a consistent future video. Applying CGDJ to representative open- and closed-source generators reveals a clear Perception-Prediction Gap: open-source models produce plausible dynamics despite near-zero explicit causal perception, whereas advanced closed-source systems show stronger but still limited alignment between reasoning and generation. Further analysis exposes audio-visual misalignment, where models verbalize correct causal logic more reliably than they render it, challenging the "world simulator" narrative.
+
+世界模型和视频生成的最新进展催生了一种新兴的推理范式，它利用视频生成模型来模拟、预测和推理现实世界的动态。我们将这种范式重新定义为“视频思维”，其中视频不仅仅是一种输出工件，而且是构建、扩展和验证因果思维的媒介。然而，这一承诺仍未得到验证：令人信服的推出可能反映的是记忆的外观而不是因果理解，而现有的指标将感知保真度与语义逻辑分开。为了评估视频生成器是否支持这种推理，我们引入了因果生成双判断（CGDJ），从两个角度审核世界模型一致性。显式因果感知测试生成器是否通过时空扁平化视觉问答将视频场景解读为推理问题，而隐式生成感知-预测差距则评估它是否将因果结果呈现为一致的未来视频。将 CGDJ 应用于代表性的开源和闭源生成器揭示了明显的感知预测差距：尽管显式因果感知接近于零，开源模型仍产生合理的动态，而先进的闭源系统在推理和生成之间表现出更强但仍然有限的一致性。进一步的分析揭示了视听错位，模型用语言表达正确的因果逻辑比渲染它更可靠，挑战了“世界模拟器”的叙述。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-21 (3 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-07-21
