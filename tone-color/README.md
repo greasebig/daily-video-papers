@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-22](papers/2026-07-22.md) - 5 papers
 - [2026-07-20](papers/2026-07-20.md) - 1 papers
 - [2026-07-17](papers/2026-07-17.md) - 1 papers
 - [2026-07-15](papers/2026-07-15.md) - 4 papers
@@ -47,6 +48,98 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-22 (5 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-07-22
+
+**Paper Count**: 5
+
+---
+
+## 1. Luminosity-Adaptive Contrast Enhancement Using CLAHE for Retinal Fundus Images with Quantitative Validation and Comparative Analysis / 使用 CLAHE 对视网膜眼底图像进行亮度自适应对比度增强，并进行定量验证和比较分析
+
+**Date**: 2026-07-20 | **arXiv**: [2607.17691v1](http://arxiv.org/abs/2607.17691v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.17691v1)
+
+**Categories**: eess.IV, cs.CV, cs.ET
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Background: Retinal fundus imaging is central to the early diagnosis of sight-threatening conditions including diabetic retinopathy, glaucoma, and retinal vein occlusion. Clinical utility of fundus images is routinely compromised by non-uniform illumination, motion blur, and low contrast - artefacts that increase the risk of diagnostic error. Effective image enhancement is therefore a prerequisite for reliable computer-aided ophthalmic diagnosis. Methods: This study proposes a two-stage image enhancement pipeline combining luminosity correction via HSV colour space decomposition with Contrast Limited Adaptive Histogram Equalization (CLAHE) applied exclusively to the Value (V) channel. Experiments are conducted on the publicly available DRIVE dataset (40 retinal fundus images, 584 x 565 pixels, Canon CR5 camera, ophthalmologist-annotated ground truth). Quantitative evaluation employs Peak Signal-to-Noise Ratio (PSNR), Structural Similarity Index (SSIM), and Contrast-to-Noise Ratio (CNR). Baseline comparisons include standard Histogram Equalization (HE) and Adaptive Histogram Equalization (AHE). A binary masking step is subsequently applied to isolate hyper-reflective regions consistent with vascular pathology. Results: The proposed method achieves PSNR = 29.3 dB, SSIM = 0.91, and CNR = 3.12 - outperforming HE (PSNR = 21.4 dB, SSIM = 0.74) and AHE (PSNR = 23.1 dB, SSIM = 0.79) across all metrics, with an average processing time of 0.14 seconds per image. Conclusions: The combined luminosity-CLAHE pipeline yields measurably superior contrast and structural fidelity compared to established baseline methods, with processing speed compatible with clinical screening workflows. Limitations and directions for deep-learning-based comparison are discussed.
+
+背景：视网膜眼底成像对于威胁视力的疾病（包括糖尿病视网膜病变、青光眼和视网膜静脉阻塞）的早期诊断至关重要。眼底图像的临床实用性通常会受到不均匀照明、运动模糊和低对比度的影响——这些伪影会增加诊断错误的风险。因此，有效的图像增强是可靠的计算机辅助眼科诊断的先决条件。方法：本研究提出了一种两阶段图像增强管道，将通过 HSV 颜色空间分解进行的亮度校正与专门应用于值 (V) 通道的对比度有限自适应直方图均衡 (CLAHE) 相结合。实验在公开可用的 DRIVE 数据集（40 个视网膜眼底图像，584 x 565 像素，佳能 CR5 相机，眼科医生注释的地面实况）上进行。定量评估采用峰值信噪比 (PSNR)、结构相似性指数 (SSIM) 和对比度噪声比 (CNR)。基线比较包括标准直方图均衡 (HE) 和自适应直方图均衡 (AHE)。随后应用二元掩模步骤来隔离与血管病理学一致的高反射区域。结果：所提出的方法在所有指标上实现了 PSNR = 29.3 dB、SSIM = 0.91 和 CNR = 3.12 - 优于 HE（PSNR = 21.4 dB，SSIM = 0.74）和 AHE（PSNR = 23.1 dB，SSIM = 0.79），每个图像的平均处理时间为 0.14 秒。结论：与已建立的基线方法相比，组合的 luminosity-CLAHE 流程可产生明显优越的对比度和结构保真度，并且处理速度与临床筛选工作流程兼容。讨论了基于深度学习的比较的局限性和方向。
+
+</details>
+
+---
+
+## 2. Reviving Ancient Paintings via Poem: A Colorization Framework for Aligning Cultural Semantics / 以诗复兴古画：协调文化语义的着色框架
+
+**Date**: 2026-07-20 | **arXiv**: [2607.17638v1](http://arxiv.org/abs/2607.17638v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.17638v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The irreversible fading of ancient paintings disrupts the "congruence between poems and paintings", a core aesthetic principle where visual imagery harmonizes with literary inscriptions. Although diffusion models provide strong generative priors, restoring historically faithful colors remains difficult: visual restoration is inherently ambiguous, while direct text guidance often causes modern semantic bias, over-saturation, and cross-boundary color leakage. To address this, we propose PoemColor, a poem-guided ancient painting colorization framework. Our method aligns poetic cultural semantics with painting restoration through two key designs. First, the Poetic Painting Projector (P3) converts implicit poetic context into a classical color-aware condition via poem-to-palette pretraining, reducing the ambiguity of poem-to-color mapping. Second, Structure-Aware Semantic Attention (SASA) regulates how poetic color semantics are injected into the diffusion backbone by jointly controlling their propagation direction and regional injection strength. In addition, we construct a hybrid restoration dataset that integrates synthetic degradation with expert-restored artifacts, providing both scalable supervision and real classical color references. Extensive experiments demonstrate that our framework significantly outperforms state-of-the-art methods, delivering controllable colorization that revives both historical authenticity and poetic semantics.
+
+古画的不可逆转的褪色破坏了“诗画相合”这一视觉意象与文题和谐的美学核心原则。尽管扩散模型提供了强大的生成先验，但恢复历史上忠实的颜色仍然很困难：视觉恢复本质上是模糊的，而直接的文本引导通常会导致现代语义偏差、过度饱和和跨界颜色泄漏。为了解决这个问题，我们提出了 PoemColor，一个以诗歌为导向的古画着色框架。我们的方法通过两个关键设计将诗意文化语义与绘画修复结合起来。首先，诗意绘画投影仪（P3）通过诗歌到调色板的预训练将隐含的诗意语境转换为经典的颜色感知条件，减少诗歌到颜色映射的模糊性。其次，结构感知语义注意力（SASA）通过共同控制传播方向和区域注入强度来调节诗意颜色语义如何注入扩散主干。此外，我们构建了一个混合恢复数据集，将合成退化与专家恢复的文物相结合，提供可扩展的监督和真正的经典颜色参考。大量的实验表明，我们的框架显着优于最先进的方法，提供可控的着色，恢复历史真实性和诗意语义。
+
+</details>
+
+---
+
+## 3. Coarse-to-fine Framework for Generative MEF via Implicit Neural Representation / 通过隐式神经表示的生成 MEF 的粗到细框架
+
+**Date**: 2026-07-20 | **arXiv**: [2607.17611v1](http://arxiv.org/abs/2607.17611v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.17611v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multi-exposure fusion (MEF) expands the luminance range beyond what a single exposure can capture. Combining images taken at different exposure levels requires handling geometric differences while naturally merging their complementary brightness information. It often demands generative completion where details are missing. Diffusion-based generative methods address these challenges, however, they are computationally expensive and struggle to preserve fine structures in saturated regions. We propose LIIFusion, a coarse-to-fine framework that balances fusion quality and efficiency in generative MEF. The coarse stage performs low resolution generative fusion, enhanced by an adaptive exposure correction that recovers structure lost in saturated over-exposed areas. The fine stage adapts a local implicit image function into a multi-exposure fusion function: conditioned on the HR OE/UE sources and the coarse output, it queries arbitrary target coordinates and fuses source evidence regardless of the HR input resolution. LIIFusion achieves up to 3.5$\times$ speed-up over existing generative methods while maintaining or improving structural fidelity and perceptual quality. We believe this framework provides an effective pathway toward making generative MEF more practical in real-world applications.
+
+多重曝光融合 (MEF) 将亮度范围扩展到单次曝光所能捕获的范围之外。组合在不同曝光级别拍摄的图像需要处理几何差异，同时自然地合并其互补的亮度信息。它通常要求在缺少细节的情况下进行生成性补全。基于扩散的生成方法解决了这些挑战，然而，它们的计算成本很高，并且难以保留饱和区域的精细结构。我们提出了 LIIFusion，一个从粗到细的框架，可以平衡生成 MEF 中的融合质量和效率。粗阶段执行低分辨率生成融合，并通过自适应曝光校正来增强，恢复饱和过度曝光区域中丢失的结构。精细阶段将局部隐式图像函数调整为多重曝光融合函数：以 HR OE/UE 源和粗略输出为条件，无论 HR 输入分辨率如何，它都会查询任意目标坐标并融合源证据。 LIIFusion 比现有生成方法实现高达 3.5$\times$ 的加速，同时保持或提高结构保真度和感知质量。我们相信该框架提供了一条有效途径，使生成式 MEF 在实际应用中更加实用。
+
+</details>
+
+---
+
+## 4. Semantic Color Naturalness Breaker: Preventing Illegitimate Colorization via Content-Aware Color Priors / 语义颜色自然破坏者：通过内容感知颜色先验防止非法着色
+
+**Date**: 2026-07-20 | **arXiv**: [2607.17610v1](http://arxiv.org/abs/2607.17610v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.17610v1)
+
+**Categories**: cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Automatic image colorization enables large-scale and low-cost reuse of grayscale media (e.g., manga panels and archival photographs), facilitating unauthorized reuse and redistribution. Once released online, grayscale content can be readily turned into unauthorized colorized derivatives using off-the-shelf models, creating a practical need for proactive, content-side protection at publication time. Building on Uncolorable Examples (UE), which add imperceptible perturbations to released grayscale images to degrade unauthorized colorization, we propose Semantic Color Naturalness Breaker (SCNB) -- a semantic-level UE framework that drives colorization outputs toward content-inconsistent colors while preserving the visual fidelity of the released grayscale media. We further introduce Content-aware Color Distributional Distance (CaCDD), a ground-truth-free, content-aware measure of color plausibility derived from semantic color priors, used both as the optimization objective of SCNB and as an evaluation metric. Experiments on ImageNet show that our method remains effective under small perturbation budgets and common post-processing, supporting practical deployment in real-world content-sharing pipelines.
+
+自动图像着色可以大规模、低成本地重复使用灰度媒体（例如漫画面板和档案照片），从而促进未经授权的重复使用和重新分发。一旦在线发布，灰度内容就可以使用现成的模型轻松转换为未经授权的彩色衍生品，从而产生了在发布时主动进行内容侧保护的实际需求。 Uncolorable Examples (UE) 向已发布的灰度图像添加难以察觉的扰动，以降低未经授权的着色效果，在此基础上，我们提出了 Semantic Color Naturalness Breaker (SCNB)——一种语义级 UE 框架，可将着色输出推向内容不一致的颜色，同时保留已发布灰度媒体的视觉保真度。我们进一步介绍了内容感知颜色分布距离（CaCDD），这是一种基于语义颜色先验的、无地面事实的、内容感知的颜色可信度度量，既用作 SCNB 的优化目标，又用作评估指标。 ImageNet 上的实验表明，我们的方法在小扰动预算和常见后处理下仍然有效，支持现实世界内容共享管道中的实际部署。
+
+</details>
+
+---
+
+## 5. Bio-SFT: Asymmetric Cortical Guidance and Retinal Adaptation for Robust HDR Reconstruction / Bio-SFT：不对称皮质引导和视网膜适应，实现稳健的 HDR 重建
+
+**Date**: 2026-07-20 | **arXiv**: [2607.17456v1](http://arxiv.org/abs/2607.17456v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.17456v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recovering high dynamic range (HDR) radiance from a single standard dynamic range (SDR) image is highly ill-posed. Extreme luminance variation and severe quantization in dark regions make accurate reconstruction challenging, often leading to visual artifacts and color distortions. To address this problem, we propose Bio-SFT, a bio-inspired spiking frequency transformer for single-image HDR reconstruction. Bio-SFT incorporates three biologically motivated components. First, a learnable Naka--Rushton retinal adaptation frontend stabilizes the input under complex lighting conditions. Second, an explicit Parvo--Magno split introduces asymmetric Parvo-to-Magno guidance, allowing high-frequency structural cues to modulate low-frequency reconstruction. Third, an event-driven SNN hard gating module applies all-or-none spiking to suppress dark-region noise while preserving structural details. The module is trained with a sparsity prior to encourage efficient feature utilization. Built for end-to-end training within a transformer backbone, these lightweight components provide strong parameter efficiency. Experiments on HDRTV1K show that Bio-SFT achieves competitive perceptual quality and consistently improves HDR-VDP-3 and $ΔE_{ITP}$ while reducing artifact propagation in symmetric guidance pipelines.
+
+从单个标准动态范围 (SDR) 图像中恢复高动态范围 (HDR) 辐射度是非常不适定的。黑暗区域中极端的亮度变化和严重的量化给精确重建带来了挑战，通常会导致视觉伪影和颜色失真。为了解决这个问题，我们提出了 Bio-SFT，一种用于单图像 HDR 重建的仿生尖峰频率变换器。 Bio-SFT 包含三个生物驱动成分。首先，可学习的 Naka-Rushton 视网膜适应前端可在复杂的照明条件下稳定输入。其次，显式的 Parvo-Magno 分裂引入了不对称的 Parvo-to-Magno 引导，允许高频结构线索调制低频重建。第三，事件驱动的 SNN 硬门控模块应用全或无尖峰来抑制暗区噪声，同时保留结构细节。该模块先进行稀疏性训练，以鼓励有效的特征利用。这些轻量级组件专为变压器骨干内的端到端训练而构建，可提供强大的参数效率。 HDRTV1K 上的实验表明，Bio-SFT 实现了具有竞争力的感知质量，并持续改进 HDR-VDP-3 和 $ΔE_{ITP}$，同时减少对称引导管道中的伪影传播。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-20 (1 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-07-20
