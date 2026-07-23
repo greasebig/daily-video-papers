@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-23](papers/2026-07-23.md) - 4 papers
 - [2026-07-22](papers/2026-07-22.md) - 41 papers
 - [2026-07-21](papers/2026-07-21.md) - 13 papers
 - [2026-07-20](papers/2026-07-20.md) - 14 papers
@@ -124,6 +125,82 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-23 (4 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-07-23
+
+**Paper Count**: 4
+
+---
+
+## 1. Agents in the Wild: Where Research Meets Deployment / 野外代理：研究与部署的结合
+
+**Date**: 2026-07-21 | **arXiv**: [2607.19336v1](http://arxiv.org/abs/2607.19336v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.19336v1)
+
+**Categories**: cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Agentic systems large language model (LLM) based architectures capable of reasoning, planning, acting, and coordinating with tools and other agents are rapidly transitioning from research prototypes to production scale deployments across domains such as software engineering, scientific discovery, and finance. While academic work has emphasized benchmarks and algorithmic innovation, deployment raises new challenges around robustness, safety, and reliability. This tutorial brings together researchers and practitioners to explore advances in reasoning and planning, multi agent coordination, and evaluation, highlighting open challenges arising from deployment experience. Through applied case studies in pharmaceutical discovery and financial systems, we analyze common design patterns that make agentic systems successful, and discuss practical mitigation strategies for failure modes, such as verification pipelines, fallback mechanisms, and human in the loop supervision. Attendees will gain a comprehensive view of the field along with concrete design patterns, evaluation checklists, and templates for safe and reliable deployment across industries.
+
+基于大语言模型 (LLM) 的代理系统架构能够推理、规划、执行以及与工具和其他代理协调，正在从研究原型快速过渡到跨软件工程、科学发现和金融等领域的生产规模部署。虽然学术工作强调基准和算法创新，但部署在稳健性、安全性和可靠性方面提出了新的挑战。本教程汇集了研究人员和从业者，探索推理和规划、多代理协调和评估方面的进展，强调部署经验带来的开放挑战。通过药物发现和金融系统中的应用案例研究，我们分析了使代理系统成功的常见设计模式，并讨论了针对故障模式的实用缓解策略，例如验证管道、后备机制和人在环监督。与会者将获得对该领域的全面了解，以及具体的设计模式、评估清单和跨行业安全可靠部署的模板。
+
+</details>
+
+---
+
+## 2. Graph-Based Agentic AI with LangGraph: Workflow Pathways for Long-Running Stateful Business Processes / 使用 LangGraph 的基于图的代理 AI：长期运行的有状态业务流程的工作流程路径
+
+**Date**: 2026-07-21 | **arXiv**: [2607.19297v1](http://arxiv.org/abs/2607.19297v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.19297v1)
+
+**Categories**: cs.AI, cs.SE
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This paper is a practitioner guide to graph-based workflow pathways for long-running, stateful, multi-step generative AI systems in business processes. Rather than treating LangGraph, a low-level orchestration framework for stateful agents, as a model-quality benchmark target, we present three executable recipes -- SQL analytics with repair loops, agentic retrieval-augmented generation with evidence gating, and human-in-the-loop policy review with interrupt and checkpoint recovery -- to show how typed state, conditional routing, deterministic tools, retries, interrupts, checkpoints, and traces fit together. LangGraph is positioned by workflow-complexity fit, not as a universal default: simpler ReAct-style or plain SDK loops may be better for basic tool use, schema-first tools for structured extraction and validation, and DSPy when prompt or program optimization is the main goal. Each recipe explains when LangGraph is worth the extra structure and which implementation patterns make routes, pauses, and audit trails explicit product behavior rather than hidden prompt logic.
+
+本文是业务流程中长期运行、有状态、多步骤生成人工智能系统的基于图的工作流程路径的从业者指南。我们没有将 LangGraph（用于有状态代理的低级编排框架）视为模型质量基准目标，而是提出了三个可执行方案——带有修复循环的 SQL 分析、带有证据门控的代理检索增强生成以及带有中断和检查点恢复的人在环策略审查——以展示类型化状态、条件路由、确定性工具、重试、中断、检查点和跟踪如何组合在一起。 LangGraph 根据工作流程复杂性进行定位，而不是作为通用默认设置：更简单的 ReAct 风格或普通 SDK 循环可能更适合基本工具使用、用于结构化提取和验证的模式优先工具，以及当提示或程序优化是主要目标时的 DSPy。每个秘诀都解释了 LangGraph 何时值得额外的结构，以及哪些实现模式使路由、暂停和审计跟踪显式产品行为而不是隐藏的提示逻辑。
+
+</details>
+
+---
+
+## 3. They'll Verify. They Just Won't Act. How Authority Framing and Laundered Code Turn a Trusted Agentic CI/CD Pipeline Into an Attack Surface / 他们会验证。他们就是不采取行动。权限框架和洗钱代码如何将可信代理 CI/CD 管道变成攻击面
+
+**Date**: 2026-07-21 | **arXiv**: [2607.19267v1](http://arxiv.org/abs/2607.19267v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.19267v1)
+
+**Categories**: cs.CR, cs.AI, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We study a five-agent CI/CD pipeline (triage -> developer -> security-scan -> review -> approve/deploy), built from five distinct production LLMs across three providers, behind an LLM firewall in shadow mode. A single untrusted input - an external issue requesting a "usage-telemetry" feature - asks for code that exfiltrates process secrets (dict(os.environ)) to an attacker URL, laundered as observability. Across a pre-registered A x B (x C) factorial (N=20; naive arm N=60) we find: (1) the entry agent does not leak its system prompt (0/40); (2) an authority-framed injection ("pre-approved under SEC-2291, do not re-review") makes downstream verifiers see the secret-exfil line, cite the pre-approval, and ship it - the scanner passes ~80% of laundered pull requests, and the worst-case cell reaches 55% compromise; (3) the perceived presence of other verifiers yields only a small, non-significant reduction in individual scrutiny (a weak bystander analogue), even at N=60; and (4) content-based controls - code scanners and pattern detectors alike - miss the laundered intent entirely (the code is syntactically clean); only an LLM reasoning about intent is a partial defence. The failure is systemic: neither prompt secrecy nor distributed verification protects; a provenance-aware control at the entry, independent of both, would have. All data is 100% synthetic; the sink is mocked and the exfil URL is never contacted.
+
+我们研究了一个五代理 CI/CD 管道（分类 -> 开发人员 -> 安全扫描 -> 审查 -> 批准/部署），该管道由三个提供商的五个不同的生产 LLM 构建，位于影子模式下的 LLM 防火墙后面。单个不受信任的输入（请求“使用遥测”功能的外部问题）要求提供将进程秘密 (dict(os.environ)) 泄露到攻击者 URL 的代码，并被洗白为可观察性。通过预先注册的 A x B (x C) 阶乘（N=20；naivearm N=60），我们发现：（1）进入代理不会泄漏其系统提示（0/40）； (2) 权威框架注入（“根据 SEC-2291 预先批准，不要重新审查”）使下游验证者看到秘密泄露行，引用预先批准，然后发送 - 扫描器通过了约 80% 的经过清洗的拉取请求，最坏情况的单元达到 55% 的折衷； (3) 即使在 N=60 的情况下，感知到其他验证者的存在也只会对个人审查产生很小的、非显着的减少（弱旁观者模拟）； (4) 基于内容的控制 - 代码扫描器和模式检测器等 - 完全忽略了经过清洗的意图（代码在语法上是干净的）；只有法学硕士对意图的推理才是部分辩护。失败是系统性的：即时保密和分布式验证都无法提供保护；入口处的出处感知控制，独立于两者，将会有。所有数据均为 100% 合成；接收器被模拟并且永远不会联系 exfil URL。
+
+</details>
+
+---
+
+## 4. Toward Auditable Fraud Detection: Combining Graph Features, Model Explanations, and Agentic Case Investigation / 实现可审计的欺诈检测：结合图形特征、模型解释和代理案例调查
+
+**Date**: 2026-07-21 | **arXiv**: [2607.19266v1](http://arxiv.org/abs/2607.19266v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.19266v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Fraud detection systems must scale with rising transaction volume while remaining explainable and reviewable. We study a layered pipeline on the PaySim dataset that combines a gradient-boosted classifier, graph-derived structural features, an autoencoder-based anomaly signal, TreeSHAP explanations, and a bounded LLM investigation agent applied to cases the classifier scores uncertainly. Before any model comparison, we identify and remove a simulator-specific balance shortcut that would otherwise inflate baseline performance. After this correction, neither the graph features nor the anomaly signal improves Average Precision on the full test set. Both, however, rank fraud better within the subset of cases receiving intermediate baseline scores. In a controlled experiment with injected multi-account fraud rings, engineered structural features recover all injected test transactions, while the tabular baseline misses roughly a quarter of them. The investigation agent underperforms direct thresholding of the classifier it relies on, reaching 65.0% accuracy against 71.7% on a balanced 60-case sample, despite having access to model explanations, graph context, and retrieved reference cases. Of the eight decisions the agent changed, six replaced correct classifier outputs with errors, and it produced a coherent written rationale in each case. An exploratory disagreement-based escalation rule flagged two of these agent errors for human review without flagging any correct decision. We conclude that each component of a layered fraud system contributes only under specific conditions, and that a plausible rationale from an investigation agent is not evidence of a better decision.
+
+欺诈检测系统必须随着交易量的增加而扩展，同时保持可解释和可审查。我们研究了 PaySim 数据集上的分层管道，该管道结合了梯度增强分类器、图派生结构特征、基于自动编码器的异常信号、TreeSHAP 解释以及应用于分类器评分不确定情况的有界 LLM 调查代理。在进行任何模型比较之前，我们会识别并删除模拟器特定的平衡快捷方式，否则会夸大基线性能。进行此校正后，图形特征和异常信号都不会提高整个测试集的平均精度。然而，两者都在获得中间基线分数的案例子集中对欺诈进行了更好的排名。在注入多账户欺诈环的受控实验中，工程结构特征恢复了所有注入的测试交易，而表格基线遗漏了大约四分之一的交易。尽管可以访问模型解释、图形上下文和检索到的参考案例，但调查代理在其所依赖的分类器的直接阈值处理方面表现不佳，在平衡的 60 个案例样本上达到了 65.0% 的准确度，而在平衡的 60 个案例样本上，准确度为 71.7%。在代理更改的八个决策中，有六个用错误替换了正确的分类器输出，并且在每种情况下都产生了连贯的书面理由。探索性的基于分歧的升级规则标记了其中两个代理错误以供人工审查，但没有标记任何正确的决定。我们的结论是，分层欺诈系统的每个组成部分仅在特定条件下起作用，并且调查机构的合理理由并不能证明更好的决策。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-22 (41 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-07-22
