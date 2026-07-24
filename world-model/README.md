@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-24](papers/2026-07-24.md) - 9 papers
 - [2026-07-22](papers/2026-07-22.md) - 12 papers
 - [2026-07-21](papers/2026-07-21.md) - 3 papers
 - [2026-07-20](papers/2026-07-20.md) - 2 papers
@@ -118,6 +119,162 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-24 (9 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-07-24
+
+**Paper Count**: 9
+
+---
+
+## 1. Interaction Dynamics Modeling and Predictive Control for Safe Steerable Catheter--Tissue Interaction / 安全可转向导管的相互作用动力学建模和预测控制--组织相互作用
+
+**Date**: 2026-07-23 | **arXiv**: [2607.20939v1](http://arxiv.org/abs/2607.20939v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.20939v1)
+
+**Categories**: eess.SY, cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Safe steerable catheter control is fundamentally a problem of interaction dynamics: the tip must follow a planned motion, remain compliant against moving tissue, reject friction and hysteresis, and respect a clinically meaningful never-exceed contact-force bound. We formulate catheter--tissue interaction dynamics in the scalar tip-normal coordinate of a single-segment single-tendon catheter. A partial-physics feedforward cancels only the reliable nominal bending dynamics, exposing a configuration-invariant linear interaction-dynamics model whose input gain varies through the scalar catheter inertia. A predictive optimizer then regulates this interaction state subject to hard contact-force, tendon-force, and curvature constraints. An augmented Kalman filter compresses contact, friction, and modeling error into one sensor-free disturbance state, giving nominal offset-free regulation in free space while leaving force safety to the explicit constraint. The unconstrained and disturbance-free limit recovers classical catheter impedance as a special realization of the same interaction dynamics, rather than as the main design object. In a MuJoCo distributed-compliance simulation of an eight-link tendon-driven catheter, disturbance augmentation cuts free-space approach error by 90\%, and only the force-constrained predictive interaction-dynamics controller reconciles tracking with the 0.5\,N bound: the unconstrained controller drives contact force to 0.60\,N against a penetrating target, while the constrained one holds 0.47\,N at identical tracking. These results show that offset-free motion regulation and contact-force safety are coupled interaction-dynamics objectives, and that the explicit predictive constraint resolves their tension under stiff tissue contact. The bound also holds under $0.5$\,mm, $1.2$\,Hz cardiac motion. Hardware validation is future work.
+
+安全的可操纵导管控制从根本上来说是一个相互作用动力学问题：尖端必须遵循计划的运动，保持对移动组织的顺应性，拒绝摩擦和滞后，并遵守具有临床意义的永不超过接触力界限。我们在单段单腱导管的标量尖端法线坐标中制定了导管与组织相互作用的动力学。部分物理前馈仅取消可靠的标称弯曲动力学，从而暴露出配置不变的线性相互作用动力学模型，其输入增益随标量导管惯性而变化。然后，预测优化器会根据硬接触力、腱力和曲率约束来调节这种交互状态。增强卡尔曼滤波器将接触、摩擦和建模误差压缩为一种无传感器干扰状态，在自由空间中提供标称无偏移调节，同时将力安全性留给显式约束。无约束和无扰动极限恢复经典导管阻抗作为相同相互作用动力学的特殊实现，而不是作为主要设计对象。在八连杆腱驱动导管的 MuJoCo 分布式顺应性仿真中，扰动增强将自由空间逼近误差减少了 90%，并且只有力约束的预测交互动力学控制器能够与 0.5N 界限协调跟踪：无约束控制器将接触力驱动到穿透目标的 0.60N，而受约束的控制器在相同的跟踪下保持 0.47N。这些结果表明，无偏移运动调节和接触力安全是耦合的相互作用动力学目标，并且明确的预测约束解决了它们在刚性组织接触下的张力。该界限也保持在 $0.5$\,mm、$1.2$\,Hz 心脏运动以下。硬件验证是未来的工作。
+
+</details>
+
+---
+
+## 2. PhysCoRe: Physics-Corrected Residual World Models for Material-Aware Deformable Dynamics / PhysCoRe：用于材料感知可变形动力学的物理校正残差世界模型
+
+**Date**: 2026-07-22 | **arXiv**: [2607.20653v1](http://arxiv.org/abs/2607.20653v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.20653v1)
+
+**Categories**: cs.RO, cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Predicting how deformable objects evolve under robotic manipulation is a longstanding challenge. Existing approaches typically rely on per-object optimization to fit material parameters, which can be slow and cannot generalize, while end-to-end learned alternatives extrapolate poorly and often violate basic physical structure. We present PhysCoRe, a physics-corrected residual world model that couples a differentiable Material Point Method (MPM) simulator with two feed-forward neural networks. A material refinement module, Material from Motion (MfM), infers per-particle elasticity from visual observations, grounding the simulator in object-specific physics. A residual correction module, Residual from Dynamics (RfD), learns the discrepancy and predicts corrections to the simulator's internal dynamics, absorbing systematic biases that the analytical model cannot capture. This design also supports online material identification on novel objects. MfM adapts from limited interactions, and its predictive uncertainty steers further exploration toward the regions where its estimate is least confident. Experiments on real deformable-object manipulation sequences show that PhysCoRe outperforms state-of-the-art baselines in prediction accuracy, and that its predicted confidence forms a reliable distribution across the object's geometry, providing a natural signal for future confidence-guided exploration.
+
+预测可变形物体在机器人操纵下如何演化是一个长期的挑战。现有的方法通常依赖于每个对象的优化来适应材料参数，这可能很慢并且无法泛化，而端到端学习的替代方案推断效果很差并且经常违反基本的物理结构。我们提出了 PhysCoRe，这是一种经过物理校正的残差世界模型，它将可微分质点法 (MPM) 模拟器与两个前馈神经网络结合起来。材料细化模块“运动材料”(MfM) 从视觉观察中推断出每个粒子的弹性，使模拟器基于特定于对象的物理原理。残差校正模块“动力学残差”(RfD) 可了解差异并预测对模拟器内部动态的校正，吸收分析模型无法捕获的系统偏差。该设计还支持新奇物体的在线材质识别。 MfM 适应有限的相互作用，其预测不确定性引导进一步探索其估计最不可信的区域。对真实可变形对象操作序列的实验表明，PhysCoRe 在预测精度方面优于最先进的基线，并且其预测的置信度在对象的几何形状上形成了可靠的分布，为未来的置信引导探索提供了自然信号。
+
+</details>
+
+---
+
+## 3. Active Inference as a Convex Markov Decision Process / 作为凸马尔可夫决策过程的主动推理
+
+**Date**: 2026-07-22 | **arXiv**: [2607.20152v1](http://arxiv.org/abs/2607.20152v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.20152v1)
+
+**Categories**: cs.LG, cs.AI, stat.ML
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Active Inference (AIF) frames adaptive behavior as the minimization of expected free energy (EFE), combining epistemic and pragmatic objectives within a single variational principle. We frame AIF as policy optimization and show that, for closed-loop control policies, EFE minimization can be formulated as a convex Markov decision process (MDP). In this formulation, the pragmatic terms are linear in the predictive state marginals and therefore equivalent to reward maximization in a latent MDP, while the epistemic value introduces a nonlinear component that distinguishes EFE minimization from standard reinforcement learning. This perspective further reveals the epistemic drive of active inference as a policy-dependent (performative) reward. We analyze finite-horizon, discounted, and average-reward formulations of EFE and derive a mirror descent (MD) algorithm that locally linearizes the objective around the current state marginals, yielding a policy-dependent reward that is compatible with actor-critic methods and dynamic programming. Finally, we argue that coupling world-model learning with policy optimization gives active inference the structure of performative reinforcement learning, providing a route toward grounding active inference within modern reinforcement learning and optimization theory, including convergence analysis and principled policy improvement guarantees.
+
+主动推理 (AIF) 将自适应行为定义为预期自由能 (EFE) 的最小化，将认知目标和实用目标结合在单个变分原理中。我们将 AIF 定义为策略优化，并表明，对于闭环控制策略，EFE 最小化可以表示为凸马尔可夫决策过程 (MDP)。在这个公式中，实用项在预测状态边际中是线性的，因此相当于潜在 MDP 中的奖励最大化，而认知值引入了一个非线性组件，它将 EFE 最小化与标准强化学习区分开来。这种观点进一步揭示了主动推理作为政策依赖（执行）奖励的认知驱动力。我们分析了 EFE 的有限范围、折扣和平均奖励公式，并推导了一种镜像下降 (MD) 算法，该算法将当前状态边际附近的目标局部线性化，从而产生与行动者批评方法和动态规划兼容的策略依赖奖励。最后，我们认为，将世界模型学习与策略优化相结合，可以为执行强化学习的结构提供主动推理，为现代强化学习和优化理论中的主动推理提供基础，包括收敛分析和原则性政策改进保证。
+
+</details>
+
+---
+
+## 4. KineBench: Benchmarking Embodied World Models via IDM-Free Kinematic Grounding / KineBench：通过无 IDM 运动学接地对具体世界模型进行基准测试
+
+**Date**: 2026-07-22 | **arXiv**: [2607.19876v1](http://arxiv.org/abs/2607.19876v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.19876v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Evaluating the physical consistency of embodied world models(EWMs) is a critical open challenge. While closed-loop evaluation via simulator rollouts offers a more faithful assessment of physical plausibility than open-loop alternatives, existing frameworks almost exclusively rely on Inverse Dynamics Models(IDMs) for action extraction. Due to the intricate mapping from 2D pixel space to 3D kinematic space, the learned IDMs can be brittle to data outside their training distribution, resulting in unreliable action extraction from the generated videos with novel objects and scenarios. This creates an unavoidable attribution ambiguity between world model inaccuracies and extractor errors. To reduce this ambiguity, we present KineBench, an IDM-free closed-loop benchmark for EWMs, built upon an explicit kinematic grounding pipeline. Given a generated video, KineBench employs cascaded visual foundation models to directly extract 6D end-effector poses from individual frames, which are then executed in a physics simulator for closed-loop validation. Beyond execution-based task success, KineBench incorporates two classical 3D kinematic metrics--Spectral Arc Length (SPARC) and the Maruyama Manipulability Index--to characterize trajectory smoothness and kinematic feasibility from a robot-centric perspective. Built on 20 diverse manipulation tasks in ManiSkill3, KineBench evaluates EWMs across four progressive suites: basic execution, task transfer, visual out-of-distribution generalization, and complexity-conditioned scaling. Evaluation across frontier models reveals task-complexity-bounded nonlinear scaling in embodied video generation, providing empirical guidance for future data-scaling strategies.
+
+评估具体世界模型（EWM）的物理一致性是一个关键的开放挑战。虽然通过模拟器推出的闭环评估比开环替代方案提供了更忠实的物理合理性评估，但现有框架几乎完全依赖逆动态模型（IDM）来进行动作提取。由于从 2D 像素空间到 3D 运动学空间的复杂映射，学习的 IDM 可能对其训练分布之外的数据很脆弱，从而导致从生成的具有新颖对象和场景的视频中提取不可靠的动作。这在世界模型不准确和提取器错误之间造成了不可避免的归因模糊性。为了减少这种模糊性，我们推出了 KineBench，这是一种用于 EWM 的无 IDM 闭环基准测试，建立在显式运动学接地管道的基础上。给定生成的视频，KineBench 采用级联视觉基础模型直接从各个帧中提取 6D 末端执行器姿势，然后在物理模拟器中执行以进行闭环验证。除了基于执行的任务成功之外，KineBench 还结合了两个经典的 3D 运动学指标——光谱弧长 (SPARC) 和 Maruyama 可操作性指数——从以机器人为中心的角度来表征轨迹平滑度和运动学可行性。 KineBench 基于 ManiSkill3 中的 20 个不同的操作任务构建，可跨四个渐进套件评估 EWM：基本执行、任务传输、视觉分布外泛化和复杂性条件缩放。跨前沿模型的评估揭示了具体视频生成中任务复杂性有限的非线性缩放，为未来的数据缩放策略提供了经验指导。
+
+</details>
+
+---
+
+## 5. Dreamer-CPC: Message Learning with World Models for Decentralized Multi-agent Reinforcement Learning / Dreamer-CPC：使用世界模型进行消息学习，实现去中心化多智能体强化学习
+
+**Date**: 2026-07-22 | **arXiv**: [2607.19809v1](http://arxiv.org/abs/2607.19809v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.19809v1)
+
+**Categories**: cs.MA, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In multi-agent reinforcement learning (MARL), inter-agent communication is effective for improving performance under partial observability. Representation learning-based approaches enable decentralized agents to learn messages grounded in their own observations, but they rely only on current observations and cannot convey information accumulated over time. We propose Dreamer-CPC, a decentralized model-based MARL method that integrates message learning based on Collective Predictive Coding (CPC) into the world model of DreamerV3. Each agent independently maintains a world model and a message module, and infers and exchanges messages from the latent states of the world model that reflect the history of past observations and actions. We evaluated Dreamer-CPC in two environments: Observer, a non-cooperative information-sharing task, and CatchApple, a newly introduced task in which task-relevant observations are temporarily missing. In both environments, Dreamer-CPC outperformed IPPO-CPC, an existing CPC-based method that generates messages from current observations, as well as no-communication baselines. In particular, in CatchApple, Dreamer-CPC achieved 4 to 5 times the episode return of IPPO-CPC, demonstrating effective coordination where other methods fail due to missing observations. These results suggest that communication grounded in the latent dynamics of world models can support decentralized decision-making when current observations alone are insufficient.
+
+在多智能体强化学习（MARL）中，智能体间的通信对于提高部分可观测性下的性能是有效的。基于表示学习的方法使去中心化代理能够根据自己的观察来学习消息，但它们仅依赖于当前的观察，无法传达随着时间的推移积累的信息。我们提出了 Dreamer-CPC，这是一种基于去中心化模型的 MARL 方法，它将基于集体预测编码（CPC）的消息学习集成到 DreamerV3 的世界模型中。每个智能体独立维护一个世界模型和一个消息模块，并从反映过去观察和行动历史的世界模型的潜在状态中推断和交换消息。我们在两种环境中评估了 Dreamer-CPC：Observer（一种非合作信息共享任务）和 CatchApple（一种新引入的任务，其中暂时缺少任务相关的观察结果）。在这两种环境中，Dreamer-CPC 的性能均优于 IPPO-CPC，IPPO-CPC 是一种基于 CPC 的现有方法，可根据当前观察以及无通信基线生成消息。特别是，在 CatchApple 中，Dreamer-CPC 实现了 IPPO-CPC 的 4 到 5 倍的剧集回报，证明了在其他方法因缺失观察而失败的情况下的有效协调。这些结果表明，当仅靠当前观察还不够时，基于世界模型潜在动态的沟通可以支持去中心化决策。
+
+</details>
+
+---
+
+## 6. The World Model Remembers, the Actor Forgets: Dream Rehearsal for Continual Model-Based RL / 世界模型记得，演员忘记：基于持续模型的强化学习的梦想排演
+
+**Date**: 2026-07-22 | **arXiv**: [2607.19749v1](http://arxiv.org/abs/2607.19749v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.19749v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Model-based reinforcement-learning agents of the DreamerV3 family forget catastrophically when trained on task sequences, even when an unbounded replay buffer preserves every earlier experience. We ask a question the continual-RL literature has assumed an answer to but never measured: which component forgets? Under never-clear replay, pre-registered component-level probes (n=3 seeds throughout) show that the world model retains essentially everything measurable about old tasks -- reward discrimination (retention ratio ~1.0), value estimates, and termination structure -- while the actor's behavior collapses. Forgetting in this regime is a channel problem, not a memory problem. We demonstrate this by intervention: with the world model frozen and identical imagined rollouts, reinforcement learning in imagination fails to recover a lost skill (0/3 seeds), while supervised self-imitation on the world model's own graded dreams recovers it on 3/3 seeds with zero environment interaction. Interleaved during training, this graded dream rehearsal yields a task-label-free, parameter-constant continual learner: 3/3 four-task chains retained where plain replay passes 0/3, 3/3 eight-task chains, and consistent gains over matched real-episode cloning (paired difference +0.13, bootstrap 95% CI [0.07, 0.24], complete seed separation). The dream-grading step is load-bearing: we characterize two scoring failure modes, provide an offline selection gauge that caught both before they contaminated results, and give a realized-first grading rule that closes them. All experiments were pre-registered with committed protocols; every refuted hypothesis is reported.
+
+DreamerV3 系列基于模型的强化学习代理在接受任务序列训练时会发生灾难性的遗忘，即使无界重播缓冲区保留了所有早期经验。我们提出一个问题，连续强化学习文献已经假设了答案但从未测量过：哪个组件忘记了？在永远不清晰的重播下，预先注册的组件级探针（n = 3 个种子）表明，世界模型基本上保留了旧任务的所有可测量内容——奖励歧视（保留率~1.0）、价值估计和终止结构——而参与者的行为崩溃了。在这种情况下遗忘是一个通道问题，而不是记忆问题。我们通过干预来证明这一点：随着世界模型冻结和相同的想象推出，想象中的强化学习无法恢复丢失的技能（0/3种子），而对世界模型自己的分级梦想的监督自模仿在零环境交互的情况下在3/3种子上恢复它。在训练期间交错进行，这种分级梦演练产生了一个无任务标签、参数恒定的连续学习器：保留了 3/3 四任务链，而普通重播通过了 0/3、3/3 八任务链，并且比匹配的真实情节克隆获得一致的增益（配对差值 +0.13，引导 95% CI [0.07, 0.24]，完全种子分离）。梦想的评分步骤是承重的：我们描述了两种评分失败模式的特征，提供了一个离线选择标准，可以在它们污染结果之前捕获它们，并给出一个实现的优先评分规则来关闭它们。所有实验均按照承诺的方案预先注册；每一个被驳斥的假设都会被报告。
+
+</details>
+
+---
+
+## 7. Koopman Dreamer: Spectrally Constrained Latent Dynamics for Stable World-Model Imagination / 库普曼梦想家：稳定世界模型想象力的光谱约束潜在动力学
+
+**Date**: 2026-07-22 | **arXiv**: [2607.19719v1](http://arxiv.org/abs/2607.19719v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.19719v1)
+
+**Categories**: cs.LG, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Latent world models improve sample efficiency in continuous control by optimizing policies over imagined latent trajectories, but common neural transitions offer limited direct control over modal persistence and error accumulation in long rollouts. We propose Koopman Dreamer, a Dreamer-style world model with a spectrally constrained deterministic latent dynamics core. Its Koopman-inspired backbone uses two-dimensional rotation--scaling blocks with bounded radii to represent damping, rotation, and near-periodic modes. Linear and low-rank bilinear action terms capture global and state-dependent control effects, while stochastic-state modulation supplies local correction information. To reduce the mismatch between posterior-conditioned training and prior-only imagination, the model combines posterior-conditioned EMA teacher targets with one-step consistency, multi-step rollout, and open-loop observation-prediction objectives. We further derive a multi-step rollout-error bound that separates amplification by the spectral backbone and bilinear interaction from the additive effects of stochastic-state mismatch and modeling residuals, clarifying the trade-off between error attenuation and long-term information retention. Experimental results on proprioceptive continuous-control tasks from the DeepMind Control Suite and UAV-LiDAR autonomous navigation demonstrate that Koopman Dreamer improves the stability of long-horizon latent rollouts and achieves stronger closed-loop control performance on tasks that rely on high-quality multi-step imagination.
+
+潜在世界模型通过优化想象的潜在轨迹的策略来提高连续控制中的样本效率，但常见的神经转换对长期部署中的模态持久性和错误积累提供有限的直接控制。我们提出了 Koopman Dreamer，这是一种具有光谱约束的确定性潜在动力学核心的 Dreamer 风格的世界模型。其受库普曼启发的主干使用二维旋转——具有有界半径的缩放块来表示阻尼、旋转和近周期模式。线性和低秩双线性作用项捕获全局和状态相关的控制效果，而随机状态调制提供局部校正信息。为了减少后验条件训练和仅先验想象力之间的不匹配，该模型将后验条件 EMA 教师目标与一步一致性、多步推出和开环观察预测目标相结合。我们进一步推导了多步推出误差界限，将谱主干的放大和双线性相互作用与随机状态失配和建模残差的相加效应分开，阐明了误差衰减和长期信息保留之间的权衡。 DeepMind控制套件和无人机激光雷达自主导航的本体感觉连续控制任务的实验结果表明，Koopman Dreamer提高了长视界潜在推出的稳定性，并在依赖高质量多步想象的任务上实现了更强的闭环控制性能。
+
+</details>
+
+---
+
+## 8. LENS: LLM-guided Environment Simplification for Planning and Control in Clutter / LENS：法学硕士指导的环境简化，用于杂乱的规划和控制
+
+**Date**: 2026-07-22 | **arXiv**: [2607.19633v1](http://arxiv.org/abs/2607.19633v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.19633v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Despite recent advances in general-purpose robotic manipulation, real-world multi-object clutter remains challenging to handle for today's prevalent approaches. The problem scales in complexity due to more objects and collisions, more unpredictable contact physics, distractors, and task ambiguity. Bridging this gap to real-world deployment requires effective scene abstractions; yet today, producing such abstractions requires extensive task-specific manual engineering, which does not scale. These abstractions are costly to generate and difficult to adjust or fine-tune. We instead propose a plug-and-play fix to automatically generate scene-specific, task-specific, adaptively updating abstractions on top of existing planning and control stacks. LLM-guided Environment Simplification (LENS) produces a de-cluttered abstracted scene representation by merging (e.g., stacked objects) or pruning (e.g., distant objects) scene entities in a closed loop in response to task progress. These dynamic, task-relevant abstractions are versatile and easy to use. In our experiments, we show that LENS improves classical planning, model-based control, and a vision-language-action model, across a diverse set of highly cluttered manipulation scenes. Project website: https://lens-2026.github.io/.
+
+尽管通用机器人操作最近取得了进展，但对于当今流行的方法来说，现实世界的多对象杂乱仍然难以处理。由于更多的物体和碰撞、更多不可预测的接触物理、干扰因素和任务模糊性，问题变得更加复杂。缩小与现实世界部署的差距需要有效的场景抽象；然而今天，生成这样的抽象需要大量针对特定任务的手动工程，而这无法扩展。这些抽象的生成成本很高，并且难以调整或微调。相反，我们提出了一种即插即用的修复方案，以在现有规划和控制堆栈之上自动生成特定于场景、特定于任务、自适应更新的抽象。 LLM 引导的环境简化 (LENS) 通过在闭环中合并（例如，堆叠的对象）或修剪（例如，远处的对象）场景实体来响应任务进度，从而生成整洁的抽象场景表示。这些动态的、与任务相关的抽象是通用且易于使用的。在我们的实验中，我们表明 LENS 在各种高度混乱的操作场景中改进了经典规划、基于模型的控制和视觉-语言-动作模型。项目网站：https://lens-2026.github.io/。
+
+</details>
+
+---
+
+## 9. Masked Visual Actions for Unified World Modeling / 用于统一世界建模的蒙面视觉动作
+
+**Date**: 2026-07-21 | **arXiv**: [2607.19343v1](http://arxiv.org/abs/2607.19343v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.19343v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video models absorb rich priors over how the visual world moves, interacts, and responds to contact, making them promising substrates for robotic world modeling. The central challenge is how to communicate action to such models in a form aligned with the visual space in which they learned these interaction priors, yet still grounded in physical manipulation. We introduce Masked Visual Actions, a pixel-space control interface that expresses action as a partially revealed trajectory of an arbitrary entity in a video. Revealing robot motion makes the model act as a forward dynamics model that predicts the scene's response to low-level robot actions, while revealing desired object motion makes the same model recover robot behavior consistent with that outcome. Finetuned with only 15 hours of masked examples from real videos and simulation, a single checkpoint achieves strong visual fidelity and controllability across diverse scenes and multiple embodiments. In downstream manipulation settings, the model produces imagined rollouts whose outcomes correlate with real-world execution for policy evaluation, improves decision making by ranking candidate futures in model-based planning, and supports inverse modeling by synthesizing robot motion from desired object motion.
+
+视频模型吸收了有关视觉世界如何移动、交互和接触响应的丰富先验知识，使它们成为机器人世界建模的有前景的基础。核心挑战是如何以与视觉空间一致的形式向这些模型传达动作，在视觉空间中模型学习了这些交互先验，但仍然以物理操作为基础。我们引入了 Masked Visual Actions，这是一种像素空间控制界面，它将动作表示为视频中任意实体的部分显示轨迹。揭示机器人运动使模型充当前向动力学模型，预测场景对低级机器人动作的响应，同时揭示所需的物体运动使同一模型恢复与该结果一致的机器人行为。仅使用来自真实视频和模拟的 15 小时蒙版示例进行微调，单个检查点即可在不同场景和多个实施例中实现强大的视觉保真度和可控性。在下游操纵设置中，该模型产生想象的推出，其结果与策略评估的现实执行相关，通过在基于模型的规划中对候选未来进行排名来改进决策，并通过从所需的物体运动合成机器人运动来支持逆向建模。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-22 (12 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-07-22
