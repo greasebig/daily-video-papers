@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-25](papers/2026-07-25.md) - 1 papers
 - [2026-07-24](papers/2026-07-24.md) - 1 papers
 - [2026-07-22](papers/2026-07-22.md) - 5 papers
 - [2026-07-20](papers/2026-07-20.md) - 1 papers
@@ -49,6 +50,34 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-25 (1 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-07-25
+
+**Paper Count**: 1
+
+---
+
+## 1. Spatially-Aligned Chroma from Luma Prediction for Lossless JPEG XS Raw Image Compression / 用于无损 JPEG XS 原始图像压缩的亮度预测的空间对齐色度
+
+**Date**: 2026-07-14 | **arXiv**: [2607.12636v1](http://arxiv.org/abs/2607.12636v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.12636v1)
+
+**Categories**: eess.IV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This study proposes a Chroma from Luma (CfL)-enhanced Star-Tetrix transform (STT), referred to as CfL-STT, for improving raw image compression in JPEG XS. The proposed CfL-STT integrates CfL prediction into the STT to predict chroma components from the luma component in CFA-sampled raw images. Unlike conventional CfL prediction designed for full-color images, the proposed method employs spatially aligned luma samples obtained via linear interpolation along the horizontal and vertical directions to match the chroma sampling grid. This spatial alignment suppresses high-frequency sensor noise while preserving cross-channel correlation, resulting in a more decorrelated Y-Delta-Du-Dv color space. The proposed method was implemented in the JPEG XS reference software and evaluated on raw image datasets. Experimental results demonstrate that a direct application of CfL prediction yields image-dependent performance and may degrade coding efficiency due to the lack of spatial alignment, whereas the proposed CfL-STT consistently improves coding efficiency in lossless raw image compression while preserving exact reversibility.
+
+本研究提出了亮度色度 (CfL) 增强型 Star-Tetrix 变换 (STT)（称为 CfL-STT），用于改进 JPEG XS 中的原始图像压缩。所提出的 CfL-STT 将 CfL 预测集成到 STT 中，以根据 CFA 采样的原始图像中的亮度分量来预测色度分量。与针对全色图像设计的传统 CfL 预测不同，所提出的方法采用通过沿水平和垂直方向的线性插值获得的空间对齐的亮度样本来匹配色度采样网格。这种空间对齐可抑制高频传感器噪声，同时保留跨通道相关性，从而产生更加去相关的 Y-Delta-Du-Dv 色彩空间。所提出的方法在 JPEG XS 参考软件中实现，并在原始图像数据集上进行评估。实验结果表明，直接应用 CfL 预测会产生图像相关的性能，并且可能由于缺乏空间对齐而降低编码效率，而所提出的 CfL-STT 始终提高无损原始图像压缩的编码效率，同时保持精确的可逆性。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-24 (1 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-07-24
