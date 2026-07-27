@@ -27,6 +27,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-27](papers/2026-07-27.md) - 3 papers
 - [2026-07-25](papers/2026-07-25.md) - 4 papers
 - [2026-07-24](papers/2026-07-24.md) - 11 papers
 - [2026-07-23](papers/2026-07-23.md) - 22 papers
@@ -147,6 +148,70 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-27 (3 papers)</b></summary>
+
+# arXiv Video Papers - 2026-07-27
+
+**Paper Count**: 3
+
+---
+
+## 1. fMRI2Face: A Full-HD fMRI-Video Dataset and Geometry-Guided Neural Decoding Framework for Dynamic Human Face Reconstruction / fMRI2Face：用于动态人脸重建的全高清 fMRI 视频数据集和几何引导神经解码框架
+
+**Date**: 2026-07-24 | **arXiv**: [2607.22302v1](http://arxiv.org/abs/2607.22302v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.22302v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reconstructing dynamic human faces from brain activity provides a powerful way to study how the mind perceives identity, expression, and facial motion. However, progress in fMRI-based face decoding has been limited by scarce controlled, high-resolution neural datasets and by methods that struggle to recover both identity-specific appearance and time-varying facial dynamics. We present fMRI-Face, the first fMRI dataset paired with controllable full-HD digital human facial videos rendered at 1920$\times$1080 resolution. During scanning, participants watched photorealistic, background-free facial videos with controlled identity, expression, and head pose, while fMRI activity was recorded. The resulting dataset contains 62,856 paired fMRI-video samples, providing a structured resource for studying dynamic face perception and reconstruction. Building on this dataset, we propose fMRI2Face, a geometry-guided neural video decoding framework for reconstructing facial videos from fMRI signals. fMRI2Face derives two complementary neural controls from brain activity: Brain-derived Appearance Context, which captures global identity-related visual attributes, and Morphable 3D Facial Control, which provides explicit geometry-aware guidance for pose, expression, and non-rigid facial dynamics. These controls are integrated through Neural-Controlled Video Diffusion with auxiliary latent completion, enabling high-fidelity facial video reconstruction directly from brain activity. Experiments show that fMRI2Face consistently improves reconstruction fidelity, identity preservation, facial geometry, and motion consistency over representative neural decoding baselines. Together, fMRI-Face and fMRI2Face establish a controlled platform for studying dynamic face perception and provide a new benchmark for fMRI-based digital human reconstruction.
+
+从大脑活动重建动态人脸提供了一种有效的方法来研究大脑如何感知身份、表情和面部运动。然而，基于功能磁共振成像的面部解码的进展受到稀缺的受控高分辨率神经数据集以及难以恢复特定身份外观和随时间变化的面部动态的方法的限制。我们推出了 fMRI-Face，这是第一个与以 1920 美元\乘以 1080 美元分辨率渲染的可控全高清数字人脸视频配对的 fMRI 数据集。在扫描过程中，参与者观看逼真、无背景的面部视频，并控制身份、表情和头部姿势，同时记录功能磁共振成像活动。生成的数据集包含 62,856 个配对的功能磁共振成像视频样本，为研究动态面部感知和重建提供了结构化资源。在此数据集的基础上，我们提出了 fMRI2Face，这是一种几何引导的神经视频解码框架，用于从 fMRI 信号重建面部视频。 fMRI2Face 从大脑活动中派生出两种互补的神经控制：脑源性外观上下文（捕获全局身份相关的视觉属性）和可变形 3D 面部控制（为姿势、表情和非刚性面部动态提供明确的几何感知指导）。这些控制通过神经控制视频扩散与辅助潜在完成相集成，从而能够直接根据大脑活动进行高保真面部视频重建。实验表明，与代表性神经解码基线相比，fMRI2Face 持续提高了重建保真度、身份保留、面部几何形状和运动一致性。 fMRI-Face 和 fMRI2Face 共同建立了一个用于研究动态面部感知的受控平台，并为基于 fMRI 的数字人体重建提供了新的基准。
+
+</details>
+
+---
+
+## 2. AgentHOI: Multi-Agent Reasoning for Human-Object-Interaction Video Generation via Implicit Representation Alignment / AgentHOI：通过隐式表示对齐生成人机交互视频的多代理推理
+
+**Date**: 2026-07-24 | **arXiv**: [2607.22241v1](http://arxiv.org/abs/2607.22241v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.22241v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/bone-11/agenthoi.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in video diffusion models have spurred interest in human-object interaction (HOI) video generation, which demands fine-grained control over interaction logic beyond single-subject animation. However, existing HOI methods rely heavily on explicit motion control, limiting scalability and generalization across diverse objects and interactions. In this study, we propose AgentHOI, a text-driven HOI video generation following a thinking-before-generation framework that bridges the gap between high-level textual intent and physical execution through multi-agent reasoning over perception, interaction, and motion planning. Building upon the generated interaction plans, we further strengthen text-driven motion understanding. We introduce an implicit text-motion alignment strategy that distills text-to-motion priors into the video diffusion model, enabling robust HOI synthesis without explicit motion inputs at inference. Experiments show that AgentHOI significantly improves interaction naturalness, object appearance preservation, and adherence to complex textual instructions across challenging object-centric scenarios such as wearing and riding. The code is available at https://github.com/bone-11/agenthoi.
+
+视频扩散模型的最新进展激发了人们对人机交互（HOI）视频生成的兴趣，这需要对单主体动画之外的交互逻辑进行细粒度控制。然而，现有的 HOI 方法严重依赖于显式运动控制，限制了跨不同对象和交互的可扩展性和泛化。在这项研究中，我们提出了 AgentHOI，一种文本驱动的 HOI 视频生成，遵循先思考后生成的框架，通过感知、交互和运动规划的多智能体推理，弥合了高级文本意图和物理执行之间的差距。基于生成的交互计划，我们进一步加强了文本驱动的运动理解。我们引入了一种隐式文本运动对齐策略，该策略将文本到运动先验提炼到视频扩散模型中，从而在推理时无需显式运动输入即可实现鲁棒的 HOI 合成。实验表明，AgentHOI 显着提高了交互自然性、对象外观保留以及在具有挑战性的以对象为中心的场景（例如佩戴和骑行）中对复杂文本指令的遵守。该代码可在 https://github.com/bone-11/agenthoi 获取。
+
+</details>
+
+---
+
+## 3. TRaM-VSR: Importance-Aware Token Routing and Merging for One-Step Diffusion Video Super-Resolution / TRaM-VSR：用于一步扩散视频超分辨率的重要性感知令牌路由和合并
+
+**Date**: 2026-07-24 | **arXiv**: [2607.22231v1](http://arxiv.org/abs/2607.22231v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.22231v1)
+
+**Categories**: cs.CV, cs.AI
+
+**Code**: https://github.com/Ree1s/TRaM-VSR.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video super-resolution (VSR) using large-scale Diffusion Transformer (DiT) priors achieves exceptional perceptual quality but is often impractical due to the quadratic computational cost of processing dense spatio-temporal token sequences. Existing efficiency-oriented methods risk irreversible detail loss and temporal flickering, a vulnerability especially pronounced in one-step diffusion models. To address this, we propose TRaM-VSR, a Token Routing and Merging framework for adaptive token allocation, leveraging both context-aware video priors and network-level priors. First, token importance is estimated by fusing motion-sensitive temporal cues with semantic text similarity, isolating dynamic objects and structural boundaries. Next, this importance is further calibrated and adjusted by an offline planner to guide routing across optimally grouped network blocks. Technically, within each routed group, structurally critical tokens are processed in a high-fidelity local stream, while less informative tokens are aggregated into a compact global stream, both modulated by network depth and aligned with the multigranular nature of diffusion models. Extensive experiments show that TRaM-VSR accelerates inference significantly while preserving state-of-the-art reconstruction quality and robust temporal consistency. The code is available at https://github.com/Ree1s/TRaM-VSR.
+
+使用大规模扩散变换器 (DiT) 先验的视频超分辨率 (VSR) 可实现卓越的感知质量，但由于处理密集时空标记序列的二次计算成本，通常不切实际。现有的以效率为导向的方法存在不可逆的细节丢失和时间闪烁的风险，这一漏洞在一步扩散模型中尤其明显。为了解决这个问题，我们提出了 TRaM-VSR，一种用于自适应令牌分配的令牌路由和合并框架，利用上下文感知视频先验和网络级先验。首先，通过将运动敏感的时间线索与语义文本相似性融合、隔离动态对象和结构边界来估计标记重要性。接下来，离线规划器进一步校准和调整这种重要性，以指导跨最佳分组网络块的路由。从技术上讲，在每个路由组内，结构上关键的令牌在高保真本地流中进行处理，而信息量较少的令牌则聚合到紧凑的全局流中，这两者都通过网络深度进行调制，并与扩散模型的多粒度性质保持一致。大量实验表明，TRaM-VSR 显着加速了推理速度，同时保持了最先进的重建质量和鲁棒的时间一致性。代码可在 https://github.com/Ree1s/TRAM-VSR 获取。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-25 (4 papers)</b></summary>
 
 # arXiv Video Papers - 2026-07-25
