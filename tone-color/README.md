@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-29](papers/2026-07-29.md) - 2 papers
 - [2026-07-28](papers/2026-07-28.md) - 1 papers
 - [2026-07-27](papers/2026-07-27.md) - 1 papers
 - [2026-07-25](papers/2026-07-25.md) - 1 papers
@@ -52,6 +53,50 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-29 (2 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-07-29
+
+**Paper Count**: 2
+
+---
+
+## 1. TexSketch: Bringing Texture-Aware Colorization to Sketches / TexSketch：为草图带来纹理感知着色
+
+**Date**: 2026-07-27 | **arXiv**: [2607.24261v1](http://arxiv.org/abs/2607.24261v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.24261v1)
+
+**Categories**: cs.GR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reference-based sketch colorization methods rely on large paired datasets that preserve both the structural and stylistic characteristics of hand-drawn artwork. However, existing datasets are limited in scale, expensive to annotate, and bound to fixed, often inconsistent artistic style biases that propagate to downstream models and limit cross-domain generalization. We present TexSketch, a controllable procedural framework for generating colored-sketch datasets with programmable artistic styles via geometric analysis and shader-driven stylization. Our fully automatic pipeline integrates region extraction, semantic color prediction, and shader-based rendering. By defining artistic appearance procedurally rather than inheriting it from a static corpus, TexSketch enables scalable dataset generation without manual annotation or artist supervision. Human studies demonstrate that TexSketch generates perceptually plausible colored sketches with high stylistic diversity, providing a controllable, scalable source of synthetic supervision for sketch colorization.
+
+基于参考的草图着色方法依赖于大型配对数据集，这些数据集保留了手绘艺术品的结构和风格特征。然而，现有的数据集规模有限，注释成本昂贵，并且受到固定的、通常不一致的艺术风格偏见的影响，这些偏见会传播到下游模型并限制跨领域泛化。我们提出了 TexSketch，一个可控的程序框架，用于通过几何分析和着色器驱动的风格化生成具有可编程艺术风格的彩色草图数据集。我们的全自动管道集成了区域提取、语义颜色预测和基于着色器的渲染。通过按程序定义艺术外观而不是从静态语料库继承它，TexSketch 可以生成可扩展的数据集，而无需手动注释或艺术家监督。人类研究表明，TexSketch 可以生成具有高度风格多样性的感知合理的彩色草图，为草图着色提供可控、可扩展的合成监督源。
+
+</details>
+
+---
+
+## 2. LowPowAR: Power-Constrained Tone Mapping for Augmented Reality / LowPowAR：用于增强现实的功率受限色调映射
+
+**Date**: 2026-07-21 | **arXiv**: [2607.19509v1](http://arxiv.org/abs/2607.19509v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.19509v1)
+
+**Categories**: cs.GR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Everyday-wearable Augmented Reality (AR) glasses must meet strict power limits, making displays a key target for optimization. We cast display power optimization as a power-constrained tone-mapping problem and propose a human-vision-grounded, learning-based framework that maximizes perceptual quality under a given power budget. We introduce an optimization-friendly tone-mapping operator (TMO) parameterization along with a progressive optimization strategy to effectively navigate the quality-vs-power landscape. We distill the iterative optimization into a lightweight feed-forward neural network for real-time deployment. Subjective experiments show that our method yields better perceptual quality than prior work at the same power budget. Project page: https://horizon-lab.org/lowpowar/.
+
+日常佩戴的增强现实 (AR) 眼镜必须满足严格的功率限制，这使得显示器成为优化的关键目标。我们将显示功率优化视为功率受限的色调映射问题，并提出了一种基于人类视觉、基于学习的框架，可在给定的功率预算下最大化感知质量。我们引入了优化友好的色调映射算子（TMO）参数化以及渐进式优化策略，以有效地驾驭质量与功耗的关系。我们将迭代优化提炼为轻量级前馈神经网络以进行实时部署。主观实验表明，在相同的功率预算下，我们的方法比以前的工作产生更好的感知质量。项目页面：https://horizo​​n-lab.org/lowpowar/。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-28 (1 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-07-28
