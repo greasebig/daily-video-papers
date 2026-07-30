@@ -27,6 +27,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-30](papers/2026-07-30.md) - 20 papers
 - [2026-07-29](papers/2026-07-29.md) - 28 papers
 - [2026-07-27](papers/2026-07-27.md) - 3 papers
 - [2026-07-25](papers/2026-07-25.md) - 4 papers
@@ -149,6 +150,340 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-30 (20 papers)</b></summary>
+
+# arXiv Video Papers - 2026-07-30
+
+**Paper Count**: 20
+
+---
+
+## 1. FreqForcing: Autoregressive Long Video Generation via Spectral Self-Anchoring / FreqForcing：通过光谱自锚定的自回归长视频生成
+
+**Date**: 2026-07-29 | **arXiv**: [2607.27110v1](http://arxiv.org/abs/2607.27110v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.27110v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Autoregressive video diffusion models enable real-time streaming video generation. However, errors introduced during self-rollout accumulate over long horizons, manifesting as color drift, motion stagnation, and eventual visual collapse. In this paper, we characterize this phenomenon from a frequency-domain perspective: error accumulation appears as a pronounced energy drift in the low-frequency bands. We further investigate the effectiveness of attention sink in the frequency domain, and find that it improves the video quality by alleviating the spectral energy drift to some extent, but cannot fully resolve it. Motivated by the above analysis, we propose FreqForcing, a training-free framework that addresses error accumulation in long-video generation via Spectral Self-Anchoring (SSA). The proposed SSA leverages the low-frequency components of anchor attention to maintain long-horizon visual stability, while preserving dynamic motion through the high-frequency components of local attention. Our FreqForcing extends Self-Forcing pretrained on 5s clips to two-minute generation, achieving 24x extrapolation. Extensive experiments show that FreqForcing outperforms existing training-free methods quantitatively and qualitatively while remaining competitive with representative training-based approaches.
+
+自回归视频扩散模型可实现实时流视频生成。然而，自我推出过程中引入的错误会随着时间的推移而累积，表现为颜色漂移、运动停滞和最终的视觉崩溃。在本文中，我们从频域角度描述了这种现象：误差累积表现为低频段中明显的能量漂移。我们进一步研究了频域注意力接收器的有效性，发现它在一定程度上通过减轻频谱能量漂移来提高视频质量，但不能完全解决它。受上述分析的启发，我们提出了 FreqForcing，这是一种免训练框架，可通过频谱自锚定（SSA）解决长视频生成中的错误累积问题。所提出的 SSA 利用锚点注意力的低频分量来保持长视野视觉稳定性，同时通过局部注意力的高频分量保持动态运动。我们的 FreqForcing 将 5 秒片段上的 Self-Forcing 预训练扩展到两分钟生成，实现了 24 倍外推。大量实验表明，FreqForcing 在数量和质量上都优于现有的免训练方法，同时与代表性的基于训练的方法保持竞争力。
+
+</details>
+
+---
+
+## 2. Mitigating Compounding Error via Video Representation Regularization / 通过视频表示正则化减轻复合误差
+
+**Date**: 2026-07-29 | **arXiv**: [2607.27036v1](http://arxiv.org/abs/2607.27036v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.27036v1)
+
+**Categories**: cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video diffusion-based world models enable long autoregressive video generation for robotics, autonomous driving and simulation tasks, yet sliding-window autoregressive inference suffers from severe error accumulation that degrades frame quality over time. Although this phenomenon has been widely observed, the underlying mechanism of compounding error and how to achieve stable long-horizon generation remain largely unresolved. In this paper, we investigate the internal representation dynamics of video world models and discover that compounding error is tightly coupled with dimensional collapse of hidden representations. Specifically, the effective rank of model representations sharply decreases at the onset of generation drift, revealing a strong connection between representational degradation and long-term rollout instability. Furthermore, we find that pure training data scaling fails to boost model resistance to error drift, contradicting mainstream scaling paradigms. To address this problem, we propose video representation regularization, a lightweight training constraint that stabilizes latent representations and suppresses iterative error accumulation. Compared with Diffusion Forcing, our method achieves improvements from 38.65 to 55.56 and from 44.37 to 72.08 on the Aesthetic Quality and Imaging Quality metrics of VBench. Our work establishes the first connection between autoregressive video drifting and model internal representations, adopts erank as a quantitative metric for error accumulation, reveals counterintuitive scaling limitations for video world models, and presents a simple yet effective regularization strategy to improve long video generation robustness.
+
+基于视频扩散的世界模型可以为机器人、自动驾驶和模拟任务生成长时间的自回归视频，但滑动窗口自回归推理会遭受严重的错误积累，随着时间的推移会降低帧质量。尽管这种现象已被广泛观察到，但复合误差的根本机制以及如何实现稳定的长视野发电仍然在很大程度上尚未解决。在本文中，我们研究了视频世界模型的内部表示动态，发现复合误差与隐藏表示的维度崩溃紧密耦合。具体来说，模型表示的有效排名在代漂移开始时急剧下降，揭示了表示退化与长期推出不稳定之间的密切联系。此外，我们发现纯训练数据缩放无法提高模型对误差漂移的抵抗力，这与主流缩放范例相矛盾。为了解决这个问题，我们提出了视频表示正则化，这是一种轻量级训练约束，可以稳定潜在表示并抑制迭代错误累积。与扩散强迫相比，我们的方法在 VBench 的美学质量和成像质量指标上实现了从 38.65 到 55.56 以及从 44.37 到 72.08 的改进。我们的工作在自回归视频漂移和模型内部表示之间建立了第一个联系，采用 erank 作为误差累积的定量指标，揭示了视频世界模型违反直觉的缩放限制，并提出了一种简单而有效的正则化策略来提高长视频生成的鲁棒性。
+
+</details>
+
+---
+
+## 3. From Passive Video to Editable Experience: Physically Grounded Experience Synthesis for Embodied Intelligence / 从被动视频到可编辑体验：实体智能的基于物理的体验合成
+
+**Date**: 2026-07-29 | **arXiv**: [2607.26903v1](http://arxiv.org/abs/2607.26903v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.26903v1)
+
+**Categories**: cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The key bottleneck in embodied AI is not model architecture but data. Although billions of human manipulation videos exist online, robots cannot directly learn from them due to the embodiment gap between human morphology and robot hardware. We introduce Pegasus, a low-resource framework that bridges this gap by translating human demonstrations into robot-learnable data through structured knowledge transfer. Instead of relying on raw video prompts, Pegasus constructs a graph-based intermediate representation: a Task Graph extracted from human videos is transformed through Affordance and Constraint Graphs into a Robot Planning Graph for robot-conditioned video generation. A hierarchical affordance latent space models the relationship between object states, affordances, and tasks, enabling generalization beyond object identities. A closed-loop physics verifier further filters invalid generations using kinematic feasibility, collision constraints, and joint limits. We evaluate Pegasus across a range of egocentric manipulation benchmarks, including GTEA Gaze+ and EPIC-KITCHENS-100, and diverse robot embodiments, assessing Task Correctness, Executability, State Consistency, and Learnability. Results demonstrate reliable cross-embodiment translation and show that robot data generation can be reframed from a hardware collection problem into a scalable, low-resource knowledge transfer problem.
+
+实体人工智能的关键瓶颈不是模型架构，而是数据。尽管网上存在数十亿的人类操作视频，但由于人类形态和机器人硬件之间的体现差距，机器人无法直接从中学习。我们引入了 Pegasus，这是一个低资源框架，通过结构化知识转移将人类演示转化为机器人可学习的数据，从而弥补了这一差距。 Pegasus 不依赖原始视频提示，而是构建了基于图的中间表示：从人类视频中提取的任务图通过可供性和约束图转换为机器人规划图，用于机器人条件视频生成。分层可供性潜在空间对对象状态、可供性和任务之间的关系进行建模，从而实现超越对象身份的泛化。闭环物理验证器使用运动可行性、碰撞约束和关节限制进一步过滤无效生成。我们通过一系列以自我为中心的操作基准（包括 GTEA Gaze+ 和 EPIC-KITCHENS-100）以及各种机器人实施例来评估 Pegasus，评估​​任务正确性、可执行性、状态一致性和可学习性。结果证明了可靠的跨实施例转换，并表明机器人数据生成可以从硬件收集问题重新构建为可扩展的、低资源的知识转移问题。
+
+</details>
+
+---
+
+## 4. Ripple: Real-Time Streaming Audio-Video Generation With Cross-Modal Recurrent Memory / Ripple：使用跨模式循环存储器实时流式音频视频生成
+
+**Date**: 2026-07-29 | **arXiv**: [2607.26818v1](http://arxiv.org/abs/2607.26818v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.26818v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Audio-video generative models achieve impressive quality but suffer from high latency, making them unsuitable for real-time applications. Although several streaming audio-video generation methods have been proposed, they remain costly and fail to support long-form generation. To address this, we propose \textbf{Ripple}, a real-time joint audio-video generation system with a cross-modal recurrent memory mechanism. To enable efficient streaming inference while preserving long-term context, Ripple combines a fixed-length sliding-window attention with modality-specific memory states that continuously summarize audio and video context. Cross-modal memory interaction is further introduced to enhance audio-visual synchronization. To learn this memory-augmented model effectively, we devise a three-stage training recipe: (1) adapting a bidirectional audio-video teacher to block-wise causal attention with simulated memory, (2) optimizing the memory construction and interaction pipeline through end-to-end distillation, and (3) applying online reinforcement post-training tailored for streaming audio-video generation. As a result, Ripple achieves ~28 FPS at 480P resolution, over faster than the teacher, while capable of coherent long-form generation. Extensive experiments on both short-video and long-video benchmarks demonstrate our superior performance over existing offline and online joint audio-video generation methods.
+
+音视频生成模型的质量令人印象深刻，但延迟较高，因此不适合实时应用。尽管已经提出了几种流式音频视频生成方法，但它们仍然成本高昂并且无法支持长格式生成。为了解决这个问题，我们提出了 \textbf{Ripple}，一种具有跨模式循环存储机制的实时联合音视频生成系统。为了在保留长期上下文的同时实现高效的流式推理，Ripple 将固定长度的滑动窗口注意力与持续总结音频和视频上下文的特定模态的记忆状态相结合。进一步引入跨模态记忆交互来增强视听同步。为了有效地学习这种记忆增强模型，我们设计了一个三阶段的训练方法：（1）使双向音视频教师通过模拟记忆进行块式因果注意，（2）通过端到端蒸馏优化记忆构建和交互管道，以及（3）应用为流式音视频生成量身定制的在线强化后训练。因此，Ripple 在 480P 分辨率下实现了约 28 FPS，比教师速度更快，同时能够进行连贯的长格式生成。对短视频和长视频基准的广泛实验证明了我们优于现有离线和在线联合音视频生成方法的性能。
+
+</details>
+
+---
+
+## 5. TPD: Temporal Prior Decoupling for Text-to-Video Diffusion Models / TPD：文本到视频扩散模型的时间先验解耦
+
+**Date**: 2026-07-29 | **arXiv**: [2607.26706v1](http://arxiv.org/abs/2607.26706v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.26706v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Text-to-video diffusion models generate temporally coherent content from natural language, yet when a prompt describes an early scene that persists while a new event emerges on top of it---such as "a tall sandcastle standing on a beach where a wave rushes in and washes it away"---generation frequently fails to realize the late-segment event in the corresponding frames. We identify this failure as Temporal Prior Suppression (TPS): the dominant prior of the early segment captures the cross-attention trajectory across the temporal axis and suppresses the guidance signal needed for late-segment realization, a competing tendency existing guidance mechanisms do not model. We introduce Temporal Prior Decoupling (TPD), a training-free framework that restores suppressed late-segment signals during diffusion sampling. TPD constructs a temporal counterfactual by conditioning on the early segment alone, and defines the discrepancy between the full-prompt and counterfactual trajectories as a suppressed signal direction. Rather than removing this direction as in prior subtractive projection methods, TPD restores it through a frame-selective lower-bound constraint resolved jointly over diffusion timestep and video frame, realizing the suppressed event in the late frames without disrupting early-segment coherence: where prior work enforces upper-bound feasibility to remove unwanted semantics, TPD enforces lower-bound feasibility to guarantee suppressed-signal contribution. TPD runs entirely within standard diffusion sampling without retraining, and is defined purely in classifier-free guidance space, making it backbone-agnostic by construction. Experiments show that TPD significantly improves late-concept realization while preserving temporal coherence and visual fidelity, and that the targeted suppression recurs across distinct text-to-video backbones.
+
+文本到视频扩散模型从自然语言中生成时间连贯的内容，然而，当提示描述了一个持续存在的早期场景，而一个新事件出现在其之上时——例如“一座高大的沙堡矗立在海滩上，海浪冲进来并将其冲走”——生成经常无法意识到相应帧中的后期事件。我们将这种失败称为时间先验抑制（TPS）：早期片段的主导先验捕获了跨时间轴的交叉注意力轨迹，并抑制了后期片段实现所需的引导信号，这是现有引导机制无法建模的竞争趋势。我们引入了时间先验解耦（TPD），这是一种无需训练的框架，可以在扩散采样期间恢复受抑制的后期信号。 TPD 通过仅对早期片段进行调节来构造时间反事实，并将完整提示轨迹和反事实轨迹之间的差异定义为抑制信号方向。 TPD 并没有像之前的减法投影方法那样删除这个方向，而是通过在扩散时间步长和视频帧上联合解决的帧选择性下界约束来恢复它，在不破坏早期片段一致性的情况下实现后期帧中的抑制事件：先前的工作强制上限可行性以删除不需要的语义，TPD 强制执行下限可行性以保证抑制信号贡献。 TPD 完全在标准扩散采样内运行，无需重新训练，并且纯粹在无分类器的指导空间中定义，使其在结构上与主干网无关。实验表明，TPD 显着改善了后期概念的实现，同时保留了时间连贯性和视觉保真度，并且目标抑制在不同的文本到视频主干上重复出现。
+
+</details>
+
+---
+
+## 6. Visko Orbis 1.0: A Live Model for Real-Time Interactive Long Video Generation / Visko Orbis 1.0：实时交互式长视频生成的实时模型
+
+**Date**: 2026-07-29 | **arXiv**: [2607.26694v1](http://arxiv.org/abs/2607.26694v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.26694v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present Visko Orbis 1.0, a Live Model for real-time, interactive long-video generation. Users can change the prompt at any moment during generation, and the update becomes visible in real time. Visko Orbis 1.0 supports long-form text-to-video, image-to-video, and video continuation, with multilingual prompts and prompt switching while generation is in progress. A bounded multi-scale memory preserves subjects, scenes, and style across chunks, sustaining hour-scale rollouts without evident quality or color drift. Built on a distilled chunk-wise streaming generator and a streaming video upscaler, Visko Orbis 1.0 delivers real-time 4K video generation at 24 FPS using an optimized GPU serving engine. In long-form Arena comparisons, Visko Orbis 1.0 obtains the highest overall-preference and temporal-stability ratings among state-of-the-art real-time interactive video-generation systems.
+
+我们推出了 Visko Orbis 1.0，这是一个用于实时、交互式长视频生成的实时模型。用户可以在生成过程中随时更改提示，并且更新实时可见。 Visko Orbis 1.0支持长文本转视频、图像转视频和视频续传，具有多语言提示和生成过程中的提示切换。有界的多尺度内存可以跨块保留主题、场景和风格，维持小时尺度的推出，而不会出现明显的质量或颜色漂移。 Visko Orbis 1.0 基于精炼的分块流生成器和流视频升级器而构建，使用优化的 GPU 服务引擎以 24 FPS 生成实时 4K 视频。在长篇 Arena 比较中，Visko Orbis 1.0 在最先进的实时交互式视频生成系统中获得了最高的总体偏好和时间稳定性评级。
+
+</details>
+
+---
+
+## 7. Genie Sim PanoWorld: An Infinite Indoor 3D World Generation Pipeline via Panoramic Scene Modeling and Simulation / Genie Sim PanoWorld：通过全景场景建模和模拟的无限室内 3D 世界生成管道
+
+**Date**: 2026-07-29 | **arXiv**: [2607.26646v1](http://arxiv.org/abs/2607.26646v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.26646v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We address the problem of reconstructing a high-fidelity, freely navigable 3D scene from a single $360^\circ$ panorama, without per-scene optimization or multi-view capture. Existing methods either lack metric trajectory control, which hinders reliable downstream 3D reconstruction, or struggle with large disocclusions under long-range camera motion while requiring high-end multi-GPU servers.We present Genie Sim PanoWorld, a two-stage feed-forward pipeline that bridges generation and reconstruction via an explicit, trajectory-controllable panoramic video. A NavMesh-planned $\mathrm{SE}(3)$ roaming trajectory is injected into a latent video diffusion model through dense geometry-warped conditioning; long--short trajectory mixed training and a self-consistency objective based on shortcut models together yield high-fidelity video in four CFG-free denoising steps.   A feed-forward panoramic reconstructor then lifts the generated video into a high-fidelity   3D Gaussian scene that supports real-time, free-viewpoint roaming and can be directly used as a simulation-ready asset for embodied AI applications. Experiments show that Genie Sim PanoWorld   outperforms geometry-conditioned baselines in both panoramic video generation and   downstream 3D reconstruction, while generalizing zero-shot to unseen indoor scenes.
+
+我们解决了从单个 360^\circ$ 全景图中重建高保真、可自由导航的 3D 场景的问题，无需按场景优化或多视图捕获。现有方法要么缺乏公制轨迹控制，这阻碍了可靠的下游 3D 重建，要么在需要高端多 GPU 服务器的情况下在长距离相机运动下难以解决大的遮挡问题。我们推出了 Genie Sim PanoWorld，这是一种两级前馈管道，可通过显式的轨迹可控全景视频连接生成和重建。 NavMesh 规划的 $\mathrm{SE}(3)$ 漫游轨迹通过密集几何扭曲条件注入到潜在视频扩散模型中；长-短轨迹混合训练和基于快捷模型的自洽目标共同在四个无 CFG 去噪步骤中产生高保真视频。   然后，前馈全景重建器将生成的视频提升为高保真 3D 高斯场景，该场景支持实时、自由视点漫游，并可直接用作具体 AI 应用的模拟就绪资产。实验表明，Genie Sim PanoWorld 在全景视频生成和下游 3D 重建方面均优于几何条件基线，同时将零镜头推广到看不见的室内场景。
+
+</details>
+
+---
+
+## 8. CineWeaver: Training-Free Reference-Controllable Multi-Shot Long Video Generation for Cinematic Storytelling / CineWeaver：用于电影叙事的免训练参考可控多镜头长视频生成
+
+**Date**: 2026-07-29 | **arXiv**: [2607.26529v1](http://arxiv.org/abs/2607.26529v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.26529v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Cinematic video generation is challenging for text-to-video diffusion models due to concurrent requirements on multi-shot generation, fine-grained controllability over characters and scenes, and long-form generation across extended temporal horizons. Existing methods rely on customization and retraining to separately address specific requirements, and cannot simultaneously fulfill all the requirements with a unified framework. In this paper, we shed light on the training-free paradigm with the key insight that the difficulty of multi-shot generation arises from a structural bias toward temporal continuity in pretrained video diffusion models, and consequently, propose a unified framework named CineWeaver to achieve reference-controllable multi-shot long-video generation without retraining. We manipulate positional encoding and attention patterns to break temporal continuity during inference to enable clear shot transitions using pretrained video diffusion models. Furthermore, we extend the proposed framework with a shot-routed reference conditioning mechanism for per-shot fine-grained controllability, and develop an anchor memory mechanism to allow long-form generation with consistent global appearance cues. To our best knowledge, CineWeaver is the first unified framework to simultaneously enable \textbf{long-form}, \textbf{reference-controllable}, and \textbf{multi-shot} video generation in a training-free fashion. Experimental results demonstrate that CineWeaver produces high-quality cinematic videos of long durations with consistent identities, stable global appearance, and clear shot transitions. The project page is available at: https://cineweaver.github.io.
+
+由于对多镜头生成、角色和场景的细粒度可控性以及跨扩展时间范围的长格式生成的并发要求，电影视频生成对于文本到视频扩散模型来说具有挑战性。现有方法依靠定制和再训练来单独解决特定需求，并且无法通过统一的框架同时满足所有需求。在本文中，我们阐明了免训练范式，其关键见解是多镜头生成的困难源于预训练视频扩散模型中对时间连续性的结构偏差，因此提出了一个名为 CineWeaver 的统一框架，以实现参考可控的多镜头长视频生成而无需重新训练。我们操纵位置编码和注意力模式来打破推理过程中的时间连续性，从而使用预先训练的视频扩散模型实现清晰的镜头过渡。此外，我们通过镜头路由参考调节机制扩展了所提出的框架，以实现每个镜头的细粒度可控性，并开发了一种锚定记忆机制，以允许具有一致的全局外观线索的长格式生成。据我们所知，CineWeaver 是第一个以免训练方式同时启用 \textbf{long-form}、\textbf{reference-controllable} 和 \textbf{multi-shot} 视频生成的统一框架。实验结果表明，CineWeaver 可以生成持续时间长的高质量电影视频，具有一致的身份、稳定的全局外观和清晰的镜头过渡。该项目页面位于：https://cineweaver.github.io。
+
+</details>
+
+---
+
+## 9. EgoSafe: A First-Person Mobile-Captured Benchmark for Visual Safety Understanding / EgoSafe：第一人称移动捕捉视觉安全理解基准
+
+**Date**: 2026-07-29 | **arXiv**: [2607.26518v1](http://arxiv.org/abs/2607.26518v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.26518v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reliable visual safety understanding in real-world scenarios demands more than just object recognition; it requires causal reasoning under epistemic uncertainty. While Large Vision-Language Models (LVLMs) demonstrate impressive semantic alignment on standard benchmarks, they often struggle to distinguish between superficial correlation and genuine forensic logic when grounded in the dynamic, partially observable nature of first-person experiences. Existing evaluations, dominated by third-person surveillance footage and binary classification metrics, fail to expose this cognitive gap. To address this, we introduce EgoSafe-Bench, a benchmark specifically designed to probe forensic reasoning in egocentric safety scenarios. It comprises 12,000 unique evaluation samples, generated by pairing each of the 3,000 video clips with a QA chain governed by our proposed Hierarchical Reasoning Evaluation (HRE) protocol. Unlike standard benchmarks, HRE mandates a rigorous reasoning trajectory from initial feature anchoring to blind-spot deduction and intent inference, thereby enforcing logical consistency and penalizing shortcut-based predictions.Extensive evaluations of state-of-the-art LVLMs (e.g., Qwen3-VL, Gemini, VideoLLaMA 3) reveal a significant perception-reasoning decoupling: models often achieve high descriptive scores but exhibit notable fragility in causal reasoning and logical closure. Our work provides both a challenging dataset and a systematic evaluation framework to foster the development of logically robust video understanding systems.
+
+在现实场景中可靠的视觉安全理解需要的不仅仅是物体识别；它需要在认知不确定性下进行因果推理。虽然大型视觉语言模型 (LVLM) 在标准基准上表现出令人印象深刻的语义一致性，但当基于第一人称体验的动态、部分可观察的本质时，它们常常难以区分表面相关性和真正的取证逻辑。现有的评估以第三人称监控录像和二元分类指标为主，未能揭示这种认知差距。为了解决这个问题，我们推出了 EgoSafe-Bench，这是一个专门为探索以自我为中心的安全场景中的取证推理而设计的基准。它包含 12,000 个独特的评估样本，这些样本是通过将 3,000 个视频剪辑中的每一个与由我们提出的分层推理评估 (HRE) 协议控制的 QA 链配对而生成的。与标准基准不同，HRE 要求从初始特征锚定到盲点推导和意图推理的严格推理轨迹，从而强制执行逻辑一致性并惩罚基于快捷方式的预测。对最先进的 LVLM（例如 Qwen3-VL、Gemini、VideoLLaMA 3）的广泛评估揭示了显着的感知推理解耦：模型通常会获得较高的描述性分数，但在因果推理和逻辑终结。我们的工作提供了一个具有挑战性的数据集和一个系统的评估框架，以促进逻辑上强大的视频理解系统的开发。
+
+</details>
+
+---
+
+## 10. Semantic-Aware Temporal Adaptation for UAV Anti-UAV Tracking / 用于无人机反无人机跟踪的语义感知时间适应
+
+**Date**: 2026-07-29 | **arXiv**: [2607.26511v1](http://arxiv.org/abs/2607.26511v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.26511v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/XiaozhenQiao/SATATrack.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+UAV Anti-UAV tracking is an emerging low-altitude security task for localizing an adversarial UAV using the onboard camera of a moving observer UAV. It differs from conventional UAV tracking and ground-based Anti-UAV tracking because both the camera platform and the target move simultaneously. This dual-dynamic setting induces rapid viewpoint changes, motion blur, scale variation, and visually similar distractors, making reliable appearance matching difficult. Under such rapidly changing conditions, fixed visual representations are often insufficient because target appearance becomes unreliable and feature distributions may deviate from the training domain. The target language description remains stable across frames and can therefore serve as a semantic anchor for temporal state propagation, while online feature-distribution alignment can reduce video-specific test-time shifts. In this paper, we propose \emph{SATATrack}, a Semantic-Aware Temporal Adaptation framework for UAV Anti-UAV tracking. SATATrack introduces Semantic-Aware Context Propagation (SACP), which uses the target description to guide temporal context propagation across backbone stages and preserve target identity under rapid appearance changes. An auxiliary contrastive regularizer is used during training to discourage responses to semantically similar background regions. During inference, Temporal-Aware Distribution Alignment (TADA) aligns feature distributions online without updating model parameters, combining recent-frame estimates with training-time statistics for stability. SATATrack achieves state-of-the-art performance on the UAV-Anti-UAV benchmark while remaining competitive in Anti-UAV and UAV object tracking tasks. The code will be available at https://github.com/XiaozhenQiao/SATATrack.
+
+无人机反无人机跟踪是一项新兴的低空安全任务，用于使用移动观察者无人机的机载摄像头定位敌方无人机。它与传统无人机跟踪和地面反无人机跟踪不同，因为相机平台和目标同时移动。这种双动态设置会导致视点快速变化、运动模糊、尺度变化和视觉上相似的干扰因素，从而使可靠的外观匹配变得困难。在这种快速变化的条件下，固定的视觉表示通常是不够的，因为目标外观变得不可靠并且特征分布可能偏离训练域。目标语言描述在帧之间保持稳定，因此可以作为时间状态传播的语义锚，而在线特征分布对齐可以减少视频特定的测试时间偏移。在本文中，我们提出了\emph{SATATrack}，一种用于无人机反无人机跟踪的语义感知时间适应框架。 SATATrack 引入了语义感知上下文传播 (SACP)，它使用目标描述来指导跨主干阶段的时间上下文传播，并在快速外观变化下保留目标身份。在训练期间使用辅助对比正则化器来阻止对语义相似的背景区域的响应。在推理过程中，时间感知分布对齐 (TADA) 可以在线对齐特征分布，而无需更新模型参数，将最近帧估计与训练时间统计数据相结合以确保稳定性。 SATATrack 在无人机-反无人机基准测试中实现了最先进的性能，同时在反无人机和无人机目标跟踪任务中保持竞争力。代码可在 https://github.com/XiaozhenQiao/SATATrack 获取。
+
+</details>
+
+---
+
+## 11. CG-World: A Large-Scale World-State Dataset and Protocol for World Models / CG-World：大规模世界状态数据集和世界模型协议
+
+**Date**: 2026-07-29 | **arXiv**: [2607.26452v1](http://arxiv.org/abs/2607.26452v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.26452v1)
+
+**Categories**: cs.AI, cs.CV, cs.GR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models must learn the joint dynamics of states, actions, events, and observations, yet existing video, robotics, and simulation datasets usually capture only part of this structure. We introduce CG-World, a large-scale world-state dataset and protocol derived from industrial computer graphics production pipelines. CG-World explicitly records intermediate states, including multimodal semantics, spatial structure, skeletal and controller states, motion curves, camera and lighting parameters, physics caches, contact events, and multi-pass renderings. CG-World v1 contains approximately 850,000 temporally aligned segments of 1-5 seconds. It separates latent states, observations, relations, events, and branch metadata, and organizes them into unified spatiotemporal samples. To support intervention learning and counterfactual reasoning, CG-World defines a branch lineage covering factual trajectories, observation interventions, action interventions, mechanism interventions, and strict counterfactual branches, with intervention targets, invariants, and alternative outcomes explicitly recorded. We evaluate the dataset on geometry-conditioned video generation, action prediction, and closed-loop vision-language-action policy transfer. Results show that CG-World provides reusable structured supervision for controlled generation, action modeling, and embodied policy transfer. We plan to expand CG-World through continued data collection and community collaboration toward a shared data infrastructure for world models, Physical AI, and embodied intelligence.
+
+世界模型必须学习状态、动作、事件和观察的联合动态，但现有的视频、机器人和模拟数据集通常仅捕获该结构的一部分。我们介绍 CG-World，这是一个源自工业计算机图形生产管道的大规模世界状态数据集和协议。 CG-World 明确记录中间状态，包括多模态语义、空间结构、骨架和控制器状态、运动曲线、相机和照明参数、物理缓存、接触事件和多通道渲染。 CG-World v1 包含大约 850,000 个 1-5 秒的时间对齐片段。它将潜在状态、观察、关系、事件和分支元数据分开，并将它们组织成统一的时空样本。为了支持干预学习和反事实推理，CG-World定义了一个分支谱系，涵盖事实轨迹、观察干预、行动干预、机制干预和严格的反事实分支，并明确记录干预目标、不变量和替代结果。我们评估几何条件视频生成、动作预测和闭环视觉-语言-动作策略传输的数据集。结果表明，CG-World 为受控生成、动作建模和具体策略转移提供可重用的结构化监督。我们计划通过持续的数据收集和社区协作来扩展 CG-World，以实现世界模型、物理人工智能和具体智能的共享数据基础设施。
+
+</details>
+
+---
+
+## 12. LumaGuide: Distribution Shaping for Training-Free HDR Generation in Diffusion Models / LumaGuide：扩散模型中免训练 HDR 生成的分布整形
+
+**Date**: 2026-07-28 | **arXiv**: [2607.26237v1](http://arxiv.org/abs/2607.26237v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.26237v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Pretrained diffusion models generate realistic images but are constrained by the statistical biases of their training data, limiting their ability to produce high dynamic range (HDR) content. In this work, we introduce LumaGuide, a training-free framework for distribution shaping in diffusion models. Instead of modifying model parameters, LumaGuide steers the sampling process to match target feature distributions via differentiable energy-based guidance. We instantiate this framework for HDR generation by controlling luminance distributions in perceptually uniform PQ space. Our results show that aligning luminance histograms is sufficient to induce HDR-consistent behavior, including coherent highlights and preserved shadow detail, while maintaining semantic fidelity. Beyond HDR, LumaGuide enables flexible specification of target distributions through data-driven presets, reference images, or text-driven predictors, and extends naturally to video generation with temporal consistency constraints. More broadly, our work demonstrates that controllable generation can be achieved by directly shaping output distributions at sampling time, without retraining diffusion models.
+
+预训练的扩散模型可以生成逼真的图像，但受到训练数据统计偏差的限制，限制了它们生成高动态范围 (HDR) 内容的能力。在这项工作中，我们介绍了 LumaGuide，这是一种用于扩散模型中分布塑造的免训练框架。 LumaGuide 不是修改模型参数，而是通过可微分的基于能量的指导来引导采样过程来匹配目标特征分布。我们通过控制感知均匀 PQ 空间中的亮度分布来实例化这个 HDR 生成框架。我们的结果表明，对齐亮度直方图足以诱导 HDR 一致的行为，包括连贯的高光和保留的阴影细节，同时保持语义保真度。除了 HDR 之外，LumaGuide 还可以通过数据驱动的预设、参考图像或文本驱动的预测器来灵活指定目标分布，并自然地扩展到具有时间一致性约束的视频生成。更广泛地说，我们的工作表明，可以通过在采样时直接塑造输出分布来实现可控发电，而无需重新训练扩散模型。
+
+</details>
+
+---
+
+## 13. WildShadowRemover: In-the-Wild Video Shadow Removal via Detail-Preserving Video Diffusion Models / WildShadowRemover：通过保留细节的视频扩散模型进行野外视频阴影去除
+
+**Date**: 2026-07-28 | **arXiv**: [2607.26203v1](http://arxiv.org/abs/2607.26203v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.26203v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video shadow removal in the wild remains challenging due to complex illumination, diverse shadow appearances, and limited training data. Despite its importance to numerous vision and graphics applications, it remains largely unexplored in unconstrained real-world scenarios. To address this gap, we present WildShadowRemover, a framework that adapts a pretrained video diffusion model for robust video shadow removal via LoRA fine-tuning. To preserve fine image details while retaining the model's powerful generative prior, we augment the frozen VAE decoder with a detail injection module and introduce a shadow-mask-guided frequency-decomposed modulation module to selectively restore high-frequency textures while suppressing shadow artifacts. Monocular depth priors from Depth Anything 3 further provide geometry-aware guidance under challenging lighting conditions. We also construct WildShadow, a large-scale paired video shadow removal dataset and benchmark, covering diverse synthetic scenes. Extensive experiments demonstrate that our method outperforms existing approaches in shadow removal quality and temporal consistency, producing temporally coherent shadow-free videos with superior visual quality and strong generalization across challenging in-the-wild scenarios.
+
+由于复杂的光照、多样化的阴影外观和有限的训练数据，野外视频阴影去除仍然具有挑战性。尽管它对众多视觉和图形应用很重要，但在不受约束的现实场景中它仍然很大程度上未被探索。为了解决这一差距，我们提出了 WildShadowRemover，这是一个框架，它采用预训练的视频扩散模型，通过 LoRA 微调实现强大的视频阴影去除。为了保留精细的图像细节，同时保留模型强大的生成先验，我们用细节注入模块增强了冻结的 VAE 解码器，并引入了阴影掩模引导的频率分解调制模块，以选择性地恢复高频纹理，同时抑制阴影伪影。 Depth Anything 3 的单目深度先验进一步在具有挑战性的照明条件下提供几何感知指导。我们还构建了 WildShadow，一个大规模配对视频阴影去除数据集和基准，涵盖不同的合成场景。大量的实验表明，我们的方法在阴影去除质量和时间一致性方面优于现有方法，产生时间连贯的无阴影视频，具有卓越的视觉质量和在具有挑战性的野外场景中的强泛化能力。
+
+</details>
+
+---
+
+## 14. Knowledge-guided Disentanglement with Atomic Actions for Action Recognition / 知识引导的与原子动作的解开以进行动作识别
+
+**Date**: 2026-07-28 | **arXiv**: [2607.26097v1](http://arxiv.org/abs/2607.26097v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.26097v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Action recognition in complex scenes often involves multiple concurrent fine-grained actions, making it challenging to model internal action structures. Most existing methods rely on holistic representations, which are insufficient for capturing subtle interactions and fine-grained semantics. While recent prompt-based approaches introduce disentanglement, they lack explicit semantic guidance, and methods based solely on visual or structured cues remain coarse-grained. In this paper, we propose Knowledge-guided Disentanglement with Atomic Actions (KDA), which leverages fine-grained semantic knowledge to enhance action representations and enable more precise disentanglement. Specifically, we use Large Language Models (LLMs) to decompose action labels into atomic actions, providing explicit spatial-temporal semantics. A Knowledge Injection Module (KIM) first integrates atomic action knowledge into video features. Based on this enhanced representation, a Knowledge Disentanglement Module (KDM) further disentangles atomic action knowledge to produce more precise semantic guidance for action disentanglement. A Knowledge Disentanglement Loss (KD Loss) is introduced to encourage clearer disentanglement of knowledge components within KDM. Extensive experiments demonstrate that KDA improves feature discriminability and achieves state-of-the-art performance on multi-label action recognition benchmarks. Moreover, KIM and KDM can be readily integrated into other methods, demonstrating strong generality.
+
+复杂场景中的动作识别通常涉及多个并发的细粒度动作，这使得对内部动作结构进行建模具有挑战性。大多数现有方法依赖于整体表示，这不足以捕获微妙的交互和细粒度的语义。虽然最近基于提示的方法引入了解缠结，但它们缺乏明确的语义指导，并且仅基于视觉或结构化提示的方法仍然是粗粒度的。在本文中，我们提出了知识引导的原子操作解缠（KDA），它利用细粒度的语义知识来增强动作表示并实现更精确的解缠。具体来说，我们使用大型语言模型（LLM）将动作标签分解为原子动作，提供明确的时空语义。知识注入模块（KIM）首先将原子动作知识集成到视频特征中。基于这种增强的表示，知识解缠模块（KDM）进一步解开原子动作知识，为动作解缠产生更精确的语义指导。引入知识解缠损失（KD Loss）是为了鼓励更清晰地解开 KDM 中的知识组件。大量实验表明，KDA 提高了特征辨别力，并在多标签动作识别基准上实现了最先进的性能。此外，KIM和KDM可以很容易地集成到其他方法中，表现出很强的通用性。
+
+</details>
+
+---
+
+## 15. Wonder: Video World Model Done Better / 奇迹：视频世界模型做得更好
+
+**Date**: 2026-07-28 | **arXiv**: [2607.26037v1](http://arxiv.org/abs/2607.26037v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.26037v1)
+
+**Categories**: cs.CV, cs.GR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present Wonder, a general-purpose video world model for real-time, camera-controllable world exploration. Given an image or a conditional video, Wonder constructs a playable world where users can navigate interactively by moving the camera, discovering unseen regions, and revisiting previously observed areas in real time and over a long-term horizon. Achieving this capability requires a system-level co-design of control method, memory mechanism, and training strategy. We introduce a novel camera conditioning with a dense coordinate field whose renderings provide spatially aligned motion and orientation cues, allowing the model to interpret camera motion directly as visual evidence. To support fast and precise memory retrieval over a growing generation context, we propose an efficient sparse attention-based memory mechanism, enabling the model to selectively attend to a small set of relevant context tokens at inference time, regardless of actual context length. We further develop several techniques to rectify the self-forcing-style distillation pipeline, improving the student model's ability to respect control signals, as well as maintaining diverse generation modes and long-term memory from the teacher. Together, these components enable Wonder to synthesize diverse, minute-scale videos at 16 FPS while preserving coherent geometry, appearance, and dynamics across long rollouts. Beyond image-to-video generation, Wonder naturally supports video-conditioned generation, allowing existing dynamic scenes to be re-shot in real time.
+
+我们推出了 Wonder，一种通用视频世界模型，用于实时、摄像机控制的世界探索。给定图像或条件视频，Wonder 构建了一个可玩的世界，用户可以通过移动相机进行交互导航，发现未见过的区域，并在长期范围内实时重新访问以前观察到的区域。实现这种能力需要控制方法、存储机制和训练策略的系统级协同设计。我们引入了一种新颖的相机调节，具有密集的坐标场，其渲染提供了空间对齐的运动和方向线索，允许模型将相机运动直接解释为视觉证据。为了支持在不断增长的一代上下文中快速、精确的记忆检索，我们提出了一种高效的基于稀疏注意力的记忆机制，使模型能够在推理时选择性地关注一小组相关的上下文标记，而不管实际的上下文长度如何。我们进一步开发了几种技术来纠正自强迫式蒸馏管道，提高学生模型尊重控制信号的能力，并保持教师的多样化生成模式和长期记忆。这些组件共同使 Wonder 能够以 16 FPS 合成多样化的分钟级视频，同时在长时间发布过程中保持连贯的几何形状、外观和动态。除了图像到视频的生成之外，Wonder 还自然支持视频调节生成，允许实时重新拍摄现有的动态场景。
+
+</details>
+
+---
+
+## 16. Parallel Decoding Distillation for Fast Image and Video Generation / 用于快速图像和视频生成的并行解码蒸馏
+
+**Date**: 2026-07-28 | **arXiv**: [2607.26004v1](http://arxiv.org/abs/2607.26004v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.26004v1)
+
+**Categories**: cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Generation in video diffusion or flow models is computationally expensive due to the slow and iterative sampling process. Current state-of-the-art (SOTA) acceleration methods heavily rely on variational score distillation (VSD) and adversarial losses to distill diffusion models into few-step generators. Albeit achieving high-quality video generation, these training losses are notoriously hard to optimize and suffer from mode collapse, leading to loss of video diversity and lack of motion. In this paper, we introduce Parallel Decoding Distillation (PDD), a simplified and scalable trajectory-based distillation method for fast inference of diffusion and flow matching models. Our architecture and training procedure are compatible with any pre-trained model and support sampling with a varying number of function evaluations (NFE). PDD accelerates generation by predicting multiple denoising steps per network evaluation. Conceptually, it learns a representation of the mean velocity without regressing its derivative using JVPs or finite-difference approximations. Our method achieves SOTA performance with 4-8 NFE on LTX-2.3 Text-to-Video/Audio, Wan 14B Text-to-Video, and Qwen-Image Text-to-Image. Moreover, PDD presents a significant improvement in generated video diversity.
+
+由于采样过程缓慢且迭代，视频扩散或流模型的生成在计算上是昂贵的。当前最先进的（SOTA）加速方法严重依赖变分分数蒸馏（VSD）和对抗性损失将扩散模型蒸馏为少步生成器。尽管实现了高质量的视频生成，但这些训练损失非常难以优化，并且会遭受模式崩溃的影响，从而导致视频多样性的损失和缺乏运动。在本文中，我们介绍了并行解码蒸馏（PDD），这是一种简化且可扩展的基于轨迹的蒸馏方法，用于快速推断扩散和流动匹配模型。我们的架构和训练程序与任何预训练模型兼容，并支持具有不同数量的功能评估 (NFE) 的采样。 PDD 通过预测每个网络评估的多个去噪步骤来加速生成。从概念上讲，它学习平均速度的表示，而不使用 JVP 或有限差分近似对其导数进行回归。我们的方法在 LTX-2.3 文本到视频/音频、Wan 14B 文本到视频和 Qwen-Image 文本到图像上实现了 4-8 NFE 的 SOTA 性能。此外，PDD 在生成的视频多样性方面呈现出显着的改进。
+
+</details>
+
+---
+
+## 17. Schrödinger's Cat: Probabilistic Representation and Prediction of Potential Scene Kinematics / 薛定谔的猫：潜在场景运动学的概率表示和预测
+
+**Date**: 2026-07-28 | **arXiv**: [2607.25984v1](http://arxiv.org/abs/2607.25984v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.25984v1)
+
+**Categories**: cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Predicting how a scene may evolve from partial observations requires reasoning about multiple possible futures rather than committing to a single trajectory. Existing approaches either generate appearance-dominated video predictions or sample a small number of trajectories without explicitly modeling the distribution of possible motion. We introduce Goal-Aware Representations of Future kInEmatic Latent Distributions (GARFIELD), a probabilistic model of scene kinematics that learns a structured spatio-temporal latent representation of the distribution over possible futures given an image and optional spatio-temporally sparse constraints. The same latent representation enables both joint sampling of all trajectories and direct access to the underlying motion distribution through an efficient deterministic density decoder. As a result, uncertainty about future motion can be localized to specific scene elements and timesteps and progressively refined through additional constraints. Experiments demonstrate strong motion planning performance competitive with large video generation models while sampling trajectories $97\times$ faster. Our method further estimates motion densities two orders of magnitude faster than Monte-Carlo sampling from motion generation models, enabling interactive exploration and uncertainty-aware planning.
+
+预测场景如何从部分观察中演变需要对多种可能的未来进行推理，而不是遵循单一的轨迹。现有方法要么生成外观主导的视频预测，要么对少量轨迹进行采样，而无需对可能运动的分布进行显式建模。我们引入了未来 kInEmatic 潜在分布的目标感知表示（GARFIELD），这是一种场景运动学的概率模型，它在给定图像和可选的时空稀疏约束的情况下学习可能的未来分布的结构化时空潜在表示。相同的潜在表示既可以对所有轨迹进行联合采样，又可以通过高效的确定性密度解码器直接访问底层运动分布。因此，未来运动的不确定性可以定位于特定的场景元素和时间步长，并通过附加约束逐步细化。实验表明，运动规划性能强大，可与大型视频生成模型相媲美，同时轨迹采样速度加快 97 倍。我们的方法进一步估计运动密度，比运动生成模型中的蒙特卡罗采样快两个数量级，从而实现交互式探索和不确定性感知规划。
+
+</details>
+
+---
+
+## 18. DC-WAM: Dynamic-Centric Visual Supervision and Reasoning for World-Action Models / DC-WAM：以动态为中心的视觉监督和世界动作模型的推理
+
+**Date**: 2026-07-28 | **arXiv**: [2607.25918v1](http://arxiv.org/abs/2607.25918v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.25918v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World-Action Models (WAMs) augment robot policies with future visual prediction, but it remains unclear what the visual modality should learn for control. While photorealistic future prediction provides dense supervision, it also incurs substantial computation and can allocate capacity to texture, illumination, and background variations that are only weakly related to action selection. Recent efficient WAM variants suggest that the main benefit of the video branch may not lie in the rendered future itself, but in the control-relevant visual representations induced during training. In this work, we revisit future video prediction from a dynamic-centric perspective and ask whether an existing RGB-based WAM can be redirected from appearance-dominated reconstruction toward interaction-induced visual dynamics without introducing additional modality-specific predictions or online inputs at deployment. We propose DC-WAM, a dynamic-centric WAM framework that redistributes supervision and computation in the RGB video branch. At the supervision level, DC-WAM combines temporal-difference flow matching with trajectory-guided weighting, emphasizing dense temporal changes and localized regions where the gripper, manipulated objects, and contact areas move. At the reasoning level, DynaRoute predicts token-wise dynamic relevance and converts it into an attention bias, guiding the model toward control-relevant future tokens. Experiments in simulation and on real-world manipulation tasks show that DC-WAM consistently improves policy performance, especially under out-of-distribution perturbations in lighting, object appearance, and background texture.
+
+世界动作模型（WAM）通过未来视觉预测增强机器人策略，但仍不清楚视觉模态应该学习什么来进行控制。虽然逼真的未来预测提供了密集的监督，但它也需要大量的计算，并且可以将容量分配给与动作选择仅微弱相关的纹理、照明和背景变化。最近有效的 WAM 变体表明，视频分支的主要好处可能不在于渲染的未来本身，而在于训练期间引发的与控制相关的视觉表示。在这项工作中，我们从以动态为中心的角度重新审视未来的视频预测，并询问是否可以将现有的基于 RGB 的 WAM 从外观主导的重建重定向到交互引起的视觉动态，而无需在部署时引入额外的特定于模态的预测或在线输入。我们提出了 DC-WAM，这是一种以动态为中心的 WAM 框架，可以在 RGB 视频分支中重新分配监督和计算。在监督层面，DC-WAM 将时差流匹配与轨迹引导加权相结合，强调密集的时间变化以及夹具、被操纵物体和接触区域移动的局部区域。在推理层面，DynaRoute 预测 token-wise 的动态相关性，并将其转换为注意力偏差，引导模型转向与控制相关的未来 token。模拟和现实世界操作任务中的实验表明，DC-WAM 持续提高策略性能，尤其是在照明、对象外观和背景纹理的分布外扰动下。
+
+</details>
+
+---
+
+## 19. Explicit Layer Modeling for Video Object Insertion and Layer Decomposition / 用于视频对象插入和层分解的显式层建模
+
+**Date**: 2026-07-28 | **arXiv**: [2607.25802v2](http://arxiv.org/abs/2607.25802v2) | **PDF**: [Link](http://arxiv.org/pdf/2607.25802v2)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Most video editing systems still lack explicit layered video representations, limiting their ability to perform realistic compositing, object reuse, and consistent manipulation. This limitation is especially pronounced in video object insertion and video layer decomposition, where existing methods rely on implicit inference or per-scene optimization due to the absence of explicit foreground-layer supervision. We introduce TriLayer, a large-scale triplet video dataset containing aligned composite, background, and foreground videos, where the foreground layers include both object appearance and associated visual effects. This explicit supervision enables models to learn layered video representations directly rather than inferring them implicitly. Building on this dataset, we propose DBL-Diffusion, a dual-branch diffusion framework that jointly models RGB composites and RGBA foreground layers through shared denoising and cross-branch interaction. We instantiate the framework in two tasks: DBL-Insert for layered object insertion, which generates explicit RGBA layers for realistic compositing and flexible post-editing, and DBL-Decompose for video layer decomposition, which recovers foreground and background layers using triplet supervision. Experiments demonstrate that explicit layer modeling substantially improves both insertion fidelity and decomposition quality.
+
+大多数视频编辑系统仍然缺乏明确的分层视频表示，限制了它们执行真实合成、对象重用和一致操作的能力。这种限制在视频对象插入和视频层分解中尤其明显，由于缺乏显式的前景层监督，现有方法依赖于隐式推理或每场景优化。我们引入了 TriLayer，一个包含对齐的合成、背景和前景视频的大型三元组视频数据集，其中前景层包括对象外观和相关的视觉效果。这种显式监督使模型能够直接学习分层视频表示，而不是隐式推断它们。在此数据集的基础上，我们提出了 DBL-Diffusion，这是一种双分支扩散框架，通过共享去噪和跨分支交互对 RGB 复合材料和 RGBA 前景层进行联合建模。我们在两个任务中实例化该框架：用于分层对象插入的 DBL-Insert，它生成用于逼真合成和灵活后期编辑的显式 RGBA 层，以及用于视频层分解的 DBL-Decompose，它使用三元组监督恢复前景和背景层。实验表明，显式层建模大大提高了插入保真度和分解质量。
+
+</details>
+
+---
+
+## 20. I2VShield: An Efficient Proactive Defense Framework against DiT-based Image-to-Video Models / I2VShield：针对基于 DiT 的图像到视频模型的高效主动防御框架
+
+**Date**: 2026-07-28 | **arXiv**: [2607.25522v2](http://arxiv.org/abs/2607.25522v2) | **PDF**: [Link](http://arxiv.org/pdf/2607.25522v2)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The rapid advancement of video generation models has led to the increasing misuse of image-to-video (I2V) models. Although substantial progress has been made in detecting AI-generated videos, proactive defenses against I2V models remain underexplored. In particular, current proactive defenses against I2V models predominantly rely on gradient-based adversarial attacks, which require defenders to possess GPUs with substantial memory resources (VRAM) to generate adversarial examples. To address this issue, we propose I2VShield, a privacy protection method based on generative adversarial attacks tailored to Diffusion Transformer (DiT)-based I2V models. The proposed method primarily consists of two components: (1) a text-adaptive perturbation generation framework integrating adversarial learning to mitigate computational overhead while maintaining visual imperceptibility; and (2) an untargeted Multimodal Attention Disruption (MAD) attack that exploits the inherent vulnerabilities of DiT-based I2V models, maximizing the deviation of the internal attention features from their clean states. Extensive experiments demonstrate that our approach achieves highly competitive protection performance across various datasets and mainstream DiT-based I2V models, particularly in disrupting spatiotemporal coherence, while substantially reducing computational costs.
+
+视频生成模型的快速发展导致图像到视频（I2V）模型的滥用日益增加。尽管在检测 AI 生成的视频方面已经取得了实质性进展，但针对 I2V 模型的主动防御仍未得到充分探索。特别是，当前针对 I2V 模型的主动防御主要依赖于基于梯度的对抗性攻击，这要求防御者拥有具有大量内存资源 (VRAM) 的 GPU 来生成对抗性示例。为了解决这个问题，我们提出了 I2VShield，这是一种基于生成对抗攻击的隐私保护方法，专为基于扩散变压器 (DiT) 的 I2V 模型而定制。所提出的方法主要由两个部分组成：（1）集成对抗性学习的文本自适应扰动生成框架，以减轻计算开销，同时保持视觉不可感知性； (2) 无目标的多模态注意力干扰 (MAD) 攻击，利用基于 DiT 的 I2V 模型的固有漏洞，最大化内部注意力特征与其干净状态的偏差。大量实验表明，我们的方法在各种数据集和基于 DiT 的主流 I2V 模型中实现了极具竞争力的保护性能，特别是在破坏时空一致性方面，同时大幅降低了计算成本。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-29 (28 papers)</b></summary>
 
 # arXiv Video Papers - 2026-07-29
