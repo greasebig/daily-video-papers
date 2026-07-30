@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-30](papers/2026-07-30.md) - 3 papers
 - [2026-07-29](papers/2026-07-29.md) - 2 papers
 - [2026-07-28](papers/2026-07-28.md) - 1 papers
 - [2026-07-27](papers/2026-07-27.md) - 1 papers
@@ -53,6 +54,66 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-30 (3 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-07-30
+
+**Paper Count**: 3
+
+---
+
+## 1. LumaGuide: Distribution Shaping for Training-Free HDR Generation in Diffusion Models / LumaGuide：扩散模型中免训练 HDR 生成的分布整形
+
+**Date**: 2026-07-28 | **arXiv**: [2607.26237v1](http://arxiv.org/abs/2607.26237v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.26237v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Pretrained diffusion models generate realistic images but are constrained by the statistical biases of their training data, limiting their ability to produce high dynamic range (HDR) content. In this work, we introduce LumaGuide, a training-free framework for distribution shaping in diffusion models. Instead of modifying model parameters, LumaGuide steers the sampling process to match target feature distributions via differentiable energy-based guidance. We instantiate this framework for HDR generation by controlling luminance distributions in perceptually uniform PQ space. Our results show that aligning luminance histograms is sufficient to induce HDR-consistent behavior, including coherent highlights and preserved shadow detail, while maintaining semantic fidelity. Beyond HDR, LumaGuide enables flexible specification of target distributions through data-driven presets, reference images, or text-driven predictors, and extends naturally to video generation with temporal consistency constraints. More broadly, our work demonstrates that controllable generation can be achieved by directly shaping output distributions at sampling time, without retraining diffusion models.
+
+预训练的扩散模型可以生成逼真的图像，但受到训练数据统计偏差的限制，限制了它们生成高动态范围 (HDR) 内容的能力。在这项工作中，我们介绍了 LumaGuide，这是一种用于扩散模型中分布塑造的免训练框架。 LumaGuide 不是修改模型参数，而是通过可微分的基于能量的指导来引导采样过程来匹配目标特征分布。我们通过控制感知均匀 PQ 空间中的亮度分布来实例化这个 HDR 生成框架。我们的结果表明，对齐亮度直方图足以诱导 HDR 一致的行为，包括连贯的高光和保留的阴影细节，同时保持语义保真度。除了 HDR 之外，LumaGuide 还可以通过数据驱动的预设、参考图像或文本驱动的预测器来灵活指定目标分布，并自然地扩展到具有时间一致性约束的视频生成。更广泛地说，我们的工作表明，可以通过在采样时直接塑造输出分布来实现可控发电，而无需重新训练扩散模型。
+
+</details>
+
+---
+
+## 2. Interactive Extraction of High-Frequency Aesthetically-Coherent Colormaps / 高频美学一致色彩图的交互式提取
+
+**Date**: 2026-07-28 | **arXiv**: [2607.26025v1](http://arxiv.org/abs/2607.26025v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.26025v1)
+
+**Categories**: cs.GR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Color transfer functions (i.e. colormaps) exhibiting a high frequency luminosity component have proven to be useful in the visualization of data where feature detection or iso-contours recognition is essential. Having these colormaps also display a wide range of color and an aesthetically pleasing composition holds the potential to further aid image understanding and analysis. However producing such colormaps in an efficient manner with current colormap creation tools is difficult. We hereby demonstrate an interactive technique for extracting colormaps from artwork and pictures. We show how the rich and careful color design and dynamic luminance range of an existing image can be gracefully captured in a colormap and be utilized effectively in the exploration of complex datasets
+
+表现出高频亮度分量的颜色传递函数（即颜色图）已被证明在特征检测或等轮廓识别至关重要的数据可视化中非常有用。这些色彩图还可以显示各种颜色，并且美观的构图有可能进一步帮助图像理解和分析。然而，使用当前的色彩图创建工具以有效的方式生成这样的色彩图是困难的。我们特此演示一种从艺术品和图片中提取色彩图的交互式技术。我们展示了如何在色彩图中优雅地捕获现有图像的丰富而细致的色彩设计和动态亮度范围，并在复杂数据集的探索中有效利用
+
+</details>
+
+---
+
+## 3. Spatially-Aligned Chroma from Luma Prediction for Lossless JPEG XS Raw Image Compression / 用于无损 JPEG XS 原始图像压缩的亮度预测的空间对齐色度
+
+**Date**: 2026-07-14 | **arXiv**: [2607.12636v1](http://arxiv.org/abs/2607.12636v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.12636v1)
+
+**Categories**: eess.IV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This study proposes a Chroma from Luma (CfL)-enhanced Star-Tetrix transform (STT), referred to as CfL-STT, for improving raw image compression in JPEG XS. The proposed CfL-STT integrates CfL prediction into the STT to predict chroma components from the luma component in CFA-sampled raw images. Unlike conventional CfL prediction designed for full-color images, the proposed method employs spatially aligned luma samples obtained via linear interpolation along the horizontal and vertical directions to match the chroma sampling grid. This spatial alignment suppresses high-frequency sensor noise while preserving cross-channel correlation, resulting in a more decorrelated Y-Delta-Du-Dv color space. The proposed method was implemented in the JPEG XS reference software and evaluated on raw image datasets. Experimental results demonstrate that a direct application of CfL prediction yields image-dependent performance and may degrade coding efficiency due to the lack of spatial alignment, whereas the proposed CfL-STT consistently improves coding efficiency in lossless raw image compression while preserving exact reversibility.
+
+本研究提出了亮度色度 (CfL) 增强型 Star-Tetrix 变换 (STT)（称为 CfL-STT），用于改进 JPEG XS 中的原始图像压缩。所提出的 CfL-STT 将 CfL 预测集成到 STT 中，以根据 CFA 采样的原始图像中的亮度分量来预测色度分量。与针对全色图像设计的传统 CfL 预测不同，所提出的方法采用通过沿水平和垂直方向的线性插值获得的空间对齐的亮度样本来匹配色度采样网格。这种空间对齐可抑制高频传感器噪声，同时保留跨通道相关性，从而产生更加去相关的 Y-Delta-Du-Dv 色彩空间。所提出的方法在 JPEG XS 参考软件中实现，并在原始图像数据集上进行评估。实验结果表明，直接应用 CfL 预测会产生图像相关的性能，并且可能由于缺乏空间对齐而降低编码效率，而所提出的 CfL-STT 始终提高无损原始图像压缩的编码效率，同时保持精确的可逆性。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-29 (2 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-07-29
