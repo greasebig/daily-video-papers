@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-07-31](papers/2026-07-31.md) - 1 papers
 - [2026-07-30](papers/2026-07-30.md) - 3 papers
 - [2026-07-29](papers/2026-07-29.md) - 2 papers
 - [2026-07-28](papers/2026-07-28.md) - 1 papers
@@ -54,6 +55,34 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-07-31 (1 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-07-31
+
+**Paper Count**: 1
+
+---
+
+## 1. Learning Color Grading, No Photo Sharing: Federated Aesthetic Preference Learning for Personalized Image Enhancement / 学习颜色分级，无照片共享：用于个性化图像增强的联合审美偏好学习
+
+**Date**: 2026-07-30 | **arXiv**: [2607.27659v1](http://arxiv.org/abs/2607.27659v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.27659v1)
+
+**Categories**: cs.CV, cs.AI, cs.DC
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Personalized image enhancement should reflect individual aesthetic taste, yet learning such preferences commonly depends on private photos and ratings that are unsuitable for centralized collection. The task must infer preference from sparse, heterogeneous feedback and translate it into natural-looking color transformations on resource-constrained user devices. We introduce FedPAIE, a federated personalized aesthetic image enhancement framework for user-adaptive color grading without centralizing raw photos or ratings. FedPAIE trains a lightweight dual-cue aesthetic scorer, calibrates it into a personalized scorer on a small local support set, and freezes it to guide regularized adaptation of a lightweight CLUT enhancer from unpaired local photographs. Fidelity constraints and an excess-gap penalty regularize scorer-guided adaptation to limit proxy-score over-optimization while preserving content and natural appearance. Training remains lightweight throughout the pipeline: scorer learning updates at most 0.787M parameters, enhancer adaptation updates 0.265M, and inference retains only a 0.293M-parameter personalized enhancer. Experiments on MIT-Adobe FiveK and Flickr-AES demonstrate effective open-world personalization and a favorable balance between user preference and image fidelity. FedPAIE thus connects decentralized preference learning with efficient personalized image transformation without requiring paired user retouches.
+
+个性化的图像增强应该反映个人的审美品味，但了解这种偏好通常依赖于私人照片和评级，不适合集中收集。该任务必须从稀疏、异构的反馈中推断出偏好，并将其转化为资源受限的用户设备上看起来自然的颜色转换。我们推出了 FedPAIE，这是一个联合的个性化美学图像增强框架，用于用户自适应的颜色分级，而无需集中原始照片或评级。 FedPAIE 训练一个轻量级双提示美学评分器，在小型本地支持集上将其校准为个性化评分器，并将其冻结以指导来自未配对本地照片的轻量级 CLUT 增强器的规范化适应。保真度约束和超额差距惩罚规范了评分者引导的适应，以限制代理评分过度优化，同时保留内容和自然外观。训练在整个流程中保持轻量级：评分器学习最多更新 0.787M 参数，增强器适应更新 0.265M，推理仅保留 0.293M 参数的个性化增强器。 MIT-Adobe FiveK 和 Flickr-AES 上的实验证明了有效的开放世界个性化以及用户偏好和图像保真度之间的良好平衡。因此，FedPAIE 将去中心化偏好学习与高效的个性化图像转换联系起来，无需配对用户修饰。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-30 (3 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-07-30
