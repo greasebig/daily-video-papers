@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-08-01](papers/2026-08-01.md) - 4 papers
 - [2026-07-31](papers/2026-07-31.md) - 40 papers
 - [2026-07-30](papers/2026-07-30.md) - 30 papers
 - [2026-07-29](papers/2026-07-29.md) - 38 papers
@@ -132,6 +133,82 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-08-01 (4 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-08-01
+
+**Paper Count**: 4
+
+---
+
+## 1. PAIChecker: Uncovering and Checking PR-Issue Misalignment in SWE-Bench-Like Benchmarks / PAIChecker：发现并检查类似 SWE 基准的 PR 问题不一致
+
+**Date**: 2026-07-30 | **arXiv**: [2607.28587v1](http://arxiv.org/abs/2607.28587v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.28587v1)
+
+**Categories**: cs.SE, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+SWE-bench-like benchmarks are widely used for evaluating LLM's issue resolution capability. They typically follow a common construction pipeline: each PR (Pull Request) is paired with its linked issue by extracting issue references from the PR description; the issue description is used as the problem statement, and the PR patch serves as the test oracle. However, due to the inherent complexity of developing and maintaining large repositories, such PR-Issue pairings are often misaligned in practice. In this work, we systematically study SWE-bench Verified instances, finding that 13.6% exhibit misalignment across five patterns in eleven fine-grained scenarios. To enable reliable and scalable construction of those benchmarks in the future, we propose PAIChecker, a multi-agent system for checking PR-Issue misalignment in SWE-bench-like benchmarks. Specifically, PAIChecker adopts a three-phase design that combines specific pattern identification, cross-agent label synthesis, and code-level validation, thereby enabling more accurate, generalizable, and progressively verified detection. Experiments on SWE-Gym and SWE-bench Multilingual show that PAIchecker achieves the best performance across all four LLM backbones, reaching up to 92.12% and 91.67% binary accuracy, respectively.
+
+类似 SWE 基准的基准被广泛用于评估 LLM 的问题解决能力。它们通常遵循通用的构建流程：通过从 PR 描述中提取问题引用，将每个 PR（拉取请求）与其链接的问题配对；问题描述作为问题陈述，PR 补丁作为测试预言机。然而，由于开发和维护大型存储库固有的复杂性，这种 PR 与问题的配对在实践中经常不一致。在这项工作中，我们系统地研究了 SWE-bench Verified 实例，发现 13.6% 的实例在 11 个细粒度场景中的 5 种模式中表现出错位。为了在未来能够可靠且可扩展地构建这些基准，我们提出了 PAIChecker，这是一个多代理系统，用于检查类似 SWE 基准的基准中 PR 问题的错位。具体来说，PAIChecker采用三阶段设计，结合特定模式识别、跨智能体标签合成和代码级验证，从而实现更准确、可泛化和逐步验证的检测。在 SWE-Gym 和 SWE-bench Multilingual 上的实验表明，PAIchecker 在所有四个 LLM 主干上实现了最佳性能，二进制准确率分别高达 92.12% 和 91.67%。
+
+</details>
+
+---
+
+## 2. Rethinking Inference-Time Scaling in Local Computer-Use Agents: Failure Modes and Compute Tradeoffs / 重新思考本地计算机使用代理中的推理时间缩放：故障模式和计算权衡
+
+**Date**: 2026-07-30 | **arXiv**: [2607.28573v1](http://arxiv.org/abs/2607.28573v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.28573v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Deploying autonomous computer-use agents (CUAs) locally is increasingly important for privacy, cost efficiency, and practical usability, yet improving their performance under strict hardware constraints remains challenging. While recent studies show that inference-time scaling can improve frontier computer-use agents through additional computation during execution, its effectiveness for resource-constrained local models remains poorly understood. We present a systematic empirical study of inference-time scaling in local CUAs across contextual, temporal, structural, and parallel dimensions. We evaluate Qwen3-VL-8B/30B-A3B, UI-TARS-1.5-7B, and OpenCUA-7B on the OSWorld benchmark. Our results show that additional computation often yields diminishing returns while changing failure modes. Contextual scaling provides historical grounding that improves trajectory stability and task accuracy, but its gains saturate as token cost increases and failures shift from repetitive or stalled trajectories toward premature false successes. Temporal scaling similarly reduces max-step stalls, yet does not substantially improve task success, indicating that longer horizons often extend erroneous trajectories rather than correct them. We further find that structural decomposition can introduce planning and formatting overhead in local two-stage agents, while parallel scaling partially mitigates these failures at a substantial computational cost. Overall, our findings suggest that efficient local CUAs require selective compute allocation, failure-aware control mechanisms, and agentic frameworks designed around the capabilities and limitations of local models.
+
+在本地部署自主计算机使用代理 (CUA) 对于隐私、成本效率和实际可用性越来越重要，但在严格的硬件限制下提高其性能仍然具有挑战性。虽然最近的研究表明，推理时间扩展可以通过执行期间的额外计算来改进前沿计算机使用代理，但其对于资源受限的本地模型的有效性仍然知之甚少。我们对本地 CUA 中跨上下文、时间、结构和并行维度的推理时间缩放进行了系统的实证研究。我们在 OSWorld 基准测试中评估了 Qwen3-VL-8B/30B-A3B、UI-TARS-1.5-7B 和 OpenCUA-7B。我们的结果表明，在改变故障模式时，额外的计算通常会产生收益递减。上下文缩放提供了提高轨迹稳定性和任务准确性的历史基础，但随着代币成本的增加以及失败从重复或停滞的轨迹转向过早的错误成功，其收益会饱和。时间缩放类似地减少了最大步停顿，但并没有显着提高任务成功率，这表明更长的视野通常会扩展错误的轨迹，而不是纠正它们。我们进一步发现，结构分解可能会在本地两阶段代理中引入规划和格式化开销，而并行扩展则以大量计算成本部分缓解了这些故障。总体而言，我们的研究结果表明，高效的本地 CUA 需要选择性的计算分配、故障感知控制机制以及围绕本地模型的功能和限制而设计的代理框架。
+
+</details>
+
+---
+
+## 3. MANTA: Multi-Agent Network Topology Adaptation for Self-Evolving Multi-Agent Systems / MANTA：自我进化多智能体系统的多智能体网络拓扑适应
+
+**Date**: 2026-07-30 | **arXiv**: [2607.28527v1](http://arxiv.org/abs/2607.28527v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.28527v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language model-based multi-agent systems improve complex problem solving through task decomposition, agent specialization, information exchange, and intermediate validation. However, existing systems typically treat communication topology as a fixed design choice or an offline optimization target. We introduce MANTA, a framework for Multi-Agent Network Topology Adaptation that enables communication structures to self-evolve at inference time. Before execution, MANTA initializes a task-conditioned topology from prior structural experience. During deployment, it monitors collaboration traces and applies bounded structural updates when the current organization becomes insufficient. These updates can modify agent roles, communication links, execution order, information visibility, and validation pathways while preserving the task interface and agent budget. We evaluate MANTA against representative single-agent and multi-agent baselines on five benchmarks spanning information seeking, tool use, planning, workflow execution, and mathematical reasoning. MANTA achieves the highest average score of 74.0, outperforming the strongest baseline by 5.8 percentage points and obtaining the best result on PlanCraft. These results show that inference-time self-improvement can extend to the architecture of collaboration itself.
+
+基于大型语言模型的多智能体系统通过任务分解、智能体专业化、信息交换和中间验证来改进复杂问题的解决。然而，现有系统通常将通信拓扑视为固定的设计选择或离线优化目标。我们引入了 MANTA，一种多智能体网络拓扑适应框架，使通信结构能够在推理时自我进化。在执行之前，MANTA 根据先前的结构经验初始化任务条件拓扑。在部署过程中，它会监视协作跟踪，并在当前组织变得不足时应用有限的结构更新。这些更新可以修改代理角色、通信链接、执行顺序、信息可见性和验证路径，同时保留任务界面和代理预算。我们根据代表性的单智能体和多智能体基线，在信息搜索、工具使用、规划、工作流程执行和数学推理的五个基准上评估 MANTA。 MANTA 获得了最高平均分 74.0，比最强基线高出 5.8 个百分点，并获得 PlanCraft 上的最佳成绩。这些结果表明，推理时自我改进可以扩展到协作架构本身。
+
+</details>
+
+---
+
+## 4. LEDGERMIND: Provenance-Constrained Multimodal Agentic Reasoning with a Structured Evidence Ledger / LEDGERMIND：具有结构化证据分类账的来源约束多模式代理推理
+
+**Date**: 2026-07-30 | **arXiv**: [2607.28374v1](http://arxiv.org/abs/2607.28374v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.28374v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multimodal agents for visual question answering increasingly operate as multi-step trajectories that interleave perception, retrieval, and reasoning, yet evaluation still largely reduces to final-answer accuracy. This aggregate signal cannot tell whether a correct answer was reached through grounded evidence, language priors, or accidental error cancellation. We propose to treat a multimodal agent trajectory as a provenance-constrained state machine: tool outputs are normalized into a Structured Evidence Ledger that serves as the trajectory state, downstream reasoning and decision claims may cite only active ledger entries, grounding is checked at the entity and numeric level, and repair is realized as typed state transitions that cannot introduce content without tool-produced provenance. We instantiate this design as LedgerMind (Provenance-Constrained Multimodal Agentic Reasoning with a Structured Evidence Ledger), augmented by a Three-Layer Grounding Protocol, an Adaptive Dual-Path Dispatcher that matches reasoning depth to question complexity, and an Event-Triggered Verification-and-Repair engine with a formal provenance non-amplification guarantee. We use LedgerMind to target four recurring failure patterns that final-answer accuracy tends to obscure: unsupported intermediate reasoning, citation-backed entity hallucination (Phantom Grounding), over-reasoning on simple queries, and repair-time amplification. Experiments across multiple multimodal reasoning benchmarks and backbone MLLMs show that LedgerMind improves both answer accuracy and trajectory-level faithfulness.
+
+用于视觉问答的多模态代理越来越多地作为多步骤轨迹运行，交织感知、检索和推理，但评估仍然在很大程度上降低了最终答案的准确性。这个聚合信号无法判断是否通过有根据的证据、语言先验或意外错误消除得出了正确答案。我们建议将多模式代理轨迹视为出处受限的状态机：工具输出被标准化为充当轨迹状态的结构化证据账本，下游推理和决策声明可能仅引用活动账本条目，在实体和数字级别检查基础，并且修复被实现为类型化状态转换，如果没有工具生成的出处，则无法引入内容。我们将此设计实例化为 LedgerMind（具有结构化证据分类帐的来源约束多模式代理推理），并通过三层接地协议、将推理深度与问题复杂性相匹配的自适应双路径调度程序以及具有正式来源非放大保证的事件触发验证和修复引擎进行了增强。我们使用 LedgerMind 来针对最终答案准确性往往会模糊的四种重复出现的故障模式：不支持的中间推理、引用支持的实体幻觉（幻象接地）、对简单查询的过度推理以及修复时间放大。跨多个多模态推理基准和骨干 MLLM 的实验表明，LedgerMind 提高了答案准确性和轨迹级可信度。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-07-31 (40 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-07-31
