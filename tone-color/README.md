@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-08-02](papers/2026-08-02.md) - 1 papers
 - [2026-08-01](papers/2026-08-01.md) - 1 papers
 - [2026-07-31](papers/2026-07-31.md) - 1 papers
 - [2026-07-30](papers/2026-07-30.md) - 3 papers
@@ -56,6 +57,34 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-08-02 (1 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-08-02
+
+**Paper Count**: 1
+
+---
+
+## 1. A Reference-Free Framework for Evaluating Single-Frame ISP Pipelines / 用于评估单帧 ISP 管道的无参考框架
+
+**Date**: 2026-07-25 | **arXiv**: [2607.23321v1](http://arxiv.org/abs/2607.23321v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.23321v1)
+
+**Categories**: eess.IV, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Evaluating camera image signal processing (ISP) pipelines requires measuring low-level artifacts introduced by operations such as denoising, demosaicing, tone mapping, and compression. Blind image quality assessment (IQA) techniques can grade visual quality without a reference, but they typically focus on semantic and high-level visual cues or human perceptual scores rather than the low-level image-processing artifacts introduced by camera pipelines. In contrast, full-reference metrics such as PSNR and SSIM measure pixel-level differences and structural similarity, while LPIPS measures perceptual similarity in deep feature space. However, these metrics require perfectly aligned image pairs, which are difficult to collect in practical settings. We propose a reference-free learning framework that estimates full-reference image quality metrics from a processed sRGB image and its ISO metadata. Our method predicts a proxy sRGB reference, which is then compared with the processed image to compute PSNR, SSIM, and LPIPS in their standard full-reference form. Our experiments show that the proxy-reference model can be learned from synthetic data and applied to real camera data. We further show that lightweight LoRA fine-tuning enables efficient adaptation when ISP components or pipeline configurations are changed. The proposed method outperforms direct metric regression in estimating metric values and achieves higher agreement with full-reference rankings than conventional blind IQA methods. These results demonstrate the feasibility of reference-free estimation of full-reference metrics for practical camera-pipeline evaluation.
+
+评估相机图像信号处理 (ISP) 管道需要测量由去噪、去马赛克、色调映射和压缩等操作引入的低级伪影。盲图像质量评估 (IQA) 技术可以在没有参考的情况下对视觉质量进行分级，但它们通常关注语义和高级视觉线索或人类感知分数，而不是相机管道引入的低级图像处理伪影。相比之下，PSNR 和 SSIM 等全参考指标测量像素级差异和结构相似性，而 LPIPS 测量深层特征空间中的感知相似性。然而，这些指标需要完美对齐的图像对，这在实际设置中很难收集。我们提出了一个无参考学习框架，该框架可以根据处理后的 sRGB 图像及其 ISO 元数据估计全参考图像质量指标。我们的方法预测代理 sRGB 参考，然后将其与处理后的图像进行比较，以标准全参考形式计算 PSNR、SSIM 和 LPIPS。我们的实验表明，代理参考模型可以从合成数据中学习并应用于真实的相机数据。我们进一步表明，当 ISP 组件或管道配置发生变化时，轻量级 LoRA 微调可以实现有效的适应。该方法在估计度量值方面优于直接度量回归，并且与传统的盲 IQA 方法相比，与全参考排名具有更高的一致性。这些结果证明了用于实际相机管道评估的全参考指标的无参考估计的可行性。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-08-01 (1 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-08-01
