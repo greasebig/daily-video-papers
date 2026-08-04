@@ -27,6 +27,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-08-04](papers/2026-08-04.md) - 1 papers
 - [2026-08-03](papers/2026-08-03.md) - 2 papers
 - [2026-08-01](papers/2026-08-01.md) - 4 papers
 - [2026-07-31](papers/2026-07-31.md) - 10 papers
@@ -153,6 +154,34 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-08-04 (1 papers)</b></summary>
+
+# arXiv Video Papers - 2026-08-04
+
+**Paper Count**: 1
+
+---
+
+## 1. Coverage-Driven Adaptive Keyframe Selection for Video Understanding / 用于视频理解的覆盖驱动自适应关键帧选择
+
+**Date**: 2026-08-01 | **arXiv**: [2608.00714v1](http://arxiv.org/abs/2608.00714v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.00714v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in large vision-language models (LVLMs) have enabled long-video understanding and analysis. However, processing the large number of frames in a video incurs substantial computational overhead. Existing methods reduce LVLM inference costs by scoring frame-query relevance before inference and selecting keyframes accordingly. Nevertheless, the distribution of relevant frames varies across queries, and these methods often need to score hundreds or thousands of frames. To address this limitation, we propose CSES, a training-free semantic keyframe selector that adaptively determines the numbers of frames to score and keyframes to select. CSES estimates the prominence of the frame-query relevance profile to guide active acquisition and adapt the temporal coverage of each input. It then formulates keyframe selection as a coverage problem that jointly accounts for semantic relevance, temporal redundancy, and visual redundancy. Active acquisition and keyframe selection terminate based on coverage saturation. The selection objective is monotone and submodular, enabling greedy optimization with a standard approximation guarantee. Experiments with four LVLMs on two benchmarks show that our method preserves accuracy while scoring $4$-$13\times$ fewer frames and selecting $18.4\%$-$20.5\%$ fewer input keyframes than existing baselines. CSES further achieves a $3.1$-$5.4\times$ speedup in frame selection over baselines.
+
+大型视觉语言模型（LVLM）的最新进展使得长视频理解和分析成为可能。然而，处理视频中的大量帧会产生大量的计算开销。现有方法通过在推理之前对帧查询相关性进行评分并相应地选择关键帧来降低 LVLM 推理成本。然而，相关帧的分布因查询而异，并且这些方法通常需要对数百或数千个帧进行评分。为了解决这个限制，我们提出了 CSES，这是一种无需训练的语义关键帧选择器，可以自适应地确定要评分的帧数和要选择的关键帧数。 CSES 估计帧查询相关性配置文件的突出程度，以指导主动采集并调整每个输入的时间覆盖范围。然后，它将关键帧选择制定为一个覆盖问题，共同考虑语义相关性、时间冗余和视觉冗余。主动采集和关键帧选择根据覆盖饱和度终止。选择目标是单调和子模的，可通过标准近似保证实现贪婪优化。在两个基准上使用四个 LVLM 进行的实验表明，与现有基线相比，我们的方法在保持准确性的同时，减少了 $4$-$13\times$ 的帧数，并选择了 $18.4\%$-$20.5\%$ 的输入关键帧。 CSES 在帧选择方面比基线进一步实现了 $3.1$-$5.4\times$ 加速。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-08-03 (2 papers)</b></summary>
 
 # arXiv Video Papers - 2026-08-03
