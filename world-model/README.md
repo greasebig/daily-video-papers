@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-08-06](papers/2026-08-06.md) - 4 papers
 - [2026-08-05](papers/2026-08-05.md) - 11 papers
 - [2026-08-04](papers/2026-08-04.md) - 2 papers
 - [2026-08-03](papers/2026-08-03.md) - 3 papers
@@ -129,6 +130,82 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-08-06 (4 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-08-06
+
+**Paper Count**: 4
+
+---
+
+## 1. WorldCycle: Self-Verifiable Reinforcement Learning for Long-Horizon Video World Models / WorldCycle：长视野视频世界模型的可自我验证强化学习
+
+**Date**: 2026-08-05 | **arXiv**: [2608.04964v1](http://arxiv.org/abs/2608.04964v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.04964v1)
+
+**Categories**: cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Interactive video world models are essential for long-horizon planning and exploration, yet they suffer from compounding errors. Post-training methods such as reinforcement learning (RL) can improve these models, but they hit a verification bottleneck: for arbitrary action sequences, no ground-truth future state exists to measure long-term drift. Our key insight is that reversible action cycles make this verification possible: a sequence composed with its inverse must analytically return to the initial state, yielding annotation-free supervision on long-horizon correctness. Building on this, we introduce WorldCycle, a self-verifiable RL framework that constructs closed action cycles and their repeated executions from ordinary action sequences, and optimizes two complementary rewards: a spatial closure reward enforcing symmetry between mirrored forward and reverse segments, and a temporal consistency reward aligning states across repeated cycle executions. These rewards force the model to learn actions as consistent state operators rather than memorized temporal patterns, and extend naturally to out-of-distribution composite action cycles that the base model handles poorly. We further release CycleBench, a diagnostic benchmark for state-returning ability under complex action structures. WorldCycle reduces state returning drift by up to 44% and lifts composite-action accuracy nearly 4x over the base model, providing a vital foundation for physically grounded world models.
+
+交互式视频世界模型对于长期规划和探索至关重要，但它们会出现复合错误。强化学习 (RL) 等训练后方法可以改进这些模型，但它们遇到了验证瓶颈：对于任意动作序列，不存在用于测量长期漂移的真实未来状态。我们的主要见解是可逆的动作循环使这种验证成为可能：由其逆组成的序列必须通过分析返回到初始状态，从而对长范围正确性产生无注释的监督。在此基础上，我们引入了 WorldCycle，一个可自我验证的 RL 框架，它构建了封闭的动作循环及其从普通动作序列的重复执行，并优化了两个互补的奖励：在镜像的正向和反向段之间强制对称的空间闭合奖励，以及在重复循环执行中对齐状态的时间一致性奖励。这些奖励迫使模型将动作学习为一致的状态运算符，而不是记忆的时间模式，并自然地扩展到基础模型处理不佳的分布外复合动作周期。我们进一步发布了CycleBench，复杂动作结构下状态返回能力的诊断基准。 WorldCycle 将状态返回漂移减少高达 44%，并将复合动作精度比基本模型提高近 4 倍，为物理接地世界模型提供了重要基础。
+
+</details>
+
+---
+
+## 2. Overcoming Statistical Bias in Action-Controllable World Models / 克服行动可控世界模型中的统计偏差
+
+**Date**: 2026-08-05 | **arXiv**: [2608.04653v1](http://arxiv.org/abs/2608.04653v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.04653v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Action-conditioned world models aim to predict how visual environments evolve under an agent's actions. Yet future frames are often highly predictable from visual inertia and recurring motion patterns alone. This creates a shortcut: models can fit the data by exploiting statistical biases without making their visible dynamics meaningfully depend on the action. As a result, different actions may produce similar futures, while motion may persist even under zero action. The key question is how to reduce reliance on statistical shortcuts from dominating action-conditioned prediction. We argue that action control requires more than injecting action features; it requires enforcing consistency under counterfactual changes to actions and observations. Based on this insight, we introduce CoCo, a Counterfactual Consistency framework to enhance action controllability through two complementary constraints. Multi-step counterfactual consistency constrains reference, inverse-action, and zero-action rollouts, while action-spatial counterfactual consistency enforces consistent predictions under mirrored scenes and transformed actions. Together, they reduce reliance on statistical shortcuts from substituting for action-dependent dynamics. We further introduce Action Response Consistency (ARC) and Drift Energy (DE) to assess action controllability, together with Mini-SSMB for same-state, multi-action counterfactual evaluation. On Mini-SSMB, our full model achieved ARC_inv of 0.412 and ARC_ref of 0.483, while reducing DE by 17.07% relative to the baseline. On VP2 visual planning, it achieves the highest average success rate among SOTA models, at 73.1%. Experiments on BAIR and RoboNet further show that these gains preserve video prediction quality and transfer across model settings.
+
+动作条件世界模型旨在预测视觉环境在智能体动作下如何演变。然而，仅凭视觉惯性和重复运动模式，未来的帧通常是高度可预测的。这创建了一条捷径：模型可以通过利用统计偏差来拟合数据，而不使其可见的动态有意义地依赖于操作。因此，不同的行动可能会产生相似的未来，而运动即使在零行动下也可能持续存在。关键问题是如何减少对占主导地位的动作条件预测的统计捷径的依赖。我们认为动作控制需要的不仅仅是注入动作特征；它要求在行动和观察发生反事实变化时保持一致性。基于这一见解，我们引入了 CoCo，一个反事实一致性框架，通过两个互补的约束来增强行动的可控性。多步骤反事实一致性限制了参考、逆动作和零动作的推出，而动作空间反事实一致性则在镜像场景和变换动作下强制执行一致的预测。它们共同减少了对统计捷径的依赖，取代了依赖行动的动态。我们进一步引入动作响应一致性（ARC）和漂移能量（DE）来评估动作的可控性，以及用于同状态、多动作反事实评估的Mini-SSMB。在 Mini-SSMB 上，我们的完整模型实现了 ARC_inv 为 0.412 和 ARC_ref 为 0.483，同时相对于基线将 DE 降低了 17.07%。在VP2视觉规划上，它取得了SOTA模型中最高的平均成功率，为73.1%。 BAIR 和 RoboNet 上的实验进一步表明，这些增益可以保持视频预测质量并在模型设置之间进行传输。
+
+</details>
+
+---
+
+## 3. The Personalization Mirage: How LLMs Fabricate User Profiles, and Why Self-Monitoring Misleads / 个性化海市蜃楼：法学硕士如何制作用户档案，以及为什么自我监控会产生误导
+
+**Date**: 2026-08-05 | **arXiv**: [2608.04570v1](http://arxiv.org/abs/2608.04570v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.04570v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Personalized LLMs with persistent memory are increasingly deployed, yet the faithfulness of their user models remains unexamined. We study over-inference (OI): the phenomenon where LLMs fabricate user attributes beyond what evidence supports. We introduce MirageBench, comprising 150 personas balanced across stereotypical, counter-stereotypical, and neutral profiles, 6 personalization tasks spanning an ``imagination gradient'', a four-way faithfulness taxonomy operationalized by an independent judge (validated against a blind human annotator on 400 claims: Cohen's kappa = 0.863 four-class, kappa = 0.900 binary), and a leaderboard of 12 models across 7 families on 143616 judged claims. We find that over-inference is pervasive: every one of the 12 models over-infers 35%--49% of its claims (cross-model mean 41.6%; claim-weighted 41.8%), with no model in this evaluation escaping it. Most strikingly, we surface a Self-Monitoring Inversion: at the model-selection level, models' self-assessed OI is negatively rank-correlated with their judge-measured OI (rho = -0.60, p = 0.044; exploratory, wide bootstrap CI [-0.90, +0.06], n = 12). The models that report the least over-inference tend to be flagged as fabricating the most, so self-reported confidence is a misleading signal for comparing models, even though within a single model self-audit still ranks that model's own claims moderately well (AUROC 0.58--0.83). We further show that OI is task-dependent (27%--59%) and that, in a multi-turn pilot, inferred attributes accumulate approximately linearly with little revision. MirageBench positions external verification, rather than model self-report, as a more reliable foundation for trustworthy personalization.
+
+具有持久记忆的个性化法学硕士越来越多地被部署，但其用户模型的忠实度仍未得到检验。我们研究过度推理（OI）：法学硕士伪造超出证据支持的用户属性的现象。我们引入了 MirageBench，其中包括 150 个在刻板印象、反刻板印象和中性特征之间平衡的人物角色、跨越“想象力梯度”的 6 个个性化任务、由独立法官实施的四向忠诚度分类法（针对 400 项声明针对盲人注释者进行了验证：科恩的 kappa = 0.863 四级，kappa = 0.900 二进制），以及 12 个排行榜针对 7 个家庭的 143616 项已判决索赔建立模型。我们发现过度推断很普遍：12 个模型中的每一个都过度推断了 35%--49% 的主张（跨模型平均值 41.6%；主张加权 41.8%），本次评估中没有一个模型能够逃脱这一问题。最引人注目的是，我们发现了自我监控倒置：在模型选择层面，模型的自我评估 OI 与其判断测量的 OI 呈负等级相关（rho = -0.60，p = 0.044；探索性宽自举 CI [-0.90，+0.06]，n = 12）。报告过度推理最少的模型往往被标记为捏造最多，因此自我报告的置信度对于比较模型来说是一个误导性信号，即使在单个模型中，自我审核仍然将该模型自己的声明排名中等（AUROC 0.58--0.83）。我们进一步表明，OI 是任务相关的（27%--59%），并且在多轮试验中，推断的属性近似线性累积，几乎不需要修正。 MirageBench 将外部验证（而不是模型自我报告）定位为值得信赖的个性化的更可靠基础。
+
+</details>
+
+---
+
+## 4. Stochastic Multiple Shooting Trajectory Optimization via Sequential Local Policy Evaluation / 通过顺序局部策略评估的随机多次射击轨迹优化
+
+**Date**: 2026-08-04 | **arXiv**: [2608.03978v1](http://arxiv.org/abs/2608.03978v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.03978v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Stochastic single shooting trajectory optimization methods such as Model Predictive Path Integral control (MPPI) have been widely adopted in robotics due to their ability to reason about probabilistic dynamics and provide solutions where model gradients are noisy, costly to evaluate, or unavailable. However, satisfaction of terminal constraints when shooting over long action sequences is often sample inefficient, requiring a large number of iterations for convergence. In this paper, we present a stochastic multiple shooting method that optimizes short control action sequences connected via local feedback policies to improve sample efficiency and convergence to a terminal set. Additionally, we show that we are able to synthesize approximate system Jacobians purely from rollouts, making the method suitable for model-based reinforcement learning with black-box dynamics. We demonstrate the algorithm has improved sample efficiency and terminal set convergence for three nonlinear, underactuated optimization problems: a classic cartpole swingup task with analytical dynamics, a cartpole swingup task with learned neural network dynamics, and a VTOL quadplane performing a high angle-of-attack, precision post-stall landing maneuver.
+
+模型预测路径积分控制 (MPPI) 等随机单次轨迹优化方法已在机器人技术中得到广泛采用，因为它们能够推理概率动力学，并在模型梯度噪声大、评估成本高或不可用的情况下提供解决方案。然而，当拍摄较长的动作序列时，满足终端约束通常是样本效率低下的，需要大量迭代才能收敛。在本文中，我们提出了一种随机多重射击方法，该方法优化通过本地反馈策略连接的短控制动作序列，以提高样本效率和收敛到终端集。此外，我们表明我们能够纯粹通过推出来合成近似系统雅可比行列式，使得该方法适用于具有黑盒动力学的基于模型的强化学习。我们证明该算法提高了三个非线性、欠驱动优化问题的样本效率和终端集收敛性：具有分析动力学的经典推车摆动任务、具有学习神经网络动力学的推车摆动任务以及执行高迎角、精确失速后着陆机动的垂直起降四翼飞机。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-08-05 (11 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-08-05
