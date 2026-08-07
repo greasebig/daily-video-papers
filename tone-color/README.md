@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-08-07](papers/2026-08-07.md) - 1 papers
 - [2026-08-06](papers/2026-08-06.md) - 1 papers
 - [2026-08-04](papers/2026-08-04.md) - 2 papers
 - [2026-08-03](papers/2026-08-03.md) - 2 papers
@@ -60,6 +61,34 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-08-07 (1 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-08-07
+
+**Paper Count**: 1
+
+---
+
+## 1. Dual-Output Multi-Exposure HDR Reconstruction via SDR Fusion and Gain Map Inverse Tone Mapping / 通过 SDR 融合和增益图逆色调映射进行双输出多重曝光 HDR 重建
+
+**Date**: 2026-08-06 | **arXiv**: [2608.05626v1](http://arxiv.org/abs/2608.05626v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.05626v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We propose DOME-HDR, a dual-output multi-exposure HDR reconstruction framework that jointly produces a perceptually balanced SDR image and a consistent HDR image via gain map inverse tone mapping. Given three bracketed LDR inputs, DOME-HDR first synthesizes a base SDR using a LoRA-adapted latent diffusion model. A dual cross-attention fusion module injects complementary structural and color cues from the under- and over-exposed images while anchoring on the mid exposure for stability. The synthesized SDR then guides HPGM, our HDR Prior-guided Gain Map network, to predict a spatially varying gain map for reliable dynamic-range expansion. We evaluate on Kalantari, Tel, and Challenge123 using both full-reference and no-reference metrics, where DOME-HDR achieves state-of-the-art HDR reconstruction quality; ablations further confirm the effectiveness of dual cross-attention and SDR-guided gain map estimation.
+
+我们提出 DOME-HDR，一种双输出多重曝光 HDR 重建框架，通过增益图逆色调映射联合生成感知平衡的 SDR 图像和一致的 HDR 图像。给定三个括号内的 LDR 输入，DOME-HDR 首先使用 LoRA 适应的潜在扩散模型合成基本 SDR。双交叉注意力融合模块从曝光不足和过度曝光的图像中注入互补的结构和颜色线索，同时锚定中间曝光以确保稳定性。然后，合成的 SDR 指导 HPGM（我们的 HDR 先验引导增益图网络）来预测空间变化的增益图，以实现可靠的动态范围扩展。我们使用全参考和无参考指标对 Kalantari、Tel 和 Challenge123 进行评估，其中 DOME-HDR 实现了最先进的 HDR 重建质量；消融进一步证实了双重交叉注意力和 SDR 引导的增益图估计的有效性。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-08-06 (1 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-08-06
