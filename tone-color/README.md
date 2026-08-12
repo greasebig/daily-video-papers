@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-08-12](papers/2026-08-12.md) - 3 papers
 - [2026-08-11](papers/2026-08-11.md) - 1 papers
 - [2026-08-09](papers/2026-08-09.md) - 2 papers
 - [2026-08-08](papers/2026-08-08.md) - 3 papers
@@ -64,6 +65,66 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-08-12 (3 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-08-12
+
+**Paper Count**: 3
+
+---
+
+## 1. NTIRE 2026 Low-light Enhancement: Twilight Cowboy Challenge / NTIRE 2026 弱光增强：暮光牛仔挑战赛
+
+**Date**: 2026-08-10 | **arXiv**: [2608.09782v1](http://arxiv.org/abs/2608.09782v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.09782v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This paper presents a review of the NTIRE 2026 Low-light Enhancement: Twilight Cowboy Challenge. The objective of the competition was to merge a set of misaligned smartphone images in the raw domain, captured in low-light conditions, into a single, clean image. Introduced setup simultaneously addresses two problems of low-light photography: visual degradations such as high noise and mixed scene illuminants, and the geometric inconsistencies caused by hand movement during multi-frame capture. To advance research in low-light and nighttime computational photography, a challenging dataset was collected comprising 585 real-world scenes, spanning indoor low-light and outdoor nighttime conditions, for training and benchmarking participant solutions. The competition employed a three-stage evaluation protocol: automatic validation via the CodaBench platform in stages one and two, followed by blind assessment on a private test set for the final ranking. Ten teams surpassed the established baseline, achieving improvements of up to +6.49 dB in PSNR and +0.0101 in SSIM, thereby establishing new state-of-the-art performance for burst-based low-light image enhancement. These results demonstrate significant progress in handling real-world noise, motion, and illumination variability in the low-light setting. Comprehensive results, leaderboards, and additional information are publicly available at https://nightimaging.org.
+
+本文对 NTIRE 2026 低光增强：暮光牛仔挑战赛进行了回顾。竞赛的目标是将在低光照条件下拍摄的原始域中一组未对齐的智能手机图像合并为单个干净的图像。引入的设置同时解决了低光摄影的两个问题：高噪声和混合场景光源等视觉退化，以及多帧捕捉过程中手部运动引起的几何不一致。为了推进低光和夜间计算摄影的研究，收集了一个具有挑战性的数据集，其中包含 585 个真实场景，涵盖室内低光和室外夜间条件，用于培训和基准测试参与者解决方案。比赛采用三阶段评估协议：第一阶段和第二阶段通过 CodaBench 平台自动验证，然后在私人测试集上进行盲评估以获得最终排名。十支团队超越了既定基准，在 PSNR 方面实现了高达 +6.49 dB 的改进，在 SSIM 方面实现了 +0.0101 的改进，从而为基于突发的低光图像增强建立了新的最先进的性能。这些结果表明在处理低光环境中现实世界的噪声、运动和照明变化方面取得了重大进展。综合结果、排行榜和其他信息可在 https://nightimaging.org 上公开获取。
+
+</details>
+
+---
+
+## 2. High-Quality Exposure Correction with Diffusion-Based Image Generation Priors / 使用基于扩散的图像生成先验进行高质量曝光校正
+
+**Date**: 2026-08-09 | **arXiv**: [2608.08720v1](http://arxiv.org/abs/2608.08720v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.08720v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Although most existing exposure correction methods achieve high fidelity, they often place excessive focus on overall pixel-wise accuracy, making it challenging to effectively model extreme exposure regions, which results in suboptimal perceptual quality. Recently, diffusion models have received significant attention due to their remarkable performance in the realm of image generation. However, their successful application to exposure correction remains a challenging and open question. The key challenge lies in generating accurate image structures and maintaining high image fidelity during stochastic diffusion processes. In this paper, we propose DPEC (Diffusion Prior-based Exposure Correction), a novel framework for image exposure correction that utilizes diffusion-based image generation priors encapsulated in pre-trained large-scale diffusion models. Specifically, we first propose an efficient fine-tuning strategy to derive an exposure corrector from pre-trained models, enabling the generation of enhanced images in a single-step denoising process. Moreover, we seamlessly combine the strengths of diffusion models and regression models, and design a joint cross-attention module to integrate multi-scale diffusion prior features, thereby effectively preserving high-frequency details and minimizing random artifacts. The diffusion model focuses on dealing with low-frequency content rather than all the intricate texture details. The experimental results demonstrate that the proposed DPEC method consistently outperforms existing state-of-the-art methods on multiple exposure correction datasets, whether in terms of fidelity, perceptual quality, or visual effects.
+
+尽管大多数现有的曝光校正方法都实现了高保真度，但它们通常过度关注整体像素精度，这使得有效建模极端曝光区域变得具有挑战性，从而导致感知质量不佳。最近，扩散模型由于其在图像生成领域的出色表现而受到了极大的关注。然而，它们在曝光校正中的成功应用仍然是一个具有挑战性和悬而未决的问题。关键挑战在于生成准确的图像结构并在随机扩散过程中保持高图像保真度。在本文中，我们提出了 DPEC（基于扩散先验的曝光校正），这是一种用于图像曝光校正的新颖框架，它利用封装在预训练的大规模扩散模型中的基于扩散的图像生成先验。具体来说，我们首先提出一种有效的微调策略，从预先训练的模型中导出曝光校正器，从而能够在单步去噪过程中生成增强的图像。此外，我们无缝地结合了扩散模型和回归模型的优点，并设计了联合交叉注意模块来集成多尺度扩散先验特征，从而有效地保留高频细节并最小化随机伪影。扩散模型侧重于处理低频内容而不是所有复杂的纹理细节。实验结果表明，无论是在保真度、感知质量还是视觉效果方面，所提出的 DPEC 方法在多重曝光校正数据集上始终优于现有的最先进方法。
+
+</details>
+
+---
+
+## 3. Retrieval-Augmented Generation-Based Color Restoration for Low-Light Image Enhancement / 用于低光图像增强的基于检索增强生成的颜色恢复
+
+**Date**: 2026-08-08 | **arXiv**: [2608.08211v1](http://arxiv.org/abs/2608.08211v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.08211v1)
+
+**Categories**: eess.IV, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent low-light image enhancement (LLIE) methods have driven brightness and structural fidelity close to that of normally-exposed images, yet their outputs still exhibit systematic color shifts such as greenish skies, yellowish faces, and warm-tinted white objects. We attribute this to end-to-end LLIE training coupling brightness, structure, and color within a single network, leaving the color channels weakly supervised. We recast color restoration as an independent sub-problem and decouple it from brightness enhancement, realizing it as a general-purpose post-processing module built on retrieval-augmented generation (RAG). Rather than relying solely on parametric color priors learned during training, the module dynamically retrieves a reference image from an external high-quality color knowledge base and injects its color distribution into a color-restoration network to correct residual bias. The design has three components: (i) a dual-index FAISS retriever built on intermediate VGG19 features, capturing textural and structural similarity through global mean and variance statistics; (ii) GlobalSPHistAdaIN, which reduces the reference spatial-preserving color histogram to a global color vector and modulates network features via adaptive instance normalization, removing dependence on pixel-level correspondence; and (iii) a residual formulation that predicts a color correction over the front-end output. Across LOLv1, LOLv2-Real, and LOLv2-Synthetic, the module consistently improves color-specific metrics, and it remains effective when the front end is swapped among CPGA-Net++, LLFormer, FLIGHTNet, and IAT, confirming cross-front-end generality. Ablations show that a VGG19 dual index outperforms CLIP-based retrieval, indicating that color restoration depends on textural and structural similarity rather than high-level semantics.
+
+最近的低光图像增强（LLIE）方法已使亮度和结构保真度接近正常曝光的图像，但其输出仍然表现出系统的色彩变化，例如绿色的天空、黄色的面孔和暖色调的白色物体。我们将此归因于在单个网络内耦合亮度、结构和颜色的端到端 LLIE 训练，从而使颜色通道受到弱监督。我们将颜色恢复重新定义为一个独立的子问题，并将其与亮度增强解耦，将其实现为基于检索增强生成（RAG）的通用后处理模块。该模块不是仅仅依赖于训练期间学习的参数颜色先验，而是动态地从外部高质量颜色知识库检索参考图像，并将其颜色分布注入颜色恢复网络以纠正残留偏差。该设计由三个部分组成：（i）基于 VGG19 中间特征构建的双索引 FAISS 检索器，通过全局均值和方差统计捕获纹理和结构相似性； (ii) GlobalSPHistAdaIN，它将参考空间保留颜色直方图减少为全局颜色向量，并通过自适应实例归一化来调制网络特征，消除对像素级对应的依赖； (iii) 预测前端输出色彩校正的残差公式。在 LOLv1、LOLv2-Real 和 LOLv2-Synthetic 中，该模块持续改进了特定于颜色的指标，并且当前端在 CPGA-Net++、LLFormer、FLIGHTNet 和 IAT 之间交换时仍然有效，证实了跨前端的通用性。消融表明 VGG19 双索引优于基于 CLIP 的检索，这表明颜色恢复取决于纹理和结构相似性而不是高级语义。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-08-11 (1 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-08-11
