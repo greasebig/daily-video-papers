@@ -27,6 +27,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-08-14](papers/2026-08-14.md) - 1 papers
 - [2026-08-13](papers/2026-08-13.md) - 14 papers
 - [2026-08-12](papers/2026-08-12.md) - 20 papers
 - [2026-08-08](papers/2026-08-08.md) - 1 papers
@@ -160,6 +161,34 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-08-14 (1 papers)</b></summary>
+
+# arXiv Video Papers - 2026-08-14
+
+**Paper Count**: 1
+
+---
+
+## 1. Autonomous Telerehabilitation via Skeletal Motion Prediction and Joint-Level Performance Assessment / 通过骨骼运动预测和关节级性能评估进行自主远程康复
+
+**Date**: 2026-08-12 | **arXiv**: [2608.12145v1](http://arxiv.org/abs/2608.12145v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.12145v1)
+
+**Categories**: cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Autonomous rehabilitation systems must not only recognize human motion but also provide structured feedback to support users without continuous therapist supervision. This paper presents a telerehabilitation pipeline that integrates skeleton-based exercise quality assessment and short-term motion prediction into a two-module system operating on marker-free RGB video. A self-attentive Bidirectional LSTM performs exercise quality classification using MMD-NCA metric learning, while a graph-based motion prediction module computes per-joint position errors between predicted and observed poses, generating spatially localized deviation signals. Each module is evaluated independently on established benchmarks: the classifier achieves 96.45% mean-class accuracy on squat sequences from the PROZIS dataset, and the adopted STARS predictor achieves a mean MPJPE of 75.8 mm at 560 ms on Human3.6M, outperforming graph and recurrent baselines across all prediction horizons. The framework is designed for eventual deployment in assistive robotics and home-based rehabilitation contexts; end-to-end integration and clinical validation are important directions for future work. By combining motion recognition and prediction in a single system, this work contributes a step toward autonomous, feedback-driven telerehabilitation, for more accessible and scalable rehabilitation solutions.
+
+自主康复系统不仅必须识别人体运动，还必须提供结构化反馈，以在没有治疗师持续监督的情况下为用户提供支持。本文提出了一种远程康复流程，它将基于骨架的运动质量评估和短期运动预测集成到在无标记 RGB 视频上运行的双模块系统中。自注意力双向 LSTM 使用 MMD-NCA 度量学习执行运动质量分类，而基于图的运动预测模块计算预测姿势和观察姿势之间的每个关节位置误差，生成空间局部偏差信号。每个模块都根据既定基准进行独立评估：分类器对来自 PROZIS 数据集的深蹲序列实现了 96.45% 的平均类准确度，并且采用的 STARS 预测器在 Human3.6M 上的 560 ms 上实现了 75.8 mm 的平均 MPJPE，在所有预测范围内优于图形和循环基线。该框架旨在最终部署在辅助机器人和家庭康复环境中；端到端集成和临床验证是未来工作的重要方向。通过将运动识别和预测结合在一个系统中，这项工作朝着自主、反馈驱动的远程康复迈出了一步，从而提供了更易于访问和扩展的康复解决方案。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-08-13 (14 papers)</b></summary>
 
 # arXiv Video Papers - 2026-08-13
