@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-08-18](papers/2026-08-18.md) - 5 papers
 - [2026-08-17](papers/2026-08-17.md) - 1 papers
 - [2026-08-16](papers/2026-08-16.md) - 1 papers
 - [2026-08-14](papers/2026-08-14.md) - 4 papers
@@ -69,6 +70,98 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-08-18 (5 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-08-18
+
+**Paper Count**: 5
+
+---
+
+## 1. SAFE: Scene-Aware Feature Modulation for Color Constancy with Learned Color Space in Pure-Color Scenes / SAFE：场景感知特征调制，通过学习的纯色场景中的色彩空间实现色彩恒定性
+
+**Date**: 2026-08-14 | **arXiv**: [2608.13967v1](http://arxiv.org/abs/2608.13967v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.13967v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Color constancy on pure-color scenes is challenging: when most pixels share a narrow band of hues, every chromaticity-based cue collapses to a single point and standard estimators become ambiguous. We propose a compact framework that couples two innovations: (i) SAFE, a Scene-Aware FeaturE modulation network that organizes illumination cues into a structured four-token representation, which is then selectively reweighted based on scene complexity features; (ii) the Learned Color Space (LCS), a scene-dependent chromaticity normalization that directly addresses the chromaticity collapse problem for pure-color scenes. Experiment results show that SAFE consistently improves performance in pure-color scenes. Compared to the best-performing baseline in each metric, it reduces the mean angular error by 10%, the best-25% error by 20%, and the worst-25% error by 5.8%.
+
+纯色场景上的颜色恒定性具有挑战性：当大多数像素共享窄带色调时，每个基于色度的线索都会崩溃到一个点，并且标准估计器变得模糊。我们提出了一个结合了两项创新的紧凑框架：（i）SAFE，一种场景感知特征调制网络，它将照明线索组织成结构化的四标记表示，然后根据场景复杂性特征有选择地重新加权； (ii) 学习色彩空间 (LCS)，一种与场景相关的色度归一化，可直接解决纯色场景的色度崩溃问题。实验结果表明，SAFE 持续提高了纯色场景中的性能。与每个指标中表现最佳的基线相比，它将平均角度误差降低了 10%，将最佳 25% 误差降低了 20%，将最差 25% 误差降低了 5.8%。
+
+</details>
+
+---
+
+## 2. LoRCA: LoRA Cycle Adaptation for Histology to HiP-CT Translation with DINOv3 / LoRCA：LoRA 循环适应组织学到 HiP-CT 的 DINOv3 翻译
+
+**Date**: 2026-08-07 | **arXiv**: [2608.10002v1](http://arxiv.org/abs/2608.10002v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.10002v1)
+
+**Categories**: eess.IV, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Hierarchical Phase-Contrast Tomography (HiP-CT) is a synchrotron based X-ray imaging technique that enables non-destructive, volumetric imaging of intact organs with multi-resolutions bridging 20 $μm$/voxel for whole organs to near-cellular resolution ($\sim$0.8 $μm$/voxel) in local regions. This offers the opportunity to bring volumetric whole-organ context to histology. However, nonlinear registration between H\&E histology and HiP-CT volumes is challenging due to the differences in feature representations of different colour spaces. Synthesis-before-registration methods have shown strong results in histology-to-MRI and histology-to-CT alignment. However, existing approaches either rely on manual anatomical contours or are trained from scratch without semantic constraints, limiting their generalisability to soft tissue organs and novel modalities. We propose LoRCA (LoRA Cycle Adaptation), a cycle consistent style translation framework built on a shared frozen DINOv3 with modality-specific LoRA adapters, learning modality-specific representations that are decoded and adversarially trained. LoRCA enables structure-preserving translation without requiring paired training data. The frozen backbone is intended to be a structural anchor that prevents content drift by preserving pretrained semantic-extraction capability. We evaluate translation quality using Fréchet Inception Distance (FID) and structural fidelity via mutual information and Canny edge preservation. LoRCA outperforms CycleGAN in both translation quality and structural consistency. As a preliminary indicator of downstream registration utility, we find that style-translated images yield increased feature correspondences under MatchAnything on manually aligned HiP-CT and histology test pairs, suggesting that LoRCA-style translation is a promising step towards 2D histological sections to 3D HiP-CT volumes registration.
+
+分层相差断层扫描 (HiP-CT) 是一种基于同步加速器的 X 射线成像技术，可对完整器官进行无损体积成像，具有将整个器官的 20 $μm$/体素连接到局部区域的近细胞分辨率 ($\sim$0.8 $μm$/体素) 的多分辨率。这提供了将体积整个器官背景引入组织学的机会。然而，由于不同颜色空间的特征表示存在差异，H\&E 组织学和 HiP-CT 体积之间的非线性配准具有挑战性。配准前合成方法在组织学与 MRI 和组织学与 CT 比对方面显示出强大的结果。然而，现有的方法要么依赖于手动解剖轮廓，要么在没有语义限制的情况下从头开始训练，限制了它们对软组织器官和新模式的通用性。我们提出了 LoRCA（LoRA 循环适应），这是一种循环一致的风格翻译框架，构建在共享的冻结 DINOv3 上，具有特定于模态的 LoRA 适配器，学习经过解码和对抗训练的特定模态表示。 LoRCA 无需配对训练数据即可实现结构保留翻译。冻结主干旨在成为结构锚，通过保留预先训练的语义提取能力来防止内容漂移。我们使用 Fréchet Inception Distance (FID) 评估翻译质量，并通过互信息和 Canny 边缘保留来评估结构保真度。 LoRCA 在翻译质量和结构一致性方面均优于 CycleGAN。作为下游配准效用的初步指标，我们发现，在手动对齐的 HiP-CT 和组织学测试对的 MatchAnything 下，风格翻译图像产生了增加的特征对应性，这表明 LoRCA 风格的翻译是朝着 2D 组织学切片到 3D HiP-CT 体积配准迈出的有希望的一步。
+
+</details>
+
+---
+
+## 3. TexSketch: Bringing Texture-Aware Colorization to Sketches / TexSketch ：为草图带来纹理感知着色
+
+**Date**: 2026-07-27 | **arXiv**: [2607.24261v1](http://arxiv.org/abs/2607.24261v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.24261v1)
+
+**Categories**: cs.GR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reference-based sketch colorization methods rely on large paired datasets that preserve both the structural and stylistic characteristics of hand-drawn artwork. However, existing datasets are limited in scale, expensive to annotate, and bound to fixed, often inconsistent artistic style biases that propagate to downstream models and limit cross-domain generalization. We present TexSketch, a controllable procedural framework for generating colored-sketch datasets with programmable artistic styles via geometric analysis and shader-driven stylization. Our fully automatic pipeline integrates region extraction, semantic color prediction, and shader-based rendering. By defining artistic appearance procedurally rather than inheriting it from a static corpus, TexSketch enables scalable dataset generation without manual annotation or artist supervision. Human studies demonstrate that TexSketch generates perceptually plausible colored sketches with high stylistic diversity, providing a controllable, scalable source of synthetic supervision for sketch colorization.
+
+基于参考的草图着色方法依赖于大型配对数据集，这些数据集保留了手绘艺术品的结构和风格特征。然而，现有的数据集规模有限，注释成本昂贵，并且受到固定的、通常不一致的艺术风格偏见的影响，这些偏见会传播到下游模型并限制跨领域泛化。我们提出了 TexSketch，一个可控的程序框架，用于通过几何分析和着色器驱动的风格化生成具有可编程艺术风格的彩色草图数据集。我们的全自动管道集成了区域提取、语义颜色预测和基于着色器的渲染。通过按程序定义艺术外观而不是从静态语料库继承它，TexSketch 可以生成可扩展的数据集，而无需手动注释或艺术家监督。人类研究表明，TexSketch 可以生成具有高度风格多样性的感知合理的彩色草图，为草图着色提供可控、可扩展的合成监督源。
+
+</details>
+
+---
+
+## 4. A Reference-Free Framework for Evaluating Single-Frame ISP Pipelines / 用于评估单帧 ISP 管道的无参考框架
+
+**Date**: 2026-07-25 | **arXiv**: [2607.23321v1](http://arxiv.org/abs/2607.23321v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.23321v1)
+
+**Categories**: eess.IV, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Evaluating camera image signal processing (ISP) pipelines requires measuring low-level artifacts introduced by operations such as denoising, demosaicing, tone mapping, and compression. Blind image quality assessment (IQA) techniques can grade visual quality without a reference, but they typically focus on semantic and high-level visual cues or human perceptual scores rather than the low-level image-processing artifacts introduced by camera pipelines. In contrast, full-reference metrics such as PSNR and SSIM measure pixel-level differences and structural similarity, while LPIPS measures perceptual similarity in deep feature space. However, these metrics require perfectly aligned image pairs, which are difficult to collect in practical settings. We propose a reference-free learning framework that estimates full-reference image quality metrics from a processed sRGB image and its ISO metadata. Our method predicts a proxy sRGB reference, which is then compared with the processed image to compute PSNR, SSIM, and LPIPS in their standard full-reference form. Our experiments show that the proxy-reference model can be learned from synthetic data and applied to real camera data. We further show that lightweight LoRA fine-tuning enables efficient adaptation when ISP components or pipeline configurations are changed. The proposed method outperforms direct metric regression in estimating metric values and achieves higher agreement with full-reference rankings than conventional blind IQA methods. These results demonstrate the feasibility of reference-free estimation of full-reference metrics for practical camera-pipeline evaluation.
+
+评估相机图像信号处理 (ISP) 管道需要测量由去噪、去马赛克、色调映射和压缩等操作引入的低级伪影。盲图像质量评估 (IQA) 技术可以在没有参考的情况下对视觉质量进行分级，但它们通常关注语义和高级视觉线索或人类感知分数，而不是相机管道引入的低级图像处理伪影。相比之下，PSNR 和 SSIM 等全参考指标测量像素级差异和结构相似性，而 LPIPS 测量深层特征空间中的感知相似性。然而，这些指标需要完美对齐的图像对，这在实际设置中很难收集。我们提出了一个无参考学习框架，该框架可以根据处理后的 sRGB 图像及其 ISO 元数据估计全参考图像质量指标。我们的方法预测代理 sRGB 参考，然后将其与处理后的图像进行比较，以标准全参考形式计算 PSNR、SSIM 和 LPIPS。我们的实验表明，代理参考模型可以从合成数据中学习并应用于真实的相机数据。我们进一步表明，当 ISP 组件或管道配置发生变化时，轻量级 LoRA 微调可以实现高效的适应。该方法在估计度量值方面优于直接度量回归，并且与传统的盲 IQA 方法相比，与全参考排名具有更高的一致性。这些结果证明了用于实际相机管道评估的全参考指标的无参考估计的可行性。
+
+</details>
+
+---
+
+## 5. LowPowAR: Power-Constrained Tone Mapping for Augmented Reality / LowPowAR：用于增强现实的功率受限色调映射
+
+**Date**: 2026-07-21 | **arXiv**: [2607.19509v1](http://arxiv.org/abs/2607.19509v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.19509v1)
+
+**Categories**: cs.GR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Everyday-wearable Augmented Reality (AR) glasses must meet strict power limits, making displays a key target for optimization. We cast display power optimization as a power-constrained tone-mapping problem and propose a human-vision-grounded, learning-based framework that maximizes perceptual quality under a given power budget. We introduce an optimization-friendly tone-mapping operator (TMO) parameterization along with a progressive optimization strategy to effectively navigate the quality-vs-power landscape. We distill the iterative optimization into a lightweight feed-forward neural network for real-time deployment. Subjective experiments show that our method yields better perceptual quality than prior work at the same power budget. Project page: https://horizon-lab.org/lowpowar/.
+
+日常佩戴的增强现实 (AR) 眼镜必须满足严格的功率限制，这使得显示器成为优化的关键目标。我们将显示功率优化视为功率受限的色调映射问题，并提出了一种基于人类视觉、基于学习的框架，可在给定的功率预算下最大化感知质量。我们引入了优化友好的色调映射算子（TMO）参数化以及渐进式优化策略，以有效地驾驭质量与功耗的关系。我们将迭代优化提炼为轻量级前馈神经网络以进行实时部署。主观实验表明，在相同的功率预算下，我们的方法比以前的工作产生更好的感知质量。项目页面：https://horizo​​n-lab.org/lowpowar/。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-08-17 (1 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-08-17
