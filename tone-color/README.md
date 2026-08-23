@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-08-23](papers/2026-08-23.md) - 3 papers
 - [2026-08-22](papers/2026-08-22.md) - 2 papers
 - [2026-08-21](papers/2026-08-21.md) - 1 papers
 - [2026-08-19](papers/2026-08-19.md) - 4 papers
@@ -73,6 +74,66 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-08-23 (3 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-08-23
+
+**Paper Count**: 3
+
+---
+
+## 1. LoRCA: LoRA Cycle Adaptation for Histology to HiP-CT Translation with DINOv3 / LoRCA ：使用DINOv3的组织学对HiP-CT翻译的LoRA周期适应
+
+**Date**: 2026-08-07 | **arXiv**: [2608.10002v1](http://arxiv.org/abs/2608.10002v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.10002v1)
+
+**Categories**: eess.IV, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Hierarchical Phase-Contrast Tomography (HiP-CT) is a synchrotron based X-ray imaging technique that enables non-destructive, volumetric imaging of intact organs with multi-resolutions bridging 20 $μm$/voxel for whole organs to near-cellular resolution ($\sim$0.8 $μm$/voxel) in local regions. This offers the opportunity to bring volumetric whole-organ context to histology. However, nonlinear registration between H\&E histology and HiP-CT volumes is challenging due to the differences in feature representations of different colour spaces. Synthesis-before-registration methods have shown strong results in histology-to-MRI and histology-to-CT alignment. However, existing approaches either rely on manual anatomical contours or are trained from scratch without semantic constraints, limiting their generalisability to soft tissue organs and novel modalities. We propose LoRCA (LoRA Cycle Adaptation), a cycle consistent style translation framework built on a shared frozen DINOv3 with modality-specific LoRA adapters, learning modality-specific representations that are decoded and adversarially trained. LoRCA enables structure-preserving translation without requiring paired training data. The frozen backbone is intended to be a structural anchor that prevents content drift by preserving pretrained semantic-extraction capability. We evaluate translation quality using Fréchet Inception Distance (FID) and structural fidelity via mutual information and Canny edge preservation. LoRCA outperforms CycleGAN in both translation quality and structural consistency. As a preliminary indicator of downstream registration utility, we find that style-translated images yield increased feature correspondences under MatchAnything on manually aligned HiP-CT and histology test pairs, suggesting that LoRCA-style translation is a promising step towards 2D histological sections to 3D HiP-CT volumes registration.
+
+Hierarchical Phase-Contrast Tomography （ HiP-CT ）是一种基于同步加速器的X射线成像技术，可通过多分辨率对完整器官进行无损、体积成像，使整个器官的20 $ μm $/体素桥接到局部区域的近细胞分辨率（ $\ sim $ 0.8 $ μm $/体素）。 这提供了将体积全器官环境引入组织学的机会。 然而，由于不同颜色空间的特征表示的差异， H\ & E组织学和HiP-CT体积之间的非线性配准具有挑战性。 注册前合成方法在组织学-MRI和组织学-CT比对方面显示出强有力的结果。 然而，现有的方法要么依赖于手动解剖轮廓，要么在没有语义约束的情况下从头开始训练，这限制了它们对软组织器官和新模式的可推广性。 我们提出LoRCA （ LoRA Cycle Adaptation ） ，这是一种基于共享冷冻DINOv3的循环一致风格转换框架，具有模态特定的LoRA适配器，可学习经过解码和对抗训练的模态特定表示。 LoRCA可以在不需要配对训练数据的情况下实现结构保持翻译。 冻结主干旨在通过保留预训练的语义提取能力来防止内容漂移的结构锚点。 我们使用Fréchet起始距离（ FID ）评估翻译质量，并通过相互信息和Canny边缘保存来评估结构保真度。LoRCA
+
+</details>
+
+---
+
+## 2. TexSketch: Bringing Texture-Aware Colorization to Sketches / TexSketch ：为草图带来纹理感知着色
+
+**Date**: 2026-07-27 | **arXiv**: [2607.24261v1](http://arxiv.org/abs/2607.24261v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.24261v1)
+
+**Categories**: cs.GR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reference-based sketch colorization methods rely on large paired datasets that preserve both the structural and stylistic characteristics of hand-drawn artwork. However, existing datasets are limited in scale, expensive to annotate, and bound to fixed, often inconsistent artistic style biases that propagate to downstream models and limit cross-domain generalization. We present TexSketch, a controllable procedural framework for generating colored-sketch datasets with programmable artistic styles via geometric analysis and shader-driven stylization. Our fully automatic pipeline integrates region extraction, semantic color prediction, and shader-based rendering. By defining artistic appearance procedurally rather than inheriting it from a static corpus, TexSketch enables scalable dataset generation without manual annotation or artist supervision. Human studies demonstrate that TexSketch generates perceptually plausible colored sketches with high stylistic diversity, providing a controllable, scalable source of synthetic supervision for sketch colorization.
+
+基于参考的草图着色方法依赖于大型成对数据集，这些数据集保留了手绘艺术品的结构和风格特征。 然而，现有数据集的规模有限，注释成本高昂，并且受限于固定的、通常不一致的艺术风格偏见，这些偏见会传播到下游模型并限制跨域泛化。 我们展示了TexSketch ，这是一个可控的程序框架，用于通过几何分析和着色器驱动的样式生成具有可编程艺术风格的彩色草图数据集。 我们的全自动管道集成了区域提取、语义颜色预测和基于着色器的渲染。 通过在程序上定义艺术外观，而不是从静态语料库继承它， TexSketch实现了可扩展的数据集生成，而无需手动注释或艺术家监督。 人类研究表明， TexSketch生成具有高度风格多样性的感知上合理的彩色草图，为草图着色提供了可控、可扩展的合成监督来源。
+
+</details>
+
+---
+
+## 3. A Reference-Free Framework for Evaluating Single-Frame ISP Pipelines / 用于评估单帧ISP管道的无参考框架
+
+**Date**: 2026-07-25 | **arXiv**: [2607.23321v1](http://arxiv.org/abs/2607.23321v1) | **PDF**: [Link](http://arxiv.org/pdf/2607.23321v1)
+
+**Categories**: eess.IV, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Evaluating camera image signal processing (ISP) pipelines requires measuring low-level artifacts introduced by operations such as denoising, demosaicing, tone mapping, and compression. Blind image quality assessment (IQA) techniques can grade visual quality without a reference, but they typically focus on semantic and high-level visual cues or human perceptual scores rather than the low-level image-processing artifacts introduced by camera pipelines. In contrast, full-reference metrics such as PSNR and SSIM measure pixel-level differences and structural similarity, while LPIPS measures perceptual similarity in deep feature space. However, these metrics require perfectly aligned image pairs, which are difficult to collect in practical settings. We propose a reference-free learning framework that estimates full-reference image quality metrics from a processed sRGB image and its ISO metadata. Our method predicts a proxy sRGB reference, which is then compared with the processed image to compute PSNR, SSIM, and LPIPS in their standard full-reference form. Our experiments show that the proxy-reference model can be learned from synthetic data and applied to real camera data. We further show that lightweight LoRA fine-tuning enables efficient adaptation when ISP components or pipeline configurations are changed. The proposed method outperforms direct metric regression in estimating metric values and achieves higher agreement with full-reference rankings than conventional blind IQA methods. These results demonstrate the feasibility of reference-free estimation of full-reference metrics for practical camera-pipeline evaluation.
+
+评估相机图像信号处理(ISP)管道需要测量去噪、去马赛克、色调映射和压缩等操作引入的低级伪影。 盲图像质量评估（ IQA ）技术可以在没有参考的情况下对视觉质量进行评分，但它们通常侧重于语义和高级视觉线索或人类感知得分，而不是相机管道引入的低级图像处理伪影。 相比之下， PSNR和SSIM等全参考指标测量像素级差异和结构相似性，而LPIPS测量深度特征空间中的感知相似性。 但是，这些指标需要完美对齐的图像对，这在实际环境中很难收集。 我们提出了一个无参考学习框架，可以从处理过的sRGB图像及其ISO元数据中估计全参考图像质量指标。 我们的方法预测代理sRGB参考，然后将其与处理后的图像进行比较，以计算标准全参考形式的PSNR、SSIM和LPIPS。 我们的实验表明，代理参考模型可以从合成数据中学习，并应用于真实相机数据。 我们进一步表明，当ISP组件或管道配置发生变化时，轻量级LoRA微调可实现高效适应。 与传统的盲IQA相比，所提出的方法在估计度量值方面优于直接度量回归，并与全参考排名达成更高的一致性
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-08-22 (2 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-08-22
