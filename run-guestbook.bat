@@ -16,11 +16,11 @@ if "%PY%"=="" (
   pause
   exit /b 1
 )
-echo === 灌示例留言到 GitHub Issue ===
+echo === 写入示例留言到 comments/data.json（幂等） ===
 %PY% seed_comments.py
 echo === 启动代理（新窗口） ===
 start "Comments Proxy" cmd /k "node comments-proxy.js"
 echo.
 echo 代理已在新窗口启动。打开你的 github.io 站点即可看到留言墙并发帖。
-echo issue 编号已自动写回设定档（docs/index.html 等）。
+echo 留言会写入 comments/data.json（仓库文件，无需 Issue）。
 pause
