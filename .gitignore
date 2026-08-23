@@ -1,3 +1,6 @@
 __pycache__/
 *.pyc
 logs/
+# guestbook local state (created by seed_comments.py)
+.guestbook_issue
+.guestbook_seeded

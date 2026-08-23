@@ -498,6 +498,20 @@
 
   </div>
 
+  <!-- Comments guestbook (GitHub Issues backed, no redirect) -->
+  <link rel="stylesheet" href="./comments/comments.css" />
+  <div id="comments"></div>
+  <script>
+    window.COMMENTS_CONFIG = {
+      repo: "greasebig/greasebig.github.io",
+      issue: 1,                         // ← 改成你存留言的 Issue 编号
+      proxy: "http://localhost:7897",   // ← 改成代理地址（端口 7897）
+      max: 100,
+      title: "留言墙 / Guestbook"
+    };
+  </script>
+  <script src="./comments/comments.js"></script>
+
 </body>
 
 </html>
