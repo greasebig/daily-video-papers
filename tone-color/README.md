@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-08-27](papers/2026-08-27.md) - 1 papers
 - [2026-08-26](papers/2026-08-26.md) - 2 papers
 - [2026-08-24](papers/2026-08-24.md) - 3 papers
 - [2026-08-23](papers/2026-08-23.md) - 3 papers
@@ -76,6 +77,34 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-08-27 (1 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-08-27
+
+**Paper Count**: 1
+
+---
+
+## 1. Retrieval-Augmented Generation-Based Color Restoration for Low-Light Image Enhancement / 用于低光图像增强的检索-基于增强生成的颜色恢复
+
+**Date**: 2026-08-08 | **arXiv**: [2608.08211v1](http://arxiv.org/abs/2608.08211v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.08211v1)
+
+**Categories**: eess.IV, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent low-light image enhancement (LLIE) methods have driven brightness and structural fidelity close to that of normally-exposed images, yet their outputs still exhibit systematic color shifts such as greenish skies, yellowish faces, and warm-tinted white objects. We attribute this to end-to-end LLIE training coupling brightness, structure, and color within a single network, leaving the color channels weakly supervised. We recast color restoration as an independent sub-problem and decouple it from brightness enhancement, realizing it as a general-purpose post-processing module built on retrieval-augmented generation (RAG). Rather than relying solely on parametric color priors learned during training, the module dynamically retrieves a reference image from an external high-quality color knowledge base and injects its color distribution into a color-restoration network to correct residual bias. The design has three components: (i) a dual-index FAISS retriever built on intermediate VGG19 features, capturing textural and structural similarity through global mean and variance statistics; (ii) GlobalSPHistAdaIN, which reduces the reference spatial-preserving color histogram to a global color vector and modulates network features via adaptive instance normalization, removing dependence on pixel-level correspondence; and (iii) a residual formulation that predicts a color correction over the front-end output. Across LOLv1, LOLv2-Real, and LOLv2-Synthetic, the module consistently improves color-specific metrics, and it remains effective when the front end is swapped among CPGA-Net++, LLFormer, FLIGHTNet, and IAT, confirming cross-front-end generality. Ablations show that a VGG19 dual index outperforms CLIP-based retrieval, indicating that color restoration depends on textural and structural similarity rather than high-level semantics.
+
+最近的低光图像增强（ LLIE ）方法使亮度和结构保真度接近正常曝光的图像，但它们的输出仍然表现出系统的颜色偏移，如绿色天空、黄色脸部和暖色调的白色物体。 我们将其归因于端到端的LLIE训练，将单个网络中的亮度、结构和颜色耦合在一起，从而使颜色通道受到弱监督。 我们将颜色恢复作为一个独立的子问题进行重构，并将其与亮度增强分离，将其实现为构建在检索增强生成（ RAG ）上的通用后处理模块。 该模块不完全依赖于在训练过程中学到的参数化颜色先验，而是从外部高质量颜色知识库中动态检索参考图像，并将其颜色分布注入颜色恢复网络以纠正残差偏差。 该设计有三个部分： （ i ）基于中间VGG19特征的双索引FAISS检索器，通过全局均值和方差统计来捕获纹理和结构相似性； （ ii ） GlobalSPHistAdaIN ，它将参考空间保留颜色直方图减少到全局颜色矢量，并通过自适应实例归一化来调节网络特征，消除了对像素级对应的依赖； （ iii ）预测前端输出颜色校正的残差公式。 在LOLv1、LOLv2-Real和LOLv2-Synthetic中，模块始终如一
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-08-26 (2 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-08-26
