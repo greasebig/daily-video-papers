@@ -27,6 +27,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-08-27](papers/2026-08-27.md) - 23 papers
 - [2026-08-26](papers/2026-08-26.md) - 16 papers
 - [2026-08-22](papers/2026-08-22.md) - 10 papers
 - [2026-08-21](papers/2026-08-21.md) - 8 papers
@@ -167,6 +168,396 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-08-27 (23 papers)</b></summary>
+
+# arXiv Video Papers - 2026-08-27
+
+**Paper Count**: 23
+
+---
+
+## 1. VBVR-Pro: A Scalable and Verifiable Suite for Native Visual Reasoning / VBVR-Pro：用于本机视觉推理的可扩展且可验证的套件
+
+**Date**: 2026-08-26 | **arXiv**: [2608.26105v1](http://arxiv.org/abs/2608.26105v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.26105v1)
+
+**Categories**: cs.CV, cs.AI, cs.LG, cs.MM, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Native visual reasoning treats visual generation as the medium of reasoning itself: visual states (i.e. images and videos) are not merely inputs to be understood or outputs to be rendered, but first-class substrates for problem solving beyond language. Yet progress remains bottlenecked by the lack of scalable training tasks, reliable feedback, and controlled comparisons across generative substrates. In this work, we introduce VBVR-Pro, a closed-loop testbed that makes native visual reasoning through generation trainable, verifiable, optimizable, and experimentally controllable. 1) Task scaling. VBVR-Pro turns visual reasoning into a controlled task space of 300 procedurally generated tasks. Models trained on VBVR-Pro show strong transfer beyond the proposed suite across seven external visual reasoning benchmarks such as RISE-Video, MME-CoF-Pro, and BabyVision. 2) Verifiable rewards. VBVR-Pro provides verifiable reward scorers for task-grounded evaluation. Through a systematic study of leading MLLMs as judges, we identify recurring failure modes of the prevalent VLM-as-a-judge paradigm. In contrast, the proposed scorers are grounded in deterministic, task-specific rules, achieve fine-grained alignment with human judgments. Importantly, they serve as reliable reward signals for large-scale multi-task reinforcement learning and demonstrate stronger post-RL performance across visual reasoning tasks. 3) Mechanism study. VBVR-Pro enables controlled modality studies across more than 30 image, video, and interleaved generators. Our analysis shows that video generation remains strongest for tasks requiring persistent spatiotemporal state tracking, while interleaved generation provides a compute-efficient alternative. Critically, ablations and probing suggest the presence of vision-native trajectories that are crucial to visual reasoning. We release all data, models, scorers, and code.
+
+原生视觉推理将视觉生成视为推理本身的媒介：视觉状态（即图像和视频）不仅仅是要理解的输入或要呈现的输出，而是解决语言之外的问题的一流基础。然而，由于缺乏可扩展的训练任务、可靠的反馈和跨生成基质的受控比较，进展仍然受到瓶颈。在这项工作中，我们介绍了 VBVR-Pro，这是一个闭环测试台，可通过生成来实现本机视觉推理可训练、可验证、可优化且可通过实验控制。 1）任务扩展。 VBVR-Pro 将视觉推理转变为由 300 个程序生成的任务组成的受控任务空间。在 VBVR-Pro 上训练的模型在 RISE-Video、MME-CoF-Pro 和 BabyVision 等七个外部视觉推理基准测试中表现出超出提议套件的强大迁移能力。 2）可验证的奖励。 VBVR-Pro 为基于任务的评估提供可验证的奖励评分器。通过对作为法官的领先 MLLM 进行系统研究，我们确定了流行的 VLM 作为法官范式的反复出现的失败模式。相比之下，所提出的评分器基于确定性的、特定于任务的规则，实现与人类判断的细粒度一致。重要的是，它们可以作为大规模多任务强化学习的可靠奖励信号，并在视觉推理任务中表现出更强的强化学习后性能。 3）机理研究。 VBVR-Pro 支持跨 30 多种图像、视频和交错发生器进行受控模态研究。我们的分析表明，视频生成对于需要持续时空状态跟踪的任务来说仍然是最强的，而交错生成提供了一种计算效率高的替代方案。至关重要的是，消融和探测表明存在对视觉推理至关重要的视觉原生轨迹。我们发布所有数据、模型、评分器和代码。
+
+</details>
+
+---
+
+## 2. RefVideo-6M: A Reliable Reference-Based Dataset for Instructional Video Editing / RefVideo-6M：用于教学视频编辑的可靠的基于参考的数据集
+
+**Date**: 2026-08-26 | **arXiv**: [2608.26101v1](http://arxiv.org/abs/2608.26101v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.26101v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in video editing have been largely driven by large-scale instruction-based datasets. However, existing datasets still suffer from two critical limitations. First, target videos are commonly produced by automatic editing models, which may introduce visible artifacts and unreliable supervision signals. Second, most public datasets rely primarily on textual instructions, while lacking visual references that are crucial for precise, identity-preserving, and controllable editing. To address these limitations, we introduce RefVideo-6M, a large-scale reference-guided editing dataset containing 5 million video editing samples and 1 million image editing samples. To ensure reliable supervision, our dataset uses a construction pipeline that treats artifact-free real videos as editing targets and generates quality-filtered input conditions with multiple editing experts. In addition, it provides approximately 6 million visual references, covering diverse reference types and editing scenarios, thereby enabling models to learn fine-grained visual correspondence beyond text-only instructions. Based on RefVideo-6M, we further train a reference-guided video editing model, Ref-MoT, to evaluate the effectiveness and scalability of the proposed dataset. Extensive experiments demonstrate that RefVideo-6M provides substantially more reliable supervision than existing datasets and enables the training of powerful editing models with improved visual quality, controllability, and reference consistency. The open-source dataset is available at https://huggingface.co/datasets/RefVideo6M/RefVideo6M.
+
+视频编辑的最新进展很大程度上是由大规模基于指令的数据集推动的。然而，现有数据集仍然面临两个关键限制。首先，目标视频通常是通过自动编辑模型生成的，这可能会引入可见的伪影和不可靠的监督信号。其次，大多数公共数据集主要依赖于文本指令，而缺乏对于精确、身份保护和可控编辑至关重要的视觉参考。为了解决这些限制，我们引入了RefVideo-6M，这是一个大规模参考引导编辑数据集，包含 500 万个视频编辑样本和 100 万个图像编辑样本。为了确保可靠的监督，我们的数据集使用了一个构建管道，将无伪影的真实视频视为编辑目标，并与多个编辑专家一起生成经过质量过滤的输入条件。此外，它还提供约 600 万个视觉参考，涵盖不同的参考类型和编辑场景，从而使模型能够学习超出纯文本指令的细粒度视觉对应。基于 RefVideo-6M，我们进一步训练参考引导视频编辑模型 Ref-MoT，以评估所提出的数据集的有效性和可扩展性。大量实验表明，RefVideo-6M 提供比现有数据集更可靠的监督，并能够训练强大的编辑模型，提高视觉质量、可控性和参考一致性。开源数据集可在 https://huggingface.co/datasets/RefVideo6M/RefVideo6M 上获取。
+
+</details>
+
+---
+
+## 3. One Policy, Many Embodiments: Unified Camera-Centric Action Geometry Pre-training for Heterogeneous Embodied Manipulation / 一种策略，多种实施例：用于异构具体操作的统一的以相机为中心的动作几何预训练
+
+**Date**: 2026-08-26 | **arXiv**: [2608.26058v1](http://arxiv.org/abs/2608.26058v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.26058v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Scaling generalist vision-language-action (VLA) policies is severely bottlenecked by the inherent heterogeneity of embodied data, which spans diverse robot morphologies, camera configurations, and low-level action spaces. Existing paradigms typically address this mismatch through explicit action retargeting, human-to-robot video synthesis, or dataset-specific adaptation branches, fundamentally hindering the joint learning of a unified policy. We introduce UCAG-P, a camera-centric unified action formulation that structurally aligns heterogeneous embodied datasets into a shared geometric action space. Rather than treating robot-specific commands as the shared policy target, UCAG-P represents manipulation through camera-observable anchor motion in image and camera-frame coordinates, treating robot arms, humanoids, and human hands as different embodiments of a common action schema. A geometry-conditioned action translator combines predicted motion with target-embodiment kinematics to produce executable controls. The resulting decoupled architecture allows a shared VLA policy to learn transferable manipulation geometry while retaining embodiment-specific controllability. UCAG-P is trained on 4.03K hours of robot and simulation data and 2.34K hours of human demonstrations. A single checkpoint reaches 98.3% on LIBERO, 88.7% and 89.2% on RoboTwin Easy and Hard, 82.0% zero-shot on LIBERO-Plus, and 62.0% on RoboCasa GR-1, without benchmark-specific fine-tuning.
+
+扩展通用视觉语言动作（VLA）策略受到体现数据固有异质性的严重瓶颈，这些数据涵盖不同的机器人形态、相机配置和低级动作空间。现有的范例通常通过显式的动作重定向、人机视频合成或特定于数据集的适应分支来解决这种不匹配问题，从根本上阻碍了统一策略的联合学习。我们引入了 UCAG-P，一种以相机为中心的统一动作公式，它在结构上将异构的具体数据集对齐到共享的几何动作空间中。 UCAG-P 不是将特定于机器人的命令视为共享策略目标，而是通过图像和相机框架坐标中相机可观察的锚点运动来表示操纵，将机器人手臂、类人机器人和人手视为常见动作模式的不同实施例。几何条件动作转换器将预测运动与目标具体运动学相结合以产生可执行控制。由此产生的解耦架构允许共享 VLA 策略学习可转移的操纵几何形状，同时保留特定于实施例的可控性。 UCAG-P 接受了 4030 小时的机器人和模拟数据以及 234000 小时的人体演示训练。单个检查点在 LIBERO 上达到 98.3%，在 RoboTwin Easy 和 Hard 上达到 88.7% 和 89.2%，在 LIBERO-Plus 上达到 82.0% 零样本，在 RoboCasa GR-1 上达到 62.0%，无需针对特定基准进行微调。
+
+</details>
+
+---
+
+## 4. TAU-Agent: An Agentic Retrieval-Augmented Framework for Traffic Anomaly Understanding / TAU-Agent：一种用于流量异常理解的代理检索增强框架
+
+**Date**: 2026-08-26 | **arXiv**: [2608.25935v1](http://arxiv.org/abs/2608.25935v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.25935v1)
+
+**Categories**: cs.CV, cs.AI
+
+**Code**: https://github.com/siri-rouser/TAU-Agent.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Traffic Anomaly Understanding (TAU) requires models and systems to detect, reason about, and explain anomalous events in transportation videos. To address this challenge, we propose TAU-Agent, an agentic retrieval-augmented framework for traffic anomaly understanding. Given a task query, a central retrieval agent orchestrates two visual perception tools, namely a Video Captioning Tool and an Open-Vocabulary Tracking Tool, to retrieve and select query-relevant evidence, including captions, temporal intervals, and object trajectories. The selected evidence, together with sampled video frames and the input query, is provided to a supervised fine-tuned vision-language model for final reasoning and answer generation. We evaluate TAU-Agent on both the in-domain and the out-of-domain benchmarks from the AI City Challenge 2026. TAU-Agent achieves scores of 0.6779 on Track 3, 0.3998 on Track 7, and 67.9275 on Track 8, ranking second, twelfth, and fifth, respectively. Code is available at: https://github.com/siri-rouser/TAU-Agent.
+
+交通异常理解 (TAU) 需要模型和系统来检测、推理和解释交通视频中的异常事件。为了应对这一挑战，我们提出了 TAU-Agent，一种用于理解流量异常的代理检索增强框架。给定任务查询，中央检索代理会协调两个视觉感知工具，即视频字幕工具和开放词汇跟踪工具，以检索和选择与查询相关的证据，包括字幕、时间间隔和对象轨迹。选定的证据与采样的视频帧和输入查询一起提供给监督微调的视觉语言模型，以进行最终推理和答案生成。我们根据 2026 年 AI 城市挑战赛的域内和域外基准对 TAU-Agent 进行评估。TAU-Agent 在第 3 轨上获得了 0.6779 的分数，在第 7 轨上获得了 0.3998 的分数，在第 8 轨上获得了 67.9275 的分数，分别排名第二、第十二和第五。代码位于：https://github.com/siri-rouser/TAU-Agent。
+
+</details>
+
+---
+
+## 5. LongVU-TTT: Causal Test-Time Training for Visual Resampling in Long Video Understanding / LongVU-TTT：长视频理解中视觉重采样的因果测试时间训练
+
+**Date**: 2026-08-26 | **arXiv**: [2608.25729v1](http://arxiv.org/abs/2608.25729v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.25729v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long-video MLLMs must model temporal change before a limited visual-token budget removes most frame evidence. We introduce LongVU-TTT, which inserts a convolutional Test-Time Training (TTT) resampler with causal fast-weight updates between the vision encoder and the LLM. Its grouped 2D fast weights adapt to each video and contextualize frame features before compression, while a hybrid uniform-and-change-aware selector retains explicit visual evidence for downstream reasoning. Under controlled conditions, TTT-Conv improves over TTT-MLP by up to +2.12 and bidirectional Mamba2 by up to +3.04 on MLVU, and it is stronger than attention- and fixed-state recurrent resamplers across three benchmarks. Analysis shows that the fast weights behave as a temporal aggregation state rather than a reliable long-horizon episodic memory: their benefit attenuates as evidence becomes more distant, motivating explicit frame retention. LongVU-TTT processes up to 512 frames before reducing them to 128 LLM frames and achieves competitive performance across five video understanding benchmarks.
+
+在有限的视觉标记预算消除大多数帧证据之前，长视频 MLLM 必须对时间变化进行建模。我们引入了 LongVU-TTT，它在视觉编码器和 LLM 之间插入了一个具有因果快速权重更新的卷积测试时间训练 (TTT) 重采样器。其分组的 2D 快速权重适应每个视频，并在压缩前将帧特征置于上下文中，而混合统一和变化感知选择器则为下游推理保留明确的视觉证据。在受控条件下，TTT-Conv 在 MLVU 上比 TTT-MLP 提高了高达 +2.12，在双向 Mamba2 上提高了高达 +3.04，并且在三个基准测试中，它比注意力和固定状态循环重采样器更强。分析表明，快速权重表现为时间聚合状态，而不是可靠的长视野情景记忆：随着证据变得更远，它们的好处会减弱，从而激发显式的帧保留。 LongVU-TTT 可处理多达 512 帧，然后将其减少至 128 LLM 帧，并在五个视频理解基准测试中实现具有竞争力的性能。
+
+</details>
+
+---
+
+## 6. Skeleton-based Zero-Shot Spatio-Temporal Action Localization via Weakly-Supervised Pretraining / 通过弱监督预训练进行基于骨架的零样本时空动作定位
+
+**Date**: 2026-08-26 | **arXiv**: [2608.25701v1](http://arxiv.org/abs/2608.25701v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.25701v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We propose a novel pretraining strategy for skeleton-based zero-shot spatio-temporal action localization to estimate unseen actions for person instances while overcoming high annotation costs for training via new target actions and pretraining using large-scale action scenery datasets. Specifically, our approach, termed Skeleton-Language feature Pooling Switching, introduces a weakly-supervised vision-language pretraining mechanism. This mechanism transitions pooling kernels from pretraining, which aggregates skeleton features at the video level and aligns them with each video's known action text embeddings, to the inference phase that computes instance-level features without training via target actions. Furthermore, we propose Scene-Mixed Discriminative Contrastive Learning to distinguish actions at the instance level within the combined scene through the MIL framework. Our experiments on four public spatio-temporal action localization and classification datasets demonstrate that the proposed method effectively addresses annotation limitations.
+
+我们提出了一种基于骨架的零镜头时空动作定位的新颖预训练策略，以估计人物实例的未见动作，同时克服通过新目标动作和使用大规模动作场景数据集进行预训练进行训练的高标注成本。具体来说，我们的方法称为“骨架语言特征池切换”，引入了一种弱监督的视觉语言预训练机制。这种机制将池化内核从预训练（在视频级别聚合骨架特征并将其与每个视频的已知动作文本嵌入对齐）过渡到推理阶段（无需通过目标动作进行训练即可计算实例级特征）。此外，我们提出场景混合判别对比学习，通过 MIL 框架区分组合场景中实例级别的动作。我们对四个公共时空动作定位和分类数据集的实验表明，所提出的方法有效地解决了注释限制。
+
+</details>
+
+---
+
+## 7. PRISM: Projection-Integrated Sampling-Based MPC with Bayesian Cost Tuning for Bimanual Manipulation / PRISM：基于投影集成采样的 MPC，具有用于双手操作的贝叶斯成本调整
+
+**Date**: 2026-08-26 | **arXiv**: [2608.25666v1](http://arxiv.org/abs/2608.25666v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.25666v1)
+
+**Categories**: cs.RO
+
+**Project**: https://sites.google.com/view/prismbimanual  <details><summary><b>Abstract / 摘要</b></summary>
+
+Bimanual manipulation in cluttered, contact-rich environments remains challenging because it requires coordinated motion generation, interaction-aware planning, and reliable execution under tight kinematic constraints. We present PRISM, a projection-integrated sampling-based Model Predictive Control (MPC) framework that uses a GPU-accelerated physics simulator as an online world model for complex dual-arm manipulation.   The main algorithmic contribution is a QP-guided control sampling strategy that decouples trajectory exploration from kinematic feasibility. At each MPC step, sampled joint-velocity trajectories are projected onto the set of motions satisfying joint position, velocity, acceleration, and jerk bounds, together with an initial-velocity boundary condition, before rollout evaluation. This enables broad yet feasible exploration of coordinated bimanual behaviors. To support efficient online execution, we derive a custom ADMM/Bregman-splitting QP solver that exploits joint-wise separability and reusable matrix factorizations. We further use Bayesian optimization to tune task-cost weights offline, reducing manual parameter selection.   We evaluate PRISM on challenging variants of PerAct$^{2}$ tasks, including obstacle-constrained ball transport, tray transport, cube handover, and box lifting. Experiments show improved robustness and task success relative to representative sampling-based baselines, while maintaining real-time or near-real-time execution. We also demonstrate successful sim-to-real transfer on dual UR5e manipulators, highlighting the practical potential of physics-based online planning for contact-rich bimanual manipulation. Project details, including code and supplementary videos, are available at \href{https://sites.google.com/view/prismbimanual}{\texttt{https://sites.google.com/view/prismbimanual}}.
+
+在杂乱、接触丰富的环境中进行双手操作仍然具有挑战性，因为它需要协调的运动生成、交互感知规划以及在严格的运动学约束下的可靠执行。我们提出了 PRISM，这是一种基于投影集成采样的模型预测控制 (MPC) 框架，该框架使用 GPU 加速的物理模拟器作为复杂双臂操作的在线世界模型。   主要算法贡献是 QP 引导的控制采样策略，它将轨迹探索与运动学可行性分离。在每个 MPC 步骤中，在进行 rollout 评估之前，将采样的关节速度轨迹投影到满足关节位置、速度、加速度和加加速度边界的运动集上，以及初始速度边界条件。这使得对协调双手行为进行广泛而可行的探索成为可能。为了支持高效的在线执行，我们派生了一个自定义的 ADMM/Bregman 分割 QP 求解器，该求解器利用联合可分离性和可重用的矩阵分解。我们进一步使用贝叶斯优化来离线调整任务成本权重，减少手动参数选择。   我们在具有挑战性的 PerAct$^{2}$ 任务变体上评估 PRISM，包括障碍物约束的球运输、托盘运输、立方体移交和箱子提升。实验表明，相对于代表性的基于采样的基线，鲁棒性和任务成功率有所提高，同时保持实时或近实时执行。我们还展示了双 UR5e 机械臂上成功的模拟到真实传输，强调了基于物理的在线规划对于接触丰富的双手操作的实际潜力。项目详细信息，包括代码和补充视频，请访问 \href{https://sites.google.com/view/prismbimanual}{\texttt{https://sites.google.com/view/prismbimanual}}。
+
+</details>
+
+---
+
+## 8. Plans You Can Check: Verifier-Grounded Learning of an Open-Weight Planner for Executable Video-Editing / 您可以检查的计划：用于可执行视频编辑的开放权重规划器的基于验证者的学习
+
+**Date**: 2026-08-26 | **arXiv**: [2608.25622v1](http://arxiv.org/abs/2608.25622v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.25622v1)
+
+**Categories**: cs.CV, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Practical video editing is not only pixel generation: an editor must turn a brief, a clip pool, music metadata, and hard constraints into an executable timeline. We study this decision layer as \emph{executable video-editing planning} and introduce RefineCut, which, unlike workflow systems that wrap a prompted frontier model, trains a compact open-weight planner for it. The planner edits a typed timeline through structured patches covering clip selection, trimming, ordering, transitions, and duration and music alignment; a deterministic verifier applies each patch and checks it against an explicit constraint ledger. Because editing has no single ground-truth repair, we do not imitate teachers directly: RefineCut replays every multi-teacher branch through the verifier and keeps verifier-best repairs as supervision. A second stage, RefineCut-Evo, lets the student score its own repairs with the verifier and a task rubric and trains on high-margin preference pairs, so the final $8$B planner runs in a closed verifier loop with no teacher calls at inference. On RefineCut-Bench ($3{,}578$ tasks, $7{,}971$ captioned clips, $499$ music tracks, explicit ledgers), verifier-replayed distillation lifts the planner from $0.620$ to $0.858$ on the protocol-specific Video-Editing Score and RefineCut-Evo reaches $0.924$; the gain transfers to Llama-3.1-8B and GLM-4-9B, and in the same closed loop the $8$B planner matches or exceeds its frontier teachers. Code and RefineCut-Bench are publicly released; see the Data Availability statement.
+
+实际的视频编辑不仅仅是像素生成：编辑人员必须将简介、剪辑池、音乐元数据和硬约束转换为可执行的时间线。我们将这个决策层研究为\emph{可执行视频编辑规划}，并引入RefineCut，与包装提示前沿模型的工作流系统不同，它为其训练一个紧凑的开放权重规划器。规划器通过结构化补丁编辑键入的时间线，包括剪辑选择、修剪、排序、过渡、持续时间和音乐对齐；确定性验证程序应用每个补丁并根据显式约束分类帐对其进行检查。因为编辑没有单一的真实修复，所以我们不会直接模仿教师：RefineCut 通过验证器重放每个多教师分支，并保留验证器最佳修复作为监督。第二阶段，RefineCut-Evo，让学生使用验证器和任务评分标准对自己的修复进行评分，并在高利润偏好对上进行训练，因此最终的 8 美元规划器在封闭的验证器循环中运行，没有老师进行推理。在RefineCut-Bench（$3{,}578$任务，$7{,}971$字幕剪辑，$499$音乐曲目，显式账本）上，验证者重放的蒸馏将计划器在特定于协议的视频编辑分数上从$0.620$提升到$0.858$，RefineCut-Evo达到$0.924$；增益转移到 Llama-3.1-8B 和 GLM-4-9B，并且在同一个闭环中，$8$B 规划器匹配或超过其前沿教师。代码和RefineCut-Bench公开发布；请参阅数据可用性声明。
+
+</details>
+
+---
+
+## 9. AdaVDR: Adaptive Tool Use and Reflection for Video Deep Research / AdaVDR：视频深度研究的自适应工具使用和反思
+
+**Date**: 2026-08-26 | **arXiv**: [2608.25559v1](http://arxiv.org/abs/2608.25559v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.25559v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video deep research answers complex questions by jointly understanding video content and retrieving external knowledge from the open Web. However, diverse questions and videos require different tool-use strategies, and inappropriate tool calls can produce incorrect results. Uncertain grounding and retrieval also make unnecessary interactions costly and error-prone, increasing latency and reasoning errors. To address these challenges, we propose AdaVDR, an adaptive video deep research agent with adaptive tool invocation and reflection. AdaVDR selects tools according to the task and its capabilities, and backtracks only when unreliable intermediate results require correction. To enable these capabilities, we develop a video deep research data construction pipeline. We first discover retrieval-relevant events and entities in diverse videos and acquire detailed information through grounding and external retrieval to construct high-quality QA pairs. For each QA, task-specific prompts organize the information acquisition process into a tool-use trajectory, allowing different question and video types to follow different grounding and retrieval strategies. We further introduce model-conditioned tool necessity filtering, which evaluates tool calls against the target model's video understanding and internal knowledge, removing tools or tool chains the model can bypass. This yields trajectories tailored to the target model's video understanding capability and knowledge. Using this pipeline, we construct training data and VDR-EE, a benchmark covering entity-centric and event-centric questions. We perform supervised fine-tuning followed by reinforcement learning with a redundancy-aware reward to strengthen adaptive tool invocation and reflection. Experiments show that our method performs best among the evaluated open-source models on VDR-EE and substantially improves over its base models on VideoDR.
+
+视频深度研究通过共同理解视频内容并从开放网络中检索外部知识来回答复杂的问题。然而，不同的问题和视频需要不同的工具使用策略，不恰当的工具调用可能会产生不正确的结果。不确定的基础和检索也会使不必要的交互成本高昂且容易出错，从而增加延迟和推理错误。为了应对这些挑战，我们提出了 AdaVDR，一种具有自适应工具调用和反射功能的自适应视频深度研究代理。 AdaVDR 根据任务及其功能选择工具，仅在不可靠的中间结果需要纠正时回溯。为了实现这些功能，我们开发了视频深度研究数据构建管道。我们首先在不同视频中发现与检索相关的事件和实体，并通过基础和外部检索获取详细信息，以构建高质量的问答对。对于每个 QA，特定于任务的提示将信息获取过程组织成工具使用轨迹，允许不同的问题和视频类型遵循不同的基础和检索策略。我们进一步引入了模型条件工具必要性过滤，它根据目标模型的视频理解和内部知识来评估工具调用，删除模型可以绕过的工具或工具链。这会产生适合目标模型的视频理解能力和知识的轨迹。使用此管道，我们构建训练数据和 VDR-EE，这是一个涵盖以实体为中心和以事件为中心的问题的基准。我们进行有监督的微调，然后进行强化学习和冗余感知奖励，以加强自适应工具的调用和反射。实验表明，我们的方法在 VDR-EE 上评估的开源模型中表现最好，并且比 VideoDR 上的基本模型有了显着改进。
+
+</details>
+
+---
+
+## 10. Video-IFBench: Evaluating Instruction Following of Multimodal LLMs in Video Understanding Scenarios / Video-IFBench：评估视频理解场景中多模态法学硕士的指令跟踪
+
+**Date**: 2026-08-26 | **arXiv**: [2608.25529v1](http://arxiv.org/abs/2608.25529v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.25529v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multimodal Large Language Models (MLLMs) have shown strong performance in video understanding. However, their ability to follow instructions in this domain remains under-explored. Real-world video understanding requires models not only to interpret video content correctly, but also to satisfy diverse user-specified constraints. Existing benchmarks focus primarily on task accuracy rather than instruction adherence, leaving this capability insufficiently evaluated. To address this gap, we introduce Video-IFBench, a comprehensive benchmark for evaluating instruction following in video understanding, where models must satisfy diverse user-specified constraints, including those grounded in visual and audio content. We develop an instruction taxonomy with four templates, including single-task, multi-task, selection, and nested instructions, covering 32 task types and 39 manually designed constraint categories spanning both semantic and format requirements. To reduce annotation cost, we build a semi-automatic data construction pipeline that combines MLLMs, programmatic processing, and human verification, resulting in 1.5K samples. We conduct a large-scale evaluation of more than 20 recent MLLMs and show that video instruction following remains challenging for current models, especially for instructions with many constraints, semantic constraints, or complex conditional structures that require selecting the correct branch or path based on video content. We hope our work will facilitate future research on instruction following in video understanding scenarios.
+
+多模态大语言模型（MLLM）在视频理解方面表现出了强大的性能。然而，他们遵循该领域指示的能力仍有待探索。现实世界的视频理解不仅需要模型能够正确解释视频内容，而且还需要满足不同的用户指定的约束。现有的基准主要关注任务准确性而不是指令遵守情况，因此对这种能力的评估不充分。为了解决这一差距，我们引入了 Video-IFBench，这是一个用于评估视频理解中的指令遵循的综合基准，其中模型必须满足不同的用户指定的约束，包括基于视觉和音频内容的约束。我们开发了具有四个模板的指令分类法，包括单任务、多任务、选择和嵌套指令，涵盖 32 种任务类型和 39 个手动设计的约束类别，涵盖语义和格式要求。为了降低注释成本，我们构建了一个半自动数据构建管道，结合了 MLLM、编程处理和人工验证，产生了 1.5K 个样本。我们对 20 多个最近的 MLLM 进行了大规模评估，结果表明，视频指令跟踪对于当前模型来说仍然具有挑战性，特别是对于具有许多约束、语义约束或复杂条件结构的指令，需要根据视频内容选择正确的分支或路径。我们希望我们的工作能够促进未来在视频理解场景中遵循指令的研究。
+
+</details>
+
+---
+
+## 11. Asymmetric Cross-Modal Fine-Grained Visual Categorization: ACF-Net and the BirdPro Benchmark / 非对称跨模态细粒度视觉分类：ACF-Net 和 BirdPro 基准
+
+**Date**: 2026-08-26 | **arXiv**: [2608.25520v1](http://arxiv.org/abs/2608.25520v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.25520v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Audio-visual cross-modal Fine-Grained Visual Categorization (FGVC) aims to identify fine-grained categories by jointly leveraging visual and auditory information. However, FGVC under asymmetric cross-modal scenarios has received limited attention, where paired video and audio are not strictly synchronized and may not even correspond to the same individual or moment. Such weak and ambiguous cross-modal correspondence poses substantial challenges to effective representation learning and modality alignment. To address these issues, we propose ACF-Net, a novel optical flow-guided framework for asymmetric audio-visual fine-grained learning. ACF-Net consists of two key modules: Optical Flow-Guided Motion (OFGM) and Asymmetric CrossModal Adaptive Fusion (ACAF). OFGM captures motion-sensitive visual cues and suppresses irrelevant background interference, thereby enhancing discriminative dynamic representations in videos. ACAF estimates modality reliability under weakly matched audio-video pairs and performs uncertainty-aware adaptive fusion to improve category-level recognition robustness. To support research on asymmetric cross-modal FGVC, we further construct BirdPro, a new bird-oriented audio-visual benchmark, since existing datasets often lack large-scale category-level audio-video associations under non-strict temporal and instance correspondence. BirdPro contains 1,919 audio recordings and 11,965 videos covering 194 bird species. Extensive experiments show that ACF-Net achieves the best results compared with representative baseline methods, outperforming the strongest baselines by 2.97% and 1.92% in the fused and mismatched settings, respectively.
+
+视听跨模态细粒度视觉分类（FGVC）旨在通过联合利用视觉和听觉信息来识别细粒度类别。然而，非对称跨模态场景下的FGVC受到的关注有限，其中配对的视频和音频并不严格同步，甚至可能不对应于同一个人或时刻。这种弱且模糊的跨模态对应对有效的表示学习和模态对齐提出了巨大的挑战。为了解决这些问题，我们提出了 ACF-Net，一种用于非对称视听细粒度学习的新型光流引导框架。 ACF-Net 由两个关键模块组成：光流引导运动（OFGM）和非对称跨模态自适应融合（ACAF）。 OFGM 捕捉运动敏感的视觉线索并抑制不相关的背景干扰，从而增强视频中的辨别性动态表示。 ACAF 估计弱匹配音视频对下的模态可靠性，并执行不确定性感知自适应融合以提高类别级识别的鲁棒性。为了支持非对称跨模态 FGVC 的研究，我们进一步构建了 BirdPro，一种新的面向鸟类的视听基准，因为现有数据集通常缺乏非严格时间和实例对应下的大规模类别级音视频关联。 BirdPro 包含 1,919 个录音和 11,965 个视频，涵盖 194 种鸟类。大量实验表明，与代表性基线方法相比，ACF-Net 取得了最佳结果，在融合和不匹配设置中分别比最强基线高出 2.97% 和 1.92%。
+
+</details>
+
+---
+
+## 12. 4DStreamCtrl: Interactive Video Generation with Online 4D Control / 4DStreamCtrl：通过在线 4D 控制生成交互式视频
+
+**Date**: 2026-08-26 | **arXiv**: [2608.25479v1](http://arxiv.org/abs/2608.25479v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.25479v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Generative video models now synthesize footage nearly indistinguishable from reality. Their promise as interactive tools hinges on fine-grained control of how objects and the camera move over time, yet each existing approach captures only part of this: camera-parameter methods steer the viewpoint but cannot move objects, 2D-trajectory methods act in the image plane and ignore depth and occlusion, and recent 3D methods add geometry but run only offline at a fixed length. In particular, none combines 3D-consistent control of both camera and objects with real-time, streaming generation. Here we show that camera motion, object trajectories, and depth can be unified into a single 3D point-track representation, from which one model performs joint camera and object control, depth editing, and motion transfer in a single forward pass. To learn this interface at scale, we mine in-the-wild video for 3D motion supervision, yielding OpenVidHD-Motion3D, and encode it with a lightweight Geometric Motion Head that plugs into a pretrained video diffusion model. Because this encoder is temporally separable, we distill the model into a causal streaming student that generates arbitrarily long video in four denoising steps at memory independent of length. This unified design surpasses prior camera-only, 2D, and offline-3D methods in motion-control precision while covering modalities they address only in isolation. 4DStreamCtrl runs at 20 FPS on a single high-end GPU for 480p video and stays temporally coherent over hundreds of frames, enabling, to our knowledge, interactive 4D-controllable streaming generation for the first time. More broadly, grounding generation in explicit 3D geometry with efficient causal inference points toward interactive world models with closed-loop spatiotemporal control, from controllable simulators to real-time visual imagination for embodied agents.
+
+生成视频模型现在合成的镜头几乎与现实没有区别。它们作为交互式工具的承诺取决于对对象和相机如何随时间移动的细粒度控制，但每种现有方法仅捕获其中的一部分：相机参数方法引导视点但不能移动对象，2D 轨迹方法在图像平面中作用并忽略深度和遮挡，而最近的 3D 方法添加了几何形状但仅以固定长度离线运行。特别是，没有一个将相机和对象的 3D 一致控制与实时流生成结合起来。在这里，我们展示了相机运动、对象轨迹和深度可以统一为单个 3D 点轨迹表示，其中一个模型在单个前向传递中执行联合相机和对象控制、深度编辑和运动传输。为了大规模学习这个接口，我们挖掘野外视频进行 3D 运动监控，生成 OpenVidHD-Motion3D，并使用插入预训练视频扩散模型的轻量级几何运动头对其进行编码。由于该编码器是时间上可分离的，因此我们将模型提炼为因果流学生，该学生可以在与长度无关的内存中通过四个去噪步骤生成任意长的视频。这种统一设计在运动控制精度方面超越了之前的纯相机、2D 和离线 3D 方法，同时涵盖了它们仅单独处理的模式。 4DStreamCtrl 在单个高端 GPU 上以 20 FPS 的速度运行 480p 视频，并在数百帧上保持时间连贯性，据我们所知，首次实现了交互式 4D 可控流生成。更广泛地说，具有高效因果推理的显式 3D 几何的基础生成指向具有闭环时空控制的交互式世界模型，从可控模拟器到具体代理的实时视觉想象。
+
+</details>
+
+---
+
+## 13. VGA-BenchV2: An Expanded Unified Benchmark and Multi-Model Framework for Evaluating Video Aesthetics and Generation Quality / VGA-BenchV2：用于评估视频美观和生成质量的扩展统一基准和多模型框架
+
+**Date**: 2026-08-26 | **arXiv**: [2608.25452v1](http://arxiv.org/abs/2608.25452v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.25452v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We introduce VGA-BenchV2, an extended human-aligned benchmark and optimization framework for jointly evaluating and improving video generation quality and aesthetic value. Built upon VGA-Bench, VGA-BenchV2 preserves the original fine-grained taxonomy with two primary dimensions-Aesthetic and Generation-and 52 sub-dimensions. Guided by this taxonomy, we curate 1,016 diverse prompts and collect over 60,000 videos generated by 12 mainstream video generation models. More importantly, VGA-BenchV2 substantially expands human-labeled supervision by adding 36,000 task-level annotations, including 16,200 for aesthetic quality, 13,200 for aesthetic tagging, and 6,600 for generation quality, corresponding to 13.46x, 11.15x, and 1.55x scale-ups over VGA-Bench, respectively. Leveraging this enlarged annotation corpus, we develop a hybrid evaluator architecture consisting of VAQA-Net for continuous aesthetic scoring and two Qwen-based Large Vision-Language Model evaluators, VTag-Net and VGQA-Net, for aesthetic tagging and generation quality assessment. Extensive experiments demonstrate strong alignment with human judgments across diverse generation models. Beyond evaluation, VGA-BenchV2 further introduces an evaluation-to-optimization pipeline, where the learned aesthetic evaluator serves as a reward model for reinforcement learning-based generator fine-tuning. This closes the loop from benchmark construction and human supervision to automated evaluation and model optimization, enabling video generators to improve not only in realism but also in aesthetic quality and human preference alignment. Resources are available at https://huggingface.co/datasets/BestiVictoryLab/VGA-Bench.
+
+我们推出了 VGA-BenchV2，这是一种扩展的人性化基准测试和优化框架，用于共同评估和提高视频生成质量和审美价值。 VGA-BenchV2 基于 VGA-Bench 构建，保留了原始的细粒度分类法，具有两个主要维度（审美和生成）以及 52 个子维度。在此分类法的指导下，我们整理了 1,016 个不同的提示，并收集了由 12 种主流视频生成模型生成的 60,000 多个视频。更重要的是，VGA-BenchV2 通过添加 36,000 个任务级注释，大幅扩展了人工标记监督，其中包括 16,200 个用于美学质量的注释、13,200 个用于美学标记的注释和 6,600 个用于生成质量的注释，分别相当于 VGA-Bench 的 13.46 倍、11.15 倍和 1.55 倍放大。利用这个扩大的注释语料库，我们开发了一种混合评估器架构，其中包括用于连续美学评分的 VAQA-Net 和两个基于 Qwen 的大型视觉语言模型评估器 VTag-Net 和 VGQA-Net，用于美学标记和生成质量评估。大量的实验表明，不同的一代模型与人类的判断有很强的一致性。除了评估之外，VGA-BenchV2 还引入了评估到优化的流程，其中学习的美学评估器充当基于强化学习的生成器微调的奖励模型。这形成了从基准构建和人工监督到自动评估和模型优化的闭环，使视频生成器不仅能够提高真实感，而且能够提高审美质量和人类偏好一致性。资源可在 https://huggingface.co/datasets/BestiVictoryLab/VGA-Bench 获取。
+
+</details>
+
+---
+
+## 14. Bootstrapping a 4D LiDAR Annotation Tool from Video Foundation Models / 从视频基础模型引导 4D LiDAR 注释工具
+
+**Date**: 2026-08-26 | **arXiv**: [2608.25418v1](http://arxiv.org/abs/2608.25418v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.25418v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Progress in 4D LiDAR segmentation is bottlenecked by data. Assigning temporally consistent labels across sparse point cloud sequences is costly and hard to scale, and every new task or domain tends to demand fresh dense annotation. This motivates a simple question of whether high-quality LiDAR training data can be produced automatically, without any human labeling. To this end, we introduce LiDAR-SAM2, a framework that turns a 2D video foundation model, SAM2, into a scalable source of supervision for the 4D LiDAR domain. On the data side, it automatically generates temporally coherent LiDAR-level labels from SAM2 video masks through multi-view projection and spatio-temporal aggregation. On the modeling side, a tailored modality interface and a two-stage learning objective adapt SAM2's video segmentation kernel to spatio-temporal LiDAR structure, so that a single click per object yields a consistent mask track across the sequence. Trained with no human LiDAR annotation, LiDAR-SAM2 produces semantic and panoptic labels on SemanticKITTI that approach the quality of full human annotation from only a few points, and models trained on these labels approach the performance of full ground-truth supervision. This positions LiDAR-SAM2 as a scalable labeling tool that substantially reduces the annotation burden for 3D and 4D scene understanding.
+
+4D LiDAR 分割的进展受到数据的瓶颈。在稀疏点云序列中分配时间一致的标签成本高昂且难以扩展，并且每个新任务或领域往往需要新的密集注释。这就引发了一个简单的问题：是否可以自动生成高质量的激光雷达训练数据，而无需任何人工标记。为此，我们引入了 LiDAR-SAM2，该框架将 2D 视频基础模型 SAM2 转变为 4D LiDAR 领域的可扩展监督源。在数据方面，它通过多视图投影和时空聚合，从 SAM2 视频掩模自动生成时间相干的 LiDAR 级标签。在建模方面，定制的模态接口和两阶段学习目标使 SAM2 的视频分割内核适应时空 LiDAR 结构，以便每个对象单击一次即可在整个序列中产生一致的掩模轨迹。 LiDAR-SAM2 在没有人类 LiDAR 注释的情况下进行训练，在 SemanticKITTI 上生成语义和全景标签，仅从几个点接近完整人类注释的质量，并且在这些标签上训练的模型接近完整地面实况监督的性能。这使得 LiDAR-SAM2 成为一种可扩展的标记工具，可大大减轻 3D 和 4D 场景理解的注释负担。
+
+</details>
+
+---
+
+## 15. Where to Look Matters: On-Policy Self-Distillation for Long-Video Understanding / 看哪里很重要：长视频理解的策略自蒸馏
+
+**Date**: 2026-08-26 | **arXiv**: [2608.25356v1](http://arxiv.org/abs/2608.25356v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.25356v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision-language models (VLMs) have made substantial progress in long-video understanding, with standard backbone models typically answering questions from frames sampled across the full video. However, as videos become longer, the full-video context inevitably contains more question-irrelevant temporal content, which can distract the model from the evidence needed to answer a specific question. We empirically find that focusing the visual input on short annotated clue intervals containing question-relevant evidence consistently improves prediction accuracy across model scales compared with using the corresponding full videos, while requiring fewer input frames. Based on this finding, we introduce Clue-OPSD, a clue-privileged on-policy self-distillation framework for long-video understanding. During training, a full-video student learns from a self-teacher conditioned on the corresponding clue interval by aligning their next-token distributions along student-generated trajectories. Clue-OPSD thus uses clue intervals as privileged supervision without relying on ground-truth answer labels, while requiring no clue annotations or additional modules at inference time. Extensive experiments across multiple long-video understanding benchmarks and Qwen3.5 model scales demonstrate consistent improvements over the corresponding backbone models and strong performance against supervised post-training baselines.
+
+视觉语言模型 (VLM) 在长视频理解方面取得了实质性进展，标准骨干模型通常可以回答整个视频中采样帧的问题。然而，随着视频变得更长，完整视频上下文不可避免地包含更多与问题无关的时间内容，这可能会分散模型对回答特定问题所需的证据的注意力。我们凭经验发现，与使用相应的完整视频相比，将视觉输入集中在包含问题相关证据的短注释线索间隔上，可以持续提高模型规模的预测准确性，同时需要更少的输入帧。基于这一发现，我们引入了 Clue-OPSD，一种用于长视频理解的线索特权策略自蒸馏框架。在训练过程中，全视频学生通过沿着学生生成的轨迹对齐下一个标记分布，以相应的线索间隔为条件，向自学教师学习。因此，Clue-OPSD 使用线索间隔作为特权监督，而不依赖于真实答案标签，同时在推理时不需要线索注释或附加模块。跨多个长视频理解基准和 Qwen3.5 模型规模的广泛实验证明了相对于相应主干模型的一致改进以及相对于监督训练后基线的强大性能。
+
+</details>
+
+---
+
+## 16. MoTE: Mixture of Task Experts for Multi-Task Video Understanding / MoTE：多任务视频理解的任务专家组合
+
+**Date**: 2026-08-25 | **arXiv**: [2608.24763v1](http://arxiv.org/abs/2608.24763v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.24763v1)
+
+**Categories**: cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Procedural video-language models must solve heterogeneous tasks from the same visual evidence, including action recognition, forecasting, and procedure prediction. Dense transformer decoders share the same feed-forward networks across tasks, which can entangle task behavior and make controlled capability expansion difficult. Sparse Mixture-of-Experts (MoE) decoders provide conditional computation, but token-level learned routing is not naturally aligned with task-level procedural objectives. We propose MoTE (Mixture of Task Experts), a decoder architecture that converts large language model feed-forward networks into task-specific experts while keeping the multimodal backbone shared. Each example follows one sample-level task route, so active task-expert computation remains independent of the number of stored task experts. We instantiate this design as VideoLLM-MoTE and evaluate it on five COIN benchmarks using explicit task routes. The five-expert model activates ~2B LLM parameters per sample and achieves higher average top-1 accuracy than recent VideoLLM baselines. Under the same expert topology, it improves over dense all-expert activation and learned sparse-routing controls. These results show that task-structured routing provides an interpretable and compute-efficient decoder alternative for multi-task video-language learning.
+
+过程视频语言模型必须从相同的视觉证据中解决异构任务，包括动作识别、预测和过程预测。密集变压器解码器跨任务共享相同的前馈网络，这可能会纠缠任务行为并使受控能力扩展变得困难。稀疏专家混合 (MoE) 解码器提供条件计算，但令牌级学习路由并不自然地与任务级程序目标保持一致。我们提出了 MoTE（任务专家混合），这是一种解码器架构，可将大型语言模型前馈网络转换为特定于任务的专家，同时保持多模式主干共享。每个示例都遵循一个样本级任务路线，因此活动的任务专家计算保持独立于存储的任务专家的数量。我们将此设计实例化为 VideoLLM-MoTE，并使用显式任务路径在五个 COIN 基准上对其进行评估。五位专家模型为每个样本激活约 2B LLM 参数，并实现比最近的 VideoLLM 基线更高的平均 top-1 准确度。在相同的专家拓扑下，它改进了密集的全专家激活和学习的稀疏路由控制。这些结果表明，任务结构路由为多任务视频语言学习提供了一种可解释且计算高效的解码器替代方案。
+
+</details>
+
+---
+
+## 17. Game2World Engine: Unlocking In-the-Wild Gameplay Videos for World Model Training / Game2World 引擎：解锁野外游戏视频以进行世界模型训练
+
+**Date**: 2026-08-25 | **arXiv**: [2608.24680v1](http://arxiv.org/abs/2608.24680v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.24680v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/Dongping-Chen/Game2World.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video games provide a scalable source of training data for video world models, offering diverse environments, complex interactions, and abundant in-the-wild gameplay videos. However, raw gameplay footage entangles the game world with screen-space interfaces, introducing game-specific biases and irrelevant dynamics that hinder world-model training. To address this problem, we introduce GameUI-Taxonomy and G2WEngine, a full-stack framework that formalizes gameplay UI grounding and removal. G2WEngine automatically extracts reusable UI assets from real gameplay videos and synthesizes temporally coherent UI overlays on clean footage. Using this engine, we construct Game2World, comprising 96K synthetic paired videos with precise reconstruction targets and 1,079 in-the-wild clips from 303 games for realistic evaluation. Its asset library contains 5,132 verified UI elements across 21 taxonomy categories, collected from 1,010 representative gameplay frames. Based on Game2World, we propose GameCleaner, a mask-free gameplay UI removal model that combines multimodal semantic understanding with video editing capabilities. Unlike mask-based methods, GameCleaner directly identifies and removes diverse HUD elements while preserving the underlying scene content and temporal dynamics. In a controlled pilot, world models trained on UI-free gameplay improve overall VideoReward by 6.83% over those trained on UI-overlaid data. On UI-removal evaluation, GameCleaner achieves an average AAR of 95.36 on synthetic videos, outperforming the strongest temporal mask baseline by 57.3%, and obtains the best in-the-wild AAR of 80.05 with 99.8 background preservation. These results demonstrate the scalable potential of transforming Internet gameplay videos into high-quality world-model training data. Code, dataset, and model will be available at https://github.com/Dongping-Chen/Game2World.
+
+视频游戏为视频世界模型提供了可扩展的训练数据源，提供了多样化的环境、复杂的交互和丰富的野外游戏视频。然而，原始游戏画面将游戏世界与屏幕空间界面纠缠在一起，引入了游戏特定的偏见和不相关的动态，阻碍了世界模型的训练。为了解决这个问题，我们引入了 GameUI-Taxonomy 和 G2WEngine，这是一个正式化游戏 UI 基础和删除的全栈框架。 G2WEngine 自动从真实游戏视频中提取可重用的 UI 资源，并在干净的素材上合成时间连贯的 UI 叠加层。使用该引擎，我们构建了 Game2World，其中包含具有精确重建目标的 96K 合成配对视频和来自 303 个游戏的 1,079 个野外剪辑，用于进行真实评估。其资产库包含 21 个分类类别的 5,132 个经过验证的 UI 元素，这些元素是从 1,010 个代表性游戏框架中收集的。基于 Game2World，我们提出了 GameCleaner，这是一种将多模态语义理解与视频编辑功能相结合的无遮罩游戏 UI 去除模型。与基于遮罩的方法不同，GameCleaner 直接识别并删除不同的 HUD 元素，同时保留底层场景内容和时间动态。在受控试点中，与使用 UI 覆盖数据训练的世界模型相比，使用无 UI 游戏训练的世界模型将整体视频奖励提高了 6.83%。在 UI 去除评估中，GameCleaner 在合成视频上实现了 95.36 的平均 AAR，比最强时间掩模基线高出 57.3%，并在 99.8 的背景保留下获得了 80.05 的最佳野外 AAR。这些结果证明了将互联网游戏视频转换为高质量世界模型训练数据的可扩展潜力。代码、数据集和模型将在 https://github.com/Dongping-Chen/Game2World 上提供。
+
+</details>
+
+---
+
+## 18. TurboT2VA: Fast Large-Scale Text-to-Video-Audio Generation via Score-Regularized Consistency Distillation / TurboT2VA：通过分数正则化一致性蒸馏快速生成大规模文本到视频音频
+
+**Date**: 2026-08-25 | **arXiv**: [2608.24674v1](http://arxiv.org/abs/2608.24674v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.24674v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/thu-ml/TurboDiffusion/tree/main/turbot2va.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Joint text-to-video-audio generation produces synchronized visual and acoustic content, but the long sampling trajectories and heterogeneous multimodal computation of large models make inference prohibitively expensive. We present TurboT2VA, a distillation and inference framework for accelerating a 19B-parameter joint video-audio model. Large-scale T2VA distillation is challenged by modality-imbalanced optimization, the difficulty of continuous-time consistency training at scale, and the quality--diversity trade-off. TurboT2VA addresses these issues with per-modality normalization and a progressive curriculum comprising discrete consistency warm-up, continuous consistency refinement, and joint consistency--distribution matching. The curriculum first establishes a stable, diverse generation trajectory and only then introduces distribution-level refinement. On LTX-2, four-step distillation reduces generator latency from 50.52s to 2.51s at the standard evaluation resolution of 512$\times$768, achieving a 20.1$\times$ speedup while maintaining strong visual quality, audio fidelity, diversity, and video-audio synchronization. We further develop an architecture-aware inference stack that combines guarded W8A8 and fused operators, padded-text compaction, and modality-aware sparse attention while preserving dense cross-modal and text-conditioning paths. Under the high-resolution deployment setting at 1024$\times$1792, the complete stack reduces generator latency from 318.74s to 5.83s on one NVIDIA H20, achieving a 54.67$\times$ generator-only speedup. Inference code and generation demos are available at https://github.com/thu-ml/TurboDiffusion/tree/main/turbot2va.
+
+文本到视频音频的联合生成可产生同步的视觉和听觉内容，但大型模型的长采样轨迹和异构多模态计算使得推理成本极其昂贵。我们推出了 TurboT2VA，这是一个用于加速 19B 参数联合视频音频模型的蒸馏和推理框架。大规模 T2VA 蒸馏面临模态不平衡优化、大规模连续时间一致性训练的难度以及质量与多样性权衡的挑战。 TurboT2VA 通过按模态归一化和渐进式课程来解决这些问题，其中包括离散一致性预热、连续一致性细化和联合一致性分布匹配。课程首先建立稳定、多样化的世代轨迹，然后才引入分配层面的细化。在 LTX-2 上，在标准评估分辨率 512$\times$768 下，四步蒸馏将生成器延迟从 50.52s 降低到 2.51s，实现了 20.1$\times$ 加速，同时保持了强大的视觉质量、音频保真度、多样性和视频音频同步。我们进一步开发了一个架构感知推理堆栈，它结合了受保护的 W8A8 和融合运算符、填充文本压缩和模态感知稀疏注意力，同时保留密集的跨模态和文本调节路径。在 1024$\times$1792 的高分辨率部署设置下，完整堆栈将一台 NVIDIA H20 上的生成器延迟从 318.74 秒减少到 5.83 秒，仅生成器加速达到 54.67$\times$。推理代码和生成演示可在 https://github.com/thu-ml/TurboDiffusion/tree/main/turbot2va 获取。
+
+</details>
+
+---
+
+## 19. ReGround-Surg: Reliability-Guided Anchor Grounding for Referring Surgical Video Segmentation / ReGround-Surg：用于参考手术视频分割的可靠性引导锚接地
+
+**Date**: 2026-08-25 | **arXiv**: [2608.24671v1](http://arxiv.org/abs/2608.24671v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.24671v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/JiaxinWen1/ReGround-Surg.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Referring surgical video segmentation requires segmenting a target instrument or tissue region across video frames according to a natural language expression. Recent Segment Anything Model 2 (SAM2) based two-stage methods (e.g., ReSurgSAM2) first ground the referred target in an initial or selected frame, then propagate the selected mask via tracking. Although effective, their performance is highly sensitive to the quality of the initial grounded mask: once an incorrect anchor is selected, subsequent tracking tends to propagate the error. This issue is especially challenging in surgical videos due to visually similar instruments, occlusion, and complex tissue-tool interactions. To address this issue, we propose ReGround-Surg, a lightweight reliability-guided anchor grounding framework to improve SAM2-based referring surgical video segmentation. It first predicts a text-conditioned spatial reliability map from the referring expression and current-frame visual features. The map is then reused in two complementary branches: a Gated Side Adapter enhances expression-relevant visual regions before text-to-vision fusion, while a Reliability-Weighted Vision-to-Text Attention module suppresses off-target visual evidence during prompt-token aggregation. Experiments on Ref-EndoVis17 and Ref-EndoVis18 show consistent improvements over state-of-the-art methods across three evaluation splits with negligible speed reduction. Code is publicly available at https://github.com/JiaxinWen1/ReGround-Surg.
+
+手术视频分割需要根据自然语言表达跨视频​​帧分割目标器械或组织区域。最近基于分段任意模型 2 (SAM2) 的两阶段方法（例如 ReSurgSAM2）首先将参考目标接地在初始或选定的帧中，然后通过跟踪传播选定的掩模。虽然有效，但它们的性能对初始接地掩模的质量高度敏感：一旦选择了不正确的锚点，后续跟踪往往会传播错误。由于视觉上相似的器械、遮挡以及复杂的组织-工具相互作用，这个问题在手术视频中尤其具有挑战性。为了解决这个问题，我们提出了 ReGround-Surg，这是一种轻量级可靠性引导锚接地框架，用于改进基于 SAM2 的参考手术视频分割。它首先根据引用表达和当前帧视觉特征预测文本条件的空间可靠性图。然后，该图在两个互补的分支中重用：门控侧适配器在文本到视觉融合之前增强与表达相关的视觉区域，而可靠性加权视觉到文本注意模块在提示令牌聚合期间抑制脱靶视觉证据。 Ref-EndoVis17 和 Ref-EndoVis18 上的实验表明，在三个评估分段中，与最先进的方法相比，其得到了一致的改进，速度降低可以忽略不计。代码可在 https://github.com/JiaxinWen1/ReGround-Surg 上公开获取。
+
+</details>
+
+---
+
+## 20. Keep-or-Drop? Adaptive Tokenizer for Compact Video Representation / 保留还是丢弃？用于紧凑视频表示的自适应分词器
+
+**Date**: 2026-08-25 | **arXiv**: [2608.24293v1](http://arxiv.org/abs/2608.24293v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.24293v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Latent diffusion models have emerged as a dominant framework for high-fidelity image and video synthesis, operating in compact latent spaces with variational autoencoders (VAEs) to enhance computational efficiency without compromising visual quality. However, conventional VAEs are suboptimal for video data as they employ fixed compression ratios that cannot adapt to the varying complexity of spatio-temporal content. We present KATok (Keep-or-Drop? Adaptive Tokenizer for Compact Video Representation), a transformer-based VAE that incorporates an adaptive token selector which is jointly learned with latent tokens. By evaluating each token's content-richness as keep-or-drop probability, the token selector effectively discards uninformative tokens, naturally allowing data-dependent compression. Applying adaptive tokenization to diffusion models may cause spatial misalignment, as token dropping can disturb the original spatio-temporal structure. To alleviate this issue, we propose two position-prediction strategies: cascaded and joint generation, to ensure spatial consistency. We empirically show that our model achieves strong reconstruction and generation quality at a state-of-the-art compression ratio. Further analysis on video data reveals that this improvement is primarily achieved by reducing spatio-temporal redundancy and removing uninformative tokens, as supported by both quantitative and qualitative results.
+
+潜在扩散模型已成为高保真图像和视频合成的主要框架，通过变分自动编码器 (VAE) 在紧凑的潜在空间中运行，以在不影响视觉质量的情况下提高计算效率。然而，传统的 VAE 对于视频数据来说并不是最优的，因为它们采用固定的压缩比，无法适应时空内容的不同复杂性。我们提出了 KATok（Keep-or-Drop？用于紧凑视频表示的自适应标记器），这是一种基于变压器的 VAE，它包含与潜在标记联合学习的自适应标记选择器。通过评估每个令牌的内容丰富度作为保留或删除概率，令牌选择器有效地丢弃无信息的令牌，自然地允许依赖于数据的压缩。将自适应标记化应用于扩散模型可能会导致空间错位，因为标记丢弃会扰乱原始的时空结构。为了缓解这个问题，我们提出了两种位置预测策略：级联和联合生成，以确保空间一致性。我们的经验表明，我们的模型以最先进的压缩比实现了强大的重建和生成质量。对视频数据的进一步分析表明，这种改进主要是通过减少时空冗余和删除无信息标记来实现的，定量和定性结果都支持这一点。
+
+</details>
+
+---
+
+## 21. TrAct: Bridging Robot Control and Visual Prediction with Visual Tracks / TraAct：通过视觉轨道桥接机器人控制和视觉预测
+
+**Date**: 2026-08-25 | **arXiv**: [2608.24101v1](http://arxiv.org/abs/2608.24101v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.24101v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Robot actions are inherently embodiment-specific and only weakly aligned with image-space visual changes, limiting their effectiveness as conditioning signals for robot world models. In contrast, visual tracks provide an embodiment-agnostic representation of how task-relevant points move through a scene, offering dense image-space guidance for accurate and spatially precise future video prediction. Building on this observation, we propose TrAct, a world-model-based robot decision-making framework that uses visual tracks as an intermediate interface between control and prediction. TrAct consists of three components: a Vision-Language-Action-and-Track model (VLAT) that jointly predicts candidate actions and corresponding visual tracks from the current observation and language instruction; a track-conditioned world model (TWM) that predicts future visual outcomes conditioned on the proposed tracks; and a vision-language reward model (VLAC) that scores the predicted outcomes. At inference time, VLAT generates candidate action-track pairs, TWM rolls out their visual consequences, and VLAC selects the track whose predicted outcome best satisfies the instruction; the action paired with the selected track is then executed by the robot. Experiments on the proposed LIBERO-INTEGRAL benchmark and real-world Franka manipulation show that TrAct improves success rates from 27% to 55% in simulation and from 49% to 76% on real-world tasks compared with the strong VLA baseline $π_{0.5}$. Furthermore, TWM consistently improves video prediction quality over the action-conditioned world model (AWM). These results demonstrate that visual tracks provide an effective shared interface between robot control and visual prediction, enabling more accurate world modeling and stronger robot generalization.
+
+机器人动作本质上是特定于实施例的，并且与图像空间视觉变化的一致性很弱，限制了它们作为机器人世界模型的条件信号的有效性。相比之下，视觉轨迹提供了与任务相关的点如何在场景中移动的与实施例无关的表示，为准确且空间精确的未来视频预测提供了密集的图像空间指导。基于这一观察，我们提出了 TrAct，一个基于世界模型的机器人决策框架，它使用视觉轨迹作为控制和预测之间的中间接口。 TrAct 由三个部分组成：视觉-语言-动作和轨迹模型（VLAT），根据当前观察和语言指令联合预测候选动作和相应的视觉轨迹；轨道条件世界模型（TWM），可预测以拟议轨道为条件的未来视觉结果；以及对预测结果进行评分的视觉语言奖励模型（VLAC）。在推理时，VLAT 生成候选动作轨迹对，TWM 推出其视觉结果，VLAC 选择预测结果最能满足指令的轨迹；然后机器人执行与所选轨迹配对的动作。对所提出的 LIBERO-INTEGRAL 基准和现实世界 Franka 操作的实验表明，与强 VLA 基线 $π_{0.5}$ 相比，TrAct 将模拟中的成功率从 27% 提高到 55%，将现实世界任务的成功率从 49% 提高到 76%。此外，TWM 持续提高了动作条件世界模型 (AWM) 的视频预测质量。这些结果表明，视觉轨迹在机器人控制和视觉预测之间提供了有效的共享接口，从而实现更准确的世界建模和更强的机器人泛化。
+
+</details>
+
+---
+
+## 22. ConsensusTAS: Self-Supervised Temporal Action Segmentation for Long-Horizon Construction Videos / ConsensusTAS：长视野施工视频的自监督时间动作分割
+
+**Date**: 2026-08-25 | **arXiv**: [2608.24043v1](http://arxiv.org/abs/2608.24043v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.24043v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recognizing sequential construction activities is important for collaborative human-robot work; for example, robots are able to understand workers' current and upcoming actions and provide timely tool delivery or physical support. However, despite extensive research on construction worker activity recognition, existing studies have been limited to classifying activity categories, such as climbing, lifting, and walking, instead of recognizing fine-grained activity transitions from long-horizon sequences. Addressing this problem is challenging because annotating action temporal boundaries in long construction videos is time-consuming. In this study, we propose ConsensusTAS, a label-free, self-supervised learning approach to segment continuous video streams into distinct activity phases by exploiting the internal consensus of candidate segmentations. We evaluated our algorithm on three public datasets, where it outperformed state-of-the-art methods, achieving an F1@10 of 73.08 on GTEA, an F1@10 of 64.33 on Breakfast, and an F1@50 of 33.50 on static-camera videos from Assembly101. We also tested it on real-world construction videos, where post-hoc evaluation showed that the model successfully recognized and segmented actions within the composite activity of bricklaying, such as spreading mortar on a brick, placing the brick, pressing, and aligning. Compared with other temporal action segmentation models that require computationally intensive large vision-language models, our method can run on a CPU, which provides practical value for video surveillance and human-robot collaboration on mobile robotic platforms.
+
+认识顺序构建活动对于人机协作工作非常重要；例如，机器人能够了解工人当前和即将采取的行动，并及时提供工具交付或物理支持。然而，尽管对建筑工人活动识别进行了广泛的研究，但现有的研究仅限于对活动类别进行分类，例如攀爬、举重和行走，而不是从长视野序列中识别细粒度的活动转换。解决这个问题具有挑战性，因为在长施工视频中注释动作时间边界非常耗时。在本研究中，我们提出了 ConsensusTAS，这是一种无标签、自我监督的学习方法，通过利用候选分割的内部共识，将连续视频流分割成不同的活动阶段。我们在三个公共数据集上评估了我们的算法，它的性能优于最先进的方法，在 GTEA 上实现了 73.08 的 F1@10，在 Breakfast 上实现了 64.33 的 F1@10，在来自 Assembly101 的静态摄像机视频上实现了 33.50 的 F1@50。我们还在现实世界的施工视频中对其进行了测试，事后评估表明该模型成功识别并分割了砌砖复合活动中的动作，例如在砖块上涂抹砂浆、放置砖块、按压和对齐。与其他需要计算密集型大型视觉语言模型的时间动作分割模型相比，我们的方法可以在CPU上运行，这为移动机器人平台上的视频监控和人机协作提供了实用价值。
+
+</details>
+
+---
+
+## 23. GlanceWAM: Sparse Test-Time Imagination for World-Action Models / GlanceWAM：世界动作模型的稀疏测试时间想象力
+
+**Date**: 2026-08-25 | **arXiv**: [2608.23927v1](http://arxiv.org/abs/2608.23927v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.23927v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/linhanwang/GlanceWAM.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video generative models provide rich physical priors for robot learning, yet existing world-action models (WAMs) face a fundamental trade-off: synchronous video generation at control rate is latency-prohibitive, while abandoning test-time visual imagination sacrifices task success. We show that visual imagination achieves both real-time inference and superior success rates when generated asynchronously off the critical path and consumed directly in latent space. We introduce GlanceWAM, which decouples imagination from control within a single video DiT: an asynchronous proposer glances ahead on a slow clock to imagine a single lookahead frame seconds into the future in the background, while an action head decodes action chunks at control rate (48 ms) purely in latent space without blocking. Enabled by a non-interfering attention mask that isolates video representations and staleness-robust horizon training that accommodates asynchronous lookahead aging, GlanceWAM breaks the speed-success dilemma. Trained purely on demonstrations, it attains 72.2% on the 24-task RoboCasa kitchen benchmark (surpassing synchronous Cosmos Policy at 67.1% and imagination-free co-training at 64.4%) and 99.0% on LIBERO, executing at 48 ms per chunk on an NVIDIA A100 GPU (24x faster than synchronous baselines). Code is available at https://github.com/linhanwang/GlanceWAM.
+
+视频生成模型为机器人学习提供了丰富的物理先验，但现有的世界动作模型（WAM）面临着一个基本的权衡：以控制速率生成同步视频会产生延迟，而放弃测试时的视觉想象力会牺牲任务的成功。我们证明，当视觉想象力在关键路径之外异步生成并直接在潜在空间中消耗时，可以实现实时推理和卓越的成功率。我们引入了 GlanceWAM，它在单个视频 DiT 中将想象力与控制解耦：异步提议者在慢速时钟上向前看一眼，想象后台中未来的单个前瞻帧秒，而动作头纯粹在潜在空间中以控制速率（48 毫秒）解码动作块而不会阻塞。 GlanceWAM 通过隔离视频表示的无干扰注意力掩模和适应异步前瞻老化的抗陈旧性水平训练来实现，打破了速度成功的困境。纯粹进行演示训练后，它在 24 任务 RoboCasa 厨房基准测试中达到了 72.2%（超过了同步 Cosmos Policy 的 67.1% 和无想象力协同训练的 64.4%），在 LIBERO 上达到了 99.0%，在 NVIDIA A100 GPU 上每块执行时间为 48 毫秒（比同步基准快 24 倍）。代码可在 https://github.com/linhanwang/GlanceWAM 获取。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-08-26 (16 papers)</b></summary>
 
 # arXiv Video Papers - 2026-08-26
