@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-08-28](papers/2026-08-28.md) - 1 papers
 - [2026-08-27](papers/2026-08-27.md) - 1 papers
 - [2026-08-26](papers/2026-08-26.md) - 2 papers
 - [2026-08-24](papers/2026-08-24.md) - 3 papers
@@ -77,6 +78,34 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-08-28 (1 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-08-28
+
+**Paper Count**: 1
+
+---
+
+## 1. LoRCA: LoRA Cycle Adaptation for Histology to HiP-CT Translation with DINOv3 / LoRCA：LoRA 循环适应组织学到 HiP-CT 的 DINOv3 翻译
+
+**Date**: 2026-08-07 | **arXiv**: [2608.10002v1](http://arxiv.org/abs/2608.10002v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.10002v1)
+
+**Categories**: eess.IV, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Hierarchical Phase-Contrast Tomography (HiP-CT) is a synchrotron based X-ray imaging technique that enables non-destructive, volumetric imaging of intact organs with multi-resolutions bridging 20 $μm$/voxel for whole organs to near-cellular resolution ($\sim$0.8 $μm$/voxel) in local regions. This offers the opportunity to bring volumetric whole-organ context to histology. However, nonlinear registration between H\&E histology and HiP-CT volumes is challenging due to the differences in feature representations of different colour spaces. Synthesis-before-registration methods have shown strong results in histology-to-MRI and histology-to-CT alignment. However, existing approaches either rely on manual anatomical contours or are trained from scratch without semantic constraints, limiting their generalisability to soft tissue organs and novel modalities. We propose LoRCA (LoRA Cycle Adaptation), a cycle consistent style translation framework built on a shared frozen DINOv3 with modality-specific LoRA adapters, learning modality-specific representations that are decoded and adversarially trained. LoRCA enables structure-preserving translation without requiring paired training data. The frozen backbone is intended to be a structural anchor that prevents content drift by preserving pretrained semantic-extraction capability. We evaluate translation quality using Fréchet Inception Distance (FID) and structural fidelity via mutual information and Canny edge preservation. LoRCA outperforms CycleGAN in both translation quality and structural consistency. As a preliminary indicator of downstream registration utility, we find that style-translated images yield increased feature correspondences under MatchAnything on manually aligned HiP-CT and histology test pairs, suggesting that LoRCA-style translation is a promising step towards 2D histological sections to 3D HiP-CT volumes registration.
+
+分层相差断层扫描 (HiP-CT) 是一种基于同步加速器的 X 射线成像技术，可对完整器官进行无损体积成像，具有将整个器官的 20 $μm$/体素连接到局部区域的近细胞分辨率 ($\sim$0.8 $μm$/体素) 的多分辨率。这提供了将体积整个器官背景引入组织学的机会。然而，由于不同颜色空间的特征表示存在差异，H\&E 组织学和 HiP-CT 体积之间的非线性配准具有挑战性。配准前合成方法在组织学与 MRI 和组织学与 CT 比对方面显示出强大的结果。然而，现有的方法要么依赖于手动解剖轮廓，要么在没有语义限制的情况下从头开始训练，限制了它们对软组织器官和新模式的通用性。我们提出了 LoRCA（LoRA 循环适应），这是一种循环一致的风格翻译框架，构建在共享的冻结 DINOv3 上，具有特定于模态的 LoRA 适配器，学习经过解码和对抗训练的特定模态表示。 LoRCA 无需配对训练数据即可实现结构保留翻译。冻结主干旨在成为结构锚，通过保留预先训练的语义提取能力来防止内容漂移。我们使用 Fréchet Inception Distance (FID) 评估翻译质量，并通过互信息和 Canny 边缘保留来评估结构保真度。 LoRCA 在翻译质量和结构一致性方面均优于 CycleGAN。作为下游配准效用的初步指标，我们发现，在手动对齐的 HiP-CT 和组织学测试对的 MatchAnything 下，风格翻译图像产生了增加的特征对应性，这表明 LoRCA 风格的翻译是朝着 2D 组织学切片到 3D HiP-CT 体积配准迈出的有希望的一步。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-08-27 (1 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-08-27
