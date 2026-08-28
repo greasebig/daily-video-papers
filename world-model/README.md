@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-08-28](papers/2026-08-28.md) - 8 papers
 - [2026-08-27](papers/2026-08-27.md) - 13 papers
 - [2026-08-26](papers/2026-08-26.md) - 14 papers
 - [2026-08-22](papers/2026-08-22.md) - 8 papers
@@ -142,6 +143,146 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-08-28 (8 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-08-28
+
+**Paper Count**: 8
+
+---
+
+## 1. CLAP: Cross-Embodiment Video World Models are Zero-Shot Physical Simulators / CLAP：跨实施例视频世界模型是零镜头物理模拟器
+
+**Date**: 2026-08-27 | **arXiv**: [2608.27406v1](http://arxiv.org/abs/2608.27406v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.27406v1)
+
+**Categories**: cs.RO, cs.AI, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+State-of-the-art action-conditioned video models are typically restricted to a single robot embodiment, preventing them from leveraging the vast corpus of heterogeneous video data that contains rich signals for learning generalizable physics. To bridge this gap, we introduce CLAP, a framework for cross-embodiment action-conditioned video generation capable of being trained on diverse, internet-scale videos across human and robotic agents. CLAP is grounded in the insight that universal physical laws govern spatiotemporal dynamics regardless of the actor. However, cross-embodiment learning is non-trivial because action representations vary sharply across robot platforms and are typically absent in human videos. CLAP addresses this fundamental challenge through the following core contributions. First, CLAP reconciles disparate action spaces using end-effector poses, language instructions, and latent actions. Second, to resolve their individual limitations, CLAP introduces a curriculum-based cross-embodiment learning recipe that first learns foundational physical priors across unlabeled video data using latent actions and subsequently grounds them in end-effector action spaces for zero-shot deployment to real-world tasks. Crucially, CLAP approaches or surpasses state-of-the-art single-embodiment video models in challenging environments like DROID. These performance advantages compound via few-shot adaptation to establish a novel paradigm for training single-embodiment video world models. Ultimately, CLAP delivers the most comprehensive suite of action-conditioned video world models to date - spanning diverse action-conditioning spaces (end-effector, language, and latent) and robot morphologies (including cross-embodiment, DROID, Bridge, bimanual YAM robots, and G1 humanoids). We open-source all code and models. Project Website at https://omni-clap.github.io .
+
+最先进的动作条件视频模型通常仅限于单个机器人实施例，从而阻止它们利用包含丰富信号来学习可推广物理的大量异构视频数据。为了弥补这一差距，我们引入了 CLAP，这是一种跨实体动作条件视频生成框架，能够在人类和机器人代理的各种互联网规模视频上进行训练。 CLAP 的基础是这样的见解：无论参与者是谁，普遍的物理定律都支配着时空动力学。然而，跨实体学习并非易事，因为动作表示在机器人平台上差异很大，并且通常在人类视频中不存在。 CLAP 通过以下核心贡献应对这一根本挑战。首先，CLAP 使用末端执行器姿势、语言指令和潜在动作来协调不同的动作空间。其次，为了解决其个体局限性，CLAP 引入了一种基于课程的跨实体学习方法，首先使用潜在动作在未标记的视频数据中学习基础物理先验，然后将它们置于末端执行器动作空间中，以便零样本部署到现实世界的任务。至关重要的是，CLAP 在 DROID 等具有挑战性的环境中接近或超越了最先进的单实施视频模型。这些性能优势通过几次镜头适应得到复合，为训练单实施视频世界模型建立了一种新颖的范例。最终，CLAP 提供了迄今为止最全面的动作调节视频世界模型套件 - 跨越不同的动作调节空间（末端执行器、语言和潜在）和机器人形态（包括跨实体、DROID、Bridge、双手 YAM 机器人和 G1 类人机器人）。我们开源所有代码和模型。项目网站 https://omni-clap.github.io 。
+
+</details>
+
+---
+
+## 2. Successive Capacity Growth: Task-Complexity-Driven Width and Depth Expansion for Vision Transformer Encoders in JEPA World Models / 连续容量增长：JEPA 世界模型中视觉 Transformer 编码器的任务复杂性驱动的宽度和深度扩展
+
+**Date**: 2026-08-27 | **arXiv**: [2608.27367v1](http://arxiv.org/abs/2608.27367v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.27367v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Joint-Embedding Predictive Architectures (JEPAs) for world modeling typically employ fixed-size Vision Transformer encoders that are over-provisioned for simple tasks and under-provisioned for complex ones, with significant redundancy across attention heads. We propose Successive Capacity Growth (SCG), a method that starts from a minimal encoder (1 head, 2 layers, 283K parameters) and grows incrementally in width (adding attention heads for low-level semantic capacity) or depth (adding transformer blocks for higher-order semantic abstraction), driven by a task-agnostic test-and-verify mechanism that exploits function-preserving expansion to safely trial architectural changes and roll back if they do not improve prediction loss. The Sketched Isotropic Gaussian Regularizer (SIGReg) ensures that all learned semantic dimensions remain statistically independent and aligned with the predictive objective, preventing collapse even as the architecture grows. On a 60-dimensional multi-object dynamics task, SCG naturally triggers depth expansion, improving prediction loss by 20.3% over the fixed small baseline with 56 times greater parameter efficiency than scaling to the fixed large model; on a 2D navigation task, a single width expansion yields even an 23% improvement over the fixed large model. Across all three tested environments of increasing complexity, the adaptive encoder matches or exceeds the fixed small baseline, with zero false-positive expansions and bit-exact function preservation (ratio = 1.0, absolute difference = 0.0). The take-away is that JEPA world model encoders need not be pre-allocated at maximum capacity - they can grow successively as the task demands, achieving significant compute and data efficiency while maintaining representation quality.
+
+用于世界建模的联合嵌入预测架构 (JEPA) 通常采用固定大小的 Vision Transformer 编码器，这些编码器对于简单任务配置过多，而对于复杂任务配置不足，并且在注意力头之间具有显着的冗余。我们提出了连续容量增长（SCG），这是一种从最小编码器（1个头、2层、283K参数）开始并在宽度（为低级语义容量添加注意力头）或深度（为高阶语义抽象添加变压器块）上增量增长的方法，由任务无关的测试和验证机制驱动，该机制利用功能保留扩展来安全地尝试架构更改，如果不能改善预测损失则回滚。草图各向同性高斯正则化器 (SIGReg) 确保所有学习的语义维度在统计上保持独立并与预测目标保持一致，即使架构增长也能防止崩溃。在60维多目标动力学任务上，SCG自然触发深度扩展，与固定小基线相比，预测损失提高了20.3%，参数效率比缩放到固定大模型高56倍；在 2D 导航任务中，单次宽度扩展甚至比固定大型模型提高了 23%。在复杂性不断增加的所有三个测试环境中，自适应编码器匹配或超过固定的小基线，具有零误报扩展和位精确函数保留（比率 = 1.0，绝对差 = 0.0）。结论是，JEPA 世界模型编码器不需要以最大容量预先分配 - 它们可以根据任务需求连续增长，在保持表示质量的同时实现显着的计算和数据效率。
+
+</details>
+
+---
+
+## 3. PAWBench: How Far Are We from Probabilistically Aligned World Modeling? / PAWBench：我们距离概率对齐世界建模还有多远？
+
+**Date**: 2026-08-27 | **arXiv**: [2608.27345v1](http://arxiv.org/abs/2608.27345v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.27345v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent video generation models are increasingly framed as world models. Many physical processes can unfold in more than one valid way. Therefore, a world model should reproduce not only a plausible trajectory, but also the distribution of possible behaviors under the same initial observation and action. We call this distribution-level requirement probabilistic alignment. However, existing evaluations largely assess individual-video plausibility and do not test whether repeated generations recover the correct distribution. This raises a central question: how far are current video generators from probabilistically aligned world modeling? To answer it, we formalize probabilistic alignment as a distributional criterion for world models and introduce PAWBench, a benchmark for evaluating video generators as stochastic samplers of world dynamics. We further introduce PAWEval, an outcome-level protocol that converts repeated video rollouts into empirical distributions over possible physical behaviors. Across 50 scenarios and eleven current systems, no model consistently matches the reference probabilities while recovering the range of valid behaviors. Having established this gap, we test whether language prompts, initial noise sampling, or model training can reshape the model's predictive distribution. We believe our work can serve as a foundation for future efforts to move towards probabilistically aligned world modeling.
+
+最近的视频生成模型越来越多地被视为世界模型。许多物理过程可以以不止一种有效的方式展开。因此，世界模型不仅应该重现合理的轨迹，还应该重现相同的初始观察和行动下可能行为的分布。我们将此称为分布级需求概率对齐。然而，现有的评估主要评估单个视频的合理性，并且没有测试重复生成是否恢复正确的分布。这就提出了一个核心问题：当前的视频生成器距离概率对齐的世界建模还有多远？为了回答这个问题，我们将概率对齐形式化为世界模型的分布标准，并引入 PAWBench，这是一个评估视频生成器作为世界动态随机采样器的基准。我们进一步引入 PAWEval，这是一种结果级协议，可将重复的视频推出转换为可能的物理行为的经验分布。在 50 个场景和 11 个当前系统中，没有模型能够在恢复有效行为范围的同时始终匹配参考概率。确定了这一差距后，我们测试语言提示、初始噪声采样或模型训练是否可以重塑模型的预测分布。我们相信我们的工作可以作为未来努力迈向概率一致的世界建模的基础。
+
+</details>
+
+---
+
+## 4. Task-space model-based control of pneumatic soft actuators / 基于任务空间模型的气动软执行器控制
+
+**Date**: 2026-08-27 | **arXiv**: [2608.27186v1](http://arxiv.org/abs/2608.27186v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.27186v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Soft actuators enable dexterous and compliant interaction, but closed-loop task-space control remains challenging due to strong nonlinearities, distributed deformation, and uncertainty in their dynamics. This paper presents a real-time dynamic-model-based task-space feedback and estimation framework based on a non-minimal coordinate discrete elastic rod model formulated in absolute coordinates with holonomic constraints. The resulting structure preserves distributed mechanics while maintaining computational efficiency through sparse system matrices, enabling real-time control with up to 10 discretized rods. A quasi-static feedforward inverse model is combined with a task-space PI controller and a dynamic observer that fuses measurement residuals as virtual forces, enabling full-state estimation from sparse sensing. The approach is experimentally validated on three planar pneumatic soft actuators with varying geometries. Across five tasks, including drawing the digits 0-9 across the workspace (3-18 mm/s tip speed), tracking periodic motion (up to 37 cm/s), cross-platform generalization, reduced sensing conditions, and real-time user-defined references, our method achieves 1.5-2.3 mm root mean square error (RMSE) for precision motions and 5.5-12.4 mm RMSE at 1-2 Hz. Results demonstrate that structured, non-minimal dynamic models can enable real-time, high-precision, moderate-bandwidth task-space control of planar soft pneumatic actuators in free space.
+
+软执行器可实现灵巧且顺应的交互，但由于强非线性、分布式变形和动态不确定性，闭环任务空间控制仍然具有挑战性。本文提出了一种基于实时动态模型的任务空间反馈和估计框架，该框架基于在具有完整约束的绝对坐标中制定的非最小坐标离散弹性杆模型。由此产生的结构保留了分布式力学，同时通过稀疏系统矩阵保持计算效率，从而实现对多达 10 个离散杆的实时控制。准静态前馈逆模型与任务空间 PI 控制器和动态观测器相结合，将测量残差融合为虚拟力，从而实现稀疏传感的全状态估计。该方法在具有不同几何形状的三个平面气动软执行器上进行了实验验证。在五个任务中，包括在工作空间中绘制数字 0-9（3-18 mm/s 尖端速度）、跟踪周期性运动（高达 37 cm/s）、跨平台泛化、简化的传感条件和实时用户定义的参考，我们的方法在精确运动方面实现了 1.5-2.3 mm 均方根误差 (RMSE)，在 1-2 Hz 时实现了 5.5-12.4 mm RMSE。结果表明，结构化的非最小动态模型可以实现自由空间中平面软气动执行器的实时、高精度、中等带宽任务空间控制。
+
+</details>
+
+---
+
+## 5. Decoupling Planning and Control for Instructable Agents / 解耦可指导智能体的规划和控制
+
+**Date**: 2026-08-27 | **arXiv**: [2608.26788v1](http://arxiv.org/abs/2608.26788v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.26788v1)
+
+**Categories**: cs.AI, cs.CL, cs.MA, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent work shows that pre-trained, instruction-tuned vision-language models (VLMs) perform well at mapping from instructions and observations to high-level plans, but struggle to realize such plans as reliable low-latency action sequences in unfamiliar environments. At the same time, world-model controllers excel at fast observation-to-action control, but lack open-ended task guidance. In this work, we combine these strengths into a single system, Instruct-to-Act, where we train a world-model controller to act autonomously at high frequency when conditioned on sparse, higher-latency, and high-level text instructions generated by a VLM planner. To train controllers to be language-instructable, we relabel segments of controller policy rollouts with synthetic instructions and jointly optimize a behavior-cloning objective along with existing reward-maximizing and world-modeling objectives. We evaluate our proposed approach across seven embodied environments, including three multi-agent environments where VLM planners coordinate through language while trained controllers serve as their actuators. Under matched observation and action spaces, our decoupled approach consistently outperforms controller-only and direct VLM action-generation variants, preserves fast control, and lets us swap in different pretrained VLM planners without fine-tuning, while remaining competitive with strong vision-language-action and multi-agent RL baselines on six of seven tasks.
+
+最近的研究表明，预训练、指令调整的视觉语言模型 (VLM) 在从指令和观察到高级计划的映射方面表现良好，但很难在不熟悉的环境中实现可靠的低延迟动作序列等计划。与此同时，世界模型控制器擅长快速观察到行动控制，但缺乏开放式任务指导。在这项工作中，我们将这些优势结合到一个单一的系统“Instruct-to-Act”中，在该系统中，我们训练一个世界模型控制器，在以 VLM 规划器生成的稀疏、高延迟和高级文本指令为条件时，以高频率自主操作。为了将控制器训练为语言可指令的，我们用合成指令重新标记控制器策略推出的各个部分，并联合优化行为克隆目标以及现有的奖励最大化和世界建模目标。我们在七个具体环境中评估了我们提出的方法，包括三个多代理环境，其中 VLM 规划者通过语言进行协调，而训练有素的控制器充当其执行器。在匹配的观察和动作空间下，我们的解耦方法始终优于仅控制器和直接 VLM 动作生成变体，保持快速控制，并让我们无需微调即可交换不同的预训练 VLM 规划器，同时在七个任务中的六个任务上保持与强大的视觉语言动作和多智能体 RL 基线的竞争力。
+
+</details>
+
+---
+
+## 6. MeshPriorDiT: Hierarchical Modeling for Action-Conditioned Cloth Dynamics / MeshPriorDiT：动作条件布料动力学的分层建模
+
+**Date**: 2026-08-27 | **arXiv**: [2608.26766v1](http://arxiv.org/abs/2608.26766v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.26766v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Action-conditioned cloth dynamics prediction requires both locally plausible deformation and long-range coordination. Existing approaches largely follow two paradigms. Mesh-based GNNs capture local physical responses through material connectivity. However, their finite message-passing range limits coordination between topologically distant regions, while autoregressive rollouts tend to accumulate prediction errors. Transformer-based dynamics models capture long-range interactions through global attention, but often operate without explicit material connectivity and must learn local topological responses directly from data. We propose MeshPriorDiT, a hierarchical dynamics model that decomposes future cloth motion into a structured mesh prior and a generative residual. An action-conditioned mesh GNN first predicts multi-step vertex displacements, yielding a reference trajectory that respects material topology and grasp constraints. Conditioned on historical states, planned actions, and the mesh prior, a Residual DiT then uses conditional flow matching to jointly generate the residual motion not captured by the prior. The generated residual is further rescaled and decoded using material adjacency to coordinate corrections across neighboring vertices. We evaluate MeshPriorDiT on 15-step autoregressive rollouts across three cloth manipulation tasks. Averaged over the three tasks, MeshPriorDiT reduces average Global MSE by 43.42% relative to the GNN-Only baseline and by 75.03% relative to the DiT-DDPM baseline, while maintaining a favorable Edge-strain MSE comparable to that of GNN-Only.
+
+动作条件布料动力学预测需要局部合理的变形和远程协调。现有方法主要遵循两种范式。基于网格的 GNN 通过材料连通性捕获局部物理响应。然而，它们有限的消息传递范围限制了拓扑遥远区域之间的协调，而自回归的推出往往会累积预测误差。基于 Transformer 的动力学模型通过全局注意力捕获远程交互，但通常在没有明确的材料连通性的情况下运行，并且必须直接从数据中学习局部拓扑响应。我们提出了 MeshPriorDiT，这是一种分层动力学模型，它将未来的布料运动分解为结构化网格先验和生成残差。动作条件网格 GNN 首先预测多步顶点位移，产生尊重材料拓扑和抓取约束的参考轨迹。以历史状态、计划动作和网格先验为条件，Residual DiT 然后使用条件流匹配来共同生成先验未捕获的残余运动。使用材质邻接对生成的残差进行进一步重新缩放和解码，以协调相邻顶点的校正。我们通过三个布料操作任务的 15 步自回归部署来评估 MeshPriorDiT。对这三个任务进行平均，MeshPriorDiT 相对于仅 GNN 基线降低了 43.42% 的平均全局 MSE，相对于 DiT-DDPM 基线降低了 75.03%，同时保持了与仅 GNN 相当的有利的边缘应变 MSE。
+
+</details>
+
+---
+
+## 7. Approved Too Late: Verdict Staleness in LLM-Guarded Self-Adaptive Systems / 批准得太晚：法学硕士保护的自适应系统的判决陈旧性
+
+**Date**: 2026-08-26 | **arXiv**: [2608.26306v1](http://arxiv.org/abs/2608.26306v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.26306v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+A large language model (LLM) guardrail for a self-adaptive system (SAS) may issue an approval that is correct at check time but stale by actuation. This creates an Execute-stage time-of-check to time-of-use (TOCTOU) hazard. We study verdict freshness: whether a guardrail verdict remains valid when used. We distinguish three quantities that answer different questions: all-candidate verdict change under fixed-action replay, oracle-labeled approval expiry on recorded closed-loop trajectories, and judge-conditioned use-time invalidity. Across five reproducible SAS environments, all-candidate verdict-change rates span 5.3-48.4% at a common replay shift of eight simulator steps. We introduce the Freshness-Bounded Shield (FBS), which estimates each approval's validity horizon from its safe-side margin and recent feature volatility, without an explicit plant-dynamics model. Using fixed settings documented in the artifact, FBS reduces oracle-labeled approval-expiry rates from 3.4-24.7% to 0-1.8% at the same shift. A separate audit of four LLM judges finds nonzero judge-conditioned use-time invalidity in every approval stream. We formulate a freshness contract: every approval must be correct at check time and remain valid at use time.
+
+自适应系统 (SAS) 的大型语言模型 (LLM) 护栏可能会发出在检查时正确但在启动时过时的批准。这会产生执行阶段检查时间到使用时间 (TOCTOU) 危险。我们研究判决的新鲜度：护栏判决在使用时是否仍然有效。我们区分了回答不同问题的三个量：固定动作重放下的所有候选判决变化、记录的闭环轨迹上的预言机标记的批准到期以及判断条件使用时间无效性。在五个可重现的 SAS 环境中，在八个模拟器步骤的常见重播转变中，所有候选者的判决更改率跨越 5.3-48.4%。我们引入了新鲜度边界盾（FBS），它根据安全边际和近期特征波动性来估计每个批准的有效性范围，而无需明确的工厂动态模型。使用工件中记录的固定设置，FBS 在同一班次将预言机标记的批准到期率从 3.4-24.7% 降低到 0-1.8%。对四名法学硕士法官的单独审计发现，每个批准流中都存在非零的法官条件使用时间无效性。我们制定新鲜度合同：每项批准必须在检查时正确并在使用时保持有效。
+
+</details>
+
+---
+
+## 8. WALL-SS: Scaling Long-horizon World Models via Next-Scale Autoregression / WALL-SS：通过下一代自回归扩展长期世界模型
+
+**Date**: 2026-08-26 | **arXiv**: [2608.26239v1](http://arxiv.org/abs/2608.26239v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.26239v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Generative world models provide robots with predictive models of how the world evolves under interaction, with growing potential for simulation, planning, policy evaluation, and robot learning. Beyond clip-level future prediction, a unified generative formulation should relate actions to consequences, support flexible horizons and continuous interaction, and enable reward-driven optimization. We introduce WALL-SS, a world model that generates visual futures through Scale-wise autoregressive Scaling, enabling action-controllable and long-horizon robotic simulation. WALL-SS represents embodied trajectories as causal sequences of temporally interleaved observations and actions, making action-dependent state transitions explicit while naturally supporting variable-length generation, streaming extension through reusable causal states, and direct optimization through sequence probabilities. To make this formulation effective over long horizons, we generate each future observation in a coarse-to-fine manner and develop three complementary components within the same hierarchy. Action-conditioned next-scale prediction injects scale-aligned action representations to improve action-future coupling and model both successful and failed behaviors. Scale-compressed long-horizon memory retains recent interactions at fine resolution while compressing distant observations and actions, with scale-wise dream forcing enhancing robustness to self-generated context. Finally, on-policy alignment optimizes autoregressive visual dynamics with action-following and long-term consistency rewards while preserving the pretrained visual distribution. Experiments show that WALL-SS improves action following and trajectory accuracy, supports coherent minute-long streaming rollout under bounded memory, and consistently benefits from on-policy alignment in reducing action drift and long-horizon inconsistency.
+
+生成世界模型为机器人提供了世界在交互下如何演变的预测模型，在模拟、规划、政策评估和机器人学习方面具有越来越大的潜力。除了剪辑级别的未来预测之外，统一的生成公式应该将行动与结果联系起来，支持灵活的视野和持续的交互，并实现奖励驱动的优化。我们引入了 WALL-SS，这是一种世界模型，它通过按比例自回归缩放生成视觉未来，从而实现动作可控和长视野机器人模拟。 WALL-SS 将具体轨迹表示为时间交错的观察和动作的因果序列，使依赖于动作的状态转换变得明确，同时自然地支持可变长度生成、通过可重用因果状态进行流式扩展以及通过序列概率进行直接优化。为了使这个公式在长期范围内有效，我们以从粗到细的方式生成每个未来的观察结果，并在同一层次结构中开发三个互补的组件。以动作为条件的下一尺度预测注入了尺度一致的动作表示，以改善动作与未来的耦合，并对成功和失败的行为进行建模。尺度压缩的长视野记忆以高分辨率保留最近的相互作用，同时压缩遥远的观察和行动，尺度上的梦想迫使增强对自我生成的上下文的鲁棒性。最后，策略对齐通过动作跟踪和长期一致性奖励来优化自回归视觉动态，同时保留预先训练的视觉分布。实验表明，WALL-SS 提高了动作跟踪和轨迹准确性，支持有限内存下连贯的一分钟长流式部署，并始终受益于策略对齐，减少动作漂移和长期不一致。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-08-27 (13 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-08-27
