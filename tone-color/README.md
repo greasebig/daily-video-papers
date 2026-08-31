@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-08-31](papers/2026-08-31.md) - 1 papers
 - [2026-08-29](papers/2026-08-29.md) - 2 papers
 - [2026-08-28](papers/2026-08-28.md) - 1 papers
 - [2026-08-27](papers/2026-08-27.md) - 1 papers
@@ -79,6 +80,36 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-08-31 (1 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-08-31
+
+**Paper Count**: 1
+
+---
+
+## 1. Simple, Safe, and Overlooked: Reclaiming Sustainable Domain Generalization with Statistical Color Matching / 简单、安全且被忽视：通过统计颜色匹配回收可持续领域泛化
+
+**Date**: 2026-08-19 | **arXiv**: [2608.18915v1](http://arxiv.org/abs/2608.18915v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.18915v1)
+
+**Categories**: cs.CV, cs.LG, eess.IV
+
+**Code**: https://github.com/sdoerrich97/colorist.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Hardware shifts, color variations, and changing patient characteristics between development and deployment routinely break trained medical image classifiers. Existing remedies fall short: standard color jittering provides insufficient diversity, while deep generative style transfer algorithms hallucinate features, destroy clinically relevant structures, and waste massive compute resources. To address this, we revisit classical statistical color matching and repurpose it as Colorist, a highly efficient data augmentation strategy that applies global mean-standard deviation matching directly in the RGB color space. We demonstrate that this training-free, fully interpretable approach safely generates structurally intact domain variations, outperforming deep generative models in structural fidelity and color alignment. Across out-of-distribution histopathology, peripheral blood, dermatology, and retinal datasets, it improves balanced accuracy by up to +9% over state-of-the-art domain generalization regularizers and by +13% over an unaugmented baseline. Moreover, by avoiding neural networks in the augmentation loop, Colorist preserves anatomical structure, minimizes carbon footprint, and integrates seamlessly into standard dataloaders. Together, these findings establish statistical matching as a safe, interpretable, yet overlooked alternative to deep architectures for clinical robustness. Source code is available at https://github.com/sdoerrich97/colorist.
+
+开发和部署之间的硬件变化、颜色变化以及患者特征的变化通常会破坏经过训练的医学图像分类器。 现有的补救措施不足：标准的色彩抖动无法提供足够的多样性，而深度生成样式转移算法会产生特征幻觉，破坏临床相关结构，并浪费大量计算资源。 为了解决这个问题，我们重新审视了经典的统计颜色匹配，并将其重新定位为Colorist ，这是一种高效的数据增强策略，可直接在RGB颜色空间中应用全局平均标准偏差匹配。 我们证明，这种免训练、完全可解释的方法可以安全地生成结构完整的领域变化，在结构保真度和颜色对齐方面优于深度生成模型。 在分布外的组织病理学、外周血、皮肤病学和视网膜数据集中，它比最先进的域泛化正则化方法提高了高达+9%的平衡准确性，比未扩增的基线提高了+13%。 此外，通过在增强循环中避免使用神经网络， Colorist可以保留解剖结构，最大限度地减少碳足迹，并无缝集成到标准数据加载器中。 这些研究结果共同建立了统计匹配，作为临床稳健性的深层架构的安全、可解释但被忽视的替代方案。 源代码可在https://github.com/sdoerrich97/colorist上获得。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-08-29 (2 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-08-29
