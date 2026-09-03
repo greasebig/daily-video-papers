@@ -27,6 +27,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-09-03](papers/2026-09-03.md) - 5 papers
 - [2026-09-02](papers/2026-09-02.md) - 13 papers
 - [2026-09-01](papers/2026-09-01.md) - 6 papers
 - [2026-08-31](papers/2026-08-31.md) - 7 papers
@@ -172,6 +173,98 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-09-03 (5 papers)</b></summary>
+
+# arXiv Video Papers - 2026-09-03
+
+**Paper Count**: 5
+
+---
+
+## 1. Spatially Aware World Action Model via Geometric Latent Diffusion / 通过几何潜在扩散的空间感知世界行动模型
+
+**Date**: 2026-09-02 | **arXiv**: [2609.02531v1](http://arxiv.org/abs/2609.02531v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.02531v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World Action Models (WAMs) leverage the capabilities of large-scale pretrained video diffusion models to jointly predict future observations and actions, inheriting rich visual and physical priors from internet-scale video. This has made them a promising paradigm for robot policy learning, yet the prevailing models operate exclusively on RGB observations and do not leverage 3D information. To bridge this gap, we introduce a Spatially Aware World Action Model (SA-WAM), which repurposes a pretrained video model for joint action, RGB, and depth prediction, enabling 3D-aware world modeling and action prediction within a single diffusion backbone. We use a nonlinear encoding that maps the unbounded depth signal into the bounded input domain expected by the frozen VAE tokenizer. This allows us to reuse the tokenizer without 3D-specific fine-tuning, incorporating geometric information without sacrificing the pretrained priors. SA-WAM achieves state-of-the-art results on the RoboCasa and LIBERO-Plus benchmarks, while simultaneously improving future-state predictions. Furthermore, SA-WAM outperforms strong baselines in real-world evaluation using a UR5 robotic arm, with strong gains in randomized environments. We analyze the correlation between world model prediction quality and rollout success, providing insights into WAM performance and avenues for its improvement.
+
+世界行动模型 (WAM) 利用大规模预训练视频传播模型的功能来联合预测未来的观察和行动，继承互联网规模视频的丰富视觉和物理先验。这使它们成为机器人策略学习的有前途的范例，但流行的模型仅在 RGB 观察上运行，并且不利用 3D 信息。为了弥补这一差距，我们引入了空间感知世界动作模型 (SA-WAM)，它将预训练视频模型重新用于联合动作、RGB 和深度预测，从而在单个扩散主干中实现 3D 感知世界建模和动作预测。我们使用非线性编码将无界深度信号映射到冻结 VAE 标记器期望的有界输入域。这使我们能够重用分词器，而无需进行 3D 特定的微调，在不牺牲预训练先验的情况下合并几何信息。 SA-WAM 在 RoboCasa 和 LIBERO-Plus 基准上取得了最先进的结果，同时改进了未来状态预测。此外，SA-WAM 在使用 UR5 机械臂的现实世界评估中表现优于强大的基线，在随机环境中取得了巨大的进步。我们分析世界模型预测质量与部署成功之间的相关性，提供有关 WAM 性能及其改进途径的见解。
+
+</details>
+
+---
+
+## 2. The Missing Temporal Link: Temporal Context Routing for Script-Driven Audio-Video Generation / 缺失的时间链接：用于脚本驱动的音频视频生成的时间上下文路由
+
+**Date**: 2026-09-02 | **arXiv**: [2609.02367v1](http://arxiv.org/abs/2609.02367v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.02367v1)
+
+**Categories**: cs.MM, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Joint audio-video generation models have made substantial progress in visual quality and audio-visual synchronization. However, they still provide limited control over when shot transitions occur and dialogue is spoken. This limitation constrains their application in script-driven content creation, where timing errors can undermine narrative coherence and the viewing experience. Current joint generators align video and audio representations on a shared temporal axis, yet the precise timing of shots and dialogue specified in a structured prompt is encoded only in the prompt's text representation and remains unaligned with the temporal coordinates of either modality. Consequently, video and audio may remain synchronized with each other while both fail to follow the script timeline. This mismatch motivates us to extend temporal alignment beyond video and audio to include the structured script. We therefore introduce Temporal Context Routing (TCR), which maps the script timing onto the shared temporal axis of video and audio generation and routes each prompt's guidance to the corresponding positions in both modalities. Compared with the baseline on 200 test scripts, TCR reduces Shot Boundary MAE by 96%, from 1.11 s to 0.042 s, and raises Dialogue Acc@0.5 s from 28.3% to 84.1%. TCR achieves these improvements while maintaining visual quality and audio-visual synchronization comparable to those of the baselines. A user study further shows that participants prefer TCR on all five evaluated dimensions.
+
+音视频联合生成模型在视觉质量和视听同步方面取得了实质性进展。然而，它们仍然对何时发生镜头转换和何时说出对话提供有限的控制。这种限制限制了它们在脚本驱动的内容创建中的应用，其中计时错误可能会破坏叙述的连贯性和观看体验。当前的联合生成器在共享时间轴上对齐视频和音频表示，但结构化提示中指定的镜头和对话的精确定时仅在提示的文本表示中进行编码，并且与任一模态的时间坐标保持不对齐。因此，视频和音频可能保持彼此同步，但两者都无法遵循脚本时间线。这种不匹配促使我们将时间对齐扩展到视频和音频之外，以包括结构化脚本。因此，我们引入了时间上下文路由（TCR），它将脚本时序映射到视频和音频生成的共享时间轴上，并将每个提示的指导路由到两种模式中的相应位置。与 200 个测试脚本的基线相比，TCR 将镜头边界 MAE 降低了 96%，从 1.11 秒减少到 0.042 秒，并将 Dialogue Acc@0.5 秒从 28.3% 提高到 84.1%。 TCR 实现了这些改进，同时保持了与基线相当的视觉质量和视听同步。一项用户研究进一步表明，参与者在所有五个评估维度上都更喜欢 TCR。
+
+</details>
+
+---
+
+## 3. VoRTeC: Taming Foundation Flow for One-step Real time Video Compression / VoRTeC：驯服一步实时视频压缩的基础流程
+
+**Date**: 2026-09-02 | **arXiv**: [2609.02291v1](http://arxiv.org/abs/2609.02291v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.02291v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Ultra-low bitrate video compression still faces critical challenges: traditional neural video compression inevitably introduces blurring artifacts, while diffusion-based generative video compression suffers from excessive decoding latency and poor temporal consistency. To address these issues, we propose $\mathtt{VoRTeC}$, a Video Compression framework built upon a foundational flow model (Wan2.1). By compactly encoding latent video representations, predicting the positions of compressed representations along flow trajectories, and integrating multi-scale priors, $\mathtt{VoRTeC}$ enables the compressor to harness generative video flow priors effectively. Without accessing the parameters or gradients of flow matching networks, our framework achieves one-step decoding and reconstructions with high perceptual fidelity. Meanwhile, we maintain consistency across frame groups via tail-frame reuse and prior caching. Extensive experiments demonstrate that our method reduces bit consumption by 58\% compared to prior diffusion-based approaches, with decoding speed boosted by 3 to 197 times: $\mathtt{VoRTeC}$ achieves a decoding speed of 13 FPS at 720p and 32 FPS at 480p.
+
+超低比特率视频压缩仍然面临严峻挑战：传统的神经视频压缩不可避免地会引入模糊伪影，而基于扩散的生成视频压缩则面临解码延迟过大和时间一致性差的问题。为了解决这些问题，我们提出了 $\mathtt{VoRTeC}$，这是一个基于基础流模型 (Wan2.1) 构建的视频压缩框架。通过对潜在视频表示进行紧凑编码、预测压缩表示沿流轨迹的位置以及集成多尺度先验，$\mathtt{VoRTeC}$ 使压缩器能够有效地利用生成视频流先验。在不访问流匹配网络的参数或梯度的情况下，我们的框架实现了具有高感知保真度的一步解码和重建。同时，我们通过尾帧重用和先前缓存来保持帧组之间的一致性。大量实验表明，与之前基于扩散的方法相比，我们的方法减少了 58\% 的比特消耗，解码速度提高了 3 至 197 倍：$\mathtt{VoRTeC}$ 在 720p 下实现了 13 FPS 的解码速度，在 480p 下实现了 32 FPS 的解码速度。
+
+</details>
+
+---
+
+## 4. Can LLMs Design Video Coding Tools? A Case Study on Planar Mode / 法学硕士可以设计视频编码工具吗？平面模式案例研究
+
+**Date**: 2026-09-01 | **arXiv**: [2609.01535v1](http://arxiv.org/abs/2609.01535v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.01535v1)
+
+**Categories**: cs.MM, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This paper explores whether large language models (LLMs) can design video coding tools, a highly challenging task due to the intricate algorithmic coupling of tool modifications. In particular, we present an empirical case study on the Planar mode, a long-standing intra prediction tool in video coding standards. Our experiments operate within a generation-and-evaluation loop, with the LLM generating new Planar predictors, encoder trials evaluating their coding performance, and the LLM re-generating refined implementations based on the evaluation feedback. We first examine directly replacing the default Planar mode in the Fraunhofer Versatile Video Encoder (VVenC) under its faster preset. Experimental results demonstrate that the LLM-generated mode can outperform the conventional Planar mode on this lightweight toolset, achieving 0.18% bitrate savings with 0.4% complexity overhead on the standard benchmark. We further extend our evaluation to the Enhanced Compression Model (ECM). Leveraging newly introduced directional Planar modes, we investigate two integration strategies: directly replacing them, and introducing the LLM-generated predictor as an additional prediction mode with new syntax elements. The empirical results suggest that both strategies can yield coding gains under a constrained low-resolution setting. Overall, this study offers preliminary evidence and practical insights, highlighting both the potential and open challenges of LLM-based coding tool design.
+
+本文探讨了大型语言模型（LLM）是否可以设计视频编码工具，由于工具修改的复杂算法耦合，这是一项极具挑战性的任务。特别是，我们提出了关于平面模式的实证案例研究，平面模式是视频编码标准中长期存在的帧内预测工具。我们的实验在生成和评估循环中进行，LLM 生成新的平面预测器，编码器试验评估其编码性能，LLM 根据评估反馈重新生成细化的实现。我们首先研究在其更快的预设下直接替换 Fraunhofer 多功能视频编码器 (VVenC) 中的默认平面模式。实验结果表明，LLM 生成的模式在此轻量级工具集上的性能优于传统的 Planar 模式，在标准基准测试中实现了 0.18% 的比特率节省和 0.4% 的复杂性开销。我们进一步将我们的评估扩展到增强压缩模型（ECM）。利用新引入的定向平面模式，我们研究了两种集成策略：直接替换它们，并引入 LLM 生成的预测器作为具有新语法元素的附加预测模式。实证结果表明，两种策略都可以在受限的低分辨率设置下产生编码增益。总的来说，这项研究提供了初步证据和实践见解，强调了基于法学硕士的编码工具设计的潜在和开放挑战。
+
+</details>
+
+---
+
+## 5. MeRoPE: Metric Rotary Position Embedding for Camera-Controlled Video Generation / MeRoPE：用于摄像机控制视频生成的公制旋转位置嵌入
+
+**Date**: 2026-09-01 | **arXiv**: [2609.01252v1](http://arxiv.org/abs/2609.01252v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.01252v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In camera-controlled video generation, geometry-aware positional encodings condition tokens on camera extrinsics and per-token viewing rays. Existing schemes, however, have a scale-dependent failure mode on real-world metric camera trajectories: homogeneous projective encodings cause attention logits and feature norms to grow unbounded with physical translation baselines. We propose MeRoPE (Metric Rotary Position Embedding), a norm-preserving relative camera encoding for attention. MeRoPE encodes relative orientations between calibrated viewing rays with orthogonal rotation blocks, maps raw metric displacements into multi-frequency rotary phases, and adds a disparity-anchored correspondence prior along the epipolar arc. This design strictly preserves feature norms, bounds pre-softmax attention logits regardless of the physical translation scale, and maintains exact invariance to global rigid coordinate changes. Across nuScenes and PanShot, which cover large-baseline trajectories and diverse camera optics, respectively, MeRoPE achieves stronger camera control than prior encodings, with the best consistency between generated camera motion and conditioning poses in both rotation and translation. Code will be made publicly available.
+
+在摄像机控制的视频生成中，几何感知位置编码在摄像机外部和每个令牌的观看光线上调节令牌。然而，现有方案在现实世界的度量相机轨迹上具有与尺度相关的故障模式：同质投影编码导致注意力逻辑和特征规范随着物理平移基线无限增长。我们提出了 MeRoPE（公制旋转位置嵌入），这是一种用于注意力的保持规范的相对相机编码。 MeRoPE 使用正交旋转块对校准后的视线之间的相对方向进行编码，将原始度量位移映射到多频率旋转相位，并沿极弧添加视差锚定对应关系。该设计严格保留特征规范，无论物理平移尺度如何，都限制 pre-softmax 注意力逻辑，并保持对全局刚性坐标变化的精确不变性。 nuScenes 和 PanShot 分别覆盖大基线轨迹和不同的相机光学器件，MeRoPE 实现了比先前编码更强的相机控制，生成的相机运动与旋转和平移调节姿势之间具有最佳一致性。代码将公开。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-09-02 (13 papers)</b></summary>
 
 # arXiv Video Papers - 2026-09-02
