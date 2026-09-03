@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-09-03](papers/2026-09-03.md) - 7 papers
 - [2026-09-02](papers/2026-09-02.md) - 6 papers
 - [2026-09-01](papers/2026-09-01.md) - 8 papers
 - [2026-08-28](papers/2026-08-28.md) - 8 papers
@@ -145,6 +146,130 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-09-03 (7 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-09-03
+
+**Paper Count**: 7
+
+---
+
+## 1. World-Model-Augmented Visual Locomotion for Humanoids on Foothold-Constrained Terrain / 立足点受限地形上的人形机器人的世界模型增强视觉运动
+
+**Date**: 2026-09-02 | **arXiv**: [2609.02542v1](http://arxiv.org/abs/2609.02542v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.02542v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Foothold-constrained terrain is characterized by sparse, discontinuous, or geometrically restricted feasible foot contacts, as encountered on stepping stones, across gaps, and on narrow stair treads. On such terrain, a single misstep often leaves little room to recover, so policies that base foot-placement decisions primarily on the immediately visible terrain are prone to failure. We ask whether a learned predictive summary of near-future observations and rewards can provide the anticipatory information required in such settings. We present World-Model-Augmented Visual Locomotion (WM-LOCO), which jointly trains a recurrent world model and a PPO policy. Conditioned on proprioception and a single onboard depth image, the world model produces a predictive recurrent feature that guides the policy, without explicit foothold labels. In simulation, WM-LOCO succeeds on gaps and stepping stones where a matched baseline fails completely, and matches the baseline's success rate on stairs while improving stride efficiency and reducing pelvis acceleration. We deploy the same policy onboard a physical Unitree G1 humanoid using onboard proprioception and a single depth stream; it traverses all three terrain classes with an average success rate of 93.3%.
+
+立足点受限地形的特点是稀疏、不连续或几何形状受限的可行脚部接触，如在踏脚石、跨越间隙和狭窄的楼梯踏板上遇到的情况。在这样的地形上，一次失误往往几乎没有恢复的空间，因此主要根据立即可见的地形做出脚步放置决策的策略很容易失败。我们询问对近期观察和奖励的学习预测总结是否可以提供此类环境中所需的预期信息。我们提出了世界模型增强视觉运动（WM-LOCO），它联合训练循环世界模型和 PPO 策略。以本体感觉和单个机载深度图像为条件，世界模型会产生指导策略的预测性循环特征，而无需明确的立足点标签。在模拟中，WM-LOCO 在匹配基线完全失败的间隙和垫脚石上取得了成功，并在楼梯上匹配基线的成功率，同时提高了步幅效率并减少了骨盆加速度。我们使用板载本体感觉和单个深度流在物理 Unitree G1 人形机器人上部署相同的策略；它穿越了所有三个地形类别，平均成功率为 93.3%。
+
+</details>
+
+---
+
+## 2. Spatially Aware World Action Model via Geometric Latent Diffusion / 通过几何潜在扩散的空间感知世界行动模型
+
+**Date**: 2026-09-02 | **arXiv**: [2609.02531v1](http://arxiv.org/abs/2609.02531v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.02531v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World Action Models (WAMs) leverage the capabilities of large-scale pretrained video diffusion models to jointly predict future observations and actions, inheriting rich visual and physical priors from internet-scale video. This has made them a promising paradigm for robot policy learning, yet the prevailing models operate exclusively on RGB observations and do not leverage 3D information. To bridge this gap, we introduce a Spatially Aware World Action Model (SA-WAM), which repurposes a pretrained video model for joint action, RGB, and depth prediction, enabling 3D-aware world modeling and action prediction within a single diffusion backbone. We use a nonlinear encoding that maps the unbounded depth signal into the bounded input domain expected by the frozen VAE tokenizer. This allows us to reuse the tokenizer without 3D-specific fine-tuning, incorporating geometric information without sacrificing the pretrained priors. SA-WAM achieves state-of-the-art results on the RoboCasa and LIBERO-Plus benchmarks, while simultaneously improving future-state predictions. Furthermore, SA-WAM outperforms strong baselines in real-world evaluation using a UR5 robotic arm, with strong gains in randomized environments. We analyze the correlation between world model prediction quality and rollout success, providing insights into WAM performance and avenues for its improvement.
+
+世界行动模型 (WAM) 利用大规模预训练视频传播模型的功能来联合预测未来的观察和行动，继承互联网规模视频的丰富视觉和物理先验。这使它们成为机器人策略学习的有前途的范例，但流行的模型仅在 RGB 观察上运行，并且不利用 3D 信息。为了弥补这一差距，我们引入了空间感知世界动作模型 (SA-WAM)，它将预训练视频模型重新用于联合动作、RGB 和深度预测，从而在单个扩散主干中实现 3D 感知世界建模和动作预测。我们使用非线性编码将无界深度信号映射到冻结 VAE 标记器期望的有界输入域。这使我们能够重用分词器，而无需进行 3D 特定的微调，在不牺牲预训练先验的情况下合并几何信息。 SA-WAM 在 RoboCasa 和 LIBERO-Plus 基准上取得了最先进的结果，同时改进了未来状态预测。此外，SA-WAM 在使用 UR5 机械臂的现实世界评估中表现优于强大的基线，在随机环境中取得了巨大的进步。我们分析世界模型预测质量与部署成功之间的相关性，提供有关 WAM 性能及其改进途径的见解。
+
+</details>
+
+---
+
+## 3. Modeling What Changes: Sparse, Residual World Models for Object-Centric Manipulation / 对变化进行建模：用于以对象为中心的操作的稀疏残差世界模型
+
+**Date**: 2026-09-02 | **arXiv**: [2609.02046v1](http://arxiv.org/abs/2609.02046v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.02046v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Monolithic world models predict the entire next state at every step, spending capacity re-predicting the static majority of a scene and injecting error into it. We ask whether explicitly modeling change (a per-object change gate plus a residual delta head that perturbs only the objects the gate flags) is a more effective and interpretable bias for physical prediction and control. On a MuJoCo tabletop pushing benchmark scaling from 3 to 8 objects, the sparse/residual model predicts next-state poses 2.5 to 4.6 times more accurately than a dense multilayer perceptron at 8.6 to 11.1 times fewer parameters, sustains change-detection F1 of 0.80 to 0.87 where the dense baseline is degenerate, transfers across object counts with zero retraining (99.4 percent F1 retention), and reaches about 90 percent of its full-data accuracy with a quarter of the data. In autoregressive rollout it compounds far less error, hugging the no-motion floor while the dense model drifts. Finally, inside a sampling-based planner, prediction-only models fail (though a true-simulator oracle solves the task with the identical planner, confirming the planner is sound), but once featurized and trained for the states a planner visits, the sparse model begins to plan (0.23 plus or minus 0.06 success over three seeds) while the dense monolith stays at zero at every seed. Modeling what changes, rather than re-predicting the whole world, is a simple, effective bias for object-centric physical AI; code, data generators, and all checkpoints will be released upon publication.
+
+整体世界模型在每一步都预测整个下一个状态，花费能力重新预测场景的静态大部分并向其中注入错误。我们询问显式建模变化（每个对象变化门加上仅扰乱门标记的对象的残余增量头）是否是物理预测和控制的更有效和可解释的偏差。在将基准缩放从 3 到 8 个对象的 MuJoCo 桌面上，稀疏/残差模型预测下一状态姿势的准确度比密集多层感知器准确 2.5 到 4.6 倍，参数减少 8.6 到 11.1 倍，在密集基线退化的情况下维持 0.80 到 0.87 的变化检测 F1，在零再训练的情况下跨对象计数传输（99.4% F1 保留），用四分之一的数据就可以达到全数据准确率的 90% 左右。在自回归推出中，它的误差要小得多，在密集模型漂移时紧贴不动地板。最后，在基于采样的规划器中，仅预测模型会失败（尽管真正的模拟器预言机使用相同的规划器解决了任务，确认规划器是健全的），但一旦针对规划器访问的状态进行特征化和训练，稀疏模型开始规划（三个种子的成功率为 0.23 正负 0.06），而密集的整体在每个种子处保持为零。对于以对象为中心的物理人工智能来说，对变化进行建模，而不是重新预测整个世界，是一种简单而有效的偏见；代码、数据生成器和所有检查点将在发布后发布。
+
+</details>
+
+---
+
+## 4. Belief-Calibrated Optimization: An Explicit World Model for Agentic Optimization / 信念校准优化：代理优化的显式世界模型
+
+**Date**: 2026-09-01 | **arXiv**: [2609.01861v1](http://arxiv.org/abs/2609.01861v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.01861v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The performance of an LLM agent depends on the scaffold around a frozen model. A common way to improve that scaffold is to use a coding agent as an optimizer: it reads current scores and traces and iteratively edits the source, producing a new candidate each round. Each edit is chosen according to a belief about how the environment will respond: what went wrong, and which change should help. That belief is typically implicit. It lives in the coding agent's reasoning on the current call, or remains latent in its parameters, rather than as something written down. Later calls therefore see scores and traces, but they do not use that belief. We introduce Belief-Calibrated Optimization (BCO), a method that writes that belief down as a persistent in-context document and continually revises that document as new candidates are evaluated. The resulting document is a world model: the current account of how the environment responds to edits. Added to an otherwise standard loop, BCO reaches a higher train passrate than a matched control that lacks only the world model, on five benchmarks spanning memory QA, tool-use QA, code-as-action app agents, and terminal agents. The gap remains on every held-out split, which is not used to select the candidate. After a target-model swap, in which the frozen model is replaced and the scaffold is not, the selected BCO scaffold leads on the tasks we test, except where context-window overruns leave it unfinished. An offline ablation then asks whether that gap comes from what the world model says. A fresh predictor given the accumulated document forecasts how the environment will respond more accurately than predictors given either no document or a same-form copy whose content has been falsified. The comparison indicates that the document carries reusable information in its content, not only in its form.
+
+LLM 代理的性能取决于冷冻模型周围的支架。改进该脚手架的常见方法是使用编码代理作为优化器：它读取当前分数和跟踪并迭代编辑源，每轮生成一个新的候选者。每个编辑都是根据对环境将如何响应的信念来选择的：出了什么问题，以及哪些更改应该有所帮助。这种信念通常是隐含的。它存在于编码代理对当前调用的推理中，或者隐藏在其参数中，而不是作为写下来的东西。因此，后来的呼叫会看到分数和痕迹，但他们不使用这种信念。我们引入了信念校准优化（BCO），这种方法将信念写下来作为持久的上下文文档，并在评估新候选人时不断修改该文档。生成的文档是一个世界模型：环境如何响应编辑的当前说明。添加到其他标准循环中，BCO 在跨越内存 QA、工具使用 QA、代码即操作应用程序代理和终端代理的五个基准上达到了比仅缺少世界模型的匹配控制更高的训练通过率。每个保留的分裂都存在差距，不用于选择候选人。在目标模型交换（其中冻结模型被替换而脚手架未被替换）之后，选定的 BCO 脚手架会引导我们测试的任务，除非上下文窗口溢出导致任务未完成。然后，离线消融会询问这种差距是否来自世界模型所说的内容。与没有文档或内容被伪造的相同形式副本的预测器相比，给定累积文档的新预测器可以更准确地预测环境将如何响应。比较表明该文档不仅在形式上，而且在其内容中包含可重用的信息。
+
+</details>
+
+---
+
+## 5. H3-World: Turning Language Understanding into World Control / H3-World：将语言理解变成世界控制
+
+**Date**: 2026-09-01 | **arXiv**: [2609.01560v1](http://arxiv.org/abs/2609.01560v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.01560v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present H3-World, an efficient framework that turns the 33B MiniMax-H3 video generator into an interactive world model. Our key finding is that, as large video generators become more capable, language is emerging as a natural interface for control. MiniMax-H3, for example, already supports zero-shot control of character behavior and camera motion through natural-language instructions. Building on this, H3-World turns this coarse language interface into precise, temporally grounded world control, without introducing dedicated action modules. Specifically, we represent each action as a structured combination of character and camera instructions, and align them with the corresponding temporal video latents. To make the control temporally precise, we further introduce temporal attention routing, which restricts each instruction to its intended time interval and reduces control leakage across actions. Importantly, H3-World directly reuses the semantic representations learned during large-scale video pretraining and requires only lightweight adaptation. With only 8,000 gameplay samples, 10,000 LoRA optimization steps, and 0.199% trainable parameters, H3-World achieves effective character and camera control while preserving strong generation quality. It also generalizes to unseen scenarios. These results show that the control capabilities emerging in large video generators can be efficiently transformed into interactive world control.
+
+我们推出了 H3-World，这是一个高效的框架，可将 33B MiniMax-H3 视频生成器转变为交互式世界模型。我们的主要发现是，随着大型视频生成器的功能变得越来越强大，语言正在成为一种自然的控制界面。例如，MiniMax-H3 已经支持通过自然语言指令对角色行为和摄像机运动进行零镜头控制。在此基础上，H3-World 将这种粗糙的语言界面转变为精确的、基于时间的世界控制，而无需引入专用的动作模块。具体来说，我们将每个动作表示为角色和摄像机指令的结构化组合，并将它们与相应的时间视频潜伏对齐。为了使控制在时间上精确，我们进一步引入时间注意路由，它将每条指令限制在其预期的时间间隔内，并减少动作之间的控制泄漏。重要的是，H3-World 直接重用大规模视频预训练过程中学到的语义表示，只需要轻量级的适配。只需 8,000 个游戏样本、10,000 个 LoRA 优化步骤和 0.199% 可训练参数，H3-World 即可实现有效的角色和摄像机控制，同时保持强大的生成质量。它还可以推广到未见过的场景。这些结果表明，大型视频生成器中出现的控制能力可以有效地转化为交互式世界控制。
+
+</details>
+
+---
+
+## 6. NashDreamer: Model-Based Reinforcement Learning for Zero-Sum Imperfect-Information Games / NashDreamer：基于模型的强化学习零和不完美信息博弈
+
+**Date**: 2026-09-01 | **arXiv**: [2609.01549v1](http://arxiv.org/abs/2609.01549v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.01549v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Model-based reinforcement learning (MBRL) has achieved remarkable results in single-agent domains, yet its extension to competitive imperfect information games (IIGs) remains underexplored. In multi-agent settings, opponent-induced non-stationarity complicates the learning process, and decentralized model learning faces severe identifiability barriers, which we argue make centralized model learning a mathematical necessity. Building on this analysis, we propose NashDreamer, a principled MBRL framework for two-player zero-sum IIGs. It introduces a centralized Multi-Agent Recurrent State-Space Model (MARSSM) that decouples environment dynamics from the effect of players' strategies on their individual observations. NashDreamer is designed to use arbitrary policy gradient algorithms and inherits their convergence guarantees towards Nash equilibria under an idealized model. Empirical evaluations across four benchmark games demonstrate that NashDreamer substantially improves sample efficiency over model-free baselines early in the training. Finally, we theoretically analyze the architecture's optimization landscape, identifying the vulnerability of the Dreamer family of algorithms to posterior collapse in stochastic environments. We leave it as an open challenge.
+
+基于模型的强化学习（MBRL）在单智能体领域取得了显着的成果，但其对竞争性不完美信息博弈（IIG）的扩展仍有待探索。在多智能体环境中，对手引起的非平稳性使学习过程变得复杂，而去中心化模型学习面临着严重的可识别性障碍，我们认为这使得中心化模型学习成为数学上的必然。在此分析的基础上，我们提出了 NashDreamer，这是一种适用于两人零和 IIG 的原则性 MBRL 框架。它引入了一种集中式多智能体循环状态空间模型（MARSSM），该模型将环境动态与玩家策略对其个人观察的影响分开。 NashDreamer 被设计为使用任意策略梯度算法，并继承了它们在理想化模型下实现纳什均衡的收敛保证。对四个基准游戏的实证评估表明，NashDreamer 在训练早期相对于无模型基线显着提高了样本效率。最后，我们从理论上分析了该架构的优化前景，识别了 Dreamer 系列算法在随机环境中对后验崩溃的脆弱性。我们将其作为一项公开挑战。
+
+</details>
+
+---
+
+## 7. REFACTOR-VLA: Unsupervised Library Learning of Typed Motor Programs / REFACTOR-VLA：类型化运动程序的无监督库学习
+
+**Date**: 2026-09-01 | **arXiv**: [2609.01215v1](http://arxiv.org/abs/2609.01215v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.01215v1)
+
+**Categories**: cs.LG, cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Most vision-language-action (VLA) models -- OpenVLA, $π_0$, RT-2, RDT-1B -- are monolithic: they emit raw motor commands or short action chunks without organizing behavior into reusable abstractions, so they degrade on long-horizon tasks and resist interpretation. Existing skill-discovery methods sidestep the core question of when two action sequences are behaviorally equivalent, either clustering contrastive embeddings or delegating the judgment to a language model uncalibrated to the robot's dynamics. We introduce REFACTOR-VLA, a wake/sleep system for learning reusable skills. Its sleep phase clusters motor-program fragments under a Behavioral-Equivalence Kernel (BEK) computed from rollouts of a learned latent world model $M_φ$; its wake phase emits typed lambda terms over a Hindley--Milner-inspired vocabulary, consumed by a library-conditioned rectified-flow action decoder. Abstractions are admitted only if they pass Minimum Description Length and return-preservation gates. On LIBERO we report two findings. First, enlarging the world model from 188M to 430M parameters worsened performance on 4 of 4 suites, so capacity alone does not help. Second, the training objective matters far more: adding an auxiliary supervised contrastive (InfoNCE) loss during world-model warmup substantially improves sleep-phase clustering, giving Normalized Mutual Information at $n=3$ seeds of $0.462 \pm 0.021$ (object), $0.867 \pm 0.025$ (spatial), $0.915 \pm 0.013$ (goal) and $0.754 \pm 0.010$ (LIBERO-10), and beating the strongest published baseline on all 4 suites by a mean $Δ= +0.184$. Across providers ($n=12$) the 95% bootstrap confidence interval for mean pairwise NMI is $[0.683, 0.729]$ (mean $0.705$). The sleep phase also yields the first real-LIBERO task-language library: the decoder uses 2 of 3 admitted abstractions and rewrites all 256 sampled demonstrations.
+
+大多数视觉语言动作（VLA）模型——OpenVLA、$π_0$、RT-2、RDT-1B——都是单一的：它们发出原始运动命令或短动作块，而不将行为组织成可重用的抽象，因此它们在长期任务上性能下降并抵制解释。现有的技能发现方法回避了两个动作序列何时行为等效的核心问题，要么对对比嵌入进行聚类，要么将判断委托给未根据机器人动力学进行校准的语言模型。我们推出了 REFACTOR-VLA，这是一种用于学习可重用技能的唤醒/睡眠系统。它的睡眠阶段将运动程序片段聚集在行为等效内核 (BEK) 下，该内核是通过学习的潜在世界模型 $M_φ$ 的推出计算得出的；它的唤醒阶段通过 Hindley-Milner 启发的词汇发出类型化的 lambda 术语，并由库条件整流流动作解码器使用。仅当抽象通过最小描述长度和返回保留门时才被允许。我们在 LIBERO 上报告了两项发现。首先，将世界模型从 188M 参数扩大到 430M 会使 4 个套件中的 4 个套件的性能恶化，因此仅靠容量并没有帮助。其次，训练目标更为重要：在世界模型预热期间添加辅助监督对比（InfoNCE）损失可显着改善睡眠阶段聚类，在 $n=3$ 种子处提供标准化互信息，分别为 $0.462 \pm 0.021$（对象）、$0.867 \pm 0.025$（空间）、$0.915 \pm 0.013$（目标）和 $0.754 \pm 0.010$ (LIBERO-10)，并且以平均 $Δ= +0.184$ 的成绩击败了所有 4 个套件中最强的已发布基线。跨提供商 ($n=12$)，平均成对 NMI 的 95% 引导置信区间为 $[0.683, 0.729]$（平均 $0.705$）。睡眠阶段还产生第一个真正的 LIBERO 任务语言库：解码器使用 3 个公认的抽象中的 2 个，并重写所有 256 个采样演示。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-09-02 (6 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-09-02
