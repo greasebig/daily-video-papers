@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-09-03](papers/2026-09-03.md) - 2 papers
 - [2026-09-02](papers/2026-09-02.md) - 2 papers
 - [2026-09-01](papers/2026-09-01.md) - 1 papers
 - [2026-08-31](papers/2026-08-31.md) - 1 papers
@@ -82,6 +83,52 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-09-03 (2 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-09-03
+
+**Paper Count**: 2
+
+---
+
+## 1. Hybrid-LUT: Channel-Aware Hybrid Lookup Table and Filtering for Efficient Image Denoising / Hybrid-LUT：通道感知混合查找表和过滤，可实现高效图像去噪
+
+**Date**: 2026-08-12 | **arXiv**: [2608.11646v1](http://arxiv.org/abs/2608.11646v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.11646v1)
+
+**Categories**: cs.CV, eess.IV
+
+**Code**: https://github.com/Ai-ZL/Hybrid-LUT
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Lookup table (LUT)-based image denoising methods have attracted increasing attention due to their high efficiency and hardware-friendly properties. However, existing RGB-LUT approaches require three identical LUTs to process RGB channels in parallel, resulting in large on-chip SRAM consumption. A simple alternative is to apply LUT processing only to the luminance (Y) channel in the YUV color space to reduce memory usage. However, this naive strategy leads to degraded restoration quality, since ignoring the chrominance (UV) channels introduces color distortion and residual artifacts. In this work, we propose Hybrid-LUT, a YUV-based asymmetric channel-processing framework that combines LUT and filtering in a unified design. Specifically, a multi-band LUT branch with pixel-level weight fusion is applied to the Y channel to recover fine textures, while lightweight filtering is used for the UV channels to maintain color consistency. This design reduces LUT storage by two-thirds compared with RGB-LUT methods while maintaining the same runtime throughput. Extensive experiments show that Hybrid-LUT achieves state-of-the-art (SOTA) performance across multiple benchmarks with only 421 KB of storage. In particular, our method surpasses existing LUT-based denoising approaches by at least 0.63 dB CPSNR on real-world datasets, demonstrating its effectiveness for image denoising on resource-constrained edge devices. The project is available at https://github.com/Ai-ZL/Hybrid-LUT .
+
+基于查找表（LUT）的图像去噪方法由于其高效率和硬件友好的特性而引起了越来越多的关注。然而，现有的 RGB-LUT 方法需要三个相同的 LUT 来并行处理 RGB 通道，从而导致大量的片上 SRAM 消耗。一种简单的替代方法是仅对 YUV 颜色空间中的亮度 (Y) 通道应用 LUT 处理，以减少内存使用量。然而，这种幼稚的策略会导致恢复质量下降，因为忽略色度 (UV) 通道会引入颜色失真和残留伪影。在这项工作中，我们提出了 Hybrid-LUT，这是一种基于 YUV 的非对称通道处理框架，它将 LUT 和滤波结合在一个统一的设计中。具体来说，Y通道应用具有像素级权重融合的多波段LUT分支来恢复精细纹理，而UV通道则使用轻量级过滤来保持颜色一致性。与 RGB-LUT 方法相比，此设计将 LUT 存储减少了三分之二，同时保持相同的运行时吞吐量。大量实验表明，Hybrid-LUT 仅用 421 KB 的存储空间即可在多个基准测试中实现最先进的 (SOTA) 性能。特别是，我们的方法在现实数据集上超越了现有的基于 LUT 的去噪方法至少 0.63 dB CPSNR，证明了其在资源受限的边缘设备上图像去噪的有效性。该项目位于 https://github.com/Ai-ZL/Hybrid-LUT 。
+
+</details>
+
+---
+
+## 2. Boundary-Continuous Cross-Camera RGB Mapping via Hue-Split Model Trees / 通过色调分割模型树进行边界连续跨相机 RGB 映射
+
+**Date**: 2026-08-12 | **arXiv**: [2608.11548v1](http://arxiv.org/abs/2608.11548v1) | **PDF**: [Link](http://arxiv.org/pdf/2608.11548v1)
+
+**Categories**: eess.IV, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We propose a hue-split model-tree method for boundary-continuous cross-camera RGB mapping. Cross-camera RGB mapping aims to produce consistent color representations across cameras whose recorded RGB values differ due to sensor spectral sensitivities and image-signal processing pipelines. A common chart-based remedy is to estimate a single global affine color correction matrix (CCM), but such a global model cannot capture hue-specific discrepancies between cameras. To capture that behavior, we recursively partitions the source-camera color space along a scalar hue coordinate and builds an model tree that stores an affine CCM at every node. For fitting the node CCMs, we utilize a log-domain error objective. To prevent false contours that arise from hard hue splits, we further introduce a boundary-continuous formulation in which the prediction is obtained by blending the log-domain outputs of all node CCMs along the root-to-leaf path. The path-wise blending weights are optimized under a simplex constraint using both a chart-pair fitting loss and an explicit continuity regularizer defined on deterministic boundary prototype pairs placed just on either side of each learned hue threshold. We conducted an experiment on a Canon EOS-1Ds Mark II to Canon EOS 20D mapping using the Middlebury Registered Color Checker dataset. The results show that hue splitting substantially reduces log-RMSE over a single global affine CCM and that the proposed path blending with boundary prototype regularization simultaneously improves accuracy and suppresses chromaticity gaps at the learned hue thresholds across two illuminants and multiple exposure conditions.
+
+我们提出了一种用于边界连续跨相机 RGB 映射的色调分割模型树方法。跨相机 RGB 映射旨在跨相机产生一致的颜色表示，这些相机记录的 RGB 值由于传感器光谱灵​​敏度和图像信号处理管道而不同。常见的基于图表的补救措施是估计单个全局仿射颜色校正矩阵 (CCM)，但这种全局模型无法捕获相机之间特定于色调的差异。为了捕捉这种行为，我们沿着标量色调坐标递归地划分源相机色彩空间，并构建一个在每个节点存储仿射 CCM 的模型树。为了拟合节点 CCM，我们利用对数域误差目标。为了防止硬色调分割产生的错误轮廓，我们进一步引入了边界连续公式，其中通过混合沿根到叶路径的所有节点 CCM 的对数域输出来获得预测。使用图表对拟合损失和在确定性边界原型对上定义的显式连续性正则化器，在单纯形约束下优化路径混合权重，该确定性边界原型对放置在每个学习的色调阈值的两侧。我们使用 Middlebury Registered Color Checker 数据集对 Canon EOS-1Ds Mark II 到 Canon EOS 20D 映射进行了实验。结果表明，色调分割大大降低了单个全局仿射 CCM 上的 log-RMSE，并且所提出的与边界原型正则化混合的路径同时提高了准确性，并抑制了跨两种光源和多种曝光条件的学习色调阈值的色度间隙。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-09-02 (2 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-09-02
