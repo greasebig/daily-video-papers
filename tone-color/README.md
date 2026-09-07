@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-09-07](papers/2026-09-07.md) - 1 papers
 - [2026-09-06](papers/2026-09-06.md) - 1 papers
 - [2026-09-05](papers/2026-09-05.md) - 1 papers
 - [2026-09-03](papers/2026-09-03.md) - 2 papers
@@ -85,6 +86,34 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-09-07 (1 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-09-07
+
+**Paper Count**: 1
+
+---
+
+## 1. No Pixel Left Behind: Filling Gaps in Anime Colorization / 不留任何像素：填补动漫着色的空白
+
+**Date**: 2026-09-01 | **arXiv**: [2609.00800v1](http://arxiv.org/abs/2609.00800v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.00800v1)
+
+**Categories**: cs.HC, cs.CV, cs.GR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Animation production workflows often involve digital colorization of line art, where small unpainted regions ("gaps") frequently occur and remain an underexplored challenge. We conducted a formative study in Japanese animation (anime) pipelines and found that while the paint bucket tool is widely used for base coloring, tiny enclosed areas are frequently overlooked, resulting in time-consuming manual detection and filling. We introduce GapFill, a tool grounded in professional practices that reduces the effort of gap detection, zooming, and color selection. Our deep-learning method suggests appropriate fill colors by referencing surrounding regions, leveraging the flat-color nature of anime-style images. In a user study with 13 professional colorists, our system improved performance and usability in gap-filling tasks over conventional methods. The study also suggested that prediction accuracy alone is not the primary factor for usability, that appropriate colors can be contextually ambiguous, and that GapFill can complement existing tools depending on users' trust in new AI-powered assistance.
+
+动画制作工作流程通常涉及线条艺术的数字着色，其中经常出现小的未绘制区域（“间隙”），并且仍然是一个尚未充分探索的挑战。我们对日本动画管道进行了形成性研究，发现虽然油漆桶工具广泛用于基础着色，但微小的封闭区域经常被忽视，导致手动检测和填充非常耗时。我们推出 GapFill，这是一款基于专业实践的工具，可减少间隙检测、缩放和颜色选择的工作量。我们的深度学习方法通​​过参考周围区域、利用动漫风格图像的平面颜色性质来建议适当的填充颜色。在对 13 名专业调色师进行的用户研究中，我们的系统比传统方法提高了填补空白任务的性能和可用性。该研究还表明，预测准确性本身并不是可用性的主要因素，适当的颜色可能会在上下文中产生歧义，并且 GapFill 可以根据用户对新的人工智能辅助的信任来补充现有工具。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-09-06 (1 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-09-06
