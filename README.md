@@ -27,6 +27,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-09-07](papers/2026-09-07.md) - 1 papers
 - [2026-09-05](papers/2026-09-05.md) - 5 papers
 - [2026-09-04](papers/2026-09-04.md) - 21 papers
 - [2026-09-03](papers/2026-09-03.md) - 5 papers
@@ -175,6 +176,34 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-09-07 (1 papers)</b></summary>
+
+# arXiv Video Papers - 2026-09-07
+
+**Paper Count**: 1
+
+---
+
+## 1. Few-Shot Video Recognition via Hierarchical Metric Learning / 通过分层度量学习进行少镜头视频识别
+
+**Date**: 2026-09-04 | **arXiv**: [2609.05242v1](http://arxiv.org/abs/2609.05242v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.05242v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Few-shot action recognition (FSAR) aims to recognize unseen action categories with only a small number of annotated video samples. Recent works typically apply single-prototype supervision at the network output and fail to sufficiently exploit rich cross-frame global spatial information in videos. Even existing multi-level metric schemes only impose parallel prototype constraints on intermediate layers, without progressive supervision along the full feature pipeline, which results in limited generalization ability of the learned class prototypes. Inspired by this, we present a novel method, hierarchical metric learning for few-shot action recognition (HML-FSAR). First, a spatial-enhanced module is developed to capture cross-frame global spatial representations. Combined with temporal MHA, heterogeneous alignment, spatial-temporal feature fusion and dictionary learning modules, it constructs the complete feature processing pipeline. Second, a hierarchical metric learning (HML) strategy is embedded into HML-FSAR. Composed of center metric, alignment metric, contrastive metric, dictionary metric and prototype metric, HML imposes progressive multi-stage complementary constraints from frame-level representations to final class prototypes, so as to jointly optimize feature compactness, heterogeneous spatial-temporal alignment, inter-class discriminability and anti-noise robustness. The proposed HML-FSAR method is validated on five widely-used FSAR datasets, and experimental results fully demonstrate its effectiveness.
+
+少镜头动作识别（FSAR）旨在仅用少量带注释的视频样本来识别看不见的动作类别。最近的工作通常在网络输出上应用单一原型监督，并且未能充分利用视频中丰富的跨帧全局空间信息。即使现有的多级度量方案也仅对中间层施加并行原型约束，而没有沿着完整特征管道进行渐进监督，这导致所学习的类原型的泛化能力有限。受此启发，我们提出了一种新颖的方法，即用于少镜头动作识别的分层度量学习（HML-FSAR）。首先，开发了一个空间增强模块来捕获跨框架的全局空间表示。结合时间MHA、异构对齐、时空特征融合和字典学习模块，构建了完整的特征处理流程。其次，将分层度量学习（HML）策略嵌入到 HML-FSAR 中。 HML由中心度量、对齐度量、对比度量、字典度量和原型度量组成，从帧级表示到最终类原型施加渐进的多阶段互补约束，从而共同优化特征紧凑性、异构时空对齐、类间可辨别性和抗噪声鲁棒性。所提出的HML-FSAR方法在五个广泛使用的FSAR数据集上进行了验证，实验结果充分证明了其有效性。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-09-05 (5 papers)</b></summary>
 
 # arXiv Video Papers - 2026-09-05
