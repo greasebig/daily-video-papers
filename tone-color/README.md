@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-09-11](papers/2026-09-11.md) - 1 papers
 - [2026-09-10](papers/2026-09-10.md) - 1 papers
 - [2026-09-08](papers/2026-09-08.md) - 2 papers
 - [2026-09-07](papers/2026-09-07.md) - 1 papers
@@ -88,6 +89,34 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-09-11 (1 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-09-11
+
+**Paper Count**: 1
+
+---
+
+## 1. Mr.LHDR: A Benchmark for Multimodal Real-World Long-Horizon Deep Research Agents / Mr.LHDR：多模式现实世界长视野深度研究代理的基准
+
+**Date**: 2026-09-10 | **arXiv**: [2609.11318v1](http://arxiv.org/abs/2609.11318v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.11318v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Deep research agents are increasingly capable of web search, tool use, multimodal evidence analysis, and information synthesis. However, existing benchmarks mainly evaluate medium-horizon exploration and rarely test whether agents can sustain long, dependency-heavy research processes. We introduce Mr.LHDR (Multimodal real-world Long-Horizon Deep Research), a benchmark for evaluating real-world deep research over long, irreducible chains of interdependent evidence across eight categories. Each question is constructed from a hidden Node-Relation graph and requires an average of 12.1 necessary intermediate conclusions with a mean dependency depth of 10.4 before reaching a short, unique, and verifiable answer. Questions incorporate multimodal evidence, including images, maps, PDFs, logos, charts, tables, and video frames, with at least one non-text element that changes the reasoning state. Mr.LHDR evaluates both final answers and the correctness of intermediate conclusions under annotated dependencies. We evaluate general models, deep research systems, and agent frameworks using Overall Accuracy (OA), Strict Accuracy (SA), Checklist Score (CS), and Dependency-Aware Checklist Score (DACS). Results show that even the strongest system achieves only 43.1% OA and 34.3% SA, indicating that final-answer accuracy substantially overestimates complete research success. Removing images reduces DACS by 12.6 points, demonstrating the importance of multimodal evidence, while SA consistently declines as reasoning chains become longer. These findings reveal sustained, dependency-consistent evidence integration, rather than isolated fact retrieval, as a key bottleneck for current deep research agents.
+
+深度研究代理的网络搜索、工具使用、多模式证据分析和信息合成的能力越来越强。然而，现有的基准主要评估中期探索，很少测试智能体是否能够维持长期、依赖重的研究过程。我们介绍 Mr.LHDR（多模式现实世界长视野深度研究），这是一个评估真实世界深度研究的基准，涉及八个类别的长的、不可简化的相互依赖的证据链。每个问题均由隐藏的节点关系图构建，平均需要 12.1 个必要的中间结论，平均依赖深度为 10.4，然后才能得出简短、唯一且可验证的答案。问题包含多模式证据，包括图像、地图、PDF、徽标、图表、表格和视频帧，以及至少一个改变推理状态的非文本元素。 Mr.LHDR 在带注释的依赖关系下评估最终答案和中间结论的正确性。我们使用总体准确性 (OA)、严格准确性 (SA)、检查表分数 (CS) 和依赖性感知检查表分数 (DACS) 来评估通用模型、深度研究系统和代理框架。结果表明，即使是最强大的系统也只能实现 43.1% OA 和 34.3% SA，这表明最终答案的准确性大大高估了研究的完全成功。删除图像使 DACS 降低 12.6 分，这证明了多模态证据的重要性，而 SA 则随着推理链变长而持续下降。这些发现揭示了持续的、依赖性一致的证据整合，而不是孤立的事实检索，是当前深度研究代理的关键瓶颈。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-09-10 (1 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-09-10
