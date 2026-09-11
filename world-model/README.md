@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-09-11](papers/2026-09-11.md) - 7 papers
 - [2026-09-10](papers/2026-09-10.md) - 14 papers
 - [2026-09-04](papers/2026-09-04.md) - 14 papers
 - [2026-09-03](papers/2026-09-03.md) - 7 papers
@@ -148,6 +149,130 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-09-11 (7 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-09-11
+
+**Paper Count**: 7
+
+---
+
+## 1. Distributed Optimization of Modular Production Systems using Model-based Reinforcement Learning with Inverse Models / 使用基于模型的强化学习和逆模型对模块化生产系统进行分布式优化
+
+**Date**: 2026-09-10 | **arXiv**: [2609.11615v1](http://arxiv.org/abs/2609.11615v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.11615v1)
+
+**Categories**: cs.AI, cs.LG, eess.SY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This paper presents a novel approach for data-driven self-learning control of highly flexible, modular manufacturing systems. Specifically, we employ a novel framework for model-based reinforcement learning which introduces approximate inverse process models within the training of reinforcement policies. This approach disentangles the learning of actuation dynamics and the dynamics in state space, resulting in RL-based training solely within the task space. We propose a lightweight feedforward architecture for approximate inverse models and integrate them within the policy network of standard RL algorithms. We apply the approach to a laboratory modular production testbed with heterogeneous production modules. The results underline the efficiency improvements for modular manufacturing units in terms of both performance and training speed, particularly for off-policy algorithms.
+
+本文提出了一种高度灵活的模块化制造系统的数据驱动自学习控制的新方法。具体来说，我们采用了一种基于模型的强化学习的新颖框架，该框架在强化策略的训练中引入了近似逆过程模型。这种方法将驱动动力学和状态空间动力学的学习分开，从而仅在任务空间内进行基于强化学习的训练。我们提出了一种用于近似逆模型的轻量级前馈架构，并将其集成到标准强化学习算法的策略网络中。我们将该方法应用于具有异构生产模块的实验室模块化生产测试台。结果强调了模块化制造单元在性能和训练速度方面的效率提高，特别是对于离策略算法。
+
+</details>
+
+---
+
+## 2. CAP: Continuously Adaptive Perception-Blind Humanoid Locomotion via Learned Denoising / CAP：通过学习去噪实现连续自适应感知盲人形运动
+
+**Date**: 2026-09-10 | **arXiv**: [2609.11553v1](http://arxiv.org/abs/2609.11553v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.11553v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Humanoid locomotion across complex terrain demands forward-looking exteroception to anticipate obstacles, yet this signal is unreliable in real-world deployment, failing partially and intermittently. Existing perceptive policies often assume that depth observations remain clean and in-distribution, while recent attempts to unify perceptive and blind control typically route or switch between separate sub-policies, leaving recoverable information in partially corrupted depth unexploited. We instead propose CAP, a single-stage humanoid locomotion policy that recovers this signal with a perceptive world-model encoder trained as a learned denoiser to reconstruct clean depth from a corrupted input, together with a co-active proprioceptive variational encoder that supplies depth-free body-state information. A coupled training recipe pairs a depth-noise curriculum on the world-model input with world-model feature dropout on the policy-facing latent, exposing the policy to failures across the entire perception-quality spectrum. In simulation, CAP matches or improves upon perceptive baselines when depth remains informative, and degrades more smoothly than a binary-switching baseline as perception worsens. On the Unitree G1, controlled trials and indoor-outdoor deployments demonstrate perception-robust locomotion under intermittent occlusion, real-sensor corruption, and outdoor depth artifacts.
+
+穿越复杂地形的人形运动需要前瞻性的外部感知来预测障碍物，但这种信号在现实世界的部署中并不可靠，会部分和间歇性地失败。现有的感知策略通常假设深度观察保持干净且分布均匀，而最近统一感知和盲目控制的尝试通常在单独的子策略之间进行路由或切换，从而使部分损坏的深度中的可恢复信息未被利用。相反，我们提出了 CAP，这是一种单阶段人形运动策略，它通过训练为学习降噪器的感知世界模型编码器来恢复该信号，以从损坏的输入中重建干净的深度，以及提供无深度身体状态信息的协同本体感受变分编码器。耦合训练方案将世界模型输入的深度噪声课程与面向政策的潜在变量的世界模型特征丢失相结合，使政策在整个感知质量范围内面临失败。在模拟中，当深度仍然提供信息时，CAP 会匹配或改进感知基线，并且当感知恶化时，CAP 会比二进制切换基线更平稳地降低。在 Unitree G1 上，对照试验和室内外部署证明了在间歇性遮挡、真实传感器损坏和室外深度伪影下的感知鲁棒运动。
+
+</details>
+
+---
+
+## 3. FARM: Reading Failure Signals from the Internal Predictive States of a Frozen Robotic World Model / FARM：从冻结的机器人世界模型的内部预测状态读取故障信号
+
+**Date**: 2026-09-10 | **arXiv**: [2609.11445v1](http://arxiv.org/abs/2609.11445v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.11445v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reliable robot deployment requires online failure monitoring, yet existing monitors mainly derive risk from proxy signals or train dedicated monitoring components. We ask whether the internal predictive states of a frozen pretrained robotic world model already contain directly decodable failure information. Failure-Aware Readout from World Models (FARM) trains only a 33,985-parameter supervised readout over frozen VLA-JEPA predictive states, producing step-wise failure scores and causal trajectory risk. Five-fold out-of-fold evaluation across seven source tasks reaches 85.68/88.59 pooled AUROC/AUPRC, and FARM gives the best Seen performance among 15 matched baselines on the 10-task benchmark. Across four real-robot populations on PIPER X, SO-101, and Franka, fixed-readout transfer and readout-only adaptation test deployment shifts without updating the predictive backbone. FARM also discriminates failures from partial causal histories and adds 0.2256 ms mean CUDA latency once the frozen state is available. These results support frozen predictive world-model states as reusable features for causal, transferable, and low-overhead execution monitoring.
+
+可靠的机器人部署需要在线故障监控，但现有的监控器主要从代理信号或训练专用监控组件中获取风险。我们询问冻结的预训练机器人世界模型的内部预测状态是否已经包含可直接解码的故障信息。世界模型故障感知读数 (FARM) 仅在冻结的 VLA-JEPA 预测状态上训练 33,985 个参数的监督读数，产生逐步故障评分和因果轨迹风险。跨七个源任务的五倍折叠评估达到 85.68/88.59 合并 AUROC/AUPRC，FARM 在 10 任务基准测试的 15 个匹配基线中提供了最佳的 Seen 性能。在 PIPER X、SO-101 和 Franka 上的四个真实机器人群体中，固定读出传输和仅读出适应测试部署发生变化，而无需更新预测主干。 FARM 还会区分部分因果历史中的故障，并在冻结状态可用后增加 0.2256 毫秒的平均 CUDA 延迟。这些结果支持冻结的预测世界模型状态作为因果、可转移和低开销执行监控的可重用特征。
+
+</details>
+
+---
+
+## 4. Measuring the Value of World-Model Updates: A Counterfactual Utility Protocol for Continual Adaptation / 衡量世界模型更新的价值：持续适应的反事实实用协议
+
+**Date**: 2026-09-10 | **arXiv**: [2609.10954v1](http://arxiv.org/abs/2609.10954v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.10954v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Continual world models must decide whether new data justify changing the model. Fixed replay schedules and prediction-error triggers specify when to update, but neither reveals the value of an individual update: one deployment run cannot show how the same model would have performed at that moment had it held its parameters. We introduce the fork ledger, which branches a deployment stream at pre-registered decision points into matched update and hold continuations under common random numbers. It evaluates both continuations on the same episodes and records $ΔR = R_{\mathrm{update}} - R_{\mathrm{hold}}$. Always applying one fixed update mechanism lowers return on all three simulated control tasks: CartPole ($-144.0$; checkpoint-bootstrap $95\%$ CI $[-185.4,-116.1]$, against a converged return near $650$), Walker ($-82.8$; $[-101.1,-61.7]$) and Cheetah ($-18.6$; $[-29.0,-6.6]$). Divergence is an outcome of applying the update, so the estimand counts every attempted fork; restricted to the $693$ of $720$ that did not collapse, CartPole and Walker are unchanged in sign ($-113.4$ and $-82.1$) and Cheetah becomes unresolved ($-3.9$; $[-17.5,+13.0]$). The task is the unit of inference: each contributes $240$ attempted forks over five pretrained checkpoints crossed with two drift directions. The ledger makes counterfactual utility observable for a fixed mechanism, allowing triggers to be judged by the updates they select rather than by surprise detection alone.
+
+连续的世界模型必须决定新数据是否证明改变模型是合理的。固定重播计划和预测错误触发器指定何时更新，但两者都没有揭示单个更新的价值：一次部署运行无法显示同一模型在保持其参数的情况下在该时刻的执行情况。我们引入了分叉分类账，它将预先注册的决策点处的部署流分支为匹配的更新，并在公共随机数下保持延续。它评估同一剧集的两个延续并记录 $ΔR = R_{\mathrm{update}} - R_{\mathrm{hold}}$。始终应用一种固定更新机制会降低所有三个模拟控制任务的回报：CartPole ($-144.0$; checkpoint-bootstrap $95\%$ CI $[-185.4,-116.1]$，收敛回报接近 $650$)、Walker ($-82.8$; $[-101.1,-61.7]$) 和 Cheetah ($-18.6$; $[-29.0,-6.6]$)。分歧是应用更新的结果，因此估计值会计算每次尝试分叉的次数；限制在未崩溃的 $720$ 的 $693$ 范围内，CartPole 和 Walker 的符号不变（$-113.4$ 和 $-82.1$），而 Cheetah 变得未解析（$-3.9$；$[-17.5,+13.0]$）。该任务是推理单元：每个人贡献 240 美元，尝试分叉超过五个预训练的检查点，并与两个漂移方向交叉。账本使得反事实效用对于固定机制是可观察的，允许通过触发器选择的更新来判断触发器，而不是仅仅通过意外检测来判断。
+
+</details>
+
+---
+
+## 5. DUET-DINO: Simultaneous Cross-View World Modeling for Latent Planning in Robot Manipulation / DUET-DINO：机器人操作中潜在规划的同步交叉视图世界建模
+
+**Date**: 2026-09-09 | **arXiv**: [2609.10506v1](http://arxiv.org/abs/2609.10506v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.10506v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Action-conditioned latent world models predict future visual representations, enabling zero-shot goal-conditioned robot planning and control. However, their predictions for fine-grained spatial and rotational actions are unreliable for full 7-DoF end-effector control. To address this gap, we introduce DUET-DINO, a simultaneous cross-view latent world model that jointly learns action-conditioned predictions from static side- and wrist-camera observations through cross-view conditioning. By exploiting complementary global scene and gripper-centric information, DUET-DINO enables latent planning over the full 7-DoF action space. Across spatially diverse reach, orientation-intensive angled-reach, and multi-goal grasp-and-lift tasks, DUET-DINO consistently outperforms single-view and independent dual-view baselines, achieving 92% success on reach, 72.5% on angled-reach, and 60.0% on lift tasks. DUET-DINO is trained from scratch on DROID and RoboArena datasets and generalizes robustly under visual distribution shifts. We further show that while V-JEPA 2 wrist-view predictions underestimate visual dynamics induced by fine-grained actions, DINOv3 predictions better capture action-conditioned scene changes, leading to stronger downstream planning. The code and model checkpoints will be open-sourced. Project page: https://utn-air.github.io/DUET-DINO
+
+动作条件的潜在世界模型可以预测未来的视觉表示，从而实现零样本目标条件的机器人规划和控制。然而，他们对细粒度空间和旋转动作的预测对于完整的 7-DoF 末端执行器控制来说是不可靠的。为了解决这一差距，我们引入了 DUET-DINO，这是一种同步交叉视图潜在世界模型，它通过交叉视图调节从静态侧面和手腕相机观察中共同学习动作条件预测。通过利用互补的全局场景和以夹具为中心的信息，DUET-DINO 能够在整个 7-DoF 动作空间上进行潜在规划。在空间多样化的触及、方向密集的角度触及和多目标抓取和举起任务中，DUET-DINO 始终优于单视图和独立双视图基线，在触及方面取得了 92% 的成功率，在角度触及方面取得了 72.5% 的成功率，在举起任务方面取得了 60.0% 的成功率。 DUET-DINO 在 DROID 和 RoboArena 数据集上从头开始训练，并在视觉分布变化下稳健地泛化。我们进一步表明，虽然 V-JEPA 2 手腕视图预测低估了细粒度动作引起的视觉动态，但 DINOv3 预测更好地捕捉动作条件场景变化，从而导致更强大的下游规划。代码和模型检查点将开源。项目页面：https://utn-air.github.io/DUET-DINO
+
+</details>
+
+---
+
+## 6. Semigroup-JEPA: Latent Dynamics Consistency for Zero-Shot Physics Generalization / Semigroup-JEPA：零样本物理推广的潜在动力学一致性
+
+**Date**: 2026-09-09 | **arXiv**: [2609.10464v1](http://arxiv.org/abs/2609.10464v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.10464v1)
+
+**Categories**: cs.LG, cs.AI, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Joint-Embedding Predictive Architecture (JEPA) world models learn a compact latent representation of the world that supports prediction and planning, but their capability to learn physics and generate physically realistic dynamics remains hitherto untested. In this work, we introduce SemiGroup-JEPA (SG-JEPA), which extends the LeWorldModel framework by supplying the parameter governing the physics to the temporal model via action-conditioning and jointly training an encoder and predictor through an autoregressive latent rollout. To evaluate the model's ability to generalize out of distribution, we design dynamical tasks under different gravitational fields that, despite obeying the same physical law, exhibit qualitatively different dynamics, ranging from floating motion in weak gravitational fields to rapid bouncing in strong ones. In contrast to DINO-WM, SG-JEPA reduces open-loop prediction error by up to 2 times on two-dimensional datasets, and increases control success rate up to 2.5 times for three-dimensional robotic datasets, for which we train independent diffusion policies. To explain this advantage, we develop a linear feature model that separates local law-conditioned error from its recursive amplification under rollout. Guided by this model, we find that back-propagating the multi-step rollout loss into the representation trains the encoder to keep the features that the predictor can carry forward, and that those are the features the dynamics depend on, so most of the gain comes from the encoder learning better features rather than from the predictor learning better dynamics. See project page at https://sg-jepa.github.io.
+
+联合嵌入预测架构 (JEPA) 世界模型学习支持预测和规划的世界的紧凑潜在表示，但其学习物理和生成物理真实动态的能力迄今尚未经过测试。在这项工作中，我们引入了 SemiGroup-JEPA (SG-JEPA)，它通过动作调节向时间模型提供控制物理的参数，并通过自回归潜在推出联合训练编码器和预测器，从而扩展了 LeWorldModel 框架。为了评估模型泛化分布外的能力，我们设计了不同引力场下的动力学任务，尽管遵循相同的物理定律，但表现出性质不同的动力学，范围从弱引力场中的漂浮运动到强引力场中的快速弹跳。与 DINO-WM 相比，SG-JEPA 在二维数据集上将开环预测误差降低了 2 倍，在三维机器人数据集上将控制成功率提高了 2.5 倍，为此我们训练了独立的扩散策略。为了解释这一优势，我们开发了一个线性特征模型，将局部规律条件误差与其在推出时的递归放大分开。在这个模型的指导下，我们发现将多步推出损失反向传播到表示中可以训练编码器保留预测器可以继承的特征，而这些特征是动态所依赖的，因此大部分增益来自编码器学习更好的特征，而不是来自预测器学习更好的动态。请参阅项目页面 https://sg-jepa.github.io。
+
+</details>
+
+---
+
+## 7. Compact Visuotactile World Models for Lifting: Prediction, Reward Alignment, and Force Constraints / 用于提升的紧凑型视觉触觉世界模型：预测、奖励调整和力约束
+
+**Date**: 2026-09-09 | **arXiv**: [2609.09597v2](http://arxiv.org/abs/2609.09597v2) | **PDF**: [Link](http://arxiv.org/pdf/2609.09597v2)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Accurate tactile forecasts need not improve force-constrained control. We study a 652,157-parameter action-conditioned visuotactile world model with matched behavior cloning, policy learning in imagination, independent reactive implicit Q-learning, and model-assisted force feedback. A fixed protocol executes 34 policies on 120 fresh MuJoCo environments spanning geometry and physical-parameter shifts, plus 324 independently replayed action branches on 12 additional ID environments. Visuotactile dynamics reduce force action-effect MAE from 0.413 N for persistence to 0.338 N. Model-assisted feedback raises ID force-budgeted success from 73.3% to 93.3%, with paired difference +20.0 [+6.7,+33.4] percentage points (95% CI), with the difference occurring during scripted lowering. Its pooled difference is +3.9 [-4.5,+11.7] points. Imagined RL achieves 11.9% pooled joint success versus 25.0% for reactive IQL. An empirical tactile-residual stress test adds 330 executions. The evidence concerns rigid-box lifting after a common approach, without physical-robot transfer or a closed-loop safety guarantee.
+
+准确的触觉预测不需要改善力约束控制。我们研究了一个包含 652,157 个参数的动作条件视觉触觉世界模型，该模型具有匹配行为克隆、想象中的策略学习、独立反应式隐式 Q 学习和模型辅助力反馈。固定协议在 120 个新的 MuJoCo 环境上执行 34 个策略，涵盖几何和物理参数变化，以及在 12 个附加 ID 环境上执行 324 个独立重播的动作分支。视觉触觉动力学将持久性的力作用效应 MAE 从 0.413 N 降低到 0.338 N。模型辅助反馈将 ID 力预算成功率从 73.3% 提高到 93.3%，成对差异 +20.0 [+6.7,+33.4] 个百分点 (95% CI)，差异发生在脚本降低过程中。其汇总差值为 +3.9 [-4.5,+11.7] 分。 Imagined RL 的联合成功率为 11.9%，而反应式 IQL 的联合成功率为 25.0%。经验性触觉残余压力测试增加了 330 次执行。证据涉及采用通用方法进行刚性箱提升，没有物理机器人转移或闭环安全保证。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-09-10 (14 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-09-10
