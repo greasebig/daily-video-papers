@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-09-13](papers/2026-09-13.md) - 1 papers
 - [2026-09-11](papers/2026-09-11.md) - 28 papers
 - [2026-09-10](papers/2026-09-10.md) - 40 papers
 - [2026-09-07](papers/2026-09-07.md) - 9 papers
@@ -159,6 +160,34 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-09-13 (1 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-09-13
+
+**Paper Count**: 1
+
+---
+
+## 1. ORCH: Organizational Principles Enable Collective Intelligence in Embodied AI / ORCH ：组织原则在具体的人工智能中实现集体智能
+
+**Date**: 2026-09-10 | **arXiv**: [2609.11737v1](http://arxiv.org/abs/2609.11737v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.11737v1)
+
+**Categories**: cs.MA, cs.AI, cs.LG, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Collective intelligence depends not only on the capabilities of individual members, but also on how those members are organized. Yet artificial multi-agent systems are typically assembled using fixed organizational structures, even when the physical tasks they perform impose fundamentally different coordination requirements. Here we show that principles from human organization theory can be operationalized to organize large, heterogeneous collectives of embodied artificial agents. We introduce ORCH (Organizing Roles and Coordination Hierarchies), which constructs task-specific hierarchical organizations by combining pooled interdependence for work that can proceed concurrently with sequential interdependence for work governed by prerequisite relationships. Across 25 wildfire-response missions spanning reconnaissance, rescue, transportation, resource management, containment and suppression, we evaluated teams of up to 50 heterogeneous agents using eight large language models. Organizations constructed using these principles consistently outperformed four representative embodied multi-agent approaches across mission outcome, execution efficiency, exploration and computational resource use. Human-designed ORCH organizations improved final score by 63.97% and execution efficiency by 74.29% on average relative to the four prior frameworks. Organizations generated automatically by language models improved these measures by 43.63% and 52.53%, respectively. These advantages persisted across missions and underlying language models. Notably, collective performance was not monotonically determined by model scale. Analysis of long-horizon missions showed that hierarchical organization enabled teams to preserve concurrent activity within specialized groups while coordinating ordered transitions between mission phases.
+
+集体智慧不仅取决于单个成员的能力，还取决于这些成员的组织方式。 然而，人工多智能体系统通常使用固定的组织结构进行组装，即使它们执行的物理任务提出了根本不同的协调要求。 在这里，我们表明，人类组织理论的原理可以被操作化，以组织大型、异构的具体人工智能体的集体。 我们引入了ORCH （组织角色和协调层次结构） ，它通过将工作的汇集相互依赖性与先决条件关系支配的工作的顺序相互依赖性相结合，构建特定任务的层次结构组织。 在跨越侦察、救援、运输、资源管理、遏制和抑制的25个野火响应任务中，我们使用八个大型语言模型评估了多达50个异构代理的团队。 使用这些原则构建的组织在任务结果、执行效率、探索和计算资源使用方面的表现始终优于四个具有代表性的多代理方法。 与之前的四个框架相比，人工设计的ORCH组织将最终得分提高了63.97% ，执行效率平均提高了74.29%。 由语言模型自动生成的组织将这些指标分别提高了43.63%和52.53%。这些优势
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-09-11 (28 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-09-11
