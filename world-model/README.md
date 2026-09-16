@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-09-16](papers/2026-09-16.md) - 14 papers
 - [2026-09-11](papers/2026-09-11.md) - 7 papers
 - [2026-09-10](papers/2026-09-10.md) - 14 papers
 - [2026-09-04](papers/2026-09-04.md) - 14 papers
@@ -149,6 +150,244 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-09-16 (14 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-09-16
+
+**Paper Count**: 14
+
+---
+
+## 1. Seeing What Matters: Visual Cue Guided Video Planning for Generalizable Robot Navigation / 了解重要的事情：用于通用机器人导航的视觉提示引导视频规划
+
+**Date**: 2026-09-15 | **arXiv**: [2609.16737v1](http://arxiv.org/abs/2609.16737v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.16737v1)
+
+**Categories**: cs.RO, cs.AI, cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Generative video models can serve as a promising backbone for robot navigation by predicting future observations as video plans. Recent approaches often condition video planning on short-horizon guidance and recover geometric waypoints through scene reconstruction, leaving longer-horizon planning and precise video-to-action translation less explored. We present CueNav, a video model-based navigation framework combining visual cue guided video planning with an embodiment-specific Inverse-Dynamics Model (IDM). As visual cues, we use a Bird's-Eye View (BEV) map to convey global task context and retain part of the robot body in the egocentric observation to expose embodiment context. These cues guide the video planner, while the IDM translates dense flow fields extracted from the video plan into robot actions. With the visual cue encoding global task context, CueNav achieves nearly 2x higher success in maze navigation than planning without the cue. The body-aware view with the IDM enables precise navigation with 70% success in a narrow passage where comparison methods largely fail to complete the task. We further demonstrate zero-shot semantic-conditioned navigation and deployment of the same video planner across different robot platforms. Our results show that visual cue-guided video planning with embodiment-specific action grounding paves the way toward a generalizable navigation framework for longer-horizon planning and embodiment-aware control. Additional results and code are available on our project website: https://cuenav.github.io.
+
+通过将未来的观察结果预测为视频计划，生成视频模型可以作为机器人导航的有前景的支柱。最近的方法通常以短视距引导为条件进行视频规划，并通过场景重建恢复几何航路点，而对较长视距规划和精确的视频到动作转换的探索较少。我们提出了 CueNav，一种基于视频模型的导航框架，将视觉提示引导的视频规划与特定于实施例的逆动态模型（IDM）相结合。作为视觉提示，我们使用鸟瞰图（BEV）来传达全局任务上下文，并在以自我为中心的观察中保留机器人身体的一部分以暴露具体上下文。这些线索指导视频规划器，而 IDM 将从视频规划中提取的密集流场转换为机器人动作。通过对全局任务上下文进行编码的视觉提示，CueNav 在迷宫导航中取得的成功率比没有提示的规划高出近 2 倍。 IDM 的身体感知视图可在比较方法基本上无法完成任务的狭窄通道中实现精确导航，成功率为 70%。我们进一步演示了零镜头语义条件导航以及在不同机器人平台上部署相同的视频规划器。我们的结果表明，具有特定实施例动作基础的视觉提示引导视频规划为实现长期规划和实施例感知控制的通用导航框架铺平了道路。其他结果和代码可在我们的项目网站上找到：https://cuenav.github.io。
+
+</details>
+
+---
+
+## 2. CorrRisk-WM: Corridor-Conditioned Risk World Modeling for Safety-Critical Trajectory Planning / CorrRisk-WM：用于安全关键轨迹规划的走廊条件风险世界建模
+
+**Date**: 2026-09-15 | **arXiv**: [2609.16724v1](http://arxiv.org/abs/2609.16724v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.16724v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Safe local planning requires forecasting surrounding-agent motion and evaluating candidate-specific risks, since identical agent motion can pose different risks to different ego trajectories. We present CorrRisk-WM, a planning-oriented partial world model coupling environment evolution with supervised intrusion and near-miss prediction over bounded candidate-trajectory corridors. A latent environment model recursively predicts agent states and updates agent-agent and agent-map interactions. Each candidate queries the evolving environment through footprint- aware geometry and learned agent-corridor representations. A lightweight recurrent risk module uses temporal context to estimate per-slice hazards; survival aggregation yields first-entry and horizon-level event probabilities. On 29,176 scenarios from 100 Waymo validation shards, CorrRisk-WM achieves intrusion average precision (AP) of 0.8567 and 1-m near-miss first-entry AP of 0.8671. In baseline comparisons, it attains the highest near-miss AP at all three distance thresholds and the lowest observed open-loop collision rate (4.88%), with route progress of 15.35 m. Across three seeds, removing dynamic environment modeling or candidate-conditioned geometric interaction reduces mean intrusion AP from 0.8590 to 0.7624 and 0.7252, respectively. These results support coupling environment evolution with candidate-conditioned geometric reasoning for risk prediction and safety-oriented candidate selection.
+
+安全的局部规划需要预测周围智能体的运动并评估特定于候选者的风险，因为相同的智能体运动可能会给不同的自我轨迹带来不同的风险。我们提出了 CorrRisk-WM，一种面向规划的部分世界模型，将环境演化与有界候选轨迹走廊上的监督入侵和未遂预测相耦合。潜在环境模型递归地预测智能体状态并更新智能体-智能体和智能体-地图交互。 Each candidate queries the evolving environment through footprint- aware geometry and learned agent-corridor representations.轻量级的经常性风险模块使用时间上下文来估计每切片的危险；生存聚合产生首次进入和地平线级别的事件概率。在 100 个 Waymo 验证分片的 29,176 个场景中，CorrRisk-WM 实现了 0.8567 的入侵平均精度 (AP) 和 0.8671 的 1 米近距离首次进入 AP。在基线比较中，它在所有三个距离阈值下均获得了最高的未遂 AP 和观察到的最低开环碰撞率 (4.88%)，路线进度为 15.35 m。在三个种子中，删除动态环境建模或候选条件几何相互作用可将平均入侵 AP 分别从 0.8590 降低至 0.7624 和 0.7252。这些结果支持将环境演化与候选条件几何推理耦合起来，以进行风险预测和面向安全的候选选择。
+
+</details>
+
+---
+
+## 3. The Robot Data Factory / 机器人数据工厂
+
+**Date**: 2026-09-15 | **arXiv**: [2609.16705v1](http://arxiv.org/abs/2609.16705v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.16705v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Physical AI requires more than increasingly large robot datasets: intelligent robots acquire knowledge through continuous interaction with the physical world. We argue that the defining scientific resource of Physical AI is therefore not raw robot data alone, but robot experience - physically grounded interaction whose observations, actions, embodiment, context, and outcomes preserve the perception-action-consequence loop. We introduce the Robot Data Factory (RDF), a mission-driven infrastructure and methodology for continuously generating, validating, benchmarking, and reusing such experience. RDF organizes heterogeneous robots and environment-specific training grounds through reproducible missions, skill curricula, synchronized multimodal sensing, external ground truth, an agentic robot network, data pipelines, and living benchmarks. Rather than treating datasets as static end products, RDF implements a closed Deploy-Measure-Learn-Repeat cycle in which validated physical experience supports world models, vision-language-action models, embodied policies, digital twins, and subsequent robot deployment. We further formalize robot experience and its quality, introduce a mission-task-skill-episode-dataset-benchmark-capability hierarchy, and derive quantitative scaling laws and an algorithmic synthesis procedure connecting robot fleet size, sensor rates, storage, learning representations, tokenization, training compute, inference, and latency to Embodied-AI cluster requirements. The framework is instantiated in three complementary physical training grounds for domestic, environmental, and energy applications. RDF thus reframes robot data generation as a continuous scientific production process and provides a pathway toward reproducible, scalable, and eventually federated infrastructure for Physical AI.
+
+物理人工智能需要的不仅仅是日益庞大的机器人数据集：智能机器人通过与物理世界的持续交互来获取知识。因此，我们认为，物理人工智能的定义科学资源不仅仅是原始机器人数据，而是机器人体验——基于物理的交互，其观察、行动、体现、背景和结果保留了感知-行动-结果循环。我们引入了机器人数据工厂（RDF），这是一种任务驱动的基础设施和方法，用于持续生成、验证、基准测试和重用此类经验。 RDF 通过可重复的任务、技能课程、同步多模态传感、外部地面实况、代理机器人网络、数据管道和生活基准来组织异构机器人和特定环境的训练场。 RDF 没有将数据集视为静态最终产品，而是实现了一个封闭的部署-测量-学习-重复循环，其中经过验证的物理经验支持世界模型、视觉-语言-动作模型、具体策略、数字孪生和后续机器人部署。我们进一步将机器人体验及其质量形式化，引入任务-任务-技能-片段-数据集-基准-能力层次结构，并推导出定量缩放定律和算法综合程序，将机器人车队规模、传感器速率、存储、学习表示、标记化、训练计算、推理和延迟与嵌入式人工智能集群要求联系起来。该框架在三个互补的物理训练场中实例化，用于家庭、环境和能源应用。因此，RDF 将机器人数据生成重新构建为一个连续的科学生产过程，并为物理 AI 的可重复、可扩展和最终联合基础设施提供了一条途径。
+
+</details>
+
+---
+
+## 4. World Models for Embodied Intelligence: From Plausible to Controllable to Actionable / 具身智能的世界模型：从合理到可控到可操作
+
+**Date**: 2026-09-15 | **arXiv**: [2609.16697v1](http://arxiv.org/abs/2609.16697v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.16697v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models connect perception and decision-making in embodied intelligence by maintaining hidden state, anticipating consequences, comparing interventions, and adapting when execution departs from expectations. Although progress is often measured by visual fidelity, their value lies in improving behavior. Before reaching for a cup, a person anticipates its weight and resistance to grasping, shaping the hand before contact. Such anticipation is coarse and rarely pictorial, yet it guides action. This raises a central question: which predictive capabilities improve behavior? Existing surveys, organized by architecture, output modality, or application domain, leave this question implicit. We introduce three progressively stronger capability levels: Plausible models preserve task-relevant temporal, geometric, or physical structure; Controllable models additionally predict how interventions alter that structure; and Actionable models translate predictions into measurable gains in planning, action, learning, evaluation, verification, recovery, or data selection. We complement this hierarchy with a 3 x 4 matrix crossing geometry, physics, and action grounding with improvement loops centered on data, rewards, policies, and the model itself. Using this framework, we survey manipulation, navigation, locomotion, autonomous driving, and general embodied learning, tracing technical progressions, clarifying capability requirements, and examining datasets, benchmarks, and evaluation protocols. We identify challenges in long-horizon consistency, uncertainty calibration, causal intervention testing, latency, verification and recovery, and cross-embodiment transfer. This perspective shifts evaluation from visual plausibility toward whether predictions capture task-relevant state, reflect intervention effects, and improve the closed-loop behavior of embodied agents.
+
+世界模型通过维持隐藏状态、预测后果、比较干预措施以及在执行偏离预期时进行调整，将体现智能中的感知和决策联系起来。尽管进步通常通过视觉保真度来衡量，但其价值在于改善行为。在伸手拿杯子之前，人们会预计杯子的重量和抓握的阻力，从而在接触之前塑造手形。这种预期是粗略的，很少是形象化的，但它指导着行动。这就提出了一个核心问题：哪些预测能力可以改善行为？现有的按架构、输出模式或应用程序领域组织的调查并未明确这个问题。我们引入了三个逐渐增强的能力级别：合理的模型保留与任务相关的时间、几何或物理结构；可控模型还可以预测干预措施如何改变该结构；可操作的模型将预测转化为规划、行动、学习、评估、验证、恢复或数据选择方面可衡量的收益。我们用一个跨越几何、物理和行动基础的 3 x 4 矩阵来补充这个层次结构，并以数据、奖励、策略和模型本身为中心的改进循环。使用这个框架，我们调查操纵、导航、运动、自动驾驶和一般体现学习，跟踪技术进展，澄清能力要求，并检查数据集、基准和评估协议。我们确定了长期一致性、不确定性校准、因果干预测试、延迟、验证和恢复以及跨实体传输方面的挑战。这种观点将评估从视觉合理性转向预测是否捕获任务相关状态、反映干预效果并改善实体主体的闭环行为。
+
+</details>
+
+---
+
+## 5. AI for Games in the Foundation Model Era / 基础模型时代的游戏人工智能
+
+**Date**: 2026-09-15 | **arXiv**: [2609.16679v1](http://arxiv.org/abs/2609.16679v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.16679v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Foundation models, alongside advances in learned game-world models, are reshaping AI across the game lifecycle. Beyond playing games, recent systems model players and game dynamics, support design and development, adapt player-facing experiences at runtime, and evaluate resulting artifacts. Yet these directions have evolved largely separately, obscuring which capabilities transfer across settings and which remain tied to particular games, engines, interfaces, or player populations. We organize the literature into six roles according to the immediate use of AI output: playing and acting; modeling players and games; designing games; building and maintaining games; generating and adapting at runtime; and testing and evaluating games. For each role, we examine what structure is supplied by the game or workflow, what AI learns or produces, which capabilities and artifacts transfer across settings and roles, and what evidence supports the claims. We identify cross-role connections: trajectories train world models, learned environments provide experience for agents, design specifications drive executable implementations, and play or testing feedback guides revision. However, control schemes, rules, engine interfaces, state representations, and player contexts often remain setting-specific, so downstream claims require validation in the target setting. Evaluation is most standardized for bounded game playing and selected learned environments, while persistent state in learned worlds, repeated software revision, validated player modeling, sustained runtime adaptation, and representative automated testing remain less established. The central challenge is to reuse or transfer outputs and capabilities across roles while re-establishing evidence for effectiveness in the game-specific contexts where they are used.
+
+基础模型以及学习游戏世界模型的进步正在重塑整个游戏生命周期的人工智能。除了玩游戏之外，最近的系统还对玩家和游戏动态进行建模，支持设计和开发，在运行时调整面向玩家的体验，并评估生成的工件。然而，这些方向在很大程度上是独立发展的，模糊了哪些功能可以跨环境转移，哪些功能仍然与特定的游戏、引擎、界面或玩家群体相关。我们根据人工智能输出的直接使用将文献分为六个角色：扮演和表演；为玩家和游戏建模；设计游戏；构建和维护游戏；在运行时生成和调整；以及测试和评估游戏。对于每个角色，我们都会检查游戏或工作流程提供的结构、人工智能学习或生成的内容、跨设置和角色传输的功能和工件以及支持声明的证据。我们确定跨角色联系：轨迹训练世界模型，学习环境为代理提供经验，设计规范驱动可执行的实现，以及播放或测试反馈指南修订。然而，控制方案、规则、引擎接口、状态表示和玩家上下文通常仍然是特定于设置的，因此下游声明需要在目标设置中进行验证。对于有界游戏和选定的学习环境，评估是最标准化的，而学习世界中的持久状态、重复的软件修订、经过验证的玩家建模、持续的运行时适应和代表性的自动化测试仍然不太确定。核心挑战是跨角色重用或转移输出和能力，同时重新建立证据以证明其在特定游戏环境中的有效性。
+
+</details>
+
+---
+
+## 6. Autonomous Droplet Navigation via Model-Based Reinforcement Learning / 通过基于模型的强化学习进行自主液滴导航
+
+**Date**: 2026-09-14 | **arXiv**: [2609.16369v1](http://arxiv.org/abs/2609.16369v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.16369v1)
+
+**Categories**: cs.LG, cs.RO, eess.SY, physics.flu-dyn
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Precise manipulation of liquid droplets underpins lab-on-a-chip platforms for diagnostics, chemical synthesis, and biological assays. Yet autonomous droplet transport through confined geometries of varying complexity remains an open challenge. Droplets exhibit contact-angle hysteresis, deformability, and capillary pinning, which make their response to actuation nonlinear and history dependent, that classical controllers and pre-programmed trajectories cannot cope in multi-turn environments. Here we demonstrate autonomous navigation of a liquid droplet through geometries of increasing complexity on a gravity driven (Labyrinth) platform using model-based reinforcement learning. A thin silicone oil film reduces contact-line pinning while two-axis tilt supplies the gravitational driving force, and an overhead camera tracks the droplet in real time. An offline-trained policy discovers effective tilt strategies from limited physical interaction data, without simulation or analytical droplet models. The system operates under partial observability, as oil-film thickness, instantaneous contact angle, and droplet deformation state remain hidden from the controller. Despite these challenges, the learned policy achieves reliable navigation across straight, right-angle, and curved-arc paths, including outside-corner geometries. We further demonstrate that a policy trained on a simpler geometry transfers to complex ones, succeeding zero-shot on right-angle and staircase paths and reaching full success on a curved arc with a fifth of the training data. The findings suggest promising avenues for enabling droplet based microfluidic systems to serve as intelligent chemical laboratories.
+
+液滴的精确操纵支撑着用于诊断、化学合成和生物测定的芯片实验室平台。然而，通过不同复杂性的有限几何形状的自主液滴传输仍然是一个开放的挑战。液滴表现出接触角滞后、可变形性和毛细管钉扎，这使得它们对驱动的响应呈非线性且依赖于历史，而经典控制器和预编程轨迹无法在多圈环境中应对。在这里，我们使用基于模型的强化学习在重力驱动（迷宫）平台上演示了液滴通过日益复杂的几何形状的自主导航。薄薄的硅油膜减少了接触线钉扎，同时两轴倾斜提供了重力驱动力，并且顶部摄像头实时跟踪液滴。离线训练的策略可以从有限的物理交互数据中发现有效的倾斜策略，而无需模拟或分析液滴模型。该系统在部分可观察性下运行，因为油膜厚度、瞬时接触角和液滴变形状态对控制器来说仍然是隐藏的。尽管存在这些挑战，学习的策略仍然实现了跨越直线、直角和弯弧路径（包括外角几何形状）的可靠导航。我们进一步证明，在更简单的几何形状上训练的策略可以转移到复杂的几何形状，在直角和楼梯路径上成功实现零射击，并使用五分之一的训练数据在弧形路径上取得完全成功。这些发现表明，基于液滴的微流体系统可以作为智能化学实验室，这是有希望的途径。
+
+</details>
+
+---
+
+## 7. When Should a World Model Move? Loss-Conditioned State Execution / 世界模型何时应该移动？丢失条件状态执行
+
+**Date**: 2026-09-14 | **arXiv**: [2609.15801v1](http://arxiv.org/abs/2609.15801v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.15801v1)
+
+**Categories**: cs.AI, cs.LG, math.OC
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We introduce loss-conditioned state execution, a model-agnostic method that decides whether to execute a world model's fixed feasible proposal or retain the current state. Predictive informativeness alone, however, does not establish whether an update will reduce downstream loss. Occurrence ranking can approach perfection while persistence remains the unique absolute-loss Bayes action. Two transition laws can also share occurrence information and conditional variance yet require opposite absolute-loss decisions. We formalize state movability as the existence of a loss-reducing feasible correction and distinguish it from the benefit of a particular proposal. Our method constructs a loss-specific feasible proposal from a predictive distribution and evaluates its groupwise bounded-loss gain over persistence on independent calibration units. The proposal is executed only in groups with a positive simultaneous lower confidence bound. For fixed proposals and groups with bounded unit losses, we prove that every accepted group has lower expected loss than persistence with high probability when calibration units are i.i.d. draws from the target population. Experiments on public forecasting and action-conditioned dynamics benchmarks show supported updates and a trade-off between certification and coverage. On 28,684 held-out M4 Monthly series, the method executes the proposal for 14.0% of series and achieves bounded loss 0.588, compared with 0.599 for persistence and 0.621 for always executing the proposal. The paired 95% bootstrap intervals for both comparisons lie below zero. In constrained forecasting of six unhealthy-inventory types from JD$\mbox{.}$com, a leading e-retailer in China, strong occurrence-ranking signal coexists with a loss-based preference for persistence, illustrating why event predictability and state execution must be evaluated separately.
+
+我们引入了损失条件状态执行，这是一种与模型无关的方法，用于决定是执行世界模型的固定可行建议还是保留当前状态。然而，仅预测信息并不能确定更新是否会减少下游损失。出现次数排序可以接近完美，而持久性仍然是独特的绝对损失贝叶斯操作。两个转移律还可以共享发生信息和条件方差，但需要相反的绝对损失决策。我们将状态可动性形式化为减少损失的可行修正的存在，并将其与特定提案的好处区分开来。我们的方法根据预测分布构建特定于损失的可行建议，并评估其在独立校准单元上的持久性的分组有界损失增益。该提案仅在具有正同时置信下限的组中执行。对于固定提案和具有有限单位损失的组，我们证明当校准单位是 i.i.d 时，每个接受的组的预期损失都低于持久性。从目标人群中抽取。对公共预测和行动条件动态基准的实验显示了支持的更新以及认证和覆盖范围之间的权衡。在 28,684 个持有的 M4 每月系列中，该方法对 14.0% 的系列执行建议，并实现有限损失 0.588，而持久性损失为 0.599，始终执行建议为 0.621。两次比较的配对 95% 自举区间均低于零。在中国领先的电子零售商 JD$\mbox{.}$com 对六种不健康库存类型的有限预测中，强烈的发生排名信号与基于损失的持久性偏好共存，这说明了为什么必须单独评估事件可预测性和状态执行。
+
+</details>
+
+---
+
+## 8. When the World Lies: Backdoor Attacks on Latent World Models for Downstream Control / 当世界撒谎时：对下游控制的潜在世界模型的后门攻击
+
+**Date**: 2026-09-14 | **arXiv**: [2609.15781v1](http://arxiv.org/abs/2609.15781v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.15781v1)
+
+**Categories**: cs.CR, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Pretrained world models, learned simulators that encode an observation into a latent state and predict how it evolves under actions, are beginning to be reused as off-the-shelf dynamics backbones for control, like pretrained encoders and language models are reused today. We show that this reuse opens a supply-chain backdoor: an adversary who controls only a released checkpoint can hijack the downstream controller, even though the victim trains and evaluates entirely on clean data and never sees the trigger. The attack encodes no explicit trigger-to-action rule. Instead, the poisoned model routes trigger-bearing observations into a chosen latent region and reshapes the local dynamics there, so that the victim's own optimization (Dreamer-style actor training in imagination, or MPC/CEM planning over predicted futures) re-discovers the attacker's target action on its own. Across several control tasks and trigger families, the trigger steers the controller's action toward the attacker's target, controlling every action dimension and hijacking 100\% of triggered steps on the strongest settings. The checkpoint still passes the clean-data diagnostics a victim would run before deployment, with clean-task success retaining at least $\sim$75\%. The effect is temporally gated: it appears only while the trigger is present and disappears when the trigger is removed. Trigger-blind repair is budget-dependent: moderate clean fine-tuning can preserve clean utility while leaving the triggered failure intact, whereas sufficiently aggressive adaptation can remove it only after substantially degrading clean control. The world-model backbone itself is therefore an emerging and underexamined attack surface for control. The full code and artifacts are available in our repository.
+
+预训练的世界模型，即将观察结果编码为潜在状态并预测其在动作下如何演变的学习模拟器，开始被重新用作现成的控制动力学主干，就像今天重新使用预训练的编码器和语言模型一样。我们表明，这种重用打开了供应链后门：仅控制已发布检查点的对手可以劫持下游控制器，即使受害者完全根据干净的数据进行训练和评估并且从未看到触发器。该攻击没有编码明确的触发操作规则。相反，中毒模型将触发观测结果路由到选定的潜在区域，并重塑那里的局部动态，以便受害者自己的优化（梦想家式的演员想象力训练，或对预测的未来进行 MPC/CEM 规划）自行重新发现攻击者的目标行动。在多个控制任务和触发器系列中，触发器将控制器的操作引导至攻击者的目标，控制每个操作维度并在最强设置上劫持 100% 的触发步骤。检查点仍然通过受害者在部署之前运行的干净数据诊断，干净任务成功保留至少 $\sim$75\%。该效果是临时门控的：它仅在触发器存在时出现，并在触发器被移除时消失。触发盲修复取决于预算：适度的清洁微调可以保留清洁效用，同时保持触发的故障完好无损，而足够积极的适应只能在严重降低清洁控制后才能将其消除。因此，世界模型主干本身是一个新兴的、未经充分审查的控制攻击面。完整的代码和工件可以在我们的存储库中找到。
+
+</details>
+
+---
+
+## 9. JEPLO: Joint-Embedding Predictive Learning for LiDAR-Based Legged Locomotion / JEPLO：基于 LiDAR 的腿部运动的联合嵌入预测学习
+
+**Date**: 2026-09-14 | **arXiv**: [2609.15770v1](http://arxiv.org/abs/2609.15770v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.15770v1)
+
+**Categories**: cs.RO
+
+**Code**: https://github.com/ASIG-X/JEPLO.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Light detection and ranging (LiDAR) remains less explored than RGB-D sensing for perceptive legged locomotion, and existing LiDAR-based approaches often rely on explicit mapping. We present JEPLO (Joint-Embedding Predictive learning for legged LOcomotion), a single-stage learning framework for mapping-free, LiDAR-based perceptive locomotion for legged robots. We introduce a proprio-exteroceptive JEPA (PE-JEPA) world model to learn predictive egocentric terrain representations from onboard observations, including raw LiDAR scans. A concurrent JEPA-teacher-student (CJTS) pipeline is further proposed to train a locomotion policy informed by JEPA latent representations in simulation using deep reinforcement learning with a simple reward formulation. The framework achieves successful sim-to-real transfer, enabling omnidirectional traversal of diverse terrains, including long staircases and high boxes, with lightweight onboard computation. Evaluations demonstrate greater robustness than existing perceptive locomotion frameworks, particularly under degraded perception caused by occlusion, sparsity and noise. Further analysis validates JEPLO's ability to retain task-relevant information under these challenging conditions. We open-source our implementation, experimental datasets, and hardware setup designs https://github.com/ASIG-X/JEPLO.
+
+与用于感知腿部运动的 RGB-D 传感相比，光检测和测距 (LiDAR) 的探索仍然较少，并且现有的基于 LiDAR 的方法通常依赖于显式映射。我们提出了 JEPLO（腿式运动的联合嵌入预测学习），这是一种单阶段学习框架，用于腿式机器人的无映射、基于激光雷达的感知运动。我们引入了一种本体外感受 JEPA (PE-JEPA) 世界模型，用于从机载观测（包括原始 LiDAR 扫描）中学习预测性以自我为中心的地形表征。进一步提出了并行的 JEPA-教师-学生 (CJTS) 管道，以使用深度强化学习和简单的奖励公式来训练模拟中由 JEPA 潜在表示通知的运动策略。该框架成功实现了模拟到真实的转换，能够通过轻量级的板载计算全方位遍历不同的地形，包括长楼梯和高盒子。评估表明比现有的感知运动框架具有更高的鲁棒性，特别是在遮挡、稀疏和噪声引起的感知退化的情况下。进一步的分析验证了 JEPLO 在这些具有挑战性的条件下保留任务相关信息的能力。我们开源我们的实现、实验数据集和硬件设置设计 https://github.com/ASIG-X/JEPLO。
+
+</details>
+
+---
+
+## 10. Spook the Machine: Gamified Exploration of Human Imagination of Machine Fear / 吓坏机器：人类对机器恐惧的想象的游戏化探索
+
+**Date**: 2026-09-14 | **arXiv**: [2609.15472v1](http://arxiv.org/abs/2609.15472v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.15472v1)
+
+**Categories**: cs.HC, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+What happens when AI machines express fear? Do humans engage differently depending on how they express it? And what does it take to design for affective human-AI interaction? We present Spook the Machine, a gamified platform where participants generate images to frighten AI agents endowed with personality-driven phobias. Machines respond with emotional reactions ranging from calm analysis to begging for mercy, and a gallery of successful scares becomes visible to subsequent users. In a public deployment during Halloween 2024, 832 participants created 15,719 artifacts across 89 machines in a $2\times2$ design varying the machine's emotional expressiveness (neutral vs. high-emotion) and reward structure (rewarding scariness alone vs. scariness plus novelty). Emotionally expressive machines deepened engagement at moments of failure: users deliberated longer even when the machine did not express fear, and learned faster from the gallery, yet their creative output remained unchanged across all measures. Rewarding novelty sustained collective creative diversity over time; without it, users increasingly repeated what had previously worked. Each machine developed its own trajectory through accumulated social learning, with the gallery shaping what participants created next. These findings show that emotional expression and reward design are complementary levers for steering collective human-AI interaction: emotional expression shapes how deeply users engage, while reward structure shapes how they explore.
+
+当人工智能机器表达恐惧时会发生什么？人们的参与方式是否会因表达方式的不同而有所不同？设计人类与人工智能的情感交互需要什么？我们推出了 Spook the Machine，这是一个游戏化平台，参与者可以生成图像来吓唬具有个性驱动恐惧症的人工智能代理。机器会做出情绪反应，从冷静分析到乞求怜悯，随后的用户可以看到一系列成功的恐慌。在 2024 年万圣节期间的公开部署中，832 名参与者在 89 台机器上以 2\times2$ 的设计创建了 15,719 个工件，设计改变了机器的情感表达（中性与高情感）和奖励结构（单独奖励恐怖与恐怖加新奇）。具有情感表达能力的机器在失败时加深了参与度：即使机器没有表达恐惧，用户也会思考更长时间，并且从画廊中学习得更快，但他们的创意输出在所有指标上都保持不变。随着时间的推移，奖励新颖性，持续保持集体创意多样性；如果没有它，用户就会越来越多地重复以前有效的方法。每台机器通过积累的社会学习形成了自己的轨迹，画廊塑造了参与者下一步创造的东西。这些发现表明，情感表达和奖励设计是指导人类与人工智能集体交互的互补杠杆：情感表达决定了用户参与的深度，而奖励结构决定了他们探索的方式。
+
+</details>
+
+---
+
+## 11. From Prediction to Decision: World-Model-Guided Action Selection for Continuous Pile Excavation / 从预测到决策：世界模型引导的连续桩挖掘行动选择
+
+**Date**: 2026-09-14 | **arXiv**: [2609.15382v1](http://arxiv.org/abs/2609.15382v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.15382v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Wheel-loader excavation is a sequential decision problem in which every scoop changes the terrain available to subsequent actions. A practical world model must predict action consequences accurately, rank candidates in real time, and operate inside the closed loop of a full-size machine. We present the World-Action Model (WAM), which proposes multiple scoops, rejects geometrically inadmissible candidates, jointly predicts signed terrain change and loaded volume, executes the candidate with the largest predicted load, and replans from the newly observed terrain. On 32 geometry-disjoint MinSlope test episodes, adding world-model ranking to matched diffusion proposals reduces the mean scoop count from 651.8 to 540.6 (17.1%), preserves 32/32 completion, and improves every paired episode. In a complete-system comparison, WAM completes 32/32 episodes versus 29/32 for an independently trained soft actor-critic policy. Comparisons of input representations, spatial support, and five architectures identify an accurate and efficient physics-structured predictor. We further evaluate the interface on event-disjoint full-size-loader data and deploy the complete perception-proposal-prediction-selection-execution loop for autonomous excavation. The ROS2/TensorRT implementation processes five candidates in 72.4 ms on a Jetson AGX Orin. The simulation results establish decision-level gains, while the physical experiments demonstrate real-world closed-loop feasibility.
+
+轮式装载机挖掘是一个顺序决策问题，其中每个挖掘都会改变后续操作可用的地形。实际世界模型必须准确预测行动后果，实时对候选者进行排名，并在全尺寸机器的闭环内运行。我们提出了世界行动模型（WAM），它提出了多个勺子，拒绝几何上不可接受的候选者，联合预测有符号的地形变化和负载量，执行具有最大预测负载的候选者，并根据新观察到的地形重新规划。在 32 个几何不相交的 MinSlope 测试集中，将世界模型排名添加到匹配的扩散提案中，将平均勺数从 651.8 减少到 540.6 (17.1%)，保留 32/32 的完成度，并​​改进每个配对的集中。在完整的系统比较中，WAM 完成了 32/32 集，而独立训练的软演员批评策略则完成了 29/32。输入表示、空间支持和五种架构的比较确定了准确且高效的物理结构预测器。我们进一步评估事件不相交的全尺寸加载器数据的接口，并部署完整的感知-建议-预测-选择-执行循环以进行自主挖掘。 ROS2/TensorRT 实现在 Jetson AGX Orin 上用 72.4 毫秒处理五个候选者。仿真结果建立了决策级增益，而物理实验则证明了现实世界闭环的可行性。
+
+</details>
+
+---
+
+## 12. Legislating World-Model-Based Planning with Legal Reasoning / 用法律推理对基于世界模型的规划进行立法
+
+**Date**: 2026-09-14 | **arXiv**: [2609.15113v1](http://arxiv.org/abs/2609.15113v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.15113v1)
+
+**Categories**: cs.RO, cs.AI, cs.LO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+As robotic systems grow more general, legal norms are needed to integrate them into society. This paper extends the isomorphism problem of aligning legal source texts with their encodings, and measures two key challenges to robot normative control: (1) the \textit{grounding isomorphism gap}, where perception error grounds false atoms for legal reasoning, and (2) the \textit{ontological isomorphism gap}, where one legal conclusion admits many faithful translations into planning constraints. The paper introduces a legal planning stack that employs Defeasible Deontic Logic (DDL) to constrain a motion planner. The stack leverages learned world models to plan and to provide legal context, enabling \textit{ex ante} governance that intervenes before an illegal action is executed. It was deployed on a simulated robot arm pushing a cube across a $3\times3$ grid. The findings were (1) the legislated agent abided substantially more often than the non-legislated one, and modeling perception uncertainty lifted abidance even further, (2) the legal reasoning ran efficiently at runtime and its verdicts were auditable, and (3) the stack adapted to exogenous signals and endogenous rule changes. Both gaps were measured: (4) world model and probe error corrupted the factual input for the DDL reasoner, and (5) a single law admitted several faithful metric interpretations yielding drastically different abidance. Thus, \textit{ex ante} legislation functions as intended, and closing these gaps with a standardized mapping from the law to runtime constraints and improved fact grounding from perception will yield robust laws that align robot behavior with society's norms.
+
+随着机器人系统变得更加普遍，需要法律规范将其融入社会。本文扩展了将法律源文本与其编码对齐的同构问题，并衡量了机器人规范控制的两个关键挑战：（1）\textit{基础同构差距}，其中感知错误为法律推理提供了虚假原子；（2）\textit{本体同构差距}，其中一个法律结论承认许多忠实的翻译为规划约束。本文介绍了一种合法的规划堆栈，它采用可废道义逻辑 (DDL) 来约束运动规划器。该堆栈利用学习的世界模型来规划并提供法律背景，从而实现在执行非法行为之前进行干预的 \textit{ex ante} 治理。它被部署在一个模拟机器人手臂上，将一个立方体推过一个 $3\times3$ 的网格。研究结果是（1）立法代理人比非立法代理人遵守的频率要高得多，并且建模感知不确定性进一步提高了遵守程度；（2）法律推理在运行时有效运行，其判决是可审计的；（3）堆栈适应了外生信号和内生规则变化。这两个差距都被测量了：(4) 世界模型和探测错误破坏了 DDL 推理器的事实输入，(5) 单一定律承认几种忠实的度量解释，产生截然不同的遵守情况。因此，\textit{事前}立法按预期发挥作用，并通过从法律到运行时约束的标准化映射以及改进的感知事实基础来缩小这些差距，将产生使机器人行为与社会规范保持一致的强有力的法律。
+
+</details>
+
+---
+
+## 13. World-Action Models for Robot Learning and Control: A Survey / 机器人学习和控制的世界行动模型：调查
+
+**Date**: 2026-09-13 | **arXiv**: [2609.16074v1](http://arxiv.org/abs/2609.16074v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.16074v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Robots operating in open environments act under partial observability, physical constraints, and dynamic task contexts. Beyond mapping observations and language instructions to actions, they must anticipate how candidate actions may affect future states and task-relevant outcomes. Recent advances in world models, video generation, and Vision-Language-Action (VLA) policies have motivated the development of World-Action Models (WAMs), which couple future world prediction with executable action generation. This survey provides a robotics-oriented review of WAMs. We clarify their scope relative to conventional world models, model-based reinforcement learning, action-conditioned video generation, and reactive VLA policies, and organize existing methods through a unified taxonomy covering representations, transition modeling, action interfaces, architectures, training pipelines, data modalities, and scaling strategies. We further review applications of WAMs in manipulation, navigation, and autonomous driving, and we summarize the datasets, benchmarks, metrics, and protocols used to evaluate WAM systems. Finally, we discuss key challenges in action alignment, world-action factorization, spatial and multi-view consistency, long-horizon memory, neural simulation for closed-loop policy learning, and efficient inference. Taken together, this survey aims to provide a concise technical foundation for integrating predictive world modeling with action generation, toward more reliable embodied robot intelligence. Project page: https://rcl-robotics.github.io/Awesome-World-Action-Models.
+
+在开放环境中运行的机器人在部分可观察性、物理约束和动态任务环境下运行。除了将观察和语言指令映射到行动之外，他们还必须预测候选行动可能如何影响未来的状态和任务相关的结果。世界模型、视频生成和视觉-语言-行动（VLA）政策的最新进展推动了世界行动模型（WAM）的发展，它将未来世界预测与可执行行动生成结合起来。这项调查对 WAM 进行了面向机器人的审查。我们阐明了它们相对于传统世界模型、基于模型的强化学习、动作条件视频生成和反应式 VLA 策略的范围，并通过涵盖表示、转换建模、动作接口、架构、训练管道、数据模式和扩展策略的统一分类法来组织现有方法。我们进一步回顾了 WAM 在操纵、导航和自动驾驶方面的应用，并总结了用于评估 WAM 系统的数据集、基准、指标和协议。最后，我们讨论了行动对齐、世界行动分解、空间和多视图一致性、长视野记忆、闭环策略学习的神经模拟和高效推理方面的关键挑战。总而言之，这项调查旨在为将预测世界建模与动作生成相结合提供简洁的技术基础，以实现更可靠的机器人智能。项目页面：https://rcl-robotics.github.io/Awesome-World-Action-Models。
+
+</details>
+
+---
+
+## 14. GLAM: Training a latent world model over global spatiotemporal memory for active exploration and navigation / GLAM：通过全局时空记忆训练潜在世界模型，以进行主动探索和导航
+
+**Date**: 2026-09-13 | **arXiv**: [2609.14561v1](http://arxiv.org/abs/2609.14561v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.14561v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Active exploration and semantic navigation require an embodied agent to build memory from partial observations, predict how the evolution of observed spatial memory may support future motion, and convert that prediction into actionable plans. We present GLAM, a goal-conditioned latent world model trained over global spatiotemporal memory, and GLAM NAV, the complete navigation system built around it. Given historical map tokens, a navigation goal, and the current robot pose, GLAM jointly predicts future map representations and robot-centric waypoint latents, allowing future spatial context and navigation intent to be inferred in a shared representation space. The model follows a JEPA-like latent prediction paradigm, operates directly on map-level latent tokens rather than RGB reconstruction, and uses a pretrained waypoint encoder-decoder to supervise and decode navigation plans within GLAM NAV. Training data are collected by replaying ObjectNav expert trajectories in Habitat over HM3D v0.2 scene assets and slicing them into multi-timescale prediction samples. On a controlled HM3D-ObjectNav subset reproduction setting, GLAM NAV improves over a reproduced BSC-Nav baseline in both success rate and success weighted by path length.
+
+主动探索和语义导航需要一个实体代理从部分观察中构建记忆，预测观察到的空间记忆的演变如何支持未来的运动，并将该预测转化为可行的计划。我们提出了 GLAM，一个通过全局时空记忆训练的目标条件潜在世界模型，以及 GLAM NAV，围绕它构建的完整导航系统。给定历史地图标记、导航目标和当前机器人姿态，GLAM 联合预测未来的地图表示和以机器人为中心的潜在路径点，从而允许在共享表示空间中推断未来的空间上下文和导航意图。该模型遵循类似 JEPA 的潜在预测范例，直接在地图级潜在标记上运行，而不是 RGB 重建，并使用预训练的航路点编码器-解码器来监督和解码 GLAM NAV 中的导航计划。通过在 HM3D v0.2 场景资产上重播 Habitat 中的 ObjectNav 专家轨迹并将其切片为多时间尺度预测样本来收集训练数据。在受控的 HM3D-ObjectNav 子集再现设置上，GLAM NAV 在成功率和按路径长度加权的成功率方面均优于再现的 BSC-Nav 基线。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-09-11 (7 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-09-11
