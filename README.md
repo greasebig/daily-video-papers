@@ -27,6 +27,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-09-17](papers/2026-09-17.md) - 5 papers
 - [2026-09-16](papers/2026-09-16.md) - 23 papers
 - [2026-09-11](papers/2026-09-11.md) - 8 papers
 - [2026-09-10](papers/2026-09-10.md) - 26 papers
@@ -179,6 +180,98 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-09-17 (5 papers)</b></summary>
+
+# arXiv Video Papers - 2026-09-17
+
+**Paper Count**: 5
+
+---
+
+## 1. CapMap-MS-TTA: 3rd Place Solution for the MUMU Track of the 8th LSVOS Challenge at ECCV 2026 / CapMap-MS-TTA：ECCV 2026 第八届 LSVOS 挑战赛 MUMU 赛道第三名解决方案
+
+**Date**: 2026-09-16 | **arXiv**: [2609.18206v1](http://arxiv.org/abs/2609.18206v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.18206v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The MUMU track of the 8th Large-scale Video Object Segmentation (LSVOS) Challenge requires a single unified multimodal model to jointly solve image tagging (Task A), open-vocabulary object detection (Task B), and English captioning (Task C) under strict resource constraints (<=0.5B parameters and <=8 GB peak GPU memory). We present CapMap-MS-TTA, a training-free submission built on Microsoft Florence-2-base (~231M parameters), combining caption keyword mapping with multi-scale flip test-time augmentation. Task C uses the native <DETAILED_CAPTION> pathway with length/token sanitization. Task A maps the same detailed caption into the official quality/scene/event vocabularies via an expanded keyword lexicon with whole-word matching and a lightweight expand-hints stage. Task B runs Florence-2 open detection (<OD>) with multi-scale and horizontal-flip test-time augmentation (TTA), followed by label-aware non-maximum suppression (NMS). Without fine-tuning, the system improves our reproduced Florence-2 baseline from 15.16 to a best public score of 16.4815, and ranks 3rd on the final MUMU leaderboard.
+
+第八届大规模视频对象分割（LSVOS）挑战赛的 MUMU 赛道需要一个统一的多模态模型，在严格的资源限制（<=0.5B 参数和 <=8 GB 峰值 GPU 内存）下联合解决图像标记（任务 A）、开放词汇对象检测（任务 B）和英语字幕（任务 C）。我们提出了 CapMap-MS-TTA，这是一种基于 Microsoft Florence-2-base（约 231M 参数）构建的免训练提交，将标题关键字映射与多尺度翻转测试时间增强相结合。任务 C 使用本机 <DETAILED_CAPTION> 路径进行长度/令牌清理。任务 A 通过具有全字匹配的扩展关键字词典和轻量级扩展提示阶段，将相同的详细标题映射到官方质量/场景/事件词汇中。任务 B 运行具有多尺度和水平翻转测试时间增强 (TTA) 的 Florence-2 开放检测 (<OD>)，然后是标签感知非极大值抑制 (NMS)。在不进行微调的情况下，该系统将我们复制的 Florence-2 基线从 15.16 提高到最佳公开分数 16.4815，并在最终 MUMU 排行榜上排名第三。
+
+</details>
+
+---
+
+## 2. vidax: A Unified JAX Framework for Video Generative Models on Accelerator Meshes / vidax：加速器网格上视频生成模型的统一 JAX 框架
+
+**Date**: 2026-09-16 | **arXiv**: [2609.18077v1](http://arxiv.org/abs/2609.18077v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.18077v1)
+
+**Categories**: cs.CV, cs.DC, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Open-source video generative models ship almost exclusively as PyTorch/CUDA reference implementations. This leaves Cloud TPU pods without a production-ready inference path, despite offering large, cost-effective accelerator memory pools ideal for long-sequence spatiotemporal attention. We present vidax, an open-source JAX/Flax inference engine and zero-copy PyTorch-to-JAX weight translator for modern video generation architectures. vidax covers a diverse set of spatiotemporal models --- including Diffusion Transformers, omnimodal Mixture-of-Transformers, 3D VAEs, text encoders, and native samplers --- with zero PyTorch dependency in the execution path. The framework unifies 1D tensor parallelism with DeepSpeed-Ulysses sequence parallelism on a single JAX sharding mesh, integrates TPU flash-attention kernels, and implements per-layer weight offloading to support reference resolutions that exceed single-device memory. We benchmark compile times, latency, and peak memory utilization on TPU v4-8 hardware, and document real-world numerical bugs surfaced during checkpoint translation. vidax is released open-source as a baseline for JAX and TPU video generation research.
+
+开源视频生成模型几乎完全作为 PyTorch/CUDA 参考实现提供。尽管提供了大型、经济高效的加速器内存池，非常适合长序列时空注意力，但这使得 Cloud TPU Pod 没有生产就绪的推理路径。我们推出了 vidax，一种开源 JAX/Flax 推理引擎和用于现代视频生成架构的零拷贝 PyTorch 到 JAX 权重转换器。 vidax 涵盖了多种时空模型——包括扩散变压器、全模态混合变压器、3D VAE、文本编码器和本机采样器——执行路径中对 PyTorch 的依赖性为零。该框架将 1D 张量并行性与 DeepSpeed-Ulysses 序列并行性统一在单个 JAX 分片网格上，集成 TPU 闪存注意力内核，并实现每层权重卸载以支持超过单设备内存的参考分辨率。我们对 TPU v4-8 硬件上的编译时间、延迟和峰值内存利用率进行基准测试，并记录检查点转换过程中出现的实际数字错误。 vidax 已开源发布，作为 JAX 和 TPU 视频生成研究的基准。
+
+</details>
+
+---
+
+## 3. PhysStream: Streaming Physics-Grounded Video Generation with Structured Scene Memory and Fine-Grained Motion Control / PhysStream：具有结构化场景内存和细粒度运动控制的基于物理的流式视频生成
+
+**Date**: 2026-09-15 | **arXiv**: [2609.17521v1](http://arxiv.org/abs/2609.17521v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.17521v1)
+
+**Categories**: cs.CV, cs.AI, cs.GR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Interactive control for video generation is moving from coarse prompts toward fine-grained, physically meaningful manipulation of dynamic scenes. Yet existing controllable methods either require the full control schedule before generation starts, or use pixel-space signals that dictate object positions rather than physical dynamics. To address these limitations, we propose PhysStream, an autoregressive model for physics-grounded image-to-video synthesis that incorporates structured scene memory---positional maps and object tracking maps derived online from previously generated frames---and supports fine-grained motion control via sparse velocity-increment signals that encode physical quantities, letting the model learn the underlying dynamics. We train our model in two stages: a bidirectional model is first finetuned with motion-control conditioning, then a causal autoregressive model is trained with additional structured scene memory, further improving physical consistency. PhysStream enables interactive, mid-generation control over multi-object tabletop rigid-body scenes---a capability not supported by prior methods---reducing motion distribution distance (FVMD) by 33% and trajectory error by 12% over the strongest baselines on synthetic benchmarks, and is preferred by human evaluators in over 85% of in-the-wild comparisons. Please check our website for more details: https://czzzzh.github.io/PhysStream
+
+视频生成的交互控制正在从粗略的提示转向对动态场景进行细粒度的、具有物理意义的操作。然而，现有的可控方法要么在生成开始之前需要完整的控制时间表，要么使用指示对象位置而不是物理动力学的像素空间信号。为了解决这些限制，我们提出了 PhysStream，一种基于物理的图像到视频合成的自回归模型，它结合了结构化场景记忆（从先前生成的帧在线导出的位置图和对象跟踪图），并通过编码物理量的稀疏速度增量信号支持细粒度运动控制，让模型学习底层动力学。我们分两个阶段训练我们的模型：首先使用运动控制调节对双向模型进行微调，然后使用额外的结构化场景记忆来训练因果自回归模型，进一步提高物理一致性。 PhysStream 可实现对多对象桌面刚体场景的交互式中期控制（这是先前方法不支持的功能），与合成基准上最强的基线相比，将运动分布距离 (FVMD) 减少 33%，将轨迹误差减少 12%，并且在超过 85% 的野外比较中受到人类评估者的青睐。请查看我们的网站了解更多详细信息：https://czzzzh.github.io/PhysStream
+
+</details>
+
+---
+
+## 4. SlotDiT: Object-Centric Representations for Diffusion Transformers / SlotDiT：扩散变压器的以对象为中心的表示
+
+**Date**: 2026-09-15 | **arXiv**: [2609.17414v1](http://arxiv.org/abs/2609.17414v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.17414v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Text-conditioned latent diffusion models perform strongly in video generation and are promising backbones for robotic applications. However, existing approaches rely on pixel-level or VAE-based latent representations that lack explicit semantic structure, leaving the impact of the representation space largely unexplored. Slot-based object-centric representations offer a structured alternative by decomposing scenes into object-level latents, or slots. While they have shown success in dynamics modeling and planning, they have not yet been explored for diffusion-based generative modeling. We introduce SlotDiT, a text-guided Diffusion Transformer (DiT) that operates in a slot-based latent space. Given a reference image and a language instruction, SlotDiT decomposes the scene into object-centric slots representing individual entities. Conditioned on the instruction and observed scene context, the model autoregressively denoises future slot trajectories to predict scene dynamics. To systematically investigate latent-space design for diffusion transformers, we compare slot-based representations against VAE-based and semantics-aligned alternatives within a unified DiT framework. Our experiments show that using slots as DiT latents yields competitive video generation quality while consistently improving task-completion rates across four robotic datasets. Furthermore, their compact representation provides a computationally efficient alternative to VAE-based and semantics-aligned latent spaces. Overall, our results demonstrate that object-centric structure is a powerful inductive bias for diffusion-based generative modeling in robotic environments. The project page is available at https://slot-dit.github.io/.
+
+文本条件潜在扩散模型在视频生成中表现强劲，是机器人应用的有希望的支柱。然而，现有方法依赖于像素级或基于 VAE 的潜在表示，缺乏明确的语义结构，使得表示空间的影响在很大程度上未被探索。基于槽的以对象为中心的表示通过将场景分解为对象级潜在对象或槽来提供结构化替代方案。虽然它们在动力学建模和规划方面取得了成功，但尚未针对基于扩散的生成建模进行探索。我们引入了 SlotDiT，一种在基于槽的潜在空间中运行的文本引导扩散变换器 (DiT)。给定参考图像和语言指令，SlotDiT 将场景分解为代表各个实体的以对象为中心的槽。根据指令和观察到的场景上下文，该模型对未来的槽轨迹进行自回归降噪以预测场景动态。为了系统地研究扩散变压器的潜在空间设计，我们在统一的 DiT 框架内将基于槽的表示与基于 VAE 和语义对齐的替代方案进行比较。我们的实验表明，使用槽作为 DiT 潜在变量可以产生具有竞争力的视频生成质量，同时持续提高四个机器人数据集的任务完成率。此外，它们的紧凑表示为基于 VAE 和语义对齐的潜在空间提供了一种计算高效的替代方案。总的来说，我们的结果表明，以对象为中心的结构是机器人环境中基于扩散的生成建模的强大归纳偏差。项目页面位于 https://slot-dit.github.io/。
+
+</details>
+
+---
+
+## 5. XPACE: Joint World and Action Modeling from Heterogeneous Experience / XPACE：来自异构经验的联合世界和行动建模
+
+**Date**: 2026-09-15 | **arXiv**: [2609.17372v1](http://arxiv.org/abs/2609.17372v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.17372v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+A general-purpose robot needs to draw on diverse experience, choose actions, and anticipate how those actions will change the world. We introduce XPACE, a unified embodied world model that serves as both a world action model, jointly predicting executable robot actions and future video, and a world simulator, predicting the visual consequences of prescribed actions. Our key insight is that video prediction can both connect heterogeneous experience to action learning and generate new experience for policy improvement. With a shared video backbone between the policy and simulator, we use action-unlabeled video to learn visual dynamics and action-labeled human and robot demonstrations to jointly learn video and action prediction. Building on this architecture, a coarse-to-fine training curriculum progressively emphasizes robot control while retaining human experience, allowing the policy to learn behaviors beyond those covered by robot demonstrations. Beyond learning from recorded experience, XPACE uses its simulator to create additional recovery supervision for the policy. Specifically, we adapt the simulator to its own generated context, synthesize deviation-recovery trajectories around expert demonstrations, and fine-tune the policy on filtered recovery examples. Experiments on XPENG's IRON humanoid robot show that heterogeneous training improves robustness and enables transfer of human-observed skills to tasks absent from robot demonstrations, while recovery data generated by the model's own simulator further improves real-world task completion. Together, these results demonstrate how joint world and action modeling connects learning from heterogeneous experience with simulation-driven policy self-improvement.
+
+通用机器人需要借鉴不同的经验，选择行动，并预测这些行动将如何改变世界。我们引入了 XPACE，这是一个统一的具体世界模型，它既可以作为世界动作模型，联合预测可执行的机器人动作和未来视频，又可以作为世界模拟器，预测指定动作的视觉结果。我们的主要见解是，视频预测既可以将异构经验与行动学习联系起来，又可以为政策改进产生新的经验。通过策略和模拟器之间共享的视频主干，我们使用无动作标记的视频来学习视觉动力学，并使用动作标记的人类和机器人演示来共同学习视频和动作预测。在此架构的基础上，由粗到精的培训课程逐渐强调机器人控制，同时保留人类经验，使策略能够学习机器人演示之外的行为。除了从记录的经验中学习之外，XPACE 还使用其模拟器为保单创建额外的恢复监督。具体来说，我们使模拟器适应其自己生成的上下文，围绕专家演示综合偏差恢复轨迹，并根据过滤的恢复示例微调策略。小鹏汽车 IRON 人形机器人上的实验表明，异构训练提高了鲁棒性，并能够将人类观察到的技能转移到机器人演示中没有的任务上，而模型自身模拟器生成的恢复数据进一步提高了现实世界任务的完成度。这些结果共同证明了联合世界和行动建模如何将异构经验的学习与模拟驱动的政策自我完善联系起来。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-09-16 (23 papers)</b></summary>
 
 # arXiv Video Papers - 2026-09-16
