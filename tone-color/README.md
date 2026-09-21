@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-09-21](papers/2026-09-21.md) - 1 papers
 - [2026-09-20](papers/2026-09-20.md) - 2 papers
 - [2026-09-18](papers/2026-09-18.md) - 1 papers
 - [2026-09-17](papers/2026-09-17.md) - 1 papers
@@ -93,6 +94,36 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-09-21 (1 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-09-21
+
+**Paper Count**: 1
+
+---
+
+## 1. Adaptive Color Grading / 自适应颜色分级
+
+**Date**: 2026-09-18 | **arXiv**: [2609.21169v1](http://arxiv.org/abs/2609.21169v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.21169v1)
+
+**Categories**: eess.IV, cs.CV
+
+**Code**: https://github.com/SamsungLabs/adaptive-color-grading.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Independent control of tonescale regions (e.g., shadows, highlights) is essential for painters, photographers and cinematographers to bring 2D images to life. In image manipulation software this is most directly addressed by color grading modules, which use intensity thresholds to segment distinct illumination regions for local manipulation. In this work we develop an open source color grading tool and use it to annotate a large dataset of video frames with tonescale region thresholds. Using these thresholds we conduct modeling experiments with strategies based on both practitioners' conventional wisdom and machine learning. Results show that K-nearest neighbors is an effective prediction strategy, outperforming state-of-the-art end-to-end methods for image enhancement. This outcome demonstrates the benefit of focusing on a compact set of core parameters when modeling creative stylization processes. Our adaptive color grading interface and data are available at https://github.com/SamsungLabs/adaptive-color-grading.
+
+独立控制色阶区域（例如阴影、高光）对于画家、摄影师和电影摄影师将 2D 图像变为现实至关重要。在图像处理软件中，这个问题最直接地通过颜色分级模块来解决，该模块使用强度阈值来分割不同的照明区域以进行局部处理。在这项工作中，我们开发了一个开源颜色分级工具，并使用它来注释具有色调区域阈值的大型视频帧数据集。使用这些阈值，我们使用基于从业者的传统智慧和机器学习的策略进行建模实验。结果表明，K 最近邻是一种有效的预测策略，优于最先进的端到端图像增强方法。这一结果证明了在对创意风格化过程进行建模时关注一组紧凑的核心参数的好处。我们的自适应颜色分级界面和数据可在 https://github.com/SamsungLabs/adaptive-color-grading 上获取。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-09-20 (2 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-09-20
