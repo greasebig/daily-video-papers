@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-09-22](papers/2026-09-22.md) - 4 papers
 - [2026-09-21](papers/2026-09-21.md) - 1 papers
 - [2026-09-20](papers/2026-09-20.md) - 2 papers
 - [2026-09-18](papers/2026-09-18.md) - 1 papers
@@ -94,6 +95,84 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-09-22 (4 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-09-22
+
+**Paper Count**: 4
+
+---
+
+## 1. Paint-Anything: Unified Any-Color Control for Image Generation and Editing / Paint-Anything：用于图像生成和编辑的统一任意颜色控制
+
+**Date**: 2026-09-17 | **arXiv**: [2609.20816v2](http://arxiv.org/abs/2609.20816v2) | **PDF**: [Link](http://arxiv.org/pdf/2609.20816v2)
+
+**Categories**: cs.CV, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Professional design requires any-color control: the ability to specify an object's target color with any 24-bit hex value for image generation and editing. Prior work has explored color generation, editing, and colorization, but often relies on dedicated color representations or specialized inference procedures. Advances in large language models offer a simpler starting point: even compact models can associate hex values with color semantics. We present Paint-Anything, which learns a shared hex-prompt interface for generation and editing through object-level color supervision. We develop a data pipeline that constructs Paint-500K from real images through object grounding, perceptual color labeling, and editing-pair synthesis. Since shadows make real-image labels only approximate colors, we complement this supervision with pure-color anchors whose pixels exactly match their paired hex values. These anchors are used only at high-noise timesteps, leaving low-noise training to natural images. We further introduce Any Color Benchmark (ACBench), comprising ACBench-T2I and ACBench-Edit, to measure object-level hex color fidelity across both tasks. On FLUX.2-4B, Paint-Anything improves ACBench-T2I and ACBench-Edit scores by 85.3% and 28.3%, respectively, relative to the base model, with ablations supporting the training recipe. It also achieves the highest average CompColor score among the compared methods.
+
+专业设计需要任意颜色控制：能够使用任意 24 位十六进制值指定对象的目标颜色以进行图像生成和编辑。先前的工作已经探索了颜色生成、编辑和着色，但通常依赖于专用的颜色表示或专门的推理程序。大型语言模型的进步提供了一个更简单的起点：即使是紧凑的模型也可以将十六进制值与颜色语义相关联。我们提出了 Paint-Anything，它学习一个共享的十六进制提示界面，用于通过对象级颜色监督进行生成和编辑。我们开发了一个数据管道，通过对象基础、感知颜色标签和编辑对合成从真实图像构建 Paint-500K。由于阴影使真实图像标签仅近似颜色，因此我们用纯色锚点来补充这种监督，这些锚点的像素与其配对的十六进制值完全匹配。这些锚点仅在高噪声时间步长下使用，将低噪声训练留给自然图像。我们进一步引入了 Any Color Benchmark (ACBench)，包括 ACBench-T2I 和 ACBench-Edit，以测量这两个任务的对象级十六进制颜色保真度。在 FLUX.2-4B 上，相对于基本模型，Paint-Anything 将 ACBench-T2I 和 ACBench-Edit 分数分别提高了 85.3% 和 28.3%，并通过消融支持训练配方。在比较方法中，它还获得了最高的平均 CompColor 分数。
+
+</details>
+
+---
+
+## 2. Visual Autoregressive Priors for RAW-to-sRGB Image Signal Processing / RAW 到 sRGB 图像信号处理的视觉自回归先验
+
+**Date**: 2026-09-16 | **arXiv**: [2609.18302v1](http://arxiv.org/abs/2609.18302v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.18302v1)
+
+**Categories**: cs.CV, cs.MM, eess.IV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+RAW-to-sRGB image signal processing (ISP) must recover perceptually faithful colors and fine details from sensor measurements, often under imperfect spatial alignment and missing camera metadata. This paper presents, to the best of our knowledge, the first application of visual autoregressive (VAR) next-scale prediction over a discrete image codebook to the RAW-to-sRGB ISP task. We adapt a frozen 1.10\,B-parameter VAR backbone for RAW-conditioned ISP with only 32.93\,M trainable parameters (2.99\%), and propose a frequency-decomposed color loss that separately supervises low-frequency tone via wavelet LL cosine similarity and chromatic edges via detail-band $\ell_1$. On the Zurich RAW-to-sRGB benchmark, the method improves PSNR-Y from 21.31 to 21.89\,dB and reduces LPIPS from 0.276 to 0.218 on the full 1,204-image test set. Diagnostic experiments show that the VAR prior preserves structure well, but continuous color transfer remains the dominant bottleneck: oracle affine correction recovers 3.8\,dB, while learned color heads yield marginal gains.
+
+RAW 到 sRGB 图像信号处理 (ISP) 必须从传感器测量中恢复感知上忠实的色彩和精细细节，通常是在空间对齐不完美和相机元数据丢失的情况下。据我们所知，本文首次将离散图像码本上的视觉自回归 (VAR) 下一尺度预测应用于 RAW 到 sRGB ISP 任务。我们采用冻结的 1.10\,B 参数 VAR 骨干网用于仅具有 32.93\,M 个可训练参数 (2.99\%) 的 RAW 条件 ISP，并提出了一种频率分解颜色损失，通过小波 LL 余弦相似度单独监督低频色调，并通过细节带 $\ell_1$ 监督彩色边缘。在 Zurich RAW-to-sRGB 基准测试中，该方法在完整的 1,204 张图像测试集上将 PSNR-Y 从 21.31 dB 提高到 21.89 dB，并将 LPIPS 从 0.276 降低到 0.218。诊断实验表明，VAR 先验很好地保留了结构，但连续颜色转移仍然是主要瓶颈：oracle 仿射校正恢复了 3.8dB，而学习的颜色头产生了边际收益。
+
+</details>
+
+---
+
+## 3. SyntheticDoc: A Large Synthetic Dataset for Document Unwarping and Illumination Correction / SyntheticDoc：用于文档反扭曲和照明校正的大型综合数据集
+
+**Date**: 2026-09-14 | **arXiv**: [2609.15503v1](http://arxiv.org/abs/2609.15503v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.15503v1)
+
+**Categories**: cs.CV, cs.GR
+
+**Project**: https://igl.ethz.ch/projects/SyntheticDoc/  **Code**: https://github.com/tanguymagne/SyntheticDoc
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Deep learning models have become the standard tool for document rectification and illumination correction, yet their performance is fundamentally bound by their training data. For nearly a decade, the community has heavily relied on Doc3D, a pioneering but increasingly limited document unwarping dataset in terms of scale and quality. To address this bottleneck, we introduce SyntheticDoc, a massive, high-quality dataset designed to push the boundaries of document unwarping. SyntheticDoc is composed of 1,000,000 high-resolution procedurally generated training samples, alongside extensive validation and test sets. Each sample is paired with rich, pixel-perfect annotations, including UV maps, normal maps, albedo and shading. To ensure physical accuracy and photorealism, the paper geometries are generated via a physics-based simulator and rendered using a path tracer. To demonstrate the benefit of our dataset, we train a simple baseline model on SyntheticDoc and report on its performance in comparison to state-of-the-art methods on both document unwarping and illumination correction tasks. Our dataset is available at https://igl.ethz.ch/projects/SyntheticDoc/ and the code used to generate it at https://github.com/tanguymagne/SyntheticDoc .
+
+深度学习模型已成为文档校正和照明校正的标准工具，但其性能从根本上受到训练数据的限制。近十年来，社区严重依赖 Doc3D，这是一个开创性但在规模和质量方面日益有限的文档扭曲数据集。为了解决这个瓶颈，我们引入了 SyntheticDoc，这是一个巨大的高质量数据集，旨在突破文档扭曲的界限。 SyntheticDoc 由 1,000,000 个高分辨率程序生成的训练样本以及广泛的验证和测试集组成。每个样本都配有丰富的、像素完美的注释，包括 UV 贴图、法线贴图、反照率和阴影。为了确保物理准确性和真实感，纸张几何形状是通过基于物理的模拟器生成的，并使用路径追踪器进行渲染。为了证明我们的数据集的优势，我们在 SyntheticDoc 上训练了一个简单的基线模型，并报告其在文档反扭曲和照明校正任务上与最先进的方法相比的性能。我们的数据集可在 https://igl.ethz.ch/projects/SyntheticDoc/ 获取，用于生成它的代码可在 https://github.com/tanguymagne/SyntheticDoc 获取。
+
+</details>
+
+---
+
+## 4. No Pixel Left Behind: Filling Gaps in Anime Colorization / 不留任何像素：填补动漫着色的空白
+
+**Date**: 2026-09-01 | **arXiv**: [2609.00800v1](http://arxiv.org/abs/2609.00800v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.00800v1)
+
+**Categories**: cs.HC, cs.CV, cs.GR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Animation production workflows often involve digital colorization of line art, where small unpainted regions ("gaps") frequently occur and remain an underexplored challenge. We conducted a formative study in Japanese animation (anime) pipelines and found that while the paint bucket tool is widely used for base coloring, tiny enclosed areas are frequently overlooked, resulting in time-consuming manual detection and filling. We introduce GapFill, a tool grounded in professional practices that reduces the effort of gap detection, zooming, and color selection. Our deep-learning method suggests appropriate fill colors by referencing surrounding regions, leveraging the flat-color nature of anime-style images. In a user study with 13 professional colorists, our system improved performance and usability in gap-filling tasks over conventional methods. The study also suggested that prediction accuracy alone is not the primary factor for usability, that appropriate colors can be contextually ambiguous, and that GapFill can complement existing tools depending on users' trust in new AI-powered assistance.
+
+动画制作工作流程通常涉及线条艺术的数字着色，其中经常出现小的未绘制区域（“间隙”），并且仍然是一个尚未充分探索的挑战。我们对日本动画管道进行了形成性研究，发现虽然油漆桶工具广泛用于基础着色，但微小的封闭区域经常被忽视，导致手动检测和填充非常耗时。我们推出 GapFill，这是一款基于专业实践的工具，可减少间隙检测、缩放和颜色选择的工作量。我们的深度学习方法通​​过参考周围区域、利用动漫风格图像的平面颜色性质来建议适当的填充颜色。在对 13 名专业调色师进行的用户研究中，我们的系统比传统方法提高了填补空白任务的性能和可用性。该研究还表明，预测准确性本身并不是可用性的主要因素，适当的颜色可能会在上下文中产生歧义，并且 GapFill 可以根据用户对新的人工智能辅助的信任来补充现有工具。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-09-21 (1 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-09-21
