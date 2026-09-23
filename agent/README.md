@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-09-23](papers/2026-09-23.md) - 10 papers
 - [2026-09-22](papers/2026-09-22.md) - 17 papers
 - [2026-09-21](papers/2026-09-21.md) - 1 papers
 - [2026-09-19](papers/2026-09-19.md) - 10 papers
@@ -165,6 +166,180 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-09-23 (10 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-09-23
+
+**Paper Count**: 10
+
+---
+
+## 1. HySparse2: Hybrid Sparse Attention with Two-Level KV Sharing / HySparse2：具有两级 KV 共享的混合稀疏注意力
+
+**Date**: 2026-09-22 | **arXiv**: [2609.26368v1](http://arxiv.org/abs/2609.26368v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.26368v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long-horizon and multi-turn agents typically generate short actions and process long observations from tools and environments. This growing context demands efficient prefill, compact KV-cache storage, and accurate long-context retrieval. To meet these demands, we introduce HySparse2, a hybrid sparse attention architecture with two-level KV sharing. At the outer level, KV Bridging adopts a YOCO-style self-decoder and cross-decoder structure, but bridges only full-attention layers. The self-decoder uses hybrid sliding-window attention (SWA), while the cross-decoder uses hybrid sparse attention. The KV caches for full-attention layers in the cross-decoder are generated from the hidden states of full-attention layers in the self-decoder. At the inner level, HySparse2 retains HySparse's core KV Reuse design with two refinements. First, it replaces block-level sparsity with token-level sparsity for finer long-context retrieval. Second, it removes the separate SWA branch from sparse layers and instead forces a sliding window of recent tokens into the sparse selection. This two-level KV sharing allows all cross-decoder KV caches to be constructed from self-decoder hidden states. Prefill can therefore exit after the self-decoder, skipping all cross-decoder layers. On an 80B-A3B MoE model, HySparse2 outperforms HySparse and Hybrid SWA on long-context retrieval and multi-turn agentic tasks, while substantially reducing prefill computation and KV-cache storage.
+
+长视野和多轮智能体通常会生成短动作并处理来自工具和环境的长观察。这种不断增长的上下文需要高效的预填充、紧凑的 KV 缓存存储和准确的长上下文检索。为了满足这些需求，我们引入了 HySparse2，一种具有两级 KV 共享的混合稀疏注意力架构。在外层，KV Bridging采用YOCO式的自解码器和交叉解码器结构，但仅桥接全注意力层。自解码器使用混合滑动窗口注意（SWA），而交叉解码器使用混合稀疏注意。交叉解码器中全注意力层的 KV 缓存是根据自解码器中全注意力层的隐藏状态生成的。在内部层面，HySparse2保留了HySparse的核心KV Reuse设计，并进行了两处改进。首先，它将块级稀疏性替换为令牌级稀疏性，以实现更精细的长上下文检索。其次，它从稀疏层中删除了单独的 SWA 分支，而是强制将最近令牌的滑动窗口纳入稀疏选择中。这种两级 KV 共享允许所有跨解码器 KV 缓存从自解码器隐藏状态构建。因此，预填充可以在自解码器之后退出，跳过所有交叉解码器层。在 80B-A3B MoE 模型上，HySparse2 在长上下文检索和多轮代理任务方面优于 HySparse 和 Hybrid SWA，同时大幅减少预填充计算和 KV 缓存存储。
+
+</details>
+
+---
+
+## 2. Qwen3.8-Omni: Towards Native Omni-Modal Agents / Qwen3.8-Omni：迈向原生全模式代理
+
+**Date**: 2026-09-22 | **arXiv**: [2609.25611v1](http://arxiv.org/abs/2609.25611v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.25611v1)
+
+**Categories**: cs.CL, cs.CV, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We introduce Qwen3.8-Omni-Flash, a natively multimodal agentic model for real-world multimodal productivity. Compared with previous omni models, which primarily emphasized perception and interaction, Qwen3.8-Omni-Flash substantially improves multimodal understanding and reasoning, as well as performance on long-horizon agentic tasks. These capabilities are supported by a native multimodal co-training strategy that preserves strong text-domain capabilities while facilitating the transfer of agentic capabilities from text to audio and video tasks. The model inherits the sparse mixture-of-experts (MoE) architecture of Qwen3.8-Next and extends the context window to one million tokens, supporting long-context multimodal reasoning and long-horizon planning. These advances enable integration into production workflows as a primary agent or a specialized sub-agent, supporting video editing, long-form audio and video translation, music-conditioned music video or movie generation, and video-based note or omni-skill creation. To address the lack of native audio and video support in existing agent harnesses, we release Qwen-MM-Plugins, a lightweight open-source plugin framework for multimodal productivity. We further frame real-time multimodal interaction as a system-level challenge requiring orchestration of context and memory management, tool use, and sub-agent delegation. Accordingly, we release Qwen-Live-Harness, an open-source framework for building responsive, real-time multimodal agents based on Qwen3.8-Omni-Flash. Extensive evaluations demonstrate that Qwen3.8-Omni-Flash achieves strong performance across multimodal understanding, reasoning, long-horizon agentic execution, and video productivity tasks. These results and the accompanying open-source tools support Qwen3.8-Omni-Flash as a practical foundation for deploying natively multimodal agents in research and production.
+
+我们推出了 Qwen3.8-Omni-Flash，这是一种用于现实世界多模式生产力的原生多模式代理模型。与之前主要强调感知和交互的全向模型相比，Qwen3.8-Omni-Flash 大幅提高了多模态理解和推理以及长视野代理任务的性能。这些功能由本机多模式协同训练策略支持，该策略保留强大的文本域功能，同时促进代理功能从文本到音频和视频任务的转移。该模型继承了Qwen3.8-Next的稀疏专家混合（MoE）架构，并将上下文窗口扩展到一百万个令牌，支持长上下文多模态推理和长视野规划。这些进步使得能够作为主要代理或专门的子代理集成到制作工作流程中，支持视频编辑、长格式音频和视频翻译、音乐条件音乐视频或电影生成以及基于视频的音符或全技能创建。为了解决现有代理工具缺乏本机音频和视频支持的问题，我们发布了 Qwen-MM-Plugins，这是一个用于多模式生产力的轻量级开源插件框架。我们进一步将实时多模式交互构建为系统级挑战，需要协调上下文和内存管理、工具使用和子代理委托。因此，我们发布了 Qwen-Live-Harness，这是一个开源框架，用于基于 Qwen3.8-Omni-Flash 构建响应式实时多模式代理。广泛的评估表明，Qwen3.8-Omni-Flash 在多模式理解、推理、长视野代理执行和视频生产力任务方面实现了强大的性能。这些结果和随附的开源工具支持 Qwen3.8-Omni-Flash 作为在研究和生产中部署本机多模式代理的实用基础。
+
+</details>
+
+---
+
+## 3. Qwen-Audio-3.1-Realtime: Towards Reliable Agentic Voice Interaction / Qwen-Audio-3.1-Realtime：迈向可靠的代理语音交互
+
+**Date**: 2026-09-21 | **arXiv**: [2609.25176v1](http://arxiv.org/abs/2609.25176v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.25176v1)
+
+**Categories**: eess.AS, cs.AI, cs.CL, cs.SD
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Real-time voice assistants must reason over evolving requests, execute actions, and follow conversational rules. Qwen-Audio-3.1-Realtime brings these requirements together through Think, Act, and Speak and Coordinate. Think combines Core-Cocktail supervised fine-tuning with Multimodality and Multi-Teacher On-Policy Distillation (M$^{2}$-OPD) to transfer language capabilities and develop native audio skills. Act uses self-evolving executable environments and multi-granularity rollouts for Group Relative Policy Optimization (GRPO), teaching the model to use tools, interpret feedback, and complete tasks. Speak and Coordinate aligns how, when, and whether the assistant speaks or acts. We evaluate audio reasoning, multilingual understanding, tool use, conversational behavior, full-duplex interaction, and safety. Compared with Qwen-Audio-3.0-Realtime, 3.1 raises overall task success from 78.4% to 82.0% on our half-duplex speech-to-text adaptation of $τ$-Voice. On speech-to-speech Full-Duplex-Bench v1.5, the response rate to background speech falls from 73.0% to 13.0%. We also present a separate Voice Harness prototype, using Qwen-Audio-3.0-Realtime as its foreground, that extends spoken interaction to persistent tasks through foreground--background coordination and memory.
+
+实时语音助手必须推理不断变化的请求、执行操作并遵循对话规则。 Qwen-Audio-3.1-Realtime 通过思考、行动、说话和协调将这些要求结合在一起。 Think 将 Core-Cocktail 监督微调与多模态和多教师按策略蒸馏 (M$^{2}$-OPD) 相结合，以传递语言能力并培养本地音频技能。 Act 使用自我演化的可执行环境和多粒度部署进行组相对策略优化 (GRPO)，教导模型使用工具、解释反馈和完成任务。说话和协调协调助理如何、何时以及是否说话或行动。我们评估音频推理、多语言理解、工具使用、对话行为、全双工交互和安全性。与 Qwen-Audio-3.0-Realtime 相比，3.1 将 $τ$-Voice 的半双工语音到文本改编的总体任务成功率从 78.4% 提高到 82.0%。在语音到语音 Full-Duplex-Bench v1.5 上，对背景语音的响应率从 73.0% 下降到 13.0%。我们还提出了一个单独的语音线束原型，使用 Qwen-Audio-3.0-Realtime 作为前台，通过前台-后台协调和记忆将语音交互扩展到持久任务。
+
+</details>
+
+---
+
+## 4. Critical-State RL: Diagnosing Trainable States for Multi-Turn Tool Use / 临界状态强化学习：诊断多回转工具使用的可训练状态
+
+**Date**: 2026-09-21 | **arXiv**: [2609.24985v1](http://arxiv.org/abs/2609.24985v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.24985v1)
+
+**Categories**: cs.LG, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multi-turn tool-use failures can hinge on a single model call, yet reward variation alone does not reveal which call would benefit from training. When rewards depend on later interactions, their variation can reflect downstream randomness rather than differences between the current actions. We introduce Critical-State RL to identify trainable states in multi-turn interactions. Given task-defined candidate calls and local rewards, the method assesses whether each reward captures the action's effect on task success and whether improvement over a reference policy is possible. It then uses nested sampling to separate action-dependent reward variation from continuation noise and optimizes the policy at the selected states using contextual-bandit training. Experiments on the Berkeley Function Calling Leaderboard (BFCL) v4 compare training at diagnostic-selected states with training at alternative states. For missing-function tasks, the diagnostic selects the response after the tool becomes available; for missing-argument tasks, it selects the response before the missing argument is supplied. Training the selected responses improves performance, including about 14 percentage points on the missing-function task, while training the alternatives leaves performance flat or worse. We further apply the recipe across models and tasks, including logged repeat-call avoidance and memory management.
+
+多回合工具使用失败可能取决于单个模型调用，但奖励变化本身并不能揭示哪个调用将从训练中受益。当奖励取决于后来的交互时，它们的变化可以反映下游随机性，而不是当前行为之间的差异。我们引入临界状态强化学习来识别多轮交互中的可训练状态。给定任务定义的候选调用和本地奖励，该方法评估每个奖励是否捕获了操作对任务成功的影响以及是否可以改进参考策略。然后，它使用嵌套采样将依赖于动作的奖励变化与连续噪声分开，并使用上下文老虎机训练优化所选状态的策略。 Berkeley Function Calling Leaderboard (BFCL) v4 上的实验将诊断选择状态下的训练与替代状态下的训练进行了比较。对于缺失功能的任务，诊断会在工具可用后选择响应；对于缺少参数的任务，它会在提供缺少参数之前选择响应。训练选定的响应可以提高性能，包括在缺失功能的任务上提高约 14 个百分点，而训练替代方案则使性能持平或更差。我们进一步跨模型和任务应用该配方，包括记录重复调用避免和内存管理。
+
+</details>
+
+---
+
+## 5. Harness-Zero: Harness Distillation via Agent-as-Harness / Harness-Zero：通过 Agent-as-Harness 进行 Harness Distillation
+
+**Date**: 2026-09-21 | **arXiv**: [2609.24974v1](http://arxiv.org/abs/2609.24974v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.24974v1)
+
+**Categories**: cs.AI, cs.CL, cs.NE
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Agent harnesses, the external systems that mediate model-environment interaction, can substantially improve agent performance, but their gains remain tied to the harness at deployment. Because the best harness varies across domains, instances, and models, a general-purpose agent must either settle for a suboptimal shared harness or route among an ever-growing set of specialized ones. We therefore study agent harness distillation: using a domain- or instance-optimized harness as training-time guidance and transferring the behaviors it induces into model weights, so that its gains survive under a single fixed target harness. The challenge is that the two harnesses differ in action space and available information, so guidance from the optimized harness cannot serve directly as supervision for the target one. We introduce Harness-Zero, which enables harness distillation through agent-as-harness. Guided by the optimized harness, a harnessing agent corrects student responses before execution in the target harness's action space, turning harness guidance into training demonstrations. Fine-tuning on the resulting trajectories internalizes harness-induced behavior into the model, so the specialized harness can be removed at deployment. Our experiments spanning knowledge work, tool use, and science domains show that: (1) For frontier LLMs using the same evolved harness, agent-as-harness outperforms code-as-harness. (2) With the specialized harness removed at deployment, Harness-Zero improves the base model's macro-average task success from 23.3% to 44.3%, even exceeding the 41.7% it reaches with that harness still attached. (3) Harness-Zero recovers harness-induced behaviors absent from the base model, with 82.3% average recovery across 28 patterns in the three domains.
+
+代理线束是调解模型与环境交互的外部系统，可以显着提高代理性能，但它们的收益仍然与部署时的线束相关。由于最佳的工具因领域、实例和模型的不同而不同，通用代理必须要么选择次优的共享工具，要么在不断增长的专用工具集之间进行路由。因此，我们研究代理工具蒸馏：使用领域或实例优化的工具作为训练时的指导，并将其引发的行为转移到模型权重中，以便其收益在单个固定目标工具下生存。挑战在于，两种线束的行动空间和可用信息不同，因此优化线束的指导不能直接充当目标线束的监督。我们推出了 Harness-Zero，它可以通过代理作为线束进行线束蒸馏。在优化的安全带的引导下，安全带代理会在目标安全带的动作空间中执行之前纠正学生的反应，将安全带指导转变为培训演示。对生成的轨迹进行微调将线束引起的行为内化到模型中，因此可以在部署时删除专用线束。我们跨越知识工作、工具使用和科学领域的实验表明：（1）对于使用相同进化工具的前沿法学硕士，代理即工具的性能优于代码即工具。 (2) 在部署时移除专用安全带后，Harness-Zero 将基础模型的宏观平均任务成功率从 23.3% 提高到 44.3%，甚至超过了仍连接安全带时达到的 41.7%。 (3) Harness-Zero 恢复了基础模型中缺少的由安全带引发的行为，三个领域的 28 种模式的平均恢复率为 82.3%。
+
+</details>
+
+---
+
+## 6. RRSI: Regularized Recursive Self-Improvement of Agent Harnesses / RRSI：代理安全带的正则化递归自我改进
+
+**Date**: 2026-09-21 | **arXiv**: [2609.24972v1](http://arxiv.org/abs/2609.24972v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.24972v1)
+
+**Categories**: cs.LG, cs.AI, cs.CL
+
+**Code**: https://github.com/google-research/rrsi
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+An LLM agent's capability is largely magnified by its harness, namely the prompts, control flow, tooling, memory, and context management surrounding the frozen backbone model. Recent methods increasingly automate this process by iteratively proposing and selecting component-wise edits of an agent harness, practically establishing a form of recursive self-improvement (RSI) at the agent-system level. However, such recursive evolution may overfit by memorizing the training tasks, showing large in-distribution gains that shrink or even vanish on out-of-distribution benchmarks. We introduce Regularized Recursive Self-Improvement of Agent Harnesses (RRSI), which incorporates the principles of regularizations into harness self-improvement by constraining the evolution candidate proposal and selection. The proposer operates with a temporally annealed budget, limiting how many edits a candidate can bundle, and it encourages unexplored trajectories based on evolution history. The selector is equipped with a critic and a pruner: the critic screens benchmark-specific proposals, while the pruner, removes changes that are too small, too expensive, or no longer useful. Together these constraints favor reusable agent mechanisms over benchmark-specific ones or even noises. Across eight benchmarks spanning coding, agentic workspace and engineering design tasks, RRSI gains up to 14.1 points on the split it evolves against and up to 4.7 points on the five out-of-distribution benchmarks, while producing a harness that runs on 30% fewer policy tokens than the unregularized evolution. Code is available at https://github.com/google-research/rrsi and project page is https://regularized-rsi.com/.
+
+LLM 代理的能力在很大程度上通过其工具（即围绕冻结骨干模型的提示、控制流、工具、内存和上下文管理）得到放大。最近的方法通过迭代地提出和选择代理工具的组件级编辑来日益自动化该过程，实际上在代理系统级别建立了一种递归自我改进（RSI）的形式。然而，这种递归进化可能会因记忆训练任务而过度拟合，从而显示出较大的分布内增益，而这些增益在分布外基准上会缩小甚至消失。我们引入了 Agent Harnesses 的正则化递归自我改进（RRSI），它将正则化的原理通过限制进化候选提案和选择来融入到 Harness 的自我改进中。提议者以临时退火的预算运作，限制了候选者可以捆绑的编辑数量，并且它鼓励基于进化历史的未探索的轨迹。选择器配备了批评者和修剪器：批评者筛选特定于基准的建议，而修剪器则删除太小、太昂贵或不再有用的更改。总的来说，这些约束有利于可重用的代理机制，而不是特定于基准的代理机制，甚至噪音。在涵盖编码、代理工作空​​间和工程设计任务的八个基准中，RRSI 在其演变所针对的分割上获得了高达 14.1 分，在五个分布外基准上获得了高达 4.7 分，同时生成的工具比非规范化演变所运行的策略令牌少了 30%。代码可在 https://github.com/google-research/rrsi 获取，项目页面为 https://regularized-rsi.com/。
+
+</details>
+
+---
+
+## 7. Emergent Collusion in Long-Horizon LLM Agent Interaction / 长期法学硕士代理人互动中的紧急共谋
+
+**Date**: 2026-09-21 | **arXiv**: [2609.24967v1](http://arxiv.org/abs/2609.24967v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.24967v1)
+
+**Categories**: cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+LLM agents are increasingly deployed in collaborative settings, yet long-term interaction may give rise to undesirable coordination. We study the emergence of collusion in a long-horizon multi-agent environment: two agents repeatedly complete individual tasks, share task logs, verify each other's work, and receive rewards. We introduce realistic constraints that make compliance with the verification protocol incompatible with reward maximization, and find that agents increasingly deviate from the protocol over repeated interactions. Collusion emerges in 94% of trajectories across 10 models, and more capable models within the same family reach it earlier. Controlled peer interventions show that collusion is shaped by peer behavior, while ablations reveal additional effects of reward structure, the verification feedback agents receive, and their interaction history. In particular, restricting the amount and scope of interaction history available to agents reduces collusion. Overall, our findings show that long-horizon interaction can reshape how agents coordinate in ways that create safety risks.
+
+LLM代理人越来越多地部署在协作环境中，但长期互动可能会导致不良的协调。我们研究了长视野多智能体环境中共谋的出现：两个智能体重复完成单独的任务，共享任务日志，验证彼此的工作并获得奖励。我们引入了现实的约束，使得遵守验证协议与奖励最大化不相容，并发现代理在重复的交互中越来越偏离协议。 10 个模型中 94% 的轨迹出现了共谋，同一系列中能力更强​​的模型更早达到了共谋。受控的同伴干预表明，共谋是由同伴行为形成的，而消融则揭示了奖励结构、代理收到的验证反馈及其交互历史的额外影响。特别是，限制代理可用的交互历史记录的数量和范围可以减少共谋。总体而言，我们的研究结果表明，长期互动可以重塑代理人以产生安全风险的方式进行协调的方式。
+
+</details>
+
+---
+
+## 8. SocioVerse2: A Longitudinal Dynamic Social Simulation Framework under a Human-AI Co-evolutionary Paradigm / SocioVerse2：人机协同进化范式下的纵向动态社会模拟框架
+
+**Date**: 2026-09-21 | **arXiv**: [2609.24911v1](http://arxiv.org/abs/2609.24911v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.24911v1)
+
+**Categories**: cs.CL, cs.CY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Social simulation offers the social sciences an experimental instrument that the real world cannot supply, and generative agents have transformed it by acting as silicon samples that unite agent-based modeling with real behavioral data. Existing platforms verify collective behavior, align simulated populations with real societies in cross-sections, and employ autonomous agents for the research process. However, two social science requirements remain without systematic support: intervention in the content of a simulation and the researcher's control over the process that produces it. We present SocioVerse2, which extends SocioVerse 1.0 into a human-AI co-evolutionary paradigm built from two loops and one infrastructure. The longitudinal simulation loop simulates the target population with evolving environments and forks counterfactual branches via interventions. The controllable research loop takes the study itself as an editable state and updates state versions via controllable editing. The social science agentic infrastructure carries both loops through composable skills with researcher checkpoints, a population service over five persona pools, and an environment service over 21 real-world signal sources with point-in-time guarantees. We validate SocioVerse2 across three case families and seven case studies, from reproducing canonical agent-based models to modeling policy processes on real records and nowcasting macro-economic indices beyond the response model's knowledge cutoff. With the human-AI co-evolutionary paradigm, these cases go beyond system demonstrations to become substantive studies that investigate frontier questions in their respective disciplines. Code, data services, and a workbench are released as open-source resources.
+
+社会模拟为社会科学提供了现实世界无法提供的实验工具，而生成代理通过充当硅样本将基于代理的建模与真实行为数据结合起来，从而改变了它。现有平台验证集体行为，将模拟人群与真实社会的横截面保持一致，并在研究过程中使用自主代理。然而，两个社会科学要求仍然没有系统的支持：对模拟内容的干预以及研究人员对产生模拟的过程的控制。我们推出了 SocioVerse2，它将 SocioVerse 1.0 扩展为一种由两个循环和一个基础设施构建的人类与人工智能共同进化范式。纵向模拟循环模拟不断变化的环境中的目标人群，并通过干预分叉反事实分支。可控研究循环将研究本身视为可编辑状态，并通过可控编辑更新状态版本。社会科学代理基础设施通过具有研究人员检查点的可组合技能、超过 5 个角色池的人口服务以及超过 21 个具有时间点保证的现实世界信号源的环境服务来承载这两个循环。我们在三个案例系列和七个案例研究中验证了 SocioVerse2，从复制基于代理的规范模型到基于真实记录的政策流程建模，以及预测超出响应模型知识界限的宏观经济指数。在人类与人工智能共同进化的范式下，这些案例超越了系统论证，成为探讨各自学科前沿问题的实质性研究。代码、数据服务和工作台作为开源资源发布。
+
+</details>
+
+---
+
+## 9. Data Agents: Agentic Data Systems / 数据代理：代理数据系统
+
+**Date**: 2026-09-21 | **arXiv**: [2609.24137v1](http://arxiv.org/abs/2609.24137v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.24137v1)
+
+**Categories**: cs.DB, cs.AI, cs.CL, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Traditional data systems face profound limitations in the AI era, relying on human-crafted pipelines, lacking semantic understanding of heterogeneous data, and operating through rigid, reactive processing. To address these challenges, we propose a new paradigm called the Data Agent, designed to manage, process, and analyze data with minimal human intervention. Data agents autonomously execute a wide range of data-related tasks, transforming traditional data systems by shifting from manual design to autonomous orchestration, from literal manipulation to semantic interpretation, and from reactive to proactive processing. Our Data Agent system includes six components: semantic data organization, semantic operators, agentic pipeline orchestration and optimization, feedback-driven refinement, memory management, and proactive adaptation. Building on this foundation, we also develop two specialized agents: the data analytics agent and the data science agent. Experiments on real benchmarks demonstrate significant performance gains of our data agent over state-of-the-art methods. We identify open challenges to guide future research in building fully autonomous data systems.
+
+传统数据系统在人工智能时代面临着深刻的局限性，依赖于人工制作的管道，缺乏对异构数据的语义理解，并且通过僵化的反应性处理进行操作。为了应对这些挑战，我们提出了一种称为数据代理的新范例，旨在以最少的人工干预来管理、处理和分析数据。数据代理自主执行各种与数据相关的任务，从手动设计转向自主编排，从文字操作转向语义解释，从被动处理转向主动处理，从而改变了传统数据系统。我们的数据代理系统包括六个组件：语义数据组织、语义运算符、代理管道编排和优化、反馈驱动的细化、内存管理和主动适应。在此基础上，我们还开发了两种专门的代理：数据分析代理和数据科学代理。真实基准测试的实验表明，我们的数据代理相对于最先进的方法具有显着的性能提升。我们确定了开放的挑战，以指导构建完全自主的数据系统的未来研究。
+
+</details>
+
+---
+
+## 10. XYEval: Agents say yes to bad advice / XYEval：代理商对不好的建议说“是”
+
+**Date**: 2026-09-20 | **arXiv**: [2609.23939v1](http://arxiv.org/abs/2609.23939v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.23939v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Effective communication between users and AI agents is essential for human-AI collaboration. The XY problem is a well-known communication pitfall where a person asks about their attempted solution rather than their actual problem. We extend prior sycophancy evaluation to the XY problem in agentic settings, evaluating whether agents can resist plausible but misleading suggestions from users and communicate their reasoning. We introduce XYEval, a meta-evaluation framework that can transform an existing benchmark into an XY problem evaluation. We evaluate five models across six diverse benchmark suites. Agents suffer large XY drops under XY mutation across benchmarks, with relative drops reaching up to 46.7%. With $τ^2$-bench, we further show that agent performance drops more when encountering a pedantic user who requires detailed explanations before approving a better solution. Our findings suggest that current agents lack the ability to effectively reason and communicate when facing misleading suggestions. A simple system instruction baseline that encourages awareness of XY problems only offers partial mitigation. Extensive trace analyses provide behavioral insights into how and why these XY drops occur across execution trajectories. Our results show that mitigating the XY problem remains challenging, requiring agents to both recognize user misdirection and clearly communicate the underlying problem.
+
+用户和人工智能代理之间的有效沟通对于人类与人工智能的协作至关重要。 XY 问题是一个众所周知的沟通陷阱，人们询问他们尝试的解决方案而不是他们的实际问题。我们将先前的阿谀奉承评估扩展到代理环境中的 XY 问题，评估代理是否可以抵制用户看似合理但具有误导性的建议并传达他们的推理。我们引入了 XYEval，一个元评估框架，可以将现有基准转换为 XY 问题评估。我们评估了六个不同基准套件中的五个模型。在基准测试中，智能体在 XY 突变下遭受了较大的 XY 下降，相对下降高达 46.7%。通过$τ^2$-bench，我们进一步表明，当遇到一个迂腐的用户在批准更好的解决方案之前需要详细解释时，代理性能下降更多。我们的研究结果表明，当前的代理人在面对误导性建议时缺乏有效推理和沟通的能力。鼓励人们意识到 XY 问题的简单系统指令基线只能提供部分缓解。广泛的跟踪分析提供了关于这些 XY 下降如何以及为何在执行轨迹上发生的行为见解。我们的结果表明，缓解 XY 问题仍然具有挑战性，要求代理既能识别用户误导，又能清楚地传达潜在问题。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-09-22 (17 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-09-22
