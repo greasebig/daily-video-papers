@@ -27,6 +27,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-09-24](papers/2026-09-24.md) - 13 papers
 - [2026-09-22](papers/2026-09-22.md) - 4 papers
 - [2026-09-17](papers/2026-09-17.md) - 5 papers
 - [2026-09-16](papers/2026-09-16.md) - 23 papers
@@ -181,6 +182,228 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-09-24 (13 papers)</b></summary>
+
+# arXiv Video Papers - 2026-09-24
+
+**Paper Count**: 13
+
+---
+
+## 1. All modalities are equal, but video is more equal: Closing the Cross-Attention Gap in Joint Video Generation / 所有模式都是平等的，但视频更平等：缩小联合视频生成中的交叉注意力差距
+
+**Date**: 2026-09-23 | **arXiv**: [2609.27901v1](http://arxiv.org/abs/2609.27901v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.27901v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video is a rich representation of a physical event, capturing appearance, geometry, motion, and temporal evolution. Other modalities, such as 3D body motion or audio, encode narrower aspects of the same event. We find that joint multimodal diffusion transformers exhibit a corresponding asymmetry in cross-modal correspondence: companion modalities develop strong correspondences to video, but the reciprocal correspondences through which they constrain video remain substantially weaker. We express both directions as comparable correspondence distributions over video tokens and define their disagreement as the reciprocal correspondence gap. We introduce RecCAR, standing for Reciprocal Cross-modal Attention Regularization, a KL regularizer that uses the well-established video-to-modality correspondence as a fixed reference and aligns the weaker modality-to-video correspondence toward it. Across joint video-motion and video-audio generation, RecCAR improves the Human Anatomy score from 0.69 to 0.75 and reduces audio-video desynchronization from 0.804 to 0.752, while improving overall generation
+
+视频是物理事件的丰富表现，捕捉外观、几何形状、运动和时间演变。其他形式，例如 3D 身体运动或音频，对同一事件的较窄方面进行编码。我们发现联合多模态扩散变换器在跨模态对应中表现出相应的不对称性：伴随模态与视频形成强烈的对应关系，但它们限制视频的相互对应关系仍然较弱。我们将两个方向表示为视频标记上的可比对应分布，并将它们的分歧定义为相互对应间隙。我们引入 RecCAR，代表互惠跨模态注意正则化，这是一种 KL 正则化器，它使用完善的视频到模态对应关系作为固定参考，并将较弱的模态到视频对应关系与其对齐。在联合视频运动和视频音频生成中，RecCAR 将人体解剖学分数从 0.69 提高到 0.75，并将音频视频不同步从 0.804 降低到 0.752，同时改进了整体生成
+
+</details>
+
+---
+
+## 2. Information Capacity of Generative Video Compression: Quantifying the Rate-Compute Exchange at Identical Quality / 生成视频压缩的信息容量：量化相同质量的速率计算交换
+
+**Date**: 2026-09-23 | **arXiv**: [2609.27493v1](http://arxiv.org/abs/2609.27493v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.27493v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Under the AI Flow framework, communication networks distribute intelligence across devices, edge servers, and clouds, and computation at the receiver becomes a resource that can substitute for transmitted bits. Generative video compression (GVC) embodies this exchange by sending compact tokens with ultra-low bitrate and letting a generative decoder synthesize the video, yet how much bandwidth savings a unit of decoder compute actually achieves has never been quantified. To fill this vacancy, we model reconstruction quality as a two-factor power law in data rate and decoder compute, which fits measured DISTS of two GVC decoders with a mean error below 3%, and define the information capacity (IC) as the negative logarithmic slope along an iso-quality contour, namely the fraction of rate saved per fractional increase in compute at identical quality. IC is dimensionless and unit-invariant, thus enabling an architecture-agnostic comparison. It forms a field over the operating plane, locating where additional denoising steps are worth their cost. Across five datasets, the 14B decoder trades more compute for fewer rate about ten times more efficiently than the 1.3B decoder. IC also varies significantly across datasets, indicating imbalanced performance on the rate-compute trade-off in GVC methods.
+
+在AI Flow框架下，通信网络跨设备、边缘服务器和云分发智能，接收器处的计算成为可以替代传输比特的资源。生成视频压缩（GVC）通过发送超低比特率的紧凑令牌并让生成解码器合成视频来体现这种交换，但解码器计算单元实际上节省了多少带宽从未被量化。为了填补这一空缺，我们将重建质量建模为数据速率和解码器计算中的双因素幂律，它适合两个 GVC 解码器的测量 DISTS，平均误差低于 3%，并将信息容量 (IC) 定义为沿等质量轮廓的负对数斜率，即相同质量下计算每增加一点所节省的速率分数。 IC 是无量纲且单位不变的，因此可以进行与架构无关的比较。它在操作平面上形成一个场，定位额外的去噪步骤值得花费的地方。在五个数据集上，14B 解码器以更少的速率换取更多的计算，效率比 1.3B 解码器高大约十倍。不同数据集的 IC 也存在显着差异，表明 GVC 方法中速率计算权衡的性能不平衡。
+
+</details>
+
+---
+
+## 3. Latent evolving World Action Model / 潜在演变的世界行动模型
+
+**Date**: 2026-09-23 | **arXiv**: [2609.27455v1](http://arxiv.org/abs/2609.27455v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.27455v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World Action Models (WAMs) jointly model action generation and environment dynamics and are mostly built on pretrained Video Diffusion Models (VDMs). In VDM-based WAMs, observations are first encoded by a VAE, and the resulting compressed latents are then processed by large video diffusion backbones to extract effective features for action generation. However, this paradigm ties WAM performance and training cost to large-scale video generation pretraining, limiting WAM efficiency and scalability. In this paper, we theoretically and empirically investigate how visual representations affect action generation in WAMs. Our results show that predictive embeddings from Joint-Embedding Predictive Architecture (JEPA) encoders better support action generation than compressed VAE latents, with I-JEPA performing best in our encoder comparison. Based on these findings, we propose LeWAM, which conditions action generation on JEPA embeddings and models environment evolution by predicting future embeddings in the same space, without relying on a video diffusion backbone. We further find that imitation learning matches demonstrated actions but does not distinguish better actions from worse ones, even though small action deviations can greatly affect task success. To address this limitation without additional environment interaction or the human oversight required for resets and safety, we introduce Demonstration-Guided DPO (DemoDPO), an offline preference refinement stage that derives preference supervision directly from demonstrations.With only 0.4B trainable parameters, LeWAM achieves an average success rate of 92.28\% on RoboTwin 2.0, comparable to that of state-of-the-art VLAs and WAMs, and maintains practical effectiveness on real-world manipulation tasks.
+
+世界动作模型 (WAM) 联合模拟动作生成和环境动态，并且主要建立在预训练的视频扩散模型 (VDM) 之上。在基于 VDM 的 WAM 中，观察结果首先由 VAE 进行编码，然后由大型视频扩散主干处理生成的压缩潜在变量，以提取用于动作生成的有效特征。然而，这种范例将 WAM 性能和训练成本与大规模视频生成预训练联系在一起，限制了 WAM 效率和可扩展性。在本文中，我们从理论上和实证上研究了视觉表征如何影响 WAM 中的动作生成。我们的结果表明，联合嵌入预测架构 (JEPA) 编码器的预测嵌入比压缩的 VAE 潜伏更好地支持动作生成，其中 I-JEPA 在我们的编码器比较中表现最佳。基于这些发现，我们提出了 LeWAM，它通过预测同一空间中的未来嵌入来调节 JEPA 嵌入的动作生成并模拟环境演化，而不依赖于视频扩散主干。我们进一步发现，模仿学习与演示的动作相匹配，但无法区分更好的动作和更差的动作，尽管小的动作偏差会极大地影响任务的成功。为了解决这一限制，无需额外的环境交互或重置和安全所需的人工监督，我们引入了演示引导 DPO (DemoDPO)，这是一个离线偏好细化阶段，直接从演示中得出偏好监督。LeWAM 仅用 0.4B 可训练参数，在 RoboTwin 2.0 上实现了 92.28% 的平均成功率，与最先进的 VLA 和 WAM 相当，并保持了实际有效性现实世界的操纵任务。
+
+</details>
+
+---
+
+## 4. A Hierarchy-Aware Video-Language Model Evaluation and Hyperbolic Baseline for Surgery / 具有层次意识的视频语言模型评估和手术双曲线基线
+
+**Date**: 2026-09-22 | **arXiv**: [2609.27139v1](http://arxiv.org/abs/2609.27139v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.27139v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Surgical procedures follow a phase-to-step hierarchy, yet the video-language models used to recognize them are evaluated with flat per-level metrics that ignore cross-level coherence and error structure. In this paper we make two contributions to address this problem, (i) we introduce SurgHiBench, the first hierarchy-aware evaluation suite for surgical video understanding, with three tasks measuring recognition, consistency, and severity across granularity levels. We evaluate a general-purpose CLIP model, a Euclidean surgical model, and, as second contribution: (ii) HyperSurg, a new hyperbolic model that enforces phase-step containment via entailment cones, across four (existing) datasets spanning three procedure types. The suite reveals that two models with the same accuracy can produce predictions of very different error severity, ranging from sibling confusions within the correct phase to unrelated cross-phase predictions. Hyperbolic geometry shifts predictions toward the correct procedural neighborhood, and these gains scale with the tree-likeness of each dataset's annotation hierarchy, providing a principled indicator when hierarchy-aware geometry helps.
+
+外科手术遵循阶段到步骤的层次结构，但用于识别它们的视频语言模型是使用扁平的每级指标进行评估的，忽略了跨级一致性和错误结构。在本文中，我们为解决这个问题做出了两项贡献，（i）我们引入了 SurgHiBench，这是第一个用于手术视频理解的层次感知评估套件，其中三个任务测量跨粒度级别的识别、一致性和严重性。我们评估了通用 CLIP 模型、欧几里得手术模型，以及第二个贡献：(ii) HyperSurg，一种新的双曲线模型，通过涵盖锥体的四个（现有）数据集跨越三种手术类型强制执行相步遏制。该套件表明，具有相同精度的两个模型可以产生截然不同的错误严重性的预测，范围从正确阶段内的同级混淆到不相关的跨阶段预测。双曲几何将预测转向正确的程序邻域，并且这些增益随着每个数据集注释层次结构的树状性而缩放，从而在层次感知几何有所帮助时提供原则性指标。
+
+</details>
+
+---
+
+## 5. Code Plans, Diffusion Renders: Open-Ended Generative World Modeling / 代码计划、扩散渲染：开放式生成世界建模
+
+**Date**: 2026-09-22 | **arXiv**: [2609.26458v1](http://arxiv.org/abs/2609.26458v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.26458v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We introduce \textbf{CoDeR}, a new paradigm for world modeling. Unlike existing video world models that implicitly represent world dynamics through visual observations, our system explicitly constructs an executable world with code and employs video generation models for visual realization. Specifically, we coordinate five complementary roles to translate high-level concepts into structured world rules, executable dynamics, and perceptual observations. This design enables \textit{long-term memory}, \textit{open-ended interactions}, \textit{autonomous world evolution}, and \textit{multi-agent scenarios}, where multiple entities can act, interact, and evolve persistently beyond the current observation. Extensive experiments demonstrate that our framework substantially extends the capabilities of existing world models, enabling long-term memory, open-ended interactions, autonomous evolution, and persistent multi-agent dynamics, while achieving state-of-the-art performance across multiple evaluation settings. Code and model weights will be made publicly available. Project Page: \href{https://becauseimbatman0.github.io/CoDeR}{CoDeR}.
+
+我们引入 \textbf{CoDeR}，一种世界建模的新范式。与通过视觉观察隐式表示世界动态的现有视频世界模型不同，我们的系统用代码显式构建可执行世界，并采用视频生成模型进行视觉实现。具体来说，我们协调五个互补的角色，将高级概念转化为结构化的世界规则、可执行的动态和感知观察。这种设计支持 \textit{长期记忆}、\textit{开放式交互}、\textit{自主世界进化} 和 \textit{多代理场景}，其中多个实体可以在当前观察范围之外持续行动、交互和进化。大量的实验表明，我们的框架极大地扩展了现有世界模型的功能，实现了长期记忆、开放式交互、自主进化和持久的多智能体动态，同时在多个评估设置中实现了最先进的性能。代码和模型权重将公开。项目页面：\href{https://becauseimbatman0.github.io/CoDeR}{CoDeR}。
+
+</details>
+
+---
+
+## 6. QuantWM: Temporally Consistent 2-Bit KV Cache Quantization for World Models and Video Generation / QuantWM：用于世界模型和视频生成的时间一致的 2 位 KV 缓存量化
+
+**Date**: 2026-09-22 | **arXiv**: [2609.26425v1](http://arxiv.org/abs/2609.26425v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.26425v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+KV cache memory has become a major deployment bottleneck for video generation and world models, which motivates low-bit quantization study for efficiency. Existing 2-bit KV cache quantization methods can achieve nearly lossless performance on video benchmarks such as VBench, however, we find that they still cause severe temporal flickering and visual degradation. Meanwhile, deeper investigates show that Key quantization produces smaller reconstruction errors than Value, but surprisingly leads to much larger output degradation. We trace this discrepancy to attention: small Key perturbations can change the attention logits, i.e., QK^\top, and shift the temporal-spatial tokens selected by Queries. These observations motivate us to explicitly preserve attention logits and temporal-spatial token selection during KV cache quantization to alleviate the visual degradation problem. To address this issue, we present QuantWM, a training-free and strictly causal 2-bit KV cache quantization framework. QuantWM introduces two complementary techniques to mitigate the attention shifts. Firstly, quantization-sensitivity-aware clustering (QSAC) jointly considers historical Query sensitivity and residual ranges to select INT2-friendly Key centroids, which reduces quantization errors in channels that are more critical to attention. In addition, principal-subspace attention compensation (PSAC) restores the remaining Key errors along the dominant Query subspace using low-rank projections, which provides a direct and efficient correction to stabilize attention logits. Extensive experiments on Causal-Forcing, LingBot-World-v2, HY-World 1.5, Matrix-Game-2 and Longcat-Video demonstrate that QuantWM significantly improves visual quality and temporal consistency, while outperforming existing methods across image and video quality metrics with up to 6.20x KV cache memory compression and limited additional overhead.
+
+KV 缓存已成为视频生成和世界模型的主要部署瓶颈，这激发了低位量化研究的效率。现有的 2 位 KV 缓存量化方法可以在 VBench 等视频基准上实现近乎无损的性能，但是我们发现它们仍然会导致严重的时间闪烁和视觉退化。同时，更深入的研究表明，关键量化产生的重建误差比值更小，但令人惊讶的是导致更大的输出退化。我们将这种差异追溯到注意力：小的关键扰动可以改变注意力逻辑，即 QK^\top，并移动查询选择的时空标记。这些观察结果促使我们在 KV 缓存量化期间明确保留注意力逻辑和时空标记选择，以缓解视觉退化问题。为了解决这个问题，我们提出了 QuantWM，一个免训练且严格因果的 2 位 KV 缓存量化框架。 QuantWM 引入了两种互补技术来减轻注意力转移。首先，量化敏感度感知聚类（QSAC）联合考虑历史查询敏感度和残差范围来选择INT2友好的关键质心，这减少了对关注更关键的通道中的量化误差。此外，主子空间注意力补偿（PSAC）使用低秩投影恢复占主导的查询子空间的剩余关键错误，这提供了直接有效的校正来稳定注意力逻辑。对 Causal-Forcing、LingBot-World-v2、HY-World 1.5、Matrix-Game-2 和 Longcat-Video 的大量实验表明，QuantWM 显着提高了视觉质量和时间一致性，同时在图像和视频质量指标方面优于现有方法，具有高达 6.20 倍的 KV 缓存内存压缩和有限的额外开销。
+
+</details>
+
+---
+
+## 7. Identity-Centric Video Summarization via Hierarchical Fusion of Biometric, Appearance, and 3D Body Features / 通过生物识别、外观和 3D 身体特征的分层融合进行以身份为中心的视频摘要
+
+**Date**: 2026-09-22 | **arXiv**: [2609.25837v1](http://arxiv.org/abs/2609.25837v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.25837v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This work presents a video summarization algorithm based on multi-object tracking and person reidentification. We integrate facial embeddings, 3D body-shape features, and visual appearance into a unified tracking framework. These representations enable hierarchical identity assignment and tracking through bidirectional anchoring, which robustly recovers trajectories under severe occlusion or low visual quality. From these stable trajectories, we generate a compact set of summaries for each identity. We select keyframes using a multi-factor weighting scheme that optimizes biometric clarity, social interaction, and motion dynamics, while Adaptive Non-Maximum Suppression ensures temporal diversity. Evaluation on a custom dataset demonstrates tracking stability, achieving an IDF1 of 97.89% and a MOTA of 95.79%. Compared to Top-K selection, our algorithm also increases visual diversity by 146%, temporal coverage by 89%, and information retrievability by 3.5%.
+
+这项工作提出了一种基于多目标跟踪和人员重新识别的视频摘要算法。我们将面部嵌入、3D 体型特征和视觉外观集成到统一的跟踪框架中。这些表示能够通过双向锚定进行分层身份分配和跟踪，从而在严重遮挡或低视觉质量下稳健地恢复轨迹。根据这些稳定的轨迹，我们为每个身份生成一组紧凑的摘要。我们使用多因素加权方案来选择关键帧，该方案可优化生物特征清晰度、社交互动和运动动态，而自适应非极大值抑制可确保时间多样性。对自定义数据集的评估显示了跟踪稳定性，IDF1 为 97.89%，MOTA 为 95.79%。与 Top-K 选择相比，我们的算法还将视觉多样性提高了 146%，时间覆盖率提高了 89%，信息可检索性提高了 3.5%。
+
+</details>
+
+---
+
+## 8. TRACE: Trajectory Representation and Consistency Estimation for AI-Generated Video Detection / TRACE：人工智能生成视频检测的轨迹表示和一致性估计
+
+**Date**: 2026-09-22 | **arXiv**: [2609.25775v1](http://arxiv.org/abs/2609.25775v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.25775v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in generative video models have enabled the synthesis of visually realistic content, posing significant challenges to synthetic video detection. Existing detectors often rely on appearance artifacts, semantic inconsistencies, and temporal patterns that may be generator-specific, limitating generalization to unseen synthesis models. We investigate whether responses to a pretrained generative model provide more transferable forensic cues. Our key observation is that real and AI-generated videos exhibit distinct \emph{velocity responses} under a pretrained Flow Matching video model. This distinction persists when different pretrained video-generation backbones are used as probes, suggesting that velocity responses offer transferable forensic signals beyond visual artificts. Motivated by this observation, we propose \textbf{TRACE} (\emph{\underline{T}rajectory \underline{R}epresentation \underline{a}nd \underline{C}onsistency \underline{E}stimation}), a generation-process-aware framework for AI-generated video detection. TRACE leverages a pretrained video DiT as a velocity-field probe to extract representations at multiple flow time points, and models cross-frame consistency through velocity differences between adjacent frames. We further introduce a \emph{Real-Centered Trajectory Optimization} objective that encourages generator-invariant representation learning. Extensive experiments on AIGVDBench demonstrate that TRACE generalizes effectively across diverse generators, substantially outperforming prior state-of-the-art methods on unseen open- and closed-source video generation models.
+
+生成视频模型的最新进展使得视觉逼真内容的合成成为可能，这对合成视频检测提出了重大挑战。现有的检测器通常依赖于外观伪影、语义不一致和可能特定于生成器的时间模式，从而限制了对看不见的合成模型的泛化。我们研究对预训练生成模型的反应是否提供了更多可转移的取证线索。我们的主要观察结果是，真实的视频和人工智能生成的视频在预训练的流匹配视频模型下表现出不同的\emph{速度响应}。当不同的预训练视频生成主干用作探针时，这种区别仍然存在，这表明速度响应提供了超越视觉伪影的可转移取证信号。受这一观察的启发，我们提出了 \textbf{TRACE} (\emph{\underline{T}rajectory \underline{R}epresentation \underline{a}nd \underline{C}onsistency \underline{E}stimation})，这是一种用于人工智能生成视频检测的生成过程感知框架。 TRACE 利用预训练的视频 DiT 作为速度场探针来提取多个流时间点的表示，并通过相邻帧之间的速度差异来建模跨帧一致性。我们进一步引入了 \emph{Real-Centered Trajectory Optimization} 目标，该目标鼓励生成器不变表示学习。 AIGVDBench 上的大量实验表明，TRACE 可以有效地推广到不同的生成器，在未见过的开源和闭源视频生成模型上大大优于现有的最先进方法。
+
+</details>
+
+---
+
+## 9. Video-HopChain: Multi-Hop Questions and Confidence-Gated Exploration for Video Reasoning Models / Video-HopChain：视频推理模型的多跳问题和置信门控探索
+
+**Date**: 2026-09-22 | **arXiv**: [2609.25773v1](http://arxiv.org/abs/2609.25773v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.25773v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+HopChain has shown on still images that multi-hop data synthesis improves vision-language reasoning, because long chain-of-thought reasoning exposes errors that compound across steps, while most data used for reinforcement learning with verifiable rewards (RLVR) rarely demands a chain of visual evidence, so these weaknesses are likely to stay unexposed. We observe the same problem in video, where this framework has not yet been explored. We therefore build Video-HopChain, a dataset of 22,550 multi-hop video questions over 13,378 videos, together with a held-out benchmark of 1,000 questions. Each question chains three to six yes/no questions about moments in one video, and each yields one of two integers depending on its answer. The final answer is the sum of these integers, so an exact match on that sum gives the verifiable reward that RLVR needs. We first train Qwen3-VL-8B with GRPO on a standard video dataset, and a second stage on Video-HopChain then raises the mean over eight video understanding and reasoning benchmarks from 55.4 to 57.9 and improves every one of them. Training on such a dataset, however, exposes a known limitation of GRPO: its learning signal comes from the reward variance within a group, so hard questions whose rollouts are all incorrect and easy questions whose rollouts are all correct both leave the group with no gradient. To recover these groups at the same compute budget, we introduce Confidence-Gated Exploration (CGE). With 8 rollouts per question, CGE samples the first 4 as usual. If these 4 are either all correct or all incorrect, it samples the last 4 with the policy's most confident token masked inside the reasoning span, and removes the masked positions from the loss while all 8 rollouts enter the advantage. With CGE, the mean rises further to 59.3. We release the dataset, the checkpoint, and the data generation and training code.
+
+HopChain 在静态图像上表明，多跳数据合成可以改善视觉语言推理，因为长链思维推理会暴露跨步骤复合的错误，而大多数用于具有可验证奖励的强化学习 (RLVR) 的数据很少需要视觉证据链，因此这些弱点很可能不会暴露。我们在视频中观察到同样的问题，但该框架尚未被探索。因此，我们构建了 Video-HopChain，这是一个包含 13,378 个视频的 22,550 个多跳视频问题的数据集，以及 1,000 个问题的保留基准。每个问题都链接着关于一个视频中的时刻的三到六个是/否问题，每个问题根据其答案产生两个整数之一。最终答案是这些整数的总和，因此该总和的精确匹配给出了 RLVR 所需的可验证奖励。我们首先在标准视频数据集上使用 GRPO 训练 Qwen3-VL-8B，然后在 Video-HopChain 上的第二阶段将八个视频理解和推理基准的平均值从 55.4 提高到 57.9，并改进每一个基准。然而，在这样的数据集上进行训练暴露了 GRPO 的一个已知局限性：它的学习信号来自组内的奖励方差，因此，其推出全部不正确的难题和推出全部正确的简单问题都会使该组没有梯度。为了以相同的计算预算恢复这些组，我们引入了置信门探索（CGE）。每个问题有 8 次展示，CGE 像往常一样对前 4 个问题进行采样。如果这 4 个全部正确或全部错误，它会在推理范围内使用策略最有信心的标记对最后 4 个进行采样，并从损失中删除屏蔽头寸，同时所有 8 个推出都进入优势。通过 CGE，平均值进一步上升至 59.3。我们发布数据集、检查点以及数据生成和训练代码。
+
+</details>
+
+---
+
+## 10. Qwen3.8-Omni: Towards Native Omni-Modal Agents / Qwen3.8-Omni：迈向原生全模式代理
+
+**Date**: 2026-09-22 | **arXiv**: [2609.25611v1](http://arxiv.org/abs/2609.25611v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.25611v1)
+
+**Categories**: cs.CL, cs.CV, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We introduce Qwen3.8-Omni-Flash, a natively multimodal agentic model for real-world multimodal productivity. Compared with previous omni models, which primarily emphasized perception and interaction, Qwen3.8-Omni-Flash substantially improves multimodal understanding and reasoning, as well as performance on long-horizon agentic tasks. These capabilities are supported by a native multimodal co-training strategy that preserves strong text-domain capabilities while facilitating the transfer of agentic capabilities from text to audio and video tasks. The model inherits the sparse mixture-of-experts (MoE) architecture of Qwen3.8-Next and extends the context window to one million tokens, supporting long-context multimodal reasoning and long-horizon planning. These advances enable integration into production workflows as a primary agent or a specialized sub-agent, supporting video editing, long-form audio and video translation, music-conditioned music video or movie generation, and video-based note or omni-skill creation. To address the lack of native audio and video support in existing agent harnesses, we release Qwen-MM-Plugins, a lightweight open-source plugin framework for multimodal productivity. We further frame real-time multimodal interaction as a system-level challenge requiring orchestration of context and memory management, tool use, and sub-agent delegation. Accordingly, we release Qwen-Live-Harness, an open-source framework for building responsive, real-time multimodal agents based on Qwen3.8-Omni-Flash. Extensive evaluations demonstrate that Qwen3.8-Omni-Flash achieves strong performance across multimodal understanding, reasoning, long-horizon agentic execution, and video productivity tasks. These results and the accompanying open-source tools support Qwen3.8-Omni-Flash as a practical foundation for deploying natively multimodal agents in research and production.
+
+我们推出了 Qwen3.8-Omni-Flash，这是一种用于现实世界多模式生产力的原生多模式代理模型。与之前主要强调感知和交互的全向模型相比，Qwen3.8-Omni-Flash 大幅提高了多模态理解和推理以及长视野代理任务的性能。这些功能由本机多模式协同训练策略支持，该策略保留强大的文本域功能，同时促进代理功能从文本到音频和视频任务的转移。该模型继承了Qwen3.8-Next的稀疏专家混合（MoE）架构，并将上下文窗口扩展到一百万个令牌，支持长上下文多模态推理和长视野规划。这些进步使得能够作为主要代理或专门的子代理集成到制作工作流程中，支持视频编辑、长格式音频和视频翻译、音乐条件音乐视频或电影生成以及基于视频的音符或全技能创建。为了解决现有代理工具缺乏本机音频和视频支持的问题，我们发布了 Qwen-MM-Plugins，这是一个用于多模式生产力的轻量级开源插件框架。我们进一步将实时多模式交互构建为系统级挑战，需要协调上下文和内存管理、工具使用和子代理委托。因此，我们发布了 Qwen-Live-Harness，这是一个开源框架，用于基于 Qwen3.8-Omni-Flash 构建响应式实时多模式代理。广泛的评估表明，Qwen3.8-Omni-Flash 在多模式理解、推理、长视野代理执行和视频生产力任务方面实现了强大的性能。这些结果和随附的开源工具支持 Qwen3.8-Omni-Flash 作为在研究和生产中部署本机多模式代理的实用基础。
+
+</details>
+
+---
+
+## 11. VideoGen-Agent: Reinforcing Video Generation Agents / VideoGen-Agent：增强视频生成代理
+
+**Date**: 2026-09-21 | **arXiv**: [2609.24997v1](http://arxiv.org/abs/2609.24997v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.24997v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in video generative models have enabled high-fidelity, temporally coherent video generation. However, these models often struggle to satisfy prompts requiring specialized knowledge, specific identities, physical consistency, or ordered events. In this paper, we present VideoGen-Agent, a multimodal agent trained through multitask agentic reinforcement learning to use external tools for video generation. The agent coordinates augmentation, generation, and verification tools through multi-turn interactions, using the prompt and intermediate observations to guide its decisions. We train a shared policy on a category-balanced dataset spanning six tasks. Supervised fine-tuning on teacher-generated trajectories establishes tool-use behavior, which is then refined through reinforcement learning. A category-aware hybrid reward evaluates tool-call validity, task-appropriate tool use, and generated video quality. We further introduce VABench, a held-out benchmark of 600 prompts covering procedural knowledge, single- and multi-entity identity preservation, physical consistency, scene composition, and multi-shot temporal structure. On VABench, VideoGen-Agent improves over its base text-to-video generator by 19.1 points, from 56.5 to 75.6. Upgrading the generation tools further raises the score to 86.1 without additional agent training. Human raters prefer the upgraded configuration over the strongest standalone baseline in 84.3% of comparisons. These results support learning tool use across video-generation tasks and show that the trained agent can benefit from subsequent advances in generation tools.
+
+视频生成模型的最新进展使得高保真、时间连贯的视频生成成为可能。然而，这些模型通常难以满足需要专业知识、特定身份、物理一致性或有序事件的提示。在本文中，我们提出了 VideoGen-Agent，这是一种通过多任务代理强化学习训练的多模式代理，可使用外部工具生成视频。代理通过多轮交互来协调增强、生成和验证工具，使用即时和中间观察来指导其决策。我们在涵盖六个任务的类别平衡数据集上训练共享策略。对教师生成的轨迹进行有监督的微调，建立工具使用行为，然后通过强化学习对其进行完善。类别感知混合奖励评估工具调用的有效性、适合任务的工具使用以及生成的视频质量。我们进一步介绍 VABench，这是一个包含 600 个提示的基准测试，涵盖程序知识、单实体和多实体身份保存、物理一致性、场景合成和多镜头时间结构。在 VABench 上，VideoGen-Agent 比其基本文本到视频生成器提高了 19.1 分，从 56.5 提高到 75.6。升级生成工具将分数进一步提升至 86.1，无需额外的智能体训练。在 84.3% 的比较中，人类评估者更喜欢升级的配置，而不是最强的独立基线。这些结果支持在视频生成任务中使用学习工具，并表明经过训练的智能体可以从生成工具的后续进步中受益。
+
+</details>
+
+---
+
+## 12. DexTacWAM: A Visuo-Tactile World-Action Model for Dexterous Manipulation / DexTacWAM：用于灵巧操作的视觉触觉世界动作模型
+
+**Date**: 2026-09-21 | **arXiv**: [2609.24976v1](http://arxiv.org/abs/2609.24976v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.24976v1)
+
+**Categories**: cs.RO, cs.AI, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Dexterous manipulation depends on contact dynamics that are often only partially observable from vision. Recent World-Action Models (WAMs) couple predictive video world modeling with action generation, but remain largely vision-centric and therefore cannot directly model these contact dynamics. We present DexTacWAM, a visuo-tactile WAM that encodes each fingertip independently, aggregates the resulting features through a finger- and pose-aware tactile compressor, and injects the tactile latent into a video diffusion world model for joint visuo-tactile world modeling. Across six contact-rich dexterous manipulation tasks on a 22-DoF bimanual platform, DexTacWAM achieves the highest score on every task, averaging 70.6 versus 38.0 for the strongest baseline. Ablations attribute the gain to modeling contact evolution as part of the predicted world state rather than tactile conditioning alone: removing tactile world modeling reduces the four-task mean from 74.7 to 26.6 while keeping the same tactile features and action expert. After four hours of tactile-encoder adaptation with a frozen pretrained vision VAE, our continual vision-to-touch learning extends the pretrained video model to touch using roughly 100 demonstrations per task without tactile midtraining, while retaining visual prediction quality within 0.5 dB of vision-only counterparts. The compressor retains 89.4% of pre-fusion contact recall while enabling 2.26x faster training and 1.29x faster inference. Together, these results show that pretrained video priors can be extended to distributed multi-finger contact dynamics in a data- and compute-efficient manner.
+
+灵巧的操作取决于接触动态，而接触动态通常只能通过视觉部分观察到。最近的世界动作模型（WAM）将预测视频世界建模与动作生成结合起来，但仍然主要以视觉为中心，因此无法直接对这些接触动态进行建模。我们提出了 DexTacWAM，一种视觉触觉 WAM，它独立编码每个指尖，通过手指和姿势感知触觉压缩器聚合结果特征，并将触觉潜伏注入视频扩散世界模型中，以进行联合视觉触觉世界建模。在 22 自由度双手平台上的六项接触丰富的灵巧操作任务中，DexTacWAM 在每项任务上都取得了最高分，平均为 70.6，而最强基线为 38.0。消融将增益归因于建模接触进化作为预测世界状态的一部分，而不是单独的触觉调节：删除触觉世界建模将四任务平均值从 74.7 降低到 26.6，同时保持相同的触觉特征和动作专家。使用冻结的预训练视觉 VAE 进行四个小时的触觉编码器适应后，我们的持续视觉到触摸学习将预训练视频模型扩展到触摸，每个任务使用大约 100 个演示，无需触觉中间训练，同时将视觉预测质量保持在仅视觉对应物的 0.5 dB 以内。该压缩器保留了 89.4% 的融合前接触回忆，同时训练速度提高了 2.26 倍，推理速度提高了 1.29 倍。总之，这些结果表明，预训练的视频先验可以以数据和计算高效的方式扩展到分布式多手指接触动态。
+
+</details>
+
+---
+
+## 13. Streaming Video Editing with Easy Adaptation / 流媒体视频编辑，轻松适配
+
+**Date**: 2026-09-21 | **arXiv**: [2609.24788v1](http://arxiv.org/abs/2609.24788v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.24788v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/YujiaHu1109/SVEET.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In this paper, we propose SVEET, a framework that requires merely training on a pretrained bidirectional video diffusion model but supports high-quality streaming video editing in an auto-regressive fashion. To tackle this problem, we first systematically revisit existing video-to-video diffusion approaches and identify two key principles for such streaming adaptation: backbone feature disentanglement and conditional frame independence. Building on these insights, we develop a novel paradigm for controllable video generation. At its core, an auxiliary model branch encodes source video inputs with temporally independent self-attention, and the intermediate features are injected into the corresponding backbone blocks for streaming-compatible control. Moreover, to bridge the discrepancy between the feature spaces of bidirectional and streaming models, we propose a decoupled training scheme that explicitly enforces the orthogonality between the optimization directions of video controllability and model causality. Such disentanglement ensures compatibility between the two objectives at inference and facilitates smooth zero-shot knowledge transfer across heterogeneous backbone architectures. Extensive experiments demonstrate that SVEET achieves superior editing quality while maintaining real-time performance, attaining 15 FPS on a single H100 GPU 17 without any auxiliary acceleration techniques. Codes are available at https://github.com/YujiaHu1109/SVEET.
+
+在本文中，我们提出了 SVEET，这是一个仅需要对预训练的双向视频扩散模型进行训练的框架，但支持以自回归方式进行高质量的流媒体视频编辑。为了解决这个问题，我们首先系统地重新审视现有的视频到视频扩散方法，并确定这种流适应的两个关键原则：骨干特征解缠和条件帧独立性。基于这些见解，我们开发了一种用于可控视频生成的新颖范例。其核心是，辅助模型分支使用时间独立的自注意力对源视频输入进行编码，并将中间特征注入到相应的主干块中以实现流兼容控制。此外，为了弥合双向模型和流模型的特征空间之间的差异，我们提出了一种解耦训练方案，该方案明确强制视频可控性和模型因果关系的优化方向之间的正交性。这种解开确保了推理时两个目标之间的兼容性，并促进跨异构骨干架构的平稳零样本知识传输。大量实验表明，SVEET 在保持实时性能的同时实现了卓越的编辑质量，在单个 H100 GPU 17 上实现了 15 FPS，无需任何辅助加速技术。代码可在 https://github.com/YujiaHu1109/SVEET 获取。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-09-22 (4 papers)</b></summary>
 
 # arXiv Video Papers - 2026-09-22
