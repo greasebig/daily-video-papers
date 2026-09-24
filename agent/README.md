@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-09-24](papers/2026-09-24.md) - 10 papers
 - [2026-09-23](papers/2026-09-23.md) - 10 papers
 - [2026-09-22](papers/2026-09-22.md) - 17 papers
 - [2026-09-21](papers/2026-09-21.md) - 1 papers
@@ -166,6 +167,178 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-09-24 (10 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-09-24
+
+**Paper Count**: 10
+
+---
+
+## 1. The Capability Manifold and ML Scaling Laws / 能力流形和机器学习缩放定律
+
+**Date**: 2026-09-23 | **arXiv**: [2609.27588v1](http://arxiv.org/abs/2609.27588v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.27588v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Existing machine learning (ML) scaling laws relate predictive loss to compute, model parameters, and data. However, as models are increasingly deployed through agentic harnesses, loss alone is insufficient to characterize downstream performance: models with similar loss can exhibit different capabilities in reasoning, retrieval, planning, and adaptation. Yet, no unified framework connects such capabilities to the coupled resources available across the ML lifecycle. We bridge this gap by introducing a capability manifold, a multidimensional framework mapping downstream capabilities to pre-training, post-training, and test-time resources through bounded scaling functions. Analytical Jacobians quantify capability sensitivity to resource changes and interactions. As an initial application, we embed Kaplan- and Chinchilla-type scaling laws and test-time compute within the framework, demonstrating how existing scaling relationships can be unified as trajectories on a common capability manifold.
+
+现有的机器学习 (ML) 缩放法则将预测损失与计算、模型参数和数据联系起来。然而，随着模型越来越多地通过代理工具进行部署，仅损失不足以表征下游性能：具有相似损失的模型可以在推理、检索、规划和适应方面表现出不同的能力。然而，没有统一的框架将此类功能与整个 ML 生命周期中可用的耦合资源连接起来。我们通过引入能力流形来弥补这一差距，这是一个多维框架，通过有界扩展函数将下游能力映射到训练前、训练后和测试时资源。分析雅可比行列式量化了对资源变化和交互的能力敏感性。作为初始应用，我们在框架内嵌入了 Kaplan 和 Chinchilla 型标度律和测试时计算，演示了如何将现有标度关系统一为通用能力流形上的轨迹。
+
+</details>
+
+---
+
+## 2. ProCredit: From Outcome Rewards to Progress Credit in Agentic Reinforcement Learning / ProCredit：从结果奖励到代理强化学习中的进度信用
+
+**Date**: 2026-09-23 | **arXiv**: [2609.27532v1](http://arxiv.org/abs/2609.27532v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.27532v1)
+
+**Categories**: cs.LG, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long-horizon agentic tasks require an agent to modify an environment through a sequence of tool calls, with success determined by the final state. The standard recipe assigns a single outcome reward at the end and compares trajectories sampled for the same task. As a result, a group with no successful trajectory yields no training signal, failed attempts cannot be told apart by how close they came to completion, and turns that advance the task receive the same credit as turns that only query the environment. Prior work refines the unit of comparison from the trajectory to the step, or trains a reward model to supply intermediate signal: the former still derives its signal from final success alone, and the latter estimates it with a model. We observe that the acceptance checks that decide success can also be run on intermediate states, so progress is as verifiable as the outcome. We propose ProCredit, which turns this verified progress into credit: it reruns the acceptance checks after each turn, rewards the turn by its change in progress, and uses these rewards to assign credit both across attempts at the same task and across the turns within a trajectory. Starting from Qwen3.5 base models at three scales on AppWorld, ProCredit outperforms outcome-reward baselines and progress-based baselines in task completion rate at every scale on both test sets, exceeding the strongest outcome-reward baseline by 4.1 percentage points at 4B, and results in a second environment show the same direction of improvement. Ablations show that adding the final progress to the trajectory score alone does not improve performance: the gain comes from crediting progress to the turn where it occurs.
+
+长期代理任务要求代理通过一系列工具调用来修改环境，成功与否取决于最终状态。标准配方在最后分配一个结果奖励，并比较同一任务的采样轨迹。因此，没有成功轨迹的组不会产生训练信号，失败的尝试无法通过它们距离完成的程度来区分，并且推进任务的回合与仅查询环境的回合获得相同的信用。先前的工作细化了从轨迹到步骤的比较单位，或者训练奖励模型来提供中间信号：前者仍然仅从最终成功中得出信号，而后者则用模型来估计它。我们观察到，决定成功的验收检查也可以在中间状态上运行，因此进展与结果一样可验证。我们提出 ProCredit，它将经过验证的进度转化为信用：它在每个回合后重新运行验收检查，通过进度的变化奖励该回合，并使用这些奖励在同一任务的尝试和轨迹内的回合之间分配信用。从 AppWorld 上三个尺度的 Qwen3.5 基础模型开始，ProCredit 在两个测试集上的每个尺度上的任务完成率均优于结果奖励基线和基于进度的基线，在 4B 时超出最强结果奖励基线 4.1 个百分点，并且第二个环境中的结果显示出相同的改进方向。消融表明，仅将最终进度添加到轨迹分数中并不能提高性能：收益来自于将进度计入发生转弯的位置。
+
+</details>
+
+---
+
+## 3. FairTest: Search-Based Fairness Testing for Multi-Agent Reinforcement Learning Systems / FairTest：基于搜索的多智能体强化学习系统公平性测试
+
+**Date**: 2026-09-23 | **arXiv**: [2609.27309v1](http://arxiv.org/abs/2609.27309v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.27309v1)
+
+**Categories**: cs.SE, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multi-agent Reinforcement Learning (MARL) trains a team of agents that share one environment and learn their policies together. Training maximizes the team return, and a high return does not imply that the rewards are shared fairly among the agents in every episode. Testing is an established way to discover the failures of deep reinforcement learning, yet few methods address the fairness of MARL. In this work, we propose FairTest, a search-based testing approach that seeks the unfair executions of a MARL policy. The design combines search guidance with test prioritization. The guidance scores each candidate with three fitness functions. One measures the fairness of the runs already performed, another predicts the fairness from abstract states and fairness features, and the third reads the decision uncertainty from the policy. Crossover and mutation derive further candidates from the observed executions. The prioritization ranks the candidates by the predicted fairness and the decision uncertainty, so that the runs reach the candidates where failures are expected. FairTest is evaluated on three environments and two MARL algorithms, and four baselines are given the same budget. It detects the most fairness failures compared to three baselines with statistical significance and large effect sizes. The failure count exceeds that of the strongest baseline by 221% on average and coverage improves by an average of 23%.
+
+多智能体强化学习 (MARL) 训练一组共享一个环境并共同学习策略的智能体。训练使团队回报最大化，高回报并不意味着奖励在每一集中的智能体之间公平分享。测试是发现深度强化学习失败的既定方法，但很少有方法能够解决 MARL 的公平性。在这项工作中，我们提出了 FairTest，这是一种基于搜索的测试方法，旨在寻找 MARL 策略的不公平执行。该设计将搜索指导与测试优先级结合起来。该指南通过三个适应度函数对每个候选人进行评分。一个衡量已经执行的运行的公平性，另一个从抽象状态和公平特征预测公平性，第三个从策略中读取决策不确定性。交叉和变异从观察到的执行中得出更多候选者。优先级根据预测的公平性和决策不确定性对候选者进行排序，以便运行到达预期失败的候选者。 FairTest 在三种环境和两种 MARL 算法上进行评估，四个基线给予相同的预算。与具有统计显着性和较大效应量的三个基线相比，它检测到最公平的失败。故障计数平均超过最强基线 221%，覆盖率平均提高 23%。
+
+</details>
+
+---
+
+## 4. KITE: KV-Invariant Transformer Expansion for Efficient Agentic LLM Scaling / KITE：用于高效代理 LLM 扩展的 KV 不变变压器扩展
+
+**Date**: 2026-09-23 | **arXiv**: [2609.27294v1](http://arxiv.org/abs/2609.27294v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.27294v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Scaling a language model is not only a question of final quality: the architectural choice determines how much computation is spent during training, prompt processing, and autoregressive decoding to achieve certain model quality. An ideal model architecture should lower all above computation costs to facilitate scaling to a larger model, while ensure the larger model indeed outperforms smaller baselines. We introduce KV-Invariant Transformer Expansion (KITE), a scaling paradigm that achieves this goal. It trains the model from a smaller size to a larger size (i.e., saving training costs via upcycling), while places newly added parameters in regions that do not affect attention KV. Consequently, during inference, prefilling KV only relies on the smaller part of the model, so the inference costs are saved. As a concrete instantiation, we present Step Scale Transformer (SST), a two-tower decoder in which one tower produces KV and the other reads them. At comparable cumulative training compute, SST, a 67B MoE model with 2.15B active body parameters per decode token, achieves lower training loss than 47B and 63B MoE Transformers with 1.48B and 2.02B active body parameters, respectively, while reducing estimated inference cost by 6.7% and 31.6%.
+
+扩展语言模型不仅仅是最终质量的问题：架构选择决定了在训练、提示处理和自回归解码过程中花费多少计算来实现一定的模型质量。理想的模型架构应该降低所有上述计算成本，以便于扩展到更大的模型，同时确保更大的模型确实优于较小的基线。我们引入了 KV 不变变压器扩展 (KITE)，这是一种实现这一目标的扩展范例。它将模型从较小的尺寸训练到较大的尺寸（即通过升级来节省训练成本），同时将新添加的参数放置在不影响注意力KV的区域中。因此，在推理时，预填充KV仅依赖于模型的较小部分，从而节省了推理成本。作为一个具体实例，我们提出了 Step Scale Transformer (SST)，这是一种双塔解码器，其中一个塔产生 KV，另一个塔读取它们。在可比较的累积训练计算中，SST（每个解码令​​牌具有 2.15B 活动主体参数的 67B MoE 模型）比分别具有 1.48B 和 2.02B 活动主体参数的 47B 和 63B MoE Transformer 实现了更低的训练损失，同时将估计推理成本降低了 6.7% 和 31.6%。
+
+</details>
+
+---
+
+## 5. Discover, Falsify, Revise: Auditing Input-Use Claims from Source Code to Predictive Contribution in Agent-Discovered Cell Models / 发现、伪造、修改：审计从源代码到代理发现的单元模型中的预测贡献的输入使用声明
+
+**Date**: 2026-09-23 | **arXiv**: [2609.27234v1](http://arxiv.org/abs/2609.27234v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.27234v1)
+
+**Categories**: cs.LG, q-bio.QM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+AI virtual cells aim to predict cellular responses to specified interventions, yet held-out predictive performance alone does not establish use of the supplied perturbation information. This prediction-claim gap matters in agentic model discovery, where language-model agents generate and revise predictors using score-based feedback. We introduce CELLAUDIT, which audits input-use claims by asking whether an input can enter the cited computation, whether fitted predictions depend on it, and whether that dependence improves prediction of observed response. On a paired morphology-transcriptomics perturbation benchmark (BBBC047), an agent-selected predictor attains a mean held-out Global Pearson correlation coefficient (PCC) of 0.3153 but remains invariant to compound replacement; a control-profile-only predictor reaches 0.3142. Source inspection identifies a compound-query pathway blocked by singleton key-value attention, and the invariance persists after refitting with disjoint control wells. In a stratified audit of 48 candidates across two linked tasks, 47 change predictions under compound replacement on both held-out folds, but only 20 show target-loss gains with intervals above zero on both folds. On BBBC047, falsification-guided revisions recover positive mean compound contributions while retaining gains over the control-profile-only baseline. In matched sci-Plex searches, audit-enriched feedback yields higher held-out performance and larger mean compound and dose contributions across five trajectories, although paired intervals span zero. Refitting fixed designs on an independently acquired cohort shows predictive generalization need not imply generalization of input-use claims: dose contribution persists, whereas support for compound identity does not. CELLAUDIT adds a falsification layer to agentic model discovery, moving from generate-score-revise toward discover-falsify-revise.
+
+人工智能虚拟细胞旨在预测细胞对特定干预措施的反应，但仅提供预测性能并不能建立对所提供的扰动信息的使用。这种预测与声明之间的差距在代理模型发现中很重要，其中语言模型代理使用基于分数的反馈生成和修改预测变量。我们引入了 CELLAUDIT，它通过询问输入是否可以进入引用的计算、拟合预测是否依赖于它以及这种依赖性是否改善了观察到的响应的预测来审核输入使用声明。在配对的形态学转录组扰动基准 (BBBC047) 上，代理选择的预测器获得平均保留全局皮尔逊相关系数 (PCC) 0.3153，但对化合物替换保持不变；仅控制剖面的预测器达到 0.3142。源检查识别出被单键值关注阻塞的复合查询路径，并且在使用不相交的控制井重新拟合后，不变性仍然存在。在对两个相关任务中的 48 名候选者进行的分层审核中，在两个保留折叠上的复合替换下，47 个改变了预测，但只有 20 个显示两个折叠上的间隔均大于零的目标损失增益。在 BBBC047 上，伪造引导的修正恢复了正的平均复合贡献，同时保留了仅控制配置文件基线的收益。在匹配的 sci-Plex 搜索中，尽管配对间隔跨度为零，但经过审计丰富的反馈会在五个轨迹上产生更高的保留性能和更大的平均化合物和剂量贡献。在独立获得的队列上重新调整固定设计表明，预测概括并不意味着输入使用声明的概括：剂量贡献持续存在，而对化合物同一性的支持则不然。 CELLAUDIT 在代理模型发现中添加了一个伪造层，从生成-评分-修改转向发现-伪造-修改。
+
+</details>
+
+---
+
+## 6. Crossflow: Prefill-Decode Elasticity for Agentic LLM Serving / Crossflow：代理 LLM 服务的预填充解码弹性
+
+**Date**: 2026-09-22 | **arXiv**: [2609.27085v1](http://arxiv.org/abs/2609.27085v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.27085v1)
+
+**Categories**: cs.DC, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+As serving capacity demand surpasses that of training, serving efficiency becomes increasingly important. Prefill-decode (P/D) disaggregation improves serving efficiency through specialization and isolation of the two phases. These benefits rest on a static partitioning. Phase demand, however, is not static. We observe that in a large LLM fleet the ratio of uncached input to output tokens has peak-to-mean ratios up to 4.7x at minute timescales, and that in a public agentic trace the hourly ratio spans a median 24.5x within a single day, while reassigning a replica takes tens of minutes. Agentic traffic sharpens the mismatch. Sizing each pool at its ninety-fifth percentile leaves up to 17% of cluster capacity unused; sizing below it converts the same imbalance into queueing and unrealized throughput. We present Crossflow, which makes this boundary elastic without changing node roles. Each decode node publishes a short-lived, revocable lease that bounds local-prefill compute, KV capacity, transfer work, and projected output. Across public and internal traces, Crossflow improves token throughput by 16.2-17.4% on geometric mean over static P/D, and by up to 43.4% at high load, while reducing mean TTFT at every evaluated point.
+
+随着服务能力需求超过培训需求，服务效率变得越来越重要。预填充解码 (P/D) 分解通过两个阶段的专业化和隔离提高了服务效率。这些好处依赖于静态分区。然而，相位需求并不是静态的。我们观察到，在大型 LLM 队列中，未缓存的输入与输出令牌的比率在分钟时间尺度上的峰均比高达 4.7 倍，而在公共代理跟踪中，每小时比率在一天内跨越中位数 24.5 倍，而重新分配副本需要数十分钟。代理流量加剧了这种不匹配。将每个池的大小调整为 95% 时，最多会留下 17% 的集群容量未使用；低于它的大小会将同样的不平衡转化为排队和未实现的吞吐量。我们提出了 Crossflow，它使这个边界具有弹性，而无需改变节点角色。每个解码节点都会发布一个短暂的、可撤销的租约，该租约限制本地预填充计算、KV 容量、传输工作和预计输出。在公共和内部跟踪中，Crossflow 将静态 P/D 的几何平均令牌吞吐量提高了 16.2-17.4%，在高负载下提高了高达 43.4%，同时减少了每个评估点的平均 TTFT。
+
+</details>
+
+---
+
+## 7. Reinforcement Learning with Decomposed Subtasks / 分解子任务的强化学习
+
+**Date**: 2026-09-22 | **arXiv**: [2609.27035v1](http://arxiv.org/abs/2609.27035v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.27035v1)
+
+**Categories**: cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Group Relative Policy Optimization (GRPO) and related policy-gradient methods for training language model agents collapse an entire multi-turn rollout into a single scalar trajectory reward before it enters the policy update. When the task composes distinct skills, especially under sparse and delayed environmental feedback, this collapsing is lossy: the optimizer must implicitly infer which competency drove the outcome and how that should change behavior. We argue the right primitive is not a better scalar but a decomposition: trajectory reward should be split along subtasks before it enters the policy update. We introduce Reinforcement Learning with Decomposed Subtasks (RLDS), whose core is Subtask-Decomposed Advantage Estimation (SDAE): a replacement for the scalar GRPO advantage that splits trajectory reward into per-subtask shares on a fixed taxonomy, computes a group-relative advantage per subtask, and distributes per-token credit by weighting each subtask's advantage by its importance, concentrating it around the step where a reflection marks that subtask's execution as consequential. We evaluate on four agentic benchmarks: FrozenLake (sparse grid navigation), HotpotQA (multi-hop QA, one retrieval tool), ScienceWorld (long-horizon embodied science), and DeepResearch (long-form research, four tools, composite rubric reward). Heterogeneity diagnostics emitted during training show where decomposition pays off - gains scale with subtask heterogeneity, largest on the high-heterogeneity tasks ScienceWorld (+11.5 points, paired-bootstrap 95% CI [+9.8, +13.3]) and FrozenLake (+9.8 points, [+7.0, +12.8]), and within noise on HotpotQA and DeepResearch, where the diagnostics predicted little to recover. ScienceWorld is also more compute-efficient under RLDS than scalar GRPO (-10.9% wall-clock per step), as long rollouts amortize the fixed reflect-and-grade overhead.
+
+组相对策略优化（GRPO）和用于训练语言模型代理的相关策略梯度方法在进入策略更新之前将整个多轮部署折叠为单个标量轨迹奖励。当任务由不同的技能组成时，特别是在稀疏和延迟的环境反馈下，这种崩溃是有损的：优化器必须隐式推断出哪种能力驱动了结果以及应该如何改变行为。我们认为正确的原语不是更好的标量，而是分解：轨迹奖励应该在进入策略更新之前沿着子任务分割。我们引入了分解子任务强化学习（RLDS），其核心是子任务分解优势估计（SDAE）：标量 GRPO 优势的替代品，它将轨迹奖励分割为固定分类上每个子任务的份额，计算每个子任务的组相对优势，并通过按其重要性对每个子任务的优势进行加权来分配每个令牌信用，将其集中在反射将该子任务的执行标记为的步骤周围结果。我们评估四个代理基准：FrozenLake（稀疏网格导航）、HotpotQA（多跳 QA，一种检索工具）、ScienceWorld（长视野体现科学）和 DeepResearch（长篇研究、四种工具、复合标题奖励）。训练过程中发出的异质性诊断表明，分解是有回报的——随着子任务异质性的扩大，在高异质性任务 ScienceWorld（+11.5 分，配对引导 95% CI [+9.8，+13.3]）和 FrozenLake（+9.8 分，[+7.0，+12.8]）上获得最大收益，并且在 HotpotQA 和 DeepResearch 的噪声范围内，诊断预测很少恢复。 ScienceWorld 在 RLDS 下的计算效率也比标量 GRPO 更高（每步 -10.9% 挂钟），因为长时间的部署可以分摊固定的反射和分级开销。
+
+</details>
+
+---
+
+## 8. Resource-Efficient Distributed Recursive Gaussian Processes / 资源高效的分布式递归高斯过程
+
+**Date**: 2026-09-22 | **arXiv**: [2609.26979v1](http://arxiv.org/abs/2609.26979v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.26979v1)
+
+**Categories**: cs.LG, eess.SP
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Gaussian processes (GPs) provide a flexible framework for learning unknown functions from noisy measurements while quantifying predictive uncertainty, making them well suited for estimation in multi-agent systems. However, when measurements are collected by multiple agents, maintaining a unified GP model without centralized processing requires efficient distributed algorithms that can operate using local measurements and communication with neighboring agents. In this work, we develop two distributed recursive GP (RGP) algorithms for multi-output GP regression: ADMM-RGP and PDMM-RGP. We analyze the stability and convergence of both algorithms and develop parameter selection strategies to accelerate convergence, thus reducing the communication burden. The proposed methods are validated on a real-world multi-output wind dataset, and their convergence behavior is examined across communication graphs with varying connectivity. Numerical experiments demonstrate that ADMM-RGP and PDMM-RGP can significantly reduce communication relative to the state of the art, while maintaining comparable estimation accuracy and network-wide consensus.
+
+高斯过程 (GP) 提供了一个灵活的框架，用于从噪声测量中学习未知函数，同时量化预测不确定性，使其非常适合多智能体系统中的估计。然而，当多个代理收集测量值时，在没有集中处理的情况下维护统一的 GP 模型需要高效的分布式算法，该算法可以使用本地测量值和与相邻代理的通信进行操作。在这项工作中，我们开发了两种用于多输出 GP 回归的分布式递归 GP (RGP) 算法：ADMM-RGP 和 PDMM-RGP。我们分析了两种算法的稳定性和收敛性，并制定了参数选择策略来加速收敛，从而减轻了通信负担。所提出的方法在现实世界的多输出风数据集上进行了验证，并在具有不同连接性的通信图中检查了它们的收敛行为。数值实验表明，ADMM-RGP 和 PDMM-RGP 相对于现有技术可以显着减少通信，同时保持可比较的估计精度和全网络共识。
+
+</details>
+
+---
+
+## 9. MAGIC: Mixed-Granularity Agent Graphs via Incremental Construction with Dense-Reward Reinforcement Learning / MAGIC：通过增量构建和密集奖励强化学习的混合粒度代理图
+
+**Date**: 2026-09-22 | **arXiv**: [2609.26667v1](http://arxiv.org/abs/2609.26667v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.26667v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Collaboration topology shapes both the performance and execution cost of LLM-based multi-agent systems. Because tasks differ in complexity and required capabilities, recent approaches generate task-specific collaboration graphs that specify agent participation and information flow. However, representative topology generators use either individual agents or predefined groups throughout an organization, overlooking differing collaboration needs across subtasks. Our key insight is to select granularity locally for each functional role, combining fine-grained control with reusable collaboration patterns within one organization. Learning such organizations requires exploring a combinatorial construction space with limited intermediate feedback from final-answer rewards. Therefore, we propose MAGIC, a dense-reward reinforcement learning framework for mixed-granularity graph generation. Specifically, MAGIC constructs a mixed-granularity agent graph by sequentially selecting a functional role, instantiating it as a single agent or reusable group, and connecting it to existing units. We directly optimize the construction policy using returns from trajectories sampled under the current policy and use potential-based reward shaping to provide intermediate feedback from probe-based utility and structural signals while preserving the cumulative task reward. MAGIC outperforms state-of-the-art baselines across eight benchmarks and demonstrates strong inference efficiency in our efficiency study.
+
+协作拓扑决定了基于 LLM 的多代理系统的性能和执行成本。由于任务的复杂性和所需功能不同，因此最近的方法生成特定于任务的协作图，指定代理参与和信息流。然而，代表性拓扑生成器在整个组织中使用单独的代理或预定义的组，忽略了子任务之间的不同协作需求。我们的主要见解是为每个职能角色在本地选择粒度，将细粒度控制与一个组织内可重用的协作模式相结合。学习这样的组织需要探索一个组合构造空间，其中来自最终答案奖励的中间反馈有限。因此，我们提出了 MAGIC，一种用于混合粒度图生成的密集奖励强化学习框架。具体来说，MAGIC 通过顺序选择功能角色、将其实例化为单个代理或可重用组并将其连接到现有单元来构建混合粒度代理图。我们使用当前政策下采样轨迹的回报直接优化构建政策，并使用基于潜力的奖励塑造来提供来自基于探测的效用和结构信号的中间反馈，同时保留累积任务奖励。 MAGIC 在八个基准测试中的表现优于最先进的基线，并在我们的效率研究中展示了强大的推理效率。
+
+</details>
+
+---
+
+## 10. PACT: From Credit Assignment to Critic Alignment / PACT：从信用分配到批评者联盟
+
+**Date**: 2026-09-22 | **arXiv**: [2609.26355v1](http://arxiv.org/abs/2609.26355v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.26355v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reinforcement learning has become a central component of large language model (LLM) post-training, yet token-level credit lacks a generally accepted mathematical definition, leaving its relationship to commonly used training signals unclear. We formulate three regularity conditions, namely Completeness, Prefix Consistency, and Neutrality, and prove that they uniquely determine token-level credit. This characterization provides a unified basis for explaining phenomena across existing algorithms and guides the development of an improved actor-critic training procedure. Through this lens, an ideal teacher in On-Policy Distillation (OPD) acts as an implicit critic, yielding an expected policy gradient proportional to that induced by token-level credit. Response-level REINFORCE Leave-One-Out (RLOO) signals match the expected policy-gradient contribution of token-level credit despite their coarser granularity. We further establish approximate credit sparsity under bounded outcome rewards and show how intermediate critic errors in Generalized Advantage Estimation (GAE) can become comparable to the underlying credit. These motivate Policy Aligned Critic Training (PACT), which adopts an Actor-then-Critic update order to apply importance sampling correction to critic training and better align the critic with the updated policy. In agentic mathematical reasoning, PACT achieves 72.87% average accuracy across four benchmarks, outperforming GRPO and PPO by 8.80 and 13.16 percentage points, respectively. On SWE-bench Verified, PACT achieves a pass rate of 67.4%, outperforming PPO, GRPO, and SAO by 2.4, 2.0, and 3.8 percentage points, respectively.
+
+强化学习已成为大型语言模型（LLM）后训练的核心组成部分，但代币级信用缺乏普遍接受的数学定义，使其与常用训练信号的关系尚不清楚。我们制定了三个正则性条件，即完整性、前缀一致性和中性，并证明它们唯一地决定了代币级别的信用。这种表征为解释现有算法的现象提供了统一的基础，并指导改进的演员批评家训练程序的开发。通过这个镜头，在政策蒸馏（OPD）中的理想老师充当隐性批评者，产生与代币级信用引起的预期政策梯度成比例。响应级 REINFORCE 留一法 (RLOO) 信号与代币级信用的预期政策梯度贡献相匹配，尽管其粒度较粗。我们进一步在有界结果奖励下建立近似信用稀疏性，并展示广义优势估计（GAE）中的中间批评者错误如何与基础信用具有可比性。这些激励了策略一致的批评家训练（PACT），它采用先行动者后批评家的更新顺序，将重要性抽样校正应用于批评家培训，并使批评家更好地与更新的政策保持一致。在代理数学推理中，PACT 在四个基准测试中的平均准确率达到 72.87%，分别比 GRPO 和 PPO 高出 8.80 个和 13.16 个百分点。在 SWE-bench Verified 上，PACT 的通过率为 67.4%，分别比 PPO、GRPO 和 SAO 高出 2.4、2.0 和 3.8 个百分点。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-09-23 (10 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-09-23
