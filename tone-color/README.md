@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-09-25](papers/2026-09-25.md) - 2 papers
 - [2026-09-24](papers/2026-09-24.md) - 1 papers
 - [2026-09-22](papers/2026-09-22.md) - 4 papers
 - [2026-09-21](papers/2026-09-21.md) - 1 papers
@@ -96,6 +97,50 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-09-25 (2 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-09-25
+
+**Paper Count**: 2
+
+---
+
+## 1. SEE Challenge 2026: Event-Guided Brightness Adjustment Across a Broad Illumination Range / SEE 挑战 2026：在广泛的照明范围内进行事件引导的亮度调整
+
+**Date**: 2026-09-24 | **arXiv**: [2609.29347v1](http://arxiv.org/abs/2609.29347v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.29347v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Event cameras provide a high dynamic range and preserve brightness-change cues in lighting conditions where conventional RGB frames may be noisy or saturated. To benchmark event-guided restoration across a broad illumination range, we organized the SEE Challenge 2026 with the Event-Based Multimodal Vision Workshop at ECCV 2026. The task conditions restoration on one or more RGB frames, synchronized events, and a scalar target-brightness statistic provided by the organizers. It uses SEE-600K, which contains 610,126 image-event observations from 202 real-world scenes spanning low-light, normal-light, and high-light conditions with illumination variations of up to 1,000$\times$. The challenge follows an open-system protocol: participants may use different temporal contexts, architectures, pretrained weights, test-time augmentation, and post-processing strategies. PSNR determines the ranking, and SSIM is reported as a secondary metric. Around 70 teams registered interest and 15 valid CodaBench submissions were received. Six distinct teams completed organizer-side identity and technical verification, provided method descriptions, checkpoints, inference code, and instructions, and are included in the verified open-system ranking reported here. Beyond the ranking, this report analyzes exposure subsets, semantically distinct test cases, a shared failure pattern, system design choices, and inference strategies. The top systems obtain closely spaced average scores, while the best-performing method varies across cases and metrics; under severe underexposure, all verified systems retain visible local errors.
+
+事件摄像机提供高动态范围，并在传统 RGB 帧可能有噪声或饱和的照明条件下保留亮度变化线索。为了在广泛的照明范围内对事件引导的恢复进行基准测试，我们在 ECCV 2026 上组织了 SEE Challenge 2026 和基于事件的多模态视觉研讨会。任务条件是在一个或多个 RGB 帧、同步事件以及组织者提供的标量目标亮度统计数据上进行恢复。它使用 SEE-600K，其中包含来自 202 个真实世界场景的 610,126 个图像事件观测结果，涵盖低光、正常光和高光条件，照明变化高达 1,000$\times$。该挑战遵循开放系统协议：参与者可以使用不同的时间上下文、架构、预训练权重、测试时间增强和后处理策略。 PSNR 决定排名，SSIM 作为次要指标进行报告。大约 70 个团队注册了兴趣，并收到了 15 份有效的 CodaBench 提交材料。六个不同的团队完成了组织方身份和技术验证，提供了方法描述、检查点、推理代码和说明，并包含在此处报告的经过验证的开放系统排名中。除了排名之外，该报告还分析了暴露子集、语义上不同的测试用例、共享的故障模式、系统设计选择和推理策略。顶级系统获得的平均分数相近，而表现最佳的方法因案例和指标而异；在严重曝光不足的情况下，所有经过验证的系统都保留可见的局部错误。
+
+</details>
+
+---
+
+## 2. HaRP: High Dynamic Range Photosequencing through Dual Reversed Shutter Scanning / HaRP：通过双反向快门扫描进行高动态范围照片排序
+
+**Date**: 2026-09-23 | **arXiv**: [2609.28439v1](http://arxiv.org/abs/2609.28439v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.28439v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The adoption of CMOS sensors in mobile photography is frequently compromised by the rolling shutter (RS) effect, which introduces geometric distortions and motion artifacts. Particularly, recent rolling shutter with global reset (RSGR) mode, while mitigating some RS issues, also incurs major limitations, including reduced capture speed and compressed dynamic range. To address these problems, we propose a novel dual reversed scanning setup utilizing both RSGR and inverted RSGR views. This solution not only handles the inherent flaws of RSGR by synchronizing complementary exposures to balance the dynamic range across the frames but also introduces an effective method for HDR photosequencing under highly dynamic scenes. Our proposed network first accommodates row-wise complementarity and manages visual shifts by row-adaptive feature alignment. Subsequently, the hallucination module, built upon a correlation-guided mixattention block, integrates the mutually reinforced features to recover missing details. In addition, we construct a coaxial imaging system to collect a real-world dataset, enabling robust training and evaluation beyond numerical simulation. Experimental results demonstrate the twofold benefits of our solution in mitigating RSGR limitations and advancing HDR reconstruction techniques.
+
+移动摄影中 CMOS 传感器的采用经常受到卷帘快门 (RS) 效应的影响，该效应会引入几何失真和运动伪影。特别是，最近具有全局重置 (RSGR) 模式的卷帘快门虽然缓解了一些 RS 问题，但也带来了重大限制，包括捕获速度降低和动态范围压缩。为了解决这些问题，我们提出了一种利用 RSGR 和倒置 RSGR 视图的新型双反向扫描设置。该解决方案不仅通过同步互补曝光来平衡帧之间的动态范围来解决 RSGR 的固有缺陷，而且还引入了一种在高动态场景下进行 HDR 照片排序的有效方法。我们提出的网络首先适应行方向的互补性，并通过行自适应特征对齐来管理视觉变化。随后，建立在相关引导混合注意块之上的幻觉模块集成了相互增强的特征以恢复丢失的细节。此外，我们构建了一个同轴成像系​​统来收集真实世界的数据集，从而实现数值模拟之外的稳健训练和评估。实验结果证明我们的解决方案在减轻 RSGR 限制和推进 HDR 重建技术方面具有双重好处。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-09-24 (1 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-09-24
