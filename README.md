@@ -27,6 +27,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-09-25](papers/2026-09-25.md) - 14 papers
 - [2026-09-24](papers/2026-09-24.md) - 13 papers
 - [2026-09-22](papers/2026-09-22.md) - 4 papers
 - [2026-09-17](papers/2026-09-17.md) - 5 papers
@@ -182,6 +183,242 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-09-25 (14 papers)</b></summary>
+
+# arXiv Video Papers - 2026-09-25
+
+**Paper Count**: 14
+
+---
+
+## 1. SALI: Shot-Aware Late Interaction for Cross-Shot Relation Matching in Text-to-Video Retrieval using Film-Grammar Knowledge / SALI：使用电影语法知识在文本到视频检索中进行跨镜头关系匹配的镜头感知后期交互
+
+**Date**: 2026-09-24 | **arXiv**: [2609.29721v1](http://arxiv.org/abs/2609.29721v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.29721v1)
+
+**Categories**: cs.CV, cs.IR, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Text-to-video retrieval usually represents a video clip by a single embedding. This embedding often loses important relations between people. E.g., an interaction "Anna confronts Mark" is regularly filmed as alternating shot and reverse shot of both (Fig. 1a). No single shot or averaged embedding over clip shots captures this relation. Thus, we propose SALI (Shot-Aware Late Interaction). It extracts the subject and object from a single-sentence query, and matches the query, its subject and object text embeddings against each visual shot embedding of a video clip. The matching operator is greedy max or optimal transport. A film-grammar penalty in fine-tuning adds a small, consistent shift. Built on CLIP4Clip-meanP, SALI keeps overall recall on par on Condensed Movies and ActivityNet while raising R@1 on multi-shot relation queries by 3 and 12 points, the most among all compared methods, and improves such queries on MSR-VTT at a cost of 1.4 R@1 overall.
+
+文本到视频检索通常通过单个嵌入来表示视频剪辑。这种嵌入往往会失去人与人之间的重要关系。例如，“安娜面对马克”的互动通常被拍摄为两者的交替镜头和反向镜头（图 1a）。单个镜头或剪辑镜头上的平均嵌入都无法捕捉到这种关系。因此，我们提出了 SALI（射击感知后期交互）。它从单句查询中提取主语和宾语，并将查询、其主语和宾语文本嵌入与视频剪辑的每个视觉镜头嵌入进行匹配。匹配算子是贪婪最大或最优传输。微调中的电影语法惩罚增加了一个小的、一致的转变。 SALI 基于 CLIP4Clip-meanP 构建，在 Condensed Movies 和 ActivityNet 上保持整体召回率不变，同时将多镜头关系查询的 R@1 提高了 3 点和 12 点，这是所有比较方法中最高的，并且以 1.4 R@1 的总体成本改进了 MSR-VTT 上的此类查询。
+
+</details>
+
+---
+
+## 2. From Scattered Gaussians to Structured Maps: Efficient Gaussian Splatting Coding via Dual-phase Morton Sorting / 从分散高斯到结构化映射：通过双相莫顿排序进行高效高斯泼溅编码
+
+**Date**: 2026-09-24 | **arXiv**: [2609.29041v1](http://arxiv.org/abs/2609.29041v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.29041v1)
+
+**Categories**: cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+3D Gaussian Splatting (3DGS) enables high fidelity novel view synthesis but suffers from excessive storage and bandwidth requirements due to its unstructured representation. To address this, a projection based video coding framework has emerged as a leading approach, supported by MPEG's ongoing standardization, where 3DGS attributes are converted into 2D maps to take advantage of efficient compression using established video codecs such as HEVC and VVC. However, the effectiveness of this approach depends heavily on the spatial coherence of the projected video, which current sorting strategies such as PLAS and Morton ordering fail to preserve adequately, either incurring high computational cost or achieving limited correlation retention. To overcome these limitations, we propose a dual phase Morton spatial sorting algorithm that improves both coding efficiency and processing speed. In the first phase, Morton based 1D indexing is applied to high dimensional attributes to enhance spatial locality. The second phase further refines layout continuity through a structured 2D Morton mapping table that enforces spatial adjacency. This hierarchical strategy generates highly regular, block wise feature maps with strong local correlation, making them well suited for compression via conventional block based coding tools. Experimental results show that our method significantly outperforms existing approaches in both compression performance and runtime efficiency, providing a practical and standard compatible solution for 3DGS data coding.
+
+3D 高斯分布 (3DGS) 可实现高保真新颖的视图合成，但由于其非结构化表示而面临过多的存储和带宽要求。为了解决这个问题，基于投影的视频编码框架已成为一种领先方法，并得到 MPEG 正在进行的标准化的支持，其中 3DGS 属性被转换为 2D 映射，以利用已建立的视频编解码器（例如 HEVC 和 VVC）进行高效压缩。然而，这种方法的有效性在很大程度上取决于投影视频的空间相干性，当前的排序策略（例如 PLAS 和 Morton 排序）无法充分保留空间相干性，要么导致较高的计算成本，要么实现有限的相关性保留。为了克服这些限制，我们提出了一种双阶段 Morton 空间排序算法，可以提高编码效率和处理速度。在第一阶段，基于 Morton 的一维索引应用于高维属性以增强空间局部性。第二阶段通过加强空间邻接的结构化 2D Morton 映射表进一步细化布局连续性。这种分层策略生成高度规则的、具有强局部相关性的分块特征图，使它们非常适合通过传统的基于块的编码工具进行压缩。实验结果表明，我们的方法在压缩性能和运行效率方面都显着优于现有方法，为3DGS数据编码提供了实用且标准兼容的解决方案。
+
+</details>
+
+---
+
+## 3. Beneath the Scores: Rethinking Hallucination Evaluation for Video Understanding Models / 分数之下：重新思考视频理解模型的幻觉评估
+
+**Date**: 2026-09-24 | **arXiv**: [2609.28991v1](http://arxiv.org/abs/2609.28991v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.28991v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video understanding is increasingly performed by multi-stage LLM agents that separate temporal grounding, visual observation, and reasoning. Yet these stages are typically evaluated on different benchmarks and distributions, making it difficult to determine where hallucinations originate. We first organize existing benchmarks around these stages and show that their scores provide inconsistent diagnostic signals: stronger stage-level performance does not reliably imply lower downstream hallucination, and even benchmarks targeting the same capability can disagree.   We therefore introduce a causal stage-intervention protocol that overwrites individual stages while holding the downstream task fixed. Across 60,008 runs on three video-agent architectures, we find that grounding is the dominant source of downstream error, with roughly four times the causal impact of corrupting visual observations. Successful grounding depends primarily on locating the correct region rather than precise temporal overlap, explaining why standard mIoU metrics poorly predict downstream reliability. We further find that incorrect evidence is substantially more harmful than missing evidence. Finally, auditing existing benchmarks against these interventions reveals that their scores do not reliably predict causal cascade sensitivity and can fail under distribution shift. These results motivate intervention-based, stage-aware evaluation for trustworthy video agents.
+
+视频理解越来越多地由多阶段 LLM 代理执行，这些代理将时间基础、视觉观察和推理分开。然而，这些阶段通常是根据不同的基准和分布进行评估的，因此很难确定幻觉的起源。我们首先围绕这些阶段组织现有的基准，并表明它们的分数提供了不一致的诊断信号：更强的阶段级性能并不可靠地意味着更低的下游幻觉，甚至针对相同功能的基准也可能不一致。   因此，我们引入了一种因果阶段干预协议，该协议会覆盖各个阶段，同时保持下游任务固定。在三种视频代理架构上的 60,008 次运行中，我们发现接地是下游错误的主要来源，其因果影响大约是破坏视觉观察结果的四倍。成功的接地主要取决于定位正确的区域，而不是精确的时间重叠，这解释了为什么标准 MIoU 指标很难预测下游可靠性。我们进一步发现，错误的证据比缺失的证据危害更大。最后，根据这些干预措施审核现有基准表明，它们的分数不能可靠地预测因果级联敏感性，并且可能在分布转移下失败。这些结果激发了对值得信赖的视频代理进行基于干预的、阶段感知的评估。
+
+</details>
+
+---
+
+## 4. MoVISA: Multi-Token Reasoning for Video Object Segmentation / MoVISA：视频对象分割的多标记推理
+
+**Date**: 2026-09-24 | **arXiv**: [2609.28956v1](http://arxiv.org/abs/2609.28956v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.28956v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in video object segmentation with Multimodal Large Language Model (MLLM) reasoning have demonstrated the effectiveness of using a single textual token, such as SEG, to predict segmentation masks across images and videos. However, we observe that this single-token strategy lacks the granularity required to precisely localize multiple objects across time in video segmentation tasks. To address this limitation, we develop Multi-Token Reasoning for Video Object Segmentation, or MoVISA. MoVISA uses multiple segmentation tokens, such as SEG0 and SEG1, to represent an object across different frames. This design enables more fine-grained alignment between language prompts and spatio-temporal mask predictions, improving both performance and interpretability. On the challenging MeViS, DAVIS17, ReVOS, and Ref-Youtube-VOS benchmarks, our model achieves a 13.2 percent J and F improvement on MeViS and an 8.4 percent J and F improvement on ReVOS. Code and models will be released.
+
+使用多模态大语言模型 (MLLM) 推理进行视频对象分割的最新进展证明了使用单个文本标记（例如 SEG）来预测跨图像和视频的分割掩模的有效性。然而，我们观察到这种单标记策略缺乏在视频分割任务中跨时间精确定位多个对象所需的粒度。为了解决这个限制，我们开发了视频对象分割的多令牌推理（MoVISA）。 MoVISA 使用多个分段标记（例如 SEG0 和 SEG1）来表示不同帧中的对象。这种设计可以在语言提示和时空掩模预测之间实现更细粒度的对齐，从而提高性能和可解释性。在具有挑战性的 MeViS、DAVIS17、ReVOS 和 Ref-Youtube-VOS 基准测试中，我们的模型在 MeViS 上实现了 13.2% 的 J 和 F 改进，在 ReVOS 上实现了 8.4% 的 J 和 F 改进。代码和模型将被发布。
+
+</details>
+
+---
+
+## 5. ViRDM: Taming Representation Distribution Matching for Few-Step Causal Video Generation / ViRDM：驯服表示分布匹配以实现少步因果视频生成
+
+**Date**: 2026-09-24 | **arXiv**: [2609.28923v1](http://arxiv.org/abs/2609.28923v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.28923v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Few-step autoregressive (AR) video diffusion enables low-latency streaming generation, but existing post-training methods predominantly rely on Distribution Matching Distillation (DMD), requiring both a large pretrained teacher and an online critic to estimate distributional discrepancies through diffusion scores. In this work, we ask whether this resource-intensive teacher--critic stack can be eliminated by post-training only the generator against a precomputed target distribution. Drawing inspiration from representation distribution matching (RDM) for one-step image generation, we systematically study its transfer to few-step causal video generation and identify three key barriers: a memory-intractable gradient path, a distinct video optimization regime, and representation distributions that underconstrain temporal dynamics. We introduce ViRDM, a teacher- and critic-free video post-training recipe that addresses these barriers sequentially. By coupling RDM with stochastically truncated clean-exit supervision, a lightweight VAE decoder, and staged vector--Jacobian products, ViRDM makes representation distribution matching memory-feasible for multi-step causal video rollouts. We further establish effective generated-population and initialization regimes for video RDM, and introduce lightweight dynamics regularization to compensate for the underconstrained temporal dynamics. ViRDM turns three-network distillation into generator-only post-training, reducing GPU memory use and training time while improving video quality. With only 20 generator updates, the recipe reaches 84.87 on the official VBench evaluation, outperforming the previous best few-step causal baseline by 0.36, while requiring 16 A100 GPU-hours. We additionally report exploratory results demonstrating the potential of the same recipe for lower causal sampling budget and for one-, two-, and four-step bidirectional generation.
+
+少步自回归（AR）视频扩散可以实现低延迟流生成，但现有的训练后方法主要依赖于分布匹配蒸馏（DMD），需要大量经过预训练的教师和在线评论家通过扩散分数来估计分布差异。在这项工作中，我们询问是否可以通过仅针对预先计算的目标分布对生成器进行后训练来消除这种资源密集型教师-评论家堆栈。受到一步图像生成的表示分布匹配（RDM）的启发，我们系统地研究了其向几步因果视频生成的迁移，并确定了三个关键障碍：内存难以处理的梯度路径、独特的视频优化机制以及限制时间动态的表示分布。我们引入了 ViRDM，这是一种无需教师和评论家的视频培训后配方，可以按顺序解决这些障碍。通过将 RDM 与随机截断的干净退出监督、轻量级 VAE 解码器和阶段向量（Jacobian 产品）相结合，ViRDM 使表示分布匹配内存对于多步骤因果视频推出变得可行。我们进一步为视频 RDM 建立有效的生成群体和初始化机制，并引入轻量级动态正则化来补偿约束不足的时间动态。 ViRDM 将三网络蒸馏转变为仅生成器的后训练，减少 GPU 内存使用和训练时间，同时提高视频质量。只需 20 次生成器更新，该配方在官方 VBench 评估中就达到 84.87，比之前最好的几步因果基线高出 0.36，同时需要 16 个 A100 GPU 小时。我们还报告了探索性结果，证明了相同方法在降低因果抽样预算以及一步、两步和四步双向生成方面的潜力。
+
+</details>
+
+---
+
+## 6. CinematicVQA: Benchmarking Film-Grammar Reasoning in Large Vision-Language Models / CinematicVQA：大型视觉语言模型中的电影语法推理基准测试
+
+**Date**: 2026-09-23 | **arXiv**: [2609.28813v1](http://arxiv.org/abs/2609.28813v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.28813v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Cinematography, the craft of visual storytelling through framing, lighting, and camera operation, fundamentally shapes how audiences perceive and emotionally engage with video content. While Large Vision Language Models (LVLMs) have made remarkable progress in video question answering, existing benchmarks primarily focus on identifying low-level techniques rather than understanding their storytelling impact. To address this, we introduce CinematicVQA, the first-of-its-kind benchmark for cinematic video understanding that goes beyond technique recognition to evaluate film-grammar reasoning, utilizing our introduced Cinematic Scene Graph (CSG), a structured representation that links filming techniques to their perceptual effects and narrative functions. Through comprehensive evaluation of state-of-the-art LVLMs, we reveal a striking semantic gap: models consistently perform higher on describing visual presentations than on identifying the underlying techniques. Surprisingly, Chain-of-Thought prompting fails to provide consistent gains and degrades performance for most models, suggesting that current LVLMs lack sufficient cinematic domain knowledge to benefit from step-by-step reasoning. Fine-tuning on \textsc{CinematicVQA-train} yields consistent improvements, particularly for narrative function and multi-hop reasoning. Overall, \textsc{CinematicVQA} serves both as a rigorous benchmark for cinematic evaluation in LVLMs and as a practical dataset for training more film-aware video models.
+
+电影摄影是通过取景、灯光和摄像机操作来讲述视觉故事的技巧，从根本上塑造了观众对视频内容的感知和情感参与方式。虽然大视觉语言模型 (LVLM) 在视频问答方面取得了显着进展，但现有基准主要侧重于识别低级技术，而不是了解其讲故事的影响。为了解决这个问题，我们引入了 CinematicVQA，这是电影视频理解的首个基准，它超越了技术识别来评估电影语法推理，利用我们引入的电影场景图 (CSG)，一种将电影技术与其感知效果和叙事功能联系起来的结构化表示。通过对最先进的 LVLM 的综合评估，我们揭示了一个显着的语义差距：模型在描述视觉呈现方面的表现始终高于在识别底层技术方面的表现。令人惊讶的是，思想链提示无法为大多数模型提供一致的增益并降低性能，这表明当前的 LVLM 缺乏足够的电影领域知识来从逐步推理中受益。对 \textsc{CinematicVQA-train} 进行微调会产生一致的改进，特别是对于叙事功能和多跳推理。总的来说，\textsc{CinematicVQA} 既可以作为 LVLM 中电影评估的严格基准，也可以作为训练更多电影感知视频模型的实用数据集。
+
+</details>
+
+---
+
+## 7. Training Object Permanence in World Models / 在世界模型中训练对象持久性
+
+**Date**: 2026-09-23 | **arXiv**: [2609.28654v1](http://arxiv.org/abs/2609.28654v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.28654v1)
+
+**Categories**: cs.AI, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Object permanence and solidity are hallmarks of human cognitive priors. Recent studies show that video generation models, a paradigmatic class of current world models, have begun to show emerged reasoning abilities, making them ideal candidates for building human-like physical intelligence. Do video models have emerged object permanence in them? If not, could we train them with a core-cognition inspired dataset? We introduce WROP (World Reasoning with Object Permanence), a data infrastructure of 150 hand-designed cognitive science inspired tasks, divided into six cognitive categories. We build Blender generators that randomize speed, lighting, camera angle, and other nuisance parameters while preserving each task's cognitive structure, yielding 10,000+ samples per task. We release a 1.5M-sample training corpus and a 300-question exam. On this exam we evaluate 14 video models: 3 reference-to-video, 7 edit, and 4 continuation, among which PWM-WROP, our 16B world model. In a blind pairwise Elo study, PWM-WROP ranks first among continuation models and third overall, behind only a statistical tie between two reference-to-video models. We release the data, exam, model answers, scores, weights, and PWM, our native-PyTorch training stack on AWS Trainium2.
+
+物体的持久性和坚固性是人类认知先验的标志。最近的研究表明，视频生成模型是当前世界模型的典范，已经开始显示出新兴的推理能力，使其成为构建类人物理智能的理想候选者。视频模型是否已经显现出物体的持久性？如果没有，我们可以用核心认知启发的数据集来训练它们吗？我们引入了 WROP（具有对象持久性的世界推理），这是一个由 150 个手工设计的认知科学启发任务组成的数据基础设施，分为六个认知类别。我们构建了 Blender 生成器，可以随机化速度、光照、摄像机角度和其他干扰参数，同时保留每个任务的认知结构，每个任务生成 10,000 多个样本。我们发布了 150 万样本的训练语料库和 300 个问题的考试。在本次考试中，我们评估了 14 个视频模型：3 个视频参考模型、7 个编辑模型和 4 个延续模型，其中包括 PWM-WROP，我们的 16B 世界模型。在一项盲配对 Elo 研究中，PWM-WROP 在连续模型中排名第一，总体排名第三，仅落后于两个参考视频模型之间的统计平局。我们在 AWS Trainium2 上发布了数据、考试、模型答案、分数、权重和 PWM（我们的本机 PyTorch 训练堆栈）。
+
+</details>
+
+---
+
+## 8. The Past Frames the Future: Memory for Autoregressive Video Generation / 过去塑造未来：自回归视频生成的内存
+
+**Date**: 2026-09-23 | **arXiv**: [2609.28466v1](http://arxiv.org/abs/2609.28466v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.28466v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Advances in generative models have improved video fidelity, enabling long-horizon generation, interactive world modeling, and evolving visual environments. Autoregressive (AR) video generation extends visual sequences through causal rollouts. However, a fundamental bottleneck emerges: as the generated sequence expands, practical models must operate under strictly bounded context windows, storage, and computational limits. Consequently, critical historical information, e.g., entity identities, dynamic states, and intervention-induced causal changes, often leaves the active context long before its relevance diminishes. Overcoming this limitation and maintaining temporal persistence constitutes a fundamental memory problem. We present a systematic and comprehensive review of memory mechanisms in AR video generation. We formulate memory operationally as persistent historical information maintained across outer AR steps, capable of influencing future generation even after the originating evidence is no longer locally accessible. Building upon this unified framework, we organize the literature through five complementary perspectives: (I) Forms, the representational carriers of history; (II) Functions, the specific semantic and physical information requiring preservation; (III) Operations, the lifecycle of writing, reading, updating, managing, and integrating memory; (IV) Learning, the optimization of memory behaviors under closed-loop rollouts; and (V) Evaluation, the paradigms for diagnosing genuine memory capabilities. We conclude by synthesizing open challenges, including composable and resource-aware memory architectures, trustworthy state updating, self-rollout learning, and standardized evaluation. By bridging representations, mechanisms, and learning paradigms, this paper establishes a structured foundation for developing reliable, memory-conditioned video generation systems.
+
+生成模型的进步提高了视频保真度，实现了长视野生成、交互式世界建模和不断发展的视觉环境。自回归 (AR) 视频生成通过因果推出扩展了视觉序列。然而，出现了一个根本瓶颈：随着生成的序列扩展，实际模型必须在严格有限的上下文窗口、存储和计算限制下运行。因此，关键的历史信息，例如实体身份、动态状态和干预引起的因果变化，往往在其相关性减弱之前就离开了活跃的背景。克服这一限制并保持时间持久性构成了一个基本的记忆问题。我们对 AR 视频生成中的记忆机制进行了系统、全面的回顾。我们将记忆在操作上制定为跨外部 AR 步骤维护的持久历史信息，即使在原始证据不再在本地可访问之后，也能够影响下一代。在此统一框架的基础上，我们通过五个互补的视角来组织文献：（一）形式，历史的表征载体； （二）功能、需要保存的具体语义和物理信息； (III) 操作，即写入、读取、更新、管理和整合内存的生命周期； （IV）学习，闭环rollouts下记忆行为的优化； (V) 评估，诊断真实记忆能力的范式。最后，我们综合了开放的挑战，包括可组合和资源感知的内存架构、值得信赖的状态更新、自我推出学习和标准化评估。通过桥接表示、机制和学习范式，本文为开发可靠的、内存调节的视频生成系统奠定了结构化基础。
+
+</details>
+
+---
+
+## 9. Beyond Future Prediction: Denoising as Generative Adaptation for Robot Control / 超越未来预测：去噪作为机器人控制的生成适应
+
+**Date**: 2026-09-23 | **arXiv**: [2609.28339v1](http://arxiv.org/abs/2609.28339v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.28339v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Pretrained generative Diffusion Transformers (DiTs) capture rich pixel-level visual and language-conditioned structure through large-scale image and video generation training. A growing line of robot policies builds on this generative prior, but how it should be transferred to control remains unclear, and existing approaches commonly instantiate this transfer through future visual prediction. We ask a more basic question: what a pretrained generative DiT actually contributes to action learning, and how this prior should be adapted for control. We introduce NowWAM, a future-target-free co-training formulation that denoises the current observation and predicts robot actions from the same visual stream, directly coupling the native generative objective to the action-facing representation across the denoising trajectory. Under matched controlled settings, past and future visual targets perform comparably, while restricting training to the clean endpoint substantially reduces robustness, suggesting that a separate future target is not essential for generative adaptation, while the denoising trajectory remains an effective interface for control. On LIBERO-Plus, NowWAM reaches 87.7% with FLUX2-Klein, improving over the future-target co-training baseline by 6.1 points while halving training visual tokens (784 to 392) and reducing step time from 2.85 s to 1.63 s, a 1.8x speedup. With the pure text-to-image Z-Image backbone, NowWAM further reaches 87.8%, showing that strong control adaptation is not tied to video generation or image-editing backbones.
+
+预训练的生成扩散变压器 (DiT) 通过大规模图像和视频生成训练来捕获丰富的像素级视觉和语言条件结构。越来越多的机器人策略建立在这种生成先验的基础上，但如何将其转移到控制仍不清楚，现有的方法通常通过未来的视觉预测来实例化这种转移。我们提出一个更基本的问题：预训练的生成 DiT 实际上对动作学习有何贡献，以及如何调整该先验以进行控制。我们引入了 NowWAM，这是一种未来无目标的协同训练公式，可以对当前观察进行去噪，并从同一视觉流中预测机器人动作，直接将本机生成目标与去噪轨迹上面向动作的表示耦合起来。在匹配的受控设置下，过去和未来的视觉目标表现相当，而将训练限制在干净的终点会大大降低鲁棒性，这表明单独的未来目标对于生成适应并不重要，而去噪轨迹仍然是控制的有效界面。在 LIBERO-Plus 上，NowWAM 通过 FLUX2-Klein 达到 87.7%，比未来目标协同训练基线提高了 6.1 个点，同时将训练视觉标记减半（784 到 392），并将步骤时间从 2.85 秒减少到 1.63 秒，加速了 1.8 倍。凭借纯文本​​到图像的 Z-Image 主干，NowWAM 进一步达到 87.8%，这表明强大的控制适应与视频生成或图像编辑主干无关。
+
+</details>
+
+---
+
+## 10. MotionSpec: Spectral Trajectory Supervision for Motion-Consistent Video Generation / MotionSpec：用于运动一致视频生成的光谱轨迹监督
+
+**Date**: 2026-09-23 | **arXiv**: [2609.28095v1](http://arxiv.org/abs/2609.28095v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.28095v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in text-to-video generation have enabled high-fidelity visual synthesis, yet realistic motion remains challenging. Generated videos may exhibit temporal discontinuities, inconsistent action progression, and structural distortions during complex movements. Even when individual frames appear realistic, the underlying motion may evolve in inconsistent or implausible ways. Standard generative objectives provide limited motion-specific supervision, leaving motion evolution insufficiently constrained. In this paper, we propose MotionSpec, a motion supervision framework centered on Spectral Trajectory Consistency (STC). STC constructs dense anchor-relative motion trajectories and transforms them into motion spectral volumes via a temporal Fourier transform. By aligning the spectral amplitude and phase of predicted and target trajectories, STC constrains both motion strength across temporal frequencies and the temporal organization of motion. To complement this trajectory-level supervision, we introduce Local Flow Consistency (LFC), which aligns consecutive-frame optical flow between predicted and target videos to stabilize local motion transitions. Experiments demonstrate that MotionSpec consistently improves motion consistency, temporal coherence, and plausibility while preserving visual fidelity.
+
+文本到视频生成的最新进展已经实现了高保真视觉合成，但真实的运动仍然具有挑战性。生成的视频可能会在复杂的运动过程中表现出时间不连续性、动作进展不一致以及结构扭曲。即使各个帧看起来很真实，潜在的运动也可能以不一致或难以置信的方式演变。标准生成目标提供了有限的特定于运动的监督，使得运动演化没有得到充分的约束。在本文中，我们提出了MotionSpec，一种以谱轨迹一致性（STC）为中心的运动监督框架。 STC 构建密集的锚点相对运动轨迹，并通过时间傅立叶变换将其转换为运动谱体。通过对齐预测轨迹和目标轨迹的频谱幅度和相位，STC 约束跨时间频率的运动强度和运动的时间组织。为了补充这种轨迹级监督，我们引入了局部流一致性（LFC），它可以对齐预测视频和目标视频之间的连续帧光流以稳定局部运动过渡。实验表明，MotionSpec 不断提高运动一致性、时间连贯性和合理性，同时保持视觉保真度。
+
+</details>
+
+---
+
+## 11. LAYERSCOPE: A Layerwise Characterization of Video and Multimodal Learned Representations / LAYERSCOPE：视频和多模态学习表示的分层表征
+
+**Date**: 2026-09-23 | **arXiv**: [2609.28086v2](http://arxiv.org/abs/2609.28086v2) | **PDF**: [Link](http://arxiv.org/pdf/2609.28086v2)
+
+**Categories**: cs.LG, cs.AI, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We propose LAYERSCOPE, a label-free, layerwise framework that aims to characterize a model's learned representations in video and multimodal settings. Evaluating downstream performance using representations from final or intermediate layers typically requires large amounts of labeled data, repeated task-specific evaluations, and substantial computation. To address these limitations, LAYERSCOPE uses local, global, distributional, and correspondence-based geometric metrics to compare layerwise representation structure within and across models without requiring task-specific labels. We evaluate seven architecturally diverse models across video and multimodal classification, clustering, and text-to-video retrieval tasks from MVEB/MVEB+. We find that intermediate-layer representations can outperform final-layer and model-default outputs. We also find that no single geometric metric consistently predicts downstream performance, but note that distinct layerwise geometric signatures emerge across model families. LID shows task-dependent relationships with performance, while RankMe provides the strongest measure for classification and clustering, but is not a universal layer selector. We also find that pairing-aware metrics explain retrieval better than distributional distances alone. LAYERSCOPE therefore offers a framework for comparing representations across models and layers, enabling a more systematic evaluation in video and multimodal settings.
+
+我们提出了 LAYERSCOPE，这是一种无标签的分层框架，旨在表征模型在视频和多模态设置中学习到的表示。使用最终层或中间层的表示来评估下游性能通常需要大量标记数据、重复的特定于任务的评估和大量计算。为了解决这些限制，LAYERSCOPE 使用局部、全局、分布和基于对应的几何度量来比较模型内部和模型之间的分层表示结构，而不需要特定于任务的标签。我们评估了来自 MVEB/MVEB+ 的视频和多模态分类、聚类以及文本到视频检索任务的七个架构不同的模型。我们发现中间层表示可以优于最终层和模型默认输出。我们还发现没有单一的几何指标能够一致地预测下游性能，但请注意，模型系列中出现了不同的分层几何特征。 LID 显示了任务依赖与性能的关系，而 RankMe 提供了最强的分类和聚类度量，但不是通用的层选择器。我们还发现，配对感知指标比单独的分布距离更好地解释检索。因此，LAYERSCOPE 提供了一个用于比较模型和层之间的表示的框架，从而能够在视频和多模式设置中进行更系统的评估。
+
+</details>
+
+---
+
+## 12. LiAM-SAM: Lifecycle-Aware Memory for Robust SAM2-Based MOT / LiAM-SAM：用于基于 SAM2 的稳健 MOT 的生命周期感知内存
+
+**Date**: 2026-09-23 | **arXiv**: [2609.28078v1](http://arxiv.org/abs/2609.28078v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.28078v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Segmentation-based multi-object tracking (MOT) with foundation video models such as SAM2 offers strong localization quality, yet remains fragile in crowded, real-world scenes. In detector-prompted SAM2 pipelines, failures typically arise at three stages of the object lifecycle: (i) erroneous or duplicate track initiation, (ii) memory drift during close interactions, and (iii) unreliable re-identification after long occlusions or re-entry. These errors corrupt object memory and accumulate over time, making long-horizon tracking unstable. In this paper, we reframe MOT as a lifecycle memory integrity problem. We present LiAM-SAM, a Lifecycle-Aware Memory (LiAM) framework with targeted mechanisms for each of the three failure modes. At track birth, to prevent faulty or duplicate initiations, we apply contrastive track initiation, which conditions each prompt on existing nearby tracked instances. To preserve memory integrity during strong interactions, we introduce motion- and geometry-grounded memory correction that resolves interaction confusions and suppresses drift. For reliable re-identification after disappearance, we maintain an adaptive context memory that promotes diverse and trustworthy references as long-term identity anchors. Finally, similarity aware spatial pruning optionally selects the memory tokens to retain at cross-attention time, improving efficiency with minimal accuracy loss. LiAM-SAM represents a modular, detector-agnostic, SAM2-based MOT system that achieves state-of-the-art HOTA and IDF1 on the evaluated benchmarks. In association-challenging environments, our ablations show that LiAM improves a detector+SAM2 baseline by +10.5 HOTA, +17.4 AssA, and reduces identity switches by 96%.
+
+基于分段的多目标跟踪 (MOT) 和 SAM2 等基础视频模型可提供强大的定位质量，但在拥挤的现实世界场景中仍然脆弱。在检测器提示的 SAM2 管道中，故障通常出现在对象生命周期的三个阶段：(i) 错误或重复的轨迹启动，(ii) 紧密交互期间的内存漂移，以及 (iii) 长时间遮挡或重新进入后不可靠的重新识别。这些错误会破坏对象内存并随着时间的推移而累积，从而导致长视野跟踪不稳定。在本文中，我们将 MOT 重新定义为生命周期内存完整性问题。我们提出了 LiAM-SAM，这是一种生命周期感知内存 (LiAM) 框架，具有针对三种故障模式中每种故障模式的目标机制。在轨道诞生时，为了防止错误或重复启动，我们应用对比轨道启动，这会在现有的附近跟踪实例上调整每个提示。为了在强交互过程中保持记忆完整性，我们引入了基于运动和几何的记忆校正，可以解决交互混乱并抑制漂移。为了在消失后进行可靠的重新识别，我们维持了自适应上下文记忆，促进多样化且值得信赖的参考作为长期身份锚。最后，相似性感知空间修剪选择性地选择在交叉注意时间保留的记忆标记，以最小的准确性损失提高效率。 LiAM-SAM 代表了一种模块化、与探测器无关、基于 SAM2 的 MOT 系统，可在评估基准上实现最先进的 HOTA 和 IDF1。在关联挑战环境中，我们的消融表明 LiAM 将检测器+SAM2 基线提高了 +10.5 HOTA、+17.4 AssA，并将身份切换减少了 96%。
+
+</details>
+
+---
+
+## 13. Prompt, Probe, Train, or Annotate? Single-camera sports video understanding in amateur settings / 提示、探测、训练还是注释？业余环境下的单摄像头体育视频理解
+
+**Date**: 2026-09-23 | **arXiv**: [2609.28049v1](http://arxiv.org/abs/2609.28049v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.28049v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video understanding is usually benchmarked on curated, single-actor, or professionally filmed clips, and a strong score there is routinely read as evidence a model is robust enough for deployment. Amateur team sport is a useful, largely untested place to check that assumption: over eight million students played a school sport in the United States in 2024-25 alone, almost none of it filmed by more than a single fixed camera, with several candidate actors crowded into frame and no operator or second angle to fall back on. Using volleyball as a test case, we ask whether strong performance on general video and world-model benchmarks translates into reliable, per-player attribution once footage is this chaotic, turning footage into statistics through a chain of tasks from finding play boundaries to naming who did what. We evaluate four approaches (prompting and agentic reasoning over frontier vision-language models, classical computer vision with small trained specialists, self-supervised video world models, and manual annotation) at every stage, on 66 amateur matches with 46,648 human-labelled contacts, filmed under conditions no published benchmark uses. No single paradigm wins every stage, and static, single-frame computer vision is not competitive at any stage involving motion or identity. A prompted model segments matches well, yet a far smaller trained model beats it at spotting contacts for a fraction of the cost, and the sport's own rules recover rally outcomes the pixels cannot. Identity is where every automated approach struggles: a jersey number is a static fact temporal reasoning cannot recover if never visible, unlike sporting action, a repeated motor pattern a temporal model can exploit, which is why holistic reasoning improves event detection while identity stays unchanged. We close with where each approach earns its cost, and what transfers beyond volleyball to amateur sport.
+
+视频理解通常以策划的、单演员或专业拍摄的剪辑为基准，并且那里的高分通常被视为模型足够强大以进行部署的证据。业余团队运动是一个有用的、基本上未经测试的地方来检验这一假设：仅在 2024-25 年，美国就有超过 800 万学生参加了学校运动，几乎没有一个运动是由多个固定摄像机拍摄的，几个候选演员挤在画面中，没有操作员或第二个角度可以依靠。使用排球作为测试案例，我们询问一旦镜头如此混乱，一般视频和世界模型基准上的强劲表现是否会转化为可靠的、每个玩家的归因，通过从寻找比赛边界到命名谁做了什么的一系列任务将镜头转化为统计数据。我们在每个阶段评估了四种方法（对前沿视觉语言模型的提示和代理推理、由小型训练有素的专家进行的经典计算机视觉、自我监督的视频世界模型和手动注释），在 66 场业余比赛中与 46,648 个人类标记的联系人进行了拍摄，这些比赛是在没有发布基准使用的条件下拍摄的。没有任何单一范式能够赢得每个阶段，并且静态、单帧计算机视觉在涉及运动或身份的任何阶段都没有竞争力。提示模型片段匹配得很好，但一个小得多的训练模型在发现接触方面比它要好，而且成本只是它的一小部分，而且这项运动自己的规则可以恢复像素无法恢复的拉力赛结果。身份是每个自动化方法都面临的难题：球衣号码是一个静态事实，时间推理如果不可见就无法恢复，与体育运动不同，时间模型可以利用重复的运动模式，这就是为什么整体推理可以在身份保持不变的情况下改善事件检测。我们最后讨论了每种方法的成本所在，以及从排球到业余运动的转移。
+
+</details>
+
+---
+
+## 14. Latent evolving World Action Model / 潜在演变的世界行动模型
+
+**Date**: 2026-09-23 | **arXiv**: [2609.27455v2](http://arxiv.org/abs/2609.27455v2) | **PDF**: [Link](http://arxiv.org/pdf/2609.27455v2)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World Action Models (WAMs) jointly model action generation and environment dynamics and are mostly built on pretrained Video Diffusion Models (VDMs). In VDM-based WAMs, observations are first encoded by a VAE, and the resulting compressed latents are then processed by large video diffusion backbones to extract effective features for action generation. However, this paradigm ties WAM performance and training cost to large-scale video generation pretraining, limiting WAM efficiency and scalability. In this paper, we theoretically and empirically investigate how visual representations affect action generation in WAMs. Our results show that predictive embeddings from Joint-Embedding Predictive Architecture (JEPA) encoders better support action generation than compressed VAE latents, with I-JEPA performing best in our encoder comparison. Based on these findings, we propose LeWAM, which conditions action generation on JEPA embeddings and models environment evolution by predicting future embeddings in the same space, without relying on a video diffusion backbone. We further find that imitation learning matches demonstrated actions but does not distinguish better actions from worse ones, even though small action deviations can greatly affect task success. To address this limitation without additional environment interaction or the human oversight required for resets and safety, we introduce Demonstration-Guided DPO (DemoDPO), an offline preference refinement stage that derives preference supervision directly from demonstrations. With only 0.4B trainable parameters, LeWAM achieves an average success rate of 92.28\% on RoboTwin 2.0, comparable to that of state-of-the-art VLAs and WAMs, and maintains practical effectiveness on real-world manipulation tasks.
+
+世界动作模型 (WAM) 联合模拟动作生成和环境动态，并且主要建立在预训练的视频扩散模型 (VDM) 之上。在基于 VDM 的 WAM 中，观察结果首先由 VAE 进行编码，然后由大型视频扩散主干处理生成的压缩潜在变量，以提取用于动作生成的有效特征。然而，这种范例将 WAM 性能和训练成本与大规模视频生成预训练联系在一起，限制了 WAM 效率和可扩展性。在本文中，我们从理论上和实证上研究了视觉表征如何影响 WAM 中的动作生成。我们的结果表明，联合嵌入预测架构 (JEPA) 编码器的预测嵌入比压缩的 VAE 潜伏更好地支持动作生成，其中 I-JEPA 在我们的编码器比较中表现最佳。基于这些发现，我们提出了 LeWAM，它通过预测同一空间中的未来嵌入来调节 JEPA 嵌入的动作生成并模拟环境演化，而不依赖于视频扩散主干。我们进一步发现，模仿学习与演示的动作相匹配，但无法区分更好的动作和更差的动作，尽管小的动作偏差会极大地影响任务的成功。为了解决这一限制，无需额外的环境交互或重置和安全所需的人工监督，我们引入了演示引导 DPO (DemoDPO)，这是一个离线偏好细化阶段，可直接从演示中获得偏好监督。仅 0.4B 个可训练参数，LeWAM 在 RoboTwin 2.0 上实现了 92.28% 的平均成功率，与最先进的 VLA 和 WAM 相当，并在现实世界的操作任务中保持了实际效果。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-09-24 (13 papers)</b></summary>
 
 # arXiv Video Papers - 2026-09-24
