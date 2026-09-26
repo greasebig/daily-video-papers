@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-09-26](papers/2026-09-26.md) - 7 papers
 - [2026-09-25](papers/2026-09-25.md) - 12 papers
 - [2026-09-22](papers/2026-09-22.md) - 2 papers
 - [2026-09-21](papers/2026-09-21.md) - 4 papers
@@ -154,6 +155,130 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-09-26 (7 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-09-26
+
+**Paper Count**: 7
+
+---
+
+## 1. AD-WM: Action-Discriminative World Models for Counterfactual Model Predictive Control / AD-WM：反事实模型预测控制的行动判别世界模型
+
+**Date**: 2026-09-24 | **arXiv**: [2609.30264v1](http://arxiv.org/abs/2609.30264v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.30264v1)
+
+**Categories**: cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Latent world models are typically trained to predict factual transitions, whereas model predictive control (MPC) must compare alternative actions from the same state. A model can therefore achieve low factual prediction error yet poorly distinguish candidate actions. We introduce AD-WM, an action-discriminative joint-embedding world model for counterfactual MPC. AD-WM combines residual latent dynamics with predictor-level action-recovery regularization, using inverse dynamics and a normalized recovery objective motivated by conditional mutual information. Both objectives encourage planning transitions to preserve action information; their auxiliary heads are discarded at test time, leaving MPC unchanged. On OGBench-Cube, AD-WM improves hard-start success from 3.7% to 52.0% over a matched LeWM baseline and improves mean success over the reproduced baseline in four of five simulation environments. Planning diagnostics show that factual prediction error and whole-bank action ranking do not follow the closed-loop success ordering, whereas CEM-aligned elite regret tracks success more closely. With a frozen V-JEPA 2 encoder and matched DROID post-training, AD-WM also improves zero-shot transfer to our Franka setup, increasing basic pick-and-place success from 42.2% to 71.1% without lab-specific adaptation. These results suggest that world models for planning should preserve action-dependent differences needed for counterfactual selection, rather than optimize factual prediction accuracy alone. More videos and code are available at https://ad-wm.github.io/.
+
+潜在世界模型通常经过训练来预测事实转换，而模型预测控制（MPC）必须比较同一状态的替代动作。因此，模型可以实现较低的事实预测误差，但很难区分候选动作。我们引入 AD-WM，一种用于反事实 MPC 的动作判别式联合嵌入世界模型。 AD-WM 使用逆动态和由条件互信息驱动的归一化恢复目标，将残余潜在动态与预测器级动作恢复正则化相结合。这两个目标都鼓励规划过渡以保留行动信息；它们的辅助头在测试时被丢弃，使 MPC 保持不变。在 OGBench-Cube 上，AD-WM 比匹配的 LeWM 基线将硬启动成功率从 3.7% 提高到 52.0%，并在五种模拟环境中的四种环境中将平均成功率提高到再现基线的平均成功率。规划诊断表明，事实预测误差和全银行行动排名并不遵循闭环成功排序，而与 CEM 一致的精英遗憾则更紧密地跟踪成功。借助冻结的 V-JEPA 2 编码器和匹配的 DROID 后训练，AD-WM 还改进了到我们 Franka 设置的零次传输，将基本拾放成功率从 42.2% 提高到 71.1%，无需进行实验室特定的调整。这些结果表明，规划的世界模型应该保留反事实选择所需的依赖行动的差异，而不是仅仅优化事实预测的准确性。更多视频和代码请访问 https://ad-wm.github.io/。
+
+</details>
+
+---
+
+## 2. Rolling-WAM: World Action Models with Rolling Imagination / Rolling-WAM：具有滚动想象力的世界行动模型
+
+**Date**: 2026-09-24 | **arXiv**: [2609.30247v1](http://arxiv.org/abs/2609.30247v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.30247v1)
+
+**Categories**: cs.RO, cs.AI, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World Action Models (WAMs) couple action generation with future visual prediction for robotic manipulation. However, completing the joint video-action denoising process at each replanning cycle incurs substantial latency, delaying action updates and limiting closed-loop responsiveness. We present Rolling-WAM, a formulation that distributes joint denoising across successive replanning cycles. Our method maintains a sliding window of video-action chunks at staggered noise levels. At each step, a rolling noise schedule fully denoises the imminent action chunk for execution, while partially refining farther-future chunks. As the window advances with new camera observations, the retained future chunks continue their denoising process. This distributes the computational cost over time while carrying an evolving visual-action context across chunk boundaries. Evaluations on LIBERO, RoboTwin, and a real-world Unitree G1 humanoid show that Rolling-WAM achieves competitive manipulation performance. By removing the need to denoise the entire prediction horizon from scratch, it delivers a 4.5x steady-state replanning speedup over standard joint WAMs.
+
+世界动作模型 (WAM) 将动作生成与机器人操作的未来视觉预测结合起来。然而，在每个重新规划周期完成联合视频动作去噪过程会导致大量延迟，延迟动作更新并限制闭环响应能力。我们提出了 Rolling-WAM，这是一种在连续的重新规划周期中分配联合去噪的公式。我们的方法以交错的噪声水平维护视频动作块的滑动窗口。在每个步骤中，滚动噪声调度完全对即将执行的动作块进行降噪，同时部分地细化更远的未来块。随着窗口随着新的相机观察而前进，保留的未来块继续其去噪过程。这会随着时间的推移分配计算成本，同时跨块边界承载不断变化的视觉动作上下文。对 LIBERO、RoboTwin 和现实世界的 Unitree G1 人形机器人的评估表明，Rolling-WAM 实现了有竞争力的操纵性能。通过消除从头开始对整个预测范围进行降噪的需要，它的稳态重新规划速度比标准联合 WAM 提高了 4.5 倍。
+
+</details>
+
+---
+
+## 3. Underwater C3-JEPA: An Object-Centric Cross-View World Model for ROV Salvage / 水下 C3-JEPA：用于 ROV 打捞的以对象为中心的交叉视图世界模型
+
+**Date**: 2026-09-24 | **arXiv**: [2609.30214v1](http://arxiv.org/abs/2609.30214v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.30214v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present Underwater C$^{3}$-JEPA (cross-view, control-conditioned, context-extended), an object-centric multi-view predictive world model for near-field heavy-load underwater ROV salvage. Without contact sensors, it predicts in latent space how the task-object state evolves through contact interaction and under the hydrodynamic lag of the vehicle, from synchronized multi-view RGB observations and vehicle control signals. C$^{3}$-JEPA encodes multi-camera observations into task-object and context tokens, fuses cross-camera evidence through held-out-view attention, and directly predicts future states conditioned on control. Weak binding anchors the target and gripper at low annotation cost, while SIGReg sharpens the geometric representation. Experiments show that the learned representation transfers substantially more task-relevant information to downstream probes than a reconstruction-free latent baseline, while keeping the predictor lightweight. The resulting predictive interface supports model-predictive-control (MPC) candidate evaluation and imagined-rollout behavior-agent training. Validation on real underwater video shows the same architecture recovering a withheld camera's object state and staying ahead of persistence, so the recipe transfers beyond simulation.
+
+我们提出了 Underwater C$^{3}$-JEPA（交叉视图、控制条件、上下文扩展），这是一种用于近场重载水下 ROV 打捞的以对象为中心的多视图预测世界模型。在没有接触传感器的情况下，它可以根据同步的多视图 RGB 观察和车辆控制信号，在潜在空间中预测任务对象状态如何通过接触交互以及在车辆的流体动力学滞后下演变。 C$^{3}$-JEPA 将多摄像头观察结果编码为任务对象和上下文标记，通过保留视图注意力融合跨摄像头证据，并直接预测以控制为条件的未来状态。弱绑定以较低的注释成本锚定目标和夹具，而 SIGReg 则锐化几何表示。实验表明，与免重建潜在基线相比，学习到的表示将更多的任务相关信息传递给下游探针，同时保持预测器的轻量级。由此产生的预测界面支持模型预测控制（MPC）候选者评估和想象推出行为代理训练。对真实水下视频的验证表明，相同的架构可以恢复隐藏相机的对象状态并保持领先于持久性，因此该方法超越了模拟。
+
+</details>
+
+---
+
+## 4. Aim Short to Reach Far: Your Frozen World Model Can Plan Better Than You Think / 志存高远：你的冰冻世界模型可以比你想象的更好地规划
+
+**Date**: 2026-09-24 | **arXiv**: [2609.30036v1](http://arxiv.org/abs/2609.30036v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.30036v1)
+
+**Categories**: cs.LG, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Planners built on visual world models commonly score each predicted outcome by its distance to the encoded goal image. We show that this target can limit control even with exact dynamics and globally optimal short-horizon search: reaching a goal may require actions that initially move away from it. With frozen LeWM models, intermediate targets substantially improve action synthesis and recorded-action ranking on Cube, PushT, Reacher, and TwoRoom. Learned targets and targets drawn from observed experience both produce these gains. We introduce Anchored Planning, which retrieves a recorded segment whose start and end resemble the current and goal observations, then aims at an observation shortly after its start. The frozen model scores actions toward this target from the current state. Without additional training, planning toward observed targets outperforms the released LeWM planner on every task in our long-range evaluation. Additional final-goal search falls short of the same gains. Lower successor-prediction error need not translate into better control. Success also depends on how far ahead the target is placed and on shrinking the retrieval span as execution advances. Changing only the target lets the same frozen model and planner reach goals that final-goal scoring misses.
+
+基于视觉世界模型的规划器通常根据每个预测结果与编码目标图像的距离对其进行评分。我们证明，即使使用精确的动态和全局最优的短期搜索，该目标也可以限制控制：达到目标可能需要最初远离目标的行动。借助冻结的 LeWM 模型，中间目标可显着改善 Cube、PushT、Reacher 和 TwoRoom 上的动作合成和记录动作排名。学到的目标和从观察到的经验中得出的目标都会产生这些收益。我们引入锚定计划，它检索开始和结束类似于当前观察和目标观察的记录片段，然后在开始后不久瞄准观察。冻结模型对当前状态下针对该目标的操作进行评分。在没有额外训练的情况下，针对观察到的目标进行的规划在我们的长期评估中的每项任务上都优于已发布的 LeWM 规划器。额外的最终目标搜索达不到相同的收益。较低的后继者预测误差不一定会转化为更好的控制。成功还取决于目标放置的距离以及随着执行的推进而缩小检索范围。仅更改目标即可让相同的冻结模型和规划器实现最终目标得分未达到的目标。
+
+</details>
+
+---
+
+## 5. World Action Agent: Harnessing VLMs for Robot Manipulation via World Action Rehearsal / World Action Agent：通过 World Action Rehearsal 利用 VLM 进行机器人操作
+
+**Date**: 2026-09-24 | **arXiv**: [2609.29964v1](http://arxiv.org/abs/2609.29964v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.29964v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+General-purpose vision-language models (VLMs) bring broad knowledge and spatial reasoning to robot manipulation, yet existing systems either use them indirectly, to predict constraints or write programs, or give them a view of the scene rather than a world in which to act. We present World Action Agent (WAA), a multi-agent harness through which VLMs pilot robots with basic tools, making every decision within a visual action workspace. The workspace has three properties. Contact views, selected automatically from the scene geometry, present the scene around the current interaction. Action rehearsal turns each action into an editable proposal that the agent, alone or through an Imagination Agent, previews and revises against planning feedback before execution. In-view correction closes the loop between observation, rehearsal, and low-level execution, letting the agent remove residual offsets in the view where it observes them. Through the same workspace, WAA acquires embodied procedural knowledge in two ways: it evolves multimodal skills from expert videos and human teaching under evidence-based review and consults them through a Skill Agent, and its interaction traces train smaller VLMs to pilot the same harness. On LIBERO-Pro, WAA with skills evolved only from LIBERO-90 reaches a state-of-the-art 75.6% average success, outperforming end-to-end VLAs, code-as-policy agents, and a visual-harness baseline with the same backbone; the same skills remain effective on robosuite without further learning. Fine-tuning Qwen3.5-9B on harness traces raises its out-of-domain success from 1.7% to 43.3%.
+
+通用视觉语言模型（VLM）为机器人操作带来了广泛的知识和空间推理，但现有系统要么间接使用它们来预测约束或编写程序，要么为它们提供场景视图而不是行动的世界。我们推出了 World Action Agent (WAA)，这是一种多代理工具，VLM 通过它使用基本工具来驾驶机器人，在视觉动作工作空间内做出每一个决定。工作区具有三个属性。从场景几何体中自动选择的接触视图呈现当前交互周围的场景。行动排练将每个行动转变为可编辑的建议，代理可以单独或通过想象力代理在执行前根据计划反馈进行预览和修改。视图内校正关闭了观察、排练和低级执行之间的循环，让代理消除其观察到的视图中的残余偏移。通过同一工作空间，WAA 以两种方式获取具体的程序知识：它在基于证据的审查下从专家视频和人工教学中发展出多模式技能，并通过技能代理进行咨询，其交互轨迹训练较小的 VLM 来试验相同的工具。在 LIBERO-Pro 上，具有仅从 LIBERO-90 发展而来的技能的 WAA 达到了最先进的 75.6% 平均成功率，优于端到端 VLA、代码即策略代理和具有相同主干的视觉线束基线；相同的技能在 robosuite 上仍然有效，无需进一步学习。对线束轨迹进行微调 Qwen3.5-9B 将其域外成功率从 1.7% 提高到 43.3%。
+
+</details>
+
+---
+
+## 6. Beyond Static Graph World Models: Learning Stochastic Latent Dynamics over Evolving Topologies / 超越静态图世界模型：学习演化拓扑中的随机潜在动态
+
+**Date**: 2026-09-23 | **arXiv**: [2609.28670v1](http://arxiv.org/abs/2609.28670v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.28670v1)
+
+**Categories**: cs.LG, cs.AI, cs.SI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Graph-based world models have recently emerged as a means of learning transitions over relational state representations. However, existing approaches are largely limited to fixed-topology graphs or deterministic, fully observable environments. We propose the Graph Dynamics Model (GDM), a world model for graph-structured observations that is designed to handle the more general setting of evolving topologies in stochastic and partially observable environments. The GDM uses a sparse recurrent adjacency matrix to model topology updates and perform message passing, together with a recurrent state-space architecture for modelling stochastic transitions. Furthermore, we identify a gap in the evaluation of graph-based world models, as existing methods do not provide a means of comparing predicted and true distributions over the joint graph state comprising the interdependent topology, node features, and graph features. We therefore introduce the Graph Distribution Distance (GDD) metric, which uses maximum mean discrepancy with a graph kernel to comprehensively compare joint next-state distributions. We evaluate the GDM across several environments, including stochastic and partially observable settings. We demonstrate that GDM outperforms baseline models and displays zero-shot generalisation on large graphs.
+
+基于图的世界模型最近出现作为学习关系状态表示转换的一种手段。然而，现有的方法很大程度上局限于固定拓扑图或确定性、完全可观察的环境。我们提出了图动力学模型（GDM），这是一种用于图结构观测的世界模型，旨在处理随机和部分可观测环境中不断演变的拓扑的更一般设置。 GDM 使用稀疏循环邻接矩阵来建模拓扑更新并执行消息传递，并使用循环状态空间架构来建模随机转换。此外，我们发现基于图的世界模型的评估存在差距，因为现有方法没有提供比较包含相互依赖的拓扑、节点特征和图特征的联合图状态上的预测分布和真实分布的方法。因此，我们引入了图分布距离（GDD）度量，它使用图内核的最大平均差异来全面比较联合的下一状态分布。我们在多个环境中评估 GDM，包括随机和部分可观察的设置。我们证明 GDM 优于基线模型，并在大图上显示零样本泛化。
+
+</details>
+
+---
+
+## 7. Training Object Permanence in World Models / 在世界模型中训练对象持久性
+
+**Date**: 2026-09-23 | **arXiv**: [2609.28654v1](http://arxiv.org/abs/2609.28654v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.28654v1)
+
+**Categories**: cs.AI, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Object permanence and solidity are hallmarks of human cognitive priors. Recent studies show that video generation models, a paradigmatic class of current world models, have begun to show emerged reasoning abilities, making them ideal candidates for building human-like physical intelligence. Do video models have emerged object permanence in them? If not, could we train them with a core-cognition inspired dataset? We introduce WROP (World Reasoning with Object Permanence), a data infrastructure of 150 hand-designed cognitive science inspired tasks, divided into six cognitive categories. We build Blender generators that randomize speed, lighting, camera angle, and other nuisance parameters while preserving each task's cognitive structure, yielding 10,000+ samples per task. We release a 1.5M-sample training corpus and a 300-question exam. On this exam we evaluate 14 video models: 3 reference-to-video, 7 edit, and 4 continuation, among which PWM-WROP, our 16B world model. In a blind pairwise Elo study, PWM-WROP ranks first among continuation models and third overall, behind only a statistical tie between two reference-to-video models. We release the data, exam, model answers, scores, weights, and PWM, our native-PyTorch training stack on AWS Trainium2.
+
+物体的持久性和坚固性是人类认知先验的标志。最近的研究表明，视频生成模型是当前世界模型的典范，已经开始显示出新兴的推理能力，使其成为构建类人物理智能的理想候选者。视频模型是否已经显现出物体的持久性？如果没有，我们可以用核心认知启发的数据集来训练它们吗？我们引入了 WROP（具有对象持久性的世界推理），这是一个由 150 个手工设计的认知科学启发任务组成的数据基础设施，分为六个认知类别。我们构建了 Blender 生成器，可以随机化速度、光照、摄像机角度和其他干扰参数，同时保留每个任务的认知结构，每个任务生成 10,000 多个样本。我们发布了 150 万样本的训练语料库和 300 个问题的考试。在本次考试中，我们评估了 14 个视频模型：3 个视频参考模型、7 个编辑模型和 4 个延续模型，其中包括 PWM-WROP，我们的 16B 世界模型。在一项盲配对 Elo 研究中，PWM-WROP 在连续模型中排名第一，总体排名第三，仅落后于两个参考视频模型之间的统计平局。我们在 AWS Trainium2 上发布了数据、考试、模型答案、分数、权重和 PWM（我们的本机 PyTorch 训练堆栈）。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-09-25 (12 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-09-25
