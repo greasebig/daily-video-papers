@@ -27,6 +27,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-09-26](papers/2026-09-26.md) - 6 papers
 - [2026-09-25](papers/2026-09-25.md) - 14 papers
 - [2026-09-24](papers/2026-09-24.md) - 13 papers
 - [2026-09-22](papers/2026-09-22.md) - 4 papers
@@ -183,6 +184,116 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-09-26 (6 papers)</b></summary>
+
+# arXiv Video Papers - 2026-09-26
+
+**Paper Count**: 6
+
+---
+
+## 1. WanPE: Towards Cinematic Prompt Enhancement for Modern Text-to-Video Generation / WanPE：迈向现代文本到视频生成的电影提示增强
+
+**Date**: 2026-09-24 | **arXiv**: [2609.30221v1](http://arxiv.org/abs/2609.30221v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.30221v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video generation begins in text space by authoring a cinematic screenplay, then materializes into pixels. As contemporary video generators scale to 30 seconds and faithfully follow complex conditions, the textual prompt largely directs the production, planning how actions, camera trajectories, lighting, and sound unfold across multi-shot sequences. In this paper, we present WanPE, a 397B-parameter prompt enhancement model trained on 1.05M real-world videos to master director-level cinematic planning. WanPE formulates shot-level cinematic plans via video-grounded reverse construction and employs Semantic-Consistency GRPO (SC-GRPO) to faithfully preserve user requirements across shots and over time. To benchmark this capability, we curate WanPEval, a human-annotated testbed covering durations from 5 to 30 seconds across varying intent granularities, supported by approximately 11K blind pairwise assessments. When powering Wan3.0's video generator, WanPE-397B boosts human preference over raw user prompts by 10.66-18.84 points at 5-15 seconds and by a dramatic 50.86 points in the 30-second arena. Ablation studies show that reverse construction demonstrates clear superiority over forward rewriting, while SC-GRPO robustly preserves semantic fidelity across model scales. Ultimately, WanPE leads all evaluated commercial offerings at 5-15 seconds and remains competitive with Seedance 2.5 at 30 seconds.
+
+视频生成从文本空间开始，创作电影剧本，然后具体化为像素。由于当代视频生成器的时长已扩展到 30 秒并忠实地遵循复杂的条件，因此文本提示在很大程度上指导着制作，规划动作、摄像机轨迹、灯光和声音如何在多镜头序列中展开。在本文中，我们提出了 WanPE，这是一个 397B 参数的提示增强模型，在 105 万个真实视频上进行训练，以掌握导演级的电影规划。 WanPE 通过基于视频的逆向构建来制定镜头级电影计划，并采用语义一致性 GRPO (SC-GRPO) 来忠实地保留跨镜头和一段时间内的用户需求。为了对这种能力进行基准测试，我们策划了 WanPEval，这是一个人工注释的测试平台，涵盖不同意图粒度的 5 到 30 秒的持续时间，并由大约 11K 盲配对评估支持。当为 Wan3.0 的视频生成器供电时，WanPE-397B 将人类对原始用户提示的偏好在 5-15 秒内提高了 10.66-18.84 点，在 30 秒范围内提高了 50.86 点。消融研究表明，反向构造表现出明显优于正向重写的优势，而 SC-GRPO 在模型尺度上稳健地保持了语义保真度。最终，WanPE 在 5-15 秒内领先于所有评估的商业产品，并在 30 秒内与 Seedance 2.5 保持竞争力。
+
+</details>
+
+---
+
+## 2. Ego-Exo4D Human Meshes Dataset: 4D Human Motion Reconstruction for Ego-Exo Captures / Ego-Exo4D 人体网格数据集：Ego-Exo 捕获的 4D 人体运动重建
+
+**Date**: 2026-09-24 | **arXiv**: [2609.30187v1](http://arxiv.org/abs/2609.30187v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.30187v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Ego-Exo4D is a large-scale dataset providing synchronized egocentric and multi-view exocentric video, a rich resource for skill learning and assessment, procedural activity understanding, and embodied AI. However, the dataset ships with only sparse 3D human pose annotations, and reconstructing dense human motion from its multi-view captures is nontrivial. To this end, we present Ego-Exo4D-HM, a large-scale dataset of 4D human motion reconstructions for Ego-Exo4D's captures, and release the accompanying reconstruction pipeline. The code, dataset, and documentation can be found at https://abhiram824.github.io/egoexo4d_human_meshes.
+
+Ego-Exo4D 是一个大规模数据集，提供同步的自我中心和多视图外中心视频，为技能学习和评估、程序活动理解和具体人工智能提供丰富的资源。然而，该数据集仅附带稀疏的 3D 人体姿势注释，并且从多视图捕获中重建密集的人体运动并非易事。为此，我们推出了 Ego-Exo4D-HM，这是一个针对 Ego-Exo4D 捕获的 4D 人体运动重建的大型数据集，并发布了随附的重建流程。代码、数据集和文档可以在 https://abhiram824.github.io/egoexo4d_ human_meshes 找到。
+
+</details>
+
+---
+
+## 3. Accelerating Video Diffusion via Training-Free Trajectory Routing / 通过免训练轨迹路由加速视频传播
+
+**Date**: 2026-09-24 | **arXiv**: [2609.30096v1](http://arxiv.org/abs/2609.30096v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.30096v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video diffusion is computationally expensive, as it requires executing a large model across many denoising steps. Even with step-distillation, inference remains expensive because every distilled step still requires a costly model evaluation. We present TRACK: TRajectory-Aware Capacity routing via top-K selection, a heterogeneous denoising strategy that switches between compatible large and small models at selected steps, reducing the average cost per denoising evaluation. The switching steps are determined using a calibration process. TRACK first rolls out a reference trajectory with the large model. Then at each step, the small model's prediction is also collected and compared against the large model's prediction to obtain a relative disagreement score. Both models receive the same latent, timestep, conditioning, and guidance inputs. Aggregating this signal over a calibration set produces a disagreement score map across diffusion steps, which determines a switching policy for an efficient inference process: quality-sensitive steps keep using the large model, while steps with low disagreement scores are routed to the small model. Inference executes only the selected model at each step, requiring no retraining, architecture or scheduler changes, or online dual-model evaluation. Across Wan 2.1, Cosmos 3, TurboDiffusion, and FastVideo, TRACK yields $1.95\times$, $2.04\times$-$2.73\times$, $2.69\times$, and $2.17\times$ speedups, respectively, with comparable aggregate quality and high diversity retention. TRACK thereby establishes automated, training-free model switching as a practical acceleration paradigm for video diffusion.
+
+视频扩散的计算成本很高，因为它需要跨许多去噪步骤执行大型模型。即使采用分步蒸馏，推理仍然很昂贵，因为每个蒸馏步骤仍然需要昂贵的模型评估。我们提出了 TRACK：通过 top-K 选择的 TRajectory-Aware 容量路由，这是一种异构去噪策略，可在选定的步骤中在兼容的大模型和小模型之间切换，从而降低每次去噪评估的平均成本。切换步骤是使用校准过程来确定的。 TRACK 首先使用大模型推出参考轨迹。然后，在每个步骤中，还收集小模型的预测并将其与大模型的预测进行比较，以获得相对分歧分数。两种模型都接收相同的潜在输入、时间步长、调节和指导输入。在校准集上聚合该信号会产生跨扩散步骤的分歧分数图，这决定了有效推理过程的切换策略：质量敏感的步骤继续使用大模型，而分歧分数低的步骤则路由到小模型。推理在每一步仅执行选定的模型，无需重新训练、架构或调度程序更改，也无需在线双模型评估。在 Wan 2.1、Cosmos 3、TurboDiffusion 和 FastVideo 中，TRACK 分别产生 $1.95\times$、$2.04\times$-$2.73\times$、$2.69\times$ 和 $2.17\times$ 加速，同时具有可比的总体质量和高多样性保留。 TRACK 从而建立了自动化、免训练的模型切换作为视频传播的实用加速范例。
+
+</details>
+
+---
+
+## 4. NNV3: Expanding Neural Network Verification to New Architectures and Domains / NNV3：将神经网络验证扩展到新的架构和领域
+
+**Date**: 2026-09-24 | **arXiv**: [2609.30050v1](http://arxiv.org/abs/2609.30050v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.30050v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present NNV3, the latest version of the Neural Network Verification (NNV) tool, a MATLAB framework for formal verification of deep learning models and learning-enabled cyber-physical systems. Building on the set-based reachability foundation of NNV 1.0 (FFNNs, CNNs, NNCS) and NNV 2.0 (RNNs, SSNNs, neural ODEs), NNV3 introduces new members of the Star-set family: ModelStar for verifying networks under weight perturbation, VolumeStar for video and 3D volumetric inputs, and GraphStar for graph neural networks. A conformal-inference-based probabilistic reachability mode complements sound analysis for problems where deterministic verification is intractable, while FairNNV certifies counterfactual and individual fairness properties over continuous input regions. NNV3 introduces new benchmarks for malware detection, graph-based power-system models, medical imaging, variable-length time series data, and action recognition. NNV3 also incorporates tutorials and developer guides through a unified documentation site. This paper details these major updates, demonstrating NNV's maturation into a comprehensive, robust, and accessible verification tool for a diverse range of AI systems.
+
+我们推出 NNV3，它是神经网络验证 (NNV) 工具的最新版本，这是一个用于深度学习模型和支持学习的网络物理系统的形式验证的 MATLAB 框架。 NNV3 建立在 NNV 1.0（FFNN、CNN、NNCS）和 NNV 2.0（RNN、SSNN、神经 ODE）基于集合的可达性基础上，引入了 Star-set 家族的新成员：用于验证权重扰动下的网络的 ModelStar、用于视频和 3D 体积输入的 VolumeStar 以及用于图神经网络的 GraphStar。基于共形推理的概率可达性模式补充了对确定性验证难以解决的问题的合理分析，而 FairNNV 则证明了连续输入区域的反事实和个体公平性属性。 NNV3 引入了恶意软件检测、基于图形的电力系统模型、医学成像、可变长度时间序列数据和动作识别的新基准。 NNV3 还通过统一的文档站点整合了教程和开发人员指南。本文详细介绍了这些主要更新，展示了 NNV 已成熟为适用于各种人工智能系统的全面、强大且易于访问的验证工具。
+
+</details>
+
+---
+
+## 5. BeyondRetarget: Learning Executable Humanoid Motions Directly from Monocular Video / BeyondRetarget：直接从单目视频学习可执行的人形动作
+
+**Date**: 2026-09-24 | **arXiv**: [2609.29850v1](http://arxiv.org/abs/2609.29850v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.29850v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Learning executable motions from human videos offers a scalable solution for humanoid robots to acquire demonstration motions. However, existing pipelines typically first construct an explicit human motion representation and then convert it into robot motions via motion retargeting. Although such methods can effectively leverage large volumes of existing human data for training, the substantial differences between humans and humanoid robots in locomotion mechanisms and joint degree-of-freedom configurations make motions generated by this human-representation-centric approach difficult to execute on robots. Furthermore, errors introduced during human motion estimation inevitably propagate to the retargeting stage and cannot be eliminated via joint optimization. We propose BeyondRetarget, an end-to-end framework that directly maps monocular RGB videos to robot motions. Discarding the explicit human representation, this framework learns robot-oriented implicit representations directly from visual observations, enabling the model to capture cross-morphology motion structures. To generate motions more suitable for robot execution, we further design a contact-aware motion optimization mechanism to improve temporal consistency and physical plausibility. Experiments show that BeyondRetarget significantly improves the accuracy and robustness of generated robot motions, while achieving higher execution success rates and lower latency in both simulation environments and real humanoid robots.
+
+从人类视频中学习可执行动作为人形机器人获取演示动作提供了可扩展的解决方案。然而，现有的流程通常首先构建明确的人体运动表示，然后通过运动重定向将其转换为机器人运动。尽管此类方法可以有效地利用大量现有人类数据进行训练，但人类和类人机器人在运动机制和关节自由度配置方面的显着差异使得这种以人类表示为中心的方法生成的运动难以在机器人上执行。此外，人体运动估计过程中引入的误差不可避免地会传播到重定向阶段，并且无法通过联合优化来消除。我们提出了 BeyondRetarget，这是一个端到端框架，可以直接将单目 RGB 视频映射到机器人运动。该框架抛弃了显式的人类表示，直接从视觉观察中学习面向机器人的隐式表示，使模型能够捕获跨形态的运动结构。为了生成更适合机器人执行的运动，我们进一步设计了一种接触感知运动优化机制，以提高时间一致性和物理合理性。实验表明，BeyondRetarget 显着提高了生成的机器人运动的准确性和鲁棒性，同时在模拟环境和真实的人形机器人中实现了更高的执行成功率和更低的延迟。
+
+</details>
+
+---
+
+## 6. AV-GRPO: Modality-Anchored Decoupling Diffusion Reinforcement Learning for Joint Audio-Video Generation / AV-GRPO：用于联合音频视频生成的模态锚定解耦扩散强化学习
+
+**Date**: 2026-09-24 | **arXiv**: [2609.29816v1](http://arxiv.org/abs/2609.29816v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.29816v1)
+
+**Categories**: cs.CV, cs.SD
+
+**Code**: https://github.com/zhiyuxu03/AV-GRPO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent years have witnessed major progress in joint audio-video generation. Existing models still suffer from limited per-modality fidelity, insufficient text-modality alignment and weak cross-modal synchronization. While reinforcement-learning post-training offers a promising remedy, directly adapting it to joint audio-video generation is challenging. Heterogeneous multimodal rewards entangle learning signals and complicate credit assignment. Joint optimization of two modality towers is computationally expensive given their divergent dynamics. Moreover, synchronization evaluation difficulty depends on paired samples, preventing fair reward comparisons. We propose AV-GRPO, a modality-anchored online diffusion RL framework, and 5DAV, a decoupled, difficulty-controllable training dataset. AV-GRPO includes three key modules: (1) modality-anchored rollouts to disentangle learning signals and stabilize difficulty; (2) trajectory-locked frozen-tower optimization to reduce cost and reassign credit; (3) adaptive objectives and perturbation strengths tailored to modality-specific dynamics. This converts coupled multimodal preference learning into unimodal subproblems for precise reward attribution and better synchronization. Our 5DAV dataset decouples samples across five dimensions for systematic training. Experiments on JavisBench and VABench demonstrate AV-GRPO outperforms LTX-2.3 in generation quality, semantic alignment and cross-modal synchronization under LoRA and full fine-tuning. Ablations confirm our designs. Code and data: https://github.com/zhiyuxu03/AV-GRPO
+
+近年来，音视频联合生成取得了重大进展。现有模型仍然受到每种模态保真度有限、文本模态对齐不足以及跨模态同步较弱的问题的困扰。虽然强化学习后训练提供了一种有希望的补救措施，但将其直接适应联合音频视频生成是具有挑战性的。异构的多模式奖励会纠缠学习信号并使学分分配复杂化。考虑到两个模态塔的动力学不同，它们的联合优化在计算上是昂贵的。此外，同步评估难度取决于配对样本，阻碍了公平的奖励比较。我们提出了 AV-GRPO（一种模态锚定的在线扩散强化学习框架）和 5DAV（一种解耦、难度可控的训练数据集）。 AV-GRPO 包括三个关键模块：（1）模态锚定的推出，以解开学习信号并稳定难度； (2) 轨迹锁定冻结塔优化，以降低成本并重新分配信用； (3) 针对特定模态动力学定制的自适应目标和扰动强度。这将耦合的多模态偏好学习转换为单模态子问题，以实现精确的奖励归因和更好的同步。我们的 5DAV 数据集在五个维度上解耦样本以进行系统训练。 JavisBench 和 VABench 上的实验表明，在 LoRA 和完全微调的情况下，AV-GRPO 在生成质量、语义对齐和跨模态同步方面优于 LTX-2.3。消融证实了我们的设计。代码和数据：https://github.com/zhiyuxu03/AV-GRPO
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-09-25 (14 papers)</b></summary>
 
 # arXiv Video Papers - 2026-09-25
