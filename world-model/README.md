@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-09-29](papers/2026-09-29.md) - 24 papers
 - [2026-09-28](papers/2026-09-28.md) - 5 papers
 - [2026-09-26](papers/2026-09-26.md) - 7 papers
 - [2026-09-25](papers/2026-09-25.md) - 12 papers
@@ -156,6 +157,404 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-09-29 (24 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-09-29
+
+**Paper Count**: 24
+
+---
+
+## 1. Behavioral Monitoring of JEPA World Models with Jacobian Centroids / 具有雅可比质心的 JEPA 世界模型的行为监控
+
+**Date**: 2026-09-27 | **arXiv**: [2609.33940v1](http://arxiv.org/abs/2609.33940v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.33940v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Detecting failures in World Model (WM)-based planning requires monitoring whether the model is behaviorally aligned with the current task, which in turn requires studying its internal representations. Here, we show that centroids---sub-component Jacobian row-sums---effectively identify the behavioral properties of WMs, complementing traditional activation-based knowledge signals. The centroids of a model are easily computed through Jacobian vector products and characterize how the model organizes the geometry of its input space, yielding an efficient perspective on internal representations, including the generation of task-relevant saliency maps. Evaluated on continuous control tasks using JEPA WMs, this behavioral view reveals a structural dissociation, where the encoder correctly represents the goal while the predictor remains behaviorally unresponsive. This failure mode directly predicts planning failure before any action is taken, allowing for goal resampling to recapture out-of-distribution success. Moreover, centroid-based methods outperform baseline methods as distribution-shift detectors. Together, these tools yield a behavioral monitoring stack that is operational and consequential under distribution shifts.
+
+检测基于世界模型 (WM) 的规划中的失败需要监视模型在行为上是否与当前任务保持一致，这反过来又需要研究其内部表示。在这里，我们证明质心（子组件雅可比行和）可以有效地识别 WM 的行为属性，补充传统的基于激活的知识信号。模型的质心可以通过雅可比向量积轻松计算，并描述模型如何组织其输入空间的几何形状，从而产生内部表示的有效视角，包括生成与任务相关的显着性图。使用 JEPA WM 对连续控制任务进行评估后，这种行为视图揭示了结构性分离，其中编码器正确地表示了目标，而预测器在行为上仍然没有反应。这种失败模式在采取任何行动之前直接预测计划失败，从而允许目标重新采样以重新获得分布外的成功。此外，作为分布偏移检测器，基于质心的方法优于基线方法。这些工具共同产生了一个行为监控堆栈，该堆栈在分配变化时可操作且具有重要意义。
+
+</details>
+
+---
+
+## 2. ViBR-WM: Visual Bayesian Regression for World Modeling / ViBR-WM：世界建模的视觉贝叶斯回归
+
+**Date**: 2026-09-27 | **arXiv**: [2609.33844v1](http://arxiv.org/abs/2609.33844v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.33844v1)
+
+**Categories**: stat.ME, cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Modeling temporal dependence and uncertainty is central to forecasting with world models. The Visual Bayesian Regression World Model combines visual features, physical histories and known covariates through interpretable regression, within a modular architecture supporting trend, seasonal and cycle dynamics. Visual compression reduces representation dimension, while Bayesian variable selection reduces active regression dimension. Posterior prediction combines forecasts across predictor subsets using their posterior probabilities as weights and accounts for parameter uncertainty and future disturbances. The model forecasts joint visual--physical states recursively and physical targets directly. Across four forecasting tasks spanning object motion, vegetation greenness and solar power, ViBR-WM achieves lower mean overall physical-target error than Temporal Straightening, ConvLSTM, PredRNN and SimVP on every task. Repeated fitting and resampling support these overall gains.
+
+对时间依赖性和不确定性进行建模是使用世界模型进行预测的核心。视觉贝叶斯回归世界模型通过可解释的回归将视觉特征、物理历史和已知协变量结合在支持趋势、季节和周期动态的模块化架构中。视觉压缩减少了表示维度，而贝叶斯变量选择减少了主动回归维度。后验预测使用预测子集的后验概率作为权重来组合预测，并考虑参数不确定性和未来干扰。该模型递归地预测联合视觉物理状态并直接预测物理目标。在涵盖物体运动、植被绿度和太阳能的四项预测任务中，ViBR-WM 在每项任务上均实现了比时间校正、ConvLSTM、PredRNN 和 SimVP 更低的平均总体物理目标误差。重复拟合和重采样支持这些总体收益。
+
+</details>
+
+---
+
+## 3. Achieve What You Imagined: Learning to Align Actions with Visual Plans / 实现你的想象：学习将行动与视觉计划结合起来
+
+**Date**: 2026-09-27 | **arXiv**: [2609.33832v1](http://arxiv.org/abs/2609.33832v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.33832v1)
+
+**Categories**: cs.RO, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World-action models can jointly predict future visual observations and robot actions. However, discrepancies may exist between their visual predictions and the consequences implied by generated actions. We observe that WAMs can often generate visually plausible task-completion outcomes before producing action sequences that reliably achieve them. Consequently, we treat the WAM-generated visual prediction as a goal-conditioned visual proposal rather than a directly executable plan. We use a frozen action-conditioned world model to predict action-conditioned consequences and construct feedback based on consistency between the two future predictions and alignment with the terminal goal. Leveraging this feedback, we employ Flow Policy Optimization (FPO) to optimize the action head of the WAM. This framework avoids online robot interaction and additional training of task-specific reward models. Across four real-world UR5 manipulation tasks, our method increases the mean success rate from 43.4% to 75.1%, compared with 61.4% for $π_{0.5}$. These results show that cross-model prediction discrepancy can provide useful feedback for improving robot policies under the evaluated manipulation tasks. Website: https://imagine-to-achieve.github.io/
+
+世界动作模型可以共同预测未来的视觉观察和机器人动作。然而，他们的视觉预测和生成的动作所暗示的后果之间可能存在差异。我们观察到，WAM 通常可以生成视觉上合理的任务完成结果，然后再生成可靠地实现任务的动作序列。因此，我们将 WAM 生成的视觉预测视为目标条件视觉建议，而不是直接可执行的计划。我们使用冻结的行动条件世界模型来预测行动条件后果，并根据两个未来预测之间的一致性以及与最终目标的一致性构建反馈。利用此反馈，我们采用流策略优化 (FPO) 来优化 WAM 的操作头。该框架避免了在线机器人交互和特定任务奖励模型的额外训练。在四个现实世界的 UR5 操作任务中，我们的方法将平均成功率从 43.4% 提高到 75.1%，而 $π_{0.5}$ 的平均成功率为 61.4%。这些结果表明，跨模型预测差异可以为改进评估的操纵任务下的机器人策略提供有用的反馈。网站：https://imagine-to-achieve.github.io/
+
+</details>
+
+---
+
+## 4. MomWorld: Momentum-Aware Latent World Model for Long-Horizon Autonomous Driving / MomWorld：长视野自动驾驶的动量感知潜在世界模型
+
+**Date**: 2026-09-27 | **arXiv**: [2609.33737v1](http://arxiv.org/abs/2609.33737v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.33737v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long-horizon planning enables autonomous vehicles to anticipate scene evolution and potential risks, supporting safe and stable decisions in complex interactions. However, existing methods struggle to propagate motion trends from observed history into the future. Long rollouts based on a single latent state may further attenuate useful dynamics, retain stale motion patterns, and disrupt reliable near-term plans. We introduce MomWorld, a momentum-aware latent world model for long-horizon planning. MomWorld extracts scene motion trends from historical-to-current observations and propagates latent momentum into future horizons, jointly predicting future configuration and momentum states. A learnable momentum persistence mechanism preserves stable trends, scene-conditioned momentum updates adapt future dynamics, and a scene-adaptive reset gate suppresses stale momentum under abrupt changes. We further propose MoFlow, a momentum-conditioned flow-matching module that refines a base trajectory to align with the predicted future scene evolution in only a few integration steps, with a horizon-aware residual fusion that preserves near-term planning stability while permitting stronger long-range corrections. Extensive experiments on NAVSIM, nuScenes and Bench2Drive demonstrate that MomWorld improves long-horizon planning consistency and reduces the average collision rate by 12.2% relative to MomAD over a 6-second planning horizon.
+
+长视野规划使自动驾驶车辆能够预测场景演变和潜在风险，支持复杂交互中的安全稳定决策。然而，现有的方法很难将观察到的历史中的运动趋势传播到未来。基于单一潜在状态的长期部署可能会进一步削弱有用的动态，保留陈旧的运动模式，并扰乱可靠的近期计划。我们介绍 MomWorld，这是一种用于长期规划的动量感知潜在世界模型。 MomWorld 从历史到当前的观察中提取场景运动趋势，并将潜在动量传播到未来的视野中，共同预测未来的配置和动量状态。可学习的动量持续机制保持稳定的趋势，场景条件动量更新适应未来的动态，场景自适应重置门抑制突然变化下的陈旧动量。我们进一步提出了 MoFlow，一种动量条件流匹配模块，只需几个集成步骤即可细化基本轨迹，以与预测的未来场景演化保持一致，并具有水平感知残差融合，可保持近期规划稳定性，同时允许更强的长期校正。 NAVSIM、nuScenes 和 Bench2Drive 上的大量实验表明，与 MomAD 相比，MomWorld 在 6 秒规划范围内提高了长范围规划一致性，并将平均碰撞率降低了 12.2%。
+
+</details>
+
+---
+
+## 5. ALDER: Discovering the Laws of a World by Acting in It / 奥尔德：通过行动发现世界法则
+
+**Date**: 2026-09-27 | **arXiv**: [2609.33728v1](http://arxiv.org/abs/2609.33728v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.33728v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reliable world models should not only predict future states but express how actions change the world in an explicit, transparent and testable form, such as equations. Yet methods that rely on a fixed set of trajectories cannot distinguish equally good competing hypotheses, while searches over a fixed set of predefined candidates cannot discover equations outside the initial hypothesis space. We introduce ALDER (Action-guided Law Discovery, Evaluation, and Revision), a method that actively proposes novel experiments to test and revise models. Specifically, ALDER proposes parametric equations; a numerical optimizer fits their coefficients; an independent verifier tests these candidates on held-out data. To distinguish between competing valid hypotheses, a cost- and safety-aware selector queries interventions, in the form of novel experiments. The resulting counterexamples update the evidence ledger and guide the next structural revision, while incompatible laws are discarded. Across an in-house benchmark, ODE equation discovery tasks, and robotic experiments, ALDER discovers laws beyond its initial formula set, repairs failed model proposals, distinguishes fixed candidate models with fewer interactions, and improves out-of-distribution prediction. Furthermore, given a current state and a target, ALDER selects control actions by solving the inverse problem defined by its validated world model. Together, these results show that explicit equation-based world models can be tested and revised through interaction, then naturally used to guide goal-directed control.
+
+可靠的世界模型不仅应该预测未来状态，还应该以明确、透明和可测试的形式（例如方程）表达行动如何改变世界。然而，依赖于一组固定轨迹的方法无法区分同样好的竞争假设，而对一组固定的预定义候选的搜索无法发现初始假设空间之外的方程。我们引入 ALDER（行动引导的法律发现、评估和修订），这是一种积极提出新颖实验来测试和修订模型的方法。具体来说，ALDER提出了参数方程；数值优化器拟合它们的系数；独立验证者根据保留的数据对这些候选者进行测试。为了区分相互竞争的有效假设，具有成本和安全意识的选择者以新颖实验的形式询问干预措施。由此产生的反例更新了证据账本并指导下一次结构修订，同时丢弃不相容的法律。通过内部基准测试、ODE 方程发现任务和机器人实验，ALDER 发现了超出其初始公式集的规律，修复了失败的模型建议，区分交互较少的固定候选模型，并改进了分布外预测。此外，给定当前状态和目标，ALDER 通过解决由其经过验证的世界模型定义的逆问题来选择控制操作。总之，这些结果表明，可以通过交互来测试和修改基于显式方程的世界模型，然后自然地用于指导目标导向控制。
+
+</details>
+
+---
+
+## 6. CompoWorld: Compositional Environment Scaling for General Agents / CompoWorld：通用代理的组合环境缩放
+
+**Date**: 2026-09-27 | **arXiv**: [2609.33665v1](http://arxiv.org/abs/2609.33665v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.33665v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Automatically generated environments provide a scalable source of interaction data for training general agents. However, existing approaches mainly generate tasks within a single environment, while real-world workflows require agents to connect information and actions across multiple services. We introduce Compositional Environment Scaling (\textbf{CompoWorld}), which expands the task space by composing a finite library of reusable services. Coding agents turn tool specifications into verified services with typed states and shared interfaces, while a world model handles tools that cannot be reliably implemented. A random-walk procedure connects services through dependency graphs, enabling the generation and verification of tasks that require information to flow across services. Verified trajectories support supervised fine-tuning (SFT), while our Completion-Focused Rubric Reward guides reinforcement learning (RL) toward full task completion by emphasizing criteria with lower pass rates within each rollout group. We construct 448 services exposing 10,130 tools and use 3K SFT trajectories and 1K RL tasks to train Qwen3.6-35B-A3B. Experimental results show that CompoWorld improves on its backbone by 9.17 points on average across eight benchmarks. On AutomationBench, it surpasses frontier models such as Claude Opus 4.6 and leads all compared agent-specialized 35B-A3B models.
+
+自动生成的环境为训练通用代理提供了可扩展的交互数据源。然而，现有方法主要在单个环境中生成任务，而现实世界的工作流程需要代理跨多个服务连接信息和操作。我们引入组合环境扩展（\textbf{CompoWorld}），它通过组合可重用服务的有限库来扩展任务空间。编码代理将工具规范转换为具有类型化状态和共享接口的经过验证的服务，而世界模型则处理无法可靠实现的工具。随机游走过程通过依赖图连接服务，从而能够生成和验证需要信息在服务之间流动的任务。经过验证的轨迹支持监督微调 (SFT)，而我们的以完成为中心的红字奖励通过强调每个推出组内通过率较低的标准来指导强化学习 (RL) 全面完成任务。我们构建了 448 个服务，公开了 10,130 个工具，并使用 3K SFT 轨迹和 1K RL 任务来训练 Qwen3.6-35B-A3B。实验结果表明，CompoWorld 在八个基准测试中的骨干网平均提高了 9.17 分。在 AutomationBench 上，它超越了 Claude Opus 4.6 等前沿模型，并领先于所有比较的代理专用 35B-A3B 模型。
+
+</details>
+
+---
+
+## 7. Beyond One-Step Accuracy: State-Affine Latent Transition for Reliable Visual Planning / 超越一步精度：可靠视觉规划的状态仿射潜在转变
+
+**Date**: 2026-09-27 | **arXiv**: [2609.33595v1](http://arxiv.org/abs/2609.33595v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.33595v1)
+
+**Categories**: cs.RO, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Joint-embedding world models enable visual planning by learning action-conditioned dynamics in latent space. Yet they are commonly trained for one-step prediction on encoded states, while planning recursively applies the learned transition to its own predictions. One-step accuracy therefore does not capture how prediction errors propagate under recursive rollout. We decompose multi-step rollout error into the errors introduced at individual steps and their propagation through subsequent transitions. We show that state-affine dynamics are precisely the differentiable transitions with state-independent Jacobians, eliminating the nonlinear propagation residual and making the error propagation operators depend only on the action sequence. Guided by this result, we introduce SALT (State-Affine Latent Transition), an action-conditioned state-affine dynamics model in which the action modulates both the state transformation and the additive update. We train SALT through recursive multi-step rollout supervision, feeding each predicted latent state back into the transition so that training matches how the model is used during planning. Across four visual planning environments, SALT exhibits $1.48$--$2.19\times$ higher one-step prediction error than the matched LeWM baseline, yet improves closed-loop success in every environment by $10.0$ percentage points on average. On OGBench-Cube, the fraction of episodes that fail with a sharp rise in model-predicted cost after execution decreases from $23.3%$ to $2.0%$.
+
+联合嵌入的世界模型通过学习潜在空间中的动作条件动态来实现视觉规划。然而，它们通常经过训练以对编码状态进行一步预测，同时规划递归地将学习到的转换应用到其自己的预测中。因此，一步精度无法捕获预测误差在递归推出下如何传播。我们将多步推出误差分解为各个步骤引入的误差及其通过后续转换的传播。我们证明状态仿射动力学正是具有状态无关雅克比行列式的可微转移，消除了非线性传播残差并使误差传播算子仅依赖于动作序列。在此结果的指导下，我们引入了 SALT（状态仿射潜在转换），这是一种以动作为条件的状态仿射动力学模型，其中动作调节状态转换和加性更新。我们通过递归多步骤推出监督来训练 SALT，将每个预测的潜在状态反馈回转换中，以便训练与规划期间模型的使用方式相匹配。在四种视觉规划环境中，SALT 的一步预测误差比匹配的 LeWM 基线高出 $1.48$--$2.19\times$，但在每个环境中的闭环成功率平均提高了 $10.0$ 个百分点。在 OGBench-Cube 上，执行后模型预测成本急剧上升而失败的情节比例从 $23.3%$ 降至 $2.0%$。
+
+</details>
+
+---
+
+## 8. SLIP-VLA: Single-Step Latent Imagination for Policy Learning in Vision-Language-Action Models / SLIP-VLA：视觉-语言-行动模型中政策学习的单步潜在想象力
+
+**Date**: 2026-09-27 | **arXiv**: [2609.33575v1](http://arxiv.org/abs/2609.33575v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.33575v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision-Language-Action models are increasingly effective for robotic manipulation, yet most predict actions directly from current observations without explicitly modeling future scene evolution. Recent methods introduce future prediction to improve action generation, but dense future modeling often requires expensive iterative denoising, while one-step alternatives can underperform their multi-step counterparts. To reconcile efficient future modeling with strong action performance, we present SLIP-VLA, a policy learning framework that equips VLA models with a Single-Step Latent Imagination for future-aware action prediction. SLIP-VLA obtains temporally dense future latent representations with a single denoising update, and we improve the perceptual sufficiency of these representations by aligning intermediate latents with future geometric and semantic features. We further improve their control sufficiency through action-conditioned latent world modeling and inverse dynamics modeling, explicitly coupling latent transitions with robot actions. SLIP-VLA achieves state-of-the-art performance across diverse simulation benchmarks and real-world manipulation tasks, while its single-step latent imagination takes only 12 ms.
+
+视觉-语言-动作模型对于机器人操作越来越有效，但大多数直接根据当前观察来预测动作，而无需明确建模未来的场景演化。最近的方法引入了未来预测来改进动作生成，但密集的未来建模通常需要昂贵的迭代去噪，而一步替代方案的性能可能不如多步替代方案。为了协调高效的未来建模与强大的行动性能，我们提出了 SLIP-VLA，这是一种策略学习框架，为 VLA 模型配备了单步潜在想象力，用于未来感知的行动预测。 SLIP-VLA 通过一次去噪更新获得时间密集的未来潜在表示，并且我们通过将中间潜在与未来的几何和语义特征对齐来提高这些表示的感知充分性。我们通过动作条件潜在世界建模和逆动力学建模进一步提高了它们的控制能力，明确地将潜在转换与机器人动作耦合起来。 SLIP-VLA 在不同的模拟基准和现实世界的操作任务中实现了最先进的性能，而其单步潜在想象仅需 12 毫秒。
+
+</details>
+
+---
+
+## 9. MA-JEPA: Joint-Embedding World Models for Multi-Agent Reinforcement Learning / MA-JEPA：多智能体强化学习的联合嵌入世界模型
+
+**Date**: 2026-09-27 | **arXiv**: [2609.33563v1](http://arxiv.org/abs/2609.33563v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.33563v1)
+
+**Categories**: cs.LG, cs.AI, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models improve sample efficiency by training policies on imagined trajectories, but their usefulness depends on learning representations that capture the information needed for future control. We study whether self-supervised joint-embedding prediction (JEPA) can provide this learning signal for multi-agent reinforcement learning. We introduce MA-JEPA, a stochastic world model that replaces observation reconstruction with prediction of target representations, enabling model-based multi-agent reinforcement learning with centralized training and decentralized execution. A categorical latent state and a causal Transformer are trained with posterior and action-conditioned dynamics prediction objectives and are then used for actor-critic learning from latent imagination. A training-only joint predictor conditions on all agents' local states and actions to predict each agent's next local observation embedding. These predictions are passed through the same local posterior used during real interaction with a centralized critic that is used only for value learning, with execution remaining decentralized. Our experiments show that this architecture performs strongly on SMAC, matching or exceeding the strongest reported comparator mean win rate on four of eight evaluated maps.
+
+世界模型通过在想象的轨迹上训练策略来提高样本效率，但它们的有用性取决于学习捕获未来控制所需信息的表示。我们研究自监督联合嵌入预测（JEPA）是否可以为多智能体强化学习提供这种学习信号。我们引入了 MA-JEPA，这是一种随机世界模型，它用目标表示的预测取代了观测重建，从而实现了基于模型的多智能体强化学习，具有集中训练和分散执行的功能。使用后验和动作条件动态预测目标来训练分类潜在状态和因果 Transformer，然后用于从潜在想象中进行演员批评家学习。仅训练联合预测器以所有智能体的局部状态和动作为条件，以预测每个智能体的下一个局部观察嵌入。这些预测通过与集中式批评者实际交互期间使用的相同局部后验传递，该后验仅用于价值学习，而执行仍然是分散的。我们的实验表明，该架构在 SMAC 上表现强劲，在八张评估地图中的四张上匹配或超过了报告的最强比较器平均胜率。
+
+</details>
+
+---
+
+## 10. Hamiltonian JEPA: Action-Conditioned World Models with an Inherited Control State / 哈密​​顿量 JEPA：具有继承控制状态的动作条件世界模型
+
+**Date**: 2026-09-27 | **arXiv**: [2609.33497v1](http://arxiv.org/abs/2609.33497v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.33497v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Planning from pixels needs more than a latent space that is stable and predictable. The state the planner scores must also be organized by how actions move the system. Joint-embedding predictive architectures (JEPAs) avoid pixel reconstruction by predicting future representations, but existing action-conditioned JEPAs ask one embedding to serve both perception and control. We introduce H-JEPA, which separates the two. A wide perceptual code is regularized toward a well-scaled isotropic geometry with a Bures-Wasserstein prior, and a fixed orthonormal slice of that code is the control state, which inherits the code's covariance without any objective of its own. The state evolves under phase-conditioned dissipative port-Hamiltonian dynamics whose input port has orthonormal columns. Port-inverse consistency (PIC) reads the executed action back through the transpose of that port. We show that this readout is exactly the rollout error projected onto the port directions, so PIC is a parameter-free reweighting of prediction error and not an auxiliary action decoder. Untying the readout from the port breaks this identity and loses half of the gain. H-JEPA matches or exceeds reconstruction-free baselines, including the action-decoding Delta-JEPA, on four pixel-based control benchmarks after at most $10$ training epochs, and its largest gain is on OGB-Cube ($91.9$ against $79.3$ percent). Ablations on PushT and OGB-Cube separate the contributions of the structured predictor, PIC, the prediction horizon, the state rank, and the anti-collapse prior.
+
+从像素进行规划需要的不仅仅是稳定且可预测的潜在空间。规划者评分的状态还必须根据操作如何推动系统来组织。联合嵌入预测架构（JEPA）通过预测未来表示来避免像素重建，但现有的动作条件 JEPA 要求一种嵌入同时服务于感知和控制。我们引入了 H-JEPA，它将两者分开。广泛的感知代码被正则化为具有 Bures-Wasserstein 先验的尺度良好的各向同性几何，并且该代码的固定正交切片是控制状态，它继承了代码的协方差，而没有任何自己的目标。状态在相条件耗散端口哈密尔顿动力学下演化，其输入端口具有正交列。端口逆一致性（PIC）通过该端口的转置读回执行的操作。我们证明这个读数正是投影到端口方向上的转出误差，因此 PIC 是预测误差的无参数重新加权，而不是辅助动作解码器。解开端口的读数会破坏这一特性并损失一半的增益。在最多 10 美元的训练周期后，H-JEPA 在四个基于像素的控制基准上匹配或超过了无重建基线，包括动作解码 Delta-JEPA，其最大收益是在 OGB-Cube 上（91.9 美元对 79.3 美元）。 PushT 和 OGB-Cube 上的消融将结构化预测器、PIC、预测范围、状态等级和抗崩溃先验的贡献分开。
+
+</details>
+
+---
+
+## 11. VIDEAS: Distilling Explicit Action Semantics from Demonstration Videos for World Models via Prior-Guided Simulation / VIDEAS：通过先验引导模拟从世界模型的演示视频中提取显式动作语义
+
+**Date**: 2026-09-27 | **arXiv**: [2609.33464v1](http://arxiv.org/abs/2609.33464v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.33464v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models learn internal representations of environment dynamics to predict future states, enabling agents to optimize action plans without physical interactions. However, developing world models that genuinely internalize underlying causal physical laws to explicitly reason about action preconditions and subsequent state transitions remains an open challenge. In this paper, we propose VIDEAS, a data distillation framework that transforms continuous physical dynamics from operational videos into explicit action semantics for foundation models. Specifically, it deconstructs visual demonstrations into discrete action trajectories and utilizes advanced vision-language models (VLMs) to extract structured knowledge encapsulating action preconditions and effects. To ensure physical consistency, we introduce a prior-guided trajectory simulation mechanism grounded within a text-based environment to rigorously validate the extracted knowledge. Notably, we incorporate negative trajectories to enrich knowledge completeness and enhance data diversity to mitigate cognitive bias. Furthermore, we present VIDEAS-WM, an 8B/9B-parameter suite of language-based world models trained on 34K high-quality samples derived from AgiBot-World dataset. Extensive experiments demonstrate that VIDEAS-WM establishes state-of-the-art performance in high-level embodied action semantic reasoning, exhibiting profound physical understanding and robust generalization across unseen scenarios.
+
+世界模型学习环境动态的内部表示来预测未来状态，使代理能够在没有物理交互的情况下优化行动计划。然而，真正内化潜在因果物理定律以明确推理行动先决条件和随后的状态转换的发展中国家模型仍然是一个公开的挑战。在本文中，我们提出了 VIDEAS，这是一种数据蒸馏框架，可将操作视频中的连续物理动力学转换为基础模型的明确动作语义。具体来说，它将视觉演示解构为离散的动作轨迹，并利用先进的视觉语言模型（VLM）来提取封装动作前提条件和效果的结构化知识。为了确保物理一致性，我们引入了基于文本环境的先验引导轨迹模拟机制，以严格验证提取的知识。值得注意的是，我们结合了负面轨迹来丰富知识完整性并增强数据多样性，以减轻认知偏差。此外，我们还推出了 VIDEAS-WM，这是一套基于语言的世界模型的 8B/9B 参数套件，在源自 AgiBot-World 数据集的 34K 高质量样本上进行了训练。大量实验表明，VIDEAS-WM 在高级具体动作语义推理方面建立了最先进的性能，展示了深刻的物理理解和对未见过的场景的强大概括。
+
+</details>
+
+---
+
+## 12. MultiEcho: An Experimental Science of Learned Worlds / MultiEcho：学习世界的实验科学
+
+**Date**: 2026-09-27 | **arXiv**: [2609.33347v1](http://arxiv.org/abs/2609.33347v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.33347v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models can be studied as experimental systems with response laws of their own. We introduce MultiEcho, a framework for estimating these laws through controlled counterfactual interventions, delimiting their applicability, and separately testing their physical correspondence. Across nine simulated physical systems and seven frozen model configurations, three-reference estimators predict complete intervention responses and recover intervention parameters. Estimator selection uses discovery data only; frozen fits are evaluated on validation and confirmation contexts. The experiments distinguish response predictability, intervention readability and physical accuracy. Responses can be locally describable yet poorly match physical effects in the same target coordinates. Event-window, visibility and camera interventions reveal conditional applicability, and paired generator configurations show reduced readability under a scene prompt with stronger guidance. Magnitude sweeps expose small image errors alongside large relative effect errors. An exact-reset material experiment separates registered visible-response success from fixed-readout failure on material-dependent futures at matched positions and velocities. Exact finite-scale identities resolve odd and even response errors; first-order remainder bounds specify when refined calibration converges. MultiEcho provides an experimental basis for studying learned-world laws independently of, and in relation to, physical laws.
+
+世界模型可以作为具有自己的响应定律的实验系统来研究。我们引入了 MultiEcho，这是一个通过受控的反事实干预来估计这些定律的框架，界定它们的适用性，并单独测试它们的物理对应性。在九个模拟物理系统和七个冻结模型配置中，三参考估计器预测完整的干预反应并恢复干预参数。估计器选择仅使用发现数据；冻结拟合在验证和确认上下文中进行评估。这些实验区分了反应的可预测性、干预的可读性和物理准确性。响应可以是局部可描述的，但与相同目标坐标中的物理效果匹配不佳。事件窗口、可见性和摄像机干预揭示了条件适用性，并且配对的生成器配置在具有更强指导的场景提示下显示出可读性降低。幅度扫描会暴露出较小的图像误差以及较大的相对效应误差。精确重置材料实验将在匹配位置和速度下依赖于材料的未来记录的可见响应成功与固定读数失败区分开来。精确的有限尺度恒等式解决了奇数和偶数响应误差；一阶余数界限指定精化校准何时收敛。 MultiEcho 为研究独立于物理定律或与物理定律相关的已知世界定律提供了实验基础。
+
+</details>
+
+---
+
+## 13. Beyond Conservatism: Recoverability-Conditioned Exploration for Model-Based Imitation Learning / 超越保守主义：基于模型的模仿学习的可恢复性条件探索
+
+**Date**: 2026-09-27 | **arXiv**: [2609.33336v1](http://arxiv.org/abs/2609.33336v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.33336v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Model-based imitation learning (MBIL) improves real-environment interaction efficiency by optimizing policies on imagined rollouts from a learned world model. However, the gap between model-induced and real-environment occupancies makes policy learning sensitive to model error. Conservative MBIL mitigates model exploitation during policy optimization, but when real-environment interactions are collected by the same conservative policy, uncertain regions around the expert distribution remain insufficiently sampled. Generic uncertainty-driven exploration, on the other hand, may allocate interaction to novel but task-irrelevant dynamics. We propose REcoverability-CONditioned Exploration for Model-Based Imitation Learning (RECON). RECON separates conservative policy learning from active data collection by maintaining a main policy for task execution and an explorer for real-environment interaction. The explorer is optimized based on epistemic uncertainty conditioned on recoverability estimated from multi-step main-policy imagination, focusing data collection on unknown states from which the main policy can still return toward expert behavior. Experiments on locomotion, navigation and manipulation show consistent gains in interaction efficiency, imitation performance, and robustness, indicating that RECON directs real-environment interaction toward recovery regions around the expert distribution that are underexplored by prior methods, and thereby learns a world model better suited for imitation.
+
+基于模型的模仿学习 (MBIL) 通过优化学习世界模型的想象部署策略，提高了真实环境交互效率。然而，模型引起的占用率和真实环境占用率之间的差距使得策略学习对模型误差敏感。保守的 MBIL 减轻了策略优化期间的模型利用，但是当通过相同的保守策略收集真实环境交互时，专家分布周围的不确定区域仍然采样不足。另一方面，一般的不确定性驱动的探索可能会将交互分配给新颖但与任务无关的动态。我们提出基于模型的模仿学习的可恢复性条件探索（RECON）。 RECON 通过维护任务执行的主要策略和真实环境交互的探索器，将保守的策略学习与主动数据收集分开。该探索器基于认知不确定性进行优化，该认知不确定性以多步主策略想象估计的可恢复性为条件，将数据收集重点放在主策略仍可返回到专家行为的未知状态上。运动、导航和操作实验显示了交互效率、模仿性能和鲁棒性方面的持续增益，这表明 RECON 将真实环境交互引导到专家分布周围的恢复区域，而这些区域是先前方法未充分探索的，从而学习到更适合模仿的世界模型。
+
+</details>
+
+---
+
+## 14. Does Learning to Predict the World Help Agents Act? Auditing World-Model Post-Training / 学习预测世界有助于特工采取行动吗？审核世界模型训练后
+
+**Date**: 2026-09-27 | **arXiv**: [2609.33335v1](http://arxiv.org/abs/2609.33335v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.33335v1)
+
+**Categories**: cs.CL, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Predicting how an environment will change before acting is a natural route to better decision making for agents. Recent post-training methods therefore require agents to predict the next observation and turn that prediction into a reward or a direct supervision signal, which is called world model. Existing next-observation training methods help the agent to learn the environmental content. However, they additionally involve an optimization process, which may introduce several effects other than learning to predict the world. Consequently, where the performance gain comes from during the training process remains an open question. We answer this research question through replacing true next-observation targets with in-distribution mismatched observations during the training process. Across two interactive text environments, mismatched targets lower prediction accuracy by 15.3-61.6% relative to ground-truth targets, yet retain substantial task gains over the base model. Compared with the base model, trained models consider more candidate actions and exhibit less looping. We also introduce a setting that replaces prediction-based rewards with independent random signals. This training expands task coverage (pass@64) even when the reward carries no environment information. We also generalize this finding to VisualWebArena, where random-reward training raises pass@64 by 14.3% relative to the base model, without observation-matching rewards or an external multimodal teacher for reward construction.
+
+在行动之前预测环境将如何变化是智能体做出更好决策的自然途径。因此，最近的训练后方法要求智能体预测下一个观察结果，并将该预测转化为奖励或直接监督信号，这称为世界模型。现有的下次观察训练方法可以帮助智能体学习环境内容。然而，它们还涉及一个优化过程，除了学习预测世界之外，这可能会带来一些影响。因此，训练过程中的性能增益从何而来仍然是一个悬而未决的问题。我们通过在训练过程中用分布内不匹配的观测值替换真正的下一个观测目标来回答这个研究问题。在两个交互式文本环境中，不匹配的目标相对于地面实况目标而言，预测准确度降低了 15.3-61.6%，但与基本模型相比，仍保留了大量的任务增益。与基础模型相比，经过训练的模型会考虑更多的候选动作并表现出更少的循环。我们还引入了一种设置，用独立的随机信号取代基于预测的奖励。即使奖励不包含环境信息，这种训练也扩大了任务覆盖范围（pass@64）。我们还将这一发现推广到 VisualWebArena，其中随机奖励训练相对于基本模型将 pass@64 提高了 14.3%，而无需观察匹配奖励或外部多模式教师进行奖励构建。
+
+</details>
+
+---
+
+## 15. VehDyn: A Driving World Model Benchmark for Vehicle Dynamics / VehDyn：车辆动力学的驾驶世界模型基准
+
+**Date**: 2026-09-27 | **arXiv**: [2609.33264v1](http://arxiv.org/abs/2609.33264v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.33264v1)
+
+**Categories**: cs.CV, cs.AI, cs.ET, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video world models are emerging as data engines, action planners, and generative simulators for autonomous driving, but existing benchmarks primarily assess visual fidelity and coarse physical plausibility, providing limited evidence on whether generated driving futures obey realistic vehicle kinematics and dynamics. This limitation is further compounded by the lack of datasets in which vehicle, road, maneuver, and speed conditions are independently controlled, and ground-truth vehicle states are recorded in synchrony with videos. We introduce VehDyn, a driving world model benchmark for vehicle dynamics. VehDyn is built on a CARLA-CarSim co-simulation platform where photorealistic rendering is coupled with a validated multi-body dynamics model, and it contains 10,080 configurations from a full factorial design over five vehicle types, four tire-road friction coefficients, three maneuvers, four target speeds, 14 scenes, and three illuminations, each paired with synchronized position, velocity, and attitude sequences. Built on this dataset, VehDyn introduces a hierarchical evaluation framework that measures trajectory alignment, kinematic consistency, and dynamic consistency, and benchmarks 12 state-of-the-art video world models. We further assess the video quality using two established protocols and correlate it with the VehDyn score. Trajectory-level metrics are nearly saturated, with ten of twelve models within 20\% of ground truth, while no model reaches 92\% of ground truth on dynamic consistency, and visual-quality metrics are only weakly correlated with vehicle-dynamics fidelity. DrivingWorld achieves the highest VehDyn score, followed by Cosmos 3 Nano and LTX-Video 2.5, and the VehDyn score agrees closely with human judgment. VehDyn provides a systematic foundation for developing driving world models that are physically consistent and visually realistic.
+
+视频世界模型正在作为自动驾驶的数据引擎、行动规划器和生成模拟器而出现，但现有的基准主要评估视觉保真度和粗略的物理合理性，为生成的驾驶未来是否服从现实的车辆运动学和动力学提供了有限的证据。由于缺乏独立控制车辆、道路、机动和速度条件以及与视频同步记录真实车辆状态的数据集，进一步加剧了这一限制。我们推出 VehDyn，这是车辆动力学的驾驶世界模型基准。 VehDyn 建立在 CARLA-CarSim 联合仿真平台上，其中真实感渲染与经过验证的多体动力学模型相结合，它包含来自五种车辆类型的全因子设计的 10,080 个配置、四种轮胎-路面摩擦系数、三种操​​作、四种目标速度、14 个场景和三种照明，每种配置都与同步位置、速度和姿态序列配对。在此数据集的基础上，VehDyn 引入了一个分层评估框架，用于测量轨迹对齐、运动学一致性和动态一致性，并对 12 个最先进的视频世界模型进行基准测试。我们使用两个既定协议进一步评估视频质量，并将其与 VehDyn 分数相关联。轨迹级指标几乎饱和，12 个模型中有 10 个模型与地面实况的 20% 以内，而没有模型在动态一致性方面达到地面实况的 92%，并且视觉质量指标与车辆动力学保真度的相关性很弱。 DrivingWorld 获得了最高的 VehDyn 分数，其次是 Cosmos 3 Nano 和 LTX-Video 2.5，并且 VehDyn 分数与人类的判断非常吻合。 VehDyn 为开发物理一致且视觉逼真的驾驶世界模型提供了系统基础。
+
+</details>
+
+---
+
+## 16. Scope-WM: Scoped Computation for Efficient Visual World Models / Scope-WM：高效视觉世界模型的范围计算
+
+**Date**: 2026-09-27 | **arXiv**: [2609.33218v1](http://arxiv.org/abs/2609.33218v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.33218v1)
+
+**Categories**: cs.CV, cs.AI, cs.RO
+
+**Code**: https://github.com/ChunZheng2022/Scope-WM.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Visual world models enable robotic planning by predicting future observations, but dense latent-state propagation and sample-intensive trajectory optimization incur high inference latency and peak memory usage, limiting real-time deployment on resource-constrained platforms. Existing sparse world-model acceleration methods either rely on unguided token sparsification, which may discard planning-relevant information and restrict achievable sparsity, or introduce heavy auxiliary modules and cumbersome multi-stage training pipelines. In this work, we present Scope-WM, an efficient visual world model that scopes computation to prediction-relevant latent regions and promising action sequences. Scope-WM distills prediction relevance into a lightweight action-conditioned selector and applies full dynamics prediction only to a compact subset of selected tokens. It updates the remaining tokens using a compact summary of foreground states and their changes, allowing the background to perceive foreground dynamics without costly token-to-token interactions. During planning, Scope-WM preserves and reuses high-quality action sequences discovered during the initial MPC search, focusing subsequent search under reduced rollout budgets. The resulting pipeline requires only a one-off selector distillation followed by a single joint training stage for the sparse world model. On the challenging Push-T task, Scope-WM reduces peak GPU memory usage and planning time to $18.1\%$ and $14.3\%$ of those of dense DINO-WM, respectively, corresponding to a $6.97\times$ planning speedup, while maintaining competitive task performance. Further evaluations across five diverse visual planning tasks demonstrate the general applicability of Scope-WM. Code is available at https://github.com/ChunZheng2022/Scope-WM.
+
+视觉世界模型通过预测未来的观察来实现机器人规划，但密集的潜在状态传播和样本密集型轨迹优化会导致高推理延迟和峰值内存使用，从而限制了资源受限平台上的实时部署。现有的稀疏世界模型加速方法要么依赖于无引导的令牌稀疏化，这可能会丢弃与规划相关的信息并限制可实现的稀疏性，要么引入繁重的辅助模块和繁琐的多阶段训练管道。在这项工作中，我们提出了 Scope-WM，这是一种高效的视觉世界模型，它将计算范围限定为与预测相关的潜在区域和有希望的动作序列。 Scope-WM 将预测相关性提炼为轻量级动作条件选择器，并仅将完整的动态预测应用于选定标记的紧凑子集。它使用前台状态及其变化的紧凑摘要来更新剩余的令牌，从而允许后台感知前景动态，而无需昂贵的令牌到令牌交互。在规划过程中，Scope-WM 保留并重用在初始 MPC 搜索期间发现的高质量动作序列，在减少的部署预算下重点关注后续搜索。由此产生的管道仅需要一次性选择器蒸馏，然后是稀疏世界模型的单个联合训练阶段。在具有挑战性的 Push-T 任务中，Scope-WM 将峰值 GPU 内存使用率和规划时间分别降低至密集 DINO-WM 的 $18.1\%$ 和 $14.3\%$，相当于 $6.97\times$ 的规划加速，同时保持有竞争力的任务性能。对五种不同的视觉规划任务的进一步评估证明了 Scope-WM 的普遍适用性。代码可在 https://github.com/ChunZheng2022/Scope-WM 获取。
+
+</details>
+
+---
+
+## 17. DeltaWAM: Change-Centric Visual Foresight via Delta Tokens for an Efficient World-Action Model / DeltaWAM：通过 Delta 代币以变革为中心的视觉远见，实现高效的世界行动模型
+
+**Date**: 2026-09-27 | **arXiv**: [2609.33177v1](http://arxiv.org/abs/2609.33177v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.33177v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World-Action Models (WAMs) offer visual foresight for robotic manipulation, but pixel-space models repeatedly reconstruct entire future scenes, incurring high computational cost and spatio-temporal redundancy. In physical manipulation, consecutive frames often share most of their visual context; the changes between them are what an action policy needs to anticipate. We introduce DeltaWAM, a change-centric WAM that makes a compact delta token the unit of future prediction. Each token is a single vector encoding changes between consecutive dense DINO feature maps. DeltaWAM builds on DeltaWorld, a latent world model pretrained on large-scale videos, to autoregressively predict one delta token per future frame. A flow-matching action expert then conditions on the predicted transitions and current DINO features, which serve as spatial anchors, to generate action chunks. Trained for 256 GPU hours on two H100 GPUs, DeltaWAM has 0.725B parameters and achieves 92.8% average success on LIBERO. It also shows robust generalization under procedural perturbations on LIBERO-Pro. Inference takes 142.1 ms per action chunk with 3.86 GB peak memory.
+
+世界动作模型（WAM）为机器人操作提供视觉预见性，但像素空间模型会重复重建整个未来场景，从而产生高昂的计算成本和时空冗余。在物理操作中，连续的帧通常共享大部分视觉上下文；它们之间的变化是行动政策需要预见的。我们引入了 DeltaWAM，这是一种以变化为中心的 WAM，它使紧凑的 Delta 代币成为未来预测的单位。每个标记都是单个向量，编码连续密集 DINO 特征图之间的变化。 DeltaWAM 建立在 DeltaWorld 之上，DeltaWorld 是一种在大型视频上预训练的潜在世界模型，用于自动回归预测每个未来帧的一个 delta 标记。然后，流匹配动作专家根据预测的转换和当前的 DINO 特征（充当空间锚点）来生成动作块。 DeltaWAM 在两个 H100 GPU 上训练了 256 个 GPU 小时，参数为 0.725B，在 LIBERO 上取得了 92.8% 的平均成功率。它还在 LIBERO-Pro 上的程序扰动下显示出强大的泛化能力。每个操作块的推理时间为 142.1 毫秒，峰值内存为 3.86 GB。
+
+</details>
+
+---
+
+## 18. VPTwin: Real-Sim-Real Video Prediction for Robotic Manipulation Planning / VPTwin：用于机器人操作规划的 Real-Sim-Real 视频预测
+
+**Date**: 2026-09-27 | **arXiv**: [2609.33104v1](http://arxiv.org/abs/2609.33104v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.33104v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+While action-conditioned video prediction provides an intuitive world model for robotics, purely data-driven predictors often suffer from compounding errors and physically implausible hallucinations in long-horizon rollouts, severely undermining downstream action planning. We propose VPTwin, a Real-Sim-Real video prediction framework that anchors real-world future prediction using real-synchronized simulation twins. For a target manipulation task, a VLM reconstructs an executable digital twin from a real demonstration episode. To accommodate the ill-posed estimation of unobserved physical properties, Isaac Sim simulates multiple forward dynamic rollouts across randomized physical configurations under candidate action trajectories. Using these rollouts as in-context references, VPTwin harmonizes both domains, using simulation dynamics to enforce physical plausibility while capturing unmodeled contact interactions from real video. Furthermore, we establish a predictive planning loop using VPTwin to visually verify VLM-proposed actions and guide reliable real-world execution. Evaluations show substantial reductions in physical hallucinations during video prediction and marked improvements in manipulation planning performance.
+
+虽然动作条件视频预测为机器人技术提供了直观的世界模型，但纯数据驱动的预测器在长期部署中经常会遇到复合错误和物理上难以置信的幻觉，严重破坏了下游的行动计划。我们提出了 VPTwin，一种 Real-Sim-Real 视频预测框架，它使用真实同步模拟孪生来锚定现实世界的未来预测。对于目标操纵任务，VLM 根据真实的演示片段重建可执行的数字孪生。为了适应对未观察到的物理属性的不适定估计，Isaac Sim 在候选动作轨迹下模拟了跨随机物理配置的多个前向动态推出。 VPTwin 使用这些部署作为上下文参考，协调这两个领域，使用模拟动力学来增强物理合理性，同时从真实视频中捕获未建模的接触交互。此外，我们使用 VPTwin 建立预测规划循环，以直观地验证 VLM 建议的操作并指导可靠的实际执行。评估显示视频预测期间的物理幻觉显着减少，并且操作计划性能显着提高。
+
+</details>
+
+---
+
+## 19. SwingRL: Adaptive Observation Reinforcement Learning with World-Model Prediction for Cable-Suspended Hoisting Control / SwingRL：采用世界模型预测的自适应观察强化学习，用于缆绳悬挂起重控制
+
+**Date**: 2026-09-27 | **arXiv**: [2609.33053v1](http://arxiv.org/abs/2609.33053v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.33053v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Cable-suspended hoisting is widely used to move heavy or bulky payloads that cannot be handled conveniently by rigid pick-and-place systems, for example in crane-assisted construction. Robotic hoisting using flexible cables is challenging because payload motion is underactuated, external disturbances vary, and delayed or lost visual observations can make the perceived payload state stale at control execution. These effects are particularly critical during precise insertion of a suspended payload's sockets onto rebar pins, which is a very common task in construction environments. We present SwingRL, a residual reinforcement-learning (RL) framework that combines an age-aware world model, a classical anti-swing prior, and a recurrent residual policy to address two coupled problems: stale feedback and uncertain dynamics. The world model propagates the newest received payload observation to the current control step using the executed commands, providing a time-aligned state estimate under delayed and lossy sensing. The prior supplies nominal tracking and swing damping. The residual policy learns bounded corrections to the prior rather than the complete control law, compensating for system-parameter variation, external disturbances, and remaining state-estimation errors. We evaluate SwingRL against classical and learning-based baselines across a cumulative difficulty ladder covering system-parameter variation, wind disturbance, degraded sensing, and strong gusts. Under the most difficult setting, SwingRL achieves 69.5% strict and 77.3% broad success, exceeding all baselines by at least 60 percentage points, respectively. World-model ablations support the role of time-aligned state estimation in maintaining insertion success as observation loss increases. Finally, without real-robot fine-tuning, SwingRL achieves 90% success on the physical rig.
+
+缆绳悬挂起重广泛用于移动刚性取放系统无法方便搬运的重型或大型有效负载，例如在起重机辅助施工中。使用柔性电缆的机器人吊装具有挑战性，因为有效负载运动驱动不足、外部干扰变化、视觉观察延迟或丢失可能会使控制执行时感知的有效负载状态变得陈旧。在将悬挂有效负载的插座精确插入钢筋销钉时，这些影响尤其重要，这是建筑环境中非常常见的任务。我们提出了 SwingRL，一种残差强化学习（RL）框架，它结合了年龄感知世界模型、经典的反摇摆先验和循环残差策略来解决两个耦合问题：陈旧的反馈和不确定的动态。世界模型使用执行的命令将最新接收到的有效负载观测传播到当前控制步骤，从而在延迟和有损传感下提供时间对齐的状态估计。先前提供标称跟踪和摆动阻尼。残差策略学习对先验而不是完整控制律的有界修正，补偿系统参数变化、外部干扰和剩余状态估计误差。我们根据经典和基于学习的基线在涵盖系统参数变化、风扰动、感知退化和强阵风的累积难度阶梯上评估 SwingRL。在最困难的环境下，SwingRL 取得了 69.5% 的严格成功率和 77.3% 的广泛成功率，分别超出所有基线至少 60 个百分点。随着观测损失的增加，世界模型消融支持时间对齐状态估计在保持插入成功方面的作用。最后，在没有真实机器人微调的情况下，SwingRL 在物理装备上取得了 90% 的成功。
+
+</details>
+
+---
+
+## 20. What Must a World Model Distinguish for Planning? / 世界模型必须区分什么才能进行规划？
+
+**Date**: 2026-09-26 | **arXiv**: [2609.33030v1](http://arxiv.org/abs/2609.33030v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.33030v1)
+
+**Categories**: cs.LG, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models simulate the consequences of action candidates, but good planning need not preserve every physical distinction required for accurate prediction. We formalize this gap through a hierarchy of mechanism, response, and decision sufficiency. Given a candidate set, the planning query determines which physical variations matter and how precisely they must be preserved: coarse decisions can discard much of the information needed for prediction, whereas fine decisions may require nearly the same resolution. In practice, planners often adaptively search to construct candidates, and information unnecessary for final selection may still be needed to discover good candidates. What a world model must preserve therefore depends on the query, the candidate set, and the planner. We study these effects in a collision system, nonlinear dynamics, and robotic planning. These varying requirements raise a design question: where should query information enter the planning system? A model that jointly generates actions and outcomes conditioned on the query achieves lower regret than an action-conditioned world model on seen objectives, but this advantage largely disappears when generalizing to unseen objectives. Motivated by this, we propose a modular design in which the query determines where to look and an action-conditioned model predicts what will happen, allowing the same predictions to be reused across objectives.
+
+世界模型模拟候选行动的后果，但良好的规划不需要保留准确预测所需的每个物理区别。我们通过机制、响应和决策充分性的层次结构来正式确定这一差距。给定候选集，规划查询确定哪些物理变化很重要以及必须保留它们的精确度：粗略决策可能会丢弃预测所需的大部分信息，而精细决策可能需要几乎相同的分辨率。在实践中，规划者经常自适应地搜索来构建候选者，并且可能仍然需要最终选择不必要的信息来发现好的候选者。因此，世界模型必须保留的内容取决于查询、候选集和规划器。我们研究碰撞系统、非线性动力学和机器人规划中的这些效应。这些不同的需求提出了一个设计问题：查询信息应该从哪里进入规划系统？以查询为条件联合生成行动和结果的模型比以可见目标为条件的行动世界模型获得的遗憾更低，但当推广到未见目标时，这种优势很大程度上消失了。受此启发，我们提出了一种模块化设计，其中查询确定要查看的位置，动作条件模型预测将会发生的情况，从而允许跨目标重复使用相同的预测。
+
+</details>
+
+---
+
+## 21. FINE: Future-Informed Navigation Encoding for Data-Efficient Vision-Language Navigation / FINE：面向未来的导航编码，用于数据高效的视觉语言导航
+
+**Date**: 2026-09-26 | **arXiv**: [2609.32855v1](http://arxiv.org/abs/2609.32855v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.32855v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Adapting vision-language navigation (VLN) policies to new environments is expensive because every additional route and instruction requires an embodied demonstration. Yet standard observation-to-action training uses only a small fraction of the information already contained in each trajectory. In particular, future observations reveal the instruction-relevant landmarks that the agent will encounter, including what they look like and how they are arranged in 3D. We introduce FINE, a Future-Informed Navigation Encoding framework that extracts this latent supervision from existing demonstrations. FINE equips a VLN backbone with two complementary auxiliary representations. First, explicit landmark tokens follow the ordered landmarks specified by the instruction and are trained to predict future landmark regions in both semantic 2D patch-feature space and viewpoint-dependent 3D geometric feature space. Second, an implicit future token learns to distinguish the landmark state that is actually reached from plausible same-scene counterfactual futures generated by a video world model. On R2R-CE and RxR-CE val-unseen, FINE improves InternVLA-N1 by 2.6 and 4.5 success-rate points, respectively, at full training data. More importantly, as demonstrations become limited, the benefit grows: at a 70% demonstration budget, FINE improves success rate by 6.8 points, recovering roughly one-third of the performance lost by reducing the training demonstrations. Project page is available at https://finevln.github.io/.
+
+使视觉语言导航 (VLN) 策略适应新环境的成本很高，因为每条额外的路线和指令都需要具体演示。然而，标准的观察到行动训练仅使用每个轨迹中已包含的信息的一小部分。特别是，未来的观察揭示了智能体将遇到的与指令相关的地标，包括它们的外观以及它们在 3D 中的排列方式。我们介绍 FINE，一个面向未来的导航编码框架，它从现有演示中提取这种潜在的监督。 FINE 为 VLN 主干配备了两个互补的辅助表示。首先，显式地标标记遵循指令指定的有序地标，并经过训练以预测语义 2D 块特征空间和视点相关的 3D 几何特征空间中的未来地标区域。其次，隐式未来令牌学习区分实际达到的里程碑状态与视频世界模型生成的合理同场景反事实未来。在 R2R-CE 和 RxR-CE val-unseen 上，FINE 在完整训练数据下分别将 InternVLA-N1 的成功率提高了 2.6 点和 4.5 点。更重要的是，随着演示变得有限，效益会增加：在 70% 的演示预算下，FINE 将成功率提高了 6.8 个百分点，恢复了因减少培训演示而损失的大约三分之一的性能。项目页面位于 https://finevln.github.io/。
+
+</details>
+
+---
+
+## 22. Scanning While Imagining: A Scene-Graph World Model for Robotic Ultrasound Navigation / 边想象边扫描：机器人超声导航的场景图世界模型
+
+**Date**: 2026-09-26 | **arXiv**: [2609.32837v1](http://arxiv.org/abs/2609.32837v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.32837v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Ultrasound (US) acquisition depends on the operator's ability to interpret anatomy and anticipate how the view will change with probe motion. Many robotic US navigation methods select actions without explicitly predicting these anatomical changes. We propose SonoGraph-WM, an action- and goal-conditioned world model for anticipatory probe navigation. The model represents anatomy as scene graphs (SGs), capturing visible structures, their geometry, and spatial relationships without synthesizing US images. Given a history of SGs and probe poses, a unified Transformer jointly predicts future SGs and poses. A receding-horizon planner recursively imagines candidate trajectories, selects the shortest predicted path reaching a goal graph, and follows it over a short execution horizon before replanning from new observations. To reduce reliance on tracked and anatomically annotated US sequences, we generate aligned SG--pose training data from computed tomography (CT) label maps along surface-constrained probe trajectories. On four held-out CT cases, spatial relation F1 remains above 93% over 20 prediction steps, and closed-loop navigation achieves 77.50% and 75.00% success for the gallbladder and pancreas, respectively, using annotation-derived SGs. In robot--phantom navigation experiments with label-map-derived SGs, the planner reached the target view in 73.7% of trials. These findings support CT-supervised anatomical world modeling for probe planning and highlight the importance of frequent observation updates for reliable navigation. Project Page: https://noseefood.github.io/us-sonograph-wm/
+
+超声（US）采集取决于操作员解释解剖结构和预测视图如何随探头运动变化的能力。许多机器人美国导航方法在没有明确预测这些解剖变化的情况下选择动作。我们提出了 SonoGraph-WM，一种用于预期探测导航的行动和目标条件世界模型。该模型将解剖结构表示为场景图 (SG)，捕获可见结构、其几何形状和空间关系，而无需合成 US 图像。给定 SG 和探测姿势的历史，统一的 Transformer 联合预测未来的 SG 和姿势。后退视野规划器递归地想象候选轨迹，选择到达目标图的最短预测路径，并在根据新观察重新规划之前在较短的执行范围内遵循它。为了减少对跟踪和解剖注释的 US 序列的依赖，我们从沿着表面约束探针轨迹的计算机断层扫描 (CT) 标签图生成对齐的 SG-姿势训练数据。在四个保留的 CT 病例中，空间关系 F1 在 20 个预测步骤中保持在 93% 以上，并且使用注释衍生的 SG，闭环导航对胆囊和胰腺分别实现了 77.50% 和 75.00% 的成功。在使用标签图派生 SG 的机器人幻影导航实验中，规划器在 73.7% 的试验中达到了目标视图。这些发现支持用于探针规划的 CT 监督解剖世界建模，并强调了频繁观察更新对于可靠导航的重要性。项目页面：https://noseefood.github.io/us-sonograph-wm/
+
+</details>
+
+---
+
+## 23. The GUI Is Not the State: Diagnosing State Aliasing in GUI World Models / GUI 不是状态：诊断 GUI 世界模型中的状态别名
+
+**Date**: 2026-09-26 | **arXiv**: [2609.32679v1](http://arxiv.org/abs/2609.32679v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.32679v1)
+
+**Categories**: cs.LG, cs.AI, cs.CL, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+GUI World Models (GUI-WMs) are increasingly used to predict future states for agent planning and simulation, yet most existing formulations condition only on the current GUI observation and action. We identify state aliasing, where the vis- ible interface omits transition-relevant environment state, so identical observable conditions can correspond to different valid futures. To diagnose this failure mode, we introduce StateAliasBench, a diagnostic benchmark that explicitly isolates such ambiguities via strict pairing. We further propose lightweight predictive- state recovery that infers structured state from history and augments otherwise frozen GUI-WMs through a deterministic state interface. Family-specific special- ists provide state recovery across heterogeneous state types, and multi-teacher dis- tillation consolidates them into a single unified estimator. Experiments show that existing GUI-WMs exhibit systematic failures under observation-only condition- ing, while predictive-state augmentation substantially restores state-sensitive pre- diction across evaluated WMs, preserves generative fidelity, and improves down- stream performance of GUI agents on AndroidWorld. These results suggest that reliable GUI world modeling should account not only for what is visible, but also for the hidden transition state that determines what happens next.
+
+GUI 世界模型 (GUI-WM) 越来越多地用于预测代理规划和模拟的未来状态，但大多数现有的公式仅以当前 GUI 观察和操作为条件。我们识别状态别名，其中可见接口省略了与转换相关的环境状态，因此相同的可观察条件可以对应于不同的有效未来。为了诊断这种故障模式，我们引入了 StateAliasBench，这是一种通过严格配对显式隔离此类模糊性的诊断基准。我们进一步提出轻量级预测状态恢复，从历史中推断结构化状态，并通过确定性状态接口增强原本冻结的 GUI-WM。特定于家庭的专家提供跨异构状态类型的状态恢复，多教师蒸馏将它们合并为一个统一的估计器。实验表明，现有的 GUI-WM 在仅观察条件下表现出系统故障，而预测状态增强则基本上恢复了评估的 WM 之间的状态敏感预测，保留了生成保真度，并提高了 AndroidWorld 上 GUI 代理的下游性能。这些结果表明，可靠的 GUI 世界建模不仅应该考虑可见的内容，还应该考虑决定接下来发生的情况的隐藏转换状态。
+
+</details>
+
+---
+
+## 24. Think Fast, Plan Selectively: Adaptive Deliberation for Efficient Data-Driven MPC / 快速思考，有选择地计划：高效数据驱动 MPC 的自适应审议
+
+**Date**: 2026-09-26 | **arXiv**: [2609.32591v1](http://arxiv.org/abs/2609.32591v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.32591v1)
+
+**Categories**: cs.RO, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Data-driven model predictive control (MPC) combines learned world models with online trajectory optimization, achieving strong performance in continuous control. However, the per-step cost of sampling and evaluating hundreds of candidate trajectories restricts deployment to control frequencies well below what real-time robotics demands. Motivated by the dual-process theory of human cognition, which distinguishes between fast, intuitive processing (System 1) and slower, deliberative reasoning (System 2), we ask whether every decision requires the same degree of computational deliberation. We propose Fast-TD-MPC, a lightweight framework that adaptively routes between fast policy execution and test-time planning, reserving costly deliberation for states where it is most needed. Fast-TD-MPC delivers competitive task performance across 103 continuous control tasks while achieving up to ~4x faster inference. Under external disturbances, Fast-TD-MPC selectively falls back to planning, maintaining robustness comparable to the original planner.
+
+数据驱动的模型预测控制（MPC）将学习的世界模型与在线轨迹优化相结合，在连续控制方面实现了强大的性能。然而，采样和评估数百个候选轨迹的每步成本限制了部署，以控制远低于实时机器人技术要求的频率。受人类认知双过程理论的启发，该理论区分了快速、直观的处理（系统 1）和较慢的深思熟虑的推理（系统 2），我们询问是否每个决策都需要相同程度的计算深思熟虑。我们提出了 Fast-TD-MPC，这是一个轻量级框架，可以在快速策略执行和测试时间规划之间自适应地进行路由，为最需要的状态保留代价高昂的审议。 Fast-TD-MPC 在 103 个连续控制任务中提供具有竞争力的任务性能，同时实现高达约 4 倍的推理速度。在外部干扰下，Fast-TD-MPC 选择性地回退到规划，保持与原始规划器相当的鲁棒性。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-09-28 (5 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-09-28
