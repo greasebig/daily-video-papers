@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-09-29](papers/2026-09-29.md) - 5 papers
 - [2026-09-28](papers/2026-09-28.md) - 2 papers
 - [2026-09-25](papers/2026-09-25.md) - 2 papers
 - [2026-09-24](papers/2026-09-24.md) - 1 papers
@@ -98,6 +99,102 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-09-29 (5 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-09-29
+
+**Paper Count**: 5
+
+---
+
+## 1. PIC-UIE: Predicting Image-Adaptive Corrections for Lightweight Underwater Image Enhancement / PIC-UIE：预测图像自适应校正以实现轻量级水下图像增强
+
+**Date**: 2026-09-27 | **arXiv**: [2609.33318v1](http://arxiv.org/abs/2609.33318v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.33318v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Underwater image enhancement (UIE) aims to restore visibility, color fidelity, and structural detail from images degraded by wavelength-dependent attenuation and backscatter. State-of-the-art UIE methods often rely on large backbones and dense image-to-image prediction, limiting their practicality for edge deployment. Moreover, operating entirely in a single color space couples degradation estimation with luminance and chroma correction. To address these challenges, we propose PIC-UIE, a lightweight predictor--executor framework that predicts image-adaptive corrections from a fixed $256\times256$ RGB thumbnail and applies them to the native-resolution input in the YCbCr color space. The predictor produces seven outputs, organized into spatial correction, nonlinear luminance and coupled chroma mapping, and image-level color calibration. A depth map regularizes the transmission proxy during training, whereas inference uses only the RGB input. With 9,486 parameters and 0.094 GFLOPs at $256\times256$, PIC-UIE achieves 24.137 dB PSNR and 0.9216 SSIM on UIEB-90 and 21.320 dB PSNR on zero-shot LSUI. It further processes native 4K images at 55.0 FPS under the comparison protocol. These results show that structured correction prediction provides an effective and practical alternative to dense RGB reconstruction for underwater image enhancement.
+
+水下图像增强 (UIE) 旨在恢复因波长相关衰减和反向散射而降低的图像的可见度、色彩保真度和结构细节。最先进的 UIE 方法通常依赖于大型骨干网和密集的图像到图像预测，限制了其边缘部署的实用性。此外，完全在单一色彩空间中操作将退化估计与亮度和色度校正结合起来。为了应对这些挑战，我们提出了 PIC-UIE，这是一个轻量级的预测器执行器框架，它可以从固定的 $256\times256$ RGB 缩略图中预测图像自适应校正，并将其应用于 YCbCr 颜色空间中的原始分辨率输入。预测器产生七个输出，分为空间校正、非线性亮度和耦合色度映射以及图像级颜色校准。深度图在训练期间规范传输代理，而推理仅使用 RGB 输入。凭借 9,486 个参数和 0.094 GFLOP，价格为 $256\times256$，PIC-UIE 在 UIEB-90 上实现了 24.137 dB PSNR 和 0.9216 SSIM，在零样本 LSUI 上实现了 21.320 dB PSNR。它在比较协议下以 55.0 FPS 进一步处理原生 4K 图像。这些结果表明，结构化校正预测为水下图像增强的密集 RGB 重建提供了一种有效且实用的替代方案。
+
+</details>
+
+---
+
+## 2. Adaptive Color Grading / 自适应颜色分级
+
+**Date**: 2026-09-18 | **arXiv**: [2609.21169v1](http://arxiv.org/abs/2609.21169v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.21169v1)
+
+**Categories**: eess.IV, cs.CV
+
+**Code**: https://github.com/SamsungLabs/adaptive-color-grading.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Independent control of tonescale regions (e.g., shadows, highlights) is essential for painters, photographers and cinematographers to bring 2D images to life. In image manipulation software this is most directly addressed by color grading modules, which use intensity thresholds to segment distinct illumination regions for local manipulation. In this work we develop an open source color grading tool and use it to annotate a large dataset of video frames with tonescale region thresholds. Using these thresholds we conduct modeling experiments with strategies based on both practitioners' conventional wisdom and machine learning. Results show that K-nearest neighbors is an effective prediction strategy, outperforming state-of-the-art end-to-end methods for image enhancement. This outcome demonstrates the benefit of focusing on a compact set of core parameters when modeling creative stylization processes. Our adaptive color grading interface and data are available at https://github.com/SamsungLabs/adaptive-color-grading.
+
+独立控制色阶区域（例如阴影、高光）对于画家、摄影师和电影摄影师将 2D 图像变为现实至关重要。在图像处理软件中，这个问题最直接地通过颜色分级模块来解决，该模块使用强度阈值来分割不同的照明区域以进行局部处理。在这项工作中，我们开发了一个开源颜色分级工具，并使用它来注释具有色调区域阈值的大型视频帧数据集。使用这些阈值，我们使用基于从业者的传统智慧和机器学习的策略进行建模实验。结果表明，K 最近邻是一种有效的预测策略，优于最先进的端到端图像增强方法。这一结果证明了在对创意风格化过程进行建模时关注一组紧凑的核心参数的好处。我们的自适应颜色分级界面和数据可在 https://github.com/SamsungLabs/adaptive-color-grading 上获取。
+
+</details>
+
+---
+
+## 3. Visual Autoregressive Priors for RAW-to-sRGB Image Signal Processing / RAW 到 sRGB 图像信号处理的视觉自回归先验
+
+**Date**: 2026-09-16 | **arXiv**: [2609.18302v1](http://arxiv.org/abs/2609.18302v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.18302v1)
+
+**Categories**: cs.CV, cs.MM, eess.IV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+RAW-to-sRGB image signal processing (ISP) must recover perceptually faithful colors and fine details from sensor measurements, often under imperfect spatial alignment and missing camera metadata. This paper presents, to the best of our knowledge, the first application of visual autoregressive (VAR) next-scale prediction over a discrete image codebook to the RAW-to-sRGB ISP task. We adapt a frozen 1.10\,B-parameter VAR backbone for RAW-conditioned ISP with only 32.93\,M trainable parameters (2.99\%), and propose a frequency-decomposed color loss that separately supervises low-frequency tone via wavelet LL cosine similarity and chromatic edges via detail-band $\ell_1$. On the Zurich RAW-to-sRGB benchmark, the method improves PSNR-Y from 21.31 to 21.89\,dB and reduces LPIPS from 0.276 to 0.218 on the full 1,204-image test set. Diagnostic experiments show that the VAR prior preserves structure well, but continuous color transfer remains the dominant bottleneck: oracle affine correction recovers 3.8\,dB, while learned color heads yield marginal gains.
+
+RAW 到 sRGB 图像信号处理 (ISP) 必须从传感器测量中恢复感知上忠实的色彩和精细细节，通常是在空间对齐不完美和相机元数据丢失的情况下。据我们所知，本文首次将离散图像码本上的视觉自回归 (VAR) 下一尺度预测应用于 RAW 到 sRGB ISP 任务。我们采用冻结的 1.10\,B 参数 VAR 骨干网用于仅具有 32.93\,M 个可训练参数 (2.99\%) 的 RAW 条件 ISP，并提出了一种频率分解颜色损失，通过小波 LL 余弦相似度单独监督低频色调，并通过细节带 $\ell_1$ 监督彩色边缘。在 Zurich RAW-to-sRGB 基准测试中，该方法在完整的 1,204 张图像测试集上将 PSNR-Y 从 21.31 dB 提高到 21.89 dB，并将 LPIPS 从 0.276 降低到 0.218。诊断实验表明，VAR 先验很好地保留了结构，但连续颜色转移仍然是主要瓶颈：oracle 仿射校正恢复了 3.8dB，而学习的颜色头产生了边际增益。
+
+</details>
+
+---
+
+## 4. SyntheticDoc: A Large Synthetic Dataset for Document Unwarping and Illumination Correction / SyntheticDoc：用于文档反扭曲和照明校正的大型综合数据集
+
+**Date**: 2026-09-14 | **arXiv**: [2609.15503v1](http://arxiv.org/abs/2609.15503v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.15503v1)
+
+**Categories**: cs.CV, cs.GR
+
+**Project**: https://igl.ethz.ch/projects/SyntheticDoc/  **Code**: https://github.com/tanguymagne/SyntheticDoc
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Deep learning models have become the standard tool for document rectification and illumination correction, yet their performance is fundamentally bound by their training data. For nearly a decade, the community has heavily relied on Doc3D, a pioneering but increasingly limited document unwarping dataset in terms of scale and quality. To address this bottleneck, we introduce SyntheticDoc, a massive, high-quality dataset designed to push the boundaries of document unwarping. SyntheticDoc is composed of 1,000,000 high-resolution procedurally generated training samples, alongside extensive validation and test sets. Each sample is paired with rich, pixel-perfect annotations, including UV maps, normal maps, albedo and shading. To ensure physical accuracy and photorealism, the paper geometries are generated via a physics-based simulator and rendered using a path tracer. To demonstrate the benefit of our dataset, we train a simple baseline model on SyntheticDoc and report on its performance in comparison to state-of-the-art methods on both document unwarping and illumination correction tasks. Our dataset is available at https://igl.ethz.ch/projects/SyntheticDoc/ and the code used to generate it at https://github.com/tanguymagne/SyntheticDoc .
+
+深度学习模型已成为文档校正和照明校正的标准工具，但其性能从根本上受到训练数据的限制。近十年来，社区严重依赖 Doc3D，这是一个开创性但在规模和质量方面日益有限的文档扭曲数据集。为了解决这个瓶颈，我们引入了 SyntheticDoc，这是一个巨大的高质量数据集，旨在突破文档扭曲的界限。 SyntheticDoc 由 1,000,000 个高分辨率程序生成的训练样本以及广泛的验证和测试集组成。每个样本都配有丰富的、像素完美的注释，包括 UV 贴图、法线贴图、反照率和阴影。为了确保物理准确性和真实感，纸张几何形状是通过基于物理的模拟器生成的，并使用路径追踪器进行渲染。为了证明我们的数据集的优势，我们在 SyntheticDoc 上训练了一个简单的基线模型，并报告其在文档反扭曲和照明校正任务上与最先进的方法相比的性能。我们的数据集可在 https://igl.ethz.ch/projects/SyntheticDoc/ 获取，用于生成它的代码可在 https://github.com/tanguymagne/SyntheticDoc 获取。
+
+</details>
+
+---
+
+## 5. No Pixel Left Behind: Filling Gaps in Anime Colorization / 不留任何像素：填补动漫着色的空白
+
+**Date**: 2026-09-01 | **arXiv**: [2609.00800v1](http://arxiv.org/abs/2609.00800v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.00800v1)
+
+**Categories**: cs.HC, cs.CV, cs.GR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Animation production workflows often involve digital colorization of line art, where small unpainted regions ("gaps") frequently occur and remain an underexplored challenge. We conducted a formative study in Japanese animation (anime) pipelines and found that while the paint bucket tool is widely used for base coloring, tiny enclosed areas are frequently overlooked, resulting in time-consuming manual detection and filling. We introduce GapFill, a tool grounded in professional practices that reduces the effort of gap detection, zooming, and color selection. Our deep-learning method suggests appropriate fill colors by referencing surrounding regions, leveraging the flat-color nature of anime-style images. In a user study with 13 professional colorists, our system improved performance and usability in gap-filling tasks over conventional methods. The study also suggested that prediction accuracy alone is not the primary factor for usability, that appropriate colors can be contextually ambiguous, and that GapFill can complement existing tools depending on users' trust in new AI-powered assistance.
+
+动画制作工作流程通常涉及线条艺术的数字着色，其中经常出现小的未绘制区域（“间隙”），并且仍然是一个尚未充分探索的挑战。我们对日本动画管道进行了形成性研究，发现虽然油漆桶工具广泛用于基础着色，但微小的封闭区域经常被忽视，导致手动检测和填充非常耗时。我们推出 GapFill，这是一款基于专业实践的工具，可减少间隙检测、缩放和颜色选择的工作量。我们的深度学习方法通​​过参考周围区域、利用动漫风格图像的平面颜色性质来建议适当的填充颜色。在对 13 名专业调色师进行的用户研究中，我们的系统比传统方法提高了填补空白任务的性能和可用性。该研究还表明，预测准确性本身并不是可用性的主要因素，适当的颜色可能会在上下文中产生歧义，并且 GapFill 可以根据用户对新的人工智能辅助的信任来补充现有工具。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-09-28 (2 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-09-28
