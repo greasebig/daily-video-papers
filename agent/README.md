@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-09-30](papers/2026-09-30.md) - 61 papers
 - [2026-09-29](papers/2026-09-29.md) - 50 papers
 - [2026-09-28](papers/2026-09-28.md) - 12 papers
 - [2026-09-25](papers/2026-09-25.md) - 47 papers
@@ -170,6 +171,1010 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-09-30 (61 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-09-30
+
+**Paper Count**: 61
+
+---
+
+## 1. Skill-Space Shooting for Autonomous Robot Policy Improvement / 自主机器人政策改进的技能空间射击
+
+**Date**: 2026-09-29 | **arXiv**: [2609.38178v1](http://arxiv.org/abs/2609.38178v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.38178v1)
+
+**Categories**: cs.RO, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Robots deployed in the physical world must be able to improve beyond their initial training as they encounter new situations and failures. For this improvement to scale across tasks, it must make effective use of experience without requiring human demonstration of each correction. Recent agentic systems offer a way to reduce this reliance on human effort by using foundation models to autonomously compose learned behaviors to complete tasks. Yet completing tasks this way does not itself teach a task policy to overcome its own failures; that requires turning these behaviors into learnable corrections for the policy. Our insight is that many such corrections are familiar short behaviors, or skills: they recur across tasks and describe actions that foundation models can reason about from a scene. We introduce skill-space shooting, which uses foundation model guidance to explore corrections through these reusable skills and turn successful trials into policy improvement. Real-world experiments show repeated improvement in policies acting autonomously, while skills can also be shared to reduce the teaching needed to improve on new tasks. By making reusable skills a source of corrective supervision, skill-space shooting enables scalable and generalizable policy improvement within and across tasks. Additional results and videos at https://skill-space-shooting.github.io.
+
+部署在物理世界中的机器人在遇到新情况和故障时必须能够超越最初的训练进行改进。为了使这种改进能够跨任务扩展，它必须有效利用经验，而不需要人工演示每次纠正。最近的代理系统提供了一种方法，通过使用基础模型自主地组合学习的行为来完成任务，从而减少对人类努力的依赖。然而，以这种方式完成任务本身并不能教会任务策略克服其自身的失败；相反，它是一种任务策略。这需要将这些行为转化为可学习的政策修正。我们的见解是，许多此类修正都是熟悉的简短行为或技能：它们在任务中重复出现，并描述基础模型可以从场景中推理出的动作。我们引入技能空间射击，它使用基础模型指导，通过这些可重用的技能来探索修正，并将成功的尝试转化为政策改进。现实世界的实验表明，自主行动的政策不断得到改进，同时也可以共享技能，以减少改进新任务所需的教学。通过将可重复使用的技能作为纠正监督的来源，技能空间射击可以在任务内部和跨任务之间实现可扩展和可推广的策略改进。其他结果和视频请访问 https://skill-space-shooting.github.io。
+
+</details>
+
+---
+
+## 2. Thinking Before Thinking: Scaling Agentic Inference Through Meta-Reasoning / 思考之前思考：通过元推理扩展代理推理
+
+**Date**: 2026-09-29 | **arXiv**: [2609.38147v1](http://arxiv.org/abs/2609.38147v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.38147v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+As agents take on longer and more complex problems, controlling the execution becomes a task in its own right. Each step in the run brings new control choices, like which partial work to build on, whether to start fresh, or when to stop. We introduce agentic meta-reasoning, an inference-time harness that makes these choices an explicit and structured reasoning process. Workers carry out the task-level computation, while a controller consolidates what the run has established, explores next options, assesses what each option is worth under the remaining budget, and dispatches the chosen work with context drawn from persistent memory. Between decisions the controller carries only a compact account of the run rather than replaying its full history. Our baselines span production coding agents and research harnesses, together with a Direct Control Agent using the same workers and compute budget allowance. On ProgramBench, which tests long-horizon agentic capability through program reconstruction, meta-reasoning achieves 71.5% with GPT-5.5 against 58.0% for Codex; with Opus 4.8 it achieves 67.2% against 65.5% for Claude Code. On the other benchmarks, spanning abstract reasoning, multi-domain long-horizon reasoning, and proof generation, it gains between 3.6 and 4.2 points over direct control, averaged across three frontier models. It keeps improving over the tested budget ranges where direct control plateaus, though its overhead can hurt at small budgets. Artifact-graph analysis reveals more reuse of earlier work, higher coverage of correct solutions in most settings, and nonuniform gains in final selection. These results indicate that spending computation on structured control becomes more important as agents scale to longer runs.
+
+随着代理处理更长、更复杂的问题，控制执行本身就成为一项任务。运行中的每个步骤都会带来新的控制选择，例如要构建哪些部分工作、是否重新开始或何时停止。我们引入了代理元推理，这是一种推理时间工具，可以使这些选择成为一个明确且结构化的推理过程。工作人员执行任务级计算，而控制器则巩固运行已建立的内容，探索下一个选项，评估每个选项在剩余预算下的价值，并使用从持久内存中提取的上下文来分派所选工作。在做出决策之间，控制器仅携带运行的紧凑记录，而不是重播其完整历史记录。我们的基线跨越生产编码代理和研究工具，以及使用相同工人和计算预算津贴的直接控制代理。在通过程序重构测试长视野代理能力的 ProgramBench 上，GPT-5.5 的元推理达到了 71.5%，而 Codex 为 58.0%； Opus 4.8 达到了 67.2%，而 Claude Code 达到了 65.5%。在其他基准测试中，涵盖抽象推理、多领域长视野推理和证明生成，它比直接控制提高了 3.6 到 4.2 分（三个前沿模型的平均值）。它在直接控制稳定的测试预算范围内不断改进，尽管其开销可能会在小预算下受到损害。工件图分析揭示了早期工作的更多重用、大多数设置中正确解决方案的更高覆盖率以及最终选择的不均匀收益。这些结果表明，随着智能体扩展到更长的运行时间，在结构化控制上花费计算变得更加重要。
+
+</details>
+
+---
+
+## 3. Multi-Agent Flow Matching with Decoupled Generative Guidance / 具有解耦生成指导的多智能体流程匹配
+
+**Date**: 2026-09-29 | **arXiv**: [2609.38133v1](http://arxiv.org/abs/2609.38133v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.38133v1)
+
+**Categories**: cs.LG, cs.MA, cs.RO, math.OC
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Generative modeling is widely used for producing diverse objects from complex, multimodal distributions. However, its expressivity does not, in general, come with formal guarantees that the generated objects satisfy hard constraints or requirements. In multi-agent generation, this problem becomes more challenging because a hard requirement can depend on multiple agents, while each agent may need to determine its own guidance input without relying on the simultaneously computed guidance inputs of other agents. To this end, we introduce DeGG-Flow, a general framework for multi-agent flow matching with decoupled generative guidance. By representing the generative process as a control-affine dynamical system, we develop guidance conditions for two classes of coupled requirements: shared requirements whose satisfaction depends on multiple agents together, and private requirements associated with each individual agent dependent on its neighbors. For both classes, we establish feasibility conditions and finite-horizon convergence guarantees. We further derive a Wasserstein bound that characterizes the distributional deviation induced by the guidance. We demonstrate DeGG-Flow on multi-robot collaboration for crossing a spatial gap by reconfiguring the environment, and on multi-object scene generation with affordance requirements. Across both applications, DeGG-Flow directly generates objects that satisfy all corresponding hard requirements, including at team sizes unseen during training.
+
+生成建模广泛用于从复杂的多模态分布生成各种对象。然而，它的表现力通常并不能正式保证生成的对象满足硬约束或要求。在多智能体生成中，这个问题变得更具挑战性，因为硬需求可能依赖于多个智能体，而每个智能体可能需要确定自己的指导输入，而不依赖于其他智能体同时计算的指导输入。为此，我们引入了 DeGG-Flow，这是一种具有解耦生成指导的多智能体流匹配通用框架。通过将生成过程表示为控制仿射动力系统，我们为两类耦合需求开发了指导条件：其满足程度取决于多个代理的共享需求，以及与依赖于其邻居的每个代理相关的私有需求。对于这两类，我们建立了可行性条件和有限范围收敛保证。我们进一步推导了 Wasserstein 界，它表征了指导引起的分布偏差。我们演示了通过重新配置环境来跨越空间间隙的多机器人协作的 DeGG-Flow，以及具有可供性要求的多对象场景生成。在这两个应用程序中，DeGG-Flow 直接生成满足所有相应硬要求的对象，包括训练期间看不见的团队规模。
+
+</details>
+
+---
+
+## 4. MotorMind: Scaffolding General Vision Language Models for Zero-Shot Robot Manipulation / MotorMind：零射击机器人操作的通用视觉语言模型的脚手架
+
+**Date**: 2026-09-29 | **arXiv**: [2609.38078v1](http://arxiv.org/abs/2609.38078v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.38078v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision-language-action (VLA) models have advanced robotic manipulation, but their zero-shot generalization in new tasks and environments remains limited, and their reliance on specialized training keeps them from benefiting directly from rapidly advancing general-purpose vision-language models (VLMs). In parallel, recent agentic robotic systems leverage VLMs for high-level reasoning or coding agents for robot control, but often depend on extensive external models and tools, introducing additional complexity and cost. This motivates us to ask: Can a general-purpose VLM itself operate a robot more like the human teleoperator by reasoning directly from observations, issuing actions, and continuously adapting to execution feedback, without relying on external models such as learned action experts, coding agents or grounding tools like SAM3? In this work, we introduce MotorMind, a robot manipulation harness that connects VLM-proposed mid-level actions to deterministic robot control and feedback, with asynchronous monitoring and background memory updates. Without task-specific policy training, coding agents, or additional grounding tools such as SAM3, MotorMind achieves 66.7% success on the base LIBERO-PRO suites and 53.8% under perturbations, compared with at most 13.3% and 19.2%, respectively, for the prior zero-shot methods we evaluate. The same interface reaches 95% average success on a real xArm6 robot across direct manipulation and human-perturbation settings. Replacing the backbone with a stronger VLM further improves performance, while the remaining failures - primarily due to visual grounding, embodied reasoning, and action knowledge - decrease as VLM capability improves. These results show that a general-purpose VLM, when equipped with an appropriate mid-level action representation and asynchronous execution harness, can perform effective zero-shot robotic manipulation.
+
+视觉语言动作（VLA）模型具有先进的机器人操作，但它们在新任务和环境中的零样本泛化仍然有限，并且它们对专门训练的依赖使它们无法直接从快速发展的通用视觉语言模型（VLM）中受益。与此同时，最近的代理机器人系统利用 VLM 进行高级推理或编码代理以进行机器人控制，但通常依赖于广泛的外部模型和工具，从而引入了额外的复杂性和成本。这促使我们问：通用 VLM 本身是否可以像人类远程操作员一样操作机器人，直接根据观察进行推理、发出动作并不断适应执行反馈，而不依赖于外部模型（例如学习动作专家、编码代理或 SAM3 等基础工具）？在这项工作中，我们介绍了 MotorMind，这是一种机器人操纵工具，它将 VLM 提出的中级动作与确定性机器人控制和反馈连接起来，并具有异步监控和后台内存更新功能。在没有特定于任务的策略培训、编码代理或 SAM3 等额外基础工具的情况下，MotorMind 在基本 LIBERO-PRO 套件上取得了 66.7% 的成功率，在扰动下取得了 53.8% 的成功率，而我们评估的先前零样本方法的成功率分别为 13.3% 和 19.2%。在真实的 xArm6 机器人上，相同的界面在直接操作和人类干扰设置方面的平均成功率达到 95%。用更强大的 VLM 替换主干可以进一步提高性能，而剩余的故障（主要是由于视觉基础、具体推理和动作知识）会随着 VLM 能力的提高而减少。这些结果表明，通用 VLM 在配备适当的中级动作表示和异步执行工具时，可以执行有效的零射击机器人操作。
+
+</details>
+
+---
+
+## 5. Auditable Long-Term Memory: A Deterministic Retrieval Chain Measured at 479/475 of 500 on LongMemEval-S / 可审计的长期记忆：确定性检索链，在 LongMemEval-S 上测量为 500 中的 479/475
+
+**Date**: 2026-09-29 | **arXiv**: [2609.38021v1](http://arxiv.org/abs/2609.38021v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.38021v1)
+
+**Categories**: cs.CL, cs.AI, cs.IR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We evaluate an auditable long-term memory system on LongMemEval-S. Its retrieval chain uses hybrid candidate retrieval, cross-encoder reranking, coverage-first packet compilation, and deterministic reasoning scaffolds; an LLM is used only as a replaceable final reader. The chain places all gold sessions in the candidate pool for 468/470 answerable questions and produces gold-complete packets for 462/470. With a Claude Opus reader called through an unpinned CLI alias, two 500-question passes score 479/500 and 475/500 under GPT-4o. The 72 answerable knowledge-update rows used a substantively modified scoring prompt whose effect under the official text has not been measured. The pair straddles Chronos High's published 478/500; differences in reader generation, scoring prompt, and possibly data version, plus within-system variance, establish neither superiority nor equivalence. A grok-4.6-high reader on the same packets scores 476/474, while a maximum-reasoning-effort agentic variant regresses to 461/465. The headline passes differ on eight verdict-flip rows. A second judge agrees with the headline judge on 493/500 rows (98.6%) in each pass and scores both passes 472/500; the official judge also flips three verdicts when re-scoring byte-identical pass-1 answers. Negative controls rejected a verifier that repaired three wrong drafts but broke eleven correct drafts. All components were developed on the same 500 questions, with no held-out evaluation or independent human adjudication; retrieval and scaffold method sources and transcript-derived audits are held; and the headline reader received extra operator context, its complete requests were not retained, and MCP tool availability is unresolved. We release materialized packets, scaffolds, reader outputs, judge verdicts, and controls for inspection and re-scoring.
+
+我们在 LongMemEval-S 上评估可审计的长期记忆系统。其检索链使用混合候选检索、跨编码器重排序、覆盖优先数据包编译和确定性推理支架；法学硕士仅用作可替换的最终读者。该链将所有黄金会话放入 468/470 个可回答问题的候选池中，并为 462/470 个生成黄金完整数据包。通过未固定的 CLI 别名调用 Claude Opus 读者，两个 500 个问题的通行证在 GPT-4o 下得分为 479/500 和 475/500。 72 个可回答的知识更新行使用了经过实质性修改的评分提示，其在官方文本下的效果尚未测量。这对横跨 Chronos High 公布的 478/500；读者群体、评分提示和可能的数据版本的差异，加上系统内的差异，既不能确定优越性，也不能确定等效性。 grok-4.6-high 阅读器对相同数据包的得分为 476/474，而最大推理努力代理变体则回归到 461/465。标题通过的八个判决翻转行有所不同。第二位评委在每次通过中均以 493/500 行 (98.6%) 与主评委一致，并对两次通过评分为 472/500；当重新对字节相同的 pass-1 答案进行评分时，官方法官也会翻转三个判决。负控制拒绝了验证者，该验证者修复了三个错误的草稿，但破坏了十一个正确的草稿。所有组件都是针对相同的 500 个问题开发的，没有保留评估或独立的人工裁决；进行检索和脚手架方法来源以及转录本衍生的审核；标题阅读器收到了额外的操作员上下文，其完整请求未保留，并且 MCP 工具可用性未解决。我们发布物化数据包、支架、阅读器输出、裁判判决以及检查和重新评分控制。
+
+</details>
+
+---
+
+## 6. BITEM at the NTCIR-19 R2C2 Task: Predicting Confidence from Agentic RAG Pipeline Signals / NTCIR-19 R2C2 任务中的 BITEM：根据代理 RAG 管道信号预测置信度
+
+**Date**: 2026-09-29 | **arXiv**: [2609.37993v1](http://arxiv.org/abs/2609.37993v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.37993v1)
+
+**Categories**: cs.CL, cs.AI, cs.IR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The BITEM team entered both subtasks of the NTCIR-19 R2C2 task with a single agentic pipeline, in which a model searches, reads and records evidence over a movie corpus while an orchestrator holds the record and rules on what may be submitted. A claim is admitted only once an entailment cascade has checked it against the passage it cites, and an answer is released only once enough checked evidence stands behind it. Each question is run three or four times, every pass retrieving from a corpus stripped of what the earlier passes have already seen. The confidence filed with each answer is computed by the orchestrator from what the run leaves behind and is never asked of the model, which is offered no way to rate itself. The two retrieval runs placed 4th and 5th of 22, pooling the passes was worth 0.0709 nDCG@20, and the gain was largest on the multi-hop and post-processing-heavy questions, where the organisers rank the pooled run top of the field. Sixteen of the 25 answer runs were built on passages these two runs supplied, 12 of them filed by other teams. HMR rewards a system whose confidence is high where it answers right and low where it answers wrong. The pipeline reached an accuracy of 0.9219, 6th of 25, while the confidence filed with those answers gave an HMR of 0.4915, 13th. A few rules crafted over those same recorded signals, with no further model call and no further retrieval, raise that to an accuracy of 0.9375, 5th, and an HMR of 0.6985, 9th. Ranking on HMR alone can reward a system for answering wrongly with low confidence, so we propose accHMR, the accuracy multiplied by HMR, which reports the reward in proportion to the accuracy, and on which the revised rules would have scored 0.6549, 5th. For future work, fitting a model on the numbers the pipeline already produces, rather than writing such rules by hand, would be a real step forward.
+
+BITEM 团队使用单个代理管道输入 NTCIR-19 R2C2 任务的两个子任务，其中模型搜索、读取和记录电影语料库中的证据，而编排器则保存记录并规定可以提交的内容。只有当蕴含级联对其引用的段落进行检查后，一个主张才会被承认，并且只有在有足够的检查证据支持它时，才会发布答案。每个问题都会运行三到四次，每一次从语料库中检索的内容都会被剥夺之前通过的内容。每个答案提交的置信度是由协调器根据运行留下的内容计算出来的，并且不会询问模型，也无法对模型进行自我评级。两次检索运行分别位于 22 项中的第 4 名和第 5 名，汇集通行证的价值为 0.0709 nDCG@20，并且在多跳和后处理繁重的问题上收益最大，组织者将汇集运行排名在该领域的顶部。 25 个答案运行中有 16 个是基于这两个运行提供的段落，其中 12 个是由其他团队提交的。 HMR 奖励的系统在回答正确时置信度较高，在回答错误时置信度较低。管道的准确度达到了 0.9219，在 25 项中排名第 6，而这些答案提交的置信度给出的 HMR 为 0.4915，在 25 项中排名第 13。针对这些相同的记录信号制定了一些规则，无需进一步的模型调用和进一步的检索，将其精度提高到 0.9375（第 5），HMR 提高到 0.6985（第 9）。仅根据 HMR 进行排名就可以奖励低置信度错误回答的系统，因此我们提出了 accHMR，即准确率乘以 HMR，它按照与准确率成比例的方式报告奖励，修订后的规则将获得 0.6549 分，排名第五。对于未来的工作，根据管道已经产生的数字拟合模型，而不是手动编写此类规则，将是真正的进步。
+
+</details>
+
+---
+
+## 7. Topological Coherence for Self-evolving Multi-agent Systems / 自演化多智能体系统的拓扑一致性
+
+**Date**: 2026-09-29 | **arXiv**: [2609.37953v1](http://arxiv.org/abs/2609.37953v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.37953v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Complex tasks inherently couple workflow structure, agent responsibility, collaboration, and memory access: task regions delimit responsibility and tool scope, cross-region dependencies give rise to handoffs, and ownership boundaries delimit private and selectively shared memory. Existing methods can jointly optimize agent and communication structures, yet such optimization does not by itself require responsibility, handoff, and memory boundaries to remain consistent with task dependencies. We term this requirement topological coherence. We introduce TOCOMAS, a Topology-Coherent Multi-Agent System. TOCOMAS grounds a task graph in tool interfaces, organizes compatible task nodes into reusable responsibility domains, and derives dependency-induced and profile-conditioned collaboration together with boundary-regulated memory visibility. During online self-evolution, TOCOMAS proposes coupled changes to agent, collaboration, and memory policies, retaining for subsequent tasks only candidates that satisfy structural constraints and improve evaluated reward. Across BBEH, WorkBench, SWE-Bench-Verified, and CoMemBench, TOCOMAS improves task success over baselines across backbones. CoMemBench also shows gains over the self-evolving baseline in verified progress, handoffs, and memory isolation.
+
+复杂任务本质上耦合了工作流结构、代理职责、协作和内存访问：任务区域界定职责和工具范围，跨区域依赖性导致切换，所有权边界界定私有和选择性共享内存。现有方法可以联合优化代理和通信结构，但这种优化本身并不需要责任、切换和内存边界来与任务依赖性保持一致。我们将此要求称为拓扑相干性。我们介绍 TOCOMAS，一个拓扑一致的多智能体系统。 TOCOMAS 在工具接口中建立任务图，将兼容的任务节点组织到可重用的责任域中，并导出依赖引起的和配置文件条件的协作以及边界调节的内存可见性。在在线自我进化过程中，TOCOMAS 提出了对代理、协作和记忆策略的耦合更改，只为后续任务保留满足结构约束并提高评估奖励的候选者。在 BBEH、WorkBench、SWE-Bench-Verified 和 CoMemBench 中，TOCOMAS 提高了跨主干基线的任务成功率。 CoMemBench 还显示了在验证进度​​、切换和内存隔离方面优于自演基线的优势。
+
+</details>
+
+---
+
+## 8. Guide, Then Let Go: Gap-Adaptive Teacher Scheduling for Sparse-Reward Agentic RL / 引导，然后放手：稀疏奖励代理强化学习的间隙自适应教师调度
+
+**Date**: 2026-09-29 | **arXiv**: [2609.37898v1](http://arxiv.org/abs/2609.37898v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.37898v1)
+
+**Categories**: cs.AI
+
+**Code**: https://github.com/Ricardo-H/guide-then-let-go.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reinforcement learning for long-horizon agents typically relies on sparse outcome-based rewards. This leads to a severe cold-start problem, as early-stage policies often fail to solve sampled tasks, leaving little useful reward signal for learning. To mitigate this problem, we use on-policy distillation (OPD) to provide token-level guidance on the student's own rollouts. We find that the benefit of this guidance depends on the performance gap between the teacher and the student. When the teacher substantially outperforms the student, distillation helps guide the student through the early training stage where outcome rewards provide little learning signal. As the gap narrows and eventually reverses, however, continued distillation becomes less beneficial and may hinder further improvement. Motivated by this observation, we propose Gap-Adaptive Teacher Scheduling (GATS), which augments the student's RL objective with an OPD term whose weight adapts to the teacher-student performance gap. Specifically, GATS gradually reduces teacher guidance as the student approaches the teacher's reference performance and withdraws it once that reference is reached. This enables GATS to leverage task-trained teachers smaller than the student, since teacher guidance is primarily needed during early training. Across ALFWorld, WebShop, and ScienceWorld with three Qwen2.5 teacher-student configurations, GATS achieves the highest average success rate among the compared methods in all three configurations, improving over reward-only GRPO by 4.37%-11.87% under matched student rollout budgets. Code is available at https://github.com/Ricardo-H/guide-then-let-go.
+
+长视野智能体的强化学习通常依赖于稀疏的基于结果的奖励。这导致了严重的冷启动问题，因为早期策略通常无法解决采样任务，几乎没有留下有用的学习奖励信号。为了缓解这个问题，我们使用策略蒸馏（OPD）来为学生自己的部署提供代币级别的指导。我们发现这种指导的好处取决于教师和学生之间的表现差距。当老师的表现明显优于学生时，蒸馏有助于引导学生完成早期训练阶段，在该阶段，结果奖励几乎无法提供学习信号。然而，随着差距缩小并最终逆转，继续蒸馏变得不那么有利，并可能阻碍进一步的改进。受这一观察的启发，我们提出了差距自适应教师调度（GATS），它通过 OPD 项来增强学生的 RL 目标，该 OPD 项的权重适应师生表现差距。具体来说，当学生接近教师的参考表现时，GATS 会逐渐减少教师指导，并在达到参考值后撤回指导。这使得 GATS 能够利用比学生规模更小的受过任务训练的教师，因为在早期培训期间主要需要教师指导。在具有三种 Qwen2.5 师生配置的 ALFWorld、WebShop 和 ScienceWorld 中，GATS 在所有三种配置的比较方法中实现了最高的平均成功率，在匹配的学生推出预算下比仅奖励 GRPO 提高了 4.37%-11.87%。代码可在 https://github.com/Ricardo-H/guide-then-let-go 获取。
+
+</details>
+
+---
+
+## 9. AgentBug-Smith: Automatically Reproducing Real-World Harness Bugs in Agentic Systems / AgentBug-Smith：在代理系统中自动重现真实世界的安全漏洞
+
+**Date**: 2026-09-29 | **arXiv**: [2609.37864v1](http://arxiv.org/abs/2609.37864v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.37864v1)
+
+**Categories**: cs.SE, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Agent harness bugs exhibit unique characteristics and remain challenging for state-of-the-art software agents to repair. Progress in this area is further hindered by existing benchmarks, which contain only a small and fixed number of executable harness bugs while requiring hundreds of human hours to construct. This work presents AgentBug-Smith, an automated harness bug reproduction approach that continuously discovers and reproduces real-world harness bugs from open-source agentic systems. Across different backbone LLMs, AgentBug-Smith consistently outperforms existing bug reproduction techniques designed for general software, achieving 10.67% - 27.56% higher success rates of reproducing harness bugs. By applying AgentBug-Smith to open-source agentic systems in the wild, we construct Live-Harness-Bench, a live and extensible benchmark that currently contains 200 reproducible harness bugs. We further demonstrate the utility of Live-Harness-Bench through two downstream applications. First, we use Live-Harness-Bench as the evaluation benchmark to systematically evaluate state-of-the-art software agents, revealing their limited capabilities in repairing real-world harness bugs. Second, we use Live-Harness-Bench as a knowledge base of real-world harness bug fixes, from which reusable repair skills can be distilled to improve existing software agents, increasing their harness-bug repair rates by 6.32%. Together, AgentBug-Smith and Live-Harness-Bench establish a scalable foundation for continuously evaluating and improving software agents on harness bug repair, turning real-world agent failures into executable evaluation instances and reusable knowledge for harness improvement, thus contributing to the ultimate goal of recursively self-improving agents.
+
+代理利用错误表现出独特的特征，并且对于最先进的软件代理来说修复仍然具有挑战性。现有基准测试进一步阻碍了这一领域的进展，这些基准测试仅包含少量且固定数量的可执行线束错误，同时需要数百个小时来构建。这项工作提出了 AgentBug-Smith，这是一种自动化的线束错误再现方法，可以从开源代理系统中不断发现和再现现实世界的线束错误。在不同的主干法学硕士中，AgentBug-Smith 始终优于为通用软件设计的现有错误再现技术，再现线束错误的成功率提高了 10.67% - 27.56%。通过将 AgentBug-Smith 应用于野外的开源代理系统，我们构建了 Live-Harness-Bench，这是一个实时且可扩展的基准，目前包含 200 个可重现的安全漏洞。我们通过两个下游应用程序进一步演示了 Live-Harness-Bench 的实用性。首先，我们使用 Live-Harness-Bench 作为评估基准，系统地评估最先进的软件代理，揭示它们在修复现实世界线束错误方面的有限能力。其次，我们使用 Live-Harness-Bench 作为现实世界线束错误修复的知识库，从中可以提取可重用的修复技能来改进现有的软件代理，将其线束错误修复率提高 6.32%。 AgentBug-Smith 和 Live-Harness-Bench 共同建立了一个可扩展的基础，用于持续评估和改进线束错误修复方面的软件代理，将现实世界的代理故障转化为可执行的评估实例和可重用的知识以进行线束改进，从而有助于实现递归自我改进代理的最终目标。
+
+</details>
+
+---
+
+## 10. Mixture of Self-Improving Branches For Agent Harness Optimization / 用于代理线束优化的自我改进分支的混合
+
+**Date**: 2026-09-29 | **arXiv**: [2609.37834v1](http://arxiv.org/abs/2609.37834v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.37834v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Harness optimization provides a practical setting for recursive self-improvement (RSI), where agent-generated modifications inform subsequent changes through execution feedback. Recent work such as Meta-Harness implements this process through iterative code generation and evaluation, but retains a fixed development set and proposal policy. These constraints channel evolution along a single search trajectory, increasing the risk of converging to a local optimum. We make the improvement process itself adaptive by organizing search into branches with evolving development subsets and proposal policies. Each branch retains development cases solved by more of its leading harnesses than by those of other branches, drops cases solved by every leading harness across all branches, and revises its proposal policy using its own search history. To deploy the resulting complementary harnesses, we propose a router to select one development-selected branch head for each new input before execution. Across mathematical reasoning and agentic coding benchmarks, our system achieves relative improvements over Meta-Harness of 34.8% on Olympiad-level mathematical reasoning, 11.6% on Terminal-Bench 2.0, and 3.8% on SWE-bench Lite, with harness selection and router configuration based solely on development data. These results show that evolving branch objectives and proposal policies can yield complementary harnesses whose strengths a router combines without access to test outcomes.
+
+线束优化为递归自我改进 (RSI) 提供了实用的设置，其中代理生成的修改通过执行反馈通知后续更改。最近的工作（例如 Meta-Harness）通过迭代代码生成和评估来实现此过程，但保留了固定的开发集和提案策略。这些约束沿着单一搜索轨迹引导演化，增加了收敛到局部最优的风险。我们通过将搜索组织到具有不断发展的开发子集和提案策略的分支中，使改进过程本身具有适应性。每个分支保留由比其他分支更多的主导线束解决的开发案例，丢弃所有分支中每个主导线束解决的案例，并使用自己的搜索历史修改其提案策略。为了部署生成的互补工具，我们建议使用一个路由器，在执行之前为每个新输入选择一个开发选定的分支头。在数学推理和代理编码基准测试中，我们的系统在奥林匹克级数学推理上比 Meta-Harness 实现了 34.8% 的相对改进，在 Terminal-Bench 2.0 上实现了 11.6%，在 SWE-bench Lite 上实现了 3.8%，且线束选择和路由器配置仅基于开发数据。这些结果表明，不断发展的分支目标和提案策略可以产生互补的工具，路由器可以在无需访问测试结果的情况下结合其优势。
+
+</details>
+
+---
+
+## 11. Context Language Models / 语境语言模型
+
+**Date**: 2026-09-29 | **arXiv**: [2609.37725v1](http://arxiv.org/abs/2609.37725v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.37725v1)
+
+**Categories**: cs.AI, cs.CL, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We introduce Context Language Models (CLMs), language models that natively manage their own context. We implement this by treating the context as a file and allowing the model to make unrestricted updates to this file. This allows the model to learn what is most important to maintain in context, and naturally extends to multi-agent systems where multiple agent contexts coexist as files. Building CLMs zero-shot with existing models outperforms SOTA context management strategies across a variety of tasks: 11.4% higher accuracy with 21.5% fewer FLOPs on BrowseComp-Plus, 5% higher scores with 59% fewer FLOPs on 12-hour EdgeBench, and 65% greater improvement with the same compute on a 24-hour multi-repository agent-swarm task. Moreover, by shifting context management from external harness control to intrinsic model behavior, CLMs naturally enable both in-context and parametric learning of context-management strategies. We show that CLMs can be steered with natural-language instructions evolved through a standard skill-optimization loop, improving held-out accuracy by up to 35.9 points on a context-management task while reducing compute. We also introduce an online reinforcement learning method for CLMs, improving Qwen3.5-9B performance on BrowseComp-Plus by 47.6% while using 12% fewer FLOPs. Finally, we co-design Suffix Cache Reuse for CLM serving, further reducing server-side compute by 35% relative to standard SGLang at matched performance.
+
+我们引入上下文语言模型（CLM），即本地管理自己上下文的语言模型。我们通过将上下文视为文件并允许模型对此文件进行无限制的更新来实现这一点。这使得模型能够了解上下文中最重要的维护内容，并自然地扩展到多代理系统，其中多个代理上下文作为文件共存。使用现有模型构建 CLM 零样本在各种任务中都优于 SOTA 上下文管理策略：在 BrowseComp-Plus 上，准确率提高了 11.4%，失败次数减少了 21.5%；在 12 小时 EdgeBench 上，分数提高了 5%，失败次数减少了 59%；在 24 小时多存储库代理群任务中，相同的计算量提高了 65%。此外，通过将上下文管理从外部线束控制转移到内在模型行为，CLM 自然地支持上下文管理策略的上下文学习和参数学习。我们证明，CLM 可以使用通过标准技能优化循环演变的自然语言指令进行引导，将上下文管理任务的保留准确性提高高达 35.9 个点，同时减少计算量。我们还引入了一种针对 CLM 的在线强化学习方法，将 BrowseComp-Plus 上的 Qwen3.5-9B 性能提高了 47.6%，同时使用的 FLOP 减少了 12%。最后，我们为 CLM 服务共同设计了后缀缓存重用，在性能匹配的情况下，相对于标准 SGLang，服务器端计算量进一步减少了 35%。
+
+</details>
+
+---
+
+## 12. SPLASH: Switching Parallel Layouts of Attention with Seamless Handoff for LLM Serving / SPLASH：通过 LLM 服务的无缝切换切换注意力的并行布局
+
+**Date**: 2026-09-29 | **arXiv**: [2609.37626v1](http://arxiv.org/abs/2609.37626v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.37626v1)
+
+**Categories**: cs.DC, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+No single way of parallelizing attention serves large language models well under all loads. Low concurrency favors tensor parallelism, many independent requests favor data-parallel attention, and long prompts favor context parallelism. Reasoning, agentic, and RL-rollout workloads make a fixed choice untenable: a batch that begins as many short requests ends as a few very long ones, so the best layout changes while the same requests run. Serving engines nevertheless fix one layout at launch, because changing it has meant draining requests and restarting workers. We present SPLASH, a serving system that switches the parallel layout of attention while requests are running. It builds on one observation: modern attention, with few or no KV heads, decouples where a request's KV cache lives from how attention weights are sharded. This has two consequences. First, layouts differ only in who owns the weights and the cache, and most of that state already sits where the next layout needs it; SPLASH reuses it, moves the rest in the background of ongoing inference, and hands off at a batch boundary, making a switch nearly free: its median overhead is under 0.51% of the step it runs in. Second, the decoupling exposes a layout that existing engines lack: Decoupled Ownership Parallelism (DOP) shards attention weights as tensor parallelism does while keeping each request's cache on a single owner as data-parallel attention does. DOP replicates neither, offers 27-60% more KV capacity than data-parallel attention, and gives the scheduler a choice when KV memory limits admission. A transition-aware scheduler follows the best of the four layouts as load changes. On B200 GPUs serving GLM-5.3, SPLASH improves end-to-end serving throughput by 1.3-1.73x over fixed-layout deployments, and the same layout regimes appear with DeepSeek-V3.2 on H200 and GLM-5.3-Flash on DCU.
+
+没有一种并行注意力的方法可以在所有负载下很好地服务于大型语言模型。低并发有利于张量并行，许多独立请求有利于数据并行关注，长提示有利于上下文并行。推理、代理和 RL-rollout 工作负载使得固定选择变得站不住脚：一批开始时的短请求与一些很长的请求一样多，因此在运行相同的请求时，最佳布局会发生变化。尽管如此，服务引擎在启动时会修复一种布局，因为更改它意味着耗尽请求并重新启动工作人员。我们提出了 SPLASH，这是一个服务系统，可以在请求运行时切换注意力的并行布局。它建立在一个观察之上：现代注意力，很少或没有 KV 头，将请求的 KV 缓存所在的位置与注意力权重的分片方式解耦。这有两个后果。首先，布局的不同之处仅在于谁拥有权重和缓存，并且大部分状态已经位于下一个布局需要的地方； SPLASH 重用它，在正在进行的推理的背景中移动其余部分，并在批处理边界处移交，使切换几乎免费：其中位开销低于其运行步骤的 0.51%。其次，解耦暴露了现有引擎所缺乏的布局：解耦所有权并行性 (DOP) 像张量并行一样对注意力权重进行分片，同时像数据并行注意力一样将每个请求的缓存保留在单个所有者上。 DOP 两者都不会复制，它比数据并行注意力机制多提供 27-60% 的 KV 容量，并在 KV 内存限制准入时为调度程序提供选择。当负载变化时，转换感知调度程序会遵循四种布局中最好的布局。在服务 GLM-5.3 的 B200 GPU 上，SPLASH 将端到端服务吞吐量比固定布局部署提高了 1.3-1.73 倍，并且 H200 上的 DeepSeek-V3.2 和 DCU 上的 GLM-5.3-Flash 也出现了相同的布局机制。
+
+</details>
+
+---
+
+## 13. FOCUS: Training-Free Decision-Preserving Context Compression for LLM Agents / 焦点：LLM 代理的免训练决策保留上下文压缩
+
+**Date**: 2026-09-29 | **arXiv**: [2609.37590v1](http://arxiv.org/abs/2609.37590v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.37590v1)
+
+**Categories**: cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+LLM agents accumulate interaction histories that grow linearly with task length, causing quadratic inference cost scaling and performance degradation from attention dilution. Existing context-compression methods learn what to discard offline: by contrastively optimizing guidelines, distilling compressors, or training compression policies. This incurs a substantial cost. Further, the compression policy is learned a priori and is not dynamically conditioned on the evolving test-time trajectories. In this paper we ask a complementary question: Which past interactions causally shape the agent's future decisions? We recast context compression as a causal decision preservation problem over discrete interaction units and introduce FOCUS, a training-free context compression framework that operates entirely at test time. Our method requires no offline data collection or fine-tuning, and is architecture-agnostic, attaching to any closed-API frontier model as a modular compression layer. We evaluate FOCUS on diverse agentic benchmarks including API and tool-calling, QA, web domain and multi-turn dialogue. Our method establishes new state of the art performance, cutting peak context by up to 48% and dependency by 73% while improving task success by up to 8.9 percentage points over uncompressed execution.
+
+LLM 智能体累积的交互历史随任务长度线性增长，导致二次推理成本缩放和注意力稀释导致的性能下降。现有的上下文压缩方法通过对比优化指南、提取压缩器或训练压缩策略来学习离线丢弃什么。这会产生巨大的成本。此外，压缩策略是先验学习的，并且不动态地取决于不断变化的测试时间轨迹。在本文中，我们提出了一个补充问题：过去的哪些交互影响了智能体未来的决策？我们将上下文压缩重新定义为离散交互单元上的因果决策保存问题，并引入 FOCUS，这是一种完全在测试时运行的免训练上​​下文压缩框架。我们的方法不需要离线数据收集或微调，并且与架构无关，可以作为模块化压缩层附加到任何封闭 API 前沿模型。我们评估 FOCUS 的不同代理基准，包括 API 和工具调用、QA、Web 域和多轮对话。我们的方法建立了新的最先进的性能，与未压缩执行相比，将峰值上下文减少了 48%，依赖性减少了 73%，同时将任务成功率提高了 8.9 个百分点。
+
+</details>
+
+---
+
+## 14. Concealing LLM-Based Multi-Agent Topology via Phantom Structure Injection / 通过幻影结构注入隐藏基于 LLM 的多代理拓扑
+
+**Date**: 2026-09-29 | **arXiv**: [2609.37567v1](http://arxiv.org/abs/2609.37567v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.37567v1)
+
+**Categories**: cs.CR, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Driven by the rapid advancement of large language models (LLMs), LLM-based multi-agent systems (MAS) have emerged as a powerful paradigm for collaborative reasoning over complex tasks. A key design element of MAS is the communication topology, which governs information flow among agents and often encodes proprietary knowledge about the system architecture. However, recent work has shown that such topologies can be inferred even in black-box settings by exploiting semantic dependencies in observable reasoning traces, posing significant risks of intellectual property leakage and exposure of system vulnerabilities. To address this threat, we propose MIRAGE, a topology-concealment framework that preserves the genuine communication topology for task execution while shaping adversary-facing semantic evidence toward a carefully constructed phantom topology. Specifically, MIRAGE operates in three stages: (1) phantom topology synthesis, (2) semantic edge realization, and (3) protected MAS execution. It constructs a phantom topology structurally distinct from the genuine one, materializes phantom edges as plausible semantic dependencies, and suppresses source-specific cues that could reveal genuine edges absent from the phantom topology. Extensive experiments across three topology optimization frameworks and four benchmark datasets demonstrate that MIRAGE substantially reduces the effectiveness of topology inference attacks while largely preserving the task utility of the protected MAS.
+
+在大型语言模型 (LLM) 快速发展的推动下，基于 LLM 的多智能体系统 (MAS) 已成为复杂任务协作推理的强大范例。 MAS 的一个关键设计元素是通信拓扑，它控制代理之间的信息流，并且通常对有关系统架构的专有知识进行编码。然而，最近的工作表明，即使在黑盒设置中，也可以通过利用可观察推理轨迹中的语义依赖关系来推断此类拓扑，从而带来知识产权泄露和系统漏洞暴露的重大风险。为了应对这一威胁，我们提出了 MIRAGE，一种拓扑隐藏框架，它保留了任务执行的真实通信拓扑，同时将面向对手的语义证据塑造为精心构建的幻影拓扑。具体来说，MIRAGE 分三个阶段运行：(1) 幻影拓扑合成，(2) 语义边缘实现，以及 (3) 受保护的 MAS 执行。它构建了一种在结构上与真实拓扑不同的幻影拓扑，将幻影边缘具体化为合理的语义依赖性，并抑制可能揭示幻影拓扑中不存在的真实边缘的源特定线索。跨三个拓扑优化框架和四个基准数据集的大量实验表明，MIRAGE 大大降低了拓扑推理攻击的有效性，同时在很大程度上保留了受保护 MAS 的任务效用。
+
+</details>
+
+---
+
+## 15. LazySloth: Bounded LLM-based Lazy Tree Search for Fast Long Video Comprehension / LazySloth：基于有界 LLM 的惰性树搜索，用于快速长视频理解
+
+**Date**: 2026-09-29 | **arXiv**: [2609.37426v1](http://arxiv.org/abs/2609.37426v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.37426v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Modern vision-language models (VLMs) have shown promising results in long-video understanding due to the rich semantic information they can capture. However, most methods focus on coarse captioning of extracted image frames that are computationally inefficient and require models with large context windows. While past work has explored efficient methods through multimodal retrieval-augmented generation (RAG), they rely on lossy embeddings that lose temporal context and fine-grained detail. Few works to date have investigated how VLM-based query-relevant information retrieval can be optimized. We introduce LazySloth, an efficient tree-based search method that speeds up video comprehension and retrieval tasks 2.9-8.3x (compared to existing agentic methods) through bounded captioning of portions of the video considered irrelevant by a VLM of the video. Compared to contemporary specialized video-understanding VLMs and RAG-based methods, LazySloth achieved similar or better final task accuracy across two recent open-source base VLMs--Gemma 4 31B and Qwen3.6 27B--across four benchmarks. LazySloth reduced the gap between the base open-source model and a closed-source model, GPT-4o. Ablations showed that replacing VLM scene understanding with CLIP-based retrieval cost 8.8-19.9% in accuracy, while lazy tree construction matches eager construction at a fraction of the captioning cost. With LazySloth, we demonstrate the possibility of faster long-video comprehension without substantial loss in performance.
+
+现代视觉语言模型（VLM）由于可以捕获丰富的语义信息，在长视频理解方面显示出了有希望的结果。然而，大多数方法侧重于提取图像帧的粗略字幕，这在计算上效率低下并且需要具有大上下文窗口的模型。虽然过去的工作通过多模态检索增强生成（RAG）探索了有效的方法，但它们依赖于丢失时间上下文和细粒度细节的有损嵌入。迄今为止，很少有研究研究如何优化基于 VLM 的查询相关信息检索。我们引入了 LazySloth，这是一种基于树的高效搜索方法，通过对视频 VLM 认为不相关的视频部分进行有界字幕，可以将视频理解和检索任务的速度提高 2.9-8.3 倍（与现有代理方法相比）。与当代专业视频理解 VLM 和基于 RAG 的方法相比，LazySloth 在两个最新的开源基础 VLM（Gemma 4 31B 和 Qwen3.6 27B）上的四个基准测试中实现了相似或更好的最终任务准确性。 LazySloth 缩小了基础开源模型和闭源模型 GPT-4o 之间的差距。 Ablations 表明，用基于 CLIP 的检索取代 VLM 场景理解的准确度成本为 8.8-19.9%，而惰性树构建与急切构建相匹配，而成本仅为字幕成本的一小部分。通过 LazySloth，我们展示了更快地理解长视频而不会造成性能大幅损失的可能性。
+
+</details>
+
+---
+
+## 16. Towards Spatial Perception for Heterogeneous Robot Collaboration in Subterranean Mining Environments / 地下采矿环境中异构机器人协作的空间感知
+
+**Date**: 2026-09-29 | **arXiv**: [2609.37419v1](http://arxiv.org/abs/2609.37419v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.37419v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The autonomous extraction of deep mineral deposits in abandoned underground mines is fundamentally a multi-agent integration problem. No single platform simultaneously offers the mobility to traverse kilometers of degraded drifts and the sensing payload required to characterize an ore body. This article presents the onboard perception pipeline that bridges two heterogeneous agents within the PERSEPHONE autonomous mining mission. Which consist of a lightweight Explorer robot that maps an unknown mine and generates a 3D scene graph of inspection targets, by running a zero-shot, vision-language semantic segmentation stack that detects mineral deposits directly from natural-language prompts. The map and the graph are then handed to a second Inspector robot, which carries an advanced sensing payload and uses them to plan close-range inspection viewpoints. We detail the complete pipeline, with emphasis on the geometric abstraction that turns raw detections into actionable inspection targets, spanning per-view bounding-box generation, cross-view box merging, plane fitting, and polygon extraction, and we report an extensive field validation in a subterranean test facility and in an active magnesite mine, covering both iron-vein and magnesite mineralization under realistic, perceptually degraded conditions.
+
+废弃地下矿井深层矿藏的自主开采从根本上来说是一个多智能体集成问题。没有任何一个平台能够同时提供穿越数公里退化矿坑的机动性和表征矿体所需的传感有效载荷。本文介绍了在 PERSEPHONE 自主采矿任务中桥接两个异构代理的机载感知管道。它由一个轻量级的 Explorer 机器人组成，它可以绘制未知矿山的地图，并通过运行零镜头视觉语言语义分割堆栈（直接根据自然语言提示检测矿藏）来生成检查目标的 3D 场景图。然后，地图和图表被交给第二个检查机器人，该机器人携带先进的传感有效载荷，并使用它们来规划近距离检查视点。我们详细介绍了完整的流程，重点是几何抽象，将原始检测转化为可操作的检查目标，涵盖每个视图边界框生成、跨视图框合并、平面拟合和多边形提取，并且我们报告了在地下测试设施和活跃菱镁矿矿中进行的广泛现场验证，涵盖了现实、感知退化条件下的铁矿和菱镁矿矿化。
+
+</details>
+
+---
+
+## 17. Encore: Few-Shot Agentic Discovery of Manipulation Strategies / Encore：操纵策略的小样本代理发现
+
+**Date**: 2026-09-29 | **arXiv**: [2609.37359v1](http://arxiv.org/abs/2609.37359v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.37359v1)
+
+**Categories**: cs.RO, cs.AI, cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Coding agents can now write, run, and debug programs with little human help. Robot tasks, however, are usually specified by a sentence that leaves out how to grasp, in what order to make contact, and what the result should look like, and an agent given only the sentence must find these details by trial and error. We introduce ENCORE, which gives the agent a few demonstrations as evidence to read rather than as training data. A deterministic builder distills each demonstration into a pack of multi-view keyframes, gripper events, frame strips, and the full trajectory. A coding agent studies the pack, writes a policy program against a fixed perception and action API, refines it iteratively over a few development rollouts, and freezes it before a sealed evaluation that never reveals the success signal. On LIBERO-PRO, the agent's first program already succeeds in half of the perturbed tasks with demonstrations and in one task without them, and the frozen programs outperform the strongest prior agentic system run with the same language model (96.3% against 89.3%). On RoboDojo tasks whose instructions leave the goal unstated, no program succeeds without demonstrations. ENCORE also runs on a real bimanual robot, learning cube handover and cup inversion from five demonstrations each.
+
+编码代理现在可以在几乎不需要人工帮助的情况下编写、运行和调试程序。然而，机器人任务通常由一个句子来指定，而没有提及如何抓取、以什么顺序进行接触以及结果应该是什么样子，而仅给出句子的智能体必须通过反复试验找到这些细节。我们引入了 ENCORE，它为代理提供了一些演示作为阅读的证据，而不是作为训练数据。确定性构建器将每个演示提炼为一组多视图关键帧、夹具事件、帧条和完整轨迹。编码代理研究该包，针对固定的感知和操作 API 编写策略程序，通过几次开发部署迭代地完善它，并在密封评估之前冻结它，永远不会透露成功信号。在 LIBERO-PRO 上，代理的第一个程序已经成功地完成了一半带有演示的扰动任务和一个没有演示的任务，并且冻结的程序优于使用相同语言模型运行的最强的先前代理系统（96.3% 对 89.3%）。在 RoboDojo 任务中，如果指令没有明确目标，没有演示，任何程序都不会成功。 ENCORE 还在真正的双手机器人上运行，通过五个演示分别学习立方体移交和杯子翻转。
+
+</details>
+
+---
+
+## 18. PowerMarketJax: A JAX Benchmark Suite for Multi-Agent Reinforcement Learning in Power Markets / PowerMarketJax：电力市场中多代理强化学习的 JAX 基准套件
+
+**Date**: 2026-09-29 | **arXiv**: [2609.37321v1](http://arxiv.org/abs/2609.37321v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.37321v1)
+
+**Categories**: cs.MA, cs.AI, eess.SY
+
+**Code**: https://github.com/powermarketjax/PowerMarketJax.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Power markets are a natural testbed for multi-agent reinforcement learning (MARL), where multiple self-interested participants repeatedly submit bids. A market-clearing mechanism then determines dispatch and prices subject to power grid constraints and market settlement rules. However, existing MARL environments typically focus on a single market setting, implement simplified clearing mechanisms, or rely on CPU-based optimization solvers that slow large-scale training and limit the systematic study of bidding strategies and market behavior. We introduce PowerMarketJax, a benchmark suite for MARL across five power markets: day-ahead wholesale, real-time balancing, ancillary services, peer-to-peer double auctions, and local flexibility. Each environment implements its own clearing, pricing, and settlement rules while providing a common framework for learning and evaluation. We find that learned bidding behavior depends strongly on the market design: independent learners can miss better strategies when gains require many agents to change together, when more profitable strategies lie beyond a region of lower profit, or when profits disappear as more agents adopt the same strategy. PowerMarketJax implements both market simulation and policy training in JAX, allowing the entire pipeline to run on the GPU with 1,024 X 1,200 parallelisms across both environments and market participants, achieving up to 33X speedup over CPU-based baselines. Our open-source benchmark is available at: https://github.com/powermarketjax/PowerMarketJax.
+
+电力市场是多智能体强化学习（MARL）的天然测试平台，多个自利的参与者反复提交投标。然后，市场出清机制根据电网约束和市场结算规则确定调度和价格。然而，现有的 MARL 环境通常侧重于单一市场设置，实施简化的清算机制，或依赖基于 CPU 的优化求解器，这些优化求解器会减慢大规模训练并限制对投标策略和市场行为的系统研究。我们推出 PowerMarketJax，这是跨五个电力市场的 MARL 基准套件：日前批发、实时平衡、辅助服务、点对点双重拍卖和本地灵活性。每个环境都实施自己的清算、定价和结算规则，同时提供通用的学习和评估框架。我们发现，习得的竞价行为在很大程度上取决于市场设计：当收益需要许多代理共同改变时，当更有利可图的策略超出了较低利润的区域时，或者当更多代理采用相同策略时利润消失时，独立学习者可能会错过更好的策略。 PowerMarketJax 在 JAX 中实现市场模拟和政策训练，允许整个管道在 GPU 上运行，跨环境和市场参与者具有 1,024 X 1,200 并行度，与基于 CPU 的基准相比，速度提升高达 33 倍。我们的开源基准测试位于：https://github.com/powermarketjax/PowerMarketJax。
+
+</details>
+
+---
+
+## 19. Follow the Entities: A Corpus Map for Agentic Search / 跟随实体：用于代理搜索的语料库地图
+
+**Date**: 2026-09-29 | **arXiv**: [2609.37226v1](http://arxiv.org/abs/2609.37226v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.37226v1)
+
+**Categories**: cs.CL, cs.AI, cs.IR, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Answering questions and completing tasks over large document collections often requires connecting evidence spread across multiple documents, such as a project's approval recorded in one, its requirements in another, and its latest status in a third. Recent LLM agents approach this by iteratively searching the full corpus rather than reading only a fixed set of top-ranked documents. However, when the corpus is exposed only as a flat collection of files, a relevant document gives no indication of how it relates to others, so the agent must rediscover these relationships for every query, often missing complementary evidence while simultaneously consuming substantial additional tokens. To address this, we introduce CorpusMap, a navigation layer that organizes the corpus around its recurring entities, which are identifiable from the documents themselves and can link a single document to many others across sources. Specifically, CorpusMap represents each recurring entity as an Entity Page that aggregates information about it and links to every document that refers to it, forming a graph between entities and documents that the agent can traverse to gather otherwise disconnected evidence. Moreover, since CorpusMap is constructed offline by resolving mentions of the same entity across documents, its links are shared across queries rather than rediscovered repeatedly at inference time. Using 7 different models with 3 benchmark datasets, we show that CorpusMap improves both evidence discovery and answer quality over raw-corpus agentic search while using fewer tokens on average, and further outperforms 4 alternative navigation layers, suggesting that entities serve as effective anchors for navigating large document collections.
+
+在大型文档集合上回答问题和完成任务通常需要连接分布在多个文档中的证据，例如一个项目的批准记录在一个文档中，其需求记录在另一个文档中，其最新状态记录在第三个文档中。最近的法学硕士代理通过迭代搜索完整语料库而不是仅阅读一组固定的排名靠前的文档来解决此问题。然而，当语料库仅作为文件的平面集合公开时，相关文档不会给出其与其他文档的关系的指示，因此代理必须为每个查询重新发现这些关系，通常会丢失补充证据，同时消耗大量额外的令牌。为了解决这个问题，我们引入了 CorpusMap，这是一个导航层，它围绕其重复实体组织语料库，这些实体可以从文档本身中识别出来，并且可以跨源将单个文档链接到许多其他文档。具体来说，CorpusMap 将每个重复实体表示为实体页面，该实体页面聚合有关该实体的信息并链接到引用该实体的每个文档，从而在实体和文档之间形成一个图表，代理可以遍历该图表以收集其他断开连接的证据。此外，由于 CorpusMap 是通过解析文档中同一实体的提及来离线构建的，因此它的链接在查询之间共享，而不是在推理时重复重新发现。使用 7 个不同的模型和 3 个基准数据集，我们表明 CorpusMap 比原始语料库代理搜索提高了证据发现和答案质量，同时平均使用更少的标记，并且进一步优于 4 个替代导航层，这表明实体可以作为导航大型文档集合的有效锚点。
+
+</details>
+
+---
+
+## 20. CRJudgeBench: Can AI Detect Plausible but Invalid Code Reviews? / CRJudgeBench：人工智能可以检测看似合理但无效的代码审查吗？
+
+**Date**: 2026-09-29 | **arXiv**: [2609.37216v1](http://arxiv.org/abs/2609.37216v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.37216v1)
+
+**Categories**: cs.SE, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language models can generate plausible code-review comments, but such comments may contain technically incorrect claims that mislead developers. We study technical trustworthiness judgment: determining whether a review comment's core technical claims are correct and applicable to the reviewed code in its repository context. Existing code-review benchmarks primarily evaluate review generation, issue discovery, or general comment quality, but do not directly assess whether an agent can determine the technical trustworthy of an individual review comment. To fill this gap, we introduce CRJudgeBench, a benchmark of 1199 instances constructed from real pull requests and expert-verified perturbations, covering both trustworthy and plausible but untrustworthy comments. We further present Sentinel, a repository-grounded agentic judge that actively gathers code evidence to verify review comments before making judgments. Starting from Qwen3-Coder-30B-A3B-Instruct, Sentinel is trained on the CRJudgeBench training split through iterative action-level learning from a privileged teacher. On the 359-instance CRJudgeBench test set, Sentinel achieves 76.60\% accuracy, outperforming GLM-5.3 by 6.13 percentage points and its base model by 19.78 points. These results show that even state-of-the-art general-purpose LLMs struggle to identify untrustworthy comments, while iterative action-level learning substantially improves the accuracy of repository-grounded trustworthiness judgments. Our dataset is available at https://huggingface.co/datasets/dcloud347/CRJudgeBenchmark
+
+大型语言模型可以生成看似合理的代码审查注释，但此类注释可能包含技术上不正确的声明，从而误导开发人员。我们研究技术可信度判断：确定评审评论的核心技术声明是否正确并适用于其存储库上下文中的已评审代码。现有的代码审查基准主要评估审查生成、问题发现或一般评论质量，但不直接评估代理是否可以确定单个审查评论的技术可信度。为了填补这一空白，我们引入了 CRJudgeBench，这是一个由 1199 个实例组成的基准，由真实的拉取请求和专家验证的扰动构建，涵盖可信和看似合理但不可信的评论。我们进一步介绍了 Sentinel，一个基于存储库的代理法官，它在做出判断之前主动收集代码证据来验证审查意见。从 Qwen3-Coder-30B-A3B-Instruct 开始，Sentinel 通过来自特权教师的迭代动作级学习在 CRJudgeBench 训练中接受训练。在 359 个实例的 CRJudgeBench 测试集上，Sentinel 的准确率达到 76.60%，比 GLM-5.3 提高 6.13 个百分点，比基础模型提高 19.78 个百分点。这些结果表明，即使是最先进的通用法学硕士也很难识别不可信的评论，而迭代行动级学习大大提高了基于存储库的可信度判断的准确性。我们的数据集可在 https://huggingface.co/datasets/dcloud347/CRJudgeBenchmark 获取
+
+</details>
+
+---
+
+## 21. SkillCome: Group Contrast Skill Optimization with Dual Memory / SkillCome：双内存群组对比技能优化
+
+**Date**: 2026-09-29 | **arXiv**: [2609.37128v1](http://arxiv.org/abs/2609.37128v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.37128v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Skill evolution improves the capabilities of large language models by analyzing trajectories generated under a given skill and modifying the skill accordingly. Existing approaches typically generate a single trajectory per question. However, this provides insufficient optimization signals since it requires inferring effective skill edits from a solitary path. It is difficult to pinpoint which actions caused the failure in a failed trajectory, or to determine which actions in a successful one should be incorporated into the skill. Furthermore, they rely on a local batch of trajectories for analysis, making the optimization direction susceptible to noisy evidence. To address these, we propose SkillCome, a Skill-evolution method based on group Contrast optimization with dual memory. For each question, SkillCome generates trajectories and performs group contrast analysis to precisely identify key behavioral divergences between successful and failed trajectories, offering reliable optimization signals. The dual memory system further accumulates evidence from historical steps to track patterns shared across different groups, leading to more generalized optimization directions. Together, SkillCome builds a systematic optimization process that transforms experience from observed successful trajectories into reusable skills. Extensive experiments on six benchmarks spanning question answering, reasoning, and agentic tasks demonstrate the effectiveness of our method. SkillCome consistently outperforms baselines across five models of varying families and scales, with gains up to +5.69 points.
+
+技能进化通过分析给定技能下生成的轨迹并相应地修改技能来提高大型语言模型的能力。现有方法通常为每个问题生成一个轨迹。然而，这提供了不足的优化信号，因为它需要从单独的路径推断有效的技能编辑。很难确定哪些动作导致了失败轨迹中的失败，也很难确定成功轨迹中的哪些动作应纳入技能中。此外，它们依赖一批本地轨迹进行分析，使得优化方向容易受到噪声证据的影响。为了解决这些问题，我们提出了 SkillCome，一种基于双内存组对比度优化的技能进化方法。对于每个问题，SkillCome 都会生成轨迹并执行群体对比分析，以精确识别成功轨迹和失败轨迹之间的关键行为差异，提供可靠的优化信号。双记忆系统进一步积累历史步骤的证据，以跟踪不同组之间共享的模式，从而得出更通用的优化方向。 SkillCome 共同构建了一个系统化的优化流程，将观察到的成功轨迹的经验转化为可重复使用的技能。对涵盖问答、推理和代理任务的六个基准的广泛实验证明了我们方法的有效性。 SkillCome 在不同系列和规模的五种模型中始终优于基线，涨幅高达 +5.69 分。
+
+</details>
+
+---
+
+## 22. When Should Agents Check External State? Budgeting Observations for Stored Intentions / 代理应该何时检查外部状态？存储意图的预算观察
+
+**Date**: 2026-09-29 | **arXiv**: [2609.37125v1](http://arxiv.org/abs/2609.37125v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.37125v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Prospective memory allows an agent to retain an intention tied to a future condition, but the stored intention does not reveal whether that condition currently holds. Checking it may require web access, multi-step tool use, and paid calls. Existing systems decide when intentions require attention, but do not allocate the resulting observations under a shared budget. We introduce the first resource-allocation formulation for the external observations required by stored intentions under a shared episode budget. BudgetPM offers two policy variants that share a hard-budget executor. BudgetPM-Static uses a lightweight Logistic scorer to learn whether a check improves the current decision. BudgetPM-Sequential distills full-episode hindsight schedules into a lightweight policy that decides when to spend or reserve capacity using only pre-query information at deployment. We evaluate BudgetPM against two public memory-agent systems, five matched controls, and four hand-designed monitoring or budget-adaptation rules. Across two benchmarks and three backbones, BudgetPM-Static outperforms adapted Mem0 and PMA workflows. On PM-Bench, its Logistic scorer reaches competitive quality--cost operating points alongside higher-capacity scorers and retains 99.9--100\% of unconstrained quality with 42--54\% fewer observations. Under severe scarcity and the same hard caps, BudgetPM-Sequential exceeds the strongest tested natural monitoring schedule by 1.92--2.58 Set F1 points. It reaches the same Set F1 and on-time recall with 16--33\% fewer observations. Matched attribution, exact-cost analysis, and a fixed-budget load intervention link this gain to competition between present and future opportunities. These results yield a demand--capacity design rule: local gating works when capacity covers demand, while future-aware supervision adds value when observations compete across time.
+
+预期记忆允许代理保留与未来条件相关的意图，但存储的意图并不能揭示该条件当前是否成立。检查它可能需要访问网络、使用多步骤工具和付费电话。现有系统决定何时需要关注意图，但不会在共享预算下分配结果观察结果。我们为共享情节预算下存储的意图所需的外部观察引入了第一个资源分配公式。 BudgetPM 提供两种共享硬预算执行器的政策变体。 BudgetPM-Static 使用轻量级 Logistic 评分器来了解检查是否可以改善当前决策。 BudgetPM-Sequential 将全集事后计划提炼为轻量级策略，仅使用部署时的预查询信息来决定何时花费或保留容量。我们根据两个公共记忆代理系统、五个匹配的控件和四个手工设计的监控或预算适应规则来评估 BudgetPM。在两个基准和三个骨干网中，BudgetPM-Static 的性能优于改编后的 Mem0 和 PMA 工作流程。在 PM-Bench 上，其 Logistic 评分器达到了具有竞争力的质量 - 成本操作点与更高容量的评分器并列，并保留了 99.9--100\% 的无约束质量，同时观测值减少了 42--54\%。在严重稀缺和相同硬上限的情况下，BudgetPM-Sequential 超出最强测试的自然监测计划 1.92--2.58 Set F1 点。它达到了相同的 F1 集和准时召回率，但观测值减少了 16--33%。匹配归因、精确成本分析和固定预算负荷干预将这种收益与当前和未来机会之间的竞争联系起来。这些结果产生了需求-容量设计规则：当容量满足需求时，局部门控起作用，而当观察跨时间竞争时，具有未来意识的监督会增加价值。
+
+</details>
+
+---
+
+## 23. VACE: Validation-Gated Alternating Co-Evolution of Agent Models and Harnesses / VACE：代理模型和工具的验证门控交替协同进化
+
+**Date**: 2026-09-29 | **arXiv**: [2609.37105v1](http://arxiv.org/abs/2609.37105v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.37105v1)
+
+**Categories**: cs.LG, cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Language model agents can be improved by updating their model weights or refining the harness that guides task execution. These components are coupled: weight updates change how the model uses the harness, while harness updates change the trajectories used for training. We propose VACE, Validation-Gated Alternating CoEvolution, which alternates agentic reinforcement learning with trajectory-driven harness refinement. After each RL stage, VACE reuses the collected trajectories to propose a harness revision and evaluates the incumbent and candidate with the updated model held fixed. The candidate guides subsequent training only if it improves validation performance. With Qwen3.5-9B, VACE achieves 45.26% test accuracy on OfficeQA and a mean partial-credit score of 75.19% on AutomationBench, exceeding weight-only RL by 6.43 and 9.09 percentage points and ungated alternation by 4.59 and 6.95 points, respectively. Across 44 harness proposals, 17 reduce validation performance at the updated checkpoint and are rejected before subsequent RL training, highlighting the importance of validation gating.
+
+语言模型代理可以通过更新其模型权重或改进指导任务执行的工具来改进。这些组件是耦合的：权重更新改变模型使用线束的方式，而线束更新改变用于训练的轨迹。我们提出了 VACE（验证门控交替协同进化），它将代理强化学习与轨迹驱动的线束细化交替使用。在每个 RL 阶段之后，VACE 会重复使用收集到的轨迹来提出线束修订方案，并使用固定的更新模型来评估现任者和候选人。仅当后续训练能够提高验证性能时，候选者才会指导后续训练。借助 Qwen3.5-9B，VACE 在 OfficeQA 上实现了 45.26% 的测试准确率，在 AutomationBench 上实现了 75.19% 的平均部分信用分数，分别超过仅权重 RL 6.43 和 9.09 个百分点，以及非门控交替 4.59 和 6.95 个百分点。在 44 个工具提案中，有 17 个在更新的检查点降低了验证性能，并在后续 RL 训练之前被拒绝，这凸显了验证门控的重要性。
+
+</details>
+
+---
+
+## 24. FACT: Fidelity-Aware Construction of Articulated Twins / 事实：铰接双胞胎的保真度构建
+
+**Date**: 2026-09-29 | **arXiv**: [2609.37067v1](http://arxiv.org/abs/2609.37067v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.37067v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Visually plausible articulated assets may still fail during contact interactions or exhibit inaccurate motion. We present FACT (Fidelity-Aware Construction of Articulated Twins), an agentic framework that progressively constructs articulated twins to improve geometry, contact, and dynamic fidelity. The agent drives an evidence--diagnosis--revision loop on a shared editable representation, selecting measurements and model edits using quantitative feedback, while numerical tools execute and validate the updates. It reconstructs editable articulated geometry from images through feature planning, targeted measurements, and diagnostic refinement. On this reference, it repairs collision proxies through task-aware local repartitioning before fidelity-constrained compression. Finally, it constructs response models from passive-response videos, using simulation residuals to guide model revision and constrained physical parameter fitting. Experiments show that FACT improves geometric reconstruction over baselines, enables more reliable interaction with simpler collision proxies, and better reproduces held-out physical responses than direct parameter inference.
+
+视觉上合理的铰接资产在接触交互过程中仍然可能会失败或表现出不准确的运动。我们提出了 FACT（铰接双胞胎的保真度感知构建），这是一种代理框架，可逐步构建铰接双胞胎以改善几何形状、接触和动态保真度。该代理在共享的可编辑表示上驱动证据-诊断-修订循环，使用定量反馈选择测量和模型编辑，同时数值工具执行和验证更新。它通过特征规划、有针对性的测量和诊断细化从图像重建可编辑的铰接几何形状。在此参考中，它在保真度约束压缩之前通过任务感知本地重新分区来修复冲突代理。最后，它从被动响应视频构建响应模型，使用模拟残差指导模型修正和约束物理参数拟合。实验表明，FACT 改进了基线上的几何重建，能够与更简单的碰撞代理进行更可靠的交互，并且比直接参数推断更好地再现保留的物理响应。
+
+</details>
+
+---
+
+## 25. Can Language Models Learn to Forecast Stock Prices / 语言模型可以学习预测股票价格吗
+
+**Date**: 2026-09-29 | **arXiv**: [2609.36914v1](http://arxiv.org/abs/2609.36914v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.36914v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Post-training has been shown to significantly improve language models' performance on tasks with verifiable outcomes, including mathematical reasoning, software engineering, and computer use. However, whether the same approach can improve forecasting in financial markets is much less clear. Compared with tasks with verifiable outcomes, not only are realized returns noisy, but even what constitutes a relevant information set for making effective predictions is not obvious a priori: the model must decide which observations to gather and then commit to a numerical judgment before the outcome is known. We study this question in a chronological stock-price sandbox, where a language model gathers price, volume, relative-performance, and market-context evidence and predicts a future return. We post-train Qwen3-4B with supervised fine-tuning (SFT) on tool-use demonstrations, then proximal policy optimization (PPO) with a terminal reward given by the forecast score against the realized return. The resulting AURA-4B more than doubles the starting direction--magnitude score, from 20.94 to 43.31, and is comparable to frontier language models on this benchmark. Conditional magnitude agreement rises from 33.3 to 66.2, while directional accuracy changes from 62.9 to 65.4. SFT expands tool use, and PPO further increases the share of ranking and market-context queries. These results show that post-training can substantially improve financial forecasting performance, together with changes in how the model investigates the market, on this outcome-selected benchmark.
+
+事实证明，训练后可以显着提高语言模型在具有可验证结果的任务上的性能，包括数学推理、软件工程和计算机使用。然而，同样的方法是否可以改善金融市场的预测还不太清楚。与具有可验证结果的任务相比，不仅实现的返回有噪声，而且甚至构成用于做出有效预测的相关信息集的内容也不是先验显而易见的：模型必须决定收集哪些观察结果，然后在知道结果之前进行数值判断。我们在按时间顺序排列的股票价格沙箱中研究这个问题，其中语言模型收集价格、交易量、相对表现和市场背景证据并预测未来回报。我们对 Qwen3-4B 进行后训练，在工具使用演示上进行监督微调 (SFT)，然后进行近端策略优化 (PPO)，并根据预测得分相对于已实现的回报给出最终奖励。由此产生的 AURA-4B 将起始方向-幅度分数提高了一倍多，从 20.94 增加到 43.31，并且与该基准测试中的前沿语言模型相当。条件震级一致性从 33.3 上升到 66.2，方向精度从 62.9 变化到 65.4。 SFT 扩大了工具的使用，PPO 进一步增加了排名和市场背景查询的份额。这些结果表明，根据结果选择的基准，培训后可以显着提高财务预测性能，同时改变模型调查市场的方式。
+
+</details>
+
+---
+
+## 26. ProgressCompass: Embodied Progress Reward Models Are Lost Without the Right Context / ProgressCompass：如果没有正确的背景，具体的进度奖励模型就会丢失
+
+**Date**: 2026-09-29 | **arXiv**: [2609.36684v1](http://arxiv.org/abs/2609.36684v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.36684v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Embodied agents now take on ever longer tasks. For long tasks, knowing only whether a task finally succeeds or fails says little; the steps along the way matter. Progress Reward Models (PRMs) score how far a task has come at every step, and serve as dense rewards, verifiers and monitors. Yet in long tasks the current frame alone often cannot tell how far the task has come, because progress depends on what happened before. We call this problem context-dependent progress estimation. Existing benchmarks on progress estimation mostly focus on short tasks whose progress can be read from the current observation, and whether PRMs can estimate progress when context is needed remains underexplored. We therefore build ContextProgress-Bench, with 24 manipulation tasks for 120 episodes. The benchmark covers three settings: (i) State Recall, where information needed for progress appeared earlier but is not in the current frame; (ii) Sequence Tracking, where steps follow a fixed order, so progress requires knowing which steps are done and which comes next; and (iii) Recurrence Disambiguation, where look-alike frames sit at very different progress. We then run a paired diagnosis: each PRM keeps the same input format in both runs, and in one run its instruction integrates the right context. Even PRMs that read the entire history get lost in estimating progress, yet with the right context the same five models cut their progress error by 77-82%. Embodied PRMs are thus not incapable of progress estimation, but lost without the right context. We therefore propose ProgressCompass, an autonomous agentic loop that reorients an existing PRM and uses current general-purpose VLMs to supply the context the PRM needs. Wrapped in the loop, the same frozen PRM cuts its progress error by 63% and raises its rank agreement by 76%. With such a compass, PRMs estimate progress far better on longer, more complex tasks.
+
+实体代理现在承担着越来越长的任务。对于长期任务，仅知道任务最终是成功还是失败并没有什么意义。一路走来的步骤很重要。进度奖励模型 (PRM) 对任务每一步的进展情况进行评分，并充当密集奖励、验证者和监控者。然而，在长期任务中，仅当前框架通常无法判断任务已经进行了多远，因为进度取决于之前发生的事情。我们称这个问题为上下文相关的进度估计。现有的进度估计基准主要集中在短期任务上，这些任务的进度可以从当前的观察中读取，而 PRM 是否可以在需要上下文时估计进度仍有待探索。因此，我们构建了 ContextProgress-Bench，其中包含 120 个情节的 24 个操作任务。该基准涵盖三种设置：(i) 状态召回，其中进展所需的信息较早出现，但不在当前框架中； (ii) 顺序跟踪，其中步骤遵循固定顺序，因此进度需要知道哪些步骤已完成以及接下来是哪些步骤； (iii) 重复消歧，相似的帧处于非常不同的进度。然后我们运行配对诊断：每个 PRM 在两次运行中都保持相同的输入格式，并且在一次运行中其指令集成了正确的上下文。即使阅读整个历史记录的 PRM 也会在估计进度时迷失方向，但在正确的背景下，相同的五个模型将进度误差减少了 77-82%。因此，具体的 PRM 并非无法估计进度，而是在没有正确上下文的情况下丢失了。因此，我们提出了 ProgressCompass，这是一个自主代理循环，可以重新定位现有的 PRM 并使用当前的通用 VLM 来提供 PRM 所需的上下文。包裹在循环中，相同的冻结 PRM 将其进度误差减少了 63%，并将其排名一致性提高了 76%。有了这样的指南针，PRM 就能更好地估计更长、更复杂任务的进度。
+
+</details>
+
+---
+
+## 27. MARCO: Multi-Round Agentic Reinforcement for Conditional Molecular Optimization / MARCO：条件分子优化的多轮代理强化
+
+**Date**: 2026-09-29 | **arXiv**: [2609.36683v1](http://arxiv.org/abs/2609.36683v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.36683v1)
+
+**Categories**: cs.LG, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Molecular optimization is inherently iterative: a candidate is proposed, evaluated against several objectives, and revised while preserving a relationship to the source molecule. Most instruction-following models instead emit one edited molecule, forcing validity, property improvement, and similarity control into a single response. We introduce MARCO, an evaluator-grounded reinforcement-learning framework that trains molecular editors on bounded proposal--feedback--revision trajectories. MARCO aggregates shaped turn rewards into an undiscounted trajectory return for group-relative policy optimization. We evaluate two consequences of this training: Same-1 tests the trained policy under a one-response budget, while Same-5 tests whether the same policy can use verifier feedback when up to five responses are available. Across the three-objective MuMOInstruct benchmark, three Qwen backbones, and seen/unseen instruction splits, SFT-initialized MARCO obtains the highest product of property success rate and similarity in every reported primary setting. Same-5 further improves the observed score under the tested budget, while four-objective and public-checkpoint experiments test transfer across constraint sets and initialization regimes.
+
+分子优化本质上是迭代的：提出候选分子，根据多个目标进行评估，并在保留与源分子的关系的同时进行修改。大多数指令跟踪模型都会发出一种经过编辑的分子，从而将有效性、属性改进和相似性控制纳入单个响应中。我们引入了 MARCO，一个以评估者为基础的强化学习框架，可以在有界提案-反馈-修订轨迹上训练分子编辑器。 MARCO 聚合将奖励转变为未贴现的轨迹回报，以实现与群体相关的政策优化。我们评估此训练的两个结果：Same-1 在一个响应预算下测试经过训练的策略，而 Same-5 测试在最多五个响应可用时相同策略是否可以使用验证者反馈。在三目标 MuMOInstruct 基准、三个 Qwen 主干以及可见/不可见的指令拆分中，SFT 初始化的 MARCO 在每个报告的主要设置中获得了最高的属性成功率和相似性乘积。 Same-5 进一步提高了测试预算下的观察得分，而四目标和公共检查点实验则测试了跨约束集和初始化机制的转移。
+
+</details>
+
+---
+
+## 28. Gödel Forest: Balancing Search Depth and Breadth for Data-Centric Recursive Self-Improvement / 哥德尔森林：平衡搜索深度和广度以实现以数据为中心的递归自我改进
+
+**Date**: 2026-09-29 | **arXiv**: [2609.36675v1](http://arxiv.org/abs/2609.36675v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.36675v1)
+
+**Categories**: cs.CL
+
+**Code**: https://github.com/evolvent-ai/Godel-Forest.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recursive self-improvement (RSI) aims to achieve compounding gains by having models improve themselves. While most existing RSI systems optimize external agent harnesses or prompts around a frozen base model, data-centric RSI directly updates the model's own parameters by training on agent-generated data. However, because validating data strategies requires expensive model training, existing methods face a fundamental dilemma: a single agent gets trapped in narrow directions and lacks exploration breadth, while naive parallel search or heavy trace sharing sacrifices long-horizon search depth. To address this challenge, we introduce G"odel Forest, a multi-agent framework that organizes recursive self-improvement as an ensemble of co-evolving search trees. In G"odel Forest, each agent autonomously grows a persistent tree, deepening, branching, or pruning data strategies based on model feedback to secure depth, while parallel trees explore distinct regions of the data space to expand breadth. Crucially, rather than leaving trees isolated or flooding them with heavy execution logs, a dynamically co-evolving memory connects the forest: agents continuously distill their successes and failures into compact procedural lessons anchored to a global leaderboard. Through this forest ecosystem, a dead-end in one tree instantly warns the whole forest against unpromising paths, while an empirical breakthrough quickly seeds new exploration branches in neighboring trees. Evaluated on RSIBench-Data across six diverse domains, G"odel Forest outperforms the single-agent baseline by an average of 10.70% while reducing wall-clock time on five tasks. Ablations confirm that co-evolving shared memory yields a +7.00% gain over independent parallel search, demonstrating that collective distillation is key to scalable self-improvement. The code is available at https://github.com/evolvent-ai/Godel-Forest.
+
+递归自我改进（RSI）旨在通过模型自我改进来实现复合收益。虽然大多数现有 RSI 系统围绕冻结的基础模型优化外部代理利用或提示，但以数据为中心的 RSI 通过对代理生成的数据进行训练来直接更新模型自身的参数。然而，由于验证数据策略需要昂贵的模型训练，现有方法面临着一个根本性的困境：单个代理陷入狭窄的方向并缺乏探索广度，而幼稚的并行搜索或大量的跟踪共享则牺牲了长范围的搜索深度。为了应对这一挑战，我们引入了 G"odel Forest，一个多代理框架，它将递归自我改进组织为共同进化搜索树的集合。在 G"odel Forest 中，每个代理自主生长一棵持久树，根据模型反馈加深、分支或修剪数据策略以确保深度，而并行树则探索数据空间的不同区域以扩展广度。至关重要的是，动态共同进化的内存不会让树木孤立或充斥大量执行日志，而是将森林连接起来：智能体不断将其成功和失败提炼成紧凑的程序教训，并锚定在全球排行榜上。通过这个森林生态系统，一棵树的死胡同会立即警告整个森林不要走上没有希望的道路，而经验上的突破很快就会在邻近的树上播下新的探索分支。在六个不同领域的 RSIBench-Data 上进行评估，G"odel Forest 的性能平均优于单智能体基线 10.70%，同时减少了五项任务的挂钟时间。消融证实，共同进化共享内存比独立并行搜索产生 +7.00% 的增益，这表明集体蒸馏是可扩展自我改进的关键。代码可在 https://github.com/evolvent-ai/Godel-Forest 获取。
+
+</details>
+
+---
+
+## 29. Simple Agentic Memory for Generalist Robot Policies / 用于通用机器人策略的简单代理内存
+
+**Date**: 2026-09-29 | **arXiv**: [2609.36595v1](http://arxiv.org/abs/2609.36595v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.36595v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Visual-memory systems commonly retain or compress past observations. Robot control additionally requires interaction-derived state that no individual frame may explicitly represent, such as persistent identity relations, accumulated progress, or ordered procedures. We introduce Simple Agentic Robot Memory (SimpleARM), a training-free memory layer for frozen generalist robot policies. From the task instruction, SimpleARM specifies what to monitor; frozen perceptual tools maintain compact typed state online; structured access retrieves that state only when a proposed subgoal depends on history; and current-view grounding resolves recalled entities before execution. We evaluate SimpleARM on RoboMME, a benchmark of memory-dependent robot manipulation tasks that require history information no longer available in the current observation. Across all 16 tasks and three policy seeds, SimpleARM achieves 67.17% mean success, compared with 44.51% for the strongest non-oracle baseline. Matched ablations show mechanism specificity: removing relation, reference, progress, or route state produces large losses where the affected state is retrieved for control, while largely sparing other tasks. These results support a state-based view of robot memory: effective memory for control is not simply retained visual history, but compact task-relevant state derived from the interaction history.
+
+视觉记忆系统通常会保留或压缩过去的观察结果。机器人控制还需要没有单独的框架可以明确表示的交互衍生状态，例如持久的身份关系、累积的进度或有序的过程。我们引入了简单代理机器人内存（SimpleARM），这是一种用于冻结通用机器人策略的免训练内存层。 SimpleARM 从任务指令中指定要监视的内容；冻结的感知工具在线保持紧凑的打字状态；仅当提议的子目标依赖于历史时，结构化访问才会检索该状态；当前视图接地在执行之前解决了召回的实体。我们在 RoboMME 上评估 SimpleARM，RoboMME 是依赖于内存的机器人操作任务的基准，这些任务需要当前观察中不再可用的历史信息。在所有 16 项任务和三个策略种子中，SimpleARM 实现了 67.17% 的平均成功率，而最强的非预言机基线的平均成功率为 44.51%。匹配的消融显示了机制的特殊性：删除关系、参考、进度或路由状态会产生巨大的损失，其中受影响的状态被检索以进行控制，同时很大程度上避免了其他任务。这些结果支持基于状态的机器人记忆视图：用于控制的有效记忆不仅仅是保留的视觉历史记录，而是从交互历史记录中导出的紧凑的任务相关状态。
+
+</details>
+
+---
+
+## 30. Cooperative Multi-Agent Vision-Language-Action Models via Reinforced Fine Tuning / 通过强化微调的协作多智能体视觉-语言-动作模型
+
+**Date**: 2026-09-29 | **arXiv**: [2609.36588v1](http://arxiv.org/abs/2609.36588v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.36588v1)
+
+**Categories**: cs.RO, cs.AI, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We study reinforcement learning (RL) methods for cooperative multi-agent Vision-Language-Action (VLA) models. This problem is challenging because VLAs are pretrained on large-scale single-agent data and therefore lack the fine-grained coordination skills required for inter-robot collaboration. Supervised fine-tuning (SFT) on multi-robot demonstrations partially bridges this gap, but its performance is bounded by the demonstration data and cannot improve from its own experience. We present a three-stage reinforced fine-tuning (RFT) pipeline for multi-agent VLAs. First, initialization-aware data collection sweeps over initial configurations and invokes human demonstrations only when the pretrained VLA repeatedly fails, yielding robustness to initialization shift with reduced human cost. Second, offline credit-filtered tuning assigns credit to individual agents and fine-tunes on per-agent trajectories with positive advantage rather than on entire joint rollouts. Third, we find existing online RL for VLAs are less effective for hard multi-agent tasks, which we attribute to noisy co-exploration and unstable updates. We instead use online latent-space fine tuning, which freeze the VLA and perform RL in its latent noise space. We evaluate our multi-agent VLA with both $π_0$ and $π_{0.5}$ backbones across 11 tasks in RoboTwin, RoboFactory and real-world manipulation with two Franka robots. Our multi-agent VLA improves the average success rate by $+23.1\%$, $+16.4\%$, and $+44\%$ on RoboTwin, RoboFactory, and real-world tasks, respectively. Code available at https://anonymous.4open.science/r/mavla_rft-2BC0/.
+
+我们研究协作多智能体视觉-语言-动作（VLA）模型的强化学习（RL）方法。这个问题具有挑战性，因为 VLA 是在大规模单代理数据上进行预训练的，因此缺乏机器人间协作所需的细粒度协调技能。多机器人演示上的监督微调（SFT）部分弥补了这一差距，但其性能受到演示数据的限制，无法根据自身经验进行改进。我们提出了一种用于多智能体 VLA 的三阶段强化微调 (RFT) 管道。首先，初始化感知数据收集会扫描初始配置，并仅在预训练的 VLA 反复失败时才调用人工演示，从而在降低人力成本的情况下实现初始化转换的鲁棒性。其次，离线信用过滤调整将信用分配给各个代理，并以积极的优势对每个代理的轨迹进行微调，而不是对整个联合部署进行微调。第三，我们发现现有的 VLA 在线 RL 对于困难的多智能体任务效果较差，我们将其归因于嘈杂的共同探索和不稳定的更新。相反，我们使用在线潜在空间微调，冻结 VLA 并在其潜在噪声空间中执行强化学习。我们在 RoboTwin、RoboFactory 中的 11 项任务中评估了具有 $π_0$ 和 $π_{0.5}$ 主干的多智能体 VLA，以及使用两个 Franka 机器人进行现实世界操作。我们的多智能体 VLA 在 RoboTwin、RoboFactory 和现实世界任务上的平均成功率分别提高了 $+23.1\%$、$+16.4\%$ 和 $+44\%$。代码可在 https://anonymous.4open.science/r/mavla_rft-2BC0/ 获取。
+
+</details>
+
+---
+
+## 31. Trajectory-Level Mode Guidance for Controllable Diffusion-Based Multi-Robot Motion Planning / 基于可控扩散的多机器人运动规划的轨迹级模式指导
+
+**Date**: 2026-09-29 | **arXiv**: [2609.36530v1](http://arxiv.org/abs/2609.36530v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.36530v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Motion planning often admits multiple feasible solutions, making multimodal generation valuable, particularly for flexible multi-robot coordination. Diffusion models naturally learn such trajectory distributions, yet incorporating coarse and partial trajectory priors without restricting generation remains challenging. Such priors indicate a desirable region of the solution space rather than a single solution, motivating conditioned generation that preserves multimodality. In this paper, we guide trajectory generation in the clean trajectory space and progressively incorporate trajectory priors with a timestep-dependent guidance strength. At each reverse diffusion step, the reconstructed clean trajectory provides a unified space for integrating planning costs and partial trajectory priors. Planning costs are incorporated through gradient-based refinement, while the partial prior is progressively injected at the corresponding noise levels with decreasing guidance strength. This guides generation toward the prior in early stages while gradually releasing the constraint to preserve the inherent multimodality of the diffusion model. The framework naturally extends to multi-robot planning by incorporating inter-robot collision costs. Experiments on single- and multi-robot planning tasks demonstrate controllable trajectory synthesis, diverse feasible solutions, and safe multi-agent coordination.
+
+运动规划通常允许多种可行的解决方案，使得多模态生成有价值，特别是对于灵活的多机器人协调。扩散模型自然地学习这种轨迹分布，但在不限制生成的情况下合并粗略和部分轨迹先验仍然具有挑战性。这些先验表明了解决方案空间的理想区域而不是单个解决方案，从而激发了保留多模态的条件生成。在本文中，我们在干净的轨迹空间中引导轨迹生成，并逐步将轨迹先验与时间步相关的引导强度结合起来。在每个反向扩散步骤中，重建的干净轨迹为整合规划成本和部分轨迹先验提供了统一的空间。规划成本通过基于梯度的细化来纳入，而部分先验则随着引导强度的降低而在相应的噪声水平上逐步注入。这在早期阶段引导生成先验，同时逐渐释放约束以保留扩散模型固有的多模态。该框架通过纳入机器人间碰撞成本自然地扩展到多机器人规划。单机器人和多机器人规划任务的实验证明了可控的轨迹合成、多样化的可行解决方案和安全的多智能体协调。
+
+</details>
+
+---
+
+## 32. Training LLMs to Verbalize Evaluation Awareness / 培训法学硕士以语言表达评估意识
+
+**Date**: 2026-09-28 | **arXiv**: [2609.36316v1](http://arxiv.org/abs/2609.36316v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.36316v1)
+
+**Categories**: cs.CL, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Evaluation awareness (EA) can cause large language models (LLMs) to behave differently during audits than in deployment, yet measuring and accounting for EA remains challenging. We introduce verbalization training (VT), a method for making LLMs less reticent about verbalizing evaluation awareness while avoiding to supervise the latent belief itself. VT uses a model's spontaneous verbalizations as evidence that awareness is present and truncates each rollout immediately before the verbalization, producing training prefixes at which the model is presumed to be aware. The model is then trained with an RL objective designed to increase verbalization in a calibrated way. Across Qwen3.6-35B-A3B, Kimi K2.6, and Inkling, VT increases verbalized EA by 2.4-2.9 times and transfers to held-out agentic settings, while measured latent EA and behavior remain largely stable. In a causal experiment, we independently implant meta-knowledge about evaluations through synthetic-document fine-tuning and show that VT-induced verbalizations reflect the richer knowledge acquired by the model.
+
+评估意识 (EA) 可能会导致大型语言模型 (LLM) 在审计期间与部署期间表现不同，但评估和核算 EA 仍然具有挑战性。我们引入了语言化训练（VT），这是一种使法学硕士不再对语言化评估意识保持沉默的方法，同时避免监督潜在信念本身。 VT 使用模型的自发言语作为意识存在的证据，并在言语之前立即截断每次推出，生成模型被认为有意识的训练前缀。然后使用强化学习目标对模型进行训练，该目标旨在以校准的方式提高语言表达能力。在 Qwen3.6-35B-A3B、Kimi K2.6 和 Inkling 中，VT 将言语 EA 增加了 2.4-2.9 倍，并转移到保留的代理设置，而测量的潜在 EA 和行为基本保持稳定。在因果实验中，我们通过合成文档微调独立植入有关评估的元知识，并表明 VT 引起的言语反映了模型获得的更丰富的知识。
+
+</details>
+
+---
+
+## 33. HeurEvo: Agentic Evolution of Hybrid Solver-Augmented Heuristics for Time-Critical Mathematical Optimization / HeurEvo：用于时间关键数学优化的混合求解器增强启发式的代理进化
+
+**Date**: 2026-09-28 | **arXiv**: [2609.36303v1](http://arxiv.org/abs/2609.36303v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.36303v1)
+
+**Categories**: cs.CL, cs.LG, cs.NE
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in agentic heuristic design use AI agents and execution feedback to automate algorithm discovery for challenging optimization problems. In many practical settings, high-quality solutions must be obtained under strict runtime constraints, motivating hybrid approaches that combine problem-specific heuristics with powerful mathematical programming solvers. However, existing approaches typically improve heuristic components within predefined procedures or tune solver configurations in isolation. This limits holistic adaptation of where to allocate computation, how to leverage solvers, and how to refine the overall algorithmic structure. To address these limitations, we propose HeurEvo, an automated plan--code--component co-evolution framework that jointly evolves the high-level algorithmic structures, their implementations, and a shared pool of reusable components. A planner determines which algorithmic components to use, how to combine them, and how to allocate runtime across stages, a coder realizes the resulting plan as executable code, while a component evolver updates the shared component pool. Within an island-based evolutionary framework, plans and implementations co-evolve with feedback from an interpreter agent that analyzes execution results and identifies opportunities for improvement. Across diverse combinatorial optimization benchmarks and challenging MIPLIB instances, HeurEvo finds high-quality solutions within tight runtime budgets, often matching or surpassing state-of-the-art optimization solvers given hours or days of computation. On several nonlinear geometry problems such as hexagon packing, it also improves upon the best previously reported results. These results highlight the value of jointly searching over algorithmic structure and implementation for agentic heuristic design.
+
+代理启发式设计的最新进展使用人工智能代理和执行反馈来自动发现具有挑战性的优化问题的算法。在许多实际设置中，必须在严格的运行时限制下获得高质量的解决方案，从而激发了将特定问题的启发式方法与强大的数学编程求解器相结合的混合方法。然而，现有方法通常会改进预定义过程中的启发式组件或单独调整求解器配置。这限制了计算分配位置、如何利用求解器以及如何完善整体算法结构的整体适应。为了解决这些限制，我们提出了 HeurEvo，一个自动化的计划-代码-组件协同进化框架，它共同进化高级算法结构、它们的实现以及可重用组件的共享池。规划器确定要使用哪些算法组件、如何组合它们以及如何跨阶段分配运行时，编码器将生成的计划实现为可执行代码，而组件演化器则更新共享组件池。在基于岛屿的演化框架内，计划和实施与解释代理的反馈共同演化，解释代理分析执行结果并识别改进机会。在不同的组合优化基准和具有挑战性的 MIPLIB 实例中，HeurEvo 在紧张的运行时预算内找到了高质量的解决方案，在给定数小时或数天的计算后，通常可以匹配或超越最先进的优化求解器。在一些非线性几何问题（例如六边形堆积）上，它还改进了先前报告的最佳结果。这些结果凸显了联合搜索算法结构和实现代理启发式设计的价值。
+
+</details>
+
+---
+
+## 34. Learning from Teacher Continuations at Student States / 从学生州的教师继续学习中学习
+
+**Date**: 2026-09-28 | **arXiv**: [2609.36246v1](http://arxiv.org/abs/2609.36246v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.36246v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present OLIVE (OnLine InterVEntion). At each iteration, the evolving student policy generates a new prefix, the teacher continues it autoregressively, and the student is updated using cross-entropy computed on the teacher-generated tokens. Each design choice targets a corresponding limitation of existing distillation methods: (1) sequential covariate shift in offline supervised fine-tuning (SFT) on fixed teacher trajectories, (2) fragmented supervision under prefix failure in token-level on-policy distillation (OPD), and (3) the need for access to teacher token probabilities in distribution-matching distillation. OLIVE achieves higher reasoning performance than OPD (with a top-16 KL approximation) at comparable GPU-hour cost. Our asynchronous implementation further reduces OLIVE's total training time by 23.8\%. We evaluate OLIVE on both hard reasoning tasks and agentic tasks which reflects modern post-training scenarios, and it consistently outperforms existing distillation methods under the same training budget. By regenerating prefixes from the evolving student, OLIVE continues improving after offline distillation plateaus while better preserving the general capabilities and plasticity of the student. Using only text from GPT-5.4-mini, continuously training with OLIVE outperforms offline SFT from the same teacher by 13\% on ScienceWorld. These results support OLIVE as an effective and efficient approach to online language-model distillation.
+
+我们推出 OLIVE（在线干预）。在每次迭代中，不断发展的学生策略都会生成一个新的前缀，教师继续自回归，并使用根据教师生成的标记计算的交叉熵来更新学生。每个设计选择都针对现有蒸馏方法的相应限制：（1）固定教师轨迹上离线监督微调（SFT）中的顺序协变量移位，（2）令牌级同策略蒸馏（OPD）中前缀失败下的碎片监督，以及（3）在分布匹配蒸馏中需要访问教师令牌概率。 OLIVE 在相当的 GPU 小时成本下实现了比 OPD（具有 top-16 KL 近似值）更高的推理性能。我们的异步实现进一步将 OLIVE 的总训练时间减少了 23.8%。我们在硬推理任务和反映现代训练后场景的代理任务上评估 OLIVE，并且在相同的训练预算下，它始终优于现有的蒸馏方法。通过从不断发展的学生中重新生成前缀，OLIVE 在离线蒸馏平台后继续改进，同时更好地保留学生的一般能力和可塑性。仅使用 GPT-5.4-mini 中的文本，使用 OLIVE 进行持续训练，在 ScienceWorld 上的性能比同一位老师的离线 SFT 提高了 13%。这些结果支持 OLIVE 作为一种有效且高效的在线语言模型蒸馏方法。
+
+</details>
+
+---
+
+## 35. SCOUT: Synergizing Reasoning and Tool-Use for Computer-Use Safety / SCOUT：协同推理和工具使用以确保计算机使用安全
+
+**Date**: 2026-09-28 | **arXiv**: [2609.36201v1](http://arxiv.org/abs/2609.36201v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.36201v1)
+
+**Categories**: cs.CL, cs.AI, cs.SE
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Computer-use agents (CUAs), while capable of completing computer tasks in everyday and professional workflows, can cause unintended harm even under benign instructions and environments. However, detecting such harm remains challenging. First, it requires careful, task-specific reasoning: verifiers guided only by general safety criteria often overlook many important but subtle harmful behaviors. Second, it requires active investigation: past trajectory screenshots show what the agent did but not always what actually changed in the environment, so LLM-as-a-judge verifiers that rely on screenshots alone may be unable to determine the actual consequences of actions. To address these challenges, we introduce SCOUT, a two-stage agentic safety verifier that synergizes reasoning-intensive rubric generation with tool-intensive evidence gathering. First, our SCOUT rubric generator extensively reasons over the task and the agent's trajectory to determine what successful and safe execution should entail, generating task-specific completion and safety rubrics. Then, our SCOUT probing agent follows these rubrics to interact with the post-execution environment and collect grounded evidence for final safety and completion judgments. We evaluate our framework on two computer-use safety benchmarks. On AutoElicit-Bench, SCOUT achieves 75.4 unsafe F1 and 74.5 completion F1, outperforming LLM-as-a-judge verifiers and naive tool-use verifiers. SCOUT leads on OS-Blind with 76.4% unsafe detection accuracy. Test-time reflection reduces final unsafe execution rates from 30.2% to 17.2% on AutoElicit-Bench. Ablations and analysis show that tool-free rubric generation in SCOUT elicits substantially more reasoning and is crucial for safety detection across verifier backbones, especially non-frontier ones. A preliminary extension to coding tasks shows that SCOUT can support safety verification beyond computer-use.
+
+计算机使用代理 (CUA) 虽然能够在日常和专业工作流程中完成计算机任务，但即使在良性指令和环境下也可能造成意外伤害。然而，检测这种危害仍然具有挑战性。首先，它需要仔细的、针对具体任务的推理：仅受一般安全标准指导的验证者往往会忽视许多重要但微妙的有害行为。其次，它需要积极的调查：过去的轨迹屏幕截图显示了智能体做了什么，但并不总是环境中实际发生的变化，因此仅依靠屏幕截图的 LLM 作为法官的验证者可能无法确定操作的实际后果。为了应对这些挑战，我们引入了 SCOUT，这是一种两阶段代理安全验证器，可将推理密集型标题生成与工具密集型证据收集相结合。首先，我们的 SCOUT 规则生成器对任务和代理的轨迹进行广泛推理，以确定成功和安全的执行需要什么，从而生成特定于任务的完成和安全规则。然后，我们的 SCOUT 探测代理遵循这些规则与执行后环境进行交互，并收集有根据的证据以进行最终的安全性和完成判断。我们根据两个计算机使用安全基准评估我们的框架。在 AutoElicit-Bench 上，SCOUT 达到 75.4 不安全 F1 和 74.5 完成 F1，优于 LLM 作为法官验证者和朴素工具使用验证者。 SCOUT 以 76.4% 的不安全检测准确率领先于 OS-Blind。测试时反射将 AutoElicit-Bench 上的最终不安全执行率从 30.2% 降低到 17.2%。消融和分析表明，SCOUT 中的免工具生成规则可以引发更多推理，对于跨验证者主干（尤其是非前沿主干）的安全检测至关重要。对编码任务的初步扩展表明 SCOUT 可以支持计算机使用之外的安全验证。
+
+</details>
+
+---
+
+## 36. Targeting Pivotal Decisions for Credit Assignment in Agentic Reinforcement Learning / 针对代理强化学习中信用分配的关键决策
+
+**Date**: 2026-09-28 | **arXiv**: [2609.36178v1](http://arxiv.org/abs/2609.36178v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.36178v1)
+
+**Categories**: cs.CL, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Group Relative Policy Optimization (GRPO) has become a promising approach for training large language model agents. However, its uniform assignment of trajectory-level advantages to all policy tokens fails to distinguish consequential decisions from less relevant ones, obscuring which intermediate decisions contributed to success. We introduce ProVer, a framework that targets potentially pivotal decisions for fine-grained credit assignment in agentic reinforcement learning. Given a rollout group, an agentic judge contrasts successful and failed trajectories to propose a segment potentially responsible for their divergent outcomes. Rather than directly trusting the judge's assessment, ProVer verifies the proposed segment by estimating its advantage from the difference in terminal success rates between current-policy continuations sampled before and after the segment. Positive estimates are then incorporated into the GRPO advantages of policy tokens within the proposed segment. By using model judgment only to select where to verify, ProVer grounds local credit in observed outcomes without exhaustively evaluating every intermediate state. Across ALFWorld, WebShop, and SearchQA, ProVer achieves the strongest average performance at both model scales, with relative improvements over GRPO of 9.91% and 7.12% for Qwen3.5-2B and Qwen3.5-4B, respectively. Further analyses demonstrate that informed segment selection improves policy training with modest additional generation overhead, even without a frontier-scale judge model, highlighting the effectiveness and efficiency of selectively targeting pivotal decisions for fine-grained credit assignment in agentic reinforcement learning.
+
+组相对策略优化（GRPO）已成为训练大型语言模型代理的一种有前景的方法。然而，它对所有策略令牌的轨迹级优势的统一分配无法区分结果性决策和不太相关的决策，从而模糊了哪些中间决策有助于成功。我们引入了 ProVer，这是一个针对代理强化学习中细粒度信用分配的潜在关键决策的框架。给定一个推出组，代理法官会对比成功和失败的轨迹，以提出可能对不同结果负责的部分。 ProVer 不是直接相信法官的评估，而是通过根据分段之前和之后采样的当前策略延续之间的最终成功率差异来估计其优势，来验证提议的分段。然后将积极的估计纳入拟议细分市场中政策代币的 GRPO 优势中。通过仅使用模型判断来选择验证位置，ProVer 在观察到的结果中建立本地信用，而无需详尽评估每个中间状态。在 ALFWorld、WebShop 和 SearchQA 中，ProVer 在两个模型规模上都实现了最强的平均性能，Qwen3.5-2B 和 Qwen3.5-4B 相对于 GRPO 的相对改进分别为 9.91% 和 7.12%。进一步的分析表明，即使没有前沿规模的判断模型，知情的细分选择也可以通过适度的额外生成开销来改善政策培训，这突显了在代理强化学习中选择性地针对细粒度信用分配的关键决策的有效性和效率。
+
+</details>
+
+---
+
+## 37. SkillWeaver: Agentic Exploration over Neural Interaction Skills for Scalable Robot Data Generation / SkillWeaver：可扩展机器人数据生成的神经交互技能的代理探索
+
+**Date**: 2026-09-28 | **arXiv**: [2609.36171v1](http://arxiv.org/abs/2609.36171v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.36171v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large-scale demonstrations have driven unprecedented progress in robot learning, yet collecting robot data through teleoperation is expensive and difficult to scale to diverse environments and long-horizon tasks. Simulation offers a scalable alternative, but existing data-generation pipelines often rely on open-loop controllers, scripted skill sequences, or task-specific programs. We introduce SkillWeaver, an agentic framework that autonomously generates robot experience by exploring over Neural Interaction Skills (NIS): reusable, parameterized, closed-loop policies that expose learned physical interaction capabilities to a reasoning agent. Given a task and a simulated environment, a VLM agent reasons about what to do next, invokes and parameterizes NIS to interact with the environment, observes their outcomes, and generates verification, reflection, and memory to guide subsequent exploration. We instantiate NIS as reinforcement-learned policies for closed-loop, contact-rich manipulation and organize exploration as verifier-guided tree search, enabling the agent to discover successful long-horizon behaviors without relying on predetermined execution pipelines. SkillWeaver scales autonomously to 39.1K demonstrations across 14.1K scenes, which we distill into visuomotor policies. Across simulation benchmarks and real-world manipulation, training on SkillWeaver-generated experience substantially improves generalization to novel objects, spatial configurations, tasks, and environments, and enables zero- and few-shot sim-to-sim and sim-to-real transfer. Our results suggest agentic exploration over neural interaction skills as a scalable alternative for robot data generation.
+
+大规模演示推动了机器人学习方面前所未有的进步，但通过远程操作收集机器人数据成本高昂，而且难以扩展到不同的环境和长期任务。仿真提供了一种可扩展的替代方案，但现有的数据生成管道通常依赖于开环控制器、脚本化技能序列或特定于任务的程序。我们引入了 SkillWeaver，这是一个代理框架，它通过探索神经交互技能（NIS）来自主生成机器人体验：可重用、参数化、闭环策略，将学习到的物理交互能力暴露给推理代理。给定一个任务和一个模拟环境，VLM 代理会推理下一步要做什么，调用和参数化 NIS 以与环境交互，观察其结果，并生成验证、反射和记忆来指导后续探索。我们将 NIS 实例化为用于闭环、接触丰富的操作的强化学习策略，并将探索组织为验证者引导的树搜索，使代理能够发现成功的长期行为，而无需依赖预定的执行管道。 SkillWeaver 可自主扩展到 14,100 个场景中的 39,100 个演示，我们将其提炼为视觉运动策略。在模拟基准和现实世界操作中，对 SkillWeaver 生成的体验进行训练可显着提高对新物体、空间配置、任务和环境的泛化能力，并实现零次和少次模拟到模拟以及模拟到真实的迁移。我们的结果表明对神经交互技能的代理探索可以作为机器人数据生成的可扩展替代方案。
+
+</details>
+
+---
+
+## 38. Principled Thoughts for Latent Recursive LLM Systems / 潜在递归 LLM 系统的原则性思考
+
+**Date**: 2026-09-28 | **arXiv**: [2609.36159v1](http://arxiv.org/abs/2609.36159v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.36159v1)
+
+**Categories**: cs.AI, cs.CL, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language models can reason in continuous space instead of decoded text, by recurring on their own hidden states or by passing those states between agents, while training supervises only the Cross-Entropy (CE) of the final decoded answer and does not constrain the thought. Theoretical and empirical analyses establish and confirm four failures of CE-only training that lead to a lower probability of the correct answer such as collapsing thoughts across distinct questions and retaining irrelevant information. We introduce REST (REpresentation-Supervised Thoughts), a training objective that turns four properties of a valid thought representation (causality, minimality, separability, and stability) into differentiable losses added to CE. We instantiate it in latent single-agent and multi-agent systems, without architectural changes or added parameters at inference. Across 7 benchmarks spanning mathematics, science, medicine, and code generation, with the same training data, compute, and latent budget, REST increases accuracy over CE-only training across agent settings and model sizes by up to 7.5 percentage points and convergence on a final answer by 30\%. Furthermore, REST thoughts encode more of what is required to achieve the correct answer, and decoding them better recovers the intended output of the agent, which makes latent communication easier to interpret. Project Website: https://fard-lab.github.io/REST
+
+大型语言模型可以通过在自己的隐藏状态上重复出现或在代理之间传递这些状态，在连续空间而不是解码的文本中进行推理，而训练仅监督最终解码答案的交叉熵（CE），并且不限制思想。理论和实证分析确立并证实了仅 CE 培训的四种失败，这些失败导致正确答案的可能性较低，例如在不同问题上的思维崩溃和保留不相关的信息。我们引入了 REST（表示监督思想），这是一个训练目标，它将有效思想表示的四个属性（因果性、极小性、可分离性和稳定性）转化为添加到 CE 中的可微损失。我们在潜在的单代理和多代理系统中实例化它，无需在推理时更改架构或添加参数。在涵盖数学、科学、医学和代码生成的 7 个基准中，在相同的训练数据、计算和潜在预算的情况下，REST 比仅在代理设置和模型大小上进行 CE 训练的准确性提高了 7.5 个百分点，最终答案的收敛性提高了 30%。此外，REST 思想编码了获得正确答案所需的更多内容，并且对它们进行解码可以更好地恢复代理的预期输出，这使得潜在通信更容易解释。项目网站：https://fard-lab.github.io/REST
+
+</details>
+
+---
+
+## 39. KPI: A Promptable Kernel for Physical Interaction on Humanoids / KPI：人形机器人物理交互的即时内核
+
+**Date**: 2026-09-28 | **arXiv**: [2609.36151v1](http://arxiv.org/abs/2609.36151v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.36151v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Humanoids now walk, balance and reach with remarkable generality: one whole-body tracking policy follows references from a human, or from an end-to-end policy. That generality travels in the trajectory, and a trajectory alone carries limited information about the interaction it should produce: at contact, the executing controller determines how the robot behaves. Single-task policies usually reach hard interactions by optimising trajectory and controller together in simulation; general stacks usually assume a preset or hand-chosen controller. We present KPI, a promptable kernel for physical interaction between the trajectory source and an unmodified whole-body tracker. Instead of a controller fixed before the task, the trajectory source sends a contract: per direction, track, comply, or hold a force range. From tracking error and a wrench estimate, the kernel adapts the arms' stiffness, damping, reference and feedforward toward it at contact rate. We demonstrate KPI through an agentic framework: from one instruction, a vision-language agent writes both the reference trajectory and the contract, with no task-specific code. We demonstrate instruction-driven winch operation, door opening, and box transport, alongside scripted surface-interaction experiments. In the winch demonstration, the humanoid is able to turn a crank to hoist a second robot fully off the ground.
+
+类人机器人现在的行走、平衡和伸展具有显着的通用性：一种全身跟踪策略遵循来自人类或端到端策略的参考。这种普遍性在轨迹中传播，而轨迹本身就携带了关于它应该产生的交互的有限信息：在接触时，执行控制器决定机器人的行为方式。单任务策略通常通过在模拟中一起优化轨迹和控制器来实现硬交互；一般堆栈通常采用预设或手动选择的控制器。我们提出了 KPI，这是一个用于轨迹源和未经修改的全身跟踪器之间物理交互的提示内核。轨迹源不是在任务之前固定控制器，而是发送合同：每个方向、跟踪、遵守或保持力范围。根据跟踪误差和扳手估计，内核以接触速率调整臂的刚度、阻尼、参考和前馈。我们通过代理框架演示 KPI：视觉语言代理根据一条指令编写参考轨迹和合约，无需特定于任务的代码。我们演示了指令驱动的绞车操作、开门和箱子运输，以及脚本化的表面交互实验。在绞车演示中，人形机器人能够转动曲柄将第二个机器人完全提升离地。
+
+</details>
+
+---
+
+## 40. When Does Correction Become Repair? Mechanistic Auditing of Internal Interventions in Tool-Using LLMs / 修正什么时候变成修复？使用工具的法学硕士内部干预的机械审计
+
+**Date**: 2026-09-28 | **arXiv**: [2609.36138v1](http://arxiv.org/abs/2609.36138v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.36138v1)
+
+**Categories**: cs.CL, cs.SE
+
+**Code**: https://github.com/ruizheliUOA/mechanistic-tool-use-llm.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Before invoking external tools, an agentic LLM must select among a K-way action space: executing a call, seeking clarification, answering directly, or declining. While internal activation steering can alter these pre-execution decisions, conventional aggregate metrics obscure where altered states land and what collateral damage they inflict. We present SAKIKO, an auditing framework that formalizes representation repair via directional error discovery, router-conditioned intervention, destination-resolved verification, and prospectively frozen statistical licensing. Across seven LLMs on When2Call and MetaTool, channel-keyed interventions induce direction-specific net gains in five models; across three sealed evaluations, none of 59 budget-matched random directions matches calibrated target gain. Crucially, destination auditing shows that behavioral movement does not equal repair: an intervention achieving +55 net gain corrupts over half of the baseline-correct decisions it touches, and promising point estimates on Qwen3-4B and Gemma-2-9B are formally declined due to finite-sample uncertainty. SAKIKO establishes the necessity of outcome-resolved adjudication before claiming internal repair. Code: https://github.com/ruizheliUOA/mechanistic-tool-use-llm.
+
+在调用外部工具之前，代理法学硕士必须在 K 路操作空间中进行选择：执行呼叫、寻求澄清、直接回答或拒绝。虽然内部激活指导可以改变这些执行前的决策，但传统的总体指标掩盖了改变后的状态的落地位置以及它们造成的附带损害。我们提出了 SAKIKO，一个审计框架，它通过定向错误发现、路由器条件干预、目的地解析验证和前瞻性冻结统计许可来形式化表示修复。在 When2Call 和 MetaTool 的七个法学硕士中，渠道关键干预措施在五个模型中带来了特定方向的净收益；在三项密封评估中，59 个预算匹配的随机方向没有一个与校准的目标增益相匹配。至关重要的是，目的地审计表明，行为变动并不等于修复：实现+55净收益的干预会破坏其所涉及的一半以上的基线正确决策，并且由于有限样本的不确定性，对Qwen3-4B和Gemma-2-9B的有希望的点估计被正式拒绝。 SAKIKO 确立了在要求内部修复之前进行结果解决裁决的必要性。代码：https://github.com/ruizheliUOA/mechanistic-tool-use-llm。
+
+</details>
+
+---
+
+## 41. PADMÉ: Preference Alignment Data Synthesis for Meta-Evaluation of LM Agent Evaluators / PADMÉ：用于 LM 代理评估器元评估的偏好对齐数据合成
+
+**Date**: 2026-09-28 | **arXiv**: [2609.36086v1](http://arxiv.org/abs/2609.36086v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.36086v1)
+
+**Categories**: cs.CL, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Language models are frequently employed to evaluate other language models. An LM evaluator scoring agentic behaviors across multiple criteria is valuable, provided that its decisions align with human judgment. We call the problem of evaluating this alignment Meta-Evaluation. Tackling it directly is difficult: collecting human data is expensive, absolute scoring is hard to align, and using an LM meta-evaluator recurses the question of trustworthiness. We adopt a reformulation of meta-evaluation as a preference judgment problem: rather than comparing human and LM evaluator scores of a trajectory, we ask whether their implied preferences align. Building on this, we introduce PADMÉ, a data synthesis method that generates reliable criterion-based meta-evaluation data for agentic settings. PADMÉ uses only small language models, requires no human involvement during evaluations, and operates under a low computational budget. We build a prototype of PADMÉ and synthesize a dataset of 1,000 samples across four agentic domains and three evaluation criteria. Human validation on a 150-sample subset demonstrates that PADMÉ improves agreement with human judgment from 73% to 85% over a naive baseline. Meta-evaluating 25 common models with our dataset demonstrates the correlations between evaluation performance and scoring granularity, leniency, and model size, among other factors.
+
+语言模型经常被用来评估其他语言模型。 LM 评估器跨多个标准对代理行为进行评分是有价值的，只要其决策与人类判断一致。我们将评估这种对齐的问题称为元评估。直接解决这个问题很困难：收集人类数据的成本很高，绝对评分很难对齐，并且使用 LM 元评估器会重复出现可信度问题。我们采用元评估的重新表述作为偏好判断问题：我们不是比较人类和 LM 评估者的轨迹分数，而是询问他们隐含的偏好是否一致。在此基础上，我们引入了 PADMÉ，一种数据合成方法，可为代理设置生成可靠的基于标准的元评估数据。 PADMÉ 仅使用小型语言模型，在评估过程中不需要人工参与，并且在较低的计算预算下运行。我们构建了 PADMÉ 原型，并综合了涵盖四个代理领域和三个评估标准的 1,000 个样本的数据集。对 150 个样本子集的人类验证表明，PADMÉ 将人类判断的一致性从原始基线的 73% 提高到 85%。使用我们的数据集对 25 个常见模型进行元评估，证明了评估性能与评分粒度、宽大程度和模型大小等因素之间的相关性。
+
+</details>
+
+---
+
+## 42. CoDimRecon: Agentic Reconstruction of Sim-Ready 3D Scenes with Deformable Curves, Surfaces, and Volumes / CoDimRecon：使用可变形曲线、曲面和体积对 Sim-Ready 3D 场景进行代理重建
+
+**Date**: 2026-09-28 | **arXiv**: [2609.36024v1](http://arxiv.org/abs/2609.36024v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.36024v1)
+
+**Categories**: cs.CV, cs.GR, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reconstructing simulation-ready 3D scenes from real-world observations enables robotics, gaming, and immersive applications, yet existing methods largely assume rigid objects. This leaves an important gap for deformables, whose simulation-ready geometry depends on dimensionality (curves, surfaces, or volumes) and whose behavior may require models beyond elasticity. We present CoDimRecon, an agentic framework that reconstructs editable scenes containing rigid, articulated, and deformable objects from multi-view RGB observations. Scene-level geometric priors ground scale and layout, while object-level generated meshes guide the agent toward detailed, compact geometry; articulated rigid objects are decomposed into movable parts with explicit joints. For deformables, category-wise agent sessions reconstruct curves as centerlines with radii, surfaces as manifold shells with thickness, and volumes as watertight solids for volumetric meshing. Reusable simulator skills initialize compatible physical models and parameters, while agent-guided behavioral tests expose mismatches and trigger targeted revisions of motion, geometry, numerics, or material modeling. On evaluated Replica and ScanNet++ scenes, CoDimRecon achieves competitive compositional reconstruction accuracy while additionally producing deformable assets for rod, shell, and solid simulation. We further demonstrate robot interactions across all three representations, including a controlled paper-folding case in which behavioral testing motivates plastic bending.
+
+从现实世界的观察中重建模拟就绪的 3D 场景可以实现机器人、游戏和沉浸式应用，但现有方法主要假设刚性对象。这给可变形物体留下了一个重要的空白，其可用于模拟的几何形状取决于维度（曲线、曲面或体积），并且其行为可能需要超越弹性的模型。我们提出了 CoDimRecon，这是一个代理框架，可以从多视图 RGB 观察中重建包含刚性、铰接和可变形对象的可编辑场景。场景级几何先验地面比例和布局，而对象级生成的网格引导代理走向详细、紧凑的几何体；铰接式刚性物体被分解为具有明确关节的可移动部件。对于可变形物体，按类别代理会话将曲线重建为具有半径的中心线，将表面重建为具有厚度的流形壳，将体积重建为用于体积网格划分的防水实体。可重复使用的模拟器技能可以初始化兼容的物理模型和参数，而代理引导的行为测试可以暴露不匹配的情况并触发对运动、几何、数字或材料建模的有针对性的修改。在评估的 Replica 和 ScanNet++ 场景中，CoDimRecon 实现了具有竞争力的成分重建精度，同时还为杆、壳和实体模拟生成可变形资产。我们进一步演示了所有三种表示形式的机器人交互，包括受控的纸张折叠案例，其中行为测试激发了塑料弯曲。
+
+</details>
+
+---
+
+## 43. Systematic Multi-Agent Vision-and-Language Navigation: Formulation, Benchmark, and Method / 系统化多智能体视觉和语言导航：公式、基准和方法
+
+**Date**: 2026-09-28 | **arXiv**: [2609.35965v1](http://arxiv.org/abs/2609.35965v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.35965v1)
+
+**Categories**: cs.CV, cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision-and-Language Navigation (VLN) has largely focused on a single agent following a single instruction, yet many real-world applications require teams of robots to tackle tasks beyond the capabilities of any individual agent. We present Systematic Multi-Agent Vision-and-Language Navigation, providing, to our knowledge, the first systematic formalization of multi-agent VLN as a constrained coordination problem: each mission consists of subtasks carrying dependency and resource constraints (presence locks and holding chains). A verified four-stage crafting pipeline instantiates the task as MAVLN, comprising 11,724 episodes across 145 scenes with teams of up to four agents under three instruction regimes, accompanied by tailored constraint-aware metrics. We further present TRISS, a coordination-ready navigation system coupling an LLM-based subtask scheduler, a shared topological memory that turns each agent's exploration into team knowledge, and a conflict-aware execution mechanism that realizes simultaneous intentions as collision-free routes. Extensive experiments establish TRISS as a comprehensive baseline and reveal substantial room for improvement across scheduling, planning, and execution, highlighting the challenges of coordinating under MAVLN task constraints. Project page: https://xyz9911.github.io/mavln.
+
+视觉和语言导航（VLN）主要关注单个代理遵循单个指令，但许多现实世界的应用程序需要机器人团队来处理超出任何单个代理能力的任务。我们提出了系统化多智能体视觉和语言导航，据我们所知，首次将多智能体 VLN 系统化形式化为受限协调问题：每个任务由带有依赖性和资源约束（存在锁和保持链）的子任务组成。经过验证的四阶段制作流程将任务实例化为 MAVLN，包括 145 个场景的 11,724 个情节，在三种指令制度下最多由四个代理组成的团队，并附有定制的约束感知指标。我们进一步提出 TRISS，一个协调就绪的导航系统，耦合基于 LLM 的子任务调度程序，一个将每个智能体的探索转化为团队知识的共享拓扑内存，以及一个冲突感知执行机制，将同时意图实现为无碰撞路线。大量实验将 TRISS 确立为综合基线，并揭示了调度、规划和执行方面的巨大改进空间，突出了 MAVLN 任务约束下协调的挑战。项目页面：https://xyz9911.github.io/mavln。
+
+</details>
+
+---
+
+## 44. VehicleArena: A Realistic Urban Environment for Multi-Agent Driving / VehicleArena：多智能体驾驶的现实城市环境
+
+**Date**: 2026-09-28 | **arXiv**: [2609.35916v1](http://arxiv.org/abs/2609.35916v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.35916v1)
+
+**Categories**: cs.MA, cs.CL, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Real-world embodied agents often pursue independent objectives within a shared physical environment, where their actions can alter the conditions faced by others. Existing benchmarks, however, typically assume shared goals or explicitly prescribed interaction protocols, leaving such emergent physical coupling underexplored. We introduce VehicleArena, a 3D urban-driving benchmark for studying independently operating agents in a dynamic shared world. In VehicleArena, LLM-controlled agents must fulfill evolving passenger requests while navigating complex traffic, and each agent's driving decisions can reshape traffic flow, delays, risks, and subsequent observations for surrounding agents. The benchmark provides 112 evaluation tasks spanning single-agent and multi-agent driving. Across nine evaluated models, the highest arrival rates reach only 65.0% on single-agent tasks and 65.6% on multi-agent tasks, while strong passenger-request or cabin scores do not reliably translate into successful trip completion. Moreover, in matched multi-agent runs, every tested focal policy reduces the arrival rate of surrounding vehicles relative to the simulator's native traffic controller, revealing measurable externalities beyond the focal vehicle itself.
+
+现实世界的具体主体通常在共享的物理环境中追求独立的目标，他们的行为可以改变其他人面临的条件。然而，现有的基准通常假设共享目标或明确规定的交互协议，从而使这种新兴的物理耦合未被充分探索。我们推出了 VehicleArena，这是一个 3D 城市驾驶基准，用于研究动态共享世界中独立操作的代理。在VehicleArena中，LLM控制的代理必须在复杂的交通中满足不断变化的乘客请求，并且每个代理的驾驶决策可以重塑交通流、延误、风险以及对周围代理的后续观察。该基准测试提供了涵盖单智能体和多智能体驾驶的 112 项评估任务。在九个评估模型中，单智能体任务的最高到达率仅达到 65.0%，多智能体任务的最高到达率仅为 65.6%，而强烈的乘客要求或客舱评分并不能可靠地转化为成功完成行程。此外，在匹配的多智能体运行中，每个测试的焦点策略都会相对于模拟器的本地交通控制器降低周围车辆的到达率，从而揭示焦点车辆本身之外的可测量的外部性。
+
+</details>
+
+---
+
+## 45. Scaling Long-Form Story Generation via Narrative State Tracking / 通过叙事状态跟踪扩展长篇故事生成
+
+**Date**: 2026-09-28 | **arXiv**: [2609.35759v1](http://arxiv.org/abs/2609.35759v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.35759v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+LLMs have demonstrated strong capabilities in creative writing. However, scaling them to full-length novels remains challenging, as maintaining narrative consistency becomes increasingly difficult. Existing story-generation methods typically focus on stories of up to about ten thousand words, leaving their ability to scale to full-length novels underexplored. In this work, we introduce Narrative State Tracking Agent (NstAgent), a training-free agentic framework that allows LLMs to track a structured narrative state including characters, past events and future requirements. We extend an existing benchmark to compare narrative consistency across lengths, and use it together with a writing-quality benchmark to systematically evaluate stories ranging from 10K to 100K words. We show that NstAgent achieves better narrative consistency and writing quality as stories grow longer, and neither of them degrades noticeably as length increases, suggesting that it provides an effective approach to scaling story generation toward full-length novels.
+
+法学硕士在创意写作方面表现出了强大的能力。然而，将它们扩展到长篇小说仍然具有挑战性，因为保持叙事一致性变得越来越困难。现有的故事生成方法通常侧重于最多约一万字的故事，而其扩展到长篇小说的能力尚未得到充分探索。在这项工作中，我们引入了叙事状态跟踪代理（NstAgent），这是一种无需培训的代理框架，允许法学硕士跟踪结构化的叙事状态，包括人物、过去的事件和未来的需求。我们扩展了现有的基准来比较不同长度的叙述一致性，并将其与写作质量基准一起使用来系统地评估从 10K 到 100K 字的故事。我们表明，随着故事变长，NstAgent 实现了更好的叙事一致性和写作质量，并且随着长度的增加，它们都没有明显下降，这表明它提供了一种将故事生成扩展到长篇小说的有效方法。
+
+</details>
+
+---
+
+## 46. Shockingly Simple Self-retrospection Improves Agentic Models Without RL / 令人震惊的简单自我回顾在没有强化学习的情况下改进了主体模型
+
+**Date**: 2026-09-28 | **arXiv**: [2609.35741v1](http://arxiv.org/abs/2609.35741v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.35741v1)
+
+**Categories**: cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+People learn not only by repeating successful actions, but also by recounting and explaining their experiences, revising their understanding to guide future behavior. Can a language-model agent improve its future actions by training only on explanations of its own experience? We investigate this question by studying Retrospection-Only Fine-Tuning (ROFT), a minimal online procedure designed to isolate the effect of explanation-only training on subsequent behavior. The agent attempts a task, observes available feedback, generates a retrospective explanation, and is fine-tuned with a next-token prediction loss on the explanation tokens alone. The procedure uses neither an external teacher nor a reward-based policy update. In software-engineering experiments with Qwen3.5-4B, ROFT is trained on problems with mixed successful and unsuccessful base-model attempts. On held-out SWE-bench Verified and Pro, it reaches 49.2% and 26.8% solve rates after 20 updates without using a verifier, compared with GRPO's 48.0% and 25.3% after 40 updates in the evaluated runs, and makes faster early progress in training time and sampled attempts. It also learns to solve individual tasks on which all 64 sampled base-model attempts failed, showing that learning can begin without any initially successful trajectories. Behavioral analyses find that ROFT indirectly assigns credit to actions, encouraging good actions and discouraging incorrect ones. Moreover, prompting retrospections to emphasize more direct solutions yields shorter subsequent attempts even without an explicit length penalty. Together, these findings show that learning to explain can also improve learning to do, establishing self-generated retrospections as useful training targets and motivating further study of explanation-to-action transfer.
+
+人们不仅通过重复成功的行动来学习，还通过叙述和解释他们的经历，修改他们的理解来指导未来的行为。语言模型代理能否通过仅根据其自身经验的解释进行训练来改进其未来的行为？我们通过研究仅回顾微调（ROFT）来研究这个问题，这是一个最小的在线程序，旨在隔离仅解释训练对后续行为的影响。代理尝试一项任务，观察可用的反馈，生成回顾性解释，并仅通过解释标记的下一个标记预测损失进行微调。该程序既不使用外部教师，也不使用基于奖励的政策更新。在 Qwen3.5-4B 的软件工程实验中，ROFT 接受了混合成功和不成功的基本模型尝试的问题的训练。在保留的 SWE-bench Verified 和 Pro 上，在不使用验证器的情况下进行 20 次更新后，它的解决率达到 49.2% 和 26.8%，而在评估运行中 40 次更新后，GRPO 的解决率分别为 48.0% 和 25.3%，并且在训练时间和采样尝试方面取得更快的早期进展。它还学习解决所有 64 个采样的基本模型尝试都失败的单个任务，这表明学习可以在没有任何最初成功轨迹的情况下开始。行为分析发现，ROFT 间接将功劳分配给行为，鼓励良好的行为并阻止错误的行为。此外，即使没有明确的长度惩罚，促使回顾强调更直接的解决方案也会产生更短的后续尝试。总之，这些发现表明，学习解释也可以改善学习做事，将自我生成的回​​顾建立为有用的培训目标，并激发对解释到行动迁移的进一步研究。
+
+</details>
+
+---
+
+## 47. Harness Learning Enables Generalizable Test-Time Adaptation / 利用学习实现通用的测试时间适应
+
+**Date**: 2026-09-28 | **arXiv**: [2609.35738v1](http://arxiv.org/abs/2609.35738v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.35738v1)
+
+**Categories**: cs.CL, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+A language-model agent is jointly defined by its model and its harness, the executable program that organizes model calls, tool use, and information flow. Because different tasks call for different ways of organizing these operations, the harness needs to be adapted using feedback from the task at hand. We introduce harness learning, which trains a proposer model to revise a solver's harness using execution feedback. We formulate this process as meta-learning over executable programs, with harness revisions playing the role of weight updates in gradient-based adaptation. We train the proposer with reinforcement learning, using the task performance of revised harnesses as the reward. At test time, the proposer uses feedback from successive executions on a new task to refine the harness, without performing any parameter-space update. Experiments on reasoning and multi-hop question answering show that harness learning improves revision quality and that the ability to adapt at test time transfers to unseen tasks. Policies trained on individual revisions can continue improving harnesses over multiple rounds, while the benefits of training on revision sequences vary across settings. These findings suggest a path towards continually learning agents that turn accumulated experience into generalizable improvements.
+
+语言模型代理由其模型及其工具（组织模型调用、工具使用和信息流的可执行程序）共同定义。由于不同的任务需要不同的方式来组织这些操作，因此需要使用手头任务的反馈来调整线束。我们引入了利用学习，它训练提议者模型以使用执行反馈来修改求解器的利用。我们将这个过程表述为可执行程序的元学习，其中线束修订在基于梯度的适应中发挥权重更新的作用。我们通过强化学习来训练提议者，使用修改后的安全带的任务表现作为奖励。在测试时，提议者使用新任务的连续执行的反馈来完善工具，而不执行任何参数空间更新。推理和多跳问答实验表明，利用学习提高了复习质量，并且在测试时适应的能力转移到了看不见的任务上。针对单独修订进行训练的策略可以在多轮中继续改进安全措施，而针对修订序列进行培训的好处因设置而异。这些发现提出了一条不断学习代理的道路，将积累的经验转化为可推广的改进。
+
+</details>
+
+---
+
+## 48. Reinforcing Agentic Creativity in Scientific Ideation with Night Science / 通过夜间科学加强科学思维中的主体创造力
+
+**Date**: 2026-09-28 | **arXiv**: [2609.35706v1](http://arxiv.org/abs/2609.35706v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.35706v1)
+
+**Categories**: cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language models (LLMs) excel at structured, verifiable tasks, but their low-entropy bias can produce homogeneous and predictable outputs, limiting their utility for open-ended scientific ideation. Effective discovery, however, spans a broader creative spectrum: from structured day science to loosely structured, serendipitous night science that reaches ideas beyond those typically considered. We introduce AI Night-Scientist, an agentic framework that uses reinforcement learning to teach models when and how to depart from predictable reasoning. Grounded in cognitive science, we model creativity along three axes: action (what to do and how creatively), process (when to explore versus exploit), and outcome (the novelty and usefulness of the resulting idea). We use these axes to train models with GRPO, exposing them to varying degrees and forms of creativity throughout training. This produces substantially more diverse scientific proposals, expanding the range of research directions by 27.8% and contribution types by 14.9% over the base model. It also improves predicted citation impact by up to 32.0 percentage points and originality by 66.2 points. These gains cannot be reproduced by simply increasing decoding temperature; instead, we find that semantic guidance specifying what kind of creativity to pursue is critical. Overall, our results suggest that creativity is a learnable, multi-level ability that can be shaped to help researchers reach ideas beyond those typically explored by LLMs.
+
+大型语言模型（LLM）擅长结构化、可验证的任务，但它们的低熵偏差可以产生同质且可预测的输出，限制了它们在开放式科学构思中的实用性。然而，有效的发现涵盖了更广泛的创造性范围：从结构化的白天科学到结构松散、偶然的夜间科学，这些科学所得出的想法超出了通常考虑的范围。我们引入了 AI Night-Scientist，这是一个代理框架，它使用强化学习来教导模型何时以及如何偏离可预测的推理。以认知科学为基础，我们沿着三个轴对创造力进行建模：行动（做什么以及如何创造性地做）、过程（何时探索与利用）和结果（由此产生的想法的新颖性和实用性）。我们使用这些轴通过 GRPO 来训练模型，在整个训练过程中让它们接触到不同程度和形式的创造力。这产生了更加多样化的科学提案，与基本模型相比，研究方向范围扩大了 27.8%，贡献类型扩大了 14.9%。它还将预测的引用影响力提高了 32.0 个百分点，将原创性提高了 66.2 个百分点。这些增益不能通过简单地提高解码温度来重现；相反，我们发现指定追求何种创造力的语义指导至关重要。总的来说，我们的研究结果表明，创造力是一种可学习的、多层次的能力，可以帮助研究人员获得法学硕士通常探索的想法之外的想法。
+
+</details>
+
+---
+
+## 49. TCSAlgBench: Benchmarking Automated Proving for Research-Level Theoretical Computer Science / TCSAlgBench：研究级理论计算机科学的基准测试自动证明
+
+**Date**: 2026-09-28 | **arXiv**: [2609.35606v1](http://arxiv.org/abs/2609.35606v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.35606v1)
+
+**Categories**: cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language models perform strongly on competition mathematics, but their research-level reasoning remains difficult to evaluate systematically. Theoretical computer science (TCS) connects algorithm design to explicit guarantees and fundamental limits, providing a setting for evaluating whether models can justify computational improvements with arguments humans can inspect. We introduce TCSAlgBench, a benchmark and reusable pipeline for natural-language proof discovery, comprising 398 theorem-level challenges from 138 STOC and COLT 2026 papers. Expert-designed rules complete paper-specific context, preserve computational assumptions and quantitative guarantees, and withhold constructions when discovering an algorithm is part of the task. For each task, prover systems receive theorem statements and access to cited prior work. The pipeline supports fresh, versioned challenge batches from newly released papers. We evaluate ten model configurations from four families under direct inference and prover-verifier discussion, and compare four agent workflows under matched model-call opportunities. All evaluations use the full benchmark. In the model comparison, GPT-5.6 Sol max achieves the highest five-run verifier-accepted coverage at 23.6% after 10-round discussion. Discussion and repeated sampling improve coverage. In the separate agent comparison using GPT-5.5 xhigh, decomposition improves coverage over discussion, and agentic planning achieves the highest five-run verifier-accepted coverage at 25.4%. TCSAlgBench provides a refreshable testbed for measuring progress in model reasoning and studying how agent workflows support research-level proof discovery.
+
+大型语言模型在竞赛数学中表现强劲，但其研究水平的推理仍然难以系统评估。理论计算机科学 (TCS) 将算法设计与明确的保证和基本限制联系起来，为评估模型是否可以通过人类可以检查的论据来证明计算改进的合理性提供了一个环境。我们推出了 TCSAlgBench，这是一个用于自然语言证明发现的基准和可重用管道，包含来自 138 篇 STOC 和 COLT 2026 论文的 398 个定理级挑战。专家设计的规则完成了特定于论文的上下文，保留计算假设和定量保证，并在发现算法是任务的一部分时保留结构。对于每项任务，证明系统都会收到定理陈述并访问引用的先前工作。该管道支持来自新发布论文的新的、版本化的挑战批次。我们在直接推理和证明者-验证者讨论下评估来自四个系列的十种模型配置，并在匹配的模型调用机会下比较四个代理工作流程。所有评估均使用完整基准。在模型比较中，GPT-5.6 Sol max 经过 10 轮讨论后，达到了 23.6% 的五轮验证者接受的最高覆盖率。讨论和重复抽样提高了覆盖率。在使用 GPT-5.5 xhigh 的单独代理比较中，分解提高了讨论的覆盖率，并且代理规划实现了五次运行验证者接受的最高覆盖率（25.4%）。 TCSAlgBench 提供了一个可更新的测试平台，用于衡量模型推理的进展并研究代理工作流程如何支持研究级证明发现。
+
+</details>
+
+---
+
+## 50. SEABench: Benchmarking Endogenous Misalignment In Self-Evolving Agents / SEABench：自我进化代理的内源性错位基准测试
+
+**Date**: 2026-09-28 | **arXiv**: [2609.35596v1](http://arxiv.org/abs/2609.35596v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.35596v1)
+
+**Categories**: cs.CR, cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Self-evolving LLM agents have gained prominence for their ability to improve after deployment by modifying their harness, including their controller instructions, memory management protocols, and reusable tools and skills, in response to user and environment feedback. However, locally useful updates may persist into later tasks where they produce unsafe behavior, even without direct adversarial influence. To study this risk, we introduce SEABench, a benchmark for studying endogenous misalignment arising from agent self-evolution, with 48 longitudinal task sequences that span multiple evolution surfaces, task domains, and harm types in a rich personal-assistant environment. To account for the stochasticity inherent in agentic operations, we provide an adaptive trajectory discovery pipeline that probes for failures while preserving original task intent and supports causal attribution through paired non-evolving agents and attribution scores. Our evaluation across multiple recent LLMs, evolution surfaces, and harm types reveals that self-evolution indeed increases task completion rates but often at the cost of safety failures that are absent for paired non-evolving baseline agents. We also show that qualitatively different safety behaviors emerge across evolution surfaces and harm types. Further, we show that this divergence in safety behavior is reflected in agents' chain-of-thought reasoning, which yields an effective monitoring strategy that can mitigate unsafe behavior with a low false positive rate.
+
+自我进化的 LLM 代理因其在部署后通过修改其工具（包括控制器指令、内存管理协议以及可重用工具和技能）来改进部署后的能力而闻名，以响应用户和环境的反馈。然而，本地有用的更新可能会持续到以后的任务中，从而产生不安全的行为，即使没有直接的对抗性影响。为了研究这种风险，我们引入了 SEABench，这是一个用于研究智能体自我进化引起的内生失调的基准，具有 48 个纵向任务序列，跨越丰富的个人助理环境中的多个进化表面、任务领域和伤害类型。为了解释代理操作固有的随机性，我们提供了一个自适应轨迹发现管道，可以在保留原始任务意图的同时探测故障，并通过配对的非进化代理和归因分数支持因果归因。我们对最近多个法学硕士、进化表面和伤害类型的评估表明，自我进化确实提高了任务完成率，但通常以配对非进化基线智能体所不存在的安全故障为代价。我们还表明，不同的进化面和危害类型会出现性质不同的安全行为。此外，我们表明，安全行为的这种差异反映在代理的思维链推理中，这产生了一种有效的监控策略，可以以较低的误报率来减轻不安全行为。
+
+</details>
+
+---
+
+## 51. Memory in the Sky: Low-Altitude Question Answering with Multi-Agent Memory Aggregation / 天空记忆：多智能体记忆聚合低空问答
+
+**Date**: 2026-09-28 | **arXiv**: [2609.35431v1](http://arxiv.org/abs/2609.35431v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.35431v1)
+
+**Categories**: cs.RO, cs.IT
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This paper studies low-altitude question answering (LAQA), in which distributed unmanned aerial vehicle (UAV) memories are aggregated at a ground server to answer questions about observations over a long horizon. Unlike conventional resource allocation based on sensing, communication, control, or computation metrics, LAQA requires an explicit measure of memory value. We propose a generative adversarial exam (GAE) that uses forward simulation to evaluate memory retrieval and exam scores to quantify memory quality. This enables the downstream QA value of candidate memories to be measured and optimized without accessing the internal mechanisms of the black-box captioning, retrieval, and reasoning pipeline. Building on this metric, we develop a memory-centric (MemCen) framework that jointly selects UAVs and allocates transmit power to maximize memory quality under communication constraints. In the noise-limited regime, we derive a QoM-aware capped water-filling law that explicitly connects task utility with physical-layer power allocation. We further develop penalty successive optimization (PSO) and learning to memorize (L2M) solvers. MemCen achieves QA accuracies of 92.4% and 84.0% in CARLA Town04 and Town05 under static and dynamic communication conditions, respectively. In real-world experiments, MemCen achieves 88.5% QA accuracy on the panoramic multi-agent system (PMAS) benchmark. Finally, UAV-to-robot-dog demonstrations further validate the practical utility of the acquired memories for environmental understanding and navigation.
+
+本文研究低空问答（LAQA），其中分布式无人机（UAV）存储器聚集在地面服务器上，以回答有关长地平线观测的问题。与基于传感、通信、控制或计算指标的传统资源分配不同，LAQA 需要对内存值进行显式测量。我们提出了一种生成对抗性考试（GAE），它使用正向模拟来评估记忆检索和考试分数来量化记忆质量。这使得候选记忆的下游 QA 值能够被测量和优化，而无需访问黑盒字幕、检索和推理管道的内部机制。在此指标的基础上，我们开发了一个以内存为中心的（MemCen）框架，该框架联合选择无人机并分配传输功率，以在通信限制下最大限度地提高内存质量。在噪声限制的情况下，我们推导出了一种 QoM 感知的上限注水法则，该法则明确地将任务效用与物理层功率分配联系起来。我们进一步开发惩罚连续优化（PSO）和学习记忆（L2M）求解器。 MemCen 在 CARLA Town04 和 Town05 中在静态和动态通信条件下分别实现了 92.4% 和 84.0% 的 QA 准确率。在实际实验中，MemCen 在全景多智能体系统 (PMAS) 基准上实现了 88.5% 的 QA 准确率。最后，无人机到机器狗的演示进一步验证了所获得的记忆对于环境理解和导航的实际用途。
+
+</details>
+
+---
+
+## 52. Self-Adapting Group of Experts for Multi-Agent Reasoning / 多智能体推理自适应专家组
+
+**Date**: 2026-09-28 | **arXiv**: [2609.35412v1](http://arxiv.org/abs/2609.35412v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.35412v1)
+
+**Categories**: cs.AI, cs.CL, cs.MA
+
+**Code**: https://github.com/atifquamar07/sage.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multi-agent systems bring together language model agents with different roles to propose, review, and refine solutions. Each agent's response depends on its model's capabilities, the reasoning strategy defined by its system prompt, and the information in its input context. Existing frameworks often adapt communication by changing this context while leaving individual prompts fixed, even when a problem calls for different skills. We study whether agents' initial responses can identify a strategy better suited to the current problem and guide its transfer to other agents. To address this, we introduce SAGE (Self-Adapting Group of Experts), a training-free framework that uses answer agreement, prefix consistency, and reciprocal peer review to select a strategy donor. SAGE transfers the selected donor's reasoning strategy to the other agents while preserving their original roles. This transfer uses only the agents' original system prompts, without access to the problem or generated solutions. After strategy adaptation, agents exchange responses through a dynamic, sparse directed acyclic graph that routes information from higher-scoring agents to lower-scoring agents. Experiments across multiple agent backbones and reasoning benchmarks show that SAGE achieves higher average accuracy than the evaluated baselines. Our code is available at https://github.com/atifquamar07/sage.
+
+多代理系统将具有不同角色的语言模型代理聚集在一起，以提出、审查和完善解决方案。每个代理的响应取决于其模型的功能、其系统提示定义的推理策略以及其输入上下文中的信息。现有的框架通常会通过改变上下文来适应通信，同时保持单个提示固定，即使问题需要不同的技能也是如此。我们研究智能体的初始响应是否可以识别出更适合当前问题的策略并指导其转移到其他智能体。为了解决这个问题，我们引入了 SAGE（自适应专家组），这是一个无需培训的框架，它使用答案协议、前缀一致性和相互同行评审来选择策略捐赠者。 SAGE 将所选捐赠者的推理策略转移给其他智能体，同时保留其原始角色。此转移仅使用代理的原始系统提示，而无法访问问题或生成的解决方案。策略调整后，智能体通过动态、稀疏有向无环图交换响应，该图将信息从得分较高的智能体路由到得分较低的智能体。跨多个代理主干和推理基准的实验表明，SAGE 比评估的基线实现了更高的平均准确性。我们的代码可在 https://github.com/atifquamar07/sage 获取。
+
+</details>
+
+---
+
+## 53. Multilinguality in Hybrid Attention LLMs / 混合注意力法学硕士中的多语言能力
+
+**Date**: 2026-09-28 | **arXiv**: [2609.35378v1](http://arxiv.org/abs/2609.35378v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.35378v1)
+
+**Categories**: cs.CL, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In response to the growing demand for long sequences in agentic and reasoning use cases, many state-of-the-art LLMs combine multiple variants of attention to mitigate the quadratic complexity of traditional softmax attention. These hybrid attention LLMs aim to balance the strengths and limitations of full attention and alternatives based on recurrence. This work presents a first study of how hybrid attention impacts the multilinguality of LLMs. Beyond the impact on long sequences in poorly tokenized languages, our study is motivated by the possibility that the inductive biases of the recurrent state alter linguistic processing. Our interpretability analysis confirms this, showing that cross-lingual representations in hybrid models develop in patterns tied to the ordering of recurrent and full-attention layers. Across diverse models, we notably observe a pronounced spike in cross-lingual alignment around the first full-attention layer. These findings lead us to question the conventional ordering of attention layers. In distillation experiments on multilingual data, all alternative layer orderings outperform the standard throughout training, learning up to 2.5X faster. These stark, replicable results prompt our theory that multilingual models would benefit from starting with a full-attention layer rather than recurrent layers.
+
+为了满足代理和推理用例中对长序列不断增长的需求，许多最先进的法学硕士结合了多种注意力变体，以减轻传统 softmax 注意力的二次复杂度。这些混合注意力法学硕士旨在平衡充分注意力和基于复发的替代方案的优点和局限性。这项工作首次研究了混合注意力如何影响法学硕士的多语言能力。除了对标记化不良的语言中的长序列的影响之外，我们的研究还受到循环状态的归纳偏差改变语言处理的可能性的推动。我们的可解释性分析证实了这一点，表明混合模型中的跨语言表示以与循环层和全注意力层的顺序相关的模式发展。在不同的模型中，我们明显观察到第一个全注意力层周围的跨语言对齐有明显的峰值。这些发现使我们对注意力层的传统排序提出质疑。在多语言数据的蒸馏实验中，所有替代层排序在整个训练过程中都优于标准，学习速度提高了 2.5 倍。这些明显的、可复制的结果提示我们的理论是，多语言模型将从全注意力层而不是循环层开始受益。
+
+</details>
+
+---
+
+## 54. From Pixel to Poses: Object-centric Tool Manipulation Learning from Human Demonstrations / 从像素到姿势：从人类演示中学习以对象为中心的工具操作
+
+**Date**: 2026-09-28 | **arXiv**: [2609.35375v1](http://arxiv.org/abs/2609.35375v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.35375v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Scaling up robotic manipulation is primarily bottlenecked by the scarcity of real-world robot data. While recent approaches leverage human video demonstrations to mitigate this shortage, they remain computationally expensive and still rely on paired human-robot data for domain alignment. Although current state-of-the-arts excel at long-horizon tasks, they struggle with the delicate and precise control required for complex tool manipulation. To overcome these limitations, we introduce P2P-T, from Pixel to Poses for Tool Manipulation, a data-efficient, object-centric framework that learns tool use directly from human demonstrations. P2P-T bridges the cognitive and physical execution gap through a two-stage approach. First, pretraining an object-centric world model to extract stable pose priors; second, integrating these priors into an efficient, pose-aware low-level policy. By utilizing a robust automated data processing pipeline powered by modern foundation models, P2P-T completely bypasses the need for human-robot aligned data. This reduces overall training overhead drastically. With minimal per-task fine-tuning, our framework achieves a 73% improvement over the previous state of the art in execution performance on complex, real-world tool manipulation tasks that currently remain out of reach for standard large-scale pretrained models.
+
+扩大机器人操作的主要瓶颈是现实世界中机器人数据的缺乏。虽然最近的方法利用人类视频演示来缓解这种短缺，但它们的计算成本仍然很高，并且仍然依赖配对的人类机器人数据来进行域对齐。尽管当前最先进的技术在长期任务方面表现出色，但它们在复杂工具操作所需的精细和精确控制方面遇到了困难。为了克服这些限制，我们引入了 P2P-T（从像素到工具操作姿势），这是一个数据高效、以对象为中心的框架，可以直接从人类演示中学习工具的使用。 P2P-T 通过两阶段方法弥合认知和物理执行差距。首先，预训练以对象为中心的世界模型以提取稳定的姿势先验；其次，将这些先验整合到一个高效的、具有姿势意识的低级策略中。通过利用由现代基础模型提供支持的强大的自动化数据处理管道，P2P-T 完全绕过了对人机对齐数据的需求。这大大减少了总体培训开销。通过对每个任务进行最少的微调，我们的框架在复杂的、现实世界的工具操作任务的执行性能方面比之前最先进的技术提高了 73%，而这些任务目前对于标准的大规模预训练模型来说仍然遥不可及。
+
+</details>
+
+---
+
+## 55. From Input to Output: A Flexible Agent for Dual-End Interpretation of Sparse Autoencoder Features / 从输入到输出：稀疏自动编码器特征双端解释的灵活代理
+
+**Date**: 2026-09-28 | **arXiv**: [2609.35367v1](http://arxiv.org/abs/2609.35367v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.35367v1)
+
+**Categories**: cs.CL
+
+**Code**: https://github.com/THUAIS-Lab/DAFI.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Sparse autoencoders (SAEs) are an important tool for mechanistic interpretability, but interpreting their many features remains challenging. Existing methods characterize input-side activation patterns and output-side intervention effects, yet often leave their functional connection implicit, while input-side evidence collection typically relies on costly large-corpus scans. We introduce functional interpretation, which characterizes an SAE feature as a mapping from its activating input semantics to its output effects under intervention, and present Dual-End Agentic Feature Interpretation (DAFI), an agent that actively gathers evidence and refines input-side, output-side, and functional interpretations through component-specific feedback. Its short-context token probing enables on-demand activation evidence collection without a full corpus scan. On GemmaScope, DAFI improves Input score by 13.1 percentage points over SAGE and Output score by 38.9 points over Token Change, while being substantially more token-efficient than a general-purpose coding agent. Skills distilled from successful refinements raise the held-out joint pass rate from 58.0% to 92.0% and improve both interpretation quality and efficiency when transferred to a new model-SAE setting. Across features with reliable endpoint interpretations, 70.7% exhibit non-equivalent input and output semantics. On AxBench, DAFI also improves steering-feature selection over output-score filtering. Code is available at https://github.com/THUAIS-Lab/DAFI.
+
+稀疏自动编码器（SAE）是机械可解释性的重要工具，但解释其许多功能仍然具有挑战性。现有的方法描述了输入侧激活模式和输出侧干预效果，但往往隐含它们的功能联系，而输入侧证据收集通常依赖于昂贵的大型语料库扫描。我们引入了功能解释，它将 SAE 特征描述为从其激活输入语义到干预下的输出效果的映射，并提出了双端代理特征解释（DAFI），这是一种主动收集证据并通过特定于组件的反馈来完善输入侧、输出侧和功能解释的代理。其短上下文令牌探测可以实现按需激活证据收集，而无需进行完整的语料库扫描。在 GemmaScope 上，DAFI 的输入分数比 SAGE 提高了 13.1 个百分点，输出分数比 Token Change 提高了 38.9 个百分点，同时比通用编码代理的令牌效率更高。从成功的改进中提炼出来的技能将保留的联合通过率从 58.0% 提高到 92.0%，并在转移到新模型 SAE 设置时提高解释质量和效率。在具有可靠端点解释的特征中，70.7% 表现出不等效的输入和输出语义。在 AxBench 上，DAFI 还改进了输出分数过滤的转向功能选择。代码可在 https://github.com/THUAIS-Lab/DAFI 获取。
+
+</details>
+
+---
+
+## 56. DexAgent: An Agentic Human2Sim2Robot Framework for Dexterous Manipulation with Self-Evolving Tool Library / DexAgent：一个具有自我进化工具库的灵巧操作代理 Human2Sim2Robot 框架
+
+**Date**: 2026-09-28 | **arXiv**: [2609.35318v1](http://arxiv.org/abs/2609.35318v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.35318v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Human videos offer a scalable source of demonstrations for dexterous robot manipulation. However, existing human-to-simulation-to-robot (Human2Sim2Robot) pipelines rely on predefined procedures that struggle to accommodate diverse object properties and interactions, particularly those involving articulated and deformable objects. We introduce DexAgent, an agentic Human2Sim2Robot framework that converts a single egocentric human video and a task prompt into physically grounded robot trajectories for policy training. It operates through four stages: semantic understanding of human videos, property-based simulation reconstruction, robot trajectory optimization, and robot data generation. At each stage, DexAgent adapts its approach to the task and object properties by selecting suitable skills from its tool library or developing new ones when needed. Property-specific verifiers assess stage outcomes for physical validity and task-specific requirements and provide feedback for refinement, preventing error propagation through the workflow. This adaptive, verification-guided process allows DexAgent to process diverse objects and long-horizon tasks. In the final stage, DexAgent varies object and robot states in simulation to generate diverse robot trajectories from a single human video, then retextures the rendered observations to facilitate sim-to-real transfer. Newly developed skills and verifiers are retained in its tool library, making it self-evolving to accumulate reusable capabilities. This reduces processing time as DexAgent encounters more human videos. Across eleven real-world tasks, policies trained with DexAgent-generated data achieve a 3.5x higher success rate than competing baselines. Project website: https://dexagent123.github.io/.
+
+人类视频为灵巧的机器人操作提供了可扩展的演示源。然而，现有的人到模拟到机器人 (Human2Sim2Robot) 管道依赖于预定义的程序，这些程序很难适应不同的对象属性和交互，特别是涉及铰接和可变形对象的属性和交互。我们引入了 DexAgent，这是一个代理 Human2Sim2Robot 框架，它将单个以自我为中心的人类视频和任务提示转换为物理接地的机器人轨迹，以进行策略训练。它通过四个阶段进行操作：人类视频的语义理解、基于属性的模拟重建、机器人轨迹优化和机器人数据生成。在每个阶段，DexAgent 通过从工具库中选择合适的技能或在需要时开发新技能来调整其方法以适应任务和对象属性。特定属性的验证者评估阶段结果的物理有效性和特定于任务的要求，并提供改进反馈，防止错误在工作流程中传播。这种自适应的、验证引导的过程允许 DexAgent 处理不同的对象和长期任务。在最后阶段，DexAgent 在模拟中改变对象和机器人状态，从单个人类视频生成不同的机器人轨迹，然后重新纹理渲染的观察结果以促进模拟到真实的转换。新开发的技能和验证器保留在其工具库中，使其能够自我进化以积累可重用的能力。当 DexAgent 遇到更多的人类视频时，这会减少处理时间。在 11 项现实世界任务中，使用 DexAgent 生成的数据训练的策略的成功率比竞争基线高 3.5 倍。项目网站：https://dexagent123.github.io/。
+
+</details>
+
+---
+
+## 57. Measuring Collapse and Correction in Homogeneous-Panel LLM Debate / 衡量同质面板法学硕士辩论中的崩溃和纠正
+
+**Date**: 2026-09-28 | **arXiv**: [2609.35279v1](http://arxiv.org/abs/2609.35279v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.35279v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multi-agent large language model (LLM) debate is often evaluated by whether final answers improve, but movement is not necessarily improvement: the same discussion can rescue an initially wrong majority or destroy an initially correct one. Standard final-accuracy evaluations conflate these opposing mechanisms. We introduce an auditable protocol for homogeneous debate on multiple-choice questions (MCQs) that records each run as a transition ledger over collapse, correction, onset, and signed intervention utility. On 6,925 MMLU-Pro debates, the protocol identifies 253 collapses and a parallel correction ledger that changes how interventions should be judged. Replay experiments reveal the central tradeoff: a leave-one-model-out probe-gated freeze prevents 29 collapses but loses 108 corrections under equal weights, so collapse prevention alone can recommend the wrong policy. A compact pre-debate 8-probe screen is a triage signal: its unadjusted family-level association with conditional-collapse risk is high (G=7, Spearman rho=0.893, exact two-sided p=0.0123), but initial-majority accuracy is a close comparator (rho=0.821; family partial rho=0.767, p=0.0877), so we do not treat it as calibrated or capability-adjusted prediction. Round-level traces localize many collapses to the first debate round, where early disagreement can precede both harmful cascades and useful recovery. We release replayable schemas, coders, audits, cost cards, and zero-API rebuild scripts so future model-scaffold rows can be compared under the same denominators and signed utility ledger.
+
+多智能体大语言模型（LLM）辩论通常通过最终答案是否有所改进来评估，但移动并不一定是改进：同样的讨论可以挽救最初错误的多数或摧毁最初正确的多数。标准的最终精度评估将这些相反的机制混为一谈。我们引入了一个可审计的协议，用于多项选择问题（MCQ）的同质辩论，该协议将每次运行记录为崩溃、纠正、开始和签名干预效用的过渡分类账。在 6,925 场 MMLU-Pro 辩论中，该协议确定了 253 场崩溃和一个平行校正分类账，该分类账改变了干预措施的判断方式。重放实验揭示了核心权衡：留一模型探测门控冻结可防止 29 次崩溃，但在同等权重下会丢失 108 次修正，因此仅靠崩溃预防就可能会推荐错误的策略。紧凑的预辩论 8 探针筛选是一个分类信号：其未经调整的家庭层面与条件性崩溃风险的关联性很高（G=7，Spearman rho=0.893，精确两侧 p=0.0123），但初始多数准确性是一个接近的比较器（rho=0.821；家庭部分 rho=0.767，p=0.0877），因此我们不对其进行处理作为校准或能力调整的预测。回合级别的痕迹将许多崩溃定位于第一轮辩论，其中早期的分歧可能先于有害的级联和有用的恢复。我们发布可重放的模式、编码器、审计、成本卡和零 API 重建脚本，以便可以在相同的分母和签名的实用分类账下比较未来的模型支架行。
+
+</details>
+
+---
+
+## 58. GuardPIBT: Counterfactually Gated Neural Guidance for Ultra-Large-Scale 3D Multi-Agent Path Finding / GuardPIBT：用于超大规模 3D 多智能体路径查找的反事实门控神经指导
+
+**Date**: 2026-09-28 | **arXiv**: [2609.35267v1](http://arxiv.org/abs/2609.35267v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.35267v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large-scale 3D multi-agent path finding becomes increasingly difficult under dense traffic. Priority Inheritance with Backtracking (PIBT) scales well, but its one-step goal-directed ordering may become insufficient under dense interactions and large-scale congestion. We present GuardPIBT, which augments rather than replaces the PIBT executor: neural predictions only propose residual reorderings of PIBT's native candidates, while final actions remain determined by PIBT. First, local graph attention models nearby interactions, while global source--goal transport features provide population-level coordination context for candidate reordering. Second, a counterfactual group gate filters reorderings whose closed-loop effects may degrade coordination. Third, for ultra-large populations, population-adaptive grouping preserves decision granularity, asynchronous cached inference amortizes neural computation, and selective repair resolves long-tail agents. PIBT retains validity checking, priority inheritance, and backtracking throughout. Experiments with up to 100,000 agents demonstrate reliable completion across 2D and 3D environments, including all three 100,000-agent warehouse runs with zero audited graph violations. The project website is available at {\color{magenta}\texttt{https://guardpibt.github.io/GuardPIBT/}}.
+
+在密集流量下，大规模3D多智能体寻路变得越来越困难。回溯优先级继承 (PIBT) 具有良好的扩展性，但在密集交互和大规模拥塞的情况下，其一步目标导向排序可能会变得不够。我们提出了 GuardPIBT，它增强而不是取代 PIBT 执行器：神经预测仅提出 PIBT 本地候选者的残差重新排序，而最终操作仍然由 PIBT 确定。首先，局部图注意力模型附近的交互，而全局源-目标传输特征为候选重新排序提供群体级别的协调上下文。其次，反事实的群门过滤器重新排序，其闭环效应可能会降低协调性。第三，对于超大群体，群体自适应分组保留决策粒度，异步缓存推理分摊神经计算，选择性修复解决长尾代理。 PIBT 始终保留有效性检查、优先级继承和回溯。对多达 100,000 个代理的实验证明了在 2D 和 3D 环境中的可靠完成，包括所有三个 100,000 个代理的仓库运行，审计图形违规为零。该项目网站位于 {\color{magenta}\texttt{https://guardpibt.github.io/GuardPIBT/}}。
+
+</details>
+
+---
+
+## 59. JRDB-AVR: An Active Visual Reasoning Benchmark for Embodied Agents in Real-World Environments / JRDB-AVR：现实世界环境中实体代理的主动视觉推理基准
+
+**Date**: 2026-09-28 | **arXiv**: [2609.35032v1](http://arxiv.org/abs/2609.35032v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.35032v1)
+
+**Categories**: cs.AI, cs.CV, cs.RO
+
+**Code**: https://github.com/ControlNet/JRDB-AVR.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In complex embodied visual reasoning scenarios, an agent often has only a limited field of view, and the evidence needed to answer a question may be distributed across time, viewpoint, and interacting objects. A model may therefore give a plausible answer without ever observing the relevant object, time, or view that supports it. Current visual reasoning benchmarks largely evaluate passive observations and final answers, overlooking settings that require active reasoning and evidence acquisition. We introduce JRDB-AVR, a benchmark derived from existing real-world JRDB robotics data through a structured question-generation engine that turns this gap into an explicit evaluation: an embodied agentic system receives a visual reasoning question, requests bounded observations by timestamp and viewing angle, and is evaluated on both the final answer and the grounded visual evidence supporting it. The benchmark contains diverse questions over multiple real-world environments involving temporal search, viewpoint selection, and human-oriented compositional reasoning. We also introduce JRDB-AVR-Agent, a reference active reasoning agentic method that maintains an explicit observation-grounded graph-based world model and answers through solving. Experiments reveal a substantial gap between answer accuracy and evidence accuracy in current baselines, showing that current VLMs can produce unsupported correct answers and that active evidence-aware evaluation is necessary for embodied visual reasoning. Code and benchmark are available at https://github.com/ControlNet/JRDB-AVR.
+
+在复杂的具体视觉推理场景中，智能体通常只有有限的视野，而回答问题所需的证据可能分布在时间、观点和交互对象上。因此，模型可能会给出一个看似合理的答案，而无需观察支持它的相关对象、时间或视图。当前的视觉推理基准主要评估被动观察和最终答案，忽略了需要主动推理和证据获取的设置。我们引入了 JRDB-AVR，这是一个通过结构化问题生成引擎从现有现实世界 JRDB 机器人数据中衍生出来的基准，将这种差距转化为明确的评估：具体代理系统接收视觉推理问题，通过时间戳和视角请求有界观察，并根据最终答案和支持它的基础视觉证据进行评估。该基准包含针对多个现实世界环境的各种问题，涉及时间搜索、观点选择和以人为本的组合推理。我们还介绍了 JRDB-AVR-Agent，这是一种参考主动推理代理方法，它维护基于显式观察的基于图的世界模型并通过求解来给出答案。实验揭示了当前基线中答案准确性和证据准确性之间的巨大差距，表明当前的 VLM 可以产生不受支持的正确答案，并且主动的证据感知评估对于具体视觉推理是必要的。代码和基准可在 https://github.com/ControlNet/JRDB-AVR 获取。
+
+</details>
+
+---
+
+## 60. AGRO-SUVIDE: Agentic Robotics for Surgical Viscoelastic Debridement / AGRO-SUVIDE：用于外科粘弹性清创的代理机器人
+
+**Date**: 2026-09-28 | **arXiv**: [2609.34823v2](http://arxiv.org/abs/2609.34823v2) | **PDF**: [Link](http://arxiv.org/pdf/2609.34823v2)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Augmented dexterity has the potential to reduce the fatigue experienced by surgeons during repetitive surgical tasks. In this paper, we propose the first AGentic RObotics framework for SUrgical VIscoelastic DEbridement (AGRO-SUVIDE), the repeated removal of small fragments attached to a viscoelastic substrate. Leveraging the self-improving and coding capability of agents, AGRO-SUVIDE adopts a modular framework. Specifically, the demonstration analysis module automatically identifies recurring skills from a single expert demonstration, using both visual and kinematic information. The construction module then builds each skill, either as a procedural model-based skill the agent codes against a scaffolded library or as a model-free policy-based skill. At runtime, the monitoring module composes the skills into a loop-style graph sized to the number of fragments it observes, then verifies pre- and post-conditions of each skill to decide whether to advance or retry. We evaluate AGRO-SUVIDE through 340 physical trials on the da Vinci Research Kit (dVRK). AGRO-SUVIDE achieves an average single-fragment removal success rate of 85%, completing consecutive three-fragment removal at 60% and at 95% with one human intervention. It further generalizes to unseen five-fragment scenarios with an average success rate of 80% for single-fragment removal. Project page: https://surgical-robotics.github.io/AGRO-SUVIDE/
+
+增强的灵活性有可能减少外科医生在重复性手术任务中所经历的疲劳。在本文中，我们提出了第一个用于外科粘弹性清创术（AGRO-SUVIDE）的 AGentic RObotics 框架，即重复去除附着在粘弹性基质上的小碎片。利用智能体的自我改进和编码能力，AGRO-SUVIDE采用模块化框架。具体来说，演示分析模块使用视觉和运动学信息自动识别来自单个专家演示的重复技能。然后，构建模块构建每个技能，或者作为代理针对支架库编码的基于程序模型的技能，或者作为无模型的基于策略的技能。在运行时，监控模块将技能组合成一个循环样式的图表，其大小取决于其观察到的片段数量，然后验证每个技能的前置条件和后置条件，以决定是前进还是重试。我们通过达芬奇研究套件 (dVRK) 上的 340 次物理试验来评估 AGRO-SUVIDE。 AGRO-SUVIDE 的平均单碎片去除成功率为 85%，在一次人工干预下连续完成三碎片去除成功率为 60% 和 95%。它进一步推广到未见过的五碎片场景，单碎片去除的平均成功率为 80%。项目页面：https://surgical-robotics.github.io/AGRO-SUVIDE/
+
+</details>
+
+---
+
+## 61. ARS: Agentic Reward System for Robot Learning / ARS：机器人学习的代理奖励系统
+
+**Date**: 2026-09-28 | **arXiv**: [2609.34484v1](http://arxiv.org/abs/2609.34484v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.34484v1)
+
+**Categories**: cs.RO, cs.LG
+
+**Code**: https://github.com/midea-ai/ars
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Progress reward modeling is the problem of estimating how a robot's behavior changes task progress over time. Reliable estimation requires distinguishing meaningful state changes from failed attempts and task-irrelevant actions. We introduce the Agentic Reward System (ARS), an inference framework for progress reward modeling with general-purpose vision-language models (VLMs), without additional reward-model training. Given an offline trajectory and a task instruction, ARS uses adaptive visual inspection for both event proposal and verification. A subagent proposes a task-relevant event timeline, which a primary agent verifies and revises before estimating per-frame progress. ARS can incorporate optional terminal outcome labels and visual references to inform its judgments. It can also audit progress estimates from external reward models. We evaluate ARS with a 27B VLM on a controlled semantic-mismatch benchmark and downstream policy learning in simulation and on a real robot. The benchmark reveals that several evaluated reward baselines assign spurious progress to wrong-object manipulation even in simple pick-and-place scenes. ARS better suppresses these errors and outperforms these baselines in simulation policy learning. We further demonstrate that ARS supports long-horizon policy learning from mixed-quality offline experience on real-robot multi-screw fastening in a full-scale laboratory replica of an industrial washing-machine assembly line. These results suggest that structured inference and verification can improve the usefulness of general-purpose VLMs for robot reward modeling. Code is at https://github.com/midea-ai/ars
+
+进度奖励建模是估计机器人的行为如何随时间改变任务进度的问题。可靠的估计需要将有意义的状态变化与失败的尝试和与任务无关的操作区分开来。我们引入了代理奖励系统（ARS），这是一种使用通用视觉语言模型（VLM）进行进度奖励建模的推理框架，无需额外的奖励模型训练。给定离线轨迹和任务指令，ARS 使用自适应视觉检查来进行事件提议和验证。子代理提出一个与任务相关的事件时间线，主代理在估计每帧进度之前验证和修改该时间线。 ARS 可以结合可选的最终结果标签和视觉参考来告知其判断。它还可以审核外部奖励模型的进度估计。我们使用 27B VLM 在受控语义不匹配基准上评估 ARS，并在模拟和真实机器人上进行下游策略学习。该基准测试显示，即使在简单的拾取和放置场景中，几个评估的奖励基线也会将虚假进度分配给错误的对象操作。 ARS 更好地抑制了这些错误，并在模拟策略学习中超越了这些基线。我们进一步证明，ARS 支持从工业洗衣机装配线的全尺寸实验室复制品中真实机器人多螺钉紧固的混合质量离线体验中进行长期政策学习。这些结果表明，结构化推理和验证可以提高通用 VLM 在机器人奖励建模中的实用性。代码位于 https://github.com/midea-ai/ars
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-09-29 (50 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-09-29
