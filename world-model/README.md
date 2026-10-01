@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-10-01](papers/2026-10-01.md) - 19 papers
 - [2026-09-30](papers/2026-09-30.md) - 27 papers
 - [2026-09-29](papers/2026-09-29.md) - 24 papers
 - [2026-09-28](papers/2026-09-28.md) - 5 papers
@@ -158,6 +159,324 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-10-01 (19 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-10-01
+
+**Paper Count**: 19
+
+---
+
+## 1. Social-WM: Safety-Aware Latent World Models for Robot Social Navigation / Social-WM：机器人社交导航的安全意识潜在世界模型
+
+**Date**: 2026-09-30 | **arXiv**: [2609.40177v1](http://arxiv.org/abs/2609.40177v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.40177v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Safe social navigation requires a robot to anticipate not only the future consequences of its actions, but also whether a nominal action can actually be executed under surrounding physical and social constraints. We present Social-WM, an efficient latent world-model planning framework trained from egocentric RGB video sequences. Our key observation is that social-navigation experience contains a systematic discrepancy between the nominal action and the realizable action: a nominal forward action may be fully executed in free space, but needs to be constrained when heading towards a pedestrian or obstacle. Social-WM learns these safety-relevant consequences directly through action-conditioned future prediction, where the target is the actual observed future following each command. We further introduce a realizable inverse-dynamics objective that associates observed latent transitions with the action actually realized rather than the nominal one. At deployment, candidate actions are imagined through the latent world model, and the inverse dynamics model estimates their realizability; nominal--realizable discrepancy then provides a safety signal before execution. The learned dynamics and realizability model remain goal-independent and support both position- and image-goal navigation. On Social-HM3D, Social-WM achieves 63.77% success while reducing human collisions to 21.67%, and maintains strong performance under zero-shot transfer to Social-MP3D, without explicit pedestrian tracking, privileged human state, or online reinforcement learning.
+
+安全的社交导航要求机器人不仅要预测其行为的未来后果，还要预测名义上的行为是否可以在周围的物理和社会约束下实际执行。我们提出了 Social-WM，这是一种高效的潜在世界模型规划框架，由以自我为中心的 RGB 视频序列训练而成。我们的主要观察结果是，社交导航体验包含名义动作和可实现动作之间的系统差异：名义前向动作可以在自由空间中完全执行，但在朝向行人或障碍物时需要受到限制。社交管理直接通过以行动为条件的未来预测来学习这些与安全相关的后果，其中目标是每个命令之后实际观察到的未来。我们进一步引入了一种可实现的逆动态目标，它将观察到的潜在转变与实际实现的行动而不是名义行动联系起来。在部署时，通过潜在世界模型想象候选动作，逆动力学模型估计其可实现性；名义-可实现的差异然后在执行之前提供安全信号。学习到的动力学和可实现性模型保持目标独立性，并支持位置和图像目标导航。在 Social-HM3D 上，Social-WM 取得了 63.77% 的成功率，同时将人体碰撞减少到 21.67%，并且在零镜头转移到 Social-MP3D 的情况下保持了强劲的性能，无需显式行人跟踪、特权人类状态或在线强化学习。
+
+</details>
+
+---
+
+## 2. Dream4ACT: A Shared Visual Action Interface for Multi-Embodiment Video-Action Modeling / Dream4ACT：用于多实施例视频动作建模的共享视觉动作界面
+
+**Date**: 2026-09-30 | **arXiv**: [2609.40153v1](http://arxiv.org/abs/2609.40153v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.40153v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video generation models (VGMs) offer strong spatiotemporal priors for embodied observation--action modeling. However, joint-space action vectors lack explicit image-space structure and vary in dimensionality and semantics across embodiments, making it challenging to directly leverage the rich spatiotemporal priors of VGMs. End-effector visualizations provide an alternative but do not specify the full articulated configuration needed for robot execution. We present Dream4ACT, a world model built for joint video-action modeling across embodiments. To unify action representations across embodiments, we introduce a shared visual action interface, called action views, which render target joint configurations from four prescribed virtual cameras using URDF-based forward kinematics. This shared visual representation preserves embodiment-specific articulated geometry while allowing observation and action sequences to share a video autoencoder and diffusion transformer. Through masked flow-matching, our model supports forward dynamics, inverse dynamics, and joint observation--action generation within a single jointly trained model by varying which future sequences are corrupted. To recover executable action sequences from predicted action views, we propose a training-free, URDF-constrained multiview recovery mechanism, without a learned embodiment-specific decoder. Dream4ACT achieves an average success rate of 88.98\% on RoboTwin~2.0 and an overall score of 65.66 on TriWorldBench, supporting effective closed-loop manipulation and competitive action-conditioned multiview prediction through the visual action interface.
+
+视频生成模型（VGM）为具体观察动作建模提供了强大的时空先验。然而，关节空间动作向量缺乏明确的图像空间结构，并且在不同实施例的维度和语义上有所不同，使得直接利用 VGM 丰富的时空先验变得具有挑战性。末端执行器可视化提供了一种替代方案，但没有指定机器人执行所需的完整铰接配置。我们提出了 Dream4ACT，这是一个为跨实施例的联合视频动作建模而构建的世界模型。为了统一跨实施例的动作表示，我们引入了一个共享的视觉动作界面，称为动作视图，它使用基于 URDF 的正向运动学从四个规定的虚拟相机渲染目标关节配置。这种共享的视觉表示保留了特定于实施例的铰接几何形状，同时允许观察和动作序列共享视频自动编码器和扩散变换器。通过屏蔽流匹配，我们的模型支持正向动力学、逆向动力学和联合观察——通过改变未来序列被损坏的方式在单个联合训练模型中生成动作。为了从预测的动作视图恢复可执行的动作序列，我们提出了一种免训练、URDF约束的多视图恢复机制，无需学习的特定于实施例的解码器。 Dream4ACT在RoboTwin~2.0上的平均成功率为88.98％，在TriWorldBench上的总分为65.66，通过视觉动作界面支持有效的闭环操纵和竞争性动作条件多视图预测。
+
+</details>
+
+---
+
+## 3. DashVMC: Real-Time Discrete World Model Control in Geometry Dash / DashVMC：Geometry Dash 中的实时离散世界模型控制
+
+**Date**: 2026-09-30 | **arXiv**: [2609.40003v1](http://arxiv.org/abs/2609.40003v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.40003v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World-model agents are usually evaluated in simulators that can wait for the policy; live games impose the opposite constraint, requiring capture, prediction, and action before the next frame. We present DashVMC, which learns a compact, action-conditioned world model from approximately two hours of recorded Geometry Dash gameplay. To test whether the learned dynamics are actionable, a controller is initialized by behavioural cloning (BC) and refined with Proximal Policy Optimization (PPO) entirely in frozen-model rollouts, without further interaction with the live game. Across three controller seeds, the refined policies survive longer than their BC initializations on all three official levels and a held-out community layout. At deployment, the baseline skips visual generation and sustains a 60-Hz capture-to-action loop on a consumer GPU. Action-conditioned continuations and rollout diagnostics show that the model remains useful for control despite imperfect long-horizon fidelity.
+
+世界模型代理通常在可以等待策略的模拟器中进行评估；现场游戏施加了相反的约束，要求在下一帧之前进行捕捉、预测和行动。我们推出了 DashVMC，它从大约两个小时录制的几何冲刺游戏中学习紧凑的、以动作为条件的世界模型。为了测试学习到的动态是否可操作，控制器通过行为克隆 (BC) 进行初始化，并完全在冻结模型推出中使用近端策略优化 (PPO) 进行细化，无需与实时游戏进行进一步交互。在三个控制器种子中，经过改进的策略在所有三个官方级别和坚持的社区布局上比 BC 初始化的生存时间更长。在部署时，基线会跳过视觉生成并在消费级 GPU 上维持 60 Hz 的捕获到操作循环。动作条件延续和推出诊断表明，尽管长期保真度不完美，该模型对于控制仍然有用。
+
+</details>
+
+---
+
+## 4. Understanding Parents' Complex Views of AI for Children's Pretend Play / 了解家长对儿童假装游戏人工智能的复杂看法
+
+**Date**: 2026-09-30 | **arXiv**: [2609.39906v1](http://arxiv.org/abs/2609.39906v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.39906v1)
+
+**Categories**: cs.HC, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+AI could support children's pretend play, but it could also direct the play on behalf of children. Whether AI should have roles in children's lives is controversial because its influence on children remains uncertain. We conducted semi-structured interviews with 10 U.S. parents, each with at least one child aged 4-15. During the interview, we described the concept of AI-supported pretend play and provided participants with two boundary-case storyboards. We analyzed the interview data through codebook thematic analysis, using inductive coding and affinity diagramming organized around the research questions, and then used qualitative systems mapping to examine relationships within and across themes. We found that the same characteristics of AI, e.g., ability to assume characters, responsiveness, and adaptability, were seen by parents as potentially useful but also concerning. Parents imagined that AI could make role-based play accessible to all children or help parents participate in family play. However, they opposed the idea of AI for children's play without a clear understanding of how it works and its long-term influence on their children. Parents worried about children's loss of imagination and creativity, emotional attachment to AI, reduced human interaction, inappropriate behavior by AI and/or children, and their inability to manage children's AI use. Parents viewed AI not only as a play tool but also as a social actor and a possible perturbation in the existing family dynamics. The appropriateness of AI and child--AI interactions therefore emerged as a requirement for AI in children's pretend play, in addition to technical safeguards and parental control. We contribute an integrated account of parents' interdependent judgments and emphasize the need for longitudinal research with children and their diverse families.
+
+人工智能可以支持孩子们的假装游戏，但它也可以代表孩子们指导游戏。人工智能是否应该在儿童的生活中发挥作用存在争议，因为它对儿童的影响仍然不确定。我们对 10 名美国家长进行了半结构化访谈，每名家长至少有一名 4 至 15 岁的孩子。在采访中，我们描述了人工智能支持的假装游戏的概念，并为参与者提供了两个边界情况故事板。我们通过密码本主题分析来分析访谈数据，使用围绕研究问题组织的归纳编码和亲和图，然后使用定性系统映射来检查主题内部和主题之间的关系。我们发现，人工智能的相同特征，例如塑造角色的能力、反应能力和适应能力，被父母认为是潜在有用的，但也令人担忧。家长们想象人工智能可以让所有孩子都能进行基于角色的游戏，或者帮助家长参与家庭游戏。然而，他们反对人工智能用于儿童游戏的想法，因为他们不清楚人工智能的工作原理及其对孩子的长期影响。家长担心孩子们失去想象力和创造力、对人工智能的情感依恋、人际互动减少、人工智能和/或儿童的不当行为以及他们无法管理儿童对人工智能的使用。父母们不仅将人工智能视为一种游戏工具，而且将其视为一种社会行为者，以及对现有家庭动态的可能扰动。因此，除了技术保障和家长控制之外，人工智能和儿童与人工智能互动的适当性也成为儿童假装游戏中人工智能的要求。我们对父母相互依赖的判断进行了综合描述，并强调对儿童及其多元化家庭进行纵向研究的必要性。
+
+</details>
+
+---
+
+## 5. Beyond Policy Alignment: Closing the Planning-Learning Loop for Robot Control with Learned World Models / 超越政策调整：通过学习世界模型关闭机器人控制的规划学习循环
+
+**Date**: 2026-09-30 | **arXiv**: [2609.39751v1](http://arxiv.org/abs/2609.39751v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.39751v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Planning with learned world models combines online trajectory optimization with learned value and policy functions for high-dimensional control. Because the planner determines the experience used for learning, while the learned critic and actor in turn score and propose future plans, planning and learning form a closed feedback loop. TD-MPC is a prominent instance of this design. Recent policy-constrained variants strengthen one part of the loop by aligning the learned policy with planner behavior. We introduce PL-MPC (Planning-Learning MPC), which additionally modifies critic supervision and planner terminal-value estimation. Hybrid multi-step TD targets expose critic updates to more realized rewards before bootstrapping; disagreement-aware terminal estimates reduce the influence of uncertain critic values during MPPI planning; and return-weighted actor distillation emphasizes planner-executed actions from high-return episodes. The world-model architecture and MPPI optimizer are otherwise unchanged. On HumanoidBench, the largest gains occur on \texttt{balance-hard}, where Total Average Return (TAR) increases from $98\pm18$ to $387\pm255$, and \texttt{hurdle}, from $199\pm13$ to $466\pm200$; performance across the broader benchmark remains task dependent, and PL-MPC remains competitive on DMControl. Controlled ablations show different component interactions across the two tasks. We further demonstrate zero-shot sim-to-real transfer on wrench-nut alignment with a 7-DoF KUKA IIWA14, obtaining higher observed success than TD-M(PC)^2 on the training object size and two unseen sizes. Code and data will be available at: https://pl-mpc-humanoid.github.io.
+
+使用学习世界模型进行规划将在线轨迹优化与学习值和策略函数结合起来，以实现高维控制。因为规划者决定用于学习的经验，而学习的批评者和行动者反过来评分并提出未来的计划，所以规划和学习形成了一个闭环反馈循环。 TD-MPC 是这种设计的一个突出实例。最近的策略约束变体通过将学习到的策略与规划者行为相结合来加强循环的一部分。我们引入了 PL-MPC（规划学习 MPC），它另外修改了批评者监督和规划者终值估计。混合多步骤 TD 目标在引导之前让批评者更新获得更多已实现的奖励；分歧感知终端估计减少了 MPPI 规划过程中不确定临界值的影响；回报加权演员蒸馏强调计划者从高回报事件中执行的行动。世界模型架构和 MPPI 优化器在其他方面保持不变。在 HumanoidBench 上，最大的收益出现在 \texttt{balance-hard} 上，其中总平均回报 (TAR) 从 $98\pm18$ 增加到 $387\pm255$，而 \texttt{hurdle} 从 $199\pm13$ 增加到 $466\pm200$；更广泛的基准测试中的性能仍然依赖于任务，并且 PL-MPC 在 DMControl 上仍然具有竞争力。受控消融显示了两个任务之间不同的组件交互。我们进一步演示了使用 7 自由度 KUKA IIWA14 进行扳手螺母对准的零射击模拟到真实的转换，在训练对象尺寸和两个未见过的尺寸上获得了比 TD-M(PC)^2 更高的观察成功率。代码和数据可在以下网址获取：https://pl-mpc- humanoid.github.io。
+
+</details>
+
+---
+
+## 6. OverForge: Reasoning Through Strategies and Tactics Helps Cooperative Lifelong Adaptation / OverForge：通过策略和策略进行推理有助于合作终生适应
+
+**Date**: 2026-09-30 | **arXiv**: [2609.39727v1](http://arxiv.org/abs/2609.39727v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.39727v1)
+
+**Categories**: cs.AI, cs.CL, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Cooperative language-model agents must coordinate over long horizons and adapt to changing environments and to partners with unfamiliar conventions, yet existing agents map observations to actions without separating persistent coordination strategies from their tactical execution. We introduce OverForge, a training-free hierarchical architecture that separates strategic reasoning over roles and divisions of labour from tactical reasoning over actions within each agent's private, partner-conditioned world model. A metacognitive Prefrontal Cortex Module couples the two levels by forming strategy-action branches, imagining their consequences with a forward model, and committing when confident. In OvercookedV2, OverForge delivers 7 soups in a connected kitchen versus 3 for each flat LLM baseline, retains agreed roles, and adopts roles proposed by unfamiliar partners. Ablations and a fixed-strategy probe show that persistent strategies guide tactical adaptation while each reasoning level contributes to coordination. Memory restarts show that cross-episode partner knowledge supports task performance and partner prediction, linking the hierarchy to continual adaptation.
+
+合作语言模型智能体必须进行长期协调，适应不断变化的环境，并与不熟悉的惯例合作，但现有的智能体将观察结果映射到行动，而没有将持久的协调策略与其战术执行分开。我们引入了 OverForge，这是一种无需培训的分层架构，它将针对角色和分工的战略推理与针对每个智能体的私人、以合作伙伴为条件的世界模型中的行动的战术推理分开。元认知前额叶皮层模块通过形成策略-行动分支、用正向模型想象其后果以及在自信时做出承诺来将这两个层次结合起来。在 OvercookedV2 中，OverForge 在互联厨房中提供 7 种汤，而每个平面 LLM 基线提供 3 种汤，保留商定的角色，并采用不熟悉的合作伙伴提出的角色。消融和固定策略探测表明，持久策略指导战术适应，而每个推理级别都有助于协调。记忆重新启动表明，跨情节伙伴知识支持任务绩效和伙伴预测，将层次结构与持续适应联系起来。
+
+</details>
+
+---
+
+## 7. RoboCoach: World Models as Active Coaches for Compositional Robot Skills / RoboCoach：世界模特作为组合机器人技能的主动教练
+
+**Date**: 2026-09-30 | **arXiv**: [2609.39685v1](http://arxiv.org/abs/2609.39685v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.39685v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long-horizon robot manipulation reuses skills across many task compositions, but improving these compositions with additional end-to-end demonstrations is costly. A practical self-improving system must decide both what to teach next and where to apply that supervision. We present ROBOCOACH, a world-model-guided coaching framework that uses imagined failures to guide demonstration requests and expert updates. Its Route-Imagine-Diagnose-Improve (RIDI) loop executes reusable skill experts inside COACHWORLD, our shared action-conditioned world model, and uses a progress judge to record the first subtask that fails to complete. Aggregated records select which subtask demonstrations to acquire and which expert adapters to update. Across two simulation suites and two real-robot platforms, imagined and deployed success correlate over 22 task-policy pairs (rho = 0.840). Controlled comparisons show that our coaching method outperforms matched baselines under matched data budgets and update schedules. With only 150 additional subtask demonstrations, success rises from 13.3% to 75.0% on Franka and from 40.0% to 83.8% on AgileX. The coached experts also transfer to four held-out compositions, achieving an average success of 35.0%, compared with 0% for a shared-policy baseline updated with uniformly acquired demonstrations. Together, these results show that world models can serve as active coaches, turning imagined failures into targeted supervision for modular policy improvement. Project Page: https://robocoach-ai.github.io/
+
+长视野机器人操作在许多任务组合中重复使用技能，但通过额外的端到端演示来改进这些组合的成本很高。一个实用的自我改进系统必须决定下一步教什么以及在哪里应用监督。我们推出了 ROBOCOACH，这是一个世界模型引导的辅导框架，它使用想象的失败来指导演示请求和专家更新。它的路线-想象-诊断-改进 (RIDI) 循环在 COACHWORLD（我们共享的动作条件世界模型）内执行可重用的技能专家，并使用进度判断来记录第一个未能完成的子任务。聚合记录选择要获取哪些子任务演示以及要更新哪些专家适配器。在两个模拟套件和两个真实机器人平台中，想象和部署的成功与超过 22 个任务策略对相关 (rho = 0.840)。受控比较表明，在匹配的数据预算和更新时间表下，我们的指导方法优于匹配的基线。仅通过 150 个额外的子任务演示，Franka 上的成功率就从 13.3% 上升到 75.0%，AgileX 上的成功率从 40.0% 上升到 83.8%。接受指导的专家还转移到四种坚持的组合，取得了 35.0% 的平均成功率，而通过统一获取的演示更新的共享策略基线的成功率为 0%。总之，这些结果表明，世界模型可以充当积极的教练，将想象中的失败转化为有针对性的监督，以改进模块化政策。项目页面：https://robocoach-ai.github.io/
+
+</details>
+
+---
+
+## 8. Why Do Conventional World Models Fail to Learn Cellular Automata? / 为什么传统的世界模型无法学习元胞自动机？
+
+**Date**: 2026-09-30 | **arXiv**: [2609.39604v1](http://arxiv.org/abs/2609.39604v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.39604v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Although conventional world models - auto-regressive or diffusion models based on transformers or convolutional networks - may learn surface statistics of world dynamics, can they learn the exact world dynamics from its observed history? Leveraging cellular automata as a simple testbed, we find the answer to be no in many cases. Conventional architectures predict most pixels correctly yet rarely complete a rollout: a CNN predicts 96.3% of cells but completes 18.9% of rollouts; a joint diffusion model completes none. We trace the gap to three failure modes of these world models - namely, they fail to exactly capture spatial locality, temporal locality or temporal stability. Simple changes repair each: (1) for spatial locality, two-dimensional rotary positions lift a transformer from 39.1% to 100% on the Game of Life; (2) for temporal locality, handing each token its cell's previous-frame neighbourhood lifts the same transformer from 25.8% to 99.9% on unseen rules; (3) for temporal stability, causal freezing lifts the same diffusion weights from 42.2% to 99.9%. None of the three changes touches the architectural backbone; each only modifies the information flow within it. We also compare joint and ordered sampling on billiards and, in an exploratory study, on a simulated Burgers equation.
+
+尽管传统的世界模型——基于变压器或卷积网络的自回归或扩散模型——可以学习世界动态的表面统计数据，但它们能否从观察到的历史中学习准确的世界动态？利用元胞自动机作为简单的测试平台，我们发现在许多情况下答案是否定的。传统架构能够正确预测大多数像素，但很少完成 rollout：CNN 预测 96.3% 的单元，但完成了 18.9% 的 rollout；联合扩散模型则无济于事。我们将差距追溯到这些世界模型的三种失败模式——即它们无法准确捕捉空间局部性、时间局部性或时间稳定性。简单的改变修复了每一个：（1）对于空间局部性，二维旋转位置将生命游戏中的变压器从 39.1% 提升到 100%； (2) 对于时间局部性，将每个标记交给其单元格的前一帧邻域，根据未见的规则将相同的变换器从 25.8% 提升到 99.9%； (3) 对于时间稳定性，因果冻结将相同的扩散权重从 42.2% 提升到 99.9%。这三个变化都没有触及架构的主干；每个仅修改其中的信息流。我们还比较了台球的联合采样和有序采样，以及在一项探索性研究中，比较了模拟伯格斯方程。
+
+</details>
+
+---
+
+## 9. Learning Normal Diffusion Dynamics for Backdoor Defense in Text-to-Image Models / 学习文本到图像模型中后门防御的正态扩散动力学
+
+**Date**: 2026-09-30 | **arXiv**: [2609.39548v1](http://arxiv.org/abs/2609.39548v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.39548v1)
+
+**Categories**: cs.CV, cs.AI, cs.CR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Backdoor attacks pose a serious threat to the secure deployment of text-to-image (T2I) diffusion models. Existing defenses typically detect backdoors from specific abnormal patterns in internal representations, which may limit their generalizability with the emergence of increasingly diverse attack mechanisms. In this paper, we study backdoor defense of T2I diffusion models from a transition-dynamics perspective. We observe that benign diffusion trajectories exhibit structured and timestep-dependent transition patterns from cross-attention, latent and noise spaces, whereas backdoor attacks tend to induce deviations from such normal evolution. Motivated by these observations, we propose Normal Diffusion Dynamics Learning (NDDL), a novel backdoor defense framework that learns the normal transition dynamics of diffusion trajectories utilizing only benign samples. NDDL constructs compact multi-space trajectory representations and trains a timestep-conditioned dynamics model to predict the diffusion evolution. In the inference phase, deviations between the observed and predicted transitions are exploited to quantify dynamics inconsistency for backdoor detection. NDDL further enables trigger localization without any prior knowledge of the embedded backdoor by performing substitution with low-semantic words. Extensive experiments for diverse backdoor attacks demonstrate the effectiveness and generalizability of our proposed NDDL.
+
+后门攻击对文本到图像（T2I）扩散模型的安全部署构成严重威胁。现有的防御措施通常从内部表示中的特定异常模式中检测后门，​​随着日益多样化的攻击机制的出现，这可能会限制其普遍性。在本文中，我们从转换动力学的角度研究 T2I 扩散模型的后门防御。我们观察到，良性扩散轨迹表现出来自交叉注意力、潜在空间和噪声空间的结构化和时间步依赖的过渡模式，而后门攻击往往会导致这种正常进化的偏差。受这些观察的启发，我们提出了正态扩散动力学学习（NDDL），这是一种新颖的后门防御框架，仅利用良性样本来学习扩散轨迹的正常过渡动力学。 NDDL 构建紧凑的多空间轨迹表示并训练时间步条件动力学模型来预测扩散演化。在推理阶段，利用观察到的转换和预测的转换之间的偏差来量化后门检测的动态不一致。 NDDL 通过使用低语义词进行替换，进一步实现触发本地化，而无需事先了解嵌入式后门。针对不同后门攻击的大量实验证明了我们提出的 NDDL 的有效性和通用性。
+
+</details>
+
+---
+
+## 10. MotionWeave: Learning Motion-Centered Future Dynamics for Vision-Language-Action Policies / MotionWeave：学习以运动为中心的未来动态，以实现视觉-语言-行动策略
+
+**Date**: 2026-09-30 | **arXiv**: [2609.39324v1](http://arxiv.org/abs/2609.39324v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.39324v1)
+
+**Categories**: cs.RO, cs.CV, cs.LG
+
+**Code**: https://github.com/autu-mn/MotionWeave.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision-Language-Action (VLA) models have recently incorporated world models to provide richer dynamic supervision beyond sparse action labels. However, explicitly predicting future images or videos may include control-irrelevant appearance, while guidance derived from holistic future visual representations and shared global action features may fail to establish timestep-specific correspondence between actions and local visual changes. To address this issue, we propose MotionWeave, a motion-centric future-dynamics framework for action-chunk prediction with two modules: the Action-Induced Motion Grounder (AIMG) and the Horizon Residual Composer (HRC). Specifically, AIMG conditions on action and proprioceptive representations to construct horizon-specific queries that localize interaction regions associated with each future action timestep from current visual tokens. HRC extracts differences between interaction representations at adjacent horizons, encodes them as temporal motion cues, and injects them into action tokens through a gated residual. During training, robot-arm masks rendered from future frames are used to construct KL-based motion-grounding supervision, while inference uses only the current observation. On six MetaWorld tasks, MotionWeave achieves a 75.3% average success rate, an absolute gain of 8.6% over π0 (66.7%), especially on sustained-interaction tasks. Our code is available at https://github.com/autu-mn/MotionWeave.
+
+视觉-语言-动作（VLA）模型最近整合了世界模型，以提供超越稀疏动作标签的更丰富的动态监督。然而，明确预测未来图像或视频可能包括与控制无关的外观，而从整体未来视觉表示和共享全局动作特征导出的指导可能无法在动作和局部视觉变化之间建立特定于时间步长的对应关系。为了解决这个问题，我们提出了 MotionWeave，一个以运动为中心的未来动态框架，用于动作块预测，具有两个模块：动作诱导运动地面器（AIMG）和地平线残留作曲家（HRC）。具体来说，AIMG 以动作和本体感受表征为条件，构建特定于视野的查询，定位与当前视觉标记中每个未来动作时间步相关的交互区域。 HRC 提取相邻视野处交互表示之间的差异，将它们编码为时间运动线索，并通过门控残差将它们注入到动作标记中。在训练过程中，从未来帧渲染的机器人手臂掩模用于构建基于 KL 的运动接地监督，而推理仅使用当前的观察结果。在六项 MetaWorld 任务中，MotionWeave 取得了 75.3% 的平均成功率，比 π0 (66.7%) 绝对提高了 8.6%，特别是在持续交互任务上。我们的代码可在 https://github.com/autu-mn/MotionWeave 获取。
+
+</details>
+
+---
+
+## 11. ReWAM: Reciprocal World Action Models for Interactive Autonomous Driving / ReWAM：交互式自动驾驶的互惠世界行动模型
+
+**Date**: 2026-09-30 | **arXiv**: [2609.39245v1](http://arxiv.org/abs/2609.39245v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.39245v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In interactive scenarios, an autonomous driving system is required to generate ego actions under the influence of other agents' behaviors. Existing World Action Models (WAMs) typically model other agents as components of the world model rather than as decision-makers that fundamentally shape the action of the ego agent, which impairs their performance in dense interaction scenarios. We introduce Reciprocal World Action Models (ReWAM), a game-theoretic world action modeling framework that captures the reciprocal influence between the ego agent and other agents by representing them as conditional responders whose actions are mutually influenced. We instantiate this framework with a Level-$k$ response hierarchy, where role-specific ego and other action DiTs exchange compact strategy tokens through cross-agent attention while remaining grounded in a shared representation of the future driving world. To learn the response policy of the ego agent from demonstrations, we formulate expert actions as samples from the best response distribution and jointly optimize the entire hierarchy using conditional flow matching. Our framework is evaluated on the NAVSIM dataset and achieves state-of-the-art performance compared to baselines. The improvement is particularly significant in interactive scenarios, validating that modeling reciprocal responses provides a more effective foundation for interaction-aware world action generation.
+
+在交互场景中，自动驾驶系统需要在其他智能体行为的影响下产生自我行为。现有的世界行动模型（WAM）通常将其他智能体建模为世界模型的组成部分，而不是从根本上塑造自我智能体行为的决策者，这会损害它们在密集交互场景中的表现。我们引入了互惠世界行动模型（ReWAM），这是一种博弈论世界行动建模框架，通过将自我代理和其他代理表示为其行为相互影响的条件响应者来捕获自我代理和其他代理之间的相互影响。我们用 Level-$k$ 响应层次结构实例化这个框架，其中角色特定的自我和其他行动 DiT 通过跨代理注意力交换紧凑的策略令牌，同时保持扎根于未来驾驶世界的共享表示。为了从演示中学习自我代理的响应策略，我们将专家动作制定为最佳响应分布的样本，并使用条件流匹配共同优化整个层次结构。我们的框架在 NAVSIM 数据集上进行评估，并与基线相比实现了最先进的性能。这一改进在交互场景中尤其显着，验证了交互响应建模为交互感知世界动作生成提供了更有效的基础。
+
+</details>
+
+---
+
+## 12. The Planning Limits of Latent World Models / 潜在世界模型的规划限制
+
+**Date**: 2026-09-30 | **arXiv**: [2609.39235v1](http://arxiv.org/abs/2609.39235v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.39235v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models offer a promising way to help robots understand how the physical world evolves and plan complex behaviours through imagination. Yet existing studies mainly demonstrate what these models can accomplish, leaving unclear when their predictions remain useful for planning and where they fail. We study this question using action-conditioned predictors built on five frozen self-supervised visual backbones: V-JEPA 2, V-JEPA 2.1, VideoMAEv2, VideoPrism, and DINOv2. We use frozen backbones to test representations intended to transfer across environments. We evaluate these models on diverse Meta-World manipulation tasks and real-robot interactions from BridgeData V2. We find that a world model guides action selection reliably only when the goal lies within, or slightly beyond, the trajectory it imagines during planning. With five-step rollouts, the length the predictor was trained on, the world model ranks actions reliably only for targets five to ten control steps ahead, whereas task goals lie 16 to 53 steps away. Neither an 81-fold larger predictor nor longer-rollout training extends this range; the encoder affects both range and closed-loop success, with V-JEPA 2.1 performing most consistently. More fundamentally, the limit persists under perfect prediction: using the real simulator, success falls from 92% to 41% as the target moves from five to twenty steps ahead of a five-step rollout. Planning therefore requires either longer imagined trajectories or closer subgoals. For distant goals, pure imagination succeeds in 23% of episodes, planning with feedback (MPC) raises success to 30%, imagining as far as the goal to 47%, and nearby expert subgoals to 76%. Used within its plannable range, a world model can also improve a vision-language-action (VLA) policy: choosing among eight actions the VLA proposes raises its success from 65% to 77% across 16 different tasks.
+
+世界模型提供了一种有前途的方法来帮助机器人了解物理世界如何演变并通过想象力规划复杂的行为。然而现有的研究主要证明了这些模型可以实现什么，但不清楚它们的预测何时对规划有用以及它们在哪里失败。我们使用基于五个冻结的自我监督视觉主干的动作条件预测器来研究这个问题：V-JEPA 2、V-JEPA 2.1、VideoMAEv2、VideoPrism 和 DINOv2。我们使用冻结主干来测试旨在跨环境传输的表示。我们在各种元世界操作任务和 BridgeData V2 的真实机器人交互上评估这些模型。我们发现，只有当目标位于或稍微超出它在规划过程中想象的轨迹时，世界模型才能可靠地指导行动选择。通过五步推出（即预测器训练的长度），世界模型仅对领先 5 到 10 个控制步骤的目标可靠地排名操作，而任务目标则位于 16 到 53 步之外。 81 倍大的预测器和更长的推出训练都没有扩展这个范围；编码器会影响范围和闭环成功，其中 V-JEPA 2.1 的表现最为一致。更根本的是，在完美的预测下，限制仍然存在：使用真实的模拟器，当目标从五步推出前五步移动到二十步时，成功率从 92% 下降到 41%。因此，规划要么需要更长的想象轨迹，要么需要更接近的子目标。对于遥远的目标，纯粹的想象力在 23% 的情节中成功，带反馈的规划 (MPC) 将成功率提高到 30%，想象远方的目标达到 47%，附近的专家子目标达到 76%。在其可规划范围内使用世界模型还可以改进视觉-语言-行动 (VLA) 策略：在 VLA 提出的八个行动中进行选择，可以将 16 个不同任务的成功率从 65% 提高到 77%。
+
+</details>
+
+---
+
+## 13. MEND: Label-Free Detection, Localisation, and Correction of Latent Hallucination in World Models / MEND：世界模型中潜在幻觉的无标记检测、定位和纠正
+
+**Date**: 2026-09-30 | **arXiv**: [2609.39182v1](http://arxiv.org/abs/2609.39182v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.39182v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World Models are appearing as the next major frontier in computer vision. However, their robustness is currently largely unexplored. We identify the phenomenon of hallucination in latent World Models: given a state and an action, the predicted next latent can decode to a scene that never occurs. Because the prediction is statistically ordinary and is fed back autoregressively by the model, the error is both silent and compounding. We study whether such latent hallucination can be detected, localised, and corrected at inference time, on a frozen self-supervised world model in the absence of ground-truth error labels. We introduce Masked Empirical-Bayes Neural Denoising (MEND), a single conditional score network trained by denoising score matching on real transitions, whose score field serves three roles: its magnitude detects hallucination, its per-token field localises it to specific image patches, and it defines an inference-time correction direction. On two navigation environments MEND detects hallucination with an AUROC of up to 0.80 without using actions, exceeding a single-Gaussian density baseline while also localising the error (per-token AUPRC up to 0.87) and correcting it, all from one score field. Our correction reliably reduces single-step latent error and improves predictions. We identify that a part of the error is tangent to the data manifold, hence, we focus on detection and localisation while highlighting promises of the correction.
+
+世界模型正在成为计算机视觉的下一个主要前沿领域。然而，它们的稳健性目前很大程度上尚未得到探索。我们识别了潜在世界模型中的幻觉现象：给定一个状态和一个动作，预测的下一个潜在世界可以解码为从未发生过的场景。由于预测在统计上是普通的，并且由模型以自回归方式反馈，因此误差既是无声的，又是复合的。我们研究在没有真实错误标签的情况下，在冻结的自我监督世界模型上，是否可以在推理时检测、定位和纠正这种潜在的幻觉。我们引入了掩蔽经验贝叶斯神经去噪（MEND），这是一种通过对真实转换进行去噪得分匹配训练的单一条件得分网络，其得分字段具有三个作用：其大小检测幻觉，其每个标记字段将其定位到特定图像块，并定义推理时间校正方向。在两种导航环境中，MEND 在不使用任何操作的情况下以高达 0.80 的 AUROC 检测幻觉，超过单高斯密度基线，同时还定位错误（每个标记 AUPRC 高达 0.87）并纠正它，所有这些都来自一个分数字段。我们的校正可靠地减少了单步潜在误差并改进了预测。我们发现部分错误与数据流形相切，因此，我们专注于检测和定位，同时强调纠正的承诺。
+
+</details>
+
+---
+
+## 14. LocoWM: High-Precision Locomotion through World-Model-Guided Residual Adaptation / LocoWM：通过世界模型引导的残差适应实现高精度运动
+
+**Date**: 2026-09-30 | **arXiv**: [2609.39179v1](http://arxiv.org/abs/2609.39179v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.39179v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+High-precision locomotion combines motion-command tracking with precise regulation of task-relevant physical states, enabling robots to interact reliably with their surroundings during motion. Joint end-to-end optimization can leave precision objectives insufficiently optimized, while reactive residual control adjusts actions only after deviations become observable. We present \textbf{LocoWM}, a world-model-guided preactive residual adaptation framework for high-precision locomotion. A base policy provides command-following locomotion, while an action-conditioned world model predicts a sequence of future physical states from proprioceptive history and the proposed base action. A residual adapter conditions on this predicted sequence to generate additive action corrections that compensate for anticipated deviations. Two-stage training first learns locomotion and action-conditioned dynamics, then freezes both modules while training the adapter, separating locomotion acquisition from precision adaptation. Experiments spanning terrain leveling, acceleration compensation, and push recovery demonstrate improved control precision and disturbance robustness over end-to-end and reactive residual baselines. Demos and code are available at: https://zhaozijie2022.github.io/LocoWM
+
+高精度运动将运动命令跟踪与任务相关物理状态的精确调节相结合，使机器人能够在运动过程中与周围环境可靠地交互。联合端到端优化可能会使精度目标优化不充分，而反应残差控制仅在可观察到偏差后才调整动作。我们提出了 \textbf{LocoWM}，一种用于高精度运动的世界模型引导的预主动残差适应框架。基本策略提供遵循命令的运动，而以动作为条件的世界模型则根据本体感受历史和建议的基本动作预测一系列未来的物理状态。残余适配器根据该预测序列生成附加作用校正，以补偿预期偏差。两阶段训练首先学习运动和动作条件动力学，然后在训练适配器时冻结两个模块，将运动获取与精确适应分开。涵盖地形平整、加速度补偿和推力恢复的实验表明，在端到端和反应性剩余基线上，控制精度和干扰鲁棒性得到了提高。演示和代码位于：https://zhaozijie2022.github.io/LocoWM
+
+</details>
+
+---
+
+## 15. Linear Recurrent Memory Suffices to Distil a World-Model Policy for Robot Air Hockey / 线性循环存储器足以提炼出机器人空气曲棍球的世界模型策略
+
+**Date**: 2026-09-30 | **arXiv**: [2609.39151v1](http://arxiv.org/abs/2609.39151v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.39151v1)
+
+**Categories**: cs.RO, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Does memory-dependent control need nonlinear recurrent dynamics? We study simulated air-hockey defence under temporary loss of puck tracking. A DreamerV3 teacher outperforms a memoryless policy under tracking loss, while resetting the teacher's recurrent state sharply reduces performance, which demonstrates that the task requires memory. We distil this teacher into compact recurrent policies with a 64 dimensional state, with a combination of a diagonal linear recurrence and an optional rank-$k$ nonlinear innovation while retaining nonlinear observation encoders and action heads. Across five matched seeds, the purely linear recurrent model ($k=0$) matches both the GRU baseline and the teacher throughout the tested range of tracking loss. Increasing nonlinear innovation rank providing no measured benefits. This result is obtained on a fresh test split, which will be only opened after all models and analyses are frozen. The linear model requires fewer recurrent parameters and less computation than GRU, but performs comparably. These results suggest that, for this memory dependent control task, nonlinear representation learning around a simple linear memory mechanism can be sufficient, and that nonlinear recurrent dynamics are not necessarily required. These conclusions are limited to the simulated task, teacher, state dimension, and blackout horizon considered here, and to policies whose observation encoder and action head remain nonlinear.
+
+依赖记忆的控制是否需要非线性循环动力学？我们研究了冰球跟踪暂时丢失情况下的模拟空气曲棍球防守。 DreamerV3 教师在跟踪损失时优于无记忆策略，而重置教师的循环状态会大幅降低性能，这表明该任务需要记忆。我们将这个教师提炼为具有 64 维状态的紧凑循环策略，结合对角线线性循环和可选的rank-$k$非线性创新，同时保留非线性观察编码器和动作头。在五个匹配的种子中，纯线性循环模型 ($k=0$) 在整个跟踪损失测试范围内匹配 GRU 基线和教师。非线性创新排名的提高并没有带来可衡量的效益。该结果是在新的测试拆分中获得的，只有在所有模型和分析都冻结后才会打开。与 GRU 相比，线性模型需要更少的循环参数和计算量，但性能相当。这些结果表明，对于这种依赖于记忆的控制任务，围绕简单的线性记忆机制的非线性表示学习就足够了，并且不一定需要非线性循环动力学。这些结论仅限于此处考虑的模拟任务、教师、状态维度和停电范围，以及观察编码器和行动头保持非线性的策略。
+
+</details>
+
+---
+
+## 16. Sparse-WAM: Accelerating World Action Models via Action-Guided Sparse Imagination / Sparse-WAM：通过行动引导的稀疏想象力加速世界行动模型
+
+**Date**: 2026-09-30 | **arXiv**: [2609.38984v1](http://arxiv.org/abs/2609.38984v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.38984v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World-action models (WAMs) leverage pretrained video models to improve generalization in robot control by jointly predicting future visual states and actions. This capability comes at a substantial inference cost, as dense future-frame tokens are repeatedly processed during denoising. Prior methods address this by token pruning that prioritizes visual fidelity to reduce denoising costs in video diffusion models. However, these methods do not use action relevance to determine which future-frame tokens to retain during joint denoising in WAMs. In this paper, we propose Sparse-WAM, a training-free framework for action-guided sparse imagination that selectively processes future-frame tokens to accelerate WAM inference. We observe substantial overlap in the spatial distribution of attention from action tokens to future-frame tokens (action-to-future attention) between consecutive denoising steps, despite continued updates to the future representations. Motivated by this, we develop Action-Guided Token Selection to retain frame-specific action-relevant regions together with cross-frame context. However, a naive implementation can incur attention-scoring and token-packing overhead that offsets the computational savings from pruning. We therefore introduce Pilot, an efficient engine that reduces sparse inference overhead through lightweight scoring and cross-step reuse of token selections. On LIBERO with FastWAM-Joint and RoboLab-120 with Cosmos 3 Edge, Sparse-WAM achieves inference speedups of approximately $2.0\times$ and $1.8\times$, respectively, over dense eager inference on an NVIDIA RTX 4090, while largely preserving task performance.
+
+世界动作模型 (WAM) 利用预训练的视频模型，通过联合预测未来的视觉状态和动作来提高机器人控制的泛化能力。这种能力需要付出巨大的推理成本，因为在去噪过程中会重复处理密集的未来帧标记。先前的方法通过标记修剪来解决这个问题，标记修剪优先考虑视觉保真度以减少视频扩散模型中的去噪成本。然而，这些方法不使用动作相关性来确定在 WAM 中联合去噪期间保留哪些未来帧标记。在本文中，我们提出了 Sparse-WAM，这是一种用于行动引导的稀疏想象力的免训练框架，它有选择地处理未来帧标记以加速 WAM 推理。我们观察到连续去噪步骤之间从动作标记到未来帧标记（动作到未来注意力）的注意力空间分布存在大量重叠，尽管未来表示不断更新。受此启发，我们开发了动作引导的令牌选择，以保留特定于框架的动作相关区域以及跨框架上下文。然而，简单的实现可能会产生注意力评分和令牌打包开销，从而抵消了剪枝带来的计算节省。因此，我们引入了 Pilot，这是一种高效的引擎，可以通过轻量级评分和令牌选择的跨步骤重用来减少稀疏推理开销。在采用 FastWAM-Joint 的 LIBERO 和采用 Cosmos 3 Edge 的 RoboLab-120 上，与 NVIDIA RTX 4090 上的密集热切推理相比，Sparse-WAM 的推理速度分别提高了约 2.0 美元和 1.8 美元，同时很大程度上保留了任务性能。
+
+</details>
+
+---
+
+## 17. Drone Soccer: Learning to Manipulate with Multicopter Downwash / 无人机足球：学习使用多旋翼下洗操作
+
+**Date**: 2026-09-29 | **arXiv**: [2609.38588v1](http://arxiv.org/abs/2609.38588v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.38588v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Although multicopter drones are traditionally designed for "perception-only" tasks, like mapping and exploration, recent work has sought to develop Unmanned Aerial Manipulators (UAMs) to solve mobile manipulation tasks. Aerial manipulation performance can be impacted by "downwash," the airflow produced by propellers, but current state-of-the-art UAMs either ignore downwash or treat it as a disturbance. Instead, is it possible to actively use downwash as a tool during manipulation? We design a drone soccer task to explore the feasibility of downwash-based manipulation. Specifically, we develop a simplified downwash dynamics model which we use to train an RL policy to dribble a soccer ball. We further demonstrate that our policy transfers to real world deployment. This work provides key insights into novel manipulation capabilities for multicopters.
+
+尽管多旋翼无人机传统上是为“仅感知”任务而设计的，例如测绘和探索，但最近的工作试图开发无人机操纵器（UAM）来解决移动操纵任务。空中操纵性能可能会受到“下洗流”（螺旋桨产生的气流）的影响，但当前最先进的 UAM 要么忽略下洗流，要么将其视为干扰。相反，是否有可能在操纵过程中主动使用下洗作为工具？我们设计了一个无人机足球任务来探索基于下洗的操纵的可行性。具体来说，我们开发了一个简化的下洗动力学模型，用于训练运球足球的强化学习策略。我们进一步证明我们的政策转移到现实世界的部署。这项工作为多旋翼飞行器的新颖操纵能力提供了重要见解。
+
+</details>
+
+---
+
+## 18. Learning to Plan from Random Exploration / 从随机探索中学习计划
+
+**Date**: 2026-09-29 | **arXiv**: [2609.38383v1](http://arxiv.org/abs/2609.38383v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.38383v1)
+
+**Categories**: cs.LG, cs.RO, stat.ML
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Random exploration reveals how an environment can be traversed before a goal is specified. Can this experience support long-range planning without policy-improvement training? Our random-walk analysis explains what temporal relations contain: short horizons reveal geodesic geometry in the diffusion limit, while longer horizons reveal connectivity between regions before mixing removes these distinctions. We learn these relations with a conditional energy-based model that estimates temporal log-density ratios through horizon-conditioned embeddings. The model is trained on observation pairs by noise-contrastive estimation, without action or reward labels. The planner queries these learned relations at different horizons as it moves toward the goal. At test time, a separate local dynamics model predicts candidate action outcomes, and the temporal model evaluates their progress toward the goal by selecting or aggregating estimated improvements across horizons. The agent executes one action and replans with both models fixed. Experiments demonstrate long-range maze planning from random exploration using states and images. Learned score fields, embedding probes, and planned routes exhibit properties of a multiscale cognitive map. We further demonstrate egocentric navigation from random exploration and manipulation planning from suboptimal data.
+
+随机探索揭示了在指定目标之前如何遍历环境。如果没有政策改进培训，这种经验能否支持长期规划？我们的随机游走分析解释了时间关系包含的内容：短视界揭示了扩散极限中的测地几何，而较长的视界揭示了混合消除这些区别之前区域之间的连通性。我们使用基于条件能量的模型来学习这些关系，该模型通过水平条件嵌入来估计时间对数密度比。该模型通过噪声对比估计对观察对进行训练，没有动作或奖励标签。规划者在朝着目标前进的过程中会在不同的层面上查询这些习得的关系。在测试时，一个单独的局部动态模型预测候选行动结果，而时间模型通过选择或聚合跨视野的估计改进来评估他们实现目标的进度。代理执行一项操作并在修复两个模型的情况下重新计划。实验证明了使用状态和图像进行随机探索的远程迷宫规划。学习的分数字段、嵌入探针和规划的路线展示了多尺度认知图的属性。我们进一步证明了来自随机探索的以自我为中心的导航和来自次优数据的操作规划。
+
+</details>
+
+---
+
+## 19. EVOKE: Eliciting World Knowledge in Agents for Transferable Decision-Making / EVOKE：在代理中获取世界知识以进行可转移决策
+
+**Date**: 2026-09-29 | **arXiv**: [2609.38334v1](http://arxiv.org/abs/2609.38334v1) | **PDF**: [Link](http://arxiv.org/pdf/2609.38334v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language models (LLMs) are increasingly deployed as agents for multi-step decision-making, yet transfer poorly to unseen environments. World-model methods address this by training agents to predict future observations, at the cost of additional training and errors that compound when predictions are used for planning. However, for LLM agents operating in digital environments, much of this world knowledge is already internalized during pretraining, which shifts the problem from acquiring it to eliciting it. We argue that typical post-training provides little pressure for such elicitation, since supervision under a single goal at each visited state inadvertently drives policies to rely on superficial contextual habits. We introduce EVOKE, a post-training method that supplies this pressure through goal diversity at fixed states. Motivated by theory showing that an agent competent across diverse goals must encode a world model recoverable from its action preferences, EVOKE holds the environment state and interaction history fixed and ranks the same candidate actions under alternative goals, forcing action preferences to change, so that a policy relying on contextual habits or single-goal correlations cannot order them correctly. This implicitly elicits the policy's pretrained world knowledge to inform decisions. We evaluate EVOKE across diverse tasks in three backbones, demonstrating improved task performance, unseen environment generalization, and data efficiency. We further conduct controlled analyses to better understand what drives these gains. These findings offer a new perspective on eliciting internalized world knowledge for transferable action through direct decision supervision.
+
+大型语言模型 (LLM) 越来越多地被部署为多步骤决策的代理，但很难迁移到看不见的环境。世界模型方法通过训练代理来预测未来的观察结果来解决这个问题，但代价是额外的训练和在使用预测进行规划时会出现的错误。然而，对于在数字环境中操作的法学硕士代理人来说，许多世界知识已经在预训练期间内化，这将问题从获取知识转变为引出知识。我们认为，典型的培训后对这种诱导几乎没有压力，因为在每个访问状态的单一目标下进行监督会无意中促使政策依赖于肤浅的情境习惯。我们引入了 EVOKE，这是一种训练后方法，通过固定状态下的目标多样性来提供这种压力。理论表明，能够跨越不同目标的代理必须编码一个可从其行动偏好中恢复的世界模型，EVOKE 保持环境状态和交互历史固定，并将相同的候选行动排列在替代目标下，迫使行动偏好发生变化，从而使依赖于上下文习惯或单目标相关性的策略无法正确排序。这隐含地引出了政策预先训练的世界知识来为决策提供信息。我们在三个主干的不同任务中评估 EVOKE，展示了改进的任务性能、未见的环境泛化和数据效率。我们进一步进行受控分析，以更好地了解推动这些收益的因素。这些发现为通过直接决策监督获取内化的世界知识以采取可转移的行动提供了新的视角。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-09-30 (27 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-09-30
