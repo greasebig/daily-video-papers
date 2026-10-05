@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-10-05](papers/2026-10-05.md) - 7 papers
 - [2026-10-02](papers/2026-10-02.md) - 42 papers
 - [2026-10-01](papers/2026-10-01.md) - 42 papers
 - [2026-09-30](papers/2026-09-30.md) - 61 papers
@@ -173,6 +174,130 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-10-05 (7 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-10-05
+
+**Paper Count**: 7
+
+---
+
+## 1. FrugalEvo: Towards Cost-Aware LLM-Guided Program Evolution / FrugalEvo ：实现成本意识法学硕士指导计划的演变
+
+**Date**: 2026-10-02 | **arXiv**: [2610.03675v1](http://arxiv.org/abs/2610.03675v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.03675v1)
+
+**Categories**: cs.NE, cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+LLM-guided evolutionary methods, such as AlphaEvolve, have emerged as powerful approaches for challenging computational optimization problems, such as circle packing. However, prior work typically optimizes performance gain over a fixed number of iterations. We argue that practical optimization should maximize gain per unit cost. To this end, we propose FrugalEvo, a cost-aware evolutionary framework where a stronger, higher-cost LLM explores solution strategies, and a cheaper LLM implements them and iteratively refines the resulting code. We also design a cache-efficient evolution process, where our harness and prompts maximize the sharing of prefixes across different evolution steps, to improve cache reuse. To measure solution quality throughout a fixed cost budget, we introduce Budget-Aware Area Under the Curve (BA-AUC), defined as the area under the best-so-far evaluation score curve over cumulative LLM cost, up to the budget. Across 10 mathematical and systems optimization tasks, FrugalEvo matches or surpasses state-of-the-art baselines, including OpenEvolve, ShinkaEvolve, AdaEvolve, and EvoX, in final solution quality and achieves higher BA-AUC on 9 tasks. It also achieves higher average performance than these baselines on 10 algorithmic optimization tasks from ALE-Bench-Lite. Notably, on circle packing, FrugalEvo achieves new state-of-the-art performance with GPT-5.6 Terra and Luna for only 1.68 USD and with GLM-5.3 and its Flash variant for only 0.55 USD, matching or surpassing all baselines, including multi-agent methods such as CORAL and SwarmResearch, which cost approximately 50 USD on average.
+
+LLM引导的进化方法，如AlphaEvolve ，已成为挑战计算优化问题（如圆包装）的有力方法。 然而，先前的工作通常会优化固定迭代次数的性能增益。 我们认为，实际优化应使单位成本收益最大化。 为此，我们提出了FrugalEvo ，这是一个具有成本意识的进化框架，在这个框架中，更强大、更高成本的LLM探索解决方案策略，更便宜的LLM实施这些策略，并迭代优化生成的代码。 我们还设计了一个缓存高效的进化过程，其中我们的利用和提示在不同的进化步骤中最大限度地共享前缀，以提高缓存重用率。 为了衡量整个固定成本预算的解决方案质量，我们引入了Budget-Aware Area Under the Curve （ BA-AUC ） ，定义为累计LLM成本中迄今为止最好的评估分数曲线下的面积，最高可达预算。 在10项数学和系统优化任务中， FrugalEvo在最终解决方案质量方面匹配或超过了包括OpenEvolve、ShinkaEvolve、AdaEvolve和EvoX在内的最先进基线，并在9项任务上实现了更高的BA-AUC。 它还在ALE-Bench-Lite的10个算法优化任务上实现了比这些基线更高的平均性能。 值得注意的是，在圆形包装方面， FrugalEvo使用GPT-5.6 Terra和Luna仅需1.68美元，使用GLM-5.3及其Flash变体仅需0.55美元，即可实现全新的最先进性能，或
+
+</details>
+
+---
+
+## 2. MobiAgent: Dual-Loop Recursive Policy Self-Improvement for Long-Horizon Mobile Manipulation / MobiAgent ：长期移动操纵的双环递归策略自我改进
+
+**Date**: 2026-10-02 | **arXiv**: [2610.03476v1](http://arxiv.org/abs/2610.03476v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.03476v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long-horizon mobile manipulation presents significant challenges due to compounding execution errors and capacity interference between locomotion and arm control. While recent Vision-Language-Action models excel at short-horizon tasks, they lack the hierarchical reasoning required for multi-stage objectives. Furthermore, existing hierarchical agents suffer from rigid sub-task mapping, inflexible replanning, and a lack of continuous learning. To address these limitations, we introduce MobiAgent, a dual-loop agentic framework that bridges robust deployment execution and recursive policy self-improvement. During deployment, the Inner Loop decouples high-level reasoning from low-level control through highly composable atomic skills. It employs Vision-Language models for receding-horizon planning and visual reflection, dynamically composing skills to ensure robust error recovery. These skills are executed by specialized flow-matching experts that share a unified VLM backbone, maximizing reusability while mitigating capacity interference. Concurrently, the Outer Loop drives automated lifelong learning by autonomously segmenting and verifying deployment rollouts, clustering them to discover atomic skills, and continuously fine-tuning the skill library without human annotations. Evaluations on RoboCasa, BEHAVIOR-1K, and real-world tasks demonstrate the effectiveness of MobiAgent. It outperforms $π_{0.5}$-TA by 22.5 percentage points on BEHAVIOR-1K and enables robust recovery from execution failures. Through autonomous data recycling, success improves from 7.50% to 27.50% on RoboCasa and from 32.5% to 57.5% on Astribot S1.
+
+由于运动和手臂控制之间的复合执行误差和容量干扰，长距离移动操纵带来了重大挑战。 虽然最近的视觉-语言-行动模型擅长短期任务，但它们缺乏多阶段目标所需的层次推理。 此外，现有的层次代理存在严格的子任务映射、不灵活的重新规划和缺乏持续学习的问题。 为了解决这些局限性，我们引入了MobiAgent ，这是一种双环代理框架，可桥接强大的部署执行和递归策略自我改进。 在部署期间，内循环通过高度可组合的原子技能将高级推理从低级控制中分离出来。 它采用视觉语言模型进行视野后退规划和视觉反射，动态组合技能以确保强大的错误恢复。 这些技能由专业的流匹配专家执行，他们共享统一的VLM骨干网，最大限度地提高可重用性，同时减少容量干扰。 同时， Outer Loop通过自主分割和验证部署部署、聚类以发现原子技能以及在没有人工注释的情况下持续微调技能库来驱动自动化终身学习。 对RoboCasa、BEHAVIOR-1K和实际任务的评估表明了MobiAgent的有效性。 它在BEHAVIOR-1K上的表现优于$ π_{0.5} $ -TA 22.5个百分点，并能够从
+
+</details>
+
+---
+
+## 3. Follow the Winners: Conservative Policy Improvement with the Cross-Entropy Method for Critic-Free RFT / 关注获奖者：通过无批评RFT的交叉熵方法改进保守政策
+
+**Date**: 2026-10-02 | **arXiv**: [2610.03361v1](http://arxiv.org/abs/2610.03361v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.03361v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Critic-free reinforcement fine-tuning (RFT) for agentic large language models is often done through GRPO-style methods, which compute a group baseline over repeated rollouts to reduce target variance. However, this setup is ill-suited to agents acting in stateful environments such as live services or security sandboxes, where repeated rollouts are impractical to obtain and aggressive updates entrench the noise of long, sparsely verified trajectories. We propose \textit{Follow the Winners} (FTW), a critic-free policy-learning algorithm that adapts the cross-entropy method to RFT, replacing group rollouts with an ordinal filter on replay-buffer samples that yields polynomial concentration in the order statistic of returns. We derive FTW through a control-as-inference lens, which also recovers GRPO and DPO as specific modelling choices, identifying GRPO as risk-neutral while DPO and FTW share a bounded risk-seeking offset that FTW controls. We identify this offset as an inherent trade-off of variance reduction through ordinal filters on samples, whereas a critic model induces a different trade-off between bias and variance. Scaled to agentic LLM post-training, FTW matches GRPO and PPO on Sokoban and Search-R1 baselines, showing a viable trade-off from a value model or group rollouts to CPU memory.
+
+代理大型语言模型的无批评强化微调（ RFT ）通常通过GRPO样式的方法完成，该方法通过重复推出来计算组基线，以减少目标方差。 但是，此设置不适合在状态环境中运行的代理，例如实时服务或安全沙箱，在这些环境中，重复推出是不切实际的，并且积极的更新会巩固长时间、稀疏验证轨迹的噪音。 我们提出了\ textit {Follow the Winners} (FTW) ，这是一种无批评的策略学习算法，它将交叉熵方法适用于RFT ，用重播缓冲区样本上的有序滤波器替换组推出，从而在返回的顺序统计中产生多项式浓度。 我们通过推理控制镜头导出FTW ，该镜头还恢复GRPO和DPO作为特定建模选择，将GRPO确定为风险中立，而DPO和FTW共享FTW控制的有限风险寻求偏移。 我们将这种偏移确定为通过样本上的有序滤波器进行方差减小的固有权衡，而批评模型在偏差和方差之间诱导不同的权衡。 FTW在培训后扩展到代理LLM ，在Sokoban和Search-R1基线上匹配GRPO和PPO ，显示从价值模型或组推出到CPU内存的可行权衡。
+
+</details>
+
+---
+
+## 4. Lightweight, Rubric-Guided Trajectory Evaluation for Production AI Agents / 生产人工智能代理的轻量级、细则引导轨迹评估
+
+**Date**: 2026-10-02 | **arXiv**: [2610.03315v1](http://arxiv.org/abs/2610.03315v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.03315v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Trajectory evaluation is essential for improving the reliability of LLM-based agents, but production use makes it expensive to run repeatedly. Modern agents generate long traces containing tool calls, observations, retries, and external outputs, while not all raw tokens are equally useful for diagnosis. We present \textit{LiteTrajEval}, a lightweight architecture for budget-bounded trajectory evaluation. LiteTrajEval derives compact domain-specific rule profiles offline, then preprocesses each trajectory online, marks heuristic failure signals, serializes it under a fixed global budget, and invokes a single rubric-guided LLM judge to produce structured diagnostic reports. Evaluated on public Magentic-One-style and $τ$-bench-style trajectory datasets, LiteTrajEval improves failure-localization alignment with human annotations by roughly 20--35 percentage points on Magentic-One and up to 23 percentage points on $τ$-retail compared with AgentRx, while reducing cost by about 6$\times$ and evaluation time by more than 8$\times$. This solution has also been deployed in our enterprise agentic platform.
+
+轨迹评估对于提高基于LLM的代理的可靠性至关重要，但生产使用使得重复运行成本高昂。 现代代理生成包含工具调用、观察、重试和外部输出的长跟踪，而并非所有原始令牌对诊断同样有用。 我们提出\ textit {LiteTrajEval} ，这是一种用于预算有限轨迹评估的轻量级架构。 LiteTrajEval离线导出紧凑的特定领域规则配置文件，然后在线预处理每个轨迹，标记启发式故障信号，在固定的全局预算下对其进行序列化，并调用单个细则引导的LLM法官生成结构化诊断报告。 LiteTrajEval在公共Magentic-One风格和$ τ $ -bench风格轨迹数据集上进行评估，与AgentRx相比， Magentic-One将故障定位与人工注释的对齐程度提高了大约20-35个百分点，在$ τ $ -retail上提高了23个百分点，同时降低了约6 $\ times $的成本和超过8 $\ times $的评估时间。 此解决方案也已部署在我们的企业代理平台中。
+
+</details>
+
+---
+
+## 5. AdaStep: Adaptive Step Credit Weighting for Agentic Reinforcement Learning / AdaStep ： Agentic强化学习的自适应步骤信用权重
+
+**Date**: 2026-10-02 | **arXiv**: [2610.03223v1](http://arxiv.org/abs/2610.03223v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.03223v1)
+
+**Categories**: cs.LG, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long-horizon LLM agents are typically trained with sparse outcome rewards, making trajectory-level objectives too coarse to distinguish the contribution of individual decisions. Step-level credit assignment provides finer-grained supervision, but its estimates can be unreliable because observed returns also depend on subsequent actions, environment transitions, and trajectory length. We propose AdaStep, an Adaptive Step-credit weighting method that controls how strongly each group-derived local advantage modifies the trajectory-level signal. We formulate this weighting as a mean-squared-error estimation problem for the latent step advantage and, under an explicit conditional sampling assumption, derive an optimal per-state shrinkage coefficient. The coefficient admits a signal-to-total-variance interpretation: it preserves local credit when return variation is attributable to the selected action and suppresses it when variation is dominated by downstream randomness. AdaStep requires only lightweight scalar computation, with no critic, additional rollouts, or extra model inference. Experiments with three model backbones on ALFWorld, WebShop, and ScienceWorld show consistent improvements over baselines at low computational cost.
+
+长期LLM代理通常接受稀疏结果奖励的训练，使得轨迹级目标过于粗糙，无法区分个人决策的贡献。 阶梯级信用分配提供更精细的监督，但其估计可能不可靠，因为观察到的回报也取决于后续行动、环境转换和轨迹长度。 我们提出AdaStep ，这是一种自适应步长信用加权方法，用于控制每个组派生的局部优势对轨迹级信号的修改程度。 我们将这种权重表述为潜在步长优势的均方误差估计问题，并在显式条件采样假设下，推导出最佳的每状态收缩系数。 该系数允许信号到总方差的解释：当回报变异归因于所选动作时，它保留局部信用，并在变异由下游随机性主导时抑制它。 AdaStep只需要轻量级的标量计算，没有批评、额外的推出或额外的模型推断。 在ALFWorld、WebShop和ScienceWorld上对三个模型骨干进行的实验表明，它们以较低的计算成本对基线进行了一致的改进。
+
+</details>
+
+---
+
+## 6. Toward SLM-based agentic task-tool intent matching / 朝着基于SLM的代理任务工具意图匹配迈进
+
+**Date**: 2026-10-02 | **arXiv**: [2610.03213v1](http://arxiv.org/abs/2610.03213v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.03213v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Tool-equipped AI agents use tool calls to access data and act on external systems. Horizontal growth of agentic systems increases the number of these interactions, and further motivates the need for automated, per-call oversight that can operate at low latency and/or on-prem. Conventional authorization schemes can determine whether an agent is allowed to invoke a tool, but cannot assess the agent's underlying cognition, specifically, whether the tool selection represents a logical, relevant step toward satisfying the intent of the task or not. Consequently, an allowed call may still deviate from the task's intent: a rogue agent might deviate the calls or nudge other agents to make a combination of calls that would not align with the intent of the task. Therefore, every call needs to be verified. In this study we investigate the applicability of Small Language Models (SLMs) to this purpose: an SLM functions as a task-tool relevance classifier that evaluates every selected tool independently against the assigned task and returns a relevance signal for downstream enforcement. Equipped with a novel dataset with multi-tool tasks whose required tools span distinct Model Context Protocol (MCP) servers, we used prompt-optimization, supervised fine-tuning, and reinforcement learning through GRPO to optimize and specialize SLMs.
+
+配备工具的人工智能代理使用工具调用来访问数据并对外部系统采取行动。 代理系统的横向增长增加了这些交互的数量，并进一步激发了对可以在低延迟和/或本地运行的自动化每次呼叫监督的需求。 传统的授权方案可以确定代理是否被允许调用工具，但不能评估代理的潜在认知，特别是工具选择是否代表满足任务意图的合乎逻辑的相关步骤。 因此，允许的调用仍可能偏离任务的意图：流氓代理可能会偏离调用或推动其他代理进行与任务意图不一致的调用组合。 因此，每次通话都需要进行验证。 在这项研究中，我们研究了小语言模型（ SLM ）对此目的的适用性： SLM充当任务工具相关性分类器，根据分配的任务独立评估每个选定的工具，并为下游执行返回相关性信号。 我们配备了具有多工具任务的新型数据集，其所需工具跨越不同的模型上下文协议(MCP)服务器，我们通过GRPO使用提示优化、监督微调和强化学习来优化和专业化SLM。
+
+</details>
+
+---
+
+## 7. Investigating the Role of Reasoning-Language Alignment in Monolingual Retrieval-Augmented Generation / 研究推理-语言对齐在单语检索-增强生成中的作用
+
+**Date**: 2026-10-02 | **arXiv**: [2610.03136v1](http://arxiv.org/abs/2610.03136v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.03136v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reasoning traces improve large language models (LLMs), but current models are trained to reason mostly in English. It has been shown that forcing a model to reason in another language degrades accuracy, even when the reasoning language matches the language of the prompt -- but only for a setting where the model reasons over a short prompt. Here, we ask whether the same holds for retrieval-augmented generation (RAG), where the model must read and integrate a large amount of retrieved evidence in the target language. To study this, we build a fully monolingual German RAG question-answering testbed over the fictional world of the tabletop role-playing game The Dark Eye, a domain that is richly documented in German but too niche for the model to answer from memory, so that it has to rely on retrieval. Varying the forced reasoning language of an agentic RAG system on this testbed, we find that aligning the reasoning language with the language of the query and the retrieved documents helps. Forced German reasoning outperforms forced French, although the model benchmarks higher in French, so the benefit comes from alignment and not from language proficiency. The advantage grows when the retrieved context is richer and structure-aware. However, forced German only reaches the level of the model's native, unconstrained English reasoning without surpassing it, showing that native multilingual reasoning is needed. We publicly release the testbed and QA benchmark.
+
+推理痕迹可以改善大型语言模型（ LLM ） ，但当前模型的训练主要是用英语进行推理。 已经证明，即使推理语言与提示的语言匹配，强制模型使用另一种语言进行推理也会降低准确性-但仅适用于模型通过短提示进行推理的设置。 在这里，我们询问检索增强生成（ RAG ）是否同样适用，其中模型必须以目标语言读取并集成大量检索的证据。 为了研究这一点，我们在桌面角色扮演游戏The Dark Eye的虚构世界中构建了一个完全单语的德国抹布问答测试平台，该领域以德语记录丰富，但太小众，模型无法从记忆中回答，因此它必须依靠检索。 我们在这个测试平台上改变了代理RAG系统的强制推理语言，发现将推理语言与查询语言和检索到的文档保持一致是有帮助的。 强制德语推理优于强制法语，尽管该模型在法语中的基准更高，因此好处来自于一致性，而不是语言熟练程度。 当检索到的上下文更丰富且结构感知时，优势就会增加。 然而，强制德语只能达到模型本土的、不受约束的英语推理的水平，而不会超过它，这表明需要本土的多语言推理。 我们公开发布测试平台和QA基准。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-10-02 (42 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-10-02
