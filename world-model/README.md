@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-10-05](papers/2026-10-05.md) - 6 papers
 - [2026-10-02](papers/2026-10-02.md) - 14 papers
 - [2026-10-01](papers/2026-10-01.md) - 19 papers
 - [2026-09-30](papers/2026-09-30.md) - 27 papers
@@ -160,6 +161,114 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-10-05 (6 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-10-05
+
+**Paper Count**: 6
+
+---
+
+## 1. What Should World Models Forget? Stratified Retention for Continual Adaptation / 世界模特应该忘记什么？持续适应的分层保留
+
+**Date**: 2026-10-02 | **arXiv**: [2610.03713v1](http://arxiv.org/abs/2610.03713v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.03713v1)
+
+**Categories**: cs.LG, cs.AI, cs.CV, eess.IV, eess.SP
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Continual learning treats degradation on previously seen data as evidence of failure, a convention inherited from settings with a stationary prediction target, where a correct label remains correct indefinitely. World models do not satisfy this condition. Their prediction target is the environment, which changes, so knowledge that was accurate when acquired may later become false, and discarding it is required behavior rather than a defect. Non-stationary ground truth is well studied in the concept drift literature and in the temporal factuality of language models, but has not been formulated for world models, which are distinctive in that they also encode knowledge that must never be revised. We argue that continual world models require retention stratified by invariance timescale, separating invariants such as physics and object permanence, which must never be revised, from instance-level facts that should be revised as soon as the environment changes. Standard forgetting metrics cannot distinguish a world model that has correctly revised outdated knowledge from one that has suffered catastrophic forgetting, and consequently rank a frozen model highest, while existing physical-reasoning benchmarks evaluate only frozen checkpoints. We propose differential retention, which reports invariant regression testing across the adaptation stream jointly with revision latency, without aggregation.
+
+持续学习将以前看到的数据的退化视为失败的证据，这是从具有固定预测目标的设置中继承的惯例，其中正确的标签无限期地保持正确。 世界模型不满足此条件。 他们的预测目标是环境，环境会发生变化，因此获得准确的知识后来可能会变成错误的，并且丢弃它是必需的行为，而不是缺陷。 非平稳地面真理在概念漂移文献和语言模型的时间真实性中得到了很好的研究，但尚未为世界模型制定，世界模型的独特之处在于它们也编码了绝不能修改的知识。 我们认为，连续世界模型需要按不变性时间尺度分层的保留，将物理和物体永久性等不变量与应在环境变化时立即修改的实例级事实分开，这些不变量绝不能被修改。 标准遗忘指标无法区分正确修改过时知识的世界模型和遭受灾难性遗忘的世界模型，因此将冻结模型排名最高，而现有的物理推理基准仅评估冻结的检查点。 我们提出了差分保留，它报告了适应流中的不变回归测试和修订延迟，而不进行聚合。
+
+</details>
+
+---
+
+## 2. World Embedding Benchmark / 世界嵌入基准
+
+**Date**: 2026-10-02 | **arXiv**: [2610.03632v1](http://arxiv.org/abs/2610.03632v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.03632v1)
+
+**Categories**: cs.CV, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Physical fidelity has received increasing attention in world models and video generation, yet how video representations encode physical information remains less understood. We introduce the World Embedding Benchmark, comprising 8,000 controlled simulation cases from 80 families spanning fluid mechanics, solid mechanics, dynamics, and optics & electromagnetism. Each case pairs a rendered video with simulation-derived physical annotations, supporting three complementary tasks: text-video retrieval, physical-property regression, and multiple-choice video-description pair classification. We use these tasks to distinguish cross-modal physical alignment from the recoverability of quantitative physical information. Evaluated pre-trained omnimodal embedding models show weak retrieval and near-chance within-family pair classification, while lightweight probes recover useful physical information from frozen video embeddings. Continual contrastive training with physics-specific video-text pairs improves retrieval and pair classification but degrades physical-property regression, revealing a trade-off between alignment and quantitative information recoverability. Finally, we use the embeddings to retrieve reference videos for retrieval-augmented generation with MiniMax-H3. Retrieved references improve the physical fidelity of generated videos, with stronger retrieval models yielding larger gains in our experiments. Together, these findings highlight the need to evaluate physical alignment and property recoverability jointly, and demonstrate the utility of physical representations for improving video generation.
+
+物理保真在世界模型和视频生成中受到越来越多的关注，但视频表示如何编码物理信息仍然不太清楚。 我们介绍了世界嵌入基准，其中包括来自80个系列的8,000个受控模拟案例，涵盖流体力学、固体力学、动力学以及光学和电磁学。 每个案例将渲染的视频与模拟衍生的物理注释配对，支持三个互补任务：文本-视频检索、物理属性回归和多项选择视频-描述对分类。 我们使用这些任务来区分跨模态物理对齐和定量物理信息的可恢复性。 经过评估的预训练全模态嵌入模型显示出弱检索和接近概率的家族内配对分类，而轻量级探针从冻结的视频嵌入中恢复有用的物理信息。 使用物理特定视频文本对的连续对比训练提高了检索和配对分类，但降低了物理属性回归，揭示了对齐和定量信息可恢复性之间的权衡。 最后，我们使用嵌入来检索参考视频，以便使用MiniMax-H3进行检索增强生成。 检索的参考文献提高了生成视频的物理保真度，更强的检索模型在我们的实验中产生了更大的收益。 总而言之，这些发现强调了评估身体状况的必要性。
+
+</details>
+
+---
+
+## 3. AVL-JEPA: Preventing Causal Dynamics Information Collapse In Joint Embedding Predictive Architecture World Models / AVL-JEPA ：在联合嵌入预测建筑世界模型中预防因果动态信息崩溃
+
+**Date**: 2026-10-02 | **arXiv**: [2610.03587v1](http://arxiv.org/abs/2610.03587v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.03587v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Joint embedding predictive architectures (JEPAs) predict future latent representations without reconstructing observations, enabling world models to focus on high-level semantic dynamics. However, a JEPA can preserve high dimensional visual information while discarding information about the physical consequences of actions. We call this failure mode causal dynamics information collapse and propose action-grounded vision-invariance latent (AVL) to prevent this collapse. We first use the executed action as an auxiliary dynamics anchor that encourages the model to preserve dynamics information, and then use a vision-invariance pathway which aligns perturbed and clean latent predictions without discarding dynamics information, forcing the model to fully understand and utilize causal dynamics information. We validate AVL on four robotic control tasks (TwoRoom, PushT, OGBench Cube, and Reacher), showing that it substantially improves success rates under visual perturbations while preserving clean-environment performance. We further evaluate physical consequence alignment, clean-noisy dynamics consistency, and the causal effect of targeted transition subspace erasure. Collectively, these results indicate that dynamic information causally relevant to planning is preserved from collapse under AVL.
+
+联合嵌入式预测架构（ JEPA ）在不重建观测值的情况下预测未来的潜在表示，使世界模型能够专注于高级语义动态。 然而， JEPA可以保留高维度的视觉信息，同时丢弃有关行动的物理后果的信息。 我们将这种失效模式称为因果动态信息崩溃，并提出基于动作的视觉不变性潜在（ AVL ）来防止这种崩溃。 我们首先使用执行的动作作为辅助动态锚点，鼓励模型保留动态信息，然后使用视觉不变性路径，在不丢弃动态信息的情况下对齐扰动和干净的潜在预测，迫使模型充分理解和利用因果动态信息。 我们在四个机器人控制任务（ TwoRoom、PushT、OGBench Cube和Reacher ）上验证了AVL ，表明它在保持清洁环境性能的同时，大大提高了视觉扰动下的成功率。 我们进一步评估了物理结果对齐、清洁噪声动力学一致性以及有针对性的过渡子空间擦除的因果效应。 总的来说，这些结果表明，在AVL下，与规划相关的动态信息不会崩溃。
+
+</details>
+
+---
+
+## 4. ReFract: Benchmarking Perspective Awareness in Language Model Agents with Text World Models / ReFract ：使用文本世界模型对语言模型代理的视角意识进行基准测试
+
+**Date**: 2026-10-02 | **arXiv**: [2610.03356v1](http://arxiv.org/abs/2610.03356v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.03356v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large Language Model (LLM) agents are increasingly deployed in high-stakes settings such as industrial maintenance and equipment fault troubleshooting, where workers occupy a variety of roles. A capable agent must therefore act in a way that is calibrated to user's role: taking actions and providing information that respect the role's knowledge and capability boundaries. Unlike coding, where mistakes are usually recoverable, agent responses in these settings are enacted on physical equipment, and can therefore cause irreversible equipment damage, production loss, or personnel harm. Existing benchmarks, however, largely overlook the need for agents to infer what a role intends and acting only through tools that role may legitimately use, a capability which we term Perspective Awareness. To this end, we introduce ReFract, a benchmark of 150 expert-validated entries in which an agent must act differently in response to the same query depending on user's role. Entries of ReFract are grounded in anonymized queries from domain support conversations, against which we construct Text World Models that simulate the agent's operating environments and assemble perspective-aware action trajectories. State-of-the-art LLMs solve at most 69% of the tasks with more than 50% of their trajectories contain attempts of taking perspective-violating actions. ReFract exposes perspective awareness as a distinct, largely unsolved axis of agent evaluation and motivates agents that calibrate not just how to act, but for whom.
+
+大型语言模型（ LLM ）代理越来越多地部署在高风险环境中，例如工业维护和设备故障排除，其中工人担任各种角色。 因此，有能力的客服代表必须以符合用户角色的方式行事：采取行动并提供尊重角色知识和能力界限的信息。 与通常可以恢复错误的编码不同，这些设置中的代理响应是在物理设备上执行的，因此可能导致不可逆转的设备损坏、生产损失或人员伤害。 然而，现有的基准在很大程度上忽略了客服代表推断角色意图的必要性，以及仅通过角色可能合法使用的工具采取行动的必要性，我们称之为视角意识。 为此，我们引入了ReFract ，这是一个由150个专家验证的条目组成的基准，其中代理必须根据用户的角色以不同的方式响应相同的查询。 ReFract的条目基于来自领域支持对话的匿名查询，我们根据这些查询构建文本世界模型，模拟代理的操作环境，并组装具有视角感知的行动轨迹。 最先进的LLM最多解决69%的任务，其中超过50%的任务轨迹包含尝试采取违背视角的行动。 ReFract将视角意识暴露为客服代表评估的一个独特的、很大程度上尚未解决的轴心，并激励不仅仅是校准的客服代表
+
+</details>
+
+---
+
+## 5. Does Physics Live in the Activations? Localizing Physical Quantities in Video Diffusion Models / 物理学存在于激活中吗？定位视频扩散模型中的物理量
+
+**Date**: 2026-10-02 | **arXiv**: [2610.03154v1](http://arxiv.org/abs/2610.03154v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.03154v1)
+
+**Categories**: cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video generation models produce strikingly realistic sequences and are increasingly proposed as world models, yet recent benchmarks reveal pronounced deficits in their physical reasoning. This raises the question of whether these models internalize physical principles or merely reproduce familiar motion patterns. We address this by probing internal representations of video Diffusion Transformers (DiTs) for simulator-derived ground-truth physical quantities spanning kinematic motion and rigid-body dynamics under gravity and contact. We find that these quantities are linearly decodable with high accuracy early in the denoising process, substantially outperforming a baseline decoded directly from the model's own noised latents, indicating that the relevant physical information is actively constructed during denoising rather than already present in the input. Additionally, we show that activations at on-object tokens carry the relevant physical information and that quantities defined over multiple frames are readable from single latent frames. Hence, information is sharply localized within the token sequence and is computed globally but stored locally. The probes further show partial extrapolation, transferring to scene variations and object configurations outside their training regime, so what they read is not simply a correlate of the scenes they were fit on. When fitted directly in the full-resolution activation space, the probing directions can serve as steering vectors to change the model's output.
+
+视频生成模型产生了惊人的逼真序列，并越来越多地被提出作为世界模型，但最近的基准揭示了其物理推理中的明显缺陷。 这就引出了一个问题，即这些模型是内化了物理原理，还是仅仅重现了熟悉的运动模式。 我们通过探测视频扩散变压器（ DiT ）的内部表示来解决这个问题，以获得跨越重力和接触下的运动运动和刚体动力学的模拟器衍生的地面真实物理量。 我们发现，这些量在去噪过程的早期具有高精度的线性可解码性，大大优于直接从模型自身的噪声潜伏解码的基线，表明相关的物理信息在去噪过程中被主动构建，而不是已经存在于输入中。 此外，我们展示了在对象代币上的激活携带了相关的物理信息，并且在多个帧上定义的数量可以从单个潜在帧中读取。 因此，信息在令牌序列中被严格定位，并全局计算，但存储在本地。 探针进一步显示了部分外推，将场景变化和对象配置转移到他们的训练方案之外，因此他们所读取的不仅仅是他们所适应的场景的相关性。 当直接安装在全分辨率激活空间中时，探测方向可以作为
+
+</details>
+
+---
+
+## 6. Keeping JEPA World Models Plannable When Little of the Frame Moves / 让JEPA世界模型在框架移动很少时保持可规划性
+
+**Date**: 2026-10-02 | **arXiv**: [2610.03137v1](http://arxiv.org/abs/2610.03137v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.03137v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Specifying a goal in language rather than as a goal frame is a natural interface for planning with a latent world model, but testing it needs scenes in which language must discriminate between several objects. We build SLIM, a pushing benchmark with several small objects and paired visual and language goals on identical scenes. On SLIM a LeWM world model that solves PushT succeeds on under 1% of trials, although a scripted controller with simulator state solves every tier. Probes locate the failure in the encoder: its latent is nearly action-insensitive, neither pusher nor object positions can be decoded from it, and rollouts are no better than copying the current latent forward. One inverse-dynamics auxiliary loss, applied to encoder latents and to predicted latents through a shared head discarded at test time, restores every probe and raises success from 0.003 to 0.35 (0.16 on the hard pushing tier, where a goal-agnostic policy scores zero), and improves PushT at twice the trained horizon. Controls attribute the repair to the gradient into the encoder, and a response sweep shows that the vanilla model plans once enough of the frame responds to actions. A cheap action-sensitivity probe, computable without environment access, acts as an empirical necessary condition: all configurations below its threshold failed to plan. On the repaired latent, a small language-goal head plans from sentences without retraining the world model: it reaches 0.84 on navigation (visual-goal oracle 1.00), follows the named zone when it is swapped with a decoy, and degrades gracefully to unseen nouns. A single goal sentence rarely completes a push, but given the push as a sequence of stage sentences the head raises success on the medium and hard pushing tiers from 0.04 to 0.25, on par with the goal-frame oracle, also when the switch between stages is read from the latent alone.
+
+在语言中指定目标而不是作为目标框架是使用潜在世界模型进行规划的自然界面，但测试它需要语言必须区分多个对象的场景。 我们在相同的场景中用几个小物体和成对的视觉和语言目标构建SLIM ，这是一个推动性的基准。 在SLIM上，解决PushT的LeWM世界模型在1 ％的试验中取得了成功，尽管具有模拟器状态的脚本控制器解决了每个层。 探针在编码器中定位故障：其潜伏几乎对动作不敏感，无论是推杆还是物体位置都无法从中解码，并且滚动并不比复制当前的潜伏向前更好。 一种逆动力学辅助损耗，应用于编码器潜伏期和通过测试时丢弃的共享头预测潜伏期，恢复每个探头，并将成功率从0.003提高到0.35 （硬推送层为0.16 ，目标不可知策略得分为零） ，并在训练水平的两倍处改善PushT。 控件将修复归因于编码器中的梯度，并且响应扫描显示，一旦足够的帧响应动作，原始模型计划。 一种廉价的动作灵敏度探针，无需环境访问即可计算，充当经验必要条件：低于其阈值的所有配置都无法规划。 在修复的潜伏点上，一个小的语言目标头从句子中规划，而无需重新训练世界模型：它在导航（视觉目标）上达到0.84
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-10-02 (14 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-10-02
