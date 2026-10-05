@@ -27,6 +27,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-10-05](papers/2026-10-05.md) - 15 papers
 - [2026-10-02](papers/2026-10-02.md) - 29 papers
 - [2026-10-01](papers/2026-10-01.md) - 33 papers
 - [2026-09-30](papers/2026-09-30.md) - 40 papers
@@ -189,6 +190,258 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-10-05 (15 papers)</b></summary>
+
+# arXiv Video Papers - 2026-10-05
+
+**Paper Count**: 15
+
+---
+
+## 1. FlowHMR: Physically Plausible Motion Capture from Video / FlowHMR ：视频中物理上合理的运动捕捉
+
+**Date**: 2026-10-02 | **arXiv**: [2610.03691v1](http://arxiv.org/abs/2610.03691v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.03691v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present FlowHMR, a framework for recovering physically plausible global 3D human motion from monocular video. Previous learning-based methods typically regress human motion directly from video and train the network with geometric supervision. However, recovering human motion from monocular video is inherently ambiguous in depth, and direct regression tends to collapse toward an averaged solution. Moreover, the recovered motions are not guaranteed to be physically plausible, so physics-based tracking of them often fails. To address these challenges, we formulate video motion capture as a video-conditioned motion generation problem and first pretrain a flow matching model for this task. Given an input video, the pretrained model generates diverse motion candidates, but not all of them are faithful to the video or physically trackable. We therefore post-train the model using Group Relative Policy Optimization (GRPO) with two rewards. A fidelity reward encourages consistency with the input video. A tracking reward favors motions that a physics-based controller can track successfully. Together, these rewards shift the model's output preference, so the post-trained model stays faithful to the input video while producing more physically plausible motion. We further introduce Wild-4K, a large and diverse dataset of about 4K internet videos, for evaluating human motion recovery in the wild. Qualitative and quantitative experiments on Wild-4K show that our method outperforms state-of-the-art methods in overall motion fidelity and achieves a physical tracking success rate of 82.47%, compared with 62.82% for the strongest baseline, GVHMR.
+
+我们提出了FlowHMR ，这是一个从单目视频中恢复物理上合理的全局3D人体运动的框架。 以前基于学习的方法通常直接从视频中回归人体运动，并使用几何监督来训练网络。 然而，从单目视频中恢复人体运动的深度本质上是模糊的，并且直接回归倾向于向平均解崩溃。 此外，恢复的运动不能保证在物理上是合理的，因此基于物理的跟踪往往会失败。 为了解决这些挑战，我们将视频动作捕获制定为视频条件运动生成问题，并首先为此任务预先训练流匹配模型。 给定输入视频，预训练模型生成不同的运动候选项，但并非所有候选项都忠实于视频或可物理跟踪。 因此，我们使用组相对策略优化（ GRPO ）对模型进行后期训练，获得两项奖励。 保真度奖励鼓励与输入视频保持一致。 跟踪奖励有利于基于物理的控制器可以成功跟踪的运动。 这些奖励一起改变了模型的输出偏好，因此训练后的模型保持忠实于输入视频，同时产生更物理上合理的运动。 我们进一步介绍了Wild-4K ，这是一个包含约4K互联网视频的大型多样化数据集，用于评估野外人体运动恢复情况。 在Wild-4K上的定性和定量实验表明，我们的方法优于
+
+</details>
+
+---
+
+## 2. ProAR: Learning Prospective Reasoning with Autoregressive Video Models / ProAR ：使用自回归视频模型学习前瞻性推理
+
+**Date**: 2026-10-02 | **arXiv**: [2610.03664v1](http://arxiv.org/abs/2610.03664v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.03664v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Autoregressive (AR) video models excel at causal generation, but their reliance on next-chunk prediction confines them to a short-sighted, reactive paradigm. This limitation is particularly consequential for reasoning-oriented generation, where achieving a target outcome through valid intermediate states matters more than local visual plausibility. To address this challenge, we propose Learning Prospective Reasoning with Autoregressive Video Models (ProAR), a novel framework that transforms autoregressive video generation into a goal-oriented reasoning process. ProAR introduces two key components: (1) To anchor generation to the long-range outcome, we integrate goal-frame prediction into the autoregressive loop via an asymmetric attention mask, enabling the predicted goal frame to guide the generation of intermediate states without being disrupted by them. (2) To guide short-range transitions, we introduce future representation self-alignment to encourage current hidden states to anticipate upcoming temporal dynamics. By leveraging teacher-forcing in AR training, we extract clean future representations in a single forward pass and align current representations with them using a lightweight, training-only predictor. Together, these two mechanisms seamlessly combine explicit, sparse target supervision with implicit, dense step-wise guidance, promoting coherent, goal-directed reasoning progress with modest computational cost. Experiments show that ProAR's complementary components consistently improve performance across diverse visual reasoning benchmarks. The framework proves highly training-efficient, surpassing fully trained standard AR baselines using only 25% of the training steps. This paradigm also demonstrates promising applicability to embodied reasoning tasks.
+
+自回归（ AR ）视频模型在因果生成方面表现出色，但它们对下一块预测的依赖将它们局限于短视的被动范式。 这种限制对于以推理为导向的生成尤其重要，在这种情况下，通过有效的中间状态实现目标结果比局部视觉合理性更重要。 为了应对这一挑战，我们提出了使用自回归视频模型（ ProAR ）学习前瞻性推理，这是一个将自回归视频生成转变为目标导向推理过程的新框架。 ProAR引入了两个关键组成部分： （ 1 ）为了将生成锚定到远程结果，我们通过非对称注意掩码将目标帧预测集成到自回归循环中，使预测的目标帧能够指导中间状态的生成，而不会受到它们的干扰。 （ 2 ）为了指导短期过渡，我们引入了未来的表示自对齐，以鼓励当前的隐藏状态预测即将到来的时间动态。 通过在AR培训中利用教师强制，我们在单次前向传递中提取干净的未来表示，并使用轻量级、仅训练的预测器将当前表示与它们对齐。 这两种机制结合在一起，无缝地将显式、稀疏的目标监督与隐式、密集的逐步指导相结合，以适度的计算成本促进连贯的、目标导向的推理进展。 实验表明， ProAR的互补性
+
+</details>
+
+---
+
+## 3. LoGo: Local-Global Rewards for Consistent Long-Horizon Video Generation / LoGo ：本地-全球奖励，实现一致的长视野视频生成
+
+**Date**: 2026-10-02 | **arXiv**: [2610.03636v1](http://arxiv.org/abs/2610.03636v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.03636v1)
+
+**Categories**: cs.CV, cs.AI
+
+**Project**: https://ziqi-ma.github.io/logo-website/  <details><summary><b>Abstract / 摘要</b></summary>
+
+Camera-controlled video models are rapidly advancing toward long generation horizons and complex camera control. A key failure mode is 3D inconsistency: as the camera moves, objects lose permanence and scene structures shift. Existing post-training techniques, which assign a single scalar reward to the entire generation, are poorly suited to correcting these inconsistencies over long horizons. We introduce LoGo, which blends global and spatially localized rewards for camera-controlled video models. The local reward provides fine-grained credit assignment, which substantially improves 3D consistency, while the global reward preserves camera following and video quality. Across three base models, LoGo shows a clear advantage on DL3DV and TrajectoryBench, a new benchmark for long-horizon, complex-camera-control generation that current evaluations lack. LoGo effectively reduces local object shifts, artifacts, and global scene changes, illustrating the importance of credit assignment in post-training video models. Project website: https://ziqi-ma.github.io/logo-website/
+
+摄像头控制的视频模型正迅速向长距离视野和复杂的摄像头控制迈进。 关键的故障模式是3D不一致：随着摄像机移动，对象失去永久性，场景结构发生变化。 现有的训练后技术将单个标量奖励分配给整个世代，不适合在长时间内纠正这些不一致性。 我们推出了LoGo ，它融合了摄像头控制视频模型的全局和空间本地化奖励。 本地奖励提供细粒度的信用分配，大大提高了3D一致性，而全局奖励则保留了相机跟踪和视频质量。 在三个基本模型中， LoGo在DL3DV和TrajectoryBench上显示出明显的优势，这是当前评估缺乏的长视野、复杂摄像机控制生成的新基准。 LoGo有效地减少了本地对象偏移、伪影和全局场景变化，说明了信用分配在训练后视频模型中的重要性。 项目网站： https://ziqi-ma.github.io/logo-website/
+
+</details>
+
+---
+
+## 4. World Embedding Benchmark / 世界嵌入基准
+
+**Date**: 2026-10-02 | **arXiv**: [2610.03632v1](http://arxiv.org/abs/2610.03632v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.03632v1)
+
+**Categories**: cs.CV, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Physical fidelity has received increasing attention in world models and video generation, yet how video representations encode physical information remains less understood. We introduce the World Embedding Benchmark, comprising 8,000 controlled simulation cases from 80 families spanning fluid mechanics, solid mechanics, dynamics, and optics & electromagnetism. Each case pairs a rendered video with simulation-derived physical annotations, supporting three complementary tasks: text-video retrieval, physical-property regression, and multiple-choice video-description pair classification. We use these tasks to distinguish cross-modal physical alignment from the recoverability of quantitative physical information. Evaluated pre-trained omnimodal embedding models show weak retrieval and near-chance within-family pair classification, while lightweight probes recover useful physical information from frozen video embeddings. Continual contrastive training with physics-specific video-text pairs improves retrieval and pair classification but degrades physical-property regression, revealing a trade-off between alignment and quantitative information recoverability. Finally, we use the embeddings to retrieve reference videos for retrieval-augmented generation with MiniMax-H3. Retrieved references improve the physical fidelity of generated videos, with stronger retrieval models yielding larger gains in our experiments. Together, these findings highlight the need to evaluate physical alignment and property recoverability jointly, and demonstrate the utility of physical representations for improving video generation.
+
+物理保真在世界模型和视频生成中受到越来越多的关注，但视频表示如何编码物理信息仍然不太清楚。 我们介绍了世界嵌入基准，其中包括来自80个系列的8,000个受控模拟案例，涵盖流体力学、固体力学、动力学以及光学和电磁学。 每个案例将渲染的视频与模拟衍生的物理注释配对，支持三个互补任务：文本-视频检索、物理属性回归和多项选择视频-描述对分类。 我们使用这些任务来区分跨模态物理对齐和定量物理信息的可恢复性。 经过评估的预训练全模态嵌入模型显示出弱检索和接近概率的家族内配对分类，而轻量级探针从冻结的视频嵌入中恢复有用的物理信息。 使用物理特定视频文本对的连续对比训练提高了检索和配对分类，但降低了物理属性回归，揭示了对齐和定量信息可恢复性之间的权衡。 最后，我们使用嵌入来检索参考视频，以便使用MiniMax-H3进行检索增强生成。 检索的参考文献提高了生成视频的物理保真度，更强的检索模型在我们的实验中产生了更大的收益。 总而言之，这些发现强调了评估身体状况的必要性。
+
+</details>
+
+---
+
+## 5. DuoMatching: Joint-Marginal Distribution Matching for Few-Step Video Generation / DuoMatching ：几步视频生成的联合边际分布匹配
+
+**Date**: 2026-10-02 | **arXiv**: [2610.03543v1](http://arxiv.org/abs/2610.03543v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.03543v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Streaming video generation has benefited from distribution matching distillation (DMD), which matches the joint distribution of video frames to a video teacher's approximation of the real video distribution. Although this joint matching mitigates drift during autoregressive rollouts, limitations remain in visual quality and semantic alignment. To address these limitations, we propose DuoMatching, a distribution matching framework that approximates the real video distribution through a unified joint-marginal formulation. On top of existing joint matching formulations, the additional marginal matching objective provides dedicated frame-level supervision from an image generator, transferring complementary visual and semantic priors from it. To apply this frame-level supervision in video generation, we introduce LatentBridge to resolve the latent representation mismatch between the video student and the image teacher. Latent Variation Sampling further distributes such frame-level supervision across distinct temporal segments, reducing redundancy. Experiments demonstrate that DuoMatching improves visual quality, composition, and semantic alignment while largely preserving motion dynamics. Human evaluations show overall preference rates above 80% against all evaluated baselines. The project page is available at https://johnzhan2023.github.io/DuoMatching/.
+
+流媒体视频生成受益于分布匹配提取（ DMD ） ，它将视频帧的联合分布与视频教师对真实视频分布的近似相匹配。 虽然这种关节匹配减轻了自回归推出过程中的漂移，但视觉质量和语义对齐方面仍存在局限性。 为了解决这些局限性，我们提出了DuoMatching ，这是一种分布匹配框架，通过统一的联合边际公式近似真实视频分布。 除了现有的联合匹配公式之外，额外的边缘匹配目标还提供来自图像生成器的专用帧级监督，从中传输互补的视觉和语义先验。 为了在视频生成中应用这种帧级监督，我们引入了LatentBridge来解决视频学生和图像教师之间的潜在表示不匹配。 潜在变化采样进一步将此类帧级监管分布在不同的时间段，从而减少冗余。 实验表明， DuoMatching在很大程度上保留了运动动态的同时，提高了视觉质量、构图和语义对齐。 人体评估显示，相对于所有评估基线，总体偏好率超过80%。 项目页面可在https://johnzhan2023.github.io/DuoMatching/上找到。
+
+</details>
+
+---
+
+## 6. DR-IPC: Disturbance-Resilient Integrated Planning and Control for LiDAR-Based Quadrotor Navigation / DR-IPC ：基于LiDAR的四旋翼导航的抗干扰集成规划和控制
+
+**Date**: 2026-10-02 | **arXiv**: [2610.03530v1](http://arxiv.org/abs/2610.03530v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.03530v1)
+
+**Categories**: cs.RO, eess.SY
+
+**Project**: https://drpp316.github.io/DR-IPC-Page/,  <details><summary><b>Abstract / 摘要</b></summary>
+
+LiDAR-based quadrotor navigation in cluttered environments remains challenging under external disturbances, particularly when obstacle-aware motion generation and disturbance-rejection control are handled in separate layers. This article presents disturbance-resilient integrated planning and control (DR-IPC), which combines lightweight path guidance with nonlinear model predictive control (NMPC) to directly generate angular velocity and thrust. An interconnected extended Kalman filter and nonlinear disturbance observer jointly provide filtered state estimates and reconstructed disturbances for NMPC prediction. The resulting formulation unifies nonlinear quadrotor dynamics, actuator constraints, local motion generation, and penalised safe-flight-corridor residuals without requiring a separate trajectory-optimization stage. Gazebo and MARSIM simulations, together with indoor and outdoor experiments, validate DR-IPC under wind, suspended payloads, narrow passages, ball impacts and reactive avoidance of a dynamic obstacle. In multi-goal navigation with disturbances, DR-IPC increases the number of completed missions from 1/10 to 9/10 in Gazebo and reduces the altitude RMSE from 0.34 to 0.01 m in experiments. The complete system operates onboard at 100 Hz. Supplementary videos are available on the project page https://drpp316.github.io/DR-IPC-Page/, and the source code will be released.
+
+在外部干扰下，混乱环境中基于LiDAR的四旋翼导航仍然具有挑战性，特别是当障碍感知运动生成和干扰抑制控制分层处理时。 本文介绍了干扰弹性综合规划与控制（ DR-IPC ） ，它将轻量级路径制导与非线性模型预测控制（ NMPC ）相结合，直接产生角速度和推力。 互连的扩展卡尔曼滤波器和非线性扰动观测器共同为NMPC预测提供滤波状态估计和重构扰动。 所得公式统一了非线性四旋翼动力学、执行器约束、局部运动生成和惩罚的安全飞行走廊残差，而无需单独的轨迹优化阶段。 Gazebo和MARSIM模拟与室内和室外实验相结合，验证了DR-IPC在风力、悬浮有效载荷、狭窄通道、球撞击和动态障碍物的反应式避让。 在有干扰的多目标导航中， DR-IPC将Gazebo中已完成任务的数量从1/10增加到9/10 ，并在实验中将海拔RMSE从0.34降低到0.01 m。 整个系统以100 Hz的频率在船上运行。 补充视频可在项目页面https://drpp316.github.io/DR-IPC-Page/上获得，源代码将发布。
+
+</details>
+
+---
+
+## 7. XGenAct: Geometry-Enhanced World Action Models through Cross-Task Generation / XGenAct ：通过跨任务生成几何增强的世界动作模型
+
+**Date**: 2026-10-02 | **arXiv**: [2610.03516v1](http://arxiv.org/abs/2610.03516v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.03516v1)
+
+**Categories**: cs.RO, cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World action models (WAMs) have advanced robot control by predicting how observations and actions evolve over time. Despite this progress, RGB and action based future prediction does not explicitly address the spatial understanding needed for robot manipulation. Existing efforts often add a limited set of spatial prediction tasks through specialized heads or branches, leaving both the range of spatial supervision and the model architecture fragmented. We introduce XGenAct, a world action model that represents RGB observations, robot actions, metric depth, surface normals, and functional role segmentation as RGB videos through deterministic codecs. By sampling perception and action tasks during training, XGenAct uses one video diffusion transformer and one objective to learn temporal prediction across these spaces without modality specific learned heads. On held out RLBench tasks, structured perception training improves average closed loop success over RGB only training, and XGenAct achieves 52% success in the five task external comparison, versus 26% for the strongest evaluated baselines. It also predicts future depth and segmentation more accurately than the evaluated pipelines that generate RGB first and then apply a frozen perception expert.
+
+世界动作模型（ WAM ）通过预测观测和动作随着时间的推移如何演变，提高了机器人控制能力。 尽管取得了这些进展，但RGB和基于行动的未来预测并没有明确地解决机器人操纵所需的空间理解问题。 现有的工作通常通过专门的头部或分支添加一组有限的空间预测任务，从而使空间监督的范围和模型架构支离破碎。 我们引入了XGenAct ，这是一个世界动作模型，通过确定性编解码器将RGB观测、机器人动作、度量深度、表面法线和功能角色分割表示为RGB视频。 通过在训练期间对感知和行动任务进行采样， XGenAct使用一个视频扩散变压器和一个目标来学习这些空间中的时间预测，而无需特定模态的学习头。 在保留的RLBench任务上，结构化感知训练提高了仅RGB训练的平均闭环成功率， XGenAct在五个任务外部比较中取得了52 ％的成功，而最强评估基线的成功率为26 ％。 它还比先生成RGB然后应用冻结感知专家的评估管道更准确地预测未来的深度和分割。
+
+</details>
+
+---
+
+## 8. Weave Forcing: Compositional Memory Routing for Interactive Long Video Generation / 交织强制：用于交互式长视频生成的组合内存路由
+
+**Date**: 2026-10-02 | **arXiv**: [2610.03510v1](http://arxiv.org/abs/2610.03510v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.03510v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in autoregressive video generation have improved temporal consistency over extended durations, yet interactive storytelling requires more than continuous scene extension: a new shot may combine characters and backgrounds from different historical shots. Whole prompt retrieval can overlook the distinct reference needs of individual components, while directly combining all historical memories may introduce unrelated visual content. To address these problems, we present Weave Forcing, a training-free framework for compositional memory reuse in interactive long video generation. First, we use an LLM for semantic slot routing to decompose user prompts into character and background descriptions and explicitly select suitable historical references for each component. To isolate the required content, masked memory weaving uses contrasting attention maps conditioned on semantic slots to construct refined semantic masks, selectively exposing relevant tokens from compressed historical KV memories to guide the generation of the current shot. We further introduce coverage adaptive RoPE to adjust temporal offsets and memory retention according to no, partial, or full reference coverage, addressing visual artifacts observed when incomplete historical references are positioned close to the current generation. Extensive experiments demonstrate that Weave Forcing improves cross-shot subject and background consistency while maintaining competitive visual quality and text alignment.
+
+自回归视频生成的最新进展在延长的持续时间内提高了时间一致性，但交互式讲故事需要的不仅仅是连续的场景扩展：新镜头可能会结合来自不同历史镜头的人物和背景。 整个即时检索可以忽略单个组件的独特参考需求，而直接组合所有历史记忆可能会引入不相关的视觉内容。 为了解决这些问题，我们提出了Weave Forcing ，这是一个用于交互式长视频生成中组合内存重用的无训练框架。 首先，我们使用LLM进行语义时隙路由，将用户提示分解为字符和背景描述，并为每个组件显式选择适当的历史引用。 为了隔离所需的内容，掩码内存编织使用以语义槽为条件的对比注意力图来构建精致的语义掩码，从压缩的历史KV内存中选择性地暴露相关令牌，以指导当前镜头的生成。 我们进一步引入覆盖率自适应RoPE ，以根据无、部分或全部参考覆盖率调整时间偏移和记忆保留，解决不完整历史参考靠近当前世代时观察到的视觉伪影。 广泛的实验表明， Weave Forcing提高了交叉拍摄的主题和背景的一致性，同时保持了有竞争力的视觉质量和文本
+
+</details>
+
+---
+
+## 9. Beyond Entropy: Self-Diagnostic Multi-Role Token Optimization for Video Reasoning / 超越熵：视频推理的自诊断多角色令牌优化
+
+**Date**: 2026-10-02 | **arXiv**: [2610.03400v1](http://arxiv.org/abs/2610.03400v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.03400v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reinforcement learning with verifiable rewards has substantially advanced multimodal reasoning, yet it remains fundamentally limited by ambiguous token-level credit assignment. While high-entropy token heuristics encourage possibility exploration, naively extending them to video reasoning tends to induce lengthy reasoning, as the model becomes overly reliant on high-entropy visual activations. Alternative approaches that rely on counterfactual-based visual token localization for credit assignment also tend to over-prioritize visual exploration at the expense of decisive reasoning cues for answer derivation, thereby exacerbating the interference from spurious visual nuances. Moreover, these methods employ static counterfactual strategies that fail to co-evolve with the policy during training. In this paper, we introduce DyCPO, a co-evolutionary framework that jointly optimizes reliable token selection and adaptive counterfactual intervention. It constructs a multi-role dependence metric to balance visual exploration and answer-relevance mining in token-wise contrastive learning, while suppressing exploration-only filler tokens and spurious visual noise. Rather than relying on static counterfactual priors, DyCPO dynamically derives counterfactual signals from the model's own successful and failed rollouts, enabling self-diagnostic analysis and co-evolution of the optimization objective with the policy. Extensive experiments on complex video reasoning and general video understanding benchmarks demonstrate consistent performance improvements, establishing DyCPO as a robust token-level credit assignment paradigm for multimodal reinforcement learning.
+
+具有可验证奖励的强化学习具有相当先进的多模态推理，但它仍然从根本上受到模糊的代币级信用分配的限制。 虽然高熵代币启发法鼓励可能性探索，但天真地将它们扩展到视频推理往往会导致冗长的推理，因为模型变得过于依赖高熵视觉激活。 依赖基于反事实的视觉令牌本地化进行信用分配的替代方法也往往过分优先考虑视觉探索，而牺牲了答案推导的决定性推理线索，从而加剧了虚假视觉细微差别的干扰。 此外，这些方法采用静态反事实策略，在培训期间无法与策略共同进化。 在本文中，我们介绍了DyCPO ，这是一个联合优化可靠代币选择和自适应反事实干预的协同进化框架。 它构建了一个多角色依赖度量，以在令牌对比学习中平衡视觉探索和答案相关性挖掘，同时抑制仅探索的填充令牌和虚假的视觉噪声。 DyCPO不依赖于静态反事实先验，而是从模型本身的成功和失败的推出中动态地导出反事实信号，从而实现自我诊断分析和优化目标与策略的共同进化。 复杂视频推理和通用视频的广泛实验
+
+</details>
+
+---
+
+## 10. KungfuAthleteBot: learning high-dynamic humanoid motion from video with unified robust recovery / KungfuAthleteBot ：从视频中学习高动态人形运动，具有统一的强大恢复能力
+
+**Date**: 2026-10-02 | **arXiv**: [2610.03388v1](http://arxiv.org/abs/2610.03388v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.03388v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video is an abundant, inexpensive source of human motion data that is rich in extreme athletic behaviors. Making it usable for humanoid robots, however, is not a matter of simply retargeting a reconstructed trajectory: video-derived motion is physically inconsistent, devoid of actuation information, and says nothing about failure or recovery. We present KungfuAthleteBot (KAB), a framework that treats learning high-dynamic motion from video as the central problem and resolves each of these three failure modes in turn. (C1) We build the KungfuAthlete dataset from videos of national-level martial artists and introduce a physics-guided parabolic trajectory correction that removes height floating, ground penetration, and high-frequency jitter from reconstructed aerial and landing phases. (C2) Because video carries no force information, strict tracking of a reconstructed trajectory is dynamically infeasible, and error-driven initialization keeps re-launching the policy from infeasible aerial poses. We introduce physics-driven pseudo-low-kinetic-energy (LKE) sampling, our central mechanism for making such references learnable: it biases initialization towards dynamically feasible states, letting the policy discover feasible actuation patterns instead of imitating infeasible ones. (C3) Finally, we introduce a direct training paradigm in which disturbance rejection and fall recovery are learned inside the same policy that tracks the video motion, requiring no recovery reference data and no manual mode switching. On a humanoid robot, KAB learns dynamic skills from video and recovers from arbitrary falls in about 0.7 s, the fastest reported recovery for a unified policy. Ablations on the unified policy confirm the necessity of its components, supporting the view that repairing and compensating video data, rather than only collecting more of it, is what unlocks high-dynamic humanoid skills.
+
+视频是一种丰富、廉价的人体运动数据源，具有丰富的极限运动行为。 然而，使其可用于人形机器人并不仅仅是重新瞄准重建的轨迹：视频衍生的运动在物理上是不一致的，没有驱动信息，也没有提到故障或恢复。 我们提出了KungfuAthleteBot （ KAB ） ，这是一个将从视频中学习高动态运动作为核心问题的框架，并依次解决了这三种失败模式中的每一种。 （ C1 ）我们从国家级武术家的视频中构建功夫运动员数据集，并引入物理引导的抛物线轨迹校正，以消除重建的空中和着陆阶段的高度浮动、地面穿透和高频抖动。 （ C2 ）由于视频不携带力信息，因此严格跟踪重建的轨迹在动态上是不可行的，并且错误驱动的初始化使策略从不可行的空中姿势重新启动。 我们引入了物理驱动的伪低动能（ LKE ）采样，这是我们使此类参考可学习的中心机制：它将初始化偏向于动态可行状态，让策略发现可行的驱动模式，而不是模仿不可行的驱动模式。 (C3)最后，我们引入了一种直接训练范式，其中在跟踪视频运动的相同策略中学习干扰抑制和坠落恢复，不需要恢复参考数据
+
+</details>
+
+---
+
+## 11. VDOT++: Unified Few-Step Video Generation via Unbalanced Optimal Transport Distillation / VDOT + + ：通过非平衡优化运输蒸馏的统一几步视频生成
+
+**Date**: 2026-10-02 | **arXiv**: [2610.03221v1](http://arxiv.org/abs/2610.03221v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.03221v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video creation spans text-to-video (T2V), image-to-video (I2V), and condition-based generation, yet video diffusion models remain costly because they repeatedly evaluate large backbones during sampling. Distribution matching distillation (DMD) reduces this cost, but its reverse Kullback--Leibler (KL) objective can provide unstable or incomplete guidance when the student and teacher distributions have limited overlap. VDOT addressed this issue by adding optimal transport distillation (OTD), whose explicit coupling supplies geometric directions for condition-based generation. Balanced OTD, however, performs full-mass matching between the spatial tokens of each corresponding student--teacher frame pair. This assumption weakens for T2V and I2V, where one condition admits many valid outputs and spatial content need not align across different realizations. We present VDOT++, a unified distillation framework that applies the same training recipe separately to generators for the three task families. It makes OTD robust to output diversity through an asymmetric unbalanced formulation that allows unreliable student tokens to carry less mass while maintaining coverage of the teacher tokens. An $\ell_1$ ground cost further replaces mean-based aggregation with a more mode-preserving weighted median that limits the influence of distant transport targets. The two changes respectively determine whom to match and how the selected targets should be aggregated. We additionally combine distribution matching and adversarial refinement through sequential backward passes, and exploit the decoupled score networks for cross-scale distillation, where larger score networks improve a compact generator. Experiments on UVCBench, VBench, VBench-I2V, and the VACE benchmark show that the resulting four-step generators are competitive with many-step teachers and strong few-step baselines across all three task families.
+
+视频创作跨越文本到视频（ T2V ）、图像到视频（ I2V ）和基于条件的生成，但视频扩散模型仍然成本高昂，因为它们在采样过程中反复评估大骨干网。 分布匹配蒸馏（ DMD ）降低了这一成本，但当学生和教师分布重叠有限时，其反向Kullback-Leibler （ KL ）目标可以提供不稳定或不完整的指导。 VDOT通过添加最佳运输蒸馏（ OTD ）来解决这个问题，其显式耦合为基于条件的生成提供了几何方向。 然而，平衡OTD在每个相应的学生-教师帧对的空间令牌之间执行全质量匹配。 对于T2V和I2V ，这种假设减弱了，其中一个条件允许许多有效输出，并且空间内容不需要在不同的实现之间对齐。 我们介绍VDOT + + ，这是一个统一的蒸馏框架，将相同的培训配方分别应用于三个任务系列的发电机。 它使OTD通过不对称的不平衡公式输出多样性，允许不可靠的学生代币携带较少的质量，同时保持教师代币的覆盖范围。 $\ ell_1 $的地面花费进一步用更保留模式的加权中位数取代了基于平均值的聚合，从而限制了远距离运输目标的影响。 这两个变化分别决定了匹配对象和所选目标的聚合方式。我们还结合
+
+</details>
+
+---
+
+## 12. Contextual Flow Matching: Adaptive Step Selection in Flow Models for Efficient Visual Generation / 上下文流匹配：流模型中的自适应步骤选择，以实现高效的视觉生成
+
+**Date**: 2026-10-02 | **arXiv**: [2610.03202v1](http://arxiv.org/abs/2610.03202v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.03202v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Flow Matching enables high-quality visual generation via continuous-time dynamics, but inference remains costly due to multiple sequential function evaluations. Existing acceleration methods reduce the number of function evaluations but often introduce additional training overhead, degrade quality, or fail to account for input-dependent variability. We propose COFLOW, an inference-time method that adaptively selects the step counts each generation based on the prompt features. Our context-aware COFLOW is trained online with an unsupervised reward that balances inference efficiency and generation fidelity. Our method is plug-and-play, requiring no retraining of the underlying generative model. It generalizes to image and video generation, achieving over 2.5x speedup while preserving perceptual and semantic quality. We further provide a theoretical analysis establishing an O(1/K) forward-Euler discretization error bound under standard regularity conditions.
+
+流匹配可通过连续时间动态实现高质量的视觉生成，但由于多次顺序函数评估，推理仍然成本高昂。现有的加速方法减少了功能评估的数量，但通常会引入额外的训练开销，降低质量，或无法考虑输入相关的变异性。我们提出了COFLOW ，这是一种根据提示特征自适应选择每代步数的推理时间方法。我们的上下文感知COFLOW在线培训，提供无监督奖励，平衡推理效率和生成保真度。我们的方法是即插即用，不需要重新训练底层生成模型。它推广到图像和视频生成，实现了超过2.5倍的加速，同时保持了感知和语义质量。我们进一步提供了在标准正则性条件下建立O (1/K)正向欧拉离散化误差界限的理论分析。
+
+</details>
+
+---
+
+## 13. Does Physics Live in the Activations? Localizing Physical Quantities in Video Diffusion Models / 物理学存在于激活中吗？定位视频扩散模型中的物理量
+
+**Date**: 2026-10-02 | **arXiv**: [2610.03154v1](http://arxiv.org/abs/2610.03154v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.03154v1)
+
+**Categories**: cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video generation models produce strikingly realistic sequences and are increasingly proposed as world models, yet recent benchmarks reveal pronounced deficits in their physical reasoning. This raises the question of whether these models internalize physical principles or merely reproduce familiar motion patterns. We address this by probing internal representations of video Diffusion Transformers (DiTs) for simulator-derived ground-truth physical quantities spanning kinematic motion and rigid-body dynamics under gravity and contact. We find that these quantities are linearly decodable with high accuracy early in the denoising process, substantially outperforming a baseline decoded directly from the model's own noised latents, indicating that the relevant physical information is actively constructed during denoising rather than already present in the input. Additionally, we show that activations at on-object tokens carry the relevant physical information and that quantities defined over multiple frames are readable from single latent frames. Hence, information is sharply localized within the token sequence and is computed globally but stored locally. The probes further show partial extrapolation, transferring to scene variations and object configurations outside their training regime, so what they read is not simply a correlate of the scenes they were fit on. When fitted directly in the full-resolution activation space, the probing directions can serve as steering vectors to change the model's output.
+
+视频生成模型产生了惊人的逼真序列，并越来越多地被提出作为世界模型，但最近的基准揭示了其物理推理中的明显缺陷。 这就引出了一个问题，即这些模型是内化了物理原理，还是仅仅重现了熟悉的运动模式。 我们通过探测视频扩散变压器（ DiT ）的内部表示来解决这个问题，以获得跨越重力和接触下的运动运动和刚体动力学的模拟器衍生的地面真实物理量。 我们发现，这些量在去噪过程的早期具有高精度的线性可解码性，大大优于直接从模型自身的噪声潜伏解码的基线，表明相关的物理信息在去噪过程中被主动构建，而不是已经存在于输入中。 此外，我们展示了在对象代币上的激活携带了相关的物理信息，并且在多个帧上定义的数量可以从单个潜在帧中读取。 因此，信息在令牌序列中被严格定位，并全局计算，但存储在本地。 探针进一步显示了部分外推，将场景变化和对象配置转移到他们的训练方案之外，因此他们所读取的不仅仅是他们所适应的场景的相关性。 当直接安装在全分辨率激活空间中时，探测方向可以作为
+
+</details>
+
+---
+
+## 14. Behavior Pack Optimization for Video MLLM Post-Training / 针对视频MLLM训练后的行为包优化
+
+**Date**: 2026-10-02 | **arXiv**: [2610.03141v1](http://arxiv.org/abs/2610.03141v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.03141v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video multimodal large language models (MLLMs) keep climbing video question answering benchmarks, yet shuffling the frames, masking the segment that supports the answer, or occluding the target object barely changes their predictions. The accuracy rests on appearance and language priors, not on the temporal evidence the question asks for. We trace this to the unit of post-training: rewards are computed on a single response to the original clip, so the model is never asked to behave consistently across views. We propose Behavior Pack Optimization (BPO), which replaces the single response with a behavior pack of outputs across counterfactual views chosen by question type, scored jointly. The pack reward asks for stability when the intervention is irrelevant, sensitivity when key evidence is removed, and abstention when no evidence remains. To keep this objective stable at small pack sizes, BPO uses an anchor-relative advantage: the response on the original view serves as a per-prompt reference instead of a group mean over mixed views. On TempCompass, MVBench, and NExT-QA, BPO improves the macro accuracy of Qwen2.5-VL-7B-Instruct by 4.7 pp, the temporal-hard subset by 7.8 pp, and abstention F1 by 20.0 pp over a budget-matched vanilla GRPO baseline from the same SFT checkpoint. The gains transfer to Video-MME, LongVideoBench, and to LLaVA-Video-7B; ablations confirm they follow the view sets, not the rollout count. We hope this pack-level perspective offers a useful starting point for the video MLLM and multimodal post-training community as the field moves toward evidence-grounded video reasoning.
+
+视频多模态大型语言模型（ MLLM ）不断攀升视频问答基准，但对帧进行洗牌、掩盖支持答案的段或遮挡目标对象几乎不会改变他们的预测。 准确性取决于外表和语言先验，而不是问题所要求的时间证据。 我们将其追溯到培训后的单元：奖励是根据对原始剪辑的单个响应计算的，因此模型从未被要求在不同视图中保持一致的行为。 我们提出了行为包优化（ BPO ） ，它将单个响应替换为由问题类型选择的反事实视图输出的行为包，并进行联合评分。 当干预无关紧要时，内容包奖励要求稳定性；当关键证据被删除时，内容包奖励要求敏感性；当没有证据时，内容包奖励要求弃权。 为了在小包装尺寸下保持这一目标的稳定性， BPO使用了一个相对于锚点的优势：原始视图上的响应用作每个提示的参考，而不是混合视图的组平均值。 在TempCompass、MVBench和NExT-QA上， BPO将Qwen2.5-VL-7B-Instruct的宏观准确性提高了4.7 pp ，时间难度子集提高了7.8 pp ，弃权F1提高了20.0 pp ，与来自同一SFT检查点的预算匹配的vanilla GRPO基线相比。 增益转移到Video-MME、LongVideoBench和LLaVA-Video-7B ；消融确认它们遵循视图集，而不是推出计数。 我们希望这个包级视角能提供一个有用的开端
+
+</details>
+
+---
+
+## 15. In-Distribution Forcing for Long Video Generation at Test Time / 测试时长视频生成的分布内强制
+
+**Date**: 2026-10-02 | **arXiv**: [2610.03120v1](http://arxiv.org/abs/2610.03120v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.03120v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Modern autoregressive (AR) video diffusion models excel at short-horizon video generation, yet generating long videos remains challenging due to drifting, where colors and textures shift, and motion dynamics decay. Existing works primarily rely on KV conditioning, which selects or modifies cached key-value (KV) entries to mitigate drifting. However, we observe that KV conditioning alone is insufficient as it assumes cached KV entries remain in-distribution. This assumption fails beyond the training horizon: nothing constrains the construction of KV entries during rollout, giving rise to the KV-provenance problem where cached entries themselves become out-of-distribution (OOD). To address this, we propose In-Distribution Forcing (ID-Forcing), a test-time framework that aligns both KV caching and KV conditioning with training configurations. Its key mechanism, self-caching, prevents OOD KV entries at their source. Each chunk is cached without attending to prior KV entry, keeping the rolling window exactly in-distribution. Consequently, ID-Forcing seamlessly extends short-horizon models to minute-scale video generation. Extensive evaluations show that our method remains competitive on standard video generation benchmark while substantially outperforming prior work in mitigating drifting, as validated by both our drift metrics and a user study.
+
+现代自回归（ AR ）视频扩散模型在短视距视频生成方面表现出色，但由于漂移、颜色和纹理变化以及运动动态衰减，生成长视频仍然具有挑战性。 现有工作主要依靠KV调节， KV调节选择或修改缓存的键值（ KV ）条目以缓解漂移。 然而，我们观察到KV调节本身是不够的，因为它假设缓存的KV条目仍然是分布的。 这一假设在训练视野之外失败：在推出期间，没有任何东西会限制KV条目的构建，从而导致KV出处问题，其中缓存的条目本身变得不分布（ OOD ）。 为了解决这个问题，我们提出了In-Distribution Forcing （ ID-Forcing ） ，这是一个将KV缓存和KV调节与训练配置相结合的测试时间框架。 其自我缓存的关键机制可防止OOD KV条目出现在源头。 每个区块都被缓存，而无需考虑之前的KV条目，从而保持滚动窗口准确分布。 因此， ID-Forcing无缝地将短视野模型扩展到分钟级视频生成。 广泛的评估表明，我们的方法在标准视频生成基准上仍然具有竞争力，同时在缓解漂移方面大大优于之前的工作，我们的漂移指标和用户研究都验证了这一点。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-10-02 (29 papers)</b></summary>
 
 # arXiv Video Papers - 2026-10-02
