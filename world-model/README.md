@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-10-12](papers/2026-10-12.md) - 6 papers
 - [2026-10-09](papers/2026-10-09.md) - 23 papers
 - [2026-10-08](papers/2026-10-08.md) - 18 papers
 - [2026-10-07](papers/2026-10-07.md) - 20 papers
@@ -165,6 +166,116 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-10-12 (6 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-10-12
+
+**Paper Count**: 6
+
+---
+
+## 1. RSI-Anything: Unlocking Recursive Self-Improvement with World Models / RSI-Anything：用世界模型解锁递归自我改进
+
+**Date**: 2026-10-09 | **arXiv**: [2610.13912v1](http://arxiv.org/abs/2610.13912v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.13912v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recursive self-improvement (RSI) aims to transform interaction experience into persistent improvements, yet external feedback is costly and world-model predictions may become unreliable as policies evolve. We introduce RSI-Anything, a domain-general framework built on JEPA-Anything that uses predictive world models to guide action and learning-data selection. Observed feedback drives policy or workflow improvement and conditional world-model adaptation, while component and compatibility checks govern the retention of updated policy-model pairs. Across diverse computational and scientific domains, RSI-Anything demonstrates substantial gains. In code repair, with the coder fixed, success increases from 26.3% with a static verifier to 29.2% through predictive selection and 31.2% after world-model adaptation, at comparable test usage. Graphical user interface (GUI) evaluations showed higher task completion, while average actions decrease by 39.4%. Across five successive policy versions, laboratory-planning scores more than double from 21.80% to 46.01%. In reaction optimization, RSI-Anything achieves 96.15% mean best observed yield versus 82.16% for Bayesian optimization under the same 40-experiment budget. An end-to-end immune-science application further connects workflow evolution and predictive modeling with therapeutic hypothesis generation. These results demonstrate how predictive world models and retained system updates enable recursive improvement across diverse environments.
+
+递归自我改进（RSI）旨在将交互体验转化为持续改进，但外部反馈成本高昂，并且随着政策的发展，世界模型预测可能变得不可靠。我们引入 RSI-Anything，这是一个基于 JEPA-Anything 构建的领域通用框架，它使用预测世界模型来指导行动和学习数据选择。观察到的反馈推动策略或工作流程改进以及有条件的世界模型适应，而组件和兼容性检查则控制更新策略模型对的保留。在不同的计算和科学领域，RSI-Anything 展示了巨大的收益。在代码修复中，在编码器固定的情况下，在可比较的测试使用情况下，通过预测选择，成功率从使用静态验证器的 26.3% 提高到 29.2%，在世界模型适应之后提高到 31.2%。图形用户界面 (GUI) 评估显示任务完成率更高，而平均操作次数减少了 39.4%。在连续五个政策版本中，实验室规划得分翻了一番多，从 21.80% 增至 46.01%。在反应优化中，在相同的 40 次实验预算下，RSI-Anything 实现了 96.15% 的平均最佳观察产率，而贝叶斯优化的平均最佳观察产率为 82.16%。端到端免疫科学应用程序进一步将工作流程演变和预测建模与治疗假设生成联系起来。这些结果展示了预测世界模型和保留的系统更新如何在不同的环境中实现递归改进。
+
+</details>
+
+---
+
+## 2. SpatialASM: Internalizing Active Mentalization for Spatial Reasoning / SpatialASM：内化空间推理的主动心智化
+
+**Date**: 2026-10-09 | **arXiv**: [2610.13832v1](http://arxiv.org/abs/2610.13832v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.13832v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+When solving complex spatial reasoning tasks, ordinary humans naturally revisit the scenes from task-relevant viewpoints and mentally reconstruct the spatial layouts from those viewpoints. But can Large Vision-Language Models (LVLMs) proactively think in the same way? We term this ability Active Spatial Mentalization (ASM), an intrinsic component of visual intelligence that remains substantially underdeveloped in current LVLMs. To bridge this gap, we introduce SpatialASM, a scalable framework to internalize ASM into LVLMs through training-time spatial simulation. SpatialASM employs an allocentric novel-view generator to ground hypothetical viewpoints in visual evidence and produces two complementary forms of supervision: i) explicit ASM trajectories that teach LVLMs when and how to adaptively invoke view planning and imagination during spatial reasoning, and ii) automatically-constructed perspective-taking tasks that further strengthens viewpoint-conditioned scene imagination. On seven benchmarks spanning relatively perception-oriented spatial understanding to more challenging tasks requiring multi-image, cross-view and viewpoint-transformation reasoning, SpatialASM yields performance gain on LVLMs of four LVLM backbones in spatial reasoning while retaining their original general vision capabilities. The experimental results demonstrate that our approach improves average accuracy across the seven spatial benchmarks. And the synthesis of ASM trajectories provides a scalable pathway to alleviate the scarcity of spatial Chain-of-Thought (CoT) supervision for eliciting active viewpoint exploration and mental scene simulation.
+
+在解决复杂的空间推理任务时，普通人会自然地从与任务相关的角度重新审视场景，并从这些角度在心理上重建空间布局。但是大视觉语言模型（LVLM）能否以同样的方式主动思考？我们将这种能力称为主动空间心智化 (ASM)，它是视觉智能的一个内在组成部分，但在当前的 LVLM 中仍显着欠发达。为了弥补这一差距，我们引入了 SpatialASM，这是一个可扩展的框架，可通过训练时空间模拟将 ASM 内部化到 LVLM 中。 SpatialASM 采用异中心小说视图生成器在视觉证据中建立假设视点，并产生两种互补形式的监督：i）显式 ASM 轨迹，教导 LVLM 在空间推理过程中何时以及如何自适应地调用视图规划和想象力；ii）自动构建的透视任务，进一步增强视点条件的场景想象力。在涵盖相对感知导向的空间理解到需要多图像、跨视图和视点转换推理的更具挑战性任务的七个基准测试中，SpatialASM 在空间推理中的四个 LVLM 主干的 LVLM 上获得了性能增益，同时保留了其原始的通用视觉功能。实验结果表明，我们的方法提高了七个空间基准的平均准确度。 ASM 轨迹的合成提供了一条可扩展的途径，以缓解空间思想链 (CoT) 监督的稀缺性，从而引发积极的视点探索和心理场景模拟。
+
+</details>
+
+---
+
+## 3. Dream to Remember: Continual Steering of Generalist Robot Policies with World Models / 值得记住的梦想：用世界模型持续指导通用机器人政策
+
+**Date**: 2026-10-09 | **arXiv**: [2610.13816v1](http://arxiv.org/abs/2610.13816v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.13816v1)
+
+**Categories**: cs.RO, cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Generalist robot policies are trained with imitation learning and are bounded by the quality and coverage of their demonstrations. Reinforcement learning can improve and extend them, either by fine-tuning the policy weights or by training a small module to steer the input noise of a frozen generative policy. When tasks arrive sequentially, both approaches suffer from catastrophic forgetting. Fine-tuning on a task degrades prior tasks, and steering only shifts forgetting to the shared steering module. We propose Dream to Remember (D2R), which continually steers a frozen generalist policy toward new tasks, while retaining its earlier skills. As the steering module learns a new task, a frozen pretrained world model rehearses prior tasks through imagined rollouts, anchoring the module to its earlier behavior without a replay buffer or new data. When the world model is faithful enough, D2R learns the new task entirely in imagination. Otherwise, it learns the task in the environment while using the world model only to rehearse prior tasks. On CALVIN, D2R improves eight tasks in sequence entirely in imagination, raising average success from 63.7% to 74.8%, while LoRA fine-tuning on the same sequence drops it to 11.7%. With a frozen off-the-shelf generalist policy and world model, $π_0$ and A2World, D2R learns unseen LIBERO-90 tasks in the environment while keeping $π_0$'s performance on the LIBERO suites it was fine-tuned on, even though the world model is not accurate enough for policy optimization. Finally, on a real Franka robot, D2R improves three tasks in sequence entirely in imagination while retaining the earlier improvements.
+
+通用机器人策略通过模仿学习进行训练，并受到其演示的质量和覆盖范围的限制。强化学习可以通过微调策略权重或训练一个小模块来引导冻结生成策略的输入噪声来改进和扩展它们。当任务依次到达时，这两种方法都会遭受灾难性遗忘。对任务进行微调会降低之前的任务，而转向只会将遗忘转移到共享转向模块。我们提出“铭记梦想”（D2R），它不断引导冻结的通才政策走向新任务，同时保留其早期技能。当转向模块学习新任务时，冻结的预训练世界模型通过想象的部署来演练先前的任务，将模块锚定到其早期行为，而无需重播缓冲区或新数据。当世界模型足够忠实时，D2R 完全在想象中学习新任务。否则，它会在环境中学习任务，同时仅使用世界模型来排练先前的任务。在 CALVIN 上，D2R 完全在想象中按顺序改进了 8 个任务，将平均成功率从 63.7% 提高到 74.8%，而 LoRA 对同一序列的微调则将其下降到 11.7%。借助冻结的现成通用策略和世界模型 $π_0$ 和 A2World，D2R 可以学习环境中未见过的 LIBERO-90 任务，同时保持 $π_0$ 在经过微调的 LIBERO 套件上的性能，即使世界模型对于策略优化来说不够准确。最后，在真正的 Franka 机器人上，D2R 完全在想象中按顺序改进了三个任务，同时保留了早期的改进。
+
+</details>
+
+---
+
+## 4. Beyond Successful Robot Demonstrations: Learning from Human Interactions and Modeling Failure Dynamics / 超越成功的机器人演示：从人类交互中学习并建模故障动态
+
+**Date**: 2026-10-09 | **arXiv**: [2610.13522v1](http://arxiv.org/abs/2610.13522v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.13522v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Action-conditioned world models offer a promising foundation for generalist robotic intelligence by predicting the consequences of actions. However, existing robotic datasets provide limited coverage of the diverse interaction dynamics required for generalizable world modeling. Large-scale egocentric human videos offer complementary interaction experience, yet the embodiment gap between human hands and robotic manipulators hinders effective cross-embodiment learning. Meanwhile, the predominance of successful demonstrations leaves failure dynamics substantially underrepresented, limiting the ability of world models to anticipate unsuccessful executions. To address these limitations, we introduce HF-WM, an action-conditioned world model that combines Human interaction learning with Failure-aware post-training. To bridge the embodiment gap, we develop a dual-branch framework that couples video generation with auxiliary pointflow prediction, using stabilized pointflow as a unified motion representation across human and robot interactions while suppressing egocentric camera motion. To improve failure modeling, we further perform Group Relative Policy Optimization (GRPO) post-training on perturbed actions derived from successful demonstrations, guided by action alignment and physical plausibility rewards, enabling the model to learn plausible failure dynamics without paired ground-truth videos. Extensive experiments demonstrate that HF-WM achieves state-of-the-art performance in action-conditioned video generation and exhibits strong utility for policy evaluation in downstream robotic tasks.
+
+行动条件世界模型通过预测行动的后果，为通用机器人智能提供了有希望的基础。然而，现有的机器人数据集对可概括的世界建模所需的各种交互动态的覆盖范围有限。大规模以自我为中心的人类视频提供了互补的交互体验，但人手和机器人操纵器之间的体现差距阻碍了有效的跨体现学习。与此同时，成功示范的主导地位使得失败动态的代表性大大不足，限制了世界模型预测不成功执行的能力。为了解决这些限制，我们引入了 HF-WM，这是一种动作条件世界模型，它将人类交互学习与故障感知后培训相结合。为了弥补实施差距，我们开发了一个双分支框架，将视频生成与辅助点流预测结合起来，使用稳定的点流作为人类和机器人交互的统一运动表示，同时抑制以自我为中心的相机运动。为了改进故障建模，我们进一步对成功演示中产生的扰动动作进行组相对策略优化（GRPO）后训练，以动作对齐和物理合理性奖励为指导，使模型能够在没有配对地面实况视频的情况下学习合理的故障动态。大量实验表明，HF-WM 在动作条件视频生成方面实现了最先进的性能，并在下游机器人任务中的策略评估中表现出强大的实用性。
+
+</details>
+
+---
+
+## 5. Beyond Temporal Proximity: Explanatory World Models for Credit Assignment in Reinforcement Learning / 超越时间邻近性：强化学习中信用分配的解释性世界模型
+
+**Date**: 2026-10-09 | **arXiv**: [2610.13504v1](http://arxiv.org/abs/2610.13504v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.13504v1)
+
+**Categories**: cs.LG, cs.AI, cs.IR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Generative Recommenders increasingly use Reinforcement Learning (RL) to optimize outcomes that may appear hundreds or thousands of interactions after a decision. Standard RL propagates reward according to temporal proximity rather than explicit relevance, attenuating the signal assigned to distant but important actions and creating a source of sample inefficiency. We introduce Explanatory World Models (EWM), an attribution framework that uses explanations to identify the earlier events that plausibly contributed to a realized outcome. We instantiate EWM with a frontier language model and use its explanations as learning signals using a conservative hierarchical operator that recursively redistributes reward while preserving the undiscounted episode return. To investigate what constitutes a useful explanation, we operationalize three complementary variants inspired by Halpern's actual causation, Lombrozo's explanatory simplicity, and Deutsch's hard-to-vary explanations. We evaluate EWM on two controlled long-horizon RL benchmarks, a public sequential-recommendation benchmark, and an industry-scale generative recommender. On Crafter and WordCraft, EWM substantially outperforms PPO and LaRe, with its largest gains when rewards are most delayed. On KuaiRand, EWM outperforms SFT and LaRe offline and A2C online. Finally, in an offline evaluation of an industry generative recommender, EWM considerably improves Recall and increases behavioral proxies. These results suggest that explanations can provide structured and reusable credit for learning from delayed outcomes.
+
+生成推荐器越来越多地使用强化学习 (RL) 来优化决策后可能出现数百或数千次交互的结果。标准强化学习根据时间邻近性而不是明确的相关性来传播奖励，从而削弱了分配给遥远但重要的动作的信号，并造成了样本效率低下的根源。我们引入解释性世界模型（EWM），这是一种归因框架，它使用解释来识别可能对实现结果做出贡献的早期事件。我们使用前沿语言模型实例化 EWM，并使用保守的分层运算符将其解释用作学习信号，该运算符递归地重新分配奖励，同时保留未贴现的剧集回报。为了研究什么构成了有用的解释，我们运用了三个互补的变体，这些变体受到哈尔彭的实际因果关系、隆布罗佐的解释简单性和多伊奇的难以改变的解释的启发。我们在两个受控的长期 RL 基准、一个公共顺序推荐基准和一个行业规模的生成推荐器上评估 EWM。在 Crafter 和 WordCraft 上，EWM 的表现明显优于 PPO 和 LaRe，当奖励延迟最严重时，EWM 的收益最大。在 KuaiRand 上，EWM 离线优于 SFT 和 LaRe，在线优于 A2C。最后，在对行业生成推荐器的离线评估中，EWM 显着提高了召回率并增加了行为代理。这些结果表明，解释可以为从延迟结果中学习提供结构化和可重复使用的信用。
+
+</details>
+
+---
+
+## 6. ManeuverFlow: Maneuver Hypothesis Generation with Future Evidence for Trajectory Evaluation and Refinement in End-to-End Autonomous Driving / ManeuverFlow：生成机动假设并为端到端自动驾驶中的轨迹评估和细化提供未来证据
+
+**Date**: 2026-10-09 | **arXiv**: [2610.13409v1](http://arxiv.org/abs/2610.13409v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.13409v1)
+
+**Categories**: cs.RO
+
+**Code**: https://github.com/wyh-autonomy/maneuverflow.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+End-to-end planning in complex scenes must model diverse driving intentions and select the most appropriate trajectory using scene context and future risks. However, multi-query regression may collapse to one mode, while anchor-based and generative planners share a scaling bottleneck: small candidate sets limit maneuver coverage or discovery of high-quality trajectories, whereas large sets increase generation and scoring costs. We propose ManeuverFlow to generate trajectories for distinct intentions in one step and evaluate and refine them using current and future evidence. The model selects relevant maneuver modes, draws corresponding noise from the Gaussian mixture prior, and maps it to intention-specific trajectories through a maneuver-routed mixture-of-experts MeanFlow field. Current features and future features predicted by the world model are aggregated along each candidate path into trajectory-specific evidence for PDM-factor prediction. Using the same evidence, the refiner predicts local Frenet residuals for selected candidates; refined and retained candidates are then jointly re-scored for selection. With a lightweight TransFuser-style ResNet-34 backbone, ManeuverFlow achieves 90.6 PDMS and 90.1 EPDMS on NAVSIM v1/v2 navtest, respectively. On WorldEngine's recent 3DGS closed-loop benchmark, it attains the highest listed PDMS$^\ast$ scores of 75.19 and 74.58 under logged and IDM-controlled traffic, respectively. Code: https://github.com/wyh-autonomy/maneuverflow.
+
+复杂场景中的端到端规划必须对不同的驾驶意图进行建模，并根据场景上下文和未来风险选择最合适的轨迹。然而，多查询回归可能会崩溃为一种模式，而基于锚的规划器和生成规划器共享一个扩展瓶颈：小候选集限制了机动覆盖范围或高质量轨迹的发现，而大集则增加了生成和评分成本。我们建议 ManeuverFlow 一步生成不同意图的轨迹，并使用当前和未来的证据对其进行评估和完善。该模型选择相关的机动模式，从高斯混合先验中提取相应的噪声，并通过机动路由的专家混合平均流场将其映射到特定意图的轨迹。世界模型预测的当前特征和未来特征沿着每个候选路径聚合成用于 PDM 因子预测的轨迹特定证据。使用相同的证据，精炼者可以预测所选候选者的局部 Frenet 残差；然后，对经过提炼和保留的候选人进行联合重新评分以供选择。凭借轻量级 TransFuser 式 ResNet-34 主干网，ManeuverFlow 在 NAVSIM v1/v2 navtest 上分别实现了 90.6 PDMS 和 90.1 EPDMS。在 WorldEngine 最近的 3DGS 闭环基准测试中，它在记录流量和 IDM 控制流量下分别获得了最高的 PDMS$^\ast$ 分数，分别为 75.19 和 74.58。代码：https://github.com/wyh-autonomy/maneuverflow。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-10-09 (23 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-10-09
