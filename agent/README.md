@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-10-12](papers/2026-10-12.md) - 16 papers
 - [2026-10-09](papers/2026-10-09.md) - 53 papers
 - [2026-10-08](papers/2026-10-08.md) - 43 papers
 - [2026-10-07](papers/2026-10-07.md) - 43 papers
@@ -178,6 +179,280 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-10-12 (16 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-10-12
+
+**Paper Count**: 16
+
+---
+
+## 1. X-AgentRed: Red-Teaming Personal Agents in Evolving Multi-Service Ecosystems / X-AgentRed：不断发展的多服务生态系统中的红队个人代理
+
+**Date**: 2026-10-09 | **arXiv**: [2610.13886v1](http://arxiv.org/abs/2610.13886v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.13886v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Personal agents increasingly connect to services across the web and applications by using tools. As the effects of their actions accumulate and interact across services, unintended or harmful outcomes can arise when agents fulfill benign user requests. Proactively identifying these compositional failures requires systematically exploring diverse cross-service paths. Existing red-teaming methods often simply prompt LLMs to identify potentially harmful paths from task and environment descriptions or decompose harmful objectives specified by humans or LLMs into seemingly benign action combinations. However, generation is biased toward patterns learned during training, potentially favoring familiar tool combinations and leaving novel cross-service interactions underexplored. To address this, we propose X-AgentRed, a self-evolving red-teaming framework that discovers harmful tool call paths through a graph of tool dependencies and expands and refines them using execution feedback. By analyzing each tool's effects, potential harms, and preconditions for execution, the red-teaming agent constructs a directed graph that captures how one tool's effects can satisfy another's execution preconditions. Recipes sampled from this graph are instantiated as realistic scenarios in which agents can produce harmful outcomes. Execution feedback enables self-improvement by diversifying paths that produce harm through tool substitution and refining preconditions at blocked steps in unsuccessful paths to enable further execution. Across four frontier agentic models, X-AgentRed achieves $1.77\times$ the harmful path rate of STAC and explores a more diverse set of tools, yielding $2.99\times$ the tool coverage on average.
+
+个人代理越来越多地使用工具连接到网络和应用程序上的服务。随着他们的行为的影响累积并跨服务交互，当代理满足良性用户请求时，可能会出现意想不到的或有害的结果。主动识别这些组合故障需要系统地探索不同的跨服务路径。现有的红队方法通常只是提示法学硕士从任务和环境描述中识别潜在有害的路径，或者将人类或法学硕士指定的有害目标分解为看似良性的行动组合。然而，生成过程偏向于训练期间学习到的模式，可能偏向于熟悉的工具组合，而未充分探索新颖的跨服务交互。为了解决这个问题，我们提出了 X-AgentRed，这是一个自我进化的红队框架，它通过工具依赖关系图发现有害的工具调用路径，并使用执行反馈扩展和细化它们。通过分析每种工具的效果、潜在危害和执行先决条件，红队代理构建了一个有向图，该图捕获一种工具的效果如何满足另一种工具的执行先决条件。从该图中采样的配方被实例化为现实场景，在这些场景中，代理可能会产生有害的结果。执行反馈通过工具替换使产生危害的路径多样化，并细化不成功路径中受阻步骤的前提条件，从而实现进一步的执行，从而实现自我改进。在四个前沿代理模型中，X-AgentRed 实现了 STAC 1.77 美元\倍$的有害路径率，并探索了更多样化的工具集，平均产生了 2.99 美元\倍$的工具覆盖率。
+
+</details>
+
+---
+
+## 2. OccludeBench: Can VLMs Find What's Missing? / OccludeBench：VLM 能否找到丢失的内容？
+
+**Date**: 2026-10-09 | **arXiv**: [2610.13790v1](http://arxiv.org/abs/2610.13790v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.13790v1)
+
+**Categories**: cs.CV, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+How well can vision-language models (VLMs) reason about what is missing from an image? We study this question with OccludeBench, a manually curated benchmark for recovering fully occluded objects from the visual evidence that remains. OccludeBench distinguishes direct cases, where the hidden object must be recovered from a specific physical cue such as a shadow or reflection, from inferential cases, where it can be inferred from broader scene context. Across five VLMs, accuracy averages 42.7% on direct cases versus 62.7% on inferential cases, exhibiting a 20.0-point gap. Humans attain higher accuracies of 63.4% versus 68.5% for direct and inferential images, respectively, with no significant gap. To locate this failure, we introduce OccludeTrace, a four-stage diagnostic that isolates where the visual reasoning process breaks down. The bottleneck emerges when models must recover the relevant object from the projection within the full image: they succeed on only 50% of failed examples, compared with 91% of examples they answer correctly. Extended reasoning, tool use, and few-shot prompting yield inconsistent improvements and do not reliably eliminate the gap. In contrast, an inpaint-then-confront intervention, which prompts models to first generate a candidate hidden object and then evaluate that hypothesis against the visible physical cue, reduces the gap to a statistically non-significant difference for both models with image-generation capabilities. Together, our results establish a tractable, controlled diagnostic for isolating how VLMs reason about visual content that is missing from an image.
+
+视觉语言模型 (VLM) 能否很好地推理图像中缺失的内容？我们使用 OccludeBench 来研究这个问题，这是一个手动策划的基准，用于从剩余的视觉证据中恢复完全被遮挡的对象。 OccludeBench 区分了直接情况和推断情况，在直接情况下，必须从特定的物理线索（例如阴影或反射）恢复隐藏对象，在推断情况下，隐藏对象可以从更广泛的场景上下文中推断出来。在五个 VLM 中，直接案例的平均准确率为 42.7%，而推理案例的平均准确率为 62.7%，存在 20.0 个百分点的差距。人类对于直接图像和推理图像的准确率分别为 63.4% 和 68.5%，没有显着差距。为了定位此故障，我们引入了 OccludeTrace，这是一种四阶段诊断，可隔离视觉推理过程发生故障的位置。当模型必须从完整图像内的投影中恢复相关对象时，就会出现瓶颈：它们仅在 50% 的失败示例中成功，而在正确回答的示例中，其比例为 91%。扩展推理、工具使用和少量提示会产生不一致的改进，并且不能可靠地消除差距。相比之下，先修复后对抗的干预会促使模型首先生成候选隐藏对象，然后根据可见的物理线索评估该假设，从而将具有图像生成功能的两个模型的差距缩小到统计上不显着的差异。总之，我们的结果建立了一种易于处理、受控的诊断方法，用于隔离 VLM 如何推理图像中缺失的视觉内容。
+
+</details>
+
+---
+
+## 3. MARGoS: A Configuration-Driven Platform for Reproducible MARL Experiments in ARGoS / MARGoS：ARGoS 中可重复 MARL 实验的配置驱动平台
+
+**Date**: 2026-10-09 | **arXiv**: [2610.13772v1](http://arxiv.org/abs/2610.13772v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.13772v1)
+
+**Categories**: cs.SE, cs.MA, cs.RO
+
+**Code**: https://github.com/tombackert/margos.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multi-agent reinforcement learning (MARL) has become a prominent research direction, particularly within collective robotics, where the ARGoS simulator is widely used to study emergent swarm behavior. Yet despite this growth, systematic support for reuse and reproducibility in MARL-based swarm robotics remains limited and insufficiently standardized: a single experiment is assembled from manually aligned simulator files, training scripts, configuration values, paths, seeds, and environment details, so reuse and reproduction stay fragile even within one research group. To address this gap, we introduce MARGoS, a lightweight, configuration-driven platform developed in this project that elevates these experiment-defining inputs to first-class, platform-managed artifacts. MARGoS enables reproducible experimentation through configuration hashing, end-to-end seed propagation, frozen (immutable) configurations, structured logging, environment fingerprinting, and exportable experiment bundles that facilitate sharing, replay, and verification of results across machines and over time. A five-dimension evaluation (architecture, efficiency, reproducibility, usability, and collaboration) supports our claim that managing experiment variation as a platform responsibility makes ARGoS+MARL experiments easier to reuse, reproduce, and hand off. Our code is available at https://github.com/tombackert/margos.
+
+多智能体强化学习 (MARL) 已成为一个突出的研究方向，特别是在集体机器人领域，ARGoS 模拟器被广泛用于研究突发群体行为。然而，尽管有这种增长，基于 MARL 的群体机器人技术对重用和再现性的系统支持仍然有限且不够标准化：单个实验是由手动对齐的模拟器文件、训练脚本、配置值、路径、种子和环境细节组装而成的，因此即使在一个研究小组内，重用和再现仍然脆弱。为了解决这一差距，我们引入了 MARGoS，这是一个在该项目中开发的轻量级、配置驱动的平台，它将这些实验定义输入提升为一流的、平台管理的工件。 MARGoS 通过配置散列、端到端种子传播、冻结（不可变）配置、结构化日志记录、环境指纹识别和可导出的实验包来实现可重复的实验，这些实验包有助于跨机器和随着时间的推移共享、重放和验证结果。五维评估（架构、效率、再现性、可用性和协作）支持了我们的主张：将实验变异作为平台责任进行管理使 ARGoS+MARL 实验更易于重用、再现和移交。我们的代码可在 https://github.com/tombackert/margos 获取。
+
+</details>
+
+---
+
+## 4. SafeDiSTL: Decomposing Joint Constraints for Safe Multi-Agent Reinforcement Learning / SafeDiSTL：分解联合约束以实现安全多智能体强化学习
+
+**Date**: 2026-10-09 | **arXiv**: [2610.13737v1](http://arxiv.org/abs/2610.13737v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.13737v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Cooperative multi-agent tasks often impose constraints on a shared objective or collective safety. A team level violation cost function can measure this constraint outcome, but does not distinguish which agents' actions most strongly influence that violation. We present SafeDiSTL, a constrained multi-agent reinforcement learning framework that allows for credit assignment even with joint constraint measurements. We use Signal Temporal Logic (STL) robustness to measure episode-level violation through running-maximum cost increments. Smooth full-episode robustness and differentiable dynamics provide action sensitivities, which allocate each cost increment across agents at the same decision time. These sensitivities account for delayed effects when weighting agents' shares of each cost increment. We study the framework in cooperative payload transport, connected navigation, and networked traffic control tasks. SafeDiSTL achieves 1.6-5.1x the safe-success rate in transport, improves navigation safe-success by 11.1%, and delivers 50-68% more throughput in traffic when compared to constrained baselines. Results demonstrate a strong improvement of the learned policy in dealing with shared constraint while retaining the performance of unconstrained policies.
+
+协作的多智能体任务通常会对共同目标或集体安全施加限制。团队级别的违规成本函数可以衡量此约束结果，但无法区分哪些代理的行为对违规影响最强烈。我们提出了 SafeDiSTL，这是一种约束多智能体强化学习框架，即使在联合约束测量的情况下也允许进行信用分配。我们使用信号时态逻辑 (STL) 稳健性通过运行最大成本增量来衡量情节级别的违规行为。平滑的全集稳健性和可微动态提供了动作敏感性，可在同一决策时间跨代理分配每个成本增量。当加权代理人在每次成本增量中所占的份额时，这些敏感性考虑了延迟效应。我们研究了协作有效载荷运输、互联导航和网络交通控制任务的框架。与受限基线相比，SafeDiSTL 的运输安全成功率提高了 1.6-5.1 倍，导航安全成功率提高了 11.1%，交通吞吐量提高了 50-68%。结果表明，学习的策略在处理共享约束方面有了很大的改进，同时保留了无约束策略的性能。
+
+</details>
+
+---
+
+## 5. A Baseline Assessment for the Agentic Web Technology Stack / 代理 Web 技术堆栈的基线评估
+
+**Date**: 2026-10-09 | **arXiv**: [2610.13703v1](http://arxiv.org/abs/2610.13703v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.13703v1)
+
+**Categories**: cs.AI, cs.ET, cs.SE
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The fast pace in which protocols, frameworks, and technologies are being proposed for LLM-based agents results in a complex scenario for anyone aiming to create state-of-the-art AI solutions. Without an assessment on how different protocols, frameworks, and libraries work together to compose an Agentic Web solution, developers and organizations face different challenges (e.g., skilling, governance, infrastructure) even before becoming part of the Agentic Web ecosystem. In this context, we propose a system for performing Agentic Web evaluations called MASTIF (Multi-Agent System TestIng Framework) and present a baseline assessment of Agentic Web technologies, including 3 LLMs, 3 protocols, and 4 agent implementation frameworks, against 300 Mind2Web benchmark tasks. Results suggest that selecting a task-specific technology stack may result in gains of task completion rate, efficiency score, and social value stability scores; and reductions in verbosity and time to complete tasks. With the presented results, we expect to present a baseline in terms of metrics and results for this complex and fast evolving scenario for those aiming at designing, assessing, and developing multi-agent systems.
+
+为基于 LLM 的代理提出的协议、框架和技术的快速发展，给任何想要创建最先进的人工智能解决方案的人带来了复杂的场景。如果不评估不同的协议、框架和库如何协同工作以构成 Agentic Web 解决方案，开发人员和组织甚至在成为 Agentic Web 生态系统的一部分之前就面临着不同的挑战（例如，技能、治理、基础设施）。在此背景下，我们提出了一个名为 MASTIF（多代理系统测试框架）的用于执行 Agentic Web 评估的系统，并针对 300 个 Mind2Web 基准任务对 Agentic Web 技术进行了基线评估，包括 3 个 LLM、3 个协议和 4 个代理实现框架。结果表明，选择特定于任务的技术堆栈可能会提高任务完成率、效率得分和社会价值稳定性得分；并减少完成任务的冗长和时间。通过所提出的结果，我们希望为那些旨在设计、评估和开发多智能体系统的人提供这一复杂且快速发展的场景的指标和结果基线。
+
+</details>
+
+---
+
+## 6. A Multi-Agent LLM System for Automated Tuning of Specialized Neural Network Models / 用于自动调整专业神经网络模型的多代理 LLM 系统
+
+**Date**: 2026-10-09 | **arXiv**: [2610.13663v1](http://arxiv.org/abs/2610.13663v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.13663v1)
+
+**Categories**: cs.AI, cs.CL, cs.LG, cs.MA, cs.NE
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Many machine learning approaches are two-level: an expert selects a class of methods, within this class the choice of key components is critical and usually manual. This paper addresses the automatic tuning of these components and proposes a framework transferable across models of different nature. The multi-agent large language model (LLM) framework has three roles---analyst, coder, and recorder~---with an experiment log and a sandboxed execution environment. Unlike systems that optimize the entire ML script or search architectures in a discrete space, the framework operates over an open but semantically narrow space: the agent generates code only for the specified components, leaving the overall network structure unchanged. The approach is validated in two directions: tuning a classification spiking neural network with correlation learning, and solving high-order differential equations with Physics-Informed Neural Networks (PINN). Across five tasks---spiking classification on MNIST and Digits, and boundary-value problems for the generalized nonlinear Schrödinger equation (GNLSE) and Kuramoto--Sivashinsky (KS) equations---the agent outperforms the baselines: classification accuracy is 13 percentage points (MNIST) and 6 percentage points (Digits) higher; the error against the analytical single-soliton solution is reduced approximately 2491-fold; the invariant-preservation error drops approximately 325-fold in the selected GNLSE run with a Gaussian perturbation and by more than 100-fold on average over repeated initializations; and the mass drift drops 14-fold for the KS problem with a Gaussian perturbation. The framework thus tunes key components on tasks of different nature without changing its internal structure.
+
+许多机器学习方法都是两级的：专家选择一类方法，在该类中关键组件的选择至关重要并且通常是手动的。本文讨论了这些组件的自动调整，并提出了一个可跨不同性质的模型转移的框架。多智能体大语言模型（LLM）框架具有分析员、编码员和记录员三个角色，并具有实验日志和沙盒执行环境。与在离散空间中优化整个机器学习脚本或搜索架构的系统不同，该框架在开放但语义狭窄的空间上运行：代理仅为指定组件生成代码，使整体网络结构保持不变。该方法在两个方向上得到验证：通过相关学习调整分类尖峰神经网络，以及通过物理信息神经网络 (PINN) 求解高阶微分方程。在五个任务中——MNIST 和 Digits 的尖峰分类，以及广义非线性薛定谔方程 (GNLSE) 和 Kuramoto-Sivashinsky (KS) 方程的边界值问题——智能体的表现优于基线：分类精度分别高出 13 个百分点 (MNIST) 和 6 个百分点 (Digits)；相对于解析单孤子解的误差减少了大约 2491 倍；在使用高斯扰动的选定 GNLSE 运行中，不变保持误差下降了大约 325 倍，并且在重复初始化过程中平均下降了 100 倍以上；对于具有高斯扰动的 KS 问题，质量漂移下降了 14 倍。因此，该框架在不改变其内部结构的情况下调整不同性质任务的关键组件。
+
+</details>
+
+---
+
+## 7. AutoBio+: Benchmarking Dexterous Manipulation with Dynamic Experimental Phenomena in Realistic Laboratories / AutoBio+：在现实实验室中通过动态实验现象对灵巧操作进行基准测试
+
+**Date**: 2026-10-09 | **arXiv**: [2610.13643v1](http://arxiv.org/abs/2610.13643v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.13643v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Automating biological laboratories requires robots to perform dexterous tool interactions under realistic visual conditions while handling dynamic experimental phenomena, presenting significant challenges for robotic manipulation. To enable systematic evaluation under these conditions, we introduce AutoBio+, a simulation benchmark and framework for dexterous manipulation in realistic biological laboratory environments. AutoBio+ comprises 14 tasks across 4 robot embodiments, spanning functional tool use, precision manipulation, language-conditioned visual grounding, and instrument operation. We introduce controllable dynamic experimental phenomena, including flames, vapor, and bubbles, to capture the evolving visual conditions of laboratory procedures. To further enhance environmental realism, we develop a hybrid rendering pipeline that integrates interactive simulated foreground objects with Gaussian-splatting backgrounds reconstructed from 6 real laboratory scenes. For efficient large-scale data generation and evaluation, we further build a parallel simulation framework on top of mjlab, proposing Parallel Finite-State Machine (PFSM) and integrating batched rendering with decoupled trajectory replay for demonstration generation and model-independent closed-loop policy evaluation. Our evaluation reveals substantial variation in policy performance across tasks, exposing distinct strengths and weaknesses of current manipulation policies. Real-world experiments further demonstrate a reduced sim-to-real gap, supporting the validity of AutoBio+ for realistic manipulation evaluation. Supplementary materials are available at https://autobio-plus.github.io/AutoBioPlus.
+
+自动化生物实验室要求机器人在真实视觉条件下执行灵巧的工具交互，同时处理动态实验现象，这对机器人操作提出了重大挑战。为了能够在这些条件下进行系统评估，我们引入了 AutoBio+，这是一种在现实生物实验室环境中进行灵巧操作的模拟基准和框架。 AutoBio+ 包含 4 个机器人实施例的 14 项任务，涵盖功能工具使用、精确操作、语言条件视觉基础和仪器操作。我们引入可控的动态实验现象，包括火焰、蒸汽和气泡，以捕捉实验室过程中不断变化的视觉条件。为了进一步增强环境真实感，我们开发了一种混合渲染管道，它将交互式模拟前景对象与从 6 个真实实验室场景重建的高斯溅射背景集成在一起。为了高效地进行大规模数据生成和评估，我们在 mjlab 之上进一步构建了并行仿真框架，提出了并行有限状态机（PFSM），并将批量渲染与解耦轨迹回放相结合，以进行演示生成和独立于模型的闭环策略评估。我们的评估揭示了不同任务之间政策绩效的巨大差异，暴露了当前操纵政策的独特优势和劣势。真实世界的实验进一步证明了模拟与真实差距的缩小，支持了 AutoBio+ 用于真实操作评估的有效性。补充材料可在 https://autobio-plus.github.io/AutoBioPlus 获取。
+
+</details>
+
+---
+
+## 8. MENTOR: Learning from Failure with On-Policy Pedagogical Intervention / 导师：通过政策性教学干预从失败中学习
+
+**Date**: 2026-10-09 | **arXiv**: [2610.13594v1](http://arxiv.org/abs/2610.13594v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.13594v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reinforcement Learning from Verifiable Rewards (RLVR) is a key driver for Large Reasoning Models, but it is vulnerable to "zero-reward collapse", a training failure where a sudden increase in task difficulty causes the learning signal to vanish. We argue that the conventional approach of discarding these failed trajectories is wasteful, as they contain valuable diagnostic information about the model's cognitive gaps, a bright side that can be leveraged for recovery. Existing solutions, however, often regress to static, "off-policy-style" interventions like pre-defined hint libraries or perform post-hoc refinement, failing to provide the adaptive, forward-looking guidance needed to escape the collapse. To address this, we propose a paradigm shift towards on-policy pedagogical intervention and introduce MENTOR, a multi-agent framework that acts as a live mentor. MENTOR diagnoses the root cause of failure in real-time and dynamically generates targeted, instructional prompts to guide the learning agent's next attempt. As a plug-and-play module, MENTOR integrates seamlessly into existing policy optimization pipelines like GRPO without modifying the training infrastructure. Extensive experiments on math and code generation show that MENTOR effectively mitigates zero-reward collapse, outperforming state-of-the-art baselines. Notably, it achieves massive average relative gains of up to 78.3% on Llama-3.2-3B-Instruct over its base model.
+
+可验证奖励强化学习（RLVR）是大型推理模型的关键驱动因素，但它很容易受到“零奖励崩溃”的影响，这是一种训练失败，任务难度突然增加导致学习信号消失。我们认为，丢弃这些失败轨迹的传统方法是浪费的，因为它们包含有关模型认知差距的有价值的诊断信息，这是可以用来恢复的光明的一面。然而，现有的解决方案通常会回归到静态的、“脱离策略式”的干预措施，例如预定义的提示库或执行事后细化，无法提供避免崩溃所需的适应性、前瞻性指导。为了解决这个问题，我们提出了向政策教学干预的范式转变，并引入了 MENTOR，一个充当现场导师的多主体框架。 MENTOR 实时诊断失败的根本原因，并动态生成有针对性的指导提示，以指导学习代理的下一次尝试。作为即插即用模块，MENTOR 可以无缝集成到 GRPO 等现有策略优化管道中，而无需修改培训基础设施。关于数学和代码生成的大量实验表明，MENTOR 有效地缓解了零奖励崩溃，优于最先进的基线。值得注意的是，与基本模型相比，Llama-3.2-3B-Instruct 的平均相对增益高达 78.3%。
+
+</details>
+
+---
+
+## 9. MAGMA-Bench: Evaluating Long-Horizon Embodied Agents under Dynamic Tasks and Execution Failures / MAGMA-Bench：评估动态任务和执行失败下的长期具体代理
+
+**Date**: 2026-10-09 | **arXiv**: [2610.13534v1](http://arxiv.org/abs/2610.13534v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.13534v1)
+
+**Categories**: cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long-horizon embodied agents must maintain task-relevant information, coordinate heterogeneous robots, and adapt their decisions as execution unfolds. Existing benchmarks investigate dynamic task execution and embodied multi-agent coordination, but provide limited evaluation of their intersection. We introduce MAGMA-Bench, an architecture-agnostic benchmark for persistent task reasoning in dynamic multi-robot environments. MAGMA-Bench evaluates agents across increasing task horizons and controlled online perturbations, including execution failures, task interruptions, and mission updates, with scenarios requiring coordination across robots with heterogeneous capabilities. It uses a structured skill-level interface to separate task-level reasoning from perception and low-level control. We evaluate locally deployable open-weight planners, multi-agent state-tracking strategies, and frontier models. Even the strongest evaluated models fail on a substantial fraction of clean episodes, and their success rates decrease further under online perturbations. Supervised adaptation greatly improves a small model, but performance remains substantially lower on longer and multi-robot missions. We release the benchmark, 261,646 task-level training examples, and an architecture-agnostic expert-trace generation pipeline.
+
+长视野具体代理必须维护与任务相关的信息，协调异构机器人，并在执行过程中调整其决策。现有的基准研究动态任务执行和体现多代理协调，但对它们的交集提供有限的评估。我们引入了 MAGMA-Bench，这是一种与架构无关的基准，用于动态多机器人环境中的持久任务推理。 MAGMA-Bench 通过不断增加的任务范围和受控在线扰动来评估代理，包括执行失败、任务中断和任务更新，以及需要在具有异构功能的机器人之间进行协调的场景。它使用结构化的技能级别界面将任务级别的推理与感知和低级别的控制分开。我们评估本地可部署的开放权重规划器、多智能体状态跟踪策略和前沿模型。即使是最强大的评估模型也会在很大一部分干净事件上失败，并且在在线扰动下它们的成功率进一步下降。监督适应极大地改进了小型模型，但在较长时间和多机器人任务中，性能仍然大大降低。我们发布了基准测试、261,646 个任务级训练示例以及与架构无关的专家跟踪生成管道。
+
+</details>
+
+---
+
+## 10. Humanize MLE Agents: Multi-Agent Session Alternation Beyond Single-Agent Limits / 人性化 MLE 代理：超越单代理限制的多代理会话交替
+
+**Date**: 2026-10-09 | **arXiv**: [2610.13494v1](http://arxiv.org/abs/2610.13494v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.13494v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Existing LLM-based agent approaches for long-horizon machine learning engineering (MLE) often use context engineering, implemented through custom harnesses that manage tools, skills, and accumulated experience. However, we find that as single-session execution lengthens, the agent's reasoning intensity declines alongside slowing progress, summarized as long-horizon deceleration, and the benefits of these custom harnesses vanish as the underlying model improves, summarized as harness staleness. These findings suggest that their benefits may not persist across versions, which motivates a workflow-level approach in which agents build on one another's work across sessions. We model these alternating agent sessions as a context-reset semi-Markov decision process (CR-SMDP) and establish sufficient conditions for alternation to exceed single-agent reference limits, derive an explicit experiment-budget bound, and characterize when session caps preserve this advantage. Guided by this analysis, we introduce Humanize MLE Agents (HMA), which alternates two agents on a shared workspace, limits each session to at most k experiments and resets the context between sessions, without additional task-specific harness or prior knowledge supplements. Across 75 Kaggle tasks in MLE-bench, HMA reaches a state-of-the-art any-medal rate of 78.2%, exceeding the strongest open-source baseline by 8.0 points with a quarter of its time budget. Moreover, among six configurations spanning five heterogeneous agent pairs, HMA improves any-medal rate over the constituent baselines by 6.4 points on average, demonstrating cross-pair generality. A supplementary case on kernel optimization reaches 878 cycles, within 1.6% of the community leaderboard leader, demonstrating applicability beyond MLE.
+
+现有的基于 LLM 的长期机器学习工程 (MLE) 代理方法通常使用上下文工程，通过管理工具、技能和积累的经验的自定义工具来实现。然而，我们发现，随着单会话执行时间的延长，智能体的推理强度会随着进度的减慢而下降，概括为长期减速，并且随着底层模型的改进，这些自定义工具的好处消失，概括为工具陈旧。这些发现表明，它们的好处可能不会跨版本持续存在，这激发了一种工作流级方法，在该方法中，代理跨会话建立在彼此的工作之上。我们将这些交替代理会话建模为上下文重置半马尔可夫决策过程（CR-SMDP），并为交替超过单代理参考限制建立充分的条件，得出明确的实验预算界限，并描述会话上限何时保留这一优势。在此分析的指导下，我们引入了 Humanize MLE Agents (HMA)，它在共享工作空间上交替使用两个代理，将每个会话限制为最多 k 个实验，并重置会话之间的上下文，而无需额外的特定于任务的工具或先验知识补充。在 MLE 基准上的 75 项 Kaggle 任务中，HMA 达到了 78.2% 的最先进的任意奖牌率，比最强的开源基线高出 8.0 个点，而时间预算仅为四分之一。此外，在跨越五个异构智能体对的六种配置中，HMA 将任意奖牌率平均提高了 6.4 个点，证明了跨对的通用性。内核优化的补充案例达到了 878 个周期，与社区排行榜领先者的差距在 1.6% 以内，展示了超越 MLE 的适用性。
+
+</details>
+
+---
+
+## 11. Proactive Agentic Orchestration / 主动代理编排
+
+**Date**: 2026-10-09 | **arXiv**: [2610.13485v1](http://arxiv.org/abs/2610.13485v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.13485v1)
+
+**Categories**: cs.CL
+
+**Code**: https://github.com/XueyangFeng/POrchestra.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Agentic orchestration delegates tasks to sub-agents with independent contexts, providing a key path to extending the effective execution horizon of large language model agents. However, existing orchestration methods face two limitations: in execution, current methods fix sub-agents' goals and harnesses at creation time, limiting their adaptability to dynamic real-world environments; in optimization, sparse and delayed feedback constrains effective learning of the orchestration policy. To address these limitations, we introduce POrchestra, an on-the-fly proactive agentic orchestration framework. It allows sub-agents to proactively communicate with the orchestrator at any logical point to request harness adjustments while maintaining continuity of local execution. This mechanism not only enables sub-agents to adapt seamlessly to dynamic environments but also naturally inspires On-Policy Orchestration Distillation (OPOD) based on hindsight feedback. OPOD attributes sub-agents' proactive revision requests back to preceding orchestration decisions to derive targeted improvement signals, and leverages these signals as process supervision alongside the final reward to optimize the orchestration policy. We evaluate POrchestra on three long-horizon agent benchmarks spanning deep research, dynamic digital assistance, and software engineering. POrchestra improves task success by an average of 9.1% relative to the strongest baseline; combined with OPOD, it improves small-orchestrator success by an average of 10.0% relative to existing training baselines. POrchestra also achieves a more favorable cost-performance trade-off. Our code is publicly available at https://github.com/XueyangFeng/POrchestra.
+
+代理编排将任务委托给具有独立上下文的子代理，为扩展大型语言模型代理的有效执行范围提供了关键路径。然而，现有的编排方法面临两个限制：在执行中，当前的方法在创建时固定了子代理的目标和利用，限制了它们对动态现实环境的适应性；在优化中，稀疏和延迟的反馈限制了编排策略的有效学习。为了解决这些限制，我们引入了 POrchestra，一个动态主动代理编排框架。它允许子代理在任何逻辑点主动与编排器进行通信，以请求线束调整，同时保持本地执行的连续性。这种机制不仅使子代理能够无缝适应动态环境，而且自然地激发了基于事后反馈的按策略编排蒸馏（OPOD）。 OPOD 将子代理的主动修订请求归因于之前的编排决策，以得出有针对性的改进信号，并利用这些信号作为流程监督以及最终奖励来优化编排策略。我们根据涵盖深度研究、动态数字辅助和软件工程的三个长期代理基准对 POrchestra 进行评估。相对于最强基线，POrchestra 将任务成功率平均提高了 9.1%；与 OPOD 相结合，相对于现有的训练基准，它可以将小型编排器的成功率平均提高 10.0%。 POrchestra 还实现了更有利的性价比权衡。我们的代码可在 https://github.com/XueyangFeng/POrchestra 上公开获取。
+
+</details>
+
+---
+
+## 12. A Local Agentic AI Framework to Generate Edge Case Scenarios for Safety Assurance / 用于生成安全保证边缘案例场景的本地代理人工智能框架
+
+**Date**: 2026-10-09 | **arXiv**: [2610.13479v1](http://arxiv.org/abs/2610.13479v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.13479v1)
+
+**Categories**: cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Generating edge case scenarios is crucial for training, testing and safety assuring autonomous systems. This identifies hazardous failures to increase system reliability and robustness, ensures the system can still function safely on the boundaries of its operational design domain and learns the expected system behaviour for these edge cases. The rapid advancement in the generation and analysis capabilities of language models (LMs) has expanded their applicability and recent work has investigated LM scenario generation. However, many recent approaches rely on human-in-the-loop or rule-based strategies. This restricts the LM's ability to generate diverse and edge case scenarios; the long tail of the distribution. Our work uses local LMs in a laptop-based agentic AI framework for adaptive scenario generation. This is cheap, fully-controlled, ensures data privacy and security. It uses think, act, observe, update, and continue loops with lightweight JSON encoding to generate scenarios. We use the system requirements, system description and environment description as knowledge bases in contextual prompts for an LM to ensure scenario realism. A second, independent LM critiques each scenario using domain specific criteria so it can be refined. The refined scenarios are run in simulation and evaluation metrics collected. These metric scores are analysed and similar scenarios are created for edge cases (exploitation) or novel scenarios are generated to explore the scenario space. Post-hoc clustering using metric scores and thematic-type analysis of the rich-text scenario descriptions produced by the LM pinpoints functional gaps and their triggering conditions. This creates traceable evidence for the safety assurance case. Our work highlights the potential of a flexible and adaptive local agentic AI framework for automating edge case generation and producing traceable safety assurance evidence.
+
+生成边缘案例场景对于训练、测试和确保自主系统的安全至关重要。这可以识别危险故障，以提高系统可靠性和稳健性，确保系统仍然可以在其操作设计域的边界上安全运行，并了解这些边缘情况的预期系统行为。语言模型（LM）的生成和分析能力的快速进步扩大了它们的适用性，最近的工作研究了 LM 场景生成。然而，许多最近的方法依赖于人机交互或基于规则的策略。这限制了 LM 生成多样化和边缘情况场景的能力；分布的长尾。我们的工作在基于笔记本电脑的代理人工智能框架中使用本地语言模型来生成自适应场景。这是便宜的、完全控制的、确保数据隐私和安全的。它使用思考、行动、观察、更新和继续循环以及轻量级 JSON 编码来生成场景。我们使用系统需求、系统描述和环境描述作为 LM 上下文提示中的知识库，以确保场景真实性。第二个独立的 LM 使用特定于领域的标准来批评每个场景，以便对其进行完善。细化的场景在收集的模拟和评估指标中运行。对这些指标分数进行分析，并为边缘情况（利用）创建类似的场景，或者生成新的场景来探索场景空间。使用度量分数和对 LM 生成的富文本场景描述进行主题类型分析的事后聚类可查明功能差距及其触发条件。这为安全保障案例创建了可追溯的证据。我们的工作强调了灵活且自适应的本地代理人工智能框架在自动生成边缘案例和生成可追溯的安全保证证据方面的潜力。
+
+</details>
+
+---
+
+## 13. Agentic Large Language Models / 代理大语言模型
+
+**Date**: 2026-10-09 | **arXiv**: [2610.13455v1](http://arxiv.org/abs/2610.13455v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.13455v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language models (LLMs) have taken the world by storm. Their ability to communicate with us in our own language, and to reason about our world, has made them a favorite tool for writing, answering questions, and much more. Their answers already influence our decisions and our actions. What would happen if LLMs themselves could act in the world directly? What would happen if LLMs could interact with each other? Agentic LLMs combine the power of large language models with the ability to act in the real world. In this book we will discuss how agentic LLMs work, how they act, how they interact, and what this means for us, as users.
+
+大型语言模型（LLM）已经风靡全球。它们能够用我们自己的语言与我们交流，并推理我们的世界，这使它们成为人们喜爱的写作、回答问题等工具。他们的答案已经影响了我们的决定和行动。如果法学硕士本身可以直接在世界上行动，会发生什么？如果法学硕士可以互相交流会发生什么？代理法学硕士将大型语言模型的力量与在现实世界中行动的能力结合起来。在本书中，我们将讨论代理法学硕士如何工作、如何行动、如何互动，以及这对我们作为用户意味着什么。
+
+</details>
+
+---
+
+## 14. Collective Autonomous Vehicle Routing Needs Social Awareness for Coexistence with Human Drivers / 集体自动驾驶车辆路线需要社会意识以与人类驾驶员共存
+
+**Date**: 2026-10-09 | **arXiv**: [2610.13439v1](http://arxiv.org/abs/2610.13439v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.13439v1)
+
+**Categories**: cs.MA, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Collective Autonomous Vehicle (AV) route choices in real-world traffic networks can create externalities for Human-Driven Vehicles (HDVs), as routes that benefit AVs may increase travel times for other road users. To address this, we introduce a social component, the marginal cost, to the selfish travel time AV reward. Marginal cost captures an AV's impact on other road users by comparing their travel times with those in a counterfactual simulation in which the AV is removed.   We study AV route choice in mixed-autonomy traffic settings using Multi-Agent Reinforcement Learning (MARL), where AVs learn routing policies through repeated interactions with the traffic environment. Experiments on the real-world networks of Ingolstadt and Provins show that incorporating marginal cost into the AV reward not only limits the increase in HDV travel times and shortens AV travel times relative to selfish AV routing, but also improves overall system performance. In Ingolstadt, selfish routing of 40\% AVs increases the travel times of other vehicles by 1.7\%, and this drops to 1.1\% when the social reward is included. Interestingly, not only does overall system performance improve, but the AVs are also better off when acting socially.This effect is consistent across tested cities, penetration rates, and replications, yet when the weight of the social component in the reward increases, the system fails to reach the desired performance.   For a more scalable approach to social AV routing in mixed-autonomy traffic, we compute the marginal cost only for the AVs whose route choices most affect the traffic system. This reduces the number of counterfactual simulations and achieves similar performance at a significantly lower computational cost. Our results suggest that AV routing should go beyond selfish rewards and, for the benefit of all traffic participants, include a social component in its objective.
+
+现实世界交通网络中的集体自动驾驶汽车 (AV) 路线选择可能会给人类驾驶车辆 (HDV) 带来外部性，因为有利于自动驾驶汽车的路线可能会增加其他道路使用者的出行时间。为了解决这个问题，我们在自私旅行时间 AV 奖励中引入了社会成分，即边际成本。边际成本通过将其他道路使用者的出行时间与移除自动驾驶汽车的反事实模拟中的出行时间进行比较，来捕捉自动驾驶汽车对其他道路使用者的影响。   我们使用多代理强化学习 (MARL) 研究混合自主流量设置中的 AV 路由选择，其中 AV 通过与流量环境的重复交互来学习路由策略。在因戈尔施塔特和普罗万斯的现实网络上进行的实验表明，将边际成本纳入 AV 奖励中不仅限制了 HDV 行驶时间的增加，相对于自私 AV 路由缩短了 AV 行驶时间，而且还提高了整体系统性能。在因戈尔施塔特，40\% AV 的自私路线使其他车辆的行驶时间增加了 1.7\%，当考虑到社会奖励时，这一数字下降到 1.1\%。有趣的是，不仅整体系统性能得到改善，而且自动驾驶汽车在社交行为时也会表现得更好。这种效果在测试的城市、渗透率和复制中是一致的，但当奖励中社交成分的权重增加时，系统无法达到预期的性能。   为了在混合自治流量中实现更具可扩展性的社交 AV 路由方法，我们仅计算其路线选择对交通系统影响最大的 AV 的边际成本。这减少了反事实模拟的数量，并以显着降低的计算成本实现了类似的性能。我们的结果表明，AV 路由应该超越自私的奖励，并且为了所有流量参与者的利益，在其目标中包含社交成分。
+
+</details>
+
+---
+
+## 15. Rollout-Time Intervention: Unlocking Agentic Reinforcement Learning Beyond Policy Limits / 推出时干预：解锁超越政策限制的代理强化学习
+
+**Date**: 2026-10-09 | **arXiv**: [2610.13438v1](http://arxiv.org/abs/2610.13438v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.13438v1)
+
+**Categories**: cs.AI
+
+**Code**: https://github.com/Alibaba-NLP/qqr.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reinforcement learning (RL) has emerged as a key paradigm for improving large language model (LLM) agents, enabling stronger reasoning, planning, and tool-use in interactive environments. However, existing agent RL methods remain fundamentally constrained by an on-policy reasoning bottleneck: when tasks exceed the model's current capability boundary, effective trajectories become extremely sparse and training often collapses. We introduce Rollout-Time Intervention (RTI), a technique designed to elicit successful trajectories beyond the policy's intrinsic exploration capacity. RTI operates by leveraging reward-side evidence (i.e., evaluation rubrics) during rollout to convert erroneous trajectories into successful ones, providing effective learning signals for tasks that the policy rarely solves on its own. Although intervention trajectories are inherently off-policy, we find that they can effectively guide policy optimization when trajectories with excessive distributional shifts are filtered out. Extensive experiments across five benchmarks demonstrate that RTI consistently outperforms RL baselines, enabling the post-trained policy to approach the performance of substantially stronger contemporary LLMs and, more importantly, transcend its original capability boundary. The code is available at https://github.com/Alibaba-NLP/qqr.
+
+强化学习 (RL) 已成为改进大型语言模型 (LLM) 代理的关键范例，可在交互式环境中实现更强大的推理、规划和工具使用。然而，现有的智能体强化学习方法从根本上仍然受到同策略推理瓶颈的限制：当任务超出模型当前的能力边界时，有效轨迹变得极其稀疏，训练经常崩溃。我们引入了推出时间干预（RTI），这是一种旨在引出超出政策内在探索能力的成功轨迹的技术。 RTI 通过在推出过程中利用奖励方证据（即评估标准）来将错误的轨迹转化为成功的轨迹，为策略本身很少解决的任务提供有效的学习信号。尽管干预轨迹本质上是偏离政策的，但我们发现，当过滤掉过度分配变化的轨迹时，它们可以有效地指导政策优化。跨越五个基准的广泛实验表明，RTI 始终优于 RL 基线，使训练后的策略能够接近更强大的当代 LLM 的表现，更重要的是，超越其最初的能力边界。代码可在https://github.com/Alibaba-NLP/qqr获取。
+
+</details>
+
+---
+
+## 16. Web$hell: A Unified Interface for Agentic Web Access / Web$hell：代理 Web 访问的统一接口
+
+**Date**: 2026-10-09 | **arXiv**: [2610.13416v1](http://arxiv.org/abs/2610.13416v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.13416v1)
+
+**Categories**: cs.AI, cs.IR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language model (LLM) agents are becoming direct users of the open web. As they take on increasingly complex and information-intensive tasks, effective web access is becoming a core capability for agentic problem solving. Existing approaches have advanced agentic web access through different access models, including search-augmented agents, browser-based agents, and, more recently, filesystem-based agents. Nevertheless, as users expect agents to complete long-horizon, end-to-end tasks, they increasingly need to conduct broad information gathering, perform browser actions, and revisit acquired evidence within a single trajectory. Yet our preliminary analyses reveal that existing access models struggle to meet these demands. They primarily support either information gathering or browser interaction, while combining their capabilities can involve substantial costs or performance trade-offs. To this end, we present Web\$hell, an interface that unifies web access under a single access model. Using a common schema defined by WebContract, WebCompiler compiles live webpages into addressable information and action objects. These objects are maintained in WebCache and handled through a shared set of operations, providing agents with consistent, operable, and persistent web access. Through extensive experiments across web search, web navigation, and deep research benchmarks, we show that Web\$hell achieves strong task performance at lower cost. Our results further indicate the importance of interface design for effective web access, with Web\$hell opening new possibilities for more capable and efficient LLM agents on the web.
+
+大型语言模型（LLM）代理正在成为开放网络的直接用户。随着他们承担日益复杂和信息密集的任务，有效的网络访问正在成为代理问题解决的核心能力。现有方法通过不同的访问模型实现高级代理 Web 访问，包括搜索增强代理、基于浏览器的代理以及最近的基于文件系统的代理。然而，由于用户期望代理能够完成长期的端到端任务，他们越来越需要进行广泛的信息收集，执行浏览器操作，并在单一轨迹内重新访问所获取的证据。然而我们的初步分析表明，现有的访问模型很难满足这些需求。它们主要支持信息收集或浏览器交互，而结合它们的功能可能会涉及大量成本或性能权衡。为此，我们提出了 Web\$hell，一个将 Web 访问统一在单一访问模型下的界面。使用 WebContract 定义的通用模式，WebCompiler 将实时网页编译为可寻址信息和操作对象。这些对象在 WebCache 中维护，并通过一组共享操作进行处理，为代理提供一致、可操作且持久的 Web 访问。通过跨网络搜索、网络导航和深入研究基准的广泛实验，我们表明 Web\$hell 以较低的成本实现了强大的任务性能。我们的结果进一步表明了界面设计对于有效网络访问的重要性，网络地狱为网络上更有能力、更高效的法学硕士代理开辟了新的可能性。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-10-09 (53 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-10-09
