@@ -27,6 +27,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-10-16](papers/2026-10-16.md) - 21 papers
 - [2026-10-15](papers/2026-10-15.md) - 30 papers
 - [2026-10-14](papers/2026-10-14.md) - 15 papers
 - [2026-10-12](papers/2026-10-12.md) - 8 papers
@@ -197,6 +198,354 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-10-16 (21 papers)</b></summary>
+
+# arXiv Video Papers - 2026-10-16
+
+**Paper Count**: 21
+
+---
+
+## 1. FilterFusion: Prior-Guided Adaptive Filter Fusion for Efficient Video Denoising / FilterFusion ：用于高效视频去噪的先验引导自适应滤波器融合
+
+**Date**: 2026-10-15 | **arXiv**: [2610.21505v1](http://arxiv.org/abs/2610.21505v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.21505v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Real-world video denoising for communication systems must handle mixed degradations such as sensor noise, compression artifacts, and motion-induced inconsistency while remaining deployable under tight latency budgets. Purely deep models often achieve high accuracy but come with significant computational cost, whereas classical filters are robust and efficient but insufficiently adaptive. We present FilterFusion, a prior-guided multi-frame denoising framework that combines temporally-aware learned features with an interpretable bank of denoising branches. The model predicts a low-cost guidance signal and uses it to adaptively mix a compact set of denoising responses at the original resolution. The lightweight design uses only 109K parameters and explicitly injects temporal variance and spatial variance cues into the low-resolution controller. On CRVD (real sensor noise), it reaches 34.72 dB PSNR and 0.9330 SSIM with only 0.18 GFLOPs (network-only). Because the filter-bank operations are simple and regular (Gaussian blur, median, weighted sum), a straightforward compiled C implementation of the synthesis path achieves 17.9ms per frame (55.9 FPS) on a single CPU thread at 1080p---exceeding real-time and 122--252 times faster than lightweight CNN baselines that require over 2 seconds per frame. The results demonstrate a strong quality-efficiency-speed trade-off and a practical route to real-time denoising through low-resolution control and explicit filter-based synthesis.
+
+通信系统的真实世界视频去噪必须处理混合降级，例如传感器噪声、压缩伪影和运动引起的不一致性，同时在紧凑的延迟预算下保持可部署性。 纯深度模型通常具有高精度，但计算成本很高，而经典滤波器则具有鲁棒性和高效性，但自适应性不足。 我们提出了FilterFusion ，这是一种先前引导的多帧去噪框架，将时间感知特征与可解释的去噪分支库相结合。 该模型预测低成本制导信号，并使用它在原始分辨率下自适应混合一组紧凑的去噪响应。 轻量化设计仅使用109K参数，并将时间方差和空间方差线索显式注入低分辨率控制器。 在CRVD （真实传感器噪声）上，它达到34.72 dB PSNR和0.9330 SSIM ，仅0.18 GFLOPs （仅网络）。 由于滤波器组操作简单且规则（高斯模糊、中值、加权和） ，合成路径的直接编译C实现在单个CPU线程上以1080p实现每帧17.9ms （ 55.9 FPS ） --超过实时和122--比每帧需要超过2秒的轻量级CNN基线快252倍。 结果表明，通过低分辨率控制和基于显式滤波器的合成，实现了强大的质量-效率-速度权衡和实时去噪的实用路线。
+
+</details>
+
+---
+
+## 2. Where, How, and When: Query-Guided Grounding for Video Understanding / 地点、方式和时间：视频理解的查询引导基础
+
+**Date**: 2026-10-15 | **arXiv**: [2610.21422v1](http://arxiv.org/abs/2610.21422v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.21422v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Understanding video content requires reasoning at multiple levels of granularity, from identifying objects to interpreting their interactions and localizing when specific actions occur. This thesis studies three query-guided grounding tasks that answer where key objects are (object-level grounding), how they interact (relationship-level grounding), and when specific moments occur (moment-level grounding). For object-level grounding, we present QDETRv, a query-guided extension of the Detection Transformer for one-shot localization of unseen objects in videos, which combines query-context fusion, a memory module for temporal consistency, and unsupervised pretraining on synthetic object trajectories. We further propose the Temporal Object-Aware Vision Transformer (TOViT) for few-shot video object detection, which builds on a language-aligned open-set vision encoder and propagates high-confidence object features across frames. For relationship-level grounding, we introduce few-shot referring relationships in videos: given a (subject, predicate, object) query and a few support videos sharing the predicate, the entities are localized by optimizing a T-partite random field using a meta-learned relation network with query-conditioned translational embeddings, Global Semantic Aggregation, Local Localization Aggregation, and belief-propagation-based message passing. For moment-level grounding, we propose the Moment Alignment Transformer (MATR) for video-to-video moment retrieval, which uses dual-stage Dynamic Time Warping for pre- and post-fusion alignment, learnable queries for boundary prediction, and self-supervised pretraining with temporal augmentations; MATR also extends to text-to-video moment retrieval with performance comparable to, or better than, the state of the art. These contributions advance query-guided video understanding across spatial, relational, and temporal grounding.
+
+了解视频内容需要在多个粒度级别进行推理，从识别对象到解释它们的互动以及在特定操作发生时进行本地化。 本论文研究了三个由查询引导的接地任务，这些任务回答了关键对象的位置（对象级接地）、它们如何交互（关系级接地）以及特定时刻何时发生（瞬间级接地）。 对于对象级接地，我们提出了QDETRv ，这是Detection Transformer的查询引导扩展，用于视频中未知对象的一次性定位，它结合了查询上下文融合、用于时间一致性的内存模块和对合成对象轨迹的无监督预训练。 我们进一步提出了用于少镜头视频对象检测的临时对象感知视觉变换器（ TOViT ） ，该变换器基于语言对齐的开集视觉编码器，并在帧间传播高置信度对象特征。 对于关系级接地，我们在视频中引入了少量引用关系：给定(subject, predicate, object)查询和一些共享谓词的支持视频，通过使用具有查询条件翻译嵌入、全局语义聚合、本地化聚合和基于信念传播的消息传递的元学习关系网络来优化T部分随机字段，从而对实体进行本地化。 对于矩级接地，我们提出了用于视频到视频矩检索的矩对准变压器（ MATR ） ，
+
+</details>
+
+---
+
+## 3. TRACER: A Multimodal Harness for Patient Care in Hospitals / 示踪剂：用于医院患者护理的多式联运线束
+
+**Date**: 2026-10-15 | **arXiv**: [2610.21266v1](http://arxiv.org/abs/2610.21266v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.21266v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Continuous video and clinical records provide complementary information for understanding how patient behavior evolves over a hospital stay. A central challenge is how to represent behavior across the entire stay while preserving access to fine-grained visual and clinical evidence. We introduce TRACER, a training-free multimodal harness that constructs minute-level action records from video and combines them with clinical records into hourly reports. The harness equips an LLM agent with tools to query this hierarchy, inspect relevant video, and retrieve clinical records. To evaluate TRACER, we construct two benchmarks. The first contains 397 annotated one-minute clips spanning 15 atomic actions; the second poses 144 clinician-informed multiple-choice questions, grounded in 264 hours of video and clinical records from two ICU patients. TRACER achieves up to 84.8% accuracy for action detection and 61.0% QA accuracy versus 49.3% for the strongest baseline using the same backbone. Across 280 patients spanning approximately 60,000 camera-hours, TRACER identifies significantly less purposeful activity in patients with a positive delirium assessment during their stay than in those without (p < 0.0001). Our results show that combining continuous video with clinical records can support understanding of patient behavior over time and across patient cohorts without training on protected health data.
+
+连续的视频和临床记录为理解患者行为在住院期间的演变提供了补充信息。 一个核心挑战是如何代表整个住宿期间的行为，同时保留对精细视觉和临床证据的访问权限。 我们推出了TRACER ，这是一种无需培训的多模式线束，可从视频中构建分钟级操作记录，并将其与临床记录相结合，形成每小时报告。 线束为LLM代理配备了查询此层次结构、检查相关视频和检索临床记录的工具。 为了评估示踪剂，我们构建了两个基准。 第一个包含397个带注释的一分钟剪辑，跨越15个原子动作；第二个提出144个临床医生知情的多项选择问题，以两名ICU患者的264小时视频和临床记录为基础。 TRACER的动作检测准确率高达84.8% ， QA准确率高达61.0% ，而使用相同骨干的最强基线为49.3%。 在跨越约60,000个摄像小时的280名患者中， TRACER在住院期间进行阳性谵妄评估的患者中发现有意义的活动明显少于未进行评估的患者（ p < 0.0001 ）。 我们的研究结果表明，将连续视频与临床记录相结合，可以在不对受保护的健康数据进行培训的情况下，支持对患者行为随着时间的推移和不同患者群体的理解。
+
+</details>
+
+---
+
+## 4. VisualTrust: Video Reasoning under On-Screen Claim Framing / VisualTrust ：屏幕声明框架下的视频推理
+
+**Date**: 2026-10-15 | **arXiv**: [2610.21159v1](http://arxiv.org/abs/2610.21159v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.21159v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+On-screen text can describe what a video shows, or it can frame what the video is supposed to mean. Current benchmarks treat both alike, testing whether a model can read the text rather than whether it should trust it. We study claim deference, multimodal large language models' tendency to let an on-screen claim override conflicting visual evidence. We introduce VisualTrust, a counterfactual benchmark with 5,063 cases across 14 claim-fact classes. Each case pairs a question with three versions of the same video: one with no claim, one with an accurate claim, and one with a misleading claim that alters a single grounded fact. The option the misleading claim supports is the trap answer. Across seven open-weight and four proprietary models, mean accuracy falls from 90.1% without a claim to 51.9% with a misleading claim. Among initially correct responses, 42.8% flip to the trap answer and only 0.6% become other errors. Strong no-claim accuracy does not ensure resistance. We also introduce DEAR (Decoupled Evidence Arbitration and Reading), a training-free agent for video question answering that separates evidence arbitration from reading. An independent check reports conflicting evidence, a selector weighs it without a fixed modality priority and blinds what it withholds, and the reader answers from the resulting video in a fresh context. On 500 videos across three proprietary models, DEAR raises accuracy under misleading claims from 47.2--64.0% to 81.8--85.2% and reduces trap-answer selection from 34.4--50.8% to 11.6--15.0%, while preserving no-claim accuracy.
+
+屏幕上的文本可以描述视频显示的内容，也可以帧视频的含义。 当前的基准对待两者的方式相同，测试模型是否可以读取文本，而不是它是否应该信任它。 我们研究索赔遵从，多模态大型语言模型倾向于让屏幕上的索赔覆盖冲突的视觉证据。 我们引入了VisualTrust ，这是一个反事实基准，涉及14个索赔事实类别的5,063个案例。 每个个案都将一个问题与同一视频的三个版本配对：一个没有索赔，一个有准确的索赔，一个有误导性的索赔，改变了一个单一的事实。 误导性声明支持的选项是陷阱答案。 在七个开放式权重和四个专有模型中，平均准确率从没有索赔的90.1 ％下降到误导性索赔的51.9 ％。 在最初正确的答案中， 42.8%转向陷阱答案，只有0.6%成为其他错误。 强大的无索赔准确性并不能确保阻力。 我们还介绍了DEAR （脱钩证据仲裁和阅读） ，这是一种免费培训的视频问答代理，将证据仲裁与阅读分开。 独立检查报告相互矛盾的证据，选择器在没有固定模式优先级的情况下对其进行权衡，并隐瞒其隐瞒的内容，读者在新的背景下从结果视频中回答。 在三个专有模型的500个视频中， DEAR在误导性声明下将准确率从47.2-64.0%提高到81.8-85.2% ，并降低了
+
+</details>
+
+---
+
+## 5. Sparse Attention for Video Generation Acceleration via Growing Sparsity and Reduced Search / 通过不断增长的稀疏性和减少的搜索，对视频生成加速的稀疏关注
+
+**Date**: 2026-10-15 | **arXiv**: [2610.21129v1](http://arxiv.org/abs/2610.21129v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.21129v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Diffusion Transformers (DiTs) dominate video generation but suffer from high inference cost due to the quadratic complexity of self-attention. Sparse attention mitigates this by skipping unnecessary computation in the attention matrix, but existing methods apply a fixed sparsity ratio throughout denoising and struggle to accurately determine which computations to skip. To address these limitations, we analyze attention dynamics through attention entropy and mean attention distance, and find that attention becomes increasingly concentrated across denoising steps. We further observe that blocks selected early continue to capture a large fraction of the total attention weight at later steps. These findings suggest two acceleration opportunities: the sparsity ratio should grow as denoising progresses, and earlier search results can be reused to reduce the search space. Based on these findings, we propose Growing Sparsity and Reduced Search (GSRS), a training-free framework that retains more computation early and progressively reduces it later, while restricting subsequent searches to an early candidate set to reduce search overhead. GSRS adopts Top-p selection for adaptive sparsity control, supported by a precise evaluation scheme that computes exact attention weights within the FlashAttention computation at negligible overhead. Experiments on HunyuanVideo and Wan 2.1 validate that GSRS achieves 1.55$\times$--2.21$\times$ speedup while maintaining generation quality comparable to full attention.
+
+扩散变压器（ DiT ）在视频生成中占主导地位，但由于自注意的二次复杂性，其推理成本很高。 稀疏注意通过跳过注意矩阵中不必要的计算来缓解这种情况，但现有方法在整个去噪过程中应用固定的稀疏比，并难以准确确定要跳过哪些计算。 为了解决这些局限性，我们通过注意力熵和平均注意力距离来分析注意力动态，并发现注意力越来越集中在去噪步骤中。 我们进一步观察到，在后面的步骤中，早期选择的区块继续捕获总注意力权重的很大一部分。 这些发现表明了两个加速机会：稀疏性比率应该随着去噪的进展而增加，并且可以重复使用早期的搜索结果来减少搜索空间。 基于这些发现，我们提出了越来越稀疏和减少搜索（ GSRS ） ，这是一种无需训练的框架，可以及早保留更多计算，并在以后逐渐减少计算，同时将后续搜索限制为早期候选集，以减少搜索开销。 GSRS采用Top-p选择自适应稀疏性控制，由精确的评估方案支持，该方案以可忽略不计的开销计算FlashAttention计算中的精确注意力权重。 在HunyuanVideo和Wan 2.1上的实验验证了GSRS在保持生成质量可比的同时实现了1.55 $\ times $ - -2.21 $\ times $的加速
+
+</details>
+
+---
+
+## 6. ResStreamGS: Residual-Sensitive Dual-Stream Gaussian Splatting for Mobile Volumetric Video Streaming / ResStreamGS ：用于移动体积视频流的残差灵敏双流高斯拼接
+
+**Date**: 2026-10-15 | **arXiv**: [2610.21121v1](http://arxiv.org/abs/2610.21121v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.21121v1)
+
+**Categories**: cs.GR, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Real-time mobile volumetric video enables immersive free-viewpoint experiences, but delivering high-quality 3D content under constrained bandwidth and computation remains challenging. Recent 3D Gaussian Splatting (3DGS) systems, such as V$^3$, enable efficient mobile streaming by encoding time-varying Gaussian attributes with commodity video codecs and hardware decoding. However, existing pipelines treat all Gaussians as frame-varying signals, which is poorly suited to full-scene content where large portions remain temporally stable. Our empirical study shows that frame-wise adaptation and video coding of all Gaussians cause quality degradation in complex full-scene content, particularly in temporally stable regions. To address this issue, we propose ResStreamGS, a residual-sensitive dual-stream framework that processes Gaussians according to their temporal behavior. ResStreamGS identifies residual-sensitive primitives through lightweight probe adaptation and reuses stable Gaussians within each Group of Pictures (GOP). Stable Gaussians are transmitted once per GOP, while only residual-sensitive Gaussians remain in the frame-wise hardware-decodable video stream. Experiments on complex full-scene volumetric videos show that ResStreamGS improves post-codec PSNR by 7.51--8.35~dB over a controlled V$^3$-style all-Gaussians baseline, reduces amortized payload by up to 56.5%, and achieves 30.883~FPS on a Qualcomm Snapdragon 778G platform.
+
+实时移动体积视频可实现身临其境的自由视角体验，但在带宽和计算受限的情况下提供高质量的3D内容仍然具有挑战性。 最近的3D高斯拼接（ 3DGS ）系统，如V $ ^ 3 $ ，通过使用商品视频编解码器和硬件解码对时变高斯属性进行编码，从而实现高效的移动流传输。 然而，现有的流水线将所有高斯信号视为帧变化信号，这并不适合于大部分时间保持稳定的全场景内容。 我们的实证研究表明，所有高斯算法的逐帧自适应和视频编码都会导致复杂全场景内容的质量下降，尤其是在时间稳定的区域。 为了解决这个问题，我们提出了ResStreamGS ，这是一种残差敏感的双流框架，可根据高斯函数的时间行为对其进行处理。 ResStreamGS通过轻量级探针自适应识别残差敏感图元，并在每个图片组（ GOP ）中重用稳定的高斯图元。 稳定高斯函数每GOP传输一次，而残差敏感高斯函数仅保留在帧硬件可解码视频流中。 在复杂的全场景体积视频上进行的实验表明， ResStreamGS在受控的V $ ^ 3 $式全高斯基线上将后编解码器PSNR提高了7.51--8.35~dB ，将摊销有效载荷降低了高达56.5% ，并在高通Snapdragon 778G平台上实现了30.883~FPS。
+
+</details>
+
+---
+
+## 7. Audio-Visual Dog Identification and Tracking in Real-World Videos / 真实世界视频中的视听狗识别和跟踪
+
+**Date**: 2026-10-14 | **arXiv**: [2610.21011v1](http://arxiv.org/abs/2610.21011v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.21011v1)
+
+**Categories**: cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Identifying individual dogs from barks in real-world videos remains challenging and largely unexplored. Solving this problem would enable long-term behavioral analysis, veterinary monitoring, and animal welfare monitoring by attributing vocalizations and behaviors to the correct individual. Real-world videos are challenging because multiple dogs may bark simultaneously, become occluded, or move in and out of view. Prior studies show that canine vocalizations and visual appearance contain discriminative identity information, but these modalities have largely been studied independently. We present a multimodal dog-fingerprinting framework combining visual identification, multiple-object tracking, and canine vocal fingerprinting to associate bark events with individual dogs while maintaining persistent profiles. The framework synchronizes bark events with tracked dogs and updates profiles using visual appearance and vocal characteristics, enabling identification despite occlusion, overlapping vocalizations, and off-screen barking. We also introduce a benchmark of 46 real-world videos containing 213 manually annotated bark events. Our framework correctly localizes the active visible dog in 61.83% of visible events at IoU $\geq 0.30$ and achieves a 91.33% F1 score for visible versus off-screen barking detection.
+
+在真实世界的视频中从树皮中识别个体狗仍然具有挑战性，并且在很大程度上尚未探索。 解决这个问题将通过将发声和行为归因于正确的个体来实现长期行为分析、兽医监测和动物福利监测。 真实世界的视频具有挑战性，因为多只狗可能会同时吠叫、被遮挡或进出视野。 先前的研究表明，犬的发声和视觉外观包含歧视性的身份信息，但这些模式在很大程度上是独立研究的。 我们提出了一种多模态狗指纹识别框架，结合了视觉识别、多物体跟踪和犬声音指纹识别，以将吠叫事件与单只狗相关联，同时保持持久的轮廓。 该框架将吠叫事件与跟踪的狗同步，并使用视觉外观和声音特征更新配置文件，从而在咬合、重叠发声和屏幕外吠叫的情况下进行识别。 我们还介绍了46个真实世界视频的基准，其中包含213个手动注释的树皮事件。 我们的框架正确定位了活动可见狗在IoU $\ geq 0.30 $的可见事件中的61.83% ，并实现了可见与屏幕外吠叫检测的91.33% F1分数。
+
+</details>
+
+---
+
+## 8. Temporal Specification Guidance for Text-to-Video Generation / 文本到视频生成的时间规范指南
+
+**Date**: 2026-10-14 | **arXiv**: [2610.20822v1](http://arxiv.org/abs/2610.20822v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.20822v1)
+
+**Categories**: cs.AI, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Text-to-video models often generate the visual concepts requested in natural language prompts but fail to satisfy their intended ordering, timing, and persistence requirements. We propose representing these requirements as specifications in a formal Temporal Logic, and introduce Temporal Specification Guidance (TSG), a training-free inference-time framework that turns temporal specifications into executable objectives for guiding video generation during sampling. TSG scores traces of visual concept evidence using differentiable quantitative semantics and uses the score's gradients to construct a specification-guided denoising direction. We instantiate this framework with video-text attention traces, efficient differentiable scores for Metric Temporal Logic, and gradient-derived attention biases. This instantiation requires neither an external concept classifier nor backpropagation through the video transformer. Its attention-steered forward pass yields a denoising direction that augments classifier-free guidance (CFG). On a benchmark of 220 prompts spanning 11 categories of temporal constraints, including ordered object entry and state transitions, this instantiation improves specification satisfaction accuracy over CFG by 9.5-20 percentage points across five models, with minimal memory overhead. These results demonstrate the potential of temporal specifications and differentiable satisfaction objectives as a flexible interface for controlling video generation.
+
+文本到视频模型通常会生成自然语言提示中要求的视觉概念，但无法满足其预期的顺序、时间和持久性要求。 我们建议将这些要求表示为正式的时间逻辑规范，并引入时间规范指导（ TSG ） ，这是一种无需培训的推理时间框架，可将时间规范转化为可执行目标，用于指导采样过程中的视频生成。 TSG使用可微分的定量语义对视觉概念证据的痕迹进行评分，并使用分数的梯度来构建规范引导的去噪方向。 我们使用视频文本注意力痕迹、度量时间逻辑的有效可微分分数和梯度衍生的注意力偏差来实例化此框架。 这种实例化既不需要外部概念分类器，也不需要通过视频变换器进行反向传播。 其注意力导向的前向传递产生了一个去噪方向，增强了无分类器引导（ CFG ）。 在跨越11类时间约束（包括有序对象输入和状态转换）的220个提示的基准上，这种实例化使五个模型的规范满意度比CFG提高了9.5-20个百分点，内存开销最小。 这些结果证明了时间规格和可区分的满意度目标作为控制视频生成的灵活界面的潜力。
+
+</details>
+
+---
+
+## 9. RIGen: Beyond Action Following with Reciprocal Interaction in Generative Gameplay / RIGen ：超越行动，在生成式游戏中进行互惠互动
+
+**Date**: 2026-10-14 | **arXiv**: [2610.20811v1](http://arxiv.org/abs/2610.20811v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.20811v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Generative gameplay requires more than immediate responses to player actions.Actions should have persistent consequences, while the generated world should act according to its own state and rules, shaping the player's situation and subsequent choices. Video generation captures local dynamics, but limited history, partially observed game state, and the need for contextual behavior decisions make such interactions difficult to sustain through audiovisual prediction alone. We introduce \rig (Reciprocally Interactive Generation), a framework for reciprocal interaction in generative gameplay. \rig combines persistent state and configurable rules, contextual interaction reasoning, and action-conditioned audiovisual generation. Together, these components make interaction consequences and actor behavior jointly determine generated content while maintaining consistency between game state and visible outcomes. We construct a Xonotic gameplay dataset to train an audiovisual generator for learning dynamics and interactions. Further post-training enables \rigarena, an interactive generative first-person shooter (FPS) prototype. Experiments demonstrate more reliable combat outcomes and reciprocal interaction between the player and the generated world. Project page: https://murphylmf.github.io/RIGen/.
+
+生成游戏需要的不仅仅是对玩家操作的即时响应。操作应具有持久的后果，而生成的世界应根据其自身的状态和规则行事，从而塑造玩家的情况和随后的选择。 视频生成捕获了局部动态，但历史有限，部分观察到的游戏状态，以及对上下文行为决策的需求使得仅通过视听预测难以维持此类交互。 我们引入了\ RIG （往复交互生成） ，这是一个在生成式游戏中进行交互的框架。\ RIG结合了持久状态和可配置规则、上下文交互推理和动作条件视听生成。 这些组件共同使交互结果和参与者行为共同决定生成的内容，同时保持游戏状态和可见结果之间的一致性。 我们构建了一个Xonotic游戏数据集，以训练用于学习动态和交互的视听生成器。 进一步的后期训练使\ rigarena成为可能，这是一款交互式生成式第一人称射击游戏(FPS)原型。 实验证明了更可靠的战斗结果和玩家与生成世界之间的互惠互动。 项目页面： https://murphylmf.github.io/RIGen/。
+
+</details>
+
+---
+
+## 10. Any Time, Any Space: A World-State-Centric Framework for Agentic Video Generation / 任何时间，任何空间：以世界国家为中心的代理视频生成框架
+
+**Date**: 2026-10-14 | **arXiv**: [2610.20571v1](http://arxiv.org/abs/2610.20571v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.20571v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long-form agentic video generation must turn a screenplay into shots that remain spatially and temporally consistent across nonconsecutive requests. Passing prompts or recent frames between shots does not provide a shared spatial frame for revisiting a scene or a time-indexed record for replaying an earlier event. We present Any Time, Any Space (ATAS), which compiles a screenplay into shot requests with explicit location, camera, and event-time references. Before generation, it retrieves relevant evidence from a scene memory of registered static geometry and an event memory of dynamic observations indexed by scene, event, and time. After generation, ATAS reconstructs and registers the clip. It updates memory only when review and state checks accept the observation, while film delivery remains independent of memory admission. Across four video generators, ATAS improves all reported cross-shot consistency measures and achieves the highest aggregate benchmark score for each backbone. It also outperforms the compared agents and 3D-guided methods on target-image spatial revisit, leads three event-recapture criteria, and receives the highest human ratings on all six criteria. The video results and code are available on our project page: https://lhmd.top/atas/.
+
+长格式的代理视频生成必须将剧本转换为在非连续请求中保持空间和时间一致的镜头。 在拍摄之间传递提示或最近的帧不能为重新访问场景提供共享空间帧，也不能为重播早期事件提供带时间索引的记录。 我们呈现任何时间，任何空间（ ATAS ） ，它将剧本编译成具有明确位置，相机和事件时间参考的镜头请求。 在生成之前，它从已注册静态几何的场景记忆和按场景、事件和时间索引的动态观测的事件记忆中检索相关证据。 生成后， ATAS重建并注册剪辑。 只有当复习和状态检查接受观察时，它才会更新记忆，而胶片传输仍然独立于记忆入场。 在四个视频生成器中， ATAS改进了所有报告的交叉镜头一致性度量，并为每个骨干网实现了最高的总基准分数。 在目标图像空间重新访问方面，它还优于比较的代理和3D引导方法，引导了三个事件重新捕获标准，并在所有六个标准上获得了最高的人类评级。 视频结果和代码可在我们的项目页面上获得： https://lhmd.top/atas/。
+
+</details>
+
+---
+
+## 11. Speculative Sampling in Interactive Video Generation / 交互式视频生成中的推测性采样
+
+**Date**: 2026-10-14 | **arXiv**: [2610.20556v1](http://arxiv.org/abs/2610.20556v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.20556v1)
+
+**Categories**: cs.CV, cs.HC
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Interactive video generation commonly relies on small bidirectional chunks to reduce response latency. Yet our preliminary experiments show that larger chunks improve video quality and better utilize GPU parallelism, allowing more latents to be sampled with only a modest increase in sampling time. Motivated by these observations, we propose Speculative Sampling, a strategy that combines the modeling power of large bidirectional windows with the low-latency interaction of small ones. It expands the modeling window by appending noise latents as padding and caches the resulting predictions for reuse when the condition remains unchanged. Predictions are delivered incrementally, while the uncommitted future remains replaceable. Our latency analysis shows that this removes the waiting-time lower bound imposed by chunk boundaries, shifting the optimization focus from reducing chunk size to accelerating per-chunk sampling. Bidirectional window size thus becomes a decision variable for jointly optimizing visual quality and sampling time, rather than a necessary constraint on low-latency interaction. This opens a path to serving large bidirectional models in interactive streaming systems without complex streaming post-training.
+
+交互式视频生成通常依赖于小的双向块来减少响应延迟。 然而，我们的初步实验表明，更大的块可以提高视频质量，更好地利用GPU并行性，只需稍微增加采样时间即可采样更多的潜伏点。 在这些观察结果的激励下，我们提出了推测采样，这是一种将大型双向窗口的建模能力与小窗口的低延迟交互相结合的策略。 它通过附加噪声潜伏作为填充来扩展建模窗口，并在条件保持不变时缓存生成的预测以供重用。 预测是增量交付的，而未承诺的未来仍然是可替换的。 我们的延迟分析表明，这消除了块边界施加的等待时间下限，将优化重点从减少块大小转向加速每块采样。 因此，双向窗口大小成为联合优化视觉质量和采样时间的决策变量，而不是低延迟交互的必要约束。 这为在交互式流媒体系统中提供大型双向模型开辟了一条道路，而无需复杂的流媒体后期训练。
+
+</details>
+
+---
+
+## 12. KinoGen: Customizable Humanoid Loco-Manipulation References via Kinematically Grounded Video Generation / KinoGen ：通过运动学接地视频生成的可定制人形机器人位置操纵参考
+
+**Date**: 2026-10-14 | **arXiv**: [2610.20552v1](http://arxiv.org/abs/2610.20552v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.20552v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present KinoGen, a framework that synthesizes customizable humanoid loco-manipulation references through kinematically grounded video generation. KinoGen conditions a pretrained video generator on calibrated renders of the target robot and object in a simulated task instance and recovers the reference by fitting the same models to the generated two-view video, so that the reference lies in the robot configuration space by construction without a human body proxy or retargeting. Body, hand, and object priors initialize the reconstruction, and direct optimization against cross-view evidence refines it. Since an edited keyframe is simply another rendered state, a user can prescribe a goal object pose, regenerate the video around the edited keyframe, and obtain a reference that satisfies the pose exactly. Across eight loco-manipulation tasks, KinoGen yields lower penetration and foot skating than video-based baselines and preserves over 90% of annotated contacts, and its customized references satisfy every prescribed target with substantially less penetration than direct interpolation. Tracking policies trained on the synthesized references are deployed on a Unitree G1 humanoid with dexterous hands. Project webpage: https://kinogen-humanoid.github.io/.
+
+我们提出了KinoGen ，这是一个通过运动学接地视频生成来合成可定制的人形机器人机器人操作参考的框架。 KinoGen在模拟任务实例中对目标机器人和对象的校准渲染进行预训练视频生成器调节，并通过将相同模型拟合到生成的双视图视频来恢复引用，从而使引用通过构造位于机器人配置空间中，而无需人体代理或重定向。 身体、手和对象先验初始化重建，并针对交叉视图证据进行直接优化。 由于编辑的关键帧只是另一种渲染状态，因此用户可以指定目标对象姿势，围绕编辑的关键帧重新生成视频，并获得准确满足姿势的参考。 在八个本地操作任务中， KinoGen比基于视频的基线产生更低的渗透率和足部滑冰，并保留了超过90 ％的注释联系人，其定制的引用满足了每个规定的目标，与直接插值相比渗透率低得多。 在合成参考文献上训练的跟踪策略部署在具有灵巧手的Unitree G1人形机器人上。 项目网页： https://kinogen-humanoid.github.io/。
+
+</details>
+
+---
+
+## 13. OLiVES: An Outdoor Low-Light Video Benchmark for Enhancement and Segmentation / OLiVES ：增强和分割的户外低光视频基准
+
+**Date**: 2026-10-14 | **arXiv**: [2610.20501v1](http://arxiv.org/abs/2610.20501v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.20501v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Low-light video processing remains an underexplored problem in computer vision, primarily due to the scarcity of high-quality ground-truth data. Existing public datasets exhibit several limitations, including restricted motion diversity, limited scene coverage, weak degradations, reliance on auxiliary modalities such as event data, and misalignment between low-light inputs and ground truth. Furthermore, current datasets typically address either low-light enhancement or scene understanding, whereas these tasks should be considered jointly. We introduce \textbf{OLiVES}, a benchmark dataset for outdoor low-light videos with dynamic scenes, designed to support both low-light video enhancement (LLVE) and video object segmentation (VOS). The dataset addresses key content gaps by incorporating a diverse range of natural textures, animals, occlusions, dynamic activities, and close-up scenes. To the best of our knowledge, OLiVES is the first outdoor low-light video dataset captured using professional cinema-grade cameras. It provides over 25,000 aligned normal- and low-light frame pairs, along with over 46,000 VOS annotations. We benchmark state-of-the-art LLVE and VOS methods on OLiVES and show that training on it improves performance on both tasks. The OLiVES project page is available at: https://anonymous-OLiVES.github.io/.
+
+低光视频处理仍然是计算机视觉中未充分探索的问题，主要是由于缺乏高质量的地面真实数据。 现有的公共数据集存在几个局限性，包括运动多样性受限、场景覆盖有限、退化较弱、依赖于事件数据等辅助模式以及低光输入与地面真实值之间的错位。 此外，当前数据集通常涉及低光增强或场景理解，而这些任务应一起考虑。 我们引入了\ textbf {OLiVES} ，这是一个针对具有动态场景的户外低光视频的基准数据集，旨在支持低光视频增强(LLVE)和视频对象分割(VOS)。 该数据集通过整合各种自然纹理、动物、遮挡物、动态活动和特写场景来解决关键内容差距。 据我们所知， OLiVES是第一个使用专业电影级摄像机捕获的户外低光视频数据集。 它提供超过25,000个对齐的正常和低光帧对，以及超过46,000个VOS注释。 我们在OLiVES上对最先进的LLVE和VOS方法进行了基准测试，并表明对其进行培训可以提高这两项任务的性能。 OLiVES项目页面位于： https://anonymous-OLiVES.github.io/。
+
+</details>
+
+---
+
+## 14. Glance Forcing: Making Bidirectional Diffusion Autoregressive at a Glance / 扫视强制：使双向扩散自回归一目了然
+
+**Date**: 2026-10-14 | **arXiv**: [2610.20220v1](http://arxiv.org/abs/2610.20220v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.20220v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Autoregressive generation underlies real-time, causal video synthesis and is the backbone of video world models. Today's dominant approach distills a bidirectional diffusion model into a causal few-step student, but existing pipelines make this conversion prohibitively expensive, requiring offline Probability Flow ODE} (PF-ODE) trajectories that cost tens of thousands of GPU-hours and terabytes of storage. We show it can be made dramatically more efficient. Pushing this efficiency to its extreme, we reduce trajectory supervision to a single sample, the strictest setting possible, and find that it causes severe quality collapse. We trace this to the teacher's trajectory geometry: the high-noise regime, governing semantic layout and motion, and the low-noise regime, governing fine texture exhibit fundamentally different curvature and optimization behavior, so a single monolithic student cannot jointly fit both, causing severe representation interference. Motivated by this, we propose Glance Forcing, a lightweight distillation framework that decouples the denoising trajectory into two complementary slow and fast experts, each guided by a tailored, stage-specific objective, while keeping the pretrained teacher entirely frozen. This decoupling further reveals a general mechanism underlying few-step distillation: PF-ODE distillation mainly straightens the few-step trajectory geometry, while the subsequent distribution-matching stage independently governs distributional quality. Using only one PF-ODE trajectory, Glance Forcing already surpasses the fully-trained state-of-the-art baseline, raising the VBench Total score from 84.04 to 84.22 while cutting trajectory-collection cost from thousands of GPU-hours to about one A100-GPU-hour, with markedly larger gains in dynamic degree, VisionReward, and instruction-following, and consistent preference from human raters over strong baselines.
+
+自回归生成是实时、因果视频合成的基础，也是视频世界模型的支柱。 今天的主流方法将双向扩散模型提炼成一个因果的几步学生，但现有的管道使这种转换过于昂贵，需要离线概率流ODE} （ PF-ODE ）轨迹，耗费数万个GPU小时和数TB的存储空间。 我们证明了它可以大大提高效率。 将这种效率推向极致，我们将轨迹监督减少到单个样本，这是最严格的设置，并发现它会导致严重的质量崩溃。 我们将其追溯到教师的轨迹几何：高噪声区间，控制语义布局和运动，低噪声区间，控制精细纹理表现出根本不同的曲率和优化行为，因此单个单片学生不能同时适应两者，造成严重的表示干扰。 出于这一动机，我们提出了Glance Forcing ，这是一个轻量级的蒸馏框架，将去噪轨迹分解为两个互补的慢速和快速专家，每个专家都以量身定制的特定阶段目标为指导，同时保持预先训练的教师完全冻结。 这种分离进一步揭示了分步蒸馏的一般机制： PF-ODE蒸馏主要矫正分步轨迹几何形状，而随后的分布匹配阶段独立地控制分布质量。
+
+</details>
+
+---
+
+## 15. StreamErase: Towards Ultra-Fast Streaming Video Erasing / StreamErase ：朝着超高速流媒体视频擦除迈进
+
+**Date**: 2026-10-14 | **arXiv**: [2610.20137v1](http://arxiv.org/abs/2610.20137v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.20137v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Current video object removal methods suffer from prohibitive latency (minutes per video) and non-causal processing that prevents real-time interaction. We present StreamErase, enabling sub-second latency with up to 26 FPS streaming generation on a single GPU. Our approach first augments a text-to-video model with mask input to generate high-quality videos that erase target objects and synthesize coherent backgrounds, but does not perform inference on the fly. As such, we progressively transfer the erasing capability from a powerful bidirectional foundation model to an efficient unidirectional streaming eraser, enabling long-horizon erasing without sacrificing visual fidelity. Several key challenges arise when generating videos over long, potentially infinite horizons: (1) bridging the domain gap from training on finite length and extrapolating to long horizons, (2) sustaining high quality by preventing error accumulation, and (3) maintaining fast inference, without increasing computational cost as the context grows. To address these challenges, we carefully designed sliding-window causal attention with attention sinks. By incorporating self-rollout with attention sinks and KV cache rolling during training, we simulate inference-time extrapolations with a fixed context window, enabling constant-speed generation of arbitrarily long videos. Finally, we establish a dedicated benchmark, LongErase, for streaming long-video object removal. Our model achieves strong performance compared to existing video object erasing models and generalizes well to real-world video scenarios, uniquely enabling infinite-length streaming. With StreamErase, users can input a mask and see the erasing results unfold in real-time, delivering a truly interactive experience.
+
+当前的视频对象删除方法存在高延迟（每个视频几分钟）和阻止实时交互的非因果处理。 我们提供StreamErase ，在单个GPU上实现高达26 FPS的流式传输生成亚秒级延迟。 我们的方法首先使用掩码输入来增强文本到视频模型，以生成高质量的视频，从而擦除目标对象并合成连贯的背景，但不会即时执行推理。 因此，我们逐渐将擦除功能从强大的双向基础模型转移到高效的单向流式擦除器，在不牺牲视觉保真度的情况下实现长视野擦除。 在长时间、潜在的无限视野下生成视频时会出现几个关键挑战： （ 1 ）从有限长度的训练和外推到长视野来弥合领域差距， （ 2 ）通过防止错误累积来保持高质量，以及（ 3 ）保持快速推理，而不会随着上下文的增长而增加计算成本。 为了应对这些挑战，我们精心设计了带有注意力槽的滑动窗口因果注意力。 通过在训练期间将自滚动与注意力吸收器和KV缓存滚动相结合，我们使用固定的上下文窗口模拟推理时间外推，从而实现恒速生成任意长的视频。 最后，我们建立了一个专用的基准LongErase ，用于流式传输长视频对象删除。 我们的车型性能强劲
+
+</details>
+
+---
+
+## 16. DreamHMR: From Video Generation to Human Motion Modeling via Structural Focusing / DreamHMR ：通过结构聚焦从视频生成到人体运动建模
+
+**Date**: 2026-10-14 | **arXiv**: [2610.20124v1](http://arxiv.org/abs/2610.20124v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.20124v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Human mesh recovery (HMR) provides a geometric foundation for understanding human motion, but accurately reconstructing both body motion and fine hand articulation from videos remains challenging, especially in real-world scenes where occlusion and partial visibility are common. Video generation pretraining offers rich spatial and temporal priors for this task, but its focus on visual synthesis leaves a gap between these representations and explicit human geometry. We present DreamHMR, a general framework that adapts video generation priors for complete body-and-hand reconstruction. It follows a global-to-local strategy, first grounding video representations in human geometry and then refining body and hand detail with reliable local evidence. Global Body Representation Transfer trains the video backbone to predict complete human renderings, turning its native prediction task into a means of learning surface correspondence and posed geometry. Local Joint Feature Enhancement combines contextual estimates with reliable local evidence to recover fine body and hand detail, while limiting interference from occluders and background. Experiments on five datasets with four video backbones demonstrate strong reconstruction performance across backbone families. Under a unified evaluation protocol, our best model outperforms the best existing methods on all reported metrics of 3DPW, EMDB-1, and RICH, reducing body MPJPE by 4.2%, 4.7%, and 6.1%, respectively. In more challenging occlusion settings on held-out BEDLAM and EgoBody sequences, DreamHMR reduces overall body and hand MPJPE by 7.0% and 10.0%, respectively. Our code will be made publicly available.
+
+人体网格恢复（ HMR ）为理解人体运动提供了几何基础，但从视频中准确重建身体运动和精细的手关节仍然具有挑战性，特别是在遮挡和部分可见性的真实世界场景中。 视频生成预训练为这项任务提供了丰富的空间和时间先验，但其对视觉合成的关注在这些表示和显性人体几何之间留下了差距。 我们介绍DreamHMR ，这是一个通用框架，可调整视频生成先验，以实现完整的身体和手部重建。 它遵循全球到本地策略，首先在人体几何中接地视频表示，然后用可靠的本地证据精炼身体和手部细节。 全局人体表示传输训练视频骨干以预测完整的人体渲染，将其本机预测任务转变为学习表面对应和姿势几何的方法。 局部关节特征增强将上下文估计与可靠的局部证据相结合，以恢复精细的身体和手部细节，同时限制来自遮挡物和背景的干扰。 在具有四个视频骨干的五个数据集上进行的实验表明，跨骨干系列的重建性能很强。 在统一的评估协议下，我们的最佳模型在所有报告的3DPW、EMDB-1和RICH指标上都优于现有的最佳方法，分别减少了4.2%、4.7%和6.1%的身体MPJPE。在更具挑战性的
+
+</details>
+
+---
+
+## 17. RepForcing: Representation-Space Initialization for Autoregressive Video Distillation / RepForcing ：自回归视频蒸馏的表示空间初始化
+
+**Date**: 2026-10-14 | **arXiv**: [2610.20111v1](http://arxiv.org/abs/2610.20111v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.20111v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Distilling pretrained video diffusion models into few-step autoregressive (AR) generators typically combines student initialization with distribution matching distillation (DMD). An intermediate AR teacher can provide causally compatible targets for ODE initialization. However, causally compatible targets alone do not ensure high-quality generation under a short sampling schedule. We analyze the posterior-mean predictions favored by direct latent regression and empirically find that causal ODE initialization alleviates blur but still leaves fine detail unresolved. To address this limitation, we propose Representation Forcing, which learns few-step causal initialization through representation-space supervision rather than intermediate-teacher trajectory regression. The student is trained with teacher forcing by comparing clean predictions and training targets through normalized features of a frozen video diffusion transformer. This phase reuses the synthetic videos generated by a bidirectional model for AR teacher training and replaces both teacher training and causal ODE distillation, without generating additional causal ODE trajectories. The subsequent asymmetric DMD procedure remains unchanged. Empirical results show that, at four sampling steps, RepForcing better preserves generation quality than intermediate-teacher-based initialization before DMD. After DMD, our four-step chunk-wise model improves VBench Total from 84.04 to 84.66 (+0.62 points) and VisionReward from 6.326 to 10.074 (+59.25%) over the reported causal-ODE-based baseline.
+
+将预训练的视频扩散模型提取到几步自回归（ AR ）生成器中，通常将学生初始化与分布匹配蒸馏（ DMD ）相结合。 中级AR教师可以为ODE初始化提供因果兼容的目标。 然而，仅靠因果兼容的目标并不能确保在短时间内进行高质量的发电。 我们分析了直接潜伏回归支持的后验均值预测，并根据经验发现，因果ODE初始化缓解了模糊，但仍未解决细节问题。 为了解决这一局限性，我们提出了表示强制，它通过表示空间监督而不是中级教师轨迹回归来学习少步因果初始化。 通过比较冷冻视频扩散变压器的归一化特征，通过比较干净的预测和训练目标，对学生进行教师强制训练。 这个阶段重复使用由AR教师培训的双向模型生成的合成视频，并取代教师培训和因果关系提炼，而不会产生额外的因果关系轨迹。 随后的不对称DMD手术保持不变。 经验结果表明，在四个采样步骤中， RepForcing比DMD之前基于中级教师的初始化更好地保持了生成质量。 在DMD之后，我们的四步分块模型将VBench Total从84.04提高到84.66 （ +0.62分） ， VisionReward从
+
+</details>
+
+---
+
+## 18. When Pairwise Preferences Cycle: A Reliability-Anchored Preference Walk for Video GRPO / 成对偏好循环时：视频GRPO的可靠性锚定偏好行走
+
+**Date**: 2026-10-14 | **arXiv**: [2610.20089v1](http://arxiv.org/abs/2610.20089v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.20089v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Pairwise preference feedback has become a widely adopted supervision signal for reinforcement learning in video generation models, as pairwise comparisons provide a more reliable alternative than pointwise scalar ratings for evaluating the quality of generated videos. Specifically, we define a preference graph for each GRPO group under a pairwise evaluator, where nodes represent sampled rollouts and edges encode pairwise preferences. Auditing 6,976 on-policy comparison graphs, we find that cyclic preferences are prevalent and persist throughout training. Naive pairwise reward aggregation based on average win rates discards the underlying comparison structures and treats each rollout independently, which may introduce unreliable advantage estimates for certain rollouts and consequently affect reinforcement learning optimization. Therefore, we propose the \emph{Reliability-Anchored Preference Walk} (\ours{}), a graph-aware advantage aggregation method that strengthens the global preference signal from win rates with reliable relational evidence from cyclic preference graphs through a reliability-guided preference walk. Under matched evaluator, comparison protocol, group size, prompt schedule, and query budget, \ours{} requires no additional evaluator queries beyond the observed comparisons within each rollout group and improves over Pairwise-GRPO across controlled comparisons, transfer settings, and blind human evaluations.
+
+成对偏好反馈已成为视频生成模型中广泛采用的强化学习的监督信号，因为成对比较为评估生成的视频质量提供了比点标量评级更可靠的替代方案。 具体而言，我们在成对评估器下为每个GRPO组定义一个偏好图，其中节点表示采样推出，边编码成对偏好。 我们审计了6,976张政策对比图，发现循环偏好很普遍，并且在整个培训过程中持续存在。 基于平均获胜率的朴素成对奖励聚合丢弃了底层比较结构，并独立处理每次推出，这可能会为某些推出引入不可靠的优势估计，从而影响强化学习优化。 因此，我们提出了\ emph {可靠性锚定偏好步行} （\ ours {} ） ，这是一种图感知的优势聚合方法，通过可靠性引导的偏好步行，利用循环偏好图的可靠关系证据，增强来自胜率的全局偏好信号。 在匹配的评估者、比较协议、组大小、提示时间表和查询预算下，\我们的{}不需要在每个推出组内观察到的比较之外进行额外的评估者查询，并且在受控比较、转移设置和盲人评估方面优于Pairwise-GRPO。
+
+</details>
+
+---
+
+## 19. Complementary Future Token Pruning for World Action Models / 世界行动模型的补充未来令牌修剪
+
+**Date**: 2026-10-14 | **arXiv**: [2610.19957v1](http://arxiv.org/abs/2610.19957v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.19957v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World action models (WAMs) jointly predict future visual states and robot actions, but processing dense future-frame tokens incurs substantial inference latency. We propose CF-Prune, a training-free framework for pruning future-frame tokens in pretrained WAMs. Our key insight is that future visual predictions support action generation and therefore need not preserve every visual detail required for high-fidelity video synthesis. CF-Prune combines instruction and action attention to identify task-relevant tokens during the initial denoising forward pass, even when future-frame and action representations remain highly noisy. An entropy-based phase identification mechanism further retains dense computation during precision phases to mitigate pruning-induced performance degradation. Experiments on RoboLab, RoboCasa, and real-world manipulation tasks demonstrate consistent inference speedups. At a 35% pruning ratio, CF-Prune achieves average speedups of 1.19-1.27x while improving task success rates. At a 50% pruning ratio, it achieves 1.29-1.33x average speedups on both simulation benchmarks, with overall success rates within 1.0 percentage point of the baseline.
+
+世界动作模型（ WAM ）共同预测未来的视觉状态和机器人动作，但处理密集的未来帧令牌会产生大量的推理延迟。 我们提出了CF-Prune ，这是一个用于在预训练WAM中修剪未来帧令牌的无训练框架。 我们的关键见解是，未来的视觉预测支持动作生成，因此无需保留高保真视频合成所需的每个视觉细节。 CF-Prune将指令和行动注意力结合起来，在初始去噪正向传递期间识别与任务相关的令牌，即使未来帧和动作表示仍然非常嘈杂。 基于熵的相位识别机制进一步保持精确相位期间的密集计算，以减轻修剪引起的性能退化。 在RoboLab、RoboCasa和真实世界操作任务上的实验证明了一致的推理加速。 在35%的修剪率下， CF-Prune实现了1.19-1.27倍的平均加速，同时提高了任务成功率。 在50 ％的修剪比率下，它在两个模拟基准上实现了1.29-1.33倍的平均加速，总体成功率在基线的1.0个百分点内。
+
+</details>
+
+---
+
+## 20. SAM3RL: Memory Control via Reinforcement Learning for Visual Object Tracking / SAM3RL ：通过强化学习实现视觉对象跟踪的内存控制
+
+**Date**: 2026-10-14 | **arXiv**: [2610.19931v1](http://arxiv.org/abs/2610.19931v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.19931v1)
+
+**Categories**: cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Segment Anything Model 3 (SAM 3) is a foundation model for image and video segmentation that sets the state of the art in visual object tracking. Its tracker, inherited from SAM 2, stores information from past frames in a memory bank, managed by a simple First-In-First-Out rule, allowing temporal consistency in complex videos. Several recent methods improve SAM 2 with hand-crafted memory update rules, each targeting a specific failure mode, such as distractors, occlusions, or object motion. However, their gains transfer only partially to the stronger SAM 3 backbone. We instead present a more general, data-driven approach that frames memory control as a sequential decision-making task. SAM3RL is an extension of the SAM 3 tracker with a lightweight memory controller, trained by reinforcement learning, that decides which frames enter the memory bank in order to maximize tracking performance. SAM3RL sets a new state of the art on 10 of 12 tracking and video object segmentation benchmarks, outperforming all hand-crafted rules without any runtime overhead. The same approach applied to SAM 2 gives SAM2RL, which outperforms hand-crafted rules on 9 of the 12 benchmarks, showing the generality of our method across model generations.
+
+Segment Anything Model 3 （ SAM 3 ）是图像和视频分割的基础模型，为视觉对象跟踪奠定了基础。 其跟踪器继承自SAM 2 ，将过去帧的信息存储在内存库中，由简单的先进先出规则管理，允许复杂视频的时间一致性。 最近的几种方法通过手工制作的内存更新规则改进了SAM 2 ，每种方法都针对特定的故障模式，例如干扰源、阻塞或物体运动。 然而，他们的收益仅部分转移到更强大的SAM 3骨干。 相反，我们提出了一种更通用的数据驱动方法，该方法将内存控制视为顺序决策任务。 SAM3RL是带有轻量级内存控制器的SAM 3跟踪器的扩展，通过强化学习进行训练，确定哪些帧进入内存库，以最大限度地提高跟踪性能。 SAM3RL在12个跟踪和视频对象分割基准中的10个上设置了新的先进技术，在没有任何运行时间开销的情况下超越了所有手工制作的规则。 应用于SAM 2的相同方法给出了SAM2RL ，它在12个基准中的9个上优于手工制作的规则，显示了我们方法在模型世代中的通用性。
+
+</details>
+
+---
+
+## 21. CoDy: Codec Dynamics as Complementary Priors for Unsupervised Temporal Action Localization / CoDy ：编解码器动态作为无监督时间动作本地化的补充先验
+
+**Date**: 2026-10-14 | **arXiv**: [2610.19880v1](http://arxiv.org/abs/2610.19880v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.19880v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Unsupervised temporal action localization (UTAL) aims to identify action categories and localize their temporal boundaries without annotation supervision. Existing methods typically derive supervision for both tasks solely from RGB and optical-flow representations, often resulting in noisy category assignments and inaccurate temporal boundaries. In this work, we reveal an overlooked property of video codecs: group-of-pictures quantization patterns preserve category-discriminative dynamics, while motion-vector and residual variations exhibit pronounced responses around action transitions. Based on this insight, we propose CoDy, a codec dynamics-guided framework that exploits the codec as complementary information to the visual view for UTAL. CoDy integrates a codec-enhanced view with RGB and flow through confidence-aware consensus clustering, producing reliable soft pseudo-labels. It further converts codec dynamics into a class-agnostic boundary prior, which supervises visual boundary learning and guides proposal initialization and iterative refinement. The codec branches are only used during the training stage and introduce no extra codec-side computation at inference. Extensive experiments on THUMOS14 and ActivityNet v1.3 demonstrate that CoDy consistently outperforms existing UTAL methods and achieves state-of-the-art localization performance. These results establish codec signals as effective annotation-free priors for jointly inferring which actions occur and when they occur.
+
+无监督时间行动定位（ UTAL ）旨在识别行动类别，并在没有注释监督的情况下定位其时间边界。 现有方法通常仅从RGB和光流表示中对两种任务进行监督，通常会导致噪声类别分配和不准确的时间边界。 在这项工作中，我们揭示了视频编解码器的一个被忽视的属性：图像组量化模式保留了类别鉴别动力学，而运动矢量和残差变化在动作转换周围表现出明显的响应。 基于这一见解，我们提出了CoDy ，这是一个编解码器动态引导框架，利用编解码器作为UTAL视觉视图的补充信息。 CoDy将编解码器增强视图与RGB集成在一起，并通过可信度感知的共识聚类流，生成可靠的软伪标签。 它进一步将编解码器动态转换为类不可知边界先验，监督视觉边界学习并指导提案初始化和迭代细化。 编解码器分支仅在训练阶段使用，在推理时不引入额外的编解码器端计算。 在THUMOS14和ActivityNet v1.3上的大量实验表明， CoDy始终优于现有的UTAL方法，并实现了最先进的本地化性能。 这些结果将编解码器信号确立为有效的无标注先验，用于共同推断哪些操作发生以及何时发生
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-10-15 (30 papers)</b></summary>
 
 # arXiv Video Papers - 2026-10-15
