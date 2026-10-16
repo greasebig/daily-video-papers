@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-10-16](papers/2026-10-16.md) - 1 papers
 - [2026-10-15](papers/2026-10-15.md) - 1 papers
 - [2026-10-14](papers/2026-10-14.md) - 3 papers
 - [2026-10-13](papers/2026-10-13.md) - 1 papers
@@ -106,6 +107,34 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-10-16 (1 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-10-16
+
+**Paper Count**: 1
+
+---
+
+## 1. LightHybridNet: A Lightweight Hybrid Deep Learning Framework for Efficient Multi-Label Ophthalmic Disease Classification in Imbalanced Fundus Images / LightHybridNet ：一种用于不平衡眼底图像中高效多标签眼科疾病分类的轻量级混合深度学习框架
+
+**Date**: 2026-10-14 | **arXiv**: [2610.20671v1](http://arxiv.org/abs/2610.20671v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.20671v1)
+
+**Categories**: eess.IV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Eye diseases are a major global cause of blindness and vision impairment, highlighting the need for accurate and early diagnosis to prevent further deterioration. Despite advances in medical imaging, classifying retinal diseases from fundus images remains challenging due to the complexity and subtlety of visual features. This study aims to develop and validate LightHybridNet, a novel lightweight hybrid deep learning framework, to improve the classification of eye diseases from fundus images. The model incorporates architectural features, such as depthwise separable convolutions and compound scaling mechanisms, to enhance diagnostic accuracy and robustness. To validate the model, the ODIR-5K dataset, comprising 8 disease categories, was used. To enhance image quality, pre-processing approaches were applied, including histogram equalisation, colour space conversion, and contrast adjustment, resulting in high-resolution images. Furthermore, image augmentation was employed to increase the dataset size, thereby improving the model's ability to generalise during training. The hybrid architecture helps the model concentrate on relevant image regions while capturing and integrating details at different scales, significantly improving classification performance. To evaluate its effectiveness, the model was compared with transfer-learning models. The results show that LightHybridNet outperforms the baselines, achieving a weighted F1-score of 91.51%, a macro AUC of 98.26%, and a Cohen's Kappa of 90.14% on the validation set. Furthermore, model interpretability was enhanced using explainable AI methods, including Grad-CAM, to identify and emphasise features influencing the decision-making process. LightHybridNet represents a promising advancement in automated ocular disease detection, offering improved diagnostic reliability for clinical use.
+
+眼部疾病是导致失明和视力障碍的一个主要全球性原因，这凸显了准确和早期诊断以防止进一步恶化的必要性。 尽管医学成像取得了进展，但由于视觉特征的复杂性和微妙性，从眼底图像中对视网膜疾病进行分类仍然具有挑战性。 本研究旨在开发和验证一种新型轻量级混合深度学习框架LightHybridNet ，以改进眼底图像对眼部疾病的分类。 该模型结合了深度可分离卷积和复合缩放机制等架构特征，以提高诊断准确性和鲁棒性。 为了验证模型，使用了包含8个疾病类别的ODIR-5K数据集。 为了提高图像质量，采用了预处理方法，包括直方图均衡、颜色空间转换和对比度调整，从而产生高分辨率图像。 此外，采用图像增强来增加数据集大小，从而提高模型在训练期间的泛化能力。 混合架构有助于模型专注于相关图像区域，同时捕获和集成不同尺度的细节，显著提高分类性能。 为了评估其有效性，将该模型与迁移学习模型进行了比较。 结果表明， LightHybridNet优于基线，加权F1得分为91.51% ，宏观AUC为98.26% ，
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-10-15 (1 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-10-15
