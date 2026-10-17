@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-10-17](papers/2026-10-17.md) - 9 papers
 - [2026-10-16](papers/2026-10-16.md) - 8 papers
 - [2026-10-15](papers/2026-10-15.md) - 27 papers
 - [2026-10-14](papers/2026-10-14.md) - 5 papers
@@ -169,6 +170,162 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-10-17 (9 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-10-17
+
+**Paper Count**: 9
+
+---
+
+## 1. T2-z: Test-Time Optimization of Environment Latents for Robotic World Models / T2-z：机器人世界模型环境潜伏的测试时优化
+
+**Date**: 2026-10-15 | **arXiv**: [2610.22364v1](http://arxiv.org/abs/2610.22364v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.22364v1)
+
+**Categories**: cs.RO, cs.AI, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Predicting how the world responds to an action requires more than what can be seen: robots must account for environmental factors that are neither directly observable nor explicitly specified, from physical properties such as friction and mass to human-defined environmental rules. We introduce T2-Z for test-time optimization of environment latents, which augments a robotic world model with a learnable environment latent to condition world predictions. This compact latent captures underlying environmental variation without supervision of what environmental factors exist or what values they take. During training, T2-Z alternates between two stages: a world-model optimization stage that fixes the latents and learns general action-conditioned dynamics across environments; and an environment-latent optimization stage that freezes the world model and optimizes the conditioning latents, allowing latent structure to emerge purely through world prediction. At test time, the world model remains frozen and a newly initialized environment latent is optimized from one or more test-time interactions, adapting the model to previously unseen environmental configurations. Across 7 simulated settings and 4 real-world robotic tasks, T2-Z reduces object prediction error metric from 15.20 to 7.00 and raises action success from 33.73% to 72.96%. Its emergent latents capture structured representations of individual and compounded factors across diverse visual scenes. Ablations further show that T2-Z can efficiently infer environment latents from as little as a single test-time interaction trajectory.
+
+预测世界如何响应某个动作需要的不仅仅是可见的：机器人必须考虑既不能直接观察也不能明确指定的环境因素，从摩擦和质量等物理属性到人类定义的环境规则。我们引入了 T2-Z 用于环境潜伏的测试时优化，它通过潜在的可学习环境来增强机器人世界模型，以条件世界预测。这种紧凑的潜伏捕获了潜在的环境变化，而无需监督存在哪些环境因素或它们采用什么值。在训练过程中，T2-Z 在两个阶段之间交替：世界模型优化阶段，修复潜在因素并学习跨环境的一般动作条件动态；环境潜在优化阶段冻结世界模型并优化调节潜在，允许潜在结构纯粹通过世界预测出现。在测试时，世界模型保持冻结状态，并且新初始化的潜在环境根据一个或多个测试时交互进行优化，使模型适应以前未见过的环境配置。在 7 个模拟设置和 4 个真实机器人任务中，T2-Z 将对象预测误差指标从 15.20 降低到 7.00，并将动作成功率从 33.73% 提高到 72.96%。它的新兴潜伏捕获了不同视觉场景中个体和复合因素的结构化表征。消融进一步表明，T2-Z 可以有效地从单个测试时交互轨迹中推断环境潜伏。
+
+</details>
+
+---
+
+## 2. GeoState: Learning View-Decoupled Geometry States for 3D World Modeling / GeoState：学习 3D 世界建模的视图解耦几何状态
+
+**Date**: 2026-10-15 | **arXiv**: [2610.22343v1](http://arxiv.org/abs/2610.22343v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.22343v1)
+
+**Categories**: cs.CV, cs.AI, cs.LG, cs.RO
+
+**Project**: https://hongchang-liu.github.io/GeoState-project-page/  <details><summary><b>Abstract / 摘要</b></summary>
+
+Recent 3D world models increasingly use features from geometry foundation models (GFMs) as predictive world states, benefiting from their rich geometric priors. However, the view dependence of these features entangles scene dynamics with camera-induced variation, making the resulting state evolution harder to predict. We propose GeoState, a view-decoupled geometry representation for predictive 3D world modeling that separates scene-state evolution from camera-dependent observation. Specifically, a scene tokenizer aggregates multi-view GFM features into a view-decoupled scene state, which a geometry decoder queries using camera rays. An autoregressive world model then predicts future scene states, while camera motion is modeled separately. The predicted states can therefore be decoded under either predicted or externally specified cameras, while retaining a single context-derived scale throughout the rollout without per-frame scale alignment. Experiments show that GeoState outperforms prior 3D world models on Waymo, supports geometrically consistent cross-view querying, and generalizes zero-shot to KITTI and nuScenes. Project page: https://hongchang-liu.github.io/GeoState-project-page/
+
+最近的 3D 世界模型越来越多地使用几何基础模型 (GFM) 的特征作为预测世界状态，受益于其丰富的几何先验。然而，这些特征的视图依赖性将场景动态与相机引起的变化纠缠在一起，使得最终的状态演化更难以预测。我们提出了 GeoState，一种用于预测 3D 世界建模的视图解耦几何表示，它将场景状态演化与依赖于相机的观察分开。具体来说，场景分词器将多视图 GFM 特征聚合成视图解耦的场景状态，几何解码器使用相机光线查询该状态。然后，自回归世界模型可以预测未来的场景状态，而相机运动则单独建模。因此，可以在预测或外部指定的相机下对预测状态进行解码，同时在整个推出过程中保留单个上下文导出的比例，而无需每帧比例对齐。实验表明，GeoState 的性能优于 Waymo 上现有的 3D 世界模型，支持几何一致的跨视图查询，并将零样本推广到 KITTI 和 nuScenes。项目页面：https://hongchang-liu.github.io/GeoState-project-page/
+
+</details>
+
+---
+
+## 3. Dexterity from Supervised Play / 监督游戏带来的灵活性
+
+**Date**: 2026-10-15 | **arXiv**: [2610.22340v1](http://arxiv.org/abs/2610.22340v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.22340v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+How can robots autonomously collect the contact-rich experience needed to learn dexterous manipulation? We present DSP: Dexterity from supervised play, a framework in which a robot learns a play policy from minutes of human play through behavior cloning, then deploys it autonomously to collect hours of interaction data to train a world model. During inference, the same play policy then guides model-predictive control (MPC) by proposing candidate action sequences for evaluation under the learned world model. To accelerate inference, we also introduce a method for distilling a closed-loop, goal-conditioned policy through self-play within the learned world model. We evaluate this framework on underactuated pushing and any-to-any in-hand pose reorientation with a multifingered hand, in simulation and real world. In real world experiment, our method outperforms hindsight behavior cloning by 69.6% in success rate and achieves comparable success to reinforcement learning with 490 times less interaction data. These results demonstrate that supervised play can autonomously collect interaction data, guide model-based planning, and enable policy learning without any task-specific demonstrations or sim-to-real transfer.
+
+机器人如何自主收集学习灵巧操作所需的丰富接触经验？我们提出了 DSP：监督游戏的敏捷性，在这个框架中，机器人通过行为克隆从人类游戏的几分钟中学习游戏策略，然后自主部署它以收集数小时的交互数据来训练世界模型。在推理过程中，相同的游戏策略通过提出候选动作序列以在学习世界模型下进行评估来指导模型预测控制（MPC）。为了加速推理，我们还引入了一种通过学习世界模型中的自我对弈来提炼闭环、目标条件策略的方法。我们在模拟和现实世界中评估了该框架的欠驱动推动和多指手的任意手部姿势重新定向。在现实世界的实验中，我们的方法比事后行为克隆的成功率高出 69.6%，并且以少 490 倍的交互数据实现了与强化学习相当的成功。这些结果表明，监督游戏可以自主收集交互数据，指导基于模型的规划，并实现策略学习，而无需任何特定于任务的演示或模拟到真实的迁移。
+
+</details>
+
+---
+
+## 4. Inertially Significant Humanoid Teleoperation via Whole Body Model Predictive Control and Online Parameter Estimation / 通过全身模型预测控制和在线参数估计进行惯性显着的人形遥控操作
+
+**Date**: 2026-10-15 | **arXiv**: [2610.22176v1](http://arxiv.org/abs/2610.22176v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.22176v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The effective deployment of humanoid robots in practical tasks of interest will require a capability of sensing and adapting to variations in inertial parameters, as occurs during heavy tool use or when carrying significant payload. Such payloads constitute a significant proportion of the combined payload-robot system, the effects of which cannot be ignored by delegating to feedback control. This paper showcases a general solution to this problem by integrating a whole body model predictive controller (WB-MPC) with an extended Kalman filter (EKF) for online estimation of fully physically consistent time-varying inertial parameters. These estimates are fed through to the WB-MPC's full rigid body dynamics model, resulting in more accurate feedforward torques for task demands under external load. Additionally, a virtual reality (VR) interface is provided that enables an operator to provide task-specific references without regard to payload while delegating dynamic balance to the WB-MPC. The framework is validated with simulation and hardware experiments on a humanoid system.
+
+在感兴趣的实际任务中有效部署人形机器人需要具有感知和适应惯性参数变化的能力，例如在使用重型工具或携带大量有效载荷时发生的情况。此类有效负载构成了组合有效负载-机器人系统的很大一部分，其影响不能通过委托反馈控制而被忽视。本文展示了该问题的通用解决方案，将全身模型预测控制器（WB-MPC）与扩展卡尔曼滤波器（EKF）集成，以在线估计完全物理一致的时变惯性参数。这些估计值被反馈到 WB-MPC 的完整刚体动力学模型中，从而为外部负载下的任务需求提供更准确的前馈扭矩。此外，还提供虚拟现实 (VR) 界面，使操作员能够提供特定于任务的参考，而无需考虑有效负载，同时将动态平衡委托给 WB-MPC。该框架通过人形系统的仿真和硬件实验进行了验证。
+
+</details>
+
+---
+
+## 5. Plans Are Not Executions: Adapting Frozen World-Model Planners to Controller-Induced Execution Shift / 计划不是执行：使冻结的世界模型规划器适应控制器引起的执行转变
+
+**Date**: 2026-10-15 | **arXiv**: [2610.22041v1](http://arxiv.org/abs/2610.22041v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.22041v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World-model planners evaluate candidate trajectories by predicting their future consequences, implicitly relying on the plan-to-motion relationship learned during training. At deployment, a different downstream controller may execute the same planned trajectory differently, creating a planning-execution gap between the frozen model's imagined future and actual execution. A natural remedy is to replace the planned trajectory with its predicted or observed execution. However, we find that better execution fidelity does not necessarily yield better decisions: directly substituting predicted execution trajectories yields only a 0.048 PDMS improvement across 10 unseen controller configurations, far smaller than the gain from our proposed adaptation. This suggests a semantic mismatch between a planned trajectory, which serves as a reference for downstream control, and an executed trajectory, which already describes the resulting post-controller motion.   We introduce ExecutionBridge, which infers controller-specific execution characteristics from planned-executed trajectory pairs and uses them to adapt the native ego latent rollout while keeping the original planned trajectory unchanged. The planner, world model, and reward head remain frozen. On NAVSIM, ExecutionBridge consistently improves planning across unseen controller configurations and multiple frozen world-model planners, with substantially larger gains in challenging driving scenes where execution mismatch more strongly affects candidate evaluation.
+
+世界模型规划者通过预测候选轨迹的未来后果来评估候选轨迹，隐含地依赖于训练期间学到的计划与运动关系。在部署时，不同的下游控制器可能会以不同的方式执行相同的计划轨迹，从而在冻结模型的想象的未来和实际执行之间产生计划执行差距。自然的补救措施是用预测或观察到的执行来取代计划的轨迹。然而，我们发现更好的执行保真度并不一定会产生更好的决策：直接替换预测的执行轨迹在 10 种看不见的控制器配置中仅产生 0.048 PDMS 改进，远小于我们提出的适应的增益。这表明作为下游控制参考的计划轨迹与已经描述了最终的控制器后运动的执行轨迹之间存在语义不匹配。   我们引入了 ExecutionBridge，它从计划执行的轨迹对推断控制器特定的执行特征，并使用它们来适应本机自我潜在推出，同时保持原始计划轨迹不变。计划者、世界模型和奖励头仍然冻结。在 NAVSIM 上，ExecutionBridge 持续改进了跨看不见的控制器配置和多个冻结的世界模型规划器的规划，在具有挑战性的驾驶场景中获得了更大的收益，其中执行不匹配对候选评估的影响更大。
+
+</details>
+
+---
+
+## 6. VeriVLA: Adaptive Test-Time Verification for Flow-Based VLAs with Latent World Models / VeriVLA：具有潜在世界模型的基于流的 VLA 的自适应测试时间验证
+
+**Date**: 2026-10-15 | **arXiv**: [2610.21985v1](http://arxiv.org/abs/2610.21985v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.21985v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Flow-based Vision-Language-Action (VLA) policies are inherently stochastic: different noise seeds can produce action chunks of varying quality from the same observation. At test time, however, the policy typically commits to a single sample without an explicit estimate of its quality. In fine-grained manipulation, executing a suboptimal action can irreversibly disrupt task progress and lead to failure. To exploit policy stochasticity, we introduce a training-free two-axis trigger that uses two initial samples to measure within-chunk temporal variation and cross-sample variance, detecting the critical states. Once triggered, a JEPA-based latent world model ranks candidate action chunks by predicting action-conditioned future latent states and the corresponding changes in task progress. By operating in latent space, the verifier avoids pixel reconstruction and enables efficient and more accurate ranking. Across three real-world tasks, $\textit{i.e.,}$ pen insertion, pipetting, and apple placement), our method raises the average completion score from 50.8% to 65.5%, while adding 326 ms for sampling and verification per triggered decision on a single RTX 4090. Consistent gains are also observed in simulation, where the average success rate rises from 66.4% to 73.6% in the clean setting of RoboTwin 2.0, from 62.8% to 69.6% in its randomized setting, and from 96.9% to 97.6% on LIBERO.
+
+基于流的视觉-语言-动作（VLA）策略本质上是随机的：不同的噪声种子可以从相同的观察中产生不同质量的动作块。然而，在测试时，该策略通常会承诺使用单个样本，而不会对其质量进行明确的估计。在细粒度操作中，执行次优操作可能会不可逆转地扰乱任务进度并导致失败。为了利用策略随机性，我们引入了一种免训练的两轴触发器，它使用两个初始样本来测量块内时间变化和跨样本方差，从而检测关键状态。一旦触发，基于 JEPA 的潜在世界模型就会通过预测以动作为条件的未来潜在状态以及任务进度的相应变化来对候选动作块进行排名。通过在潜在空间中操作，验证者避免了像素重建，并实现了高效且更准确的排名。在三个现实世界的任务中，$\textit{即}$笔插入、移液和苹果放置），我们的方法将平均完成分数从 50.8% 提高到 65.5%，同时在单个 RTX 4090 上为每个触发决策增加 326 毫秒的采样和验证时间。在模拟中也观察到了一致的增益，在干净的设置中，平均成功率从 66.4% 上升到 73.6%。 RoboTwin 2.0，在随机设置中从 62.8% 升至 69.6%，在 LIBERO 中从 96.9% 升至 97.6%。
+
+</details>
+
+---
+
+## 7. TS-WAM: Temporal Latent Actions and World-Action Coupling for Vision-Language Robot Control / TS-WAM：视觉语言机器人控制的时间潜在动作和世界动作耦合
+
+**Date**: 2026-10-15 | **arXiv**: [2610.21922v1](http://arxiv.org/abs/2610.21922v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.21922v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Many vision-language-action policies rely on action-labeled robot demonstrations and lack an explicit mechanism for predicting future visual states. These limitations hinder learning from action-free videos and can encourage overfitting to demonstration conditions, weakening generalization and robustness. We present TS-WAM, a lightweight Teacher-Student World-Action Model that addresses these challenges through self-supervised temporal learning and explicit future prediction. Its vlm-jepa framework learns from heterogeneous data, including robot demonstrations and action-free human videos, using an EMA target branch without requiring a separately trained external teacher. By coupling vlm-jepa with delta-lwm, TS-WAM learns to predict latent actions from the current observation and instruction and uses them to predict future visual features that guide action generation at inference. A unified end-to-end training architecture jointly optimizes temporal representation learning, visual dynamics, and robot control without a separate latent-action or world-model pretraining stage. The EMA target branch is removed at inference, keeping the deployed policy lightweight. Experiments on LIBERO, LIBERO-Plus, and SimplerEnv, together with real-world manipulation experiments on Franka Research 3 and RevoTron, demonstrate that TS-WAM achieves strong manipulation performance, generalization, and robustness.
+
+许多视觉-语言-动作策略依赖于动作标记的机器人演示，并且缺乏预测未来视觉状态的明确机制。这些限制阻碍了从无动作视频中学习，并可能导致过度拟合演示条件，从而削弱泛化性和鲁棒性。我们提出了 TS-WAM，这是一种轻量级的师生世界行动模型，它通过自我监督的时间学习和明确的未来预测来应对这些挑战。其 vlm-jepa 框架使用 EMA 目标分支从异构数据（包括机器人演示和无动作人类视频）中学习，无需单独训练的外部教师。通过将 vlm-jepa 与 delta-lwm 相结合，TS-WAM 学习从当前观察和指令中预测潜在动作，并使用它们来预测指导推理时动作生成的未来视觉特征。统一的端到端训练架构联合优化了时间表示学习、视觉动力学和机器人控制，无需单独的潜在动作或世界模型预训练阶段。 EMA 目标分支在推理时被删除，从而保持部署的策略的轻量级。在 LIBERO、LIBERO-Plus 和 SimplerEnv 上的实验，以及在 Franka Research 3 和 RevoTron 上的真实操作实验表明，TS-WAM 实现了强大的操作性能、泛化性和鲁棒性。
+
+</details>
+
+---
+
+## 8. CoWorld Reasoner: Agentic Multimodal Reasoning with the Evolving Video World Model-Driven Harness / CoWorld Reasoner：利用不断发展的视频世界模型驱动框架进行代理多模态推理
+
+**Date**: 2026-10-15 | **arXiv**: [2610.21910v1](http://arxiv.org/abs/2610.21910v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.21910v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+As Vision-Language Models (VLMs) advance, they are increasingly expected to perform spatiotemporal reasoning over motion, actions, and view changes beyond what the input images show. Video World Models (VWMs) provide a natural unified engine for visual imagination by generating task-relevant visual content as additional evidence. However, existing approaches typically invoke a VWM through fixed pipelines centered on a predefined form of visual imagination, such as novel-view synthesis. To support flexible visual imagination for diverse reasoning tasks, we introduce CoWorld Reasoner, an agentic framework that uses a VWM as a unified visual reasoning engine. Its Video World Model-Driven Harness exposes multiple visual operations through tools and uses skills to guide the VLM in deciding whether to imagine, selecting an operation, constructing a generation request, and interpreting the resulting visual evidence. We further introduce VLM-VWM Harness Co-Evolution, which jointly revises tools, skills, and execution code based on execution feedback while keeping both model weights fixed. Across seven benchmarks spanning spatial intelligence, temporal and causal reasoning, and perceptual reasoning, CoWorld Reasoner outperforms direct reasoning with the same VLM. The strongest variant improves on all seven benchmarks, including relative accuracy gains of 11.8% on MMSI and 13.0% on ERQA, and outperforms all five evolving baselines using the same backbone across five benchmarks.
+
+随着视觉语言模型 (VLM) 的进步，人们越来越期望它们能够对超出输入图像显示范围的运动、动作和视图变化进行时空推理。视频世界模型 (VWM) 通过生成与任务相关的视觉内容作为附加证据，为视觉想象力提供了一个自然的统一引擎。然而，现有方法通常通过以预定义形式的视觉想象为中心的固定管道来调用 VWM，例如小说视图合成。为了支持多样化推理任务的灵活视觉想象，我们引入了 CoWorld Reasoner，这是一个使用 VWM 作为统一视觉推理引擎的代理框架。其Video World Model-Driven Harness通过工具公开多种视觉操作，并使用技能来指导VLM决定是否想象、选择操作、构建生成请求以及解释由此产生的视觉证据。我们进一步引入了 VLM-VWM Harness Co-Evolution，它根据执行反馈共同修改工具、技能和执行代码，同时保持两个模型权重固定。在涵盖空间智能、时间和因果推理以及感知推理的七个基准测试中，CoWorld Reasoner 的表现优于使用相同 VLM 的直接推理。最强的变体在所有七个基准上都有所改进，包括 MMSI 上的相对准确度提高了 11.8%，ERQA 上的相对准确度提高了 13.0%，并且在五个基准上使用相同骨干的所有五个不断发展的基准都优于所有五个不断发展的基准。
+
+</details>
+
+---
+
+## 9. MAIA: Anticipating Interaction Anomalies in Contact-Rich Manipulation via Multimodal World Models / MAIA：通过多模式世界模型预测接触丰富的操作中的交互异常
+
+**Date**: 2026-10-15 | **arXiv**: [2610.21686v1](http://arxiv.org/abs/2610.21686v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.21686v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reliable contact-rich manipulation requires detecting execution deviations early enough for corrective action. Yet most monitoring methods are reactive, identifying anomalies only after they become observable. Anticipating such anomalies is challenging because visual observations only partially reveal physical interaction, while planned actions describe intended motion rather than their actual physical consequences. We address this problem with MAIA, a multimodal framework for anomaly anticipation. Its vision-action-force world model learns nominal interaction dynamics and predicts the visual and force responses of planned actions, while a lightweight anomaly head predicts impending interaction anomalies. To enable systematic evaluation, we introduce CRIA, a real-world multimodal dataset of 2,852 trajectories spanning 18 contact-rich manipulation tasks, with frame-level annotations of anomaly onset and evolution. Experiments on both seen and novel tasks show that MAIA achieves more accurate anomaly discrimination than representative baselines while providing earlier warnings, with bACC scores of 0.765 and 0.710 and median anticipation lead times of 28.0 and 25.1 steps, respectively. Moreover, using these predictions for anomaly-aware action selection improves end-to-end task success from 52.6% to 61.5% without retraining the underlying manipulation policy. These results highlight the value of modeling future physical consequences for proactive anomaly anticipation.
+
+可靠的接触丰富的操纵需要尽早检测执行偏差以采取纠正措施。然而，大多数监控方法都是被动的，只有在异常情况变得可观察到后才识别异常情况。预测此类异常具有挑战性，因为视觉观察只能部分揭示物理交互，而计划的动作描述的是预期的运动，而不是其实际的物理后果。我们使用 MAIA 来解决这个问题，MAIA 是一种异常预测的多模式框架。其视觉-动作-力世界模型学习名义交互动态并预测计划动作的视觉和力响应，而轻量级异常头则预测即将发生的交互异常。为了实现系统评估，我们引入了 CRIA，这是一个真实世界的多模式数据集，包含 2,852 条轨迹，涵盖 18 个接触丰富的操作任务，并具有异常发生和演化的帧级注释。对已知任务和新任务的实验表明，MAIA 比代表性基线实现了更准确的异常辨别，同时提供早期警告，bACC 分数分别为 0.765 和 0.710，中位预期提前时间分别为 28.0 和 25.1 步。此外，使用这些预测进行异常感知动作选择可将端到端任务成功率从 52.6% 提高到 61.5%，而无需重新训练底层操纵策略。这些结果凸显了对未来物理后果进行建模以主动预测异常的价值。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-10-16 (8 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-10-16
