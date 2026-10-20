@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-10-20](papers/2026-10-20.md) - 11 papers
 - [2026-10-19](papers/2026-10-19.md) - 2 papers
 - [2026-10-17](papers/2026-10-17.md) - 9 papers
 - [2026-10-16](papers/2026-10-16.md) - 8 papers
@@ -171,6 +172,194 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-10-20 (11 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-10-20
+
+**Paper Count**: 11
+
+---
+
+## 1. TrajWAM: An Efficient Trajectory-Guided World Action Model for Dynamic Robotic Manipulation / TrajWAM：用于动态机器人操纵的高效轨迹引导世界动作模型
+
+**Date**: 2026-10-19 | **arXiv**: [2610.25763v1](http://arxiv.org/abs/2610.25763v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.25763v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Dynamic object manipulation requires robots to anticipate target motion while replanning fast enough to avoid executing outdated actions. Existing approaches either rely on fast reactive control without an explicit future target state or encode anticipated motion only implicitly. World Action Models (WAMs) offer a promising alternative by coupling future visual prediction with action generation, but scene-level video objectives may underrepresent target dynamics that are critical for manipulation, while iterative video-action denoising introduces substantial latency. We present TrajWAM, a trajectory-guided world action model for efficient dynamic robotic manipulation. Our key insight is to explicitly ground future visual imagination in predicted target-object motion and use the resulting future representation to condition action generation, while preserving this anticipation pathway after acceleration. Given a short history of object masks, a history-conditioned motion predictor forecasts future masks encoding the target object's trajectory. A lightweight Trajectory ControlNet then steers a pretrained video model toward trajectory-consistent futures. The resulting future representation conditions an action expert to predict executable action chunks. To enable one-step inference without breaking this interface, we introduce a decoupled distillation scheme that combines distribution matching for the video backbone, Trajectory ControlNet realignment, and action rollout distillation to support accurate one-step action prediction conditioned on the compressed future representation. Comprehensive evaluations in simulation and the real world show that TrajWAM achieves state-of-the-art performance on dynamic object manipulation tasks while enabling efficient one-step video-action inference. Project page: https://kevingeng3.github.io/TrajWAM/.
+
+动态物体操纵要求机器人预测目标运动，同时足够快地重新规划以避免执行过时的动作。现有方法要么依赖于快速反应控制，而没有明确的未来目标状态，要么仅隐式地编码预期运动。世界动作模型（WAM）通过将未来的视觉预测与动作生成相结合，提供了一种有前景的替代方案，但场景级视频目标可能无法充分体现对操作至关重要的目标动态，而迭代视频动作去噪会引入大量延迟。我们推出 TrajWAM，一种用于高效动态机器人操作的轨迹引导世界动作模型。我们的主要见解是在预测的目标物体运动中明确地建立未来的视觉想象力，并使用由此产生的未来表示来条件动作的生成，同时在加速后保留这种预期路径。给定对象掩码的简短历史，历史条件运动预测器可以预测编码目标对象轨迹的未来掩码。然后，轻量级轨迹控制网络将预训练的视频模型引导至轨迹一致的未来。由此产生的未来表示条件是动作专家预测可执行动作块。为了在不破坏此接口的情况下实现一步推理，我们引入了一种解耦蒸馏方案，该方案结合了视频主干的分布匹配、轨迹 ControlNet 重新对齐和动作推出蒸馏，以支持以压缩的未来表示为条件的准确的一步动作预测。模拟和现实世界的综合评估表明，TrajWAM 在动态对象操作任务上实现了最先进的性能，同时实现了高效的一步式视频动作推理。项目页面：https://kevingeng3.github.io/TrajWAM/。
+
+</details>
+
+---
+
+## 2. Think Densely, Act Sparsely: Latent Expert Cognitive Chains for Vision-Language-Action Autonomous Driving / 密集思考，稀疏行动：视觉-语言-动作自动驾驶的潜在专家认知链
+
+**Date**: 2026-10-19 | **arXiv**: [2610.25734v1](http://arxiv.org/abs/2610.25734v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.25734v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Autonomous driving fundamentally demands dense understanding of visual, semantic, and geometric information, yet existing Vision-Language-Action (VLA) models are typically trained with sparse supervision such as language instructions or trajectory signals. This direct mapping from dense visual observations to sparse representations forces the model to compress or even discard critical scene information essential for safe driving. We argue that this limitation does not stem from insufficient model capacity, but from the lack of explicit mechanisms that encourage the formation of dense world representations in the latent space. In this spirit, we propose a novel paradigm for driving intelligence, Think Densely, Act Sparsely, and instantiate it with an efficient and interpretable framework, LECDrive (Latent Expert Cognitive Chains for Vision-Language-Action autonomous Driving). The core idea is to mimic the hierarchical perception process of humans by embedding a progressive chain of latent expert cognition within the VLA model. Concretely, we inject a compact set of task-specific latent tokens as carriers, enabling the model to internalize dense knowledge from foundational vision models, including visual representations (DINOv3), semantic structures (SAM3), and spatial geometry (DepthAnything3), while maintaining efficient inference. This interdependent cognitive chain follows a curriculum learning principle, where supervision is progressively structured from representation to semantics and geometry. Extensive experiments demonstrate that LECDrive consistently improves the performance of base VLMs across multiple autonomous driving benchmarks, covering key tasks such as object perception, state prediction, and trajectory planning. These findings suggest that constructing dense world models through structured latent expert chains is a promising direction for VLA-based autonomous driving.
+
+自动驾驶从根本上需要对视觉、语义和几何信息的深入理解，但现有的视觉-语言-动作（VLA）模型通常采用稀疏监督（例如语言指令或轨迹信号）进行训练。这种从密集视觉观察到稀疏表示的直接映射迫使模型压缩甚至丢弃对安全驾驶至关重要的关键场景信息。我们认为，这种限制并非源于模型能力不足，而是由于缺乏鼓励在潜在空间中形成密集世界表示的明确机制。本着这种精神，我们提出了一种新颖的驾驶智能范式：密集思考，稀疏行动，并通过高效且可解释的框架 LECDrive（视觉-语言-动作自动驾驶的潜在专家认知链）将其实例化。核心思想是通过在 VLA 模型中嵌入渐进的潜在专家认知链来模仿人类的分层感知过程。具体来说，我们注入一组紧凑的特定于任务的潜在标记作为载体，使模型能够内化基础视觉模型中的密集知识，包括视觉表示（DINOv3）、语义结构（SAM3）和空间几何（DepthAnything3），同时保持高效的推理。这种相互依存的认知链遵循课程学习原则，其中监督是从表示到语义和几何逐步构建的。大量实验表明，LECDrive 在多个自动驾驶基准测试中持续提高基础 VLM 的性能，涵盖对象感知、状态预测和轨迹规划等关键任务。这些发现表明，通过结构化潜在专家链构建密集世界模型是基于 VLA 的自动驾驶的一个有前途的方向。
+
+</details>
+
+---
+
+## 3. Vector-Quantized World Model: Latent Feedback Motion Planning for Robot Manipulation / 矢量量化世界模型：机器人操纵的潜在反馈运动规划
+
+**Date**: 2026-10-19 | **arXiv**: [2610.25600v1](http://arxiv.org/abs/2610.25600v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.25600v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Visual world models have shown strong potential for robot planning, yet long-horizon manipulation remains challenging due to compounding prediction errors, large search complexity, and latent plans that the low-level controller cannot reliably reach. In this work, we introduce Vector-Quantized World Model (VQ-WM), a latent feedback motion planning framework that integrates discrete long-horizon search with continuous visual feedback control: a discrete latent predictor models transitions between vector-quantized latent states, allowing the planner to look far ahead and find a shortest path to the goal through discrete search and a continuous learned controller sequentially reaches the planned states through visual feedback, correcting deviations to mitigate compounding errors. Whereas most vector quantization uses Euclidean distance, we use a novel estimator of the first-passage-time as a quasi-metric, which aligns the planning abstraction with the controller's capabilities. We evaluate on the physical robot manipulation of the Tower of Hanoi puzzle: whereas existing state-of-the-art foundation models (VLAs, WAMs) only succeed when the solution trace in their training dataset, our method achieves 100\% success rate with only short-play data, demonstrate its ability to compose long-horizon solutions beyond the short demonstrated trajectories and execute them reliably. Our solution also outperforms strongest world-models by 13.3--85.3 percentage points on simulation benchmarks spanning manipulation and locomotion, demonstrating consistent progress and new capabilities.
+
+视觉世界模型在机器人规划方面显示出强大的潜力，但由于复合预测误差、巨大的搜索复杂性以及低级控制器无法可靠地达到的潜在计划，长视野操纵仍然具有挑战性。在这项工作中，我们引入了矢量量化世界模型（VQ-WM），这是一种潜在反馈运动规划框架，它将离散长视野搜索与连续视觉反馈控制相结合：离散潜在预测器对矢量量化潜在状态之间的转换进行建模，使规划器能够向前看并通过离散搜索找到到达目标的最短路径，连续学习控制器通过视觉反馈顺序达到计划状态，纠正偏差以减轻复合误差。虽然大多数矢量量化使用欧几里德距离，但我们使用首次通过时间的新颖估计器作为准度量，它将规划抽象与控制器的功能保持一致。我们对汉诺塔谜题的物理机器人操作进行了评估：现有最先进的基础模型（VLA、WAM）只有在训练数据集中的解决方案追踪时才能成功，而我们的方法仅使用短游戏数据即可实现 100% 的成功率，证明其能够在短期演示轨迹之外构建长期解决方案并可靠地执行它们。我们的解决方案在操纵和运动的模拟基准上也比最强的世界模型高出 13.3--85.3 个百分点，展示了持续的进步和新功能。
+
+</details>
+
+---
+
+## 4. Dynamics-Aligned Representation Learning under Induced Partial Observability / 诱导部分可观测性下的动态对齐表示学习
+
+**Date**: 2026-10-18 | **arXiv**: [2610.25511v1](http://arxiv.org/abs/2610.25511v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.25511v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Model-based reinforcement learning (MBRL) has enabled sample-efficient learning of continuous control policies from high-dimensional observations through learned latent dynamics models. These models are typically trained with observation reconstruction objectives, which provide strong supervision but can bias representations toward visual fidelity leading to an undertrained prior and unreliable long-horizon predictions. We propose a stochastic gating mechanism that induces controlled partial observability during training by sampling a spatial binary mask from a Beta--Bernoulli random field and applying it to the raw observation. The gate probability is resampled at each time step, exposing the encoder to conditions ranging from near-total occlusion to near-full visibility. Integration of our method requires minimal architectural changes from existing dynamics models: the gated observation and the binary mask are channel-wise concatenated and passed to the encoder as a single augmented input, with no modifications to the broader training pipeline. We evaluate the proposed approach on a set of pixel-based continuous control tasks selected from the DeepMind Control Suite. Using model predictive control for evaluation, which relies solely on open-loop model rollouts, we show that stochastic gating improves planning performance and data efficiency across tasks. Further analysis demonstrates that performance is robust to the spatial scale of the mask, and a balanced observability during training outperforms configurations biased toward either sparser or denser observations.
+
+基于模型的强化学习 (MBRL) 能够通过学习的潜在动态模型，从高维观察中样本有效地学习连续控制策略。这些模型通常使用观察重建目标进行训练，这些目标提供了强有力的监督，但可能会使表示偏向视觉保真度，从而导致先验训练不足和不可靠的长期预测。我们提出了一种随机门控机制，通过从 Beta-Bernoulli 随机场中采样空间二元掩模并将其应用于原始观察，在训练过程中引入受控的部分可观测性。门概率在每个时间步重新采样，使编码器暴露于从接近完全遮挡到接近完全可见的条件下。我们的方法的集成需要对现有动态模型进行最小的架构更改：门控观察和二进制掩码按通道连接并作为单个增强输入传递到编码器，而不需要对更广泛的训练管道进行修改。我们在从 DeepMind Control Suite 中选择的一组基于像素的连续控制任务上评估了所提出的方法。使用模型预测控制进行评估（仅依赖于开环模型推出），我们表明随机门控可以提高跨任务的规划性能和数据效率。进一步的分析表明，性能对于掩模的空间尺度是稳健的，并且训练期间的平衡可观察性优于偏向于稀疏或密集观察的配置。
+
+</details>
+
+---
+
+## 5. A failure of Imagination: VLMs fail to use visual representations for text, but self-distillation can help / 想象力的失败：VLM 无法使用文本的视觉表示，但自我蒸馏可以提供帮助
+
+**Date**: 2026-10-18 | **arXiv**: [2610.25470v1](http://arxiv.org/abs/2610.25470v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.25470v1)
+
+**Categories**: cs.AI, cs.CL, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision-language (VL) models are typically built by fine-tuning a language model to attend to visual features in service of a Visual Question-Answering objective. We ask whether this alignment changes how language models represent text---especially on tasks where visualization would help, like geometry questions posed in words. We distinguish weak multimodality (the model can answer questions about an input image) from strong multimodality (the model's text representations themselves become vision-aligned, improving performance on text-only tasks with latent visual structure). To test for strong multimodality, we construct a task of shape-counting problems with paired equivalent text and image specifications. This task is trivial when the image is provided, but requires visualization when specified in text as line coordinates. We compare instruction-tuned Qwen-2.5 and Mistral models against their vision-aligned counterparts on the text variant of the task. We find that the multimodal models do no better in this setting, despite strong performance on the image version of the task. Probing experiments corroborate this: vision-aligned decoder embeddings carry no more visual structure than their text-only counterparts. Finally, we provide an optimization objective that distills in-context visual embeddings into text embeddings. This alignment induces gains on the text variant of the task without explicit task supervision, even on samples more complex than seen during alignment. This suggests that VQA-style alignment leaves available cross-modal transfer untapped.
+
+视觉语言（VL）模型通常是通过微调语言模型来构建的，以关注视觉特征，从而服务于视觉问答目标。我们询问这种对齐是否会改变语言模型表示文本的方式——尤其是在可视化有帮助的任务上，比如用文字提出的几何问题。我们区分弱多模态（模型可以回答有关输入图像的问题）和强多模态（模型的文本表示本身与视觉对齐，提高具有潜在视觉结构的纯文本任务的性能）。为了测试强多模态性，我们构建了具有配对等效文本和图像规范的形状计数问题的任务。当提供图像时，此任务很简单，但当在文本中指定为线坐标时，需要可视化。我们将指令调整的 Qwen-2.5 和 Mistral 模型与任务文本变体上的视觉对齐模型进行比较。我们发现，尽管在任务的图像版本上表现强劲，但多模态模型在这种情况下并没有表现得更好。探测实验证实了这一点：视觉对齐的解码器嵌入并不比纯文本解码器嵌入更多的视觉结构。最后，我们提供了一个优化目标，将上下文中的视觉嵌入提炼为文本嵌入。这种对齐可以在没有明确任务监督的情况下获得任务的文本变体的增益，即使是比对齐过程中看到的更复杂的样本也是如此。这表明 VQA 式的对齐方式尚未开发可用的跨模式传输。
+
+</details>
+
+---
+
+## 6. Operator-Mismatch Contrastive Learning for World-Relative Trajectory Coherence / 世界相对轨迹一致性的算子失配对比学习
+
+**Date**: 2026-10-18 | **arXiv**: [2610.25360v1](http://arxiv.org/abs/2610.25360v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.25360v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models are increasingly judged by how well they rank plausible futures, yet plausibility alone is the wrong target. The same scene can evolve under many latent rules, and a future that is smooth and physically valid under one rule can be incoherent under the rule actually in force. We formalize the resulting failure, operator-blindness, and show that it is systematically hidden by standard evaluation: a scorer can attain near-perfect generic ranking while separating current-world from other-world futures no better than chance. We introduce Operator-Mismatch Contrastive (OMC) learning, whose semantic hard negatives are valid-but-wrong-operator trajectories, and a matching protocol that measures world-relative coherence directly. On a controlled synthetic benchmark with in- and out-of-distribution operator parameters, across two trajectory-scoring backbones, and on feature-level external validation with CoPhy ballsCF, OMC raises operator-sensitive scoring far above a chance baseline that nonetheless achieves 0.99 generic top-1. We prove that the wrong-operator negative is necessary both for the protocol to detect the failure and for the objective to fix it, and position OMC as an auxiliary coherence signal (a trajectory-coherence scorer, not a generative model, planner, or control agent) that can be attached to existing world-model representations.
+
+人们越来越多地根据世界模型对合理未来的排名来判断，但仅以合理性为目标是错误的。同一场景可以在许多潜在规则下演变，而在一条规则下平滑且物理有效的未来在实际生效的规则下可能会变得不连贯。我们将由此产生的失败，即操作者失明形式化，并表明它被标准评估系统地隐藏了：评分者可以获得近乎完美的通用排名，同时将当前世界与其他世界的未来区分开来，这并不比机会更好。我们引入了算子不匹配对比（OMC）学习，其语义硬否定是有效但错误的算子轨迹，以及直接测量世界相对一致性的匹配协议。在具有分布内和分布外算子参数的受控合成基准上，跨两个轨迹评分骨干网，以及使用 CoPhy ballsCF 进行特征级外部验证，OMC 将算子敏感评分提高到远高于机会基线的水平，但仍然达到了 0.99 的通用 top-1。我们证明，错误算子负数对于协议检测故障和目标修复故障都是必要的，并将 OMC 定位为可以附加到现有世界模型表示的辅助一致性信号（轨迹一致性评分器，而不是生成模型、规划器或控制代理）。
+
+</details>
+
+---
+
+## 7. World Model Interpretability: From Decoding Representations to Understanding Latent Worlds / 世界模型可解释性：从解码表示到理解潜在世界
+
+**Date**: 2026-10-18 | **arXiv**: [2610.25296v1](http://arxiv.org/abs/2610.25296v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.25296v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Emerging Joint-Embedding Predictive Architectures (JEPAs) are moving beyond representation learning towards latent world models that support prediction, planning, and control. Yet their latent worlds naturally lack a human-interpretable interface. In this Perspective, we argue that as JEPA latents become internal states for prediction and action, interpretability must move beyond what they encode to how latent variables interact, evolve, and causally drive prediction. To this end, we envision a four-stage research agenda, involving Ground, Structure, Verify, and Act, to guide this shift toward actionable latent-world understanding. Within our framework, existing JEPA interpretability efforts provide early evidence for Ground, while systematic analysis of latent structure, causal verification, and intervention remains largely unexplored. Overall, this Perspective aims to call for a broader latent-world interpretability agenda that shifts attention from decoding representations toward understanding, validating, and acting on latent worlds.
+
+新兴的联合嵌入预测架构 (JEPA) 正在超越表示学习，转向支持预测、规划和控制的潜在世界模型。然而，它们的潜在世界自然缺乏人类可解释的界面。在本视角中，我们认为，随着 JEPA 潜变量成为预测和行动的内部状态，可解释性必须超越它们编码的内容，转向潜变量如何相互作用、演化和因果驱动预测。为此，我们设想了一个四阶段的研究议程，包括基础、结构、验证和行动，以指导这一向可操作的潜在世界理解的转变。在我们的框架内，现有的 JEPA 可解释性工作为 Ground 提供了早期证据，而对潜在结构、因果验证和干预的系统分析在很大程度上仍未得到探索。总体而言，本视角旨在呼吁更广泛的潜在世界可解释性议程，将注意力从解码表示转移到理解、验证和对潜在世界采取行动。
+
+</details>
+
+---
+
+## 8. The Explainability Illusion: Must ViTs Exhibit Patch-Decoding Interpretability? / 可解释性错觉：ViT 必须表现出补丁解码可解释性吗？
+
+**Date**: 2026-10-18 | **arXiv**: [2610.25289v1](http://arxiv.org/abs/2610.25289v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.25289v1)
+
+**Categories**: cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Transformers are widely assumed to exhibit token-decoding explainability. In particular, in vision transformer (ViT) classifiers, decoding individual patch tokens has become a common diagnostic tool due to its tendency to yield human-interpretable outputs. In light of the increasing popularity of this approach, an important question is whether token-decoding explainability is an inherent property of transformers that should be expected to hold across architectures, scales, and training objectives, or merely an artifact of some implicit bias. In this paper we systematically study token-decoding explainability across diverse ViT settings, spanning architectures, scales, and training objectives, using both controlled experiments and real-world models. We find that while some models indeed exhibit aligned and interpretable token decodings, others exhibit either inverted explainability maps or a complete lack of correlation with the image semantics. As we show, these tendencies toward different explainability behaviors are not intrinsic to the architecture and can vary arbitrarily with changes in the optimization landscape. We provide theoretical support for these observations by demonstrating a setting where a single fixed toy transformer architecture can provably implement the optimal classification rule in multiple ways, which differ in their patch-decoding explainability patterns. Our results show that token-decoding explainability is not an inherent property of trained transformers, but rather an outcome contingent on the problem setting and thus should not be a-priori assumed to hold. Code can be found in https://ronensc.github.io/Explainability-Illusion/ .
+
+人们普遍认为 Transformer 具有令牌解码的可解释性。特别是，在视觉变换器（ViT）分类器中，解码单个补丁标记已成为一种常见的诊断工具，因为它倾向于产生人类可解释的输出。鉴于这种方法越来越受欢迎，一个重要的问题是，令牌解码可解释性是否是转换器的固有属性，应该期望它能够跨架构、规模和训练目标保持不变，或者仅仅是某些隐含偏差的产物。在本文中，我们使用受控实验和真实世界模型，系统地研究了跨不同 ViT 设置、跨越架构、规模和训练目标的令牌解码可解释性。我们发现，虽然一些模型确实表现出对齐和可解释的令牌解码，但其他模型要么表现出倒置的可解释性图，要么完全缺乏与图像语义的相关性。正如我们所展示的，这些不同可解释性行为的倾向并不是架构固有的，并且可以随着优化环境的变化而任意变化。我们通过演示一个设置来为这些观察提供理论支持，在该设置中，单个固定玩具变压器架构可以证明以多种方式实现最佳分类规则，这些方式的补丁解码可解释性模式有所不同。我们的结果表明，令牌解码的可解释性并不是经过训练的 Transformer 的固有属性，而是取决于问题设置的结果，因此不应先验地假设成立。代码可以在 https://ronensc.github.io/Explainability-Illusion/ 中找到。
+
+</details>
+
+---
+
+## 9. World Models, Trees and Foundation Models for Retail Forecasting: Evidence from Four Public Data Sets / 零售预测的世界模型、树和基础模型：来自四个公共数据集的证据
+
+**Date**: 2026-10-18 | **arXiv**: [2610.25170v1](http://arxiv.org/abs/2610.25170v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.25170v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+A retailer makes different decisions at different grains of the product, store and time hierarchy: store orders for an item in a store, supplier funding for an item across stores, category performance by store, and the financial plan for the chain. Which forecasting model to use depends on the grain. This paper compares models at each grain on four public data sets (M5, six Dominick's categories, Breakfast at the Frat, and Corporación Favorita, the last kept out of all development), over rolling forecast origins with paired tests and model confidence sets. It covers price and promotion through the plan inputs these data record, not product, assortment or place. The models are a world model that carries each item's state forward under the price and promotion plan, the same network without that state, LightGBM, the Temporal Fusion Transformer, TimesFM, Chronos-Bolt, Timestral, seasonal naive, and an equal-weight average of the world model, LightGBM and TimesFM given the plan. The answer changed with the grain. For an item by store and an item across stores, the average had the lowest error on seven and eight of nine data sets, and the 90% confidence set held a median of 1 and 2 models. For a category by store, a category and the chain total, the lowest-error model differed between data sets and a median of 4 of nine models were not separated by the four to six windows available. For category-by-store planning cost, the average or LightGBM was lowest on seven of eight data sets, and the world model was lowest only on M5; it was behind LightGBM item by store on six of eight. Every trained model used the plan, and on the weekly promotion-driven data pretrained models were less accurate without it. These results hold for these data sets; a forecast solved across all four Ps, or a retailer's own data, may give different results. Every model, test and change that lost is reported.
+
+零售商根据产品、商店和时间层次结构的不同粒度做出不同的决策：商店中商品的商店订单、跨商店商品的供应商资金、商店的类别绩效以及连锁店的财务计划。使用哪种预测模型取决于粒度。本文比较了四个公共数据集（M5、六个 Dominick 类别、Breakfast at the Frat 和 Corporación Favorita（最后一个被排除在所有开发之外）上的每种粒度的模型，并使用配对测试和模型置信集来滚动预测原点。它通过计划输入这些数据记录来涵盖价格和促销，而不是产品、品种或地点。这些模型是在价格和促销计划下推进每个项目的状态的世界模型、没有该状态的同一网络、LightGBM、Temporal Fusion Transformer、TimesFM、Chronos-Bolt、Timestral、季节性朴素以及给定计划的世界模型、LightGBM 和 TimesFM 的等权平均值。答案随着谷物的变化而变化。对于按商店的商品和跨商店的商品，九个数据集中的七个和八个数据集的平均值误差最低，并且 90% 置信度集的中位数为 1 和 2 个模型。对于逐个商店的类别、类别和连锁总数，数据集之间的最低误差模型有所不同，九个模型中的中位数有 4 个模型没有被四到六个可用窗口分开。对于按类别的商店规划成本，平均或 LightGBM 在 8 个数据集中的 7 个上最低，而世界模型仅在 M5 上最低；八家商店中有六家它落后于 LightGBM。每个经过训练的模型都使用该计划，并且在每周促销驱动的数据上，如果没有该计划，预训练模型的准确性就会降低。这些结果适用于这些数据集；对所有四个 P 进行的预测或零售商自己的数据可能会给出不同的结果。报告丢失的每个模型、测试和变更。
+
+</details>
+
+---
+
+## 10. Latent World Models Should Plan with Distances Along the Latent Manifold / 潜在世界模型应规划沿潜在流形的距离
+
+**Date**: 2026-10-18 | **arXiv**: [2610.25013v1](http://arxiv.org/abs/2610.25013v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.25013v1)
+
+**Categories**: cs.LG, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Latent world models such as LeWM plan by searching for an action sequence whose predicted terminal latent is closest to the goal latent under an ambient norm, such as the Euclidean distance. Planning with such a cost assumes that proximity in the ambient latent space reflects proximity to the goal in the environment. Studying LeWM, we find that this assumption holds only in a small neighborhood around the goal, whereas farther away the L2 cost forms spurious low-cost basins that trap the planner. Yet neighborhood-based embeddings show that the latents retain the underlying physical state. We therefore hypothesize that the latents lie near a curved, low-dimensional manifold, and that the terminal cost should measure the distance along this latent manifold rather than through the ambient space. To estimate this manifold distance, we propose the Neighborhood Graph Cost (NGC), which computes shortest-path distances on a mutual nearest-neighbor graph constructed over training latents. NGC changes only the terminal cost and requires no retraining. This single change improves the planning success rate of LeWM across all four benchmark tasks and nearly solves TwoRoom and Reacher: even at the farthest goal offsets tested, NGC reaches 95% and 100% success, whereas the L2 cost falls to 27% and 81%. These results support the manifold hypothesis and our argument that latent world models should plan with distances along the latent manifold.
+
+LeWM 等潜在世界模型通过搜索一个动作序列来规划，该动作序列的预测终端潜在值最接近环境规范（例如欧几里得距离）下的目标潜在值。以这样的成本进行规划假设周围潜在空间的接近度反映了与环境中的目标的接近度。通过研究 LeWM，我们发现这个假设仅在目标周围的一个小邻域内成立，而距离较远的 L2 成本会形成虚假的低成本盆地，从而困住规划者。然而，基于邻域的嵌入表明，潜伏保留了底层的物理状态。因此，我们假设潜在流形位于弯曲的低维流形附近，并且终端成本应该测量沿着该潜在流形的距离，而不是通过周围空间的距离。为了估计这个流形距离，我们提出了邻域图成本（NGC），它计算在训练潜在变量上构建的相互最近邻图上的最短路径距离。 NGC仅改变终端成本，无需重新培训。这一单一更改提高了 LeWM 在所有四个基准任务中的规划成功率，并几乎解决了 TwoRoom 和 Reacher 问题：即使在测试的最远目标偏移下，NGC 也能达到 95% 和 100% 的成功率，而 L2 成本则下降至 27% 和 81%。这些结果支持流形假设和我们的论点，即潜在世界模型应该沿着潜在流形规划距离。
+
+</details>
+
+---
+
+## 11. From Prediction to Action: Population Health World Model for Digital Medicine / 从预测到行动：数字医学的人口健康世界模型
+
+**Date**: 2026-10-17 | **arXiv**: [2610.24662v1](http://arxiv.org/abs/2610.24662v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.24662v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Digital medicine now captures data that traces individual health trajectories and reveals population health dynamics through electronic health records, claims, remote monitoring, wearable devices, mobile devices, social sensing data, medical images, etc. But much of its modeling still centers on task-specific, outcome-specific, and prediction-specific estimation. The next frontier is not simply better prediction, but action in an evolving health world shaped by multiple decision-makers, heterogeneous populations, resource constraints, and feedback in care delivery. This is why digital medicine now needs world models: not only to estimate what will happen, but to represent how actions change what can happen next -- whom to prioritize, how to allocate scarce resources, how to adapt care across subgroups, and how interventions reshape future health trajectories and population dynamics.   We call such a model population health world model (PHWM): a more foundational representation of an evolving health world in which health states, individual trajectories, population health dynamics, interventions, constraints, and feedback are intrinsically coupled. Building a PHWM endows three unmet structural gaps in current digital medicine: dynamic health-state modeling, population-level intervention intelligence, and validation, equity, and governance for action-oriented use. We argue that addressing these gaps requires three minimal capabilities: representation learning under action-dependent observation, multi-scale intervention intelligence, and validation with explicit decision boundaries, while highlighting the importance of social, contextual, and public-health sensing data for action-oriented digital medicine.
+
+数字医学现在通过电子健康记录、索赔、远程监控、可穿戴设备、移动设备、社会传感数据、医学图像等捕获追踪个人健康轨迹的数据并揭示人群健康动态。但其大部分建模仍然集中在特定于任务、特定结果和特定于预测的估计。下一个前沿不仅仅是更好的预测，而是在由多个决策者、异质人群、资源限制和护理服务反馈所塑造的不断发展的健康世界中采取行动。这就是为什么数字医学现在需要世界模型：不仅要估计将会发生什么，还要代表行动如何改变接下来可能发生的事情——优先考虑谁，如何分配稀缺资源，如何调整跨亚组的护理，以及干预措施如何重塑未来的健康轨迹和人口动态。   我们将这样的模型称为人口健康世界模型（PHWM）：对不断发展的健康世界的更基础的表示，其中健康状态、个人轨迹、人口健康动态、干预措施、约束和反馈本质上是耦合的。建立 PHWM 赋予了当前数字医学中三个未满足的结构性差距：动态健康状态建模、人群水平干预情报以及面向行动的使用的验证、公平和治理。我们认为，解决这些差距需要三个最低能力：依赖于行动的观察下的表征学习、多尺度干预情报以及具有明确决策边界的验证，同时强调社会、情境和公共卫生传感数据对于面向行动的数字医学的重要性。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-10-19 (2 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-10-19
