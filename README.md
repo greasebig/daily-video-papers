@@ -27,6 +27,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-10-23](papers/2026-10-23.md) - 12 papers
 - [2026-10-22](papers/2026-10-22.md) - 18 papers
 - [2026-10-21](papers/2026-10-21.md) - 30 papers
 - [2026-10-20](papers/2026-10-20.md) - 27 papers
@@ -203,6 +204,212 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-10-23 (12 papers)</b></summary>
+
+# arXiv Video Papers - 2026-10-23
+
+**Paper Count**: 12
+
+---
+
+## 1. RGraph-Eval: Task-Grounded Scene Graphs for Evaluating Robot Video Generation / RGraph-Eval：用于评估机器人视频生成的基于任务的场景图
+
+**Date**: 2026-10-22 | **arXiv**: [2610.31121v1](http://arxiv.org/abs/2610.31121v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.31121v1)
+
+**Categories**: cs.RO
+
+**Code**: https://github.com/SashaDance/rgraph-eval.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Generated robot videos can look convincing while depicting the wrong interac- tion: a different object is moved, a grasp disappears, or a placement ends out- side its destination. We introduce RGraph-Eval, a reference-based framework that makes these discrepancies explicit through task-grounded temporal scene graphs. Unlike approaches that construct separate evidence representations for different evaluation dimensions, we organize task entities, interactions, and motion within a unified, interpretable scene graph representation. A foundation-model pipeline identifies manipulation roles, grounds persistent object masks, infers and verifies state transitions and action intervals, and reconstructs manipulated- object motion in three dimensions. Applying this representation to a generated video and a reference demonstration supports an interpretable RGraph-Eval score with visible-object, relation-change, and 3D path-shape components. We also introduce ShareRobot-SG, a collection of 1,000 manipulation scenes from ten ShareRobot sources annotated with the multimodal representation. Our eval- uation separates graph-generation quality from agreement with human video judgments, and includes comparisons with adapted SVG2 and SG-Ego, a bench- mark of three video generators. The framework connects robot-video assessment to the observable entities and interactions underlying a task, while making the graph annotations reusable beyond evaluation. Code will be publicly available at https://github.com/SashaDance/rgraph-eval.
+
+生成的机器人视频在描述错误的交互时看起来很有说服力：不同的物体被移动，抓取消失，或者放置在其目的地之外结束。我们引入了 RGraph-Eval，这是一个基于参考的框架，它通过基于任务的时间场景图使这些差异变得明确。与为不同评估维度构建单独证据表示的方法不同，我们在统一的、可解释的场景图表示中组织任务实体、交互和运动。基础模型管道识别操纵角色，奠定持久对象掩码，推断和验证状态转换和动作间隔，并在三个维度上重建操纵对象运动。将此表示应用于生成的视频和参考演示，支持具有可见对象、关系更改和 3D 路径形状组件的可解释 RGraph-Eval 分数。我们还介绍了 ShareRobot-SG，它是来自 10 个 ShareRobot 源的 1,000 个操作场景的集合，并用多模态表示进行注释。我们的评估将图形生成质量与人类视频判断的一致性分开，并包括与改编的 SVG2 和 SG-Ego（三个视频生成器的基准）的比较。该框架将机器人视频评估与任务背后的可观察实体和交互连接起来，同时使图形注释可以在评估之外重复使用。代码将在 https://github.com/SashaDance/rgraph-eval 上公开提供。
+
+</details>
+
+---
+
+## 2. ResGVC: Residual Coding for High-fidelity Generative Video Compression / ResGVC：用于高保真生成视频压缩的残差编码
+
+**Date**: 2026-10-22 | **arXiv**: [2610.31039v1](http://arxiv.org/abs/2610.31039v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.31039v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Generative video compression (GVC) methods usually employ decoder-side diffusion models to denoise reconstructed signals based on generative priors. Besides, most of these methods perform denoising in latent space rather than directly in pixel domain. In this paper, we propose ResGVC, a residual coding framework for GVC that guides denoising toward original pictures by transmitting residual signals. ResGVC first encodes the original pictures within a learned video codec, and then decomposes the distortion between the codec reconstruction and the original pictures into a sequence of residual segments, where each residual segment is acquired at each denoising step. Residual segments can further be compressed by a novel residual codec with a diffusion transformer as an entropy model. Unlike prior methods, ResGVC introduces explicit source constraints throughout denoising rather than relying on decoder-side generation alone. The diffusion-based entropy model also enables more effective distribution modeling capability based on the powerful generative priors. Moreover, denoising directly in pixel space avoids the irreversible information loss caused by latent representation bottlenecks. Experimental results show that, compared with the previous state-of-the-art method, ResGVC achieves 63.7% and 83.8% BD-rate reductions in terms of LPIPS and PSNR, respectively, while also delivering superior visual quality.
+
+生成视频压缩（GVC）方法通常采用解码器侧扩散模型来基于生成先验对重建信号进行去噪。此外，大多数这些方法在潜在空间中而不是直接在像素域中执行去噪。在本文中，我们提出了 ResGVC，一种 GVC 的残差编码框架，通过传输残差信号引导对原始图片进行去噪。 ResGVC 首先在学习的视频编解码器中对原始图片进行编码，然后将编解码器重建和原始图片之间的失真分解为一系列残差片段，其中每个残差片段在每个去噪步骤中获取。残余片段可以通过一种新颖的残余编解码器进一步压缩，该编解码器以扩散变压器作为熵模型。与之前的方法不同，ResGVC 在整个去噪过程中引入了显式源约束，而不是仅仅依赖于解码器端生成。基于扩散的熵模型还能够基于强大的生成先验实现更有效的分布建模能力。此外，直接在像素空间中去噪可以避免潜在表示瓶颈造成的不可逆信息丢失。实验结果表明，与之前最先进的方法相比，ResGVC 在 LPIPS 和 PSNR 方面分别实现了 63.7% 和 83.8% 的 BD 速率降低，同时还提供了卓越的视觉质量。
+
+</details>
+
+---
+
+## 3. Making MLLM Latents Matter: Factor-Aware Predictive Learning for Cinematic Video Generation / 让 MLLM 潜伏变得重要：用于电影视频生成的因子感知预测学习
+
+**Date**: 2026-10-22 | **arXiv**: [2610.30926v1](http://arxiv.org/abs/2610.30926v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.30926v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Cinematic video generation requires both temporal inference from limited inputs (i.e., sparse rather than frame-by-frame guidance) and factor-aware control of character, scene, action, and camera. Multimodal large language models (MLLMs) offer useful priors for both capabilities, but their representations are not automatically actionable for video generation: a Video Diffusion Transformer (DiT) may bypass them through native conditioning pathways, and using them does not ensure either factor-aware control or generation-compatible temporal prediction. We propose Factor-Aware Predictive Learning (FAPL), which establishes effective MLLM latent use as a shared prerequisite and then targets the two capabilities with complementary learning signals. First, latent-only generator grounding trains the DiT with a frozen MLLM and connector, strengthening the DiT's use of MLLM latents for generation. Second, for factor-aware control, paired videos specify a target-factor change and non-target preservation, and factor-span replacement trains the DiT to realize this relationship in its output. Third, for temporal inference, text-only and text-plus-complete-video observations share a video target, and the trained DiT is then frozen while the MLLM and connector are optimized through it. This final stage trains limited-input representations for generation while retaining complete-observation reconstruction as a complementary training mode. Extensive experiments demonstrate our consistently better performance on three cinematic video generation tasks (i.e., sparse-to-video, factor-aware editing, and multi-shot generation) over baselines and validate FAPL's contributions to MLLM feature use, temporal control, and factor coordination.
+
+电影视频生成需要从有限的输入（即稀疏而不是逐帧引导）进行时间推断，以及对角色、场景、动作和摄像机进行因子感知控制。多模态大语言模型 (MLLM) 为这两种功能提供了有用的先验，但它们的表示不能自动用于视频生成：视频扩散变压器 (DiT) 可能通过本机调节路径绕过它们，并且使用它们并不能确保因子感知控制或生成兼容的时间预测。我们提出因子感知预测学习（FAPL），它将有效的 MLLM 潜在用途建立为共享先决条件，然后通过互补的学习信号来瞄准这两种功能。首先，仅潜在发电机接地通过冻结的 MLLM 和连接器来训练 DiT，从而加强 DiT 对 MLLM 潜在发电的使用。其次，对于因子感知控制，配对视频指定目标因子变化和非目标保留，因子跨度替换训练 DiT 在其输出中实现这种关系。第三，对于时间推理，纯文本和文本加完整视频观察共享一个视频目标，然后训练的 DiT 被冻结，同时 MLLM 和连接器通过它进行优化。最后阶段训练有限输入表示以进行生成，同时保留完整观察重建作为补充训练模式。大量实验证明，我们在三个电影视频生成任务（即稀疏视频、因子感知编辑和多镜头生成）上始终比基线具有更好的性能，并验证了 FAPL 对 MLLM 特征使用、时间控制和因子协调的贡献。
+
+</details>
+
+---
+
+## 4. Verus-Insight: Towards Explainable Artifact Detection in AI-Generated Videos / Verus-Insight：在人工智能生成的视频中实现可解释的伪影检测
+
+**Date**: 2026-10-22 | **arXiv**: [2610.30866v1](http://arxiv.org/abs/2610.30866v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.30866v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in video generation have made synthetic videos increasingly realistic, placing greater demands on reliable AI-generated video detection. Existing artifact-based detectors typically identify generation artifacts as evidence for source prediction, yet they may either fail to recognize subtle artifacts or reach the correct source decision without faithfully identifying the evidence underlying it. In this work, we systematically investigate how to design and train effective artifact detectors and formulate artifact detection as a structured process comprising three complementary capabilities: Inspection Planning, which determines what should be examined; Evidence Verification, which verifies whether the inspected content exhibits genuine generation artifacts; and Evidence Aggregation, which integrates the verified evidence into the final source decision. Building on this formulation, we introduce Verus-Insight, trained with human-anchored full-process supervision and progressive capability training to strengthen both fine-grained artifact detection and video-level detection. We further introduce Verus-Bench, a benchmark with fine-grained human annotations of perceptible artifacts for evaluating artifact detection. Extensive experiments across diverse benchmarks demonstrate that Verus-Insight achieves strong performance in both fine-grained artifact analysis and AI-generated video detection, with substantial gains in recovering human-perceived artifacts. Further analyses reveal that the three capabilities are complementary yet distinct, and that Verus-Insight more reliably converts relevant inspection targets into supported artifact evidence without increasing spurious artifact claims.
+
+视频生成领域的最新进展使合成视频变得越来越逼真，对可靠的人工智能生成视频检测提出了更高的要求。现有的基于伪影的检测器通常将生成伪影识别为源预测的证据，但它们可能无法识别细微的伪影或在没有忠实识别其背后的证据的情况下得出正确的源决策。在这项工作中，我们系统地研究如何设计和训练有效的伪影检测器，并将伪影检测制定为包含三个互补功能的结构化过程：检查计划，确定应检查的内容；证据验证​​，验证检查的内容是否表现出真实的生成工件；证据聚合，将经过验证的证据整合到最终的来源决策中。在此基础上，我们引入了 Verus-Insight，通过以人为锚定的全流程监督和渐进式能力训练进行训练，以加强细粒度伪影检测和视频级检测。我们进一步介绍了 Verus-Bench，这是一个对可感知伪影进行细粒度人工注释的基准，用于评估伪影检测。跨不同基准的大量实验表明，Verus-Insight 在细粒度伪影分析和人工智能生成的视频检测方面均实现了强大的性能，并且在恢复人类感知的伪影方面取得了巨大的进步。进一步的分析表明，这三种功能是互补但又截然不同的，并且 Verus-Insight 可以更可靠地将相关检查目标转换为受支持的工件证据，而不会增加虚假工件声明。
+
+</details>
+
+---
+
+## 5. Direct Forcing: A Single-Stage Training Recipe for Few-Step Autoregressive Text-to-Video Generation / 直接强迫：用于少步自回归文本到视频生成的单阶段训练方法
+
+**Date**: 2026-10-22 | **arXiv**: [2610.30861v1](http://arxiv.org/abs/2610.30861v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.30861v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Few-step autoregressive video generation enables low-latency streaming, yet prevailing training pipelines separate causal adaptation from distribution matching. Recent representation-based text-to-video methods retain this separation by starting from ODE-initialized checkpoints, even when the target distribution is defined directly by reference videos. We introduce Direct Forcing, a single-stage framework that uses reference videos both as paired examples of how a history continues and as a target population for self-generated rollouts. Causal Continuation Alignment learns paired spatiotemporal correspondence under reference histories, while Rollout Distribution Matching uses maximum mean discrepancy to align the representation distributions of self-generated and reference videos. Together, these complementary signals allow a pretrained video model to learn causal continuation and the target video distribution in a single training stage. Dynamic Gradient Balancing adapts the relative gradient contributions of continuation alignment and distribution matching during training. Starting from bidirectional Wan2.1-1.3B, Direct Forcing learns a four-step autoregressive generator in 250 updates without a separate initialization stage or online diffusion-score supervision, achieving 84.63 VBench Total and 86.01 Quality. Ablation studies further demonstrate the benefits of dynamic gradient balancing and reveal distinct representation preferences: deeper features benefit continuation alignment, whereas intermediate features yield better performance for rollout distribution matching.
+
+少步自回归视频生成可实现低延迟流，但流行的训练管道将因果适应与分布匹配分开。最近基于表示的文本到视频方法通过从 ODE 初始化的检查点开始保留了这种分离，即使目标分布是直接由参考视频定义的。我们引入了 Direct Forcing，这是一个单阶段框架，它使用参考视频作为历史如何延续的配对示例，并作为自我生成的推出的目标人群。因果延续对齐在参考历史下学习成对的时空对应，而推出分布匹配使用最大均值差异来对齐自生成视频和参考视频的表示分布。这些互补信号共同允许预训练视频模型在单个训练阶段学习因果延续和目标视频分布。动态梯度平衡适应训练期间连续对齐和分布匹配的相对梯度贡献。从双向 Wan2.1-1.3B 开始，Direct Forcing 在 250 次更新中学习了四步自回归生成器，无需单独的初始化阶段或在线扩散分数监督，实现了 84.63 VBench Total 和 86.01 Quality。消融研究进一步证明了动态梯度平衡的好处，并揭示了不同的表示偏好：更深的特征有利于连续对齐，而中间特征为推出分布匹配带来更好的性能。
+
+</details>
+
+---
+
+## 6. DeXplicit: Making Physical State Explicit in Dexterous Manipulation World Models / DeXplicit：在灵巧操纵世界模型中使物理状态变得明确
+
+**Date**: 2026-10-22 | **arXiv**: [2610.30781v1](http://arxiv.org/abs/2610.30781v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.30781v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Before acting on an object, a robot needs to anticipate how its hand motion will change the physical world and what the resulting scene will look like. Existing approaches typically entangle action-conditioned dynamics, camera motion, and visual synthesis within a video generation model, or represent dynamics as point trajectories without explicit object structure. We introduce DeXplicit, a dexterous manipulation world model that instead predicts how the world evolves explicitly in metric 3D before rendering its visual consequences. Given an initial scene and a future hand trajectory, a lightweight 3D dynamics network predicts object-centric motion and deformation, providing structured and geometrically grounded future world states. These predictions then serve as a strong scaffold for video generation: appearance is transported through the predicted 3D motion and projected into future views, allowing the renderer to focus on completing uncertain and newly visible content rather than implicitly learning world dynamics from pixels. This explicit-3D-first decomposition also enables efficient causal generation, requiring only two denoising steps per block while conditioning on generated history.   Across HOT3D, OakInk2, and PhysTwin, DeXplicit reduces moved-point error by 27-40% relative to PointWorld and improves object fidelity IoU+ by 47% on HOT3D under a shared renderer. Our design with two-step causal generation achieves a 57x speedup from our 14B bi-directional configuration in video synthesis.
+
+在对物体进行操作之前，机器人需要预测其手部动作将如何改变物理世界以及最终的场景会是什么样子。现有方法通常将动作条件动力学、摄像机运动和视觉合成纠缠在视频生成模型中，或者将动力学表示为没有明确对象结构的点轨迹。我们引入了 DeXplicit，一种灵巧的操纵世界模型，它在渲染视觉结果之前以度量 3D 方式明确预测世界如何演变。给定初始场景和未来的手部轨迹，轻量级 3D 动态网络可以预测以对象为中心的运动和变形，从而提供结构化且基于几何的未来世界状态。然后，这些预测可以作为视频生成的强大支架：外观通过预测的 3D 运动传输并投影到未来的视图中，从而使渲染器能够专注于完成不确定的和新可见的内容，而不是隐式地从像素中学习世界动态。这种显式 3D 优先分解还可以实现高效的因果生成，每个块仅需要两个去噪步骤，同时对生成的历史进行调节。   在 HOT3D、OakInk2 和 PhysTwin 中，相对于 PointWorld，DeXplicit 将移动点误差减少了 27-40%，并且在共享渲染器下的 HOT3D 上将对象保真度 IoU+ 提高了 47%。我们的两步因果生成设计使视频合成中的 14B 双向配置实现了 57 倍的加速。
+
+</details>
+
+---
+
+## 7. PhyEvolve: Multi-Agent State-Evolution Planning for Physics-Aware Video Generation / PhyEvolve：用于物理感知视频生成的多智能体状态演化规划
+
+**Date**: 2026-10-22 | **arXiv**: [2610.30717v1](http://arxiv.org/abs/2610.30717v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.30717v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in text-to-video generation have substantially improved visual fidelity, yet existing models still struggle to understand the physical evolution implicit in user prompts, making it difficult to generate videos with continuous physical state evolution. Here, we propose PhyEvolve, a multi-agent framework that enhances natural-language prompts through structured state-evolution planning. PhyEvolve consists of three agents: a Director, a Physical Evolver, and a Composer. Given a user prompt and an optional first frame, the Director grounds the scene and disentangles physical events from observation changes. The Physical Evolver uses scene evidence to identify physical mechanisms then constructs causally linked state transitions that unfold throughout the video, whether visible or not. The Composer utilizes these transitions to enhance the original prompts. Without retraining or model modification, PhyEvolve works directly with existing generators through prompt replacement. Extensive experiments on four major benchmarks show that PhyEvolve achieves state-of-the-art performance, outperforming the cutting-edge prior agentic baseline by 7.9 percentage points on average. These results demonstrate that explicit causal state-evolution planning improves physical consistency and state continuity in generated videos through natural-language prompt enhancement.
+
+文本到视频生成的最新进展极大地提高了视觉保真度，但现有模型仍然难以理解用户提示中隐含的物理演化，这使得生成具有连续物理状态演化的视频变得困难。在这里，我们提出了 PhyEvolve，一个多智能体框架，通过结构化状态演化规划增强自然语言提示。 PhyEvolve 由三个代理组成：Director、Physical Evolver 和 Composer。给定用户提示和可选的第一帧，导演将场景接地并将物理事件与观察变化分开。物理进化器使用场景证据来识别物理机制，然后构建在整个视频中展开的因果关联的状态转换，无论是否可见。 Composer 利用这些转换来增强原始提示。无需重新训练或模型修改，PhyEvolve 可通过即时更换直接与现有发电机配合使用。对四个主要基准的大量实验表明，PhyEvolve 实现了最先进的性能，平均比尖端的先前代理基准高 7.9 个百分点。这些结果表明，显式因果状态演化规划通过自然语言提示增强提高了生成视频的物理一致性和状态连续性。
+
+</details>
+
+---
+
+## 8. Latent Space Jam: Layout Guided Video Synthesis / Latent Space Jam：布局引导视频合成
+
+**Date**: 2026-10-21 | **arXiv**: [2610.30390v1](http://arxiv.org/abs/2610.30390v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.30390v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Adding control to video generation often requires training, which demands additional computational resources, data, or architectural changes. We propose a training-free approach that utilizes pretrained video diffusion models to control object layout and motion using coarse layouts. Our method operates in two passes: first, it steers spatiotemporal placement through prompt-guided cross-attention to produce a coarse visual guide; second, this guide conditions the same model to generate a high-quality, layoutconsistent video. The approach enables coordinated motion with strong temporal consistency, supporting diverse trajectories and object interactions without additional training. Extensive experiments show that our method consistently outperforms prior work in overlap and trajectory accuracy, as well as visual quality across static, dynamic, and multi-object scene settings.
+
+添加对视频生成的控制通常需要训练，这需要额外的计算资源、数据或架构更改。我们提出了一种免训练的方法，利用预训练的视频扩散模型来使用粗略布局来控制对象布局和运动。我们的方法分两步进行：首先，它通过提示引导的交叉注意力来引导时空放置，以产生粗略的视觉引导；其次，本指南以相同的模型为条件来生成高质量、布局一致的视频。该方法能够实现具有强时间一致性的协调运动，无需额外训练即可支持不同的轨迹和对象交互。大量的实验表明，我们的方法在重叠和轨迹精度以及静态、动态和多对象场景设置的视觉质量方面始终优于先前的工作。
+
+</details>
+
+---
+
+## 9. Self-Distilling Future Video Representations for World Action Models / 世界行动模型的自我蒸馏未来视频表示
+
+**Date**: 2026-10-21 | **arXiv**: [2610.30320v1](http://arxiv.org/abs/2610.30320v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.30320v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World Action Models (WAMs) have emerged as a promising approach to learning generalist robot policies using rich spatiotemporal priors from pre-trained video diffusion models. A recent line of WAMs improves inference efficiency by conditioning a separate action decoder on intermediate future video representations extracted from a single denoising step, avoiding costly iterative denoising required for video generation. This design makes action prediction depend directly on the quality of these future representations. In this paper, we introduce Future REpresentation learning via self-Distillation with temporal context (FRED), a framework that trains WAMs to improve the quality of future video representations from noise in a single denoising step. Specifically, FRED uses self-distillation to predict future representations from noise, using representations extracted from ground-truth future observations as targets. We further condition the video model on historical observations, providing temporal context for predicting future representations better. Across diverse real-world manipulation scenarios, FRED consistently outperforms competing WAMs. It achieves particularly large gains on long-horizon and out-of-domain tasks under zero-shot environment generalization, and substantially improves human-to-robot skill transfer, reaching 50.0% task success on tasks absent from robot training data and demonstrated only in human videos, compared with 19.4% for the best competing WAM.
+
+世界行动模型（WAM）已成为一种很有前途的方法，可以利用预先训练的视频扩散模型中的丰富时空先验来学习通用机器人策略。最近的一系列 WAM 通过根据从单个去噪步骤中提取的中间未来视频表示调节单独的动作解码器来提高推理效率，从而避免视频生成所需的昂贵的迭代去噪。这种设计使得动作预测直接取决于这些未来表示的质量。在本文中，我们介绍了通过时间上下文自蒸馏 (FRED) 进行的未来表示学习，这是一个训练 WAM 的框架，可在单个去噪步骤中提高来自噪声的未来视频表示的质量。具体来说，FRED 使用自蒸馏来预测噪声中的未来表示，并使用从真实的未来观测中提取的表示作为目标。我们进一步根据历史观察来调整视频模型，为更好地预测未来的表示提供时间上下文。在各种现实世界的操纵场景中，FRED 始终优于竞争的 WAM。它在零样本环境泛化下在长视野和域外任务上取得了特别大的收益，并显着改善了人机技能迁移，在机器人训练数据中缺少且仅在人类视频中演示的任务上达到了 50.0% 的任务成功率，而最佳竞争 WAM 的成功率为 19.4%。
+
+</details>
+
+---
+
+## 10. SP-HLM: Sparse-Pose-Driven Motion Generation and Whole-Body Control for Humanoid Loco-Manipulation / SP-HLM：用于人形机器人操纵的稀疏姿势驱动运动生成和全身控制
+
+**Date**: 2026-10-21 | **arXiv**: [2610.30044v1](http://arxiv.org/abs/2610.30044v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.30044v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Humanoid loco-manipulation requires an effective interface between high-level task policies and whole-body control. Existing interfaces typically rely on a single action representation for both task intent and whole-body coordination. This may burden the high-level policy or leave one aspect underspecified. We present SP-HLM, a framework built on a sparse-pose-driven interface. The interface combines five task-critical body poses with a learned latent motion prior to represent spatial intent and whole-body coordination in complementary forms. SP-VLA, a vision-language-action model, first predicts task-relevant sparse poses and finger joint positions from multimodal observations and language instructions using asynchronous action-chunk inference. Given these sparse targets, SP-MGM, a motion generation model trained through two-stage distillation, reconstructs coordinated full-body motion in real time. A pretrained motion encoder maps this motion to a compact latent representation. SP-GMT, a general motion tracker, then integrates the explicit sparse targets with this implicit motion prior for whole-body control. Experiments in simulation and on a real humanoid robot demonstrate improved motion tracking, whole-body coordination, and loco-manipulation success over existing approaches. Additional results and videos are available on our \href{https://sp-hlm.github.io/}{\textcolor{blue}{project page}}.
+
+人形机器人操纵需要高级任务策略和全身控制之间的有效接口。现有的界面通常依赖于单个动作表示来实现任务意图和全身协调。这可能会给高层政策带来负担或导致某一方面未明确。我们提出了 SP-HLM，一个基于稀疏姿势驱动接口构建的框架。该界面将五种关键任务的身体姿势与学习的潜在运动结合起来，然后以互补的形式表示空间意图和全身协调。 SP-VLA 是一种视觉-语言-动作模型，首先使用异步动作块推理从多模态观察和语言指令中预测与任务相关的稀疏姿势和手指关节位置。考虑到这些稀疏目标，SP-MGM（一种通过两阶段蒸馏训练的运动生成模型）可以实时重建协调的全身运动。预训练的运动编码器将该运动映射到紧凑的潜在表示。 SP-GMT 是一种通用运动跟踪器，然后将显式稀疏目标与该隐式运动先验集成以进行全身控制。模拟实验和真实人形机器人实验表明，与现有方法相比，运动跟踪、全身协调性和局部操纵成功率有所提高。其他结果和视频可在我们的 \href{https://sp-hlm.github.io/}{\textcolor{blue}{项目页面}} 上找到。
+
+</details>
+
+---
+
+## 11. HuMiT: Low-Latency Whole-Body Humanoid Teleoperation via Compact Reference Tracking / HuMiT：通过紧凑参考跟踪进行低延迟全身人形远程操作
+
+**Date**: 2026-10-21 | **arXiv**: [2610.29903v1](http://arxiv.org/abs/2610.29903v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.29903v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Real-time whole-body humanoid teleoperation remains challenging due to the computational latency introduced by optimization-based retargeting pipelines and future-frame conditioning. Existing motion tracking policies typically require dense reference targets including full joint positions, body-part transformations, and even future frames, which tightly couples the controller to expensive upstream modules. In this work, we present HuMiT, a whole-body teleoperation system built on a unified tracking policy that requires only a compact reference target, consisting of root height, root velocity, and the SE(3) poses of four sparse keypoints at the current frame, yet achieves competitive tracking fidelity compared to methods relying on more diverse reference states including complete joint positions, dense body-part transformations, and even future frames. Experiments show that our policy achieves a communication-to-inference latency of $\sim$20 ms measured between headset streaming and policy output and a video-based optical flow latency of 65 ms (median) across different motion types. We validate the system on a Unitree G1 humanoid, showcasing split-second reactive responses such as catching a tossed ball, as well as coordinated loco-manipulation capabilities. Project page: https://xiaohu-art.github.io/Track/.
+
+由于基于优化的重定向管道和未来帧调节引入的计算延迟，实时全身人形远程操作仍然具有挑战性。现有的运动跟踪策略通常需要密集的参考目标，包括完整的关节位置、身体部位变换，甚至未来的帧，这将控制器与昂贵的上游模块紧密耦合。在这项工作中，我们提出了 HuMiT，一个建立在统一跟踪策略上的全身远程操作系统，只需要一个紧凑的参考目标，包括根高度、根速度和当前帧的四个稀疏关键点的 SE(3) 位姿，但与依赖于更多样化的参考状态（包括完整的关节位置、密集的身体部位变换，甚至未来帧）的方法相比，实现了有竞争力的跟踪保真度。实验表明，我们的策略在耳机流和策略输出之间测量的通信到推理延迟为 $\sim$20 毫秒，在不同运动类型中基于视频的光流延迟为 65 毫秒（中值）。我们在 Unitree G1 人形机器人上验证了该系统，展示了瞬间反应响应，例如接住抛起的球，以及协调的局部操纵能力。项目页面：https://xiaohu-art.github.io/Track/。
+
+</details>
+
+---
+
+## 12. OACap: Caption-Guided Active Observation for Detailed Video Captioning / OACap：用于详细视频字幕的字幕引导主动观察
+
+**Date**: 2026-10-21 | **arXiv**: [2610.29327v2](http://arxiv.org/abs/2610.29327v2) | **PDF**: [Link](http://arxiv.org/pdf/2610.29327v2)
+
+**Categories**: cs.CV, cs.CL, cs.MA, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Unlike question answering, where a query specifies a perceptual target, open-ended detailed captioning must determine what evidence to acquire and how to integrate it into a coherent global description. We propose Observation-Adaptive Video Captioner (OACap), a caption-centered agent that turns unsupported or missing information into targeted observation requests, uses spatiotemporal tools to acquire evidence, and iteratively verifies and revises the caption. OACap captions consistently improve performance across general video-understanding benchmarks using a fixed text-only reader. To better diagnose the information they preserve, we introduce Factual-Semantic Captioning Bench (FSCap-Bench). Its Core-Support Factuality Score (CSFS) combines claim precision with importance-aware fact coverage and responds as expected to four controlled perturbation types on 93.0-98.3% of valid caption pairs. Its Cross-Modal Semantic Round-Trip Score (CSRS) measures semantic preservation through a video-caption-video-caption round trip by matching atomic facts from source and recovered captions. Together, they connect downstream textual-memory utility with factual and semantic preservation.
+
+与问答不同的是，问答中的查询指定了感知目标，开放式详细字幕必须确定要获取哪些证据以及如何将其整合到连贯的全局描述中。我们提出了观察自适应视频字幕器（OACap），这是一种以字幕为中心的代理，它将不支持或缺失的信息转化为有针对性的观察请求，使用时空工具获取证据，并迭代验证和修改字幕。 OACap 字幕使用固定的纯文本阅读器，持续提高一般视频理解基准的性能。为了更好地诊断他们保存的信息，我们引入了事实语义字幕基准 (FSCap-Bench)。其核心支持事实性评分 (CSFS) 将声明精度与重要性意识事实覆盖相结合，并按预期对 93.0-98.3% 的有效字幕对上的四种受控扰动类型做出响应。其跨模态语义往返分数 (CSRS) 通过匹配源中的原子事实和恢复的字幕，通过视频-字幕-视频-字幕往返来衡量语义保留。它们共同将下游文本记忆实用性与事实和语义保存联系起来。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-10-22 (18 papers)</b></summary>
 
 # arXiv Video Papers - 2026-10-22
