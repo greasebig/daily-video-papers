@@ -27,6 +27,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-10-24](papers/2026-10-24.md) - 5 papers
 - [2026-10-23](papers/2026-10-23.md) - 12 papers
 - [2026-10-22](papers/2026-10-22.md) - 18 papers
 - [2026-10-21](papers/2026-10-21.md) - 30 papers
@@ -204,6 +205,100 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-10-24 (5 papers)</b></summary>
+
+# arXiv Video Papers - 2026-10-24
+
+**Paper Count**: 5
+
+---
+
+## 1. WorldForge V2: Eliciting Camera-Trajectory Alignment in Video Diffusion Models / WorldForge V2：在视频扩散模型中引入相机轨迹对齐
+
+**Date**: 2026-10-22 | **arXiv**: [2610.31640v1](http://arxiv.org/abs/2610.31640v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.31640v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video diffusion models have learned rich 3D/4D priors, making them promising for scene generation and video re-rendering. However, their use in spatial tasks is limited by imprecise camera control, spatial and temporal inconsistencies, and entangled camera motion with scene dynamics. Existing approaches, such as task-specific fine-tuning and post-process warping, often introduce visual artifacts, generalize poorly, or incur high computational costs. We propose WorldForge V2 to achieve accurate camera control while preserving the generative capabilities of pretrained video models. We first develop a training-free guidance framework using warped references to iteratively refine generation along a target camera path. Optical-flow analysis identifies motion-related latent channels for selective guidance, helping separate motion control from appearance. A dual-path strategy further compares guided and unguided predictions to correct artifacts from imperfect references. Together, these components guide viewpoint changes while preserving scene appearance and object motion. To reduce refinement costs, v-cache approximates the correction using the preceding denoising prediction, avoiding an additional model evaluation. We further extend motion localization from latent channels to network blocks and introduce Trajectory LoRA, which concentrates adaptation on blocks most responsive to trajectory guidance. A two-stage training strategy teaches these adapters to denoise the states encountered during guided generation, using limited supervision effectively. This enables reliable camera control with very little training data, with a single training scene already supporting generalization to unseen scenes. Quantitative and qualitative evaluations across multiple datasets show that our method achieves state-of-the-art generation quality and trajectory accuracy in camera-controlled video generation.
+
+视频扩散模型已经学习了丰富的 3D/4D 先验，这使得它们在场景生成和视频重新渲染方面很有前景。然而，它们在空间任务中的使用受到不精确的相机控制、空间和时间不一致以及相机运动与场景动态的纠缠等限制。现有的方法，例如特定于任务的微调和后处理变形，通常会引入视觉伪影、泛化能力差或产生较高的计算成本。我们建议使用 WorldForge V2 来实现精确的摄像机控制，同时保留预训练视频模型的生成能力。我们首先开发一个免训练的引导框架，使用扭曲的参考来沿着目标相机路径迭代地细化生成。光流分析可识别与运动相关的潜在通道以进行选择性引导，有助于将运动控制与外观分开。双路径策略进一步比较引导和非引导预测，以纠正不完美参考中的伪影。这些组件共同引导视点变化，同时保留场景外观和对象运动。为了降低细化成本，v-cache 使用前面的去噪预测来近似校正，从而避免了额外的模型评估。我们进一步将运动定位从潜在通道扩展到网络块，并引入轨迹 LoRA，它将适应集中在对轨迹引导最敏感的块上。两阶段训练策略教导这些适配器有效地使用有限的监督，对引导生成过程中遇到的状态进行降噪。这使得能够用很少的训练数据实现可靠的相机控制，并且单个训练场景已经支持对未见过的场景的泛化。跨多个数据集的定量和定性评估表明，我们的方法在摄像机控制的视频生成中实现了最先进的生成质量和轨迹准确性。
+
+</details>
+
+---
+
+## 2. MoG-VLM: Efficient Video Anomaly Detection through Motion-Guided Vision-Language Models / MoG-VLM：通过运动引导视觉语言模型进行高效视频异常检测
+
+**Date**: 2026-10-22 | **arXiv**: [2610.31478v1](http://arxiv.org/abs/2610.31478v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.31478v1)
+
+**Categories**: cs.CV, cs.AI, cs.LG
+
+**Code**: https://github.com/kdawoud91/MoG-VLM.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision-Language Models (VLMs) have shown strong potential for video anomaly detection, but dense frame-level inference makes them impractical for real-time deployment. Existing acceleration commonly relies on uniform sampling, which ignores content dynamics and can either waste computation on static segments or miss localized anomalies. We propose MoG-VLM a motion-adaptive anomaly detection framework that leverages motion purely as a lightweight control signal to decide when VLM inference is necessary. To this end, we introduce Temporal Gradient Magnitude (TGM) which performs content-aware sampling to concentrate computation on informative regions while avoiding redundant processing. We further introduce a hierarchical dual-stream design in which dense multi-frame VLM reasoning is activated only around frames with elevated anomaly likelihood, via anchor-triggered context-window expansion with early termination. A fusion module then reconciles these instantaneous semantic cues with temporal action dynamics. Across four benchmarks, our method achieves 91.91%, 84.30%, 87.88%, and 78.96% AUC-ROC on XD-Violence, UCF-Crime, MSAD, and ShanghaiTech, respectively, establishing new state of the art on three benchmarks under the zero-shot, training-free setting. On XD-Violence, we improve over the previous best result by +0.57% while delivering a 1.31x inference speedup. These results demonstrate that content-aware allocation of VLM capacity, processing fewer frames more intelligently rather than all frames uniformly, is a more effective axis of progress than uniformly densifying VLM inference across frames. Code is available on GitHub: https://github.com/kdawoud91/MoG-VLM.
+
+视觉语言模型 (VLM) 在视频异常检测方面显示出强大的潜力，但密集的帧级推理使其不适用于实时部署。现有的加速通常依赖于均匀采样，它忽略了内容动态，并且可能浪费静态片段的计算或错过局部异常。我们提出 MoG-VLM 是一种运动自适应异常检测框架，它纯粹利用运动作为轻量级控制信号来决定何时需要 VLM 推理。为此，我们引入了时间梯度幅度（TGM），它执行内容感知采样，将计算集中在信息区域，同时避免冗余处理。我们进一步引入了分层双流设计，其中通过锚点触发的上下文窗口扩展和提前终止，仅在异常可能性较高的帧周围激活密集的多帧 VLM 推理。然后，融合模块将这些瞬时语义线索与时间动作动态相协调。在四个基准中，我们的方法在 XD-Violence、UCF-Crime、MSAD 和 ShanghaiTech 上分别实现了 91.91%、84.30%、87.88% 和 78.96% AUC-ROC，在零样本、免训练设置下在三个基准上建立了新的最先进水平。在 XD-Violence 上，我们比之前的最佳结果提高了 0.57%，同时推理速度提高了 1.31 倍。这些结果表明，VLM 容量的内容感知分配、更智能地处理更少的帧而不是统一处理所有帧，是比跨帧均匀致密 VLM 推理更有效的进步轴。代码可在 GitHub 上找到：https://github.com/kdawoud91/MoG-VLM。
+
+</details>
+
+---
+
+## 3. AnyGameRenderer: Entity-Consistent Generative Rendering Across Games and an Entity-Level Benchmark / AnyGameRenderer：跨游戏的实体一致生成渲染和实体级基准
+
+**Date**: 2026-10-22 | **arXiv**: [2610.31466v1](http://arxiv.org/abs/2610.31466v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.31466v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+AI coding agents can now build small playable games in minutes, but the results usually look like programmer art: gray blockouts, colored geometric primitives, and flat semantic blobs. We present AnyGameRenderer, a video-to-video generative renderer that turns such footage into high-quality visuals with characters, motion detail, and effects. Throughout, it keeps the layout, camera, and every entity's position and timing intact.   Our AnyGameRenderer generalizes across a wide range of genres that agents build, such as tower defense, auto-battlers, top-down survivors, turn-based battles, kart racing, and crowd runners.   AnyGameRenderer takes plain video as its game-state input, with no complex representations such as engine G-buffers, per-object class labels, or low-poly proxies. Gray blockouts, colored primitives, semantic maps, and wireframes all work as input.   It also preserves entity correspondence: group counts stay correct, and entities appear and disappear on the right frame.   We implement AnyGameRenderer by LoRA fine-tuning MiniMax-H3 ref2va, a 33B reference-video-conditioned video generation model. Training uses $\sim$10k paired clips from three sources: (i) multi-stream rendering data from 38 agent-made games exported from GEAR, an AI game-creation tool; (ii) two-stream rendering data from Unreal Engine, with programmatically controlled crowds, count changes, and entity scales; and (iii) real gameplay recordings, with pairs reconstructed via 3D-box detection.   To evaluate the entity correspondence, we propose an entity-level benchmark of 59 held-out cases with 753 entities, scored against ground-truth boxes. Compared with the base model, AnyGameRenderer better preserves entity correspondence: temporal match rises from 50.9\% to 62.9\%, missed count changes fall from 34.7\% to 21.3\%, and fewer entities are hallucinated or left unrendered.
+
+人工智能编码代理现在可以在几分钟内构建小型可玩游戏，但结果通常看起来像程序员的艺术：灰色块、彩色几何基元和平面语义斑点。我们推出了 AnyGameRenderer，这是一种视频到视频生成渲染器，可将此类素材转换为包含角色、运动细节和效果的高质量视觉效果。自始至终，它都保持布局、摄像机以及每个实体的位置和时间完好无损。   我们的 AnyGameRenderer 概括了代理构建的各种类型，例如塔防、自动战斗、自上而下的幸存者、回合制战斗、卡丁车赛车和人群跑步。   AnyGameRenderer 采用纯视频作为其游戏状态输入，没有复杂的表示形式，例如引擎 G 缓冲区、每个对象类标签或低多边形代理。灰色块、彩色基元、语义图和线框都可以作为输入。   它还保留了实体对应关系：组计数保持正确，实体在右侧框架上出现和消失。   我们通过 LoRA 微调 MiniMax-H3 ref2va（一个 33B 参考视频条件视频生成模型）来实现 AnyGameRenderer。训练使用来自三个来源的 $\sim$10k 配对剪辑：(i) 从 AI 游戏创建工具 GEAR 导出的 38 个代理制作的游戏的多流渲染数据； (ii) 来自虚幻引擎的双流渲染数据，具有以编程方式控制的人群、计数变化和实体比例； (iii) 真实游戏录制，通过 3D 盒检测重建配对。   为了评估实体对应关系，我们提出了一个包含 753 个实体的 59 个保留案例的实体级基准，并根据真实框进行评分。与基本模型相比，AnyGameRenderer 更好地保留了实体对应关系：时间匹配从 50.9% 上升到 62.9%，错过计数变化从 34.7% 下降到 21.3%，幻觉或未渲染的实体更少。
+
+</details>
+
+---
+
+## 4. Retrieval-Augmented Online Textual Memory for Episodic Memory Video Question Answering / 用于情景记忆视频问答的检索增强在线文本记忆
+
+**Date**: 2026-10-22 | **arXiv**: [2610.31284v1](http://arxiv.org/abs/2610.31284v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.31284v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long egocentric videos pose a central challenge for multimodal language models: the visual stream must be compressed into a memory representation that can be searched efficiently while still preserving the evidence needed for question answering. Building on an online textual-memory framework in which first-person videos are converted into temporally grounded captions, this work systematically studies the role of retrieval in episodic-memory video question answering. We evaluate how different retrieval units, query formulations, context budgets, and reranking strategies affect multiple-choice answering on QAEgo4D-Closed, isolating retrieval as the main variable while keeping the underlying generated memory fixed.   Our best configuration, Parent, matches fine-grained caption subchunks, then provides their full parent captions to the reasoner. It achieves 56.4 % accuracy, matching strong full-memory and retrieval baselines while exposing only a small fraction of the textual memory at question time. More importantly, our analysis shows that better temporal coverage does not necessarily translate into better answers: increasing the retrieval budget improves temporal Hit@K and Recall@K, but can reduce accuracy by introducing visually plausible distractors and uncertain caption evidence. These findings suggest that retrieval-augmented egocentric memory should not be optimized only for evidence recall, but also for the reliability, specificity, and answer-discriminative value of the retrieved context. The study motivates more structured episodic memories that move beyond raw caption retrieval toward evidence-aware representations for long-form egocentric reasoning.
+
+以自我为中心的长视频对多模态语言模型提出了一个核心挑战：视觉流必须被压缩成可以有效搜索的记忆表示，同时仍然保留回答问题所需的证据。这项工作以在线文本记忆框架为基础，将第一人称视频转换为基于时间的字幕，系统地研究了检索在情景记忆视频问答中的作用。我们评估不同的检索单元、查询公式、上下文预算和重新排序策略如何影响 QAEgo4D-Closed 上的多项选择答案，将检索隔离为主要变量，同时保持底层生成的内存固定。   我们最好的配置，Parent，匹配细粒度的标题子块，然后向推理器提供其完整的父标题。它达到了 56.4% 的准确率，匹配强大的全记忆和检索基线，同时在提问时仅暴露一小部分文本记忆。更重要的是，我们的分析表明，更好的时间覆盖并不一定会转化为更好的答案：增加检索预算可以提高时间 Hit@K 和 Recall@K，但会通过引入视觉上合理的干扰因素和不确定的标题证据来降低准确性。这些发现表明，检索增强的自我中心记忆不应仅针对证据回忆进行优化，还应针对检索上下文的可靠性、特异性和答案辨别价值进行优化。这项研究激发了更加结构化的情景记忆，超越了原始字幕检索，转向了长篇自我中心推理的证据感知表征。
+
+</details>
+
+---
+
+## 5. Moving Regions, Not Moving Objects: Segmenting What Actually Moves under Camera Motion / 移动区域，而不是移动对象：分割相机运动下实际移动的内容
+
+**Date**: 2026-10-22 | **arXiv**: [2610.31209v1](http://arxiv.org/abs/2610.31209v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.31209v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Moving object segmentation is conventionally formulated at the sequence and object level, marking an entire instance as moving once it moves anywhere in a video. Recent instantaneous formulations distinguish moving from stationary intervals, but still generate masks at the object level through frozen segmentation foundation models. Because the mask is derived from an instance-level proposal, motion is typically attributed to the entire instance rather than localized to the regions that actually move. Moreover, such instance-level predictions can produce masks even when no part of the instance is actually moving, revealing a more fundamental issue: motion is not an intrinsic property of an instance; it can only be determined by comparing at least two frames. Building on this premise, we introduce MoRSe, which jointly interprets two frames to predict a moving-region mask, distinguishing actual scene motion from apparent motion induced by the camera. A single RGB encoder replaces multi-stage foundation stacks, so no optical flow, point tracks, or separate mask generator is needed at inference. We release MoRSe-5K, a benchmark of 42 sequences with Static, Dynamic-Static, and Dynamic settings designed to evaluate the model's ability to distinguish and localize moving and stationary regions under different camera and scene motion conditions. MoRSe outperforms both specialized moving object segmentation methods and dense 4D reconstruction methods with motion-thresholded predictions, while producing the fewest false positives on sequences where nothing moves.
+
+移动对象分割通常是在序列和对象级别制定的，一旦整个实例移动到视频中的任何位置，就将其标记为移动。最近的瞬时公式区分了移动和固定间隔，但仍然通过冻结分割基础模型在对象级别生成掩模。由于掩码是从实例级提案导出的，因此运动通常归因于整个实例，而不是局限于实际移动的区域。此外，即使实例的任何部分实际上都没有移动，这种实例级预测也可以产生掩模，从而揭示了一个更基本的问题：运动不是实例的固有属性；运动不是实例的固有属性；运动不是实例的固有属性。只能通过比较至少两个帧来确定。在此前提下，我们引入了 MoRSe，它联合解释两个帧来预测移动区域掩模，区分实际场景运动和相机引起的表观运动。单个 RGB 编码器取代了多级基础堆栈，因此推理时不需要光流、点轨迹或单独的掩模生成器。我们发布了 MoRSe-5K，这是一个包含 42 个序列的基准测试，具有静态、动态-静态和动态设置，旨在评估模型在不同相机和场景运动条件下区分和定位移动和静止区域的能力。 MoRSe 的性能优于专门的运动对象分割方法和具有运动阈值预测的密集 4D 重建方法，同时在没有运动的序列上产生最少的误报。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-10-23 (12 papers)</b></summary>
 
 # arXiv Video Papers - 2026-10-23
