@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-10-26](papers/2026-10-26.md) - 3 papers
 - [2026-10-25](papers/2026-10-25.md) - 1 papers
 - [2026-10-21](papers/2026-10-21.md) - 3 papers
 - [2026-10-20](papers/2026-10-20.md) - 2 papers
@@ -111,6 +112,66 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-10-26 (3 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-10-26
+
+**Paper Count**: 3
+
+---
+
+## 1. K-CLUE: A Segmentation-to-Clustering Framework for Ki67 Cell Typing / K-CLUE：Ki67 细胞分型的分割到聚类框架
+
+**Date**: 2026-10-23 | **arXiv**: [2610.32493v1](http://arxiv.org/abs/2610.32493v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.32493v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Ki67 is a key marker of tumor proliferation in breast cancer, but its quantification from immunohistochemistry images normally depends on supervised classifiers trained per dataset. We examine the role of frozen pretrained visual representations in annotation-free Ki67 cell typing. To this end, we use K-CLUE, a framework that segments individual nuclei, represents each nucleus with a pretrained encoder, reduces the resulting embeddings with principal component analysis, and separates Ki67-positive from Ki67-negative nuclei using k-means clustering, without task-specific training or manual annotations. Clustering the raw components is highly sensitive to the choice of encoder: across seven encoders, the Ki67-positive F1-score on matched MIST nuclei varies by 44 points, although Ki67 status remains linearly decodable from every representation, with supervised probe AUCs above 0.98. Analysis of the embedding spaces shows that clustering succeeds when DAB-related variation occupies the leading directions of variance. Whitening the retained principal components removes this dependence, reducing the spread across encoders to 1.00 F1-score point. Handcrafted color representations are also competitive, confirming that Ki67 status is strongly reflected in chromatic information, but they require an explicit choice of color space. In end-to-end evaluation, K-CLUE reaches F1-scores of 85.00% and 81.91% for Ki67-positive and Ki67-negative nuclei on MIST, and 79.59% and 81.16% on BCData, outperforming DeepLIIF and IHCScoreGAN on both datasets. These results show that pretrained representations can support annotation-free Ki67 typing when their variance structure is accounted for.
+
+Ki67 是乳腺癌肿瘤增殖的关键标志物，但其免疫组织化学图像的量化通常取决于每个数据集训练的监督分类器。我们研究了冷冻预训练视觉表征在无注释 Ki67 细胞分型中的作用。为此，我们使用 K-CLUE，这是一个分割单个核的框架，用预训练的编码器表示每个核，通过主成分分析减少生成的嵌入，并使用 k 均值聚类将 Ki67 阳性核与 Ki67 阴性核分开，无需特定于任务的训练或手动注释。原始成分的聚类对编码器的选择高度敏感：在七个编码器中，匹配的 MIST 核上的 Ki67 阳性 F1 分数变化了 44 个点，尽管 Ki67 状态仍然可以从每个表示中线性解码，监督探针 AUC 高于 0.98。嵌入空间分析表明，当 DAB 相关变异占据方差的主导方向时，聚类成功。对保留的主成分进行白化可以消除这种依赖性，将编码器之间的分布减少到 1.00 F1 分数点。手工制作的颜色表示也具有竞争力，证实 Ki67 状态强烈反映在色彩信息中，但它们需要明确选择颜色空间。在端到端评估中，K-CLUE 在 MIST 上对 Ki67 阳性和 Ki67 阴性细胞核的 F1 分数分别达到 85.00% 和 81.91%，在 BCData 上达到 79.59% 和 81.16%，在两个数据集上均优于 DeepLIIF 和 IHCScoreGAN。这些结果表明，在考虑方差结构时，预训练表示可以支持无注释的 Ki67 打字。
+
+</details>
+
+---
+
+## 2. LightHybridNet: A Lightweight Hybrid Deep Learning Framework for Efficient Multi-Label Ophthalmic Disease Classification in Imbalanced Fundus Images / LightHybridNet：一种轻量级混合深度学习框架，用于对不平衡眼底图像进行高效的多标签眼科疾病分类
+
+**Date**: 2026-10-14 | **arXiv**: [2610.20671v1](http://arxiv.org/abs/2610.20671v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.20671v1)
+
+**Categories**: eess.IV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Eye diseases are a major global cause of blindness and vision impairment, highlighting the need for accurate and early diagnosis to prevent further deterioration. Despite advances in medical imaging, classifying retinal diseases from fundus images remains challenging due to the complexity and subtlety of visual features. This study aims to develop and validate LightHybridNet, a novel lightweight hybrid deep learning framework, to improve the classification of eye diseases from fundus images. The model incorporates architectural features, such as depthwise separable convolutions and compound scaling mechanisms, to enhance diagnostic accuracy and robustness. To validate the model, the ODIR-5K dataset, comprising 8 disease categories, was used. To enhance image quality, pre-processing approaches were applied, including histogram equalisation, colour space conversion, and contrast adjustment, resulting in high-resolution images. Furthermore, image augmentation was employed to increase the dataset size, thereby improving the model's ability to generalise during training. The hybrid architecture helps the model concentrate on relevant image regions while capturing and integrating details at different scales, significantly improving classification performance. To evaluate its effectiveness, the model was compared with transfer-learning models. The results show that LightHybridNet outperforms the baselines, achieving a weighted F1-score of 91.51%, a macro AUC of 98.26%, and a Cohen's Kappa of 90.14% on the validation set. Furthermore, model interpretability was enhanced using explainable AI methods, including Grad-CAM, to identify and emphasise features influencing the decision-making process. LightHybridNet represents a promising advancement in automated ocular disease detection, offering improved diagnostic reliability for clinical use.
+
+眼部疾病是全球失明和视力障碍的主要原因，因此需要准确、早期诊断以防止病情进一步恶化。尽管医学成像取得了进步，但由于视觉特征的复杂性和微妙性，从眼底图像中对视网膜疾病进行分类仍然具有挑战性。本研究旨在开发和验证 LightHybridNet（一种新型轻量级混合深度学习框架），以改进眼底图像中眼部疾病的分类。该模型结合了深度可分离卷积和复合缩放机制等架构特征，以提高诊断准确性和鲁棒性。为了验证模型，使用了包含 8 个疾病类别的 ODIR-5K 数据集。为了提高图像质量，采用了预处理方法，包括直方图均衡、色彩空间转换和对比度调整，从而产生高分辨率图像。此外，还采用图像增强来增加数据集大小，从而提高模型在训练期间的泛化能力。混合架构帮助模型专注于相关图像区域，同时捕获和集成不同尺度的细节，从而显着提高分类性能。为了评估其有效性，将该模型与迁移学习模型进行了比较。结果表明，LightHybridNet 的性能优于基线，在验证集上实现了 91.51% 的加权 F1 分数、98.26% 的宏观 AUC 和 90.14% 的 Cohen's Kappa。此外，使用可解释的人工智能方法（包括 Grad-CAM）增强了模型的可解释性，以识别和强调影响决策过程的特征。 LightHybridNet 代表了自动眼部疾病检测领域的一项有前途的进步，为临床使用提供了更高的诊断可靠性。
+
+</details>
+
+---
+
+## 3. Diagnosing Diversity Collapse and Validating Mask-Conditioned Diffusion for Labeled Microtubule Microscopy / 诊断多样性崩溃并验证标记微管显微镜的掩模条件扩散
+
+**Date**: 2026-10-07 | **arXiv**: [2610.09957v2](http://arxiv.org/abs/2610.09957v2) | **PDF**: [Link](http://arxiv.org/pdf/2610.09957v2)
+
+**Categories**: eess.IV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Mask-conditioned diffusion models have become standard for generating labeled training data in biomedical imaging. But the tools used to evaluate them were built for a different problem. Standard metrics like FID and KID score images through ImageNet-trained features. Those features do not transfer to microscopy, leaving the metrics poorly calibrated for specialized domains. Even with a domain-appropriate feature space, a single blended number can still hide a real failure: a model can produce visually plausible images that still transfer poorly to downstream tasks. We identify a specific failure mode: Late in training, realism keeps improving while texture diversity collapses. The model settles onto a fixed color palette, converging to a high-similarity, low-diversity state that standard metrics do not penalize. Therefore, we propose a diversity-aware diagnostic in a domain-validated feature space. It combines a realism axis based on inter-similarity to real images with a diversity axis based on intra-similarity among generated samples. This diagnostic selects a checkpoint that domain experts cannot reliably distinguish from real recordings in a forced-choice study. It also yields useful downstream segmentation: a segmenter trained only on synthetically labeled data reaches a median skeletonised IoU comparable to one trained on real data, at lower cross-fold variance, and clearly ahead of the best available public alternative in this domain, a parametric renderer. We also reproduce a data-efficient hyperparameter-transfer experiment from prior work, tuning several foundation segmenters on a small labeled subset and evaluating on real images: transfer is stronger with our data. We release DiffuMT on HuggingFace, including the triplet dataset, code to reproduce the downstream-utility validation, and a standalone diagnostic tool for evaluating mask-conditioned diffusion models.
+
+掩模条件扩散模型已成为生物医学成像中生成标记训练数据的标准。但用于评估它们的工具是针对不同的问题而构建的。 FID 和 KID 等标准指标通过 ImageNet 训练的特征对图像进行评分。这些功能不会转移到显微镜中，导致专门领域的指标校准不佳。即使具有适合领域的特征空间，单个混合数字仍然可以隐藏真正的失败：模型可以生成视觉上合理的图像，但仍然很难转移到下游任务。我们确定了一种特定的失败模式：在训练后期，真实感不断提高，而纹理多样性却崩溃了。该模型采用固定的调色板，收敛到标准指标不会惩罚的高相似性、低多样性状态。因此，我们提出了在域验证的特征空间中进行多样性感知的诊断。它将基于真实图像间相似性的真实性轴与基于生成样本之间的内部相似性的多样性轴结合起来。此诊断选择一个检查点，领域专家无法将其与强制选择研究中的真实记录可靠地区分开。它还产生有用的下游分割：仅在综合标记数据上训练的分割器达到了与在真实数据上训练的分割器相当的中值骨架化 IoU，交叉折叠方差较低，并且明显领先于该领域中最佳可用的公共替代方案（参数化渲染器）。我们还从之前的工作中重现了一个数据高效的超参数传输实验，在一个小的标记子集上调整了几个基础分段器并评估了真实图像：我们的数据传输更强。我们在 HuggingFace 上发布了 DiffuMT，包括三元组数据集、重现下游实用程序验证的代码以及用于评估掩模条件扩散模型的独立诊断工具。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-10-25 (1 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-10-25
