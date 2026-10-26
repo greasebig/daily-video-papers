@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-10-26](papers/2026-10-26.md) - 3 papers
 - [2026-10-24](papers/2026-10-24.md) - 10 papers
 - [2026-10-23](papers/2026-10-23.md) - 35 papers
 - [2026-10-22](papers/2026-10-22.md) - 48 papers
@@ -189,6 +190,66 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-10-26 (3 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-10-26
+
+**Paper Count**: 3
+
+---
+
+## 1. What Transfers Across Protein Pockets? Experience Reuse in Molecular Optimization for Agentic Structure-Based Drug Design / 什么跨蛋白质口袋转移？基于代理结构的药物设计的分子优化中的经验重用
+
+**Date**: 2026-10-23 | **arXiv**: [2610.32620v1](http://arxiv.org/abs/2610.32620v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.32620v1)
+
+**Categories**: cs.AI, q-bio.BM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+LLM agents optimize a ligand in a protein pocket by editing it step by step and docking each edit. Recent agents first spend extra dockings probing the complex with controlled edits; guidance induced from these probes is reported to help more than the chemical knowledge the model already carries. The probes are then discarded with the instance that produced them, so the obvious next step is to keep them in an experience base, letting a new pocket inherit what earlier ones already paid for. Such a base is read through a \emph{key}: the record properties under which past edits are pooled and a new one is looked up. Using the full log of one such run over the CrossDocked2020 test-set pockets, we ask whether its keys recur on a pocket the base has never seen and still separate improving from worsening edits. \crchange{Using} the contacts at the site being edited, the action, and the round as \crchange{a} key, the base separates them sharply. Within our analysis, this separation is largely explained by how much the edit changed the molecule's size, the action, and the round, none of which describes the target. That is not because the target is irrelevant: naming it outright separates them several times more sharply. For a pocket absent from the base, transfer must rely on a description rather than its identity. Among the exact-match descriptions we evaluate, the more specific ones rarely recur, whereas the coarser ones provide little separation; the signals that do transfer primarily describe the edit and the molecule it produced rather than the target. Under the representations and lookup scheme studied here, an experience base may be more useful for prioritizing an agent's own proposals for docking than for directly prescribing what to build.
+
+LLM 代理通过逐步编辑并对接每次编辑来优化蛋白质口袋中的配体。最近的特工首先花费额外的对接来通过受控编辑来探测复合体；据报道，这些探针产生的指导比模型已经携带的化学知识更有帮助。然后，探测器与生成它们的实例一起被丢弃，因此显然下一步是将它们保留在经验库中，让新的口袋继承之前的口袋已经支付的费用。这样的基础是通过 \emph{key} 读取的：记录属性，在该记录属性下汇集过去的编辑并查找新的编辑。使用在 CrossDocked2020 测试集口袋上进行此类运行的完整日志，我们询问其密钥是否在基地从未见过的口袋上重复出现，并且仍然将改进与恶化编辑分开。 \crchange{使用}正在编辑的站点上的联系人、操作和回合作为\crchange{a}键，底座将它们急剧分开。在我们的分析中，这种分离很大程度上是由编辑改变了分子大小、作用和回合的程度来解释的，而这些都不能描述目标。这并不是因为目标无关紧要：直接命名目标会使它们的区别更加明显。对于底座上没有的口袋，转移必须依赖于描述而不是其身份。在我们评估的精确匹配描述中，更具体的描述很少重复出现，而更粗略的描述则几乎没有分离；确实转移的信号主要描述编辑及其产生的分子，而不是目标。根据此处研究的表示和查找方案，经验库对于确定代理自己的对接建议的优先级可能比直接规定要构建的内容更有用。
+
+</details>
+
+---
+
+## 2. UAV-SwarmAgent: Scalable Multi-UAV Reconnaissance and Task Allocation via Code Generation and Vision-Language Reasoning / UAV-SwarmAgent：通过代码生成和视觉语言推理进行可扩展的多无人机侦察和任务分配
+
+**Date**: 2026-10-23 | **arXiv**: [2610.32559v1](http://arxiv.org/abs/2610.32559v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.32559v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Supervising a multi-UAV reconnaissance mission usually means plotting waypoints and watching every drone. We present UAV SwarmAgent, a hierarchical multi-agent system in which an operator states the mission in one natural-language sentence and a ground-station agent writes and executes code that turns it into per-UAV routes. The agent grounds inspection targets in an aerial map with a vision-language model, splits them among N UAVs by balancing route length, and dispatches worker agents that verify incidents with a compact onboard decision model. In simulation over 4 incident types and 3 foundation models, the swarm located the incident in 244 of 255 missions (95.7%). A paired scaling study with one to 5 UAVs shows that flight time follows an Amdahl-type law. The second UAV delivers half of the attainable saving and the speedup is bounded at 1.52x. We discuss what this predictability, and the false alarms we observed, imply for an operator who supervises the swarm, and outline the user study needed to test it.
+
+监督多无人机侦察任务通常意味着绘制航路点并监视每架无人机。我们提出了 UAV SwarmAgent，这是一种分层多代理系统，其中操作员用自然语言句子陈述任务，地面站代理编写并执行代码，将其转换为每个无人机的路线。该代理使用视觉语言模型将检查目标放置在航空地图上，通过平衡路线长度将其分配给 N 架无人机，并派遣工作代理使用紧凑的机载决策模型来验证事件。在对 4 种事件类型和 3 种基础模型的模拟中，集群在 255 次任务中的 244 次中发现了该事件（95.7%）。对 1 到 5 架无人机进行的配对研究表明，飞行时间遵循阿姆达尔定律。第二架无人机可节省一半的成本，并且加速比为 1.52 倍。我们讨论了这种可预测性以及我们观察到的误报对监督集群的操作员意味着什么，并概述了测试它所需的用户研究。
+
+</details>
+
+---
+
+## 3. When Agents Fail: Model or Harness--Who's to Blame? / 当特工失败时：榜样还是驾驭——谁该责怪？
+
+**Date**: 2026-10-23 | **arXiv**: [2610.32483v1](http://arxiv.org/abs/2610.32483v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.32483v1)
+
+**Categories**: cs.AI, cs.CL, cs.SE
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+LLM agents combine models with execution harnesses, so agentic benchmark performance reflects their joint behavior. We argue that harnesses should therefore be evaluated through their interactions with underlying models. We develop a framework combining five complementary measures: (i) Valid Completion Rate (VCR), how reliably agents finish normally and deliver evaluable results, irrespective of task correctness; (ii) Model-Harness Fit, how well a harness supports task achievement through valid completion for a given model; (iii) Cross-Model Fit, a harness's overall suitability across evaluated models; (iv) Interaction Residuals, pairing-specific execution strengths and weaknesses hidden by component-level summaries; and (v) Token Load, the token demands of agent execution, including failed attempts. We evaluate four general-purpose harnesses (OpenCode, Codex CLI, Pi CLI, and DeepAgents) with four core models, plus two fixed native model-harness systems, on six benchmarks covering context management, tool use, long-context planning, multimodal interaction, and artifact handoff. Including native references and stress conditions, 111 evaluation settings yield 52,168 trajectories. Harness rankings vary across models and benchmarks; task performance and valid completion can favor different pairings, and similar task scores can accompany distinct execution profiles. OpenCode ranks first in cross-model performance, while DeepSeek V4 Flash Preview maintains consistently high Mean VCR across harnesses on the shared four-benchmark panel. These findings support evaluating model-harness interactions, training transferable harness-use capabilities in models, and harness designs adapted to the model and task.
+
+LLM 代理将模型与执行工具相结合，因此代理基准性能反映了它们的联合行为。因此，我们认为应该通过线束与底层模型的交互来评估线束。我们开发了一个结合了五项补充措施的框架：（i）有效完成率（VCR），即代理正常完成并交付可评估结果的可靠程度，无论任务正确性如何； (ii) 模型-线束拟合度，线束通过有效完成给定模型来支持任务实现的程度； (iii) 跨模型拟合度，即安全带跨评估模型的整体适用性； (iv) 交互残差、组件级摘要隐藏的特定配对执行优势和劣势； (v) 令牌负载，代理执行的令牌需求，包括失败的尝试。我们评估了具有四个核心模型的四个通用工具（OpenCode、Codex CLI、Pi CLI 和 DeepAgents），以及两个固定的本机模型工具系统，涉及上下文管理、工具使用、长上下文规划、多模式交互和工件切换的六个基准。包括本地参考和压力条件，111 种评估设置产生 52,168 条轨迹。线束排名因型号和基准而异；任务表现和有效完成可以有利于不同的配对，并且相似的任务分数可以伴随不同的执行配置文件。 OpenCode 在跨模型性能方面排名第一，而 DeepSeek V4 Flash Preview 在共享的四基准测试面板上跨线束保持一致的高平均 VCR。这些发现支持评估模型与线束的交互、训练模型中可转移的线束使用能力以及适应模型和任务的线束设计。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-10-24 (10 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-10-24
