@@ -27,6 +27,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-10-27](papers/2026-10-27.md) - 11 papers
 - [2026-10-24](papers/2026-10-24.md) - 5 papers
 - [2026-10-23](papers/2026-10-23.md) - 12 papers
 - [2026-10-22](papers/2026-10-22.md) - 18 papers
@@ -205,6 +206,196 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-10-27 (11 papers)</b></summary>
+
+# arXiv Video Papers - 2026-10-27
+
+**Paper Count**: 11
+
+---
+
+## 1. More Memory, Better Videos? A Controlled Study of Visual Memory in Long-Video Generation / 更多内存，更好的视频？长视频生成中视觉记忆的对照研究
+
+**Date**: 2026-10-26 | **arXiv**: [2610.35001v1](http://arxiv.org/abs/2610.35001v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.35001v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long-video generators increasingly retrieve past visual observations to prevent identity drift. The intuition is compelling: more access to history should make future video more consistent. But an image can be faithful to the past and wrong for the present. Does visual memory always improve the generated story? We investigate this question through VMem-Bench, a two-track diagnostic study. Track-A measures which references are selected from 92 real films (16,548 segments), before generation and without generator confounds. Track-B compares four retrieval policies with no-memory and gold-informed last-seen controls on 30 causally generated stories (2,824 segments) using a shared generator. Retrieval increases entity recall from 0.559 to 0.628-0.693 and improves similarity to past appearances, but decreases precision from 0.977 to 0.915-0.938 and forbidden-entity avoidance from 0.968 to 0.845-0.898. It can also reinforce obsolete appearances after the story changes them. Conversely, high long-gap recall can arise without memory when the prompt itself supplies the appearance; an appearance-stripping analysis exposes this confound. These results distinguish historical fidelity from current-story correctness and show why retrieval relevance or final-video consistency alone does not establish memory utility.
+
+长视频生成器越来越多地检索过去的视觉观察结果，以防止身份漂移。直觉是令人信服的：更多地接触历史应该使未来的视频更加一致。但图像可能忠实于过去，却可能错误于现在。视觉记忆总是能改善生成的故事吗？我们通过 VMem-Bench（一项双轨诊断研究）来调查这个问题。 Track-A 衡量在生成之前且没有生成器混淆的情况下从 92 部真实电影（16,548 个片段）中选择的参考。 Track-B 使用共享生成器对 30 个因果生成的故事（2,824 个片段）上的四种检索策略与无记忆和黄金通知的上次看到的控制进行了比较。检索将实体召回率从 0.559 提高到 0.628-0.693，并提高了与过去外观的相似性，但将精度从 0.977 降低到 0.915-0.938，禁止实体回避从 0.968 降低到 0.845-0.898。在故事改变后，它还可以强化过时的外观。相反，当提示本身提供外观时，在没有记忆的情况下，也可能会出现高的长间隙回忆；外观剥离分析揭示了这一混淆。这些结果区分了历史保真度和当前故事的正确性，并说明了为什么单独检索相关性或最终视频一致性并不能建立记忆效用。
+
+</details>
+
+---
+
+## 2. Reason or Recite: Complementary Specialists with an LLM Judge for Traffic Anomaly Reasoning / 推理或背诵：与法学硕士法官一起进行交通异常推理的补充专家
+
+**Date**: 2026-10-26 | **arXiv**: [2610.34993v1](http://arxiv.org/abs/2610.34993v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.34993v1)
+
+**Categories**: cs.CV, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Road anomalies such as collisions, violations, and sudden hazards demand more from video understanding than detection: a practical system must verify what happened, describe the scene, and explain the cause. We find these competences pull in opposite directions for vision-language models: closed-form questions reward precise, evidence-grounded reasoning, while open-ended answers are scored by similarity to reference text, where matching the annotation style matters as much as reasoning correctly. We present Reason-or-Recite (RoR), a two-specialist framework for the Traffic Anomaly Reasoning track of the 2026 AI City Challenge. RoR (1) rewrites the official chain-of-thought annotations into a structured, temporally grounded schema and LoRA-tunes a 9B vision-language model on the enhanced traces; (2) fine-tunes a 4-bit-quantized 27B model on answers alone, absorbing the annotation style; and (3) selects between the two candidates per question with a training-free LLM judge. RoR ranks first on the in-domain leaderboard with mean score 0.6788.
+
+碰撞、违规和突发危险等道路异常现象对视频理解的要求高于检测：实用的系统必须验证发生的情况、描述场景并解释原因。我们发现这些能力对视觉语言模型产生相反的影响：封闭式问题奖励精确的、基于证据的推理，而开放式答案则根据与参考文本的相似性进行评分，其中匹配注释风格与正确推理一样重要。我们提出 Reason-or-Recite (RoR)，这是一个用于 2026 年人工智能城市挑战赛交通异常推理赛道的两个专家框架。 RoR (1) 将官方的思想链注释重写为结构化的、基于时间的模式，并在增强的痕迹上 LoRA 调整 9B 视觉语言模型； (2) 仅针对答案微调 4 位量化 27B 模型，吸收注释风格； (3) 由未经培训的法学硕士法官在每个问题的两名候选人之间进行选择。 RoR以平均分0.6788位居域内排行榜第一。
+
+</details>
+
+---
+
+## 3. Learning Dual-Camera Smooth Zoom via Decoupled Geometric-Photometric Data Synthesis / 通过解耦的几何光度数据合成学习双摄像头平滑变焦
+
+**Date**: 2026-10-26 | **arXiv**: [2610.34854v1](http://arxiv.org/abs/2610.34854v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.34854v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+When zooming between dual cameras on smartphones, prominent discontinuities in both geometric perspective and color rendition inevitably degrade the visual experience of users. To address this issue, we introduce the dual-camera smooth zoom (DCSZ) task, aiming to synthesize continuous intermediate frames for fluid zooming. However, directly applying existing video frame interpolation (VFI) models to this task is severely hindered by substantial domain gaps and the practical intractability of capturing real-world continuous ground-truth. To this end, we propose a novel data synthesis framework to generate high-fidelity DCSZ training sequences, named ZoomGS v2. It explicitly decouples geometric and color transformations from 3D scene representation modeling, thereby enabling extensive data generation from easily accessible single-camera 3D scenes. Furthermore, we develop ZoomFI, a specialized VFI network tailored to the DCSZ task, which leverages complementary bidirectional warping for comprehensive dual-camera information fusion. Extensive experiments on test datasets captured using two mobile phones demonstrate that training with the constructed DCSZ data significantly improves the performance of various VFI models. Moreover, ZoomFI achieves state-of-the-art results in both quantitative metrics and visual quality. The datasets, code, and pretrained models are available at https://hitjunjief.github.io/DCSZ-v2
+
+当智能手机上的双摄像头之间进行变焦时，几何透视和色彩再现上的明显不连续性不可避免地会降低用户的视觉体验。为了解决这个问题，我们引入了双摄像头平滑变焦（DCSZ）任务，旨在合成连续的中间帧以进行流体变焦。然而，直接将现有的视频帧插值（VFI）模型应用于此任务会受到巨大的域间隙和捕获现实世界连续地面实况的实际困难性的严重阻碍。为此，我们提出了一种新颖的数据合成框架来生成高保真 DCSZ 训练序列，名为 ZoomGS v2。它明确地将几何和颜色变换与 3D 场景表示建模分离，从而能够从易于访问的单相机 3D 场景中生成大量数据。此外，我们还开发了 ZoomFI，这是一种专门为 DCSZ 任务量身定制的 VFI 网络，它利用互补的双向扭曲来实现全面的双摄像头信息融合。对使用两部手机捕获的测试数据集进行的大量实验表明，使用构建的 DCSZ 数据进行训练可以显着提高各种 VFI 模型的性能。此外，ZoomFI 在定量指标和视觉质量方面都取得了最先进的结果。数据集、代码和预训练模型可在 https://hitjunjief.github.io/DCSZ-v2 获取
+
+</details>
+
+---
+
+## 4. Efficient Multi-modal Video Fusion Network with Dynamic Region-Guided Temporal Interaction / 具有动态区域引导时间交互的高效多模态视频融合网络
+
+**Date**: 2026-10-26 | **arXiv**: [2610.34765v1](http://arxiv.org/abs/2610.34765v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.34765v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multi-modal video fusion aims to generate temporally coherent videos with salient targets and rich structural details by integrating complementary information from heterogeneous sensors. However, existing video fusion methods commonly rely on optical flow estimation and feature warping for inter-frame alignment and cross-frame information aggregation to maintain temporal consistency, thereby introducing considerable computational overhead and making the fusion performance vulnerable to flow estimation errors. To address these limitations, this paper proposes an efficient multi-modal video fusion network with dynamic region-guided temporal interaction. Specifically, the proposed spatio-temporal interaction module leverages the Test-Time Training paradigm to model temporal dependencies with linear complexity. Building on this design, the module restricts temporal modeling to key dynamic regions in the video sequence, as static background regions provide limited temporal cues. By excluding low-variation tokens from unnecessary temporal interaction, this selective strategy contributes to improved fusion quality and temporal consistency. In addition, leveraging the strong ability of pretrained MAE features to capture global structural dependencies, we introduce a feature-level temporal consistency constraint to suppress local flickering by aligning the inter-frame variation directions of the fused and source videos. We further propose a new MAE-based temporal metric that quantifies directional distance between their temporal variations within dynamic regions. Experimental results demonstrate that, compared with existing state-of-the-art methods, our method achieves superior fusion quality and temporal consistency on multiple benchmark datasets, while exhibiting high computational efficiency under edge-device deployment settings.
+
+多模态视频融合旨在通过集成来自异构传感器的互补信息来生成具有显着目标和丰富结构细节的时间相干视频。然而，现有的视频融合方法通常依赖于光流估计和特征扭曲来进行帧间对齐和跨帧信息聚合以保持时间一致性，从而引入相当大的计算开销并使融合性能容易受到流估计错误的影响。为了解决这些限制，本文提出了一种具有动态区域引导时间交互的高效多模态视频融合网络。具体来说，所提出的时空交互模块利用测试时间训练范例来对具有线性复杂度的时间依赖性进行建模。在此设计的基础上，该模块将时间建模限制在视频序列中的关键动态区域，因为静态背景区域提供有限的时间线索。通过从不必要的时间交互中排除低变化标记，这种选择性策略有助于提高融合质量和时间一致性。此外，利用预训练的 MAE 特征捕获全局结构依赖性的强大能力，我们引入了特征级时间一致性约束，通过对齐融合视频和源视频的帧间变化方向来抑制局部闪烁。我们进一步提出了一种新的基于 MAE 的时间度量，该度量可以量化动态区域内时间变化之间的方向距离。实验结果表明，与现有的最先进方法相比，我们的方法在多个基准数据集上实现了卓越的融合质量和时间一致性，同时在边缘设备部署设置下表现出高计算效率。
+
+</details>
+
+---
+
+## 5. StreamVibe: Proactive Video Agents for Evolving User Intent / StreamVibe：用于不断变化的用户意图的主动视频代理
+
+**Date**: 2026-10-26 | **arXiv**: [2610.34662v1](http://arxiv.org/abs/2610.34662v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.34662v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision-language models are shifting from offline passive understanding toward online proactive interaction. However, prevailing methods largely rely on explicit requests while miss the implicit user intent (e.g., "where should I click next?" while a user navigate a website), meanwhile fail to update the state simultaneously as user requests might update continuously. These limitations make them less suited to intent-aware interaction in practical. To address these challenges, we introduce StreamVibe-Bench, a new benchmark serving as testbed for user intent interaction, with 4.1K evaluation samples and 85K training samples spanning explicit, implicit, and dynamic intents. Building on this benchmark, we develop StreamVibe-VL, a streaming proactive model that infers implicit user intents from continuous observations and dynamically tailors its interactions as these intents evolve. We further introduce StreamVibe-Harness, which maintains user intents as persistent states with a fleixble lifecycles via a hierarchical memory to track the latest user intent and environmental state. Our experiments reveal three key findings: (i) StreamVibe-VL preserves strong general video understanding while improving response timing and answer quality by 10.7% over other baselines; (ii) existing proactive models remain limited in understanding user intent and deciding when to respond, especially under implicit and dynamic intents; and (iii) StreamVibe-Harness further improves response consistency and adaptation over sustained interaction, resulting in a 12.3% gain in proactive interaction.
+
+视觉语言模型正在从离线被动理解转向在线主动交互。然而，流行的方法很大程度上依赖于显式请求，而错过了隐式用户意图（例如，当用户浏览网站时“我应该点击下一步？”），同时无法同时更新状态，因为用户请求可能会不断更新。这些限制使得它们不太适合实际中的意图感知交互。为了应对这些挑战，我们引入了 StreamVibe-Bench，这是一个新的基准，作为用户意图交互的测试平台，具有 4.1K 评估样本和 85K 训练样本，涵盖显式、隐式和动态意图。在此基准的基础上，我们开发了 StreamVibe-VL，这是一种流式主动模型，可以从连续观察中推断隐式用户意图，并随着这些意图的发展动态调整其交互。我们进一步介绍了 StreamVibe-Harness，它通过分层内存将用户意图维护为具有灵活生命周期的持久状态，以跟踪最新的用户意图和环境状态。我们的实验揭示了三个关键发现：(i) StreamVibe-VL 保留了强大的一般视频理解能力，同时将响应时间和答案质量比其他基线提高了 10.7%； (ii) 现有的主动模型在理解用户意图和决定何时响应方面仍然有限，特别是在隐式和动态意图的情况下； (iii) StreamVibe-Harness 进一步提高了持续交互的响应一致性和适应性，使主动交互提高了 12.3%。
+
+</details>
+
+---
+
+## 6. What Does World Modeling Actually Improve in Robot Action Learning? / 世界建模实际上改善了机器人动作学习的哪些方面？
+
+**Date**: 2026-10-25 | **arXiv**: [2610.34593v1](http://arxiv.org/abs/2610.34593v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.34593v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World Action Models (WAMs) combine future-video prediction with robot action learning, yet improvements in task success alone do not reveal how predictive supervision manifests in execution behavior or whether its benefits persist under task and environmental shifts. We conduct controlled future-video prediction loss ablations within FastWAM and OpenWAM, keeping model architecture, initialization, robot training data, and training steps fixed within each model family. Under clean conditions on seen tasks, predictive supervision increases success rates by 24.38 and 72.91 percentage points, respectively. Trajectory clustering further reveals higher success rates within several coarse trajectory clusters, including cases where cluster frequencies change little, indicating that the gains are not solely reflected in changes in the prevalence of trajectory patterns. However, these benefits do not consistently persist under distribution shifts: improvements on unseen tasks vary across models and tasks, while both models exhibit low success rates under the evaluated environmental randomizations, without a consistent advantage from predictive supervision. We further introduce future-video prediction as an auxiliary training objective for $π_{0.5}$, where a lightweight Transformer predictor used only during training increases success from 82.94% to 89.19%. These findings support future-video prediction as effective auxiliary supervision for action learning, while distinguishing improved execution on familiar tasks from reliable transfer and showing that such gains need not rely on a large pretrained video diffusion transformer (DiT) in the evaluated setting.
+
+世界动作模型（WAM）将未来视频预测与机器人动作学习相结合，但仅任务成功率的提高并不能揭示预测监督如何在执行行为中体现，也不能揭示其好处在任务和环境变化下是否持续存在。我们在 FastWAM 和 OpenWAM 中进行受控的未来视频预测损失消融，在每个模型系列中保持模型架构、初始化、机器人训练数据和训练步骤固定。在清洁条件下，预测性监督将成功率分别提高了 24.38 和 72.91 个百分点。轨迹聚类进一步揭示了几个粗略轨迹聚类中更高的成功率，包括聚类频率变化很小的情况，这表明增益不仅仅反映在轨迹模式普遍性的变化上。然而，这些好处在分布变化下并不总是持续存在：不同模型和任务对看不见的任务的改进各不相同，而两种模型在评估的环境随机化下都表现出较低的成功率，并且没有来自预测监督的一致优势。我们进一步引入未来视频预测作为 $π_{0.5}$ 的辅助训练目标，其中仅在训练期间使用轻量级 Transformer 预测器将成功率从 82.94% 提高到 89.19%。这些发现支持未来视频预测作为动作学习的有效辅助监督，同时区分熟悉任务的改进执行和可靠传输，并表明这种增益不需要依赖于评估环境中的大型预训练视频扩散变换器（DiT）。
+
+</details>
+
+---
+
+## 7. FlockWorld: Toward Population-Scale Multi-Agent Video World Models through Artificial Life Simulation / FlockWorld：通过人工生命模拟实现人口规模的多智能体视频世界模型
+
+**Date**: 2026-10-25 | **arXiv**: [2610.34564v1](http://arxiv.org/abs/2610.34564v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.34564v1)
+
+**Categories**: cs.CV, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Most action-conditioned video world models remain limited to a single player, while existing multiplayer models support only small, fixed groups of agents. We introduce FlockWorld, an artificial-life environment built on Reynolds's Boids algorithm for studying population-scale multi-agent video world models. Specifically, FlockWorld renders synchronized egocentric crops, assigns distinct colors to preserve camera-agent identity across views, exposes rule-derived accelerations as actions, and lets the number of camera agents be configured independently of the size of the surrounding population. We further introduce FlockDiT, an action-conditioned latent diffusion transformer trained with flow matching on FlockWorld data to jointly generate synchronized egocentric videos for multiple agents. Our results suggest that joint generation benefits agent detection at density-matched settings and that diffusion forcing improves rollout fidelity. Together, FlockWorld and FlockDiT provide a controlled testbed for multi-agent video generation.
+
+大多数动作条件视频世界模型仍然仅限于单个玩家，而现有的多人游戏模型仅支持小型、固定的代理组。我们介绍 FlockWorld，这是一个基于 Reynolds Boid 算法构建的人工生命环境，用于研究人口规模的多智能体视频世界模型。具体来说，FlockWorld 渲染同步的以自我为中心的作物，分配不同的颜色以在视图中保留相机代理的身份，将规则派生的加速公开为动作，并让相机代理的数量独立于周围人口的大小进行配置。我们进一步介绍了 FlockDiT，这是一种动作条件潜在扩散变压器，在 FlockWorld 数据上进行流匹配训练，为多个智能体联合生成同步的自我中心视频。我们的结果表明，联合生成有利于密度匹配设置下的代理检测，并且扩散强迫提高了推出保真度。 FlockWorld 和 FlockDiT 共同为多智能体视频生成提供了一个受控测试平台。
+
+</details>
+
+---
+
+## 8. EditDistill: Is It Possible to Guide Video Editing with Image Editing? / EditDistill：是否可以通过图像编辑来指导视频编辑？
+
+**Date**: 2026-10-25 | **arXiv**: [2610.34303v1](http://arxiv.org/abs/2610.34303v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.34303v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in image editing have enabled fine-grained and highly controllable visual modifications. However, achieving similar levels of controllability in video editing remains an open challenge, particularly for precise local edits, dynamic temporal effects, and consistent lighting across frames.In this paper, we propose EditDistill, a framework that distills image-level visual transformations from edits to guide video editing.Specifically, given a source video and an edit prompt, we first generate an edited version of the initial video frame using an off-the-shelf image editing model. We then distill the visual transformation of this original-edited image pair into a compact representation termed an edit descriptor.This descriptor is injected into a video diffusion model through our lightweight fusion module, which steers the denoising process toward the desired edit. To align the video trajectory with the demonstrated image edit while preserving motion and layout, we train with edit-descriptor alignment and DINO structural consistency losses, and derive an equivalent inference-time guidance formulation under flow matching.Extensive experiments demonstrate that our method achieves strong performance on standard benchmarks and produces high-quality video editing results across diverse scenarios. For more details and videos, please refer to the anonymous webpage: https://yu-shaonian.github.io/EditDistill-Web/.
+
+图像编辑的最新进展实现了细粒度和高度可控的视觉修改。然而，在视频编辑中实现类似水平的可控性仍然是一个开放的挑战，特别是对于精确的本地编辑、动态时间效果和跨帧的一致照明而言。在本文中，我们提出了 EditDistill，一个从编辑中提取图像级视觉变换以指导视频编辑的框架。具体来说，给定源视频和编辑提示，我们首先使用现成的图像编辑模型生成初始视频帧的编辑版本。然后，我们将原始编辑图像对的视觉转换提炼为称为编辑描述符的紧凑表示。该描述符通过我们的轻量级融合模块注入视频扩散模型，该模块将去噪过程引导至所需的编辑。为了将视频轨迹与演示的图像编辑对齐，同时保留运动和布局，我们使用编辑描述符对齐和 DINO 结构一致性损失进行训练，并在流匹配下推导出等效的推理时间指导公式。大量实验表明，我们的方法在标准基准上实现了强大的性能，并在不同场景下产生了高质量的视频编辑结果。更多详情和视频请参考匿名网页：https://yu-shaonian.github.io/EditDistill-Web/。
+
+</details>
+
+---
+
+## 9. X-World: Transferring Video Priors to Variable-View Robot Control / X-World：在可变视图机器人控制之前传输视频
+
+**Date**: 2026-10-25 | **arXiv**: [2610.34105v1](http://arxiv.org/abs/2610.34105v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.34105v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video diffusion models provide a source of interaction representations for robot control, but transferring these representations requires reconciling variable camera inputs with heterogeneous action interfaces and closed-loop execution. We present X-World, a framework that transfers a video prior through a fixed-length token sequence to a shared action expert. A residual cross-view attention branch extends a pretrained video backbone to one, two, or three views while retaining its original self-attention path. A layer-aligned Q-Former aggregates backbone features, and dataset-specific modules map between native state and action interfaces and the shared action expert. Training separates video adaptation from action-only pretraining by freezing the video backbone in the latter stage, followed by joint target-domain post-training. The policy extracts video features with a single backbone pass and uses asynchronous action chunking for execution. On LIBERO, X-World reaches 98.5\% mean success; its LIBERO-trained checkpoint obtains 76.5\% on LIBERO-Plus without further adaptation. The seven-shift breakdown reveals gains in robot, language, lighting, and layout perturbations, alongside weaknesses under camera, background, and noise shifts relative to OpenVLA-OFT. On six dual-arm real-world tasks, it achieves 81.7\% mean success over 20 trials per task. Removing video adaptation or cross-view fusion produces the largest observed success drops among the tested removals.
+
+视频扩散模型为机器人控制提供了交互表示的来源，但传输这些表示需要协调可变摄像机输入与异构动作接口和闭环执行。我们提出了 X-World，这是一个框架，可以通过固定长度的令牌序列将视频传输给共享动作专家。剩余的跨视图注意力分支将预训练的视频主干扩展到一个、两个或三个视图，同时保留其原始的自注意力路径。层对齐的 Q-Former 聚合了主干特征，并且数据集特定的模块在本机状态和操作接口以及共享操作专家之间进行映射。训练通过在后期冻结视频主干，然后进行联合目标域后训练，将视频适应与仅动作预训练分开。该策略通过单个骨干通道提取视频特征，并使用异步动作分块来执行。在 LIBERO 上，X-World 的平均成功率达到 98.5%；其经过 LIBERO 训练的检查点在 LIBERO-Plus 上无需进一步调整即可获得 76.5% 的准确率。七班次细分揭示了机器人、语言、照明和布局扰动方面的优势，以及相对于 OpenVLA-OFT 的摄像头、背景和噪声变化方面的弱点。在 6 个双臂现实世界任务中，每个任务经过 20 次试验后平均成功率达到 81.7%。在测试的删除中，删除视频适应或跨视图融合会产生最大的观察到的成功率下降。
+
+</details>
+
+---
+
+## 10. Learning the Autoregressive: Direct Score-Difference Estimation with Amortized Future Credit for Video Distillation / 学习自回归：视频蒸馏的摊销未来信用的直接分数差异估计
+
+**Date**: 2026-10-25 | **arXiv**: [2610.34092v1](http://arxiv.org/abs/2610.34092v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.34092v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Few-step distillation for autoregressive (AR) video generation commonly first initializes an AR student and then refines it with distribution matching distillation (DMD). This refinement process faces two challenges. First, although initialization already yields a reasonably capable student, DMD obtains the refinement direction indirectly by estimating the full student score before forming the teacher-student correction. Second, detached-history training prevents the generator from assigning credit to a current chunk for its influence on subsequent chunks. We introduce Leta, a few-step distillation framework that addresses these challenges with ScoreDelta and FutureCredit. ScoreDelta directly estimates the teacher-student correction from denoising residuals, while FutureCredit learns an auxiliary cross-chunk update signal from vector-Jacobian products (VJPs) of next-chunk teacher residuals. Leta combines these signals into a joint teacher-guided update field in a single forward pass during generator updates. Teacher evaluations and credit VJPs are used only for estimator training. For ScoreDelta, we establish population equivalence to score-difference estimation and a conditional approximation advantage under limited capacity in a fixed-feature linear model. In our controlled experiments, Leta improves over DMD by 0.9 points on VBench and 0.66 on VideoAlign. This advantage persists at a higher generator update frequency (a generator-to-estimator update ratio of G:E=1:1), where Leta improves over DMD by 1.6 on VBench and 0.35 on VideoAlign. Project page: https://scdzx.github.io/Leta/.
+
+自回归 (AR) 视频生成的少步蒸馏通常首先初始化 AR 学生，然后使用分布匹配蒸馏 (DMD) 对其进行细化。这个细化过程面临两个挑战。首先，虽然初始化已经产生了一个相当有能力的学生，但DMD在形成师生校正之前通过估计完整的学生分数间接获得了细化方向。其次，分离历史训练可以防止生成器将信用分配给当前块，因为它对后续块有影响。我们推出 Leta，这是一个通过 ScoreDelta 和 FutureCredit 解决这些挑战的几步蒸馏框架。 ScoreDelta 直接根据去噪残差估计教师-学生校正，而 FutureCredit 从下一个块教师残差的向量雅可比积 (VJP) 中学习辅助跨块更新信号。 Leta 在生成器更新期间，在一次前向传递中将这些信号组合到联合教师引导的更新字段中。教师评估和学分 VJP 仅用于估算员培训。对于 ScoreDelta，我们在固定特征线性模型中建立了分数差估计的总体等价性和有限容量下的条件近似优势。在我们的对照实验中，Leta 在 VBench 上比 DMD 提高了 0.9 个点，在 VideoAlign 上比 DMD 提高了 0.66 个点。这一优势在较高的生成器更新频率下仍然存在（生成器与估计器的更新比率为 G:E=1:1），其中 Leta 在 VBench 上比 DMD 提高了 1.6，在 VideoAlign 上比 DMD 提高了 0.35。项目页面：https://scdzx.github.io/Leta/。
+
+</details>
+
+---
+
+## 11. TrackTok: Object-Centric Video Tokenization with Semantically Persistent Tokens / TrackTok：具有语义持久标记的以对象为中心的视频标记化
+
+**Date**: 2026-10-24 | **arXiv**: [2610.33857v1](http://arxiv.org/abs/2610.33857v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.33857v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/phamleyennhi/tracktok.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We introduce TrackTok, an efficient video tokenization framework that produces object-centric tokens, i.e., tokens that consistently encode the same semantic objects across time, even as it moves, deforms, or undergoes partial occlusion. Conventional patch-based or existing holistic tokenizers produce token identities often tied to fixed image locations. In contrast, our approach learns temporally persistent object-centric representations that bind visual features across frames into stable semantic units. This enables substantially more compact, continuous latent video representations, reducing the number of tokens required for downstream generative modeling with state-of-the-art flow models, while preserving the semantic structure needed for high-quality synthesis. Our tokenizer offers a favorable quality-efficiency trade-off. TrackTok achieves comparable class-conditional generative FVD on UCF-101 dataset at 8 times fewer latent tokens and better latency, and outperforms existing 1D tokenization baselines on frame prediction task on Kinetics-600 across low token budgets. These results suggest that object-aligned and temporally persistent tokenization is a promising direction for scalable video generation, where reducing latent token counts is critical for efficient modeling. Our code for this work is available at https://github.com/phamleyennhi/tracktok.
+
+我们引入了 TrackTok，这是一种高效的视频标记化框架，可生成以对象为中心的标记，即在不同时间一致地编码相同语义对象的标记，即使它移动、变形或经历部分遮挡。传统的基于补丁的或现有的整体标记器生成的标记身份通常与固定图像位置相关。相比之下，我们的方法学习暂时持久的以对象为中心的表示，将跨帧的视觉特征绑定到稳定的语义单元。这可以实现更加紧凑、连续的潜在视频表示，减少使用最先进的流模型进行下游生成建模所需的令牌数量，同时保留高质量合成所需的语义结构。我们的分词器提供了有利的质量效率权衡。 TrackTok 在 UCF-101 数据集上以减少 8 倍的潜在标记和更好的延迟实现了可比的类条件生成 FVD，并且在低标记预算的 Kinetics-600 上的帧预测任务上优于现有的 1D 标记化基线。这些结果表明，对象对齐和时间持久标记化是可扩展视频生成的一个有前途的方向，其中减少潜在标记计数对于高效建模至关重要。我们这项工作的代码可以在 https://github.com/phamleynnhi/tracktok 上找到。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-10-24 (5 papers)</b></summary>
 
 # arXiv Video Papers - 2026-10-24
