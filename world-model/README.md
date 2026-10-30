@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-10-30](papers/2026-10-30.md) - 9 papers
 - [2026-10-28](papers/2026-10-28.md) - 17 papers
 - [2026-10-27](papers/2026-10-27.md) - 7 papers
 - [2026-10-26](papers/2026-10-26.md) - 1 papers
@@ -178,6 +179,164 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-10-30 (9 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-10-30
+
+**Paper Count**: 9
+
+---
+
+## 1. WorldFlow: Joint Video and 3D Motion Prediction via Large-Scale Pretraining / WorldFlow：通过大规模预训练进行联合视频和 3D 运动预测
+
+**Date**: 2026-10-29 | **arXiv**: [2610.39278v1](http://arxiv.org/abs/2610.39278v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.39278v1)
+
+**Categories**: cs.CV, cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Predicting future physical states stands as a central challenge in embodied intelligence. Existing video world models leave 3D dynamics implicit, action-based formulations remain tied to specific robot configurations, and 3D motion prediction models use flow-only supervision, providing a limited learning signal for physical dynamics. To circumvent these limitations, we introduce \method{}, a generative world model that jointly predicts future video and query-based 3D trajectories. By parameterizing 3D motion as continuous displacement tokens aligned with the video grid, a unified Mixture-of-Transformers (MoT) backbone jointly denoises both modalities under a rectified-flow objective. This formulation couples explicit geometric dynamics with visual evolution, effectively unlocking the physical commonsense embedded within pretrained video models. To empirically scale and validate this unified architecture, we train \method{} on a heterogeneous mixture of 1.44 million object-level samples spanning simulated and real-world domains. We further introduce WorldFlowBench, comprising 1,678 evaluation samples from 11 data sources across simulated and real-world interactions, including spatial reasoning tasks. Across all three evaluation sets, WorldFlow achieves the lowest average displacement error (ADE) and final displacement error (FDE) among the evaluated learning-based methods. Notably, on the challenging SpatialCog set, WorldFlow achieves an ADE of 0.060 m, a 54.2\% reduction compared with the strongest external baseline. It also reduces ADE and FDE by 55.9\% and 68.5\%, respectively, compared with its flow-only variant. Project page: https://worldflow-rbs.github.io/.
+
+预测未来的身体状态是体现智能的一个核心挑战。现有的视频世界模型使 3D 动力学隐式存在，基于动作的公式仍然与特定的机器人配置相关，而 3D 运动预测模型使用仅流监督，为物理动力学提供有限的学习信号。为了规避这些限制，我们引入了 \method{}，这是一种生成世界模型，可以联合预测未来视频和基于查询的 3D 轨迹。通过将 3D 运动参数化为与视频网格对齐的连续位移标记，统一的 Mixture-of-Transformers (MoT) 主干在整流流目标下联合对两种模态进行去噪。该公式将显式几何动力学与视觉进化结合起来，有效地解锁了预训练视频模型中嵌入的物理常识。为了凭经验扩展和验证这种统一的架构，我们在跨越模拟和现实世界领域的 144 万个对象级样本的异构混合物上训练 \method{}。我们进一步介绍了 WorldFlowBench，它包含来自 11 个数据源的 1,678 个评估样本，涉及模拟和现实世界的交互，包括空间推理任务。在所有三个评估集中，WorldFlow 在评估的基于学习的方法中实现了最低的平均位移误差 (ADE) 和最终位移误差 (FDE)。值得注意的是，在具有挑战性的 SpatialCog 集上，WorldFlow 的 ADE 为 0.060 m，与最强的外部基线相比减少了 54.2%。与仅流变体相比，它还分别将 ADE 和 FDE 降低了 55.9% 和 68.5%。项目页面：https://worldflow-rbs.github.io/。
+
+</details>
+
+---
+
+## 2. RAIBO-Wagon: Real-Time Navigation System for a Legged Robot Towing a Wagon / RAIBO-Wagon：用于牵引货车的腿式机器人的实时导航系统
+
+**Date**: 2026-10-29 | **arXiv**: [2610.39267v1](http://arxiv.org/abs/2610.39267v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.39267v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Legged robots have demonstrated advanced capabilities across a wide range of real-world tasks, yet much of this progress concerns the robot controlling only itself. Once the robot is coupled to an external object -- particularly an underactuated one -- the dynamics of the combined assembly become more complex. Towing a wagon is a common practical scenario, where coupled dynamics make reliable navigation challenging. This difficulty is amplified in confined spaces, where collision-free navigation requires finding a narrow set of feasible paths under strict real-time constraints. To address this, we propose a navigation framework that combines Conditional Flow Matching (CFM) with Model Predictive Path Integral (MPPI) control over a learned Forward Dynamics Model (FDM). The CFM model mitigates the initialization problem of MPPI and accelerates its convergence, while MPPI with the FDM recovers feasible solutions beyond the CFM model's training distribution by iterative refinement. We integrate the framework into a full-stack navigation system for RAIBO-Wagon, a quadruped towing a custom wagon, and validate it in real-world outdoor experiments on 15 m-long courses through confined spaces, with all sensing and computation performed fully onboard. The system achieves an 85% success rate across 40 trials, towing a total load of up to 40 kg -- nearly 100% of RAIBO's body weight.
+
+腿式机器人在现实世界的各种任务中展示了先进的能力，但这些进步很大程度上涉及机器人仅控制自身。一旦机器人与外部物体（尤其是欠驱动的物体）耦合，组合组件的动力学就会变得更加复杂。牵引货车是一种常见的实际场景，其中耦合的动力学使得可靠的导航具有挑战性。在有限空间中，这种困难会被放大，无碰撞导航需要在严格的实时约束下找到一组狭窄的可行路径。为了解决这个问题，我们提出了一个导航框架，它将条件流匹配（CFM）与对学习的前向动力学模型（FDM）的模型预测路径积分（MPPI）控制相结合。 CFM 模型缓解了 MPPI 的初始化问题并加速了其收敛，而带有 FDM 的 MPPI 通过迭代细化恢复了超出 CFM 模型训练分布的可行解决方案。我们将该框架集成到 RAIBO-Wagon（一种牵引定制货车的四足动物）的全栈导航系统中，并在穿越有限空间的 15 m 长路线上的真实户外实验中对其进行了验证，所有传感和计算都完全在船上执行。该系统在 40 次试验中取得了 85% 的成功率，牵引总负载高达 40 公斤，几乎是 RAIBO 体重的 100%。
+
+</details>
+
+---
+
+## 3. Explore Where It Matters: Targeted Exploration for Efficient Rover Adaptation / 探索重要之处：高效流动站适应的有针对性的探索
+
+**Date**: 2026-10-28 | **arXiv**: [2610.38657v1](http://arxiv.org/abs/2610.38657v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.38657v1)
+
+**Categories**: cs.RO, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Future planetary rovers will traverse steep, deformable terrain where slip, sinkage, and terrain deformation can threaten mobility. Although simulation can capture some wheel-soil effects, unmodeled deformable-terrain phenomena create sim-to-real gaps requiring deployment-time adaptation. Yet, rover operations leave little room for extensive trial-and-error. We introduce TERRA (Targeted Exploration for Reward-Relevant Adaptation), an online adaptation framework that efficiently seeks deployment data exposing task-relevant model errors and corrects them. TERRA adapts a simulation-trained world model with a reward-weighted prediction loss and trains a loss predictor to estimate where future performance-relevant errors are likely to occur, using this signal to guide exploration during MPC. In simulation, TERRA reaches approximately 90% slope-climbing success within five trials under severe out-of-distribution pretraining conditions, outperforming exploration baselines in reward, completion time, and energy to first success. On the ERNEST rover, TERRA recovers coordinated active-suspension locomotion on a deformable Mars-simulant slope within three to five real-world trials. Project website: https://terra-explore.github.io
+
+未来的行星漫游车将穿越陡峭、易变形的地形，在这些地形中，滑动、下沉和地形变形可能会威胁到移动性。尽管模拟可以捕获一些轮土效应，但未建模的可变形地形现象会产生模拟与真实的差距，需要部署时间适应。然而，漫游车的操作几乎没有留下大量试错的空间。我们引入了 TERRA（奖励相关适应的目标探索），这是一种在线适应框架，可以有效地寻找暴露任务相关模型错误的部署数据并纠正它们。 TERRA 采用具有奖励加权预测损失的模拟训练世界模型，并训练损失预测器来估计未来可能发生与性能相关的错误的位置，并使用该信号来指导 MPC 期间的探索。在模拟中，TERRA 在严格的非分布预训练条件下的五次试验中达到了约 90% 的爬坡成功率，在奖励、完成时间和第一次成功的能量方面优于探索基线。在 ERNEST 火星车上，TERRA 在三到五次现实世界试验中在可变形的模拟火星斜坡上恢复了协调的主动悬挂运动。项目网站：https://terra-explore.github.io
+
+</details>
+
+---
+
+## 4. Predict the Reward, Not the World: World Reward Models for ML Agents / 预测奖励，而不是世界：ML 代理的世界奖励模型
+
+**Date**: 2026-10-28 | **arXiv**: [2610.38439v1](http://arxiv.org/abs/2610.38439v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.38439v1)
+
+**Categories**: cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Search-based machine-learning (ML) agents improve a solution by writing candidate programs, executing them, and keeping the best. Execution gives the search reliable feedback, but a single run can take hours, and most runs end in programs the agent discards. Recent agents try to save these runs by letting a large language model act as a world model that predicts how each program would perform. However, a wrong prediction feeds the search false information. We argue that an agent does not need to predict the outcome of execution, only the decision that execution would support. We propose World Reward Models (WRMs), which learn from real execution results to choose directly which candidate will perform better, without predicting any intermediate outcome. We prove that a selector which predicts execution from the same inputs cannot outperform the best direct selector, that predicted outcomes add an error which can make a likelihood-trained world model prefer the worse program on every instance, and that cross-entropy on executed winners drives a WRM toward the optimum. Our WRM, ForeCritic, adapts a 9B typed decision model to 5k executed program pairs. On 12,438 held-out pairs from 26 ML tasks, it picks the better program 79.4% of the time, while general-purpose LLM judges reach 53--62%, and its probabilities are calibrated. Inside AIDE, ML-Master, and ForeAgent, it cuts mean task time by 4.4--7.5 times while keeping their mean scores within 0.01 or raising them.
+
+基于搜索的机器学习 (ML) 代理通过编写候选程序、执行它们并保留最佳程序来改进解决方案。执行为搜索提供了可靠的反馈，但单次运行可能需要几个小时，并且大多数运行都会以代理丢弃的程序结束。最近的代理试图通过让大型语言模型充当预测每个程序将如何执行的世界模型来保存这些运行。然而，错误的预测会给搜索提供错误的信息。我们认为，代理不需要预测执行的结果，只需要预测执行将支持的决策。我们提出了世界奖励模型（WRM），它从真实的执行结果中学习，直接选择表现更好的候选人，而不预测任何中间结果。我们证明，根据相同输入预测执行的选择器无法胜过最佳直接选择器，预测结果会增加误差，这可能使经过似然训练的世界模型在每个实例上更喜欢更差的程序，并且执行的获胜者的交叉熵驱动 WRM 走向最优。我们的 WRM（ForeCritic）将 9B 类型的决策模型应用于 5k 执行的程序对。在来自 26 个 ML 任务的 12,438 个保留对中，它在 79.4% 的时间内选择了更好的程序，而通用 LLM 法官则达到 53--62%，并且其概率经过校准。在 AIDE、ML-Master 和 ForeAgent 中，它将平均任务时间缩短了 4.4--7.5 倍，同时将平均分数保持在 0.01 以内或提高。
+
+</details>
+
+---
+
+## 5. Recursive Self-Improvement in Physical AI: Mechanisms, Evidence, and Evaluation / 物理人工智能中的递归自我完善：机制、证据和评估
+
+**Date**: 2026-10-28 | **arXiv**: [2610.38266v1](http://arxiv.org/abs/2610.38266v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.38266v1)
+
+**Categories**: cs.RO
+
+**Code**: https://github.com/nkd-lkz/physical-ai-rsi-survey.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Embodied systems can update policies, world models, skills, and executable programs from deployment experience, allowing one interaction to benefit later tasks. When a system also revises and reuses its data-acquisition, feedback, or learning procedures, experience changes the process that produces capability, introducing recursive self-improvement. This paper surveys research in physical AI through the connection between persistent capability and its improvement process. We first explain the functional distinction between learner updates and improvers, then compare policy learning, imagined experience, memory and skill accumulation, and executable harnesses. These approaches connect to revisions of curricula, rewards, and research programs in different ways. Contact validity, recovery, retention, and resource costs determine whether the resulting gains accumulate during continued deployment. An L0-L3 rubric distinguishes task-local adaptation, persistent capability gain, inherited process revision, and verified improver gain. Representative benchmarks and within-study contrasts relate these distinctions to existing results. We further propose common-data and interactive comparisons that evaluate reference and revised improvers from shared learner starts, separating the use of experience from its acquisition. This perspective connects the diverse methods, physical operating conditions, and evaluation evidence, underpinning embodied RSI. A comprehensive list of studies in this survey is available at https://github.com/nkd-lkz/physical-ai-rsi-survey.
+
+具体系统可以根据部署经验更新策略、世界模型、技能和可执行程序，从而允许一次交互使后续任务受益。当系统也修改和重用其数据采集、反馈或学习程序时，经验会改变产生能力的过程，引入递归的自我改进。本文通过持久能力与其改进过程之间的联系来调查物理人工智能的研究。我们首先解释学习者更新和改进者之间的功能区别，然后比较策略学习、想象的经验、记忆和技能积累以及可执行的利用。这些方法以不同的方式与课程、奖励和研究项目的修订联系在一起。联系有效性、恢复、保留和资源成本决定了在持续部署过程中是否会积累所产生的收益。 L0-L3 标题区分任务局部适应、持久能力增益、继承过程修订和经过验证的改进器增益。代表性基准和研究内对比将这些区别与现有结果联系起来。我们进一步提出通用数据和交互式比较，从共享学习者的起点评估参考和修订的改进者，将经验的使用与其获取分开。这种观点将不同的方法、物理操作条件和评估证据联系起来，支撑着具体的 RSI。本次调查的完整研究列表请访问 https://github.com/nkd-lkz/physical-ai-rsi-survey。
+
+</details>
+
+---
+
+## 6. Variational Consequence-Driven Offline Reinforcement Learning / 变分结果驱动的离线强化学习
+
+**Date**: 2026-10-28 | **arXiv**: [2610.38238v1](http://arxiv.org/abs/2610.38238v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.38238v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Offline reinforcement learning (RL) typically mitigates distribution shift by imposing divergence constraints on the action distributions of the learned and behavior policies. However, this paradigm cannot ensure the underlying dynamic consistency structure: even minor action deviations can lead to drastically different transitions, inadvertently driving the agent away from the offline dataset. To address this, we explore policy constraints through their induced state-consequence distributions rather than relying on pure action-distribution matching. Nevertheless, directly enforcing such consequence-aware constraints is computationally intractable without access to the true underlying dynamics model. To bypass this issue, we propose Structural Behavior Regularization (StBR), which replaces the intractable objective with a closed-form latent divergence. Structuring this latent space to reflect transition dynamics renders the latent divergence a theoretically bounded surrogate for the true consequence-distribution divergence. By regularizing the learned policy with this latent divergence, StBR adaptively tightens the behavior constraint in dynamics-sensitive regions, effectively preventing deviations outside the offline dataset. Empirically, we demonstrate that StBR achieves superior performance across diverse offline RL benchmarks.
+
+离线强化学习（RL）通常通过对学习和行为策略的动作分布施加发散约束来减轻分布变化。然而，这种范式无法确保底层的动态一致性结构：即使很小的动作偏差也可能导致截然不同的转换，从而无意中驱使代理远离离线数据集。为了解决这个问题，我们通过诱导状态结果分布来探索政策约束，而不是依赖于纯粹的行动分布匹配。然而，如果不访问真正的底层动力学模型，直接执行这种后果感知约束在计算上是很困难的。为了绕过这个问题，我们提出了结构行为正则化（StBR），它用封闭形式的潜在散度代替了棘手的目标。构建这个潜在空间来反映过渡动态，使潜在散度成为真正结果分布散度的理论上有界的替代物。通过利用这种潜在分歧来规范学习策略，StBR 自适应地收紧动态敏感区域的行为约束，有效防止离线数据集之外的偏差。根据经验，我们证明 StBR 在各种离线 RL 基准测试中实现了卓越的性能。
+
+</details>
+
+---
+
+## 7. FORGE: Feasible Online Reduced-Order Reference Generation and Whole-Body Execution for Agile Humanoid Locomotion / FORGE：用于敏捷人形运动的可行在线降阶参考生成和全身执行
+
+**Date**: 2026-10-27 | **arXiv**: [2610.37974v1](http://arxiv.org/abs/2610.37974v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.37974v1)
+
+**Categories**: cs.RO, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+This paper presents a two-stage learning framework for versatile and agile humanoid locomotion that couples online reduced-order model (ROM) reference generation with whole-body tracking control. In the first stage, we train a command-conditioned whole-body reference generator using single rigid body dynamics combined with full humanoid kinematics. In the second stage, the frozen ROM policy is rolled out online to generate references for training a whole-body tracking policy on the full-order dynamics model. Learning a kino-dynamically consistent reference generator in the simplified ROM space enables us to generate references over a broad command space and over multiple locomotion strategies using a single unified framework. We demonstrate the approach on a Unitree G1 humanoid robot, achieving longitudinal velocities from -2.0 m/s to 2.8 m/s, lateral velocities up to +-1.0 m/s, angular velocities up to +-3.0 rad/s, one-legged hopping, and continuous transitions across the commands, all using one unified reference policy and one whole-body tracking policy.
+
+本文提出了一种用于多功能、敏捷的人形运动的两阶段学习框架，该框架将在线降阶模型（ROM）参考生成与全身跟踪控制相结合。在第一阶段，我们使用单一刚体动力学与全人形运动学相结合来训练命​​令调节的全身参考生成器。第二阶段，在线推出冻结的ROM策略，为在全阶动力学模型上训练全身跟踪策略提供参考。在简化的 ROM 空间中学习动动态一致的参考生成器使我们能够使用单个统一框架在广泛的命令空间和多种运动策略上生成参考。我们在 Unitree G1 人形机器人上演示了该方法，实现了从 -2.0 m/s 到 2.8 m/s 的纵向速度、高达 +-1.0 m/s 的横向速度、高达 +-3.0 rad/s 的角速度、单腿跳跃和跨命令的连续转换，所有这些都使用一个统一的参考策略和一个全身跟踪策略。
+
+</details>
+
+---
+
+## 8. Self-Supervised Latent Action-Conditioned World Modeling for Time Series / 时间序列的自监督潜在动作条件世界建模
+
+**Date**: 2026-10-27 | **arXiv**: [2610.37963v1](http://arxiv.org/abs/2610.37963v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.37963v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Time-series data play an important role in various tasks, such as weather forecasting, web traffic analysis, and speech recognition. Recently, pioneering studies have increasingly adopted Joint-Embedding Predictive Architecture (JEPA) based encoders to learn time-series representations through latent-space prediction. However, they often overlook the underlying factors governing transitions between time-series observations. In this work, we hypothesize that explicitly modeling the information behind changes in time series can facilitate time-series modeling. Building on this hypothesis, we propose ACTS-WM, a self-supervised latent action-conditioned world model framework for time-series analysis. First, we introduce a latent action modeling approach that infers the underlying information behind time-series transitions as latent actions, without requiring explicit action annotations. We then develop a JEPA-based encoder and an action-conditioned world model to predict target time-series representations conditioned on the learned latent actions and task information. We evaluate ACTS-WM across 4 representative tasks on 22 datasets from diverse domains, covering univariate and multivariate forecasting and classification. Comprehensive experiments demonstrate that ACTS-WM can improve downstream performance over pretrained JEPA-based encoders by learning complementary representations.
+
+时间序列数据在天气预报、网络流量分析和语音识别等各种任务中发挥着重要作用。最近，开创性研究越来越多地采用基于联合嵌入预测架构（JEPA）的编码器，通过潜在空间预测来学习时间序列表示。然而，他们经常忽视控制时间序列观测之间转换的根本因素。在这项工作中，我们假设对时间序列变化背后的信息进行显式建模可以促进时间序列建模。基于这一假设，我们提出了 ACTS-WM，一种用于时间序列分析的自监督潜在动作条件世界模型框架。首先，我们引入了一种潜在动作建模方法，该方法将时间序列转换背后的底层信息推断为潜在动作，而不需要显式的动作注释。然后，我们开发了一个基于 JEPA 的编码器和一个以动作为条件的世界模型，以根据学习到的潜在动作和任务信息来预测目标时间序列表示。我们在来自不同领域的 22 个数据集上的 4 个代表性任务中评估了 ACTS-WM，涵盖单变量和多变量预测和分类。综合实验表明，ACTS-WM 可以通过学习互补表示来提高预训练的基于 JEPA 的编码器的下游性能。
+
+</details>
+
+---
+
+## 9. When More Planning Hurts: Learned Planners for World Models / 当更多的规划带来伤害时：世界模型的博学规划者
+
+**Date**: 2026-10-27 | **arXiv**: [2610.37891v1](http://arxiv.org/abs/2610.37891v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.37891v1)
+
+**Categories**: cs.RO, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+On PushT, our fixed action updater (1,505 parameters) solves 8 of 16 scenes reserved from our configuration selection. The comparison planners perform as follows: Selected Adam (7 tasks solved, total planning and encoding time 218.440s), adapted iCEM (2 tasks solved, total planning and encoding time 49.309s), released LePlanner (16 tasks solved, total planning and encoding time 5.652s). The total planning and encoding time for our action updater is 59.079s. Note that our action updater does not satisfy the task-cost criterion we fixed before evaluation. We also conduct another matched experiment where we only replay the first ten commands in each context and then allow the next solve 4, 8 or 12 updates (subsequent solves all get 8 updates). Among all 16 contexts (8 scene clusters), the 3 budgets get 9, 8 and 7 successes, respectively. Interestingly, the extra updates did not rescue any failing task in this experiment. All the changes in success/failure happen in one scene cluster, where we observe that the extra updates decrease the costs of the selected latent world-model trajectories for our updater, while the tasks that used to be successes become failures. The code, weights, evaluators, execution traces and cost accounting accompany the paper.
+
+在 PushT 上，我们的固定动作更新器（1,505 个参数）解决了我们的配置选择中保留的 16 个场景中的 8 个。比较规划器执行如下：选择Adam（解决7个任务，总规划和编码时间218.440s），适配iCEM（解决2个任务，总规划和编码时间49.309s），发布LePlanner（解决16个任务，总规划和编码时间5.652s）。我们的动作更新器的总规划和编码时间是 59.079 秒。请注意，我们的操作更新程序不满足我们在评估之前确定的任务成本标准。我们还进行了另一项匹配实验，其中我们仅重播每个上下文中的前 10 个命令，然后允许下一个求解 4、8 或 12 次更新（后续求解全部获得 8 次更新）。在所有 16 个场景（8 个场景群）中，3 个预算分别获得了 9、8 和 7 次成功。有趣的是，额外的更新并没有挽救该实验中任何失败的任务。成功/失败的所有变化都发生在一个场景集群中，我们观察到额外的更新降低了更新器选择的潜在世界模型轨迹的成本，而曾经成功的任务变成了失败。论文附有代码、权重、评估器、执行跟踪和成本核算。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-10-28 (17 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-10-28
