@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-10-30](papers/2026-10-30.md) - 25 papers
 - [2026-10-28](papers/2026-10-28.md) - 30 papers
 - [2026-10-27](papers/2026-10-27.md) - 40 papers
 - [2026-10-26](papers/2026-10-26.md) - 3 papers
@@ -192,6 +193,424 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-10-30 (25 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-10-30
+
+**Paper Count**: 25
+
+---
+
+## 1. Autonomous Quantum Measurement with Agentic AI / 使用代理 AI 进行自主量子测量
+
+**Date**: 2026-10-28 | **arXiv**: [2610.38850v1](http://arxiv.org/abs/2610.38850v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.38850v1)
+
+**Categories**: cond-mat.mtrl-sci, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Quantum materials exhibit diverse electronic and functional phenomena, but their characterization requires extensive experimental expertise, iterative decision-making and accumulated laboratory knowledge that is difficult to document and transfer. Here we introduce Quantum Agent (QUANTA), an agentic artificial intelligence (AI) framework for autonomous quantum-materials characterization. Using a widely adopted Physical Property Measurement System (PPMS) as an experimental platform, QUANTA combines retrieval augmentation using scientific literature, experimental protocols and prior measurements with specialized agents for experimental planning, troubleshooting, and data interpretation. A separate deterministic control layer validates instrument actions. Guided by incoming data, QUANTA evaluates measurement quality, revises experimental plans and selects subsequent measurements. We demonstrate these capabilities through transport measurements of the topological Weyl semimetal TaP, as well as investigations of nonlinear responses in magnetic material Co2MnGa. These results establish QUANTA as a generalizable framework for evidence-driven, safeguarded and closed-loop quantum-materials characterization.
+
+量子材料表现出多种电子和功能现象，但其表征需要广泛的实验专业知识、迭代决策和积累的实验室知识，而这些知识难以记录和转移。在这里，我们介绍量子代理 (QUANTA)，这是一种用于自主量子材料表征的代理人工智能 (AI) 框架。 QUANTA 使用广泛采用的物理特性测量系统 (PPMS) 作为实验平台，将使用科学文献、实验方案和先前测量的检索增强与用于实验规划、故障排除和数据解释的专用代理相结合。单独的确定性控制层验证仪器操作。在传入数据的指导下，QUANTA 评估测量质量、修改实验计划并选择后续测量。我们通过拓扑外尔半金属 TaP 的输运测量以及磁性材料 Co2MnGa 中非线性响应的研究来展示这些功能。这些结果将 QUANTA 确立为证据驱动、受保护和闭环量子材料表征的通用框架。
+
+</details>
+
+---
+
+## 2. Causal Attention on CPU: A Cache-Aware and Load-Balanced Scheduling Kernel for Prefill / CPU 上的因果关注：用于预填充的缓存感知和负载平衡调度内核
+
+**Date**: 2026-10-28 | **arXiv**: [2610.38809v1](http://arxiv.org/abs/2610.38809v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.38809v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Agentic AI drives significant productivity gains across diverse domains, but concurrent long-context prefills from multiple agents can saturate GPU compute resources. Although CPUs offer a viable alternative, existing CPU attention kernels fall short in adapting to multi-tier cache hierarchies and lack effective thread scheduling. To address this, we introduce CACPU, a high-performance attention kernel featuring tiered cache blocking and an in-kernel task dispatching mechanism designed for causal full-sequence prefilling. CACPU achieves up to a 2.01x speedup over PyTorch SDPA, FlexAttention, and SGLang attention kernels. Integrated into SGLang, it reduces Time to First Token (TTFT) of Llama-3.1-8B by up to 1.74x while preserving model accuracy.
+
+代理 AI 可以显着提高不同领域的生产力，但来自多个代理的并发长上下文预填充可能会使 GPU 计算资源饱和。尽管 CPU 提供了可行的替代方案，但现有的 CPU 注意力内核在适应多层缓存层次结构方面存在不足，并且缺乏有效的线程调度。为了解决这个问题，我们引入了 CACPU，这是一种高性能注意力内核，具有分层缓存阻塞和专为因果全序列预填充而设计的内核内任务调度机制。与 PyTorch SDPA、FlexAttention 和 SGLang 注意力内核相比，CACPU 的加速速度高达 2.01 倍。集成到 SGLang 中，它可将 Llama-3.1-8B 的首次令牌时间 (TTFT) 缩短高达 1.74 倍，同时保持模型精度。
+
+</details>
+
+---
+
+## 3. Pinpointing Pivot Points: The DECIDE Framework for Data Analysis Decision Importances / 精确定位枢轴点：数据分析决策重要性的 DECIDE 框架
+
+**Date**: 2026-10-28 | **arXiv**: [2610.38797v1](http://arxiv.org/abs/2610.38797v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.38797v1)
+
+**Categories**: stat.ML, cs.LG, stat.ME
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Human judgment calls made throughout the data science life cycle can change the conclusions drawn from data. Independent analysts often make different choices when given the same data, leading to often unacceptable variations in results and contributing to the ongoing reproducibility crisis across scientific disciplines. The rapid adoption of agentic tools threatens to amplify this crisis. Several approaches have been developed to address this variation by following the same strategy: repeating an analysis under different combinations of analytical decisions and inspecting the distribution of outcomes. Examples include multiverse analysis, specification curve analysis, and vibration of effects. More broadly, the Predictability-Computability-Stability (PCS) framework assesses how documented judgment calls across the data science life cycle affect conclusions, with predictability serving as a reality-check that a model captures signal. Each of these approaches results in a "multiverse" object. While the distribution of outcomes reflects the overall variability of conclusions, estimating the influence of each individual decision requires additional tools. A common heuristic is to train a model to predict the outcome from these decisions and treat its coefficients or feature importances as proxies for each decision's influence. Although this strategy may work in certain cases, it assumes the model is correctly specified and accurately predicts the outcome, which we show is not always the case. In this work, we introduce DECIDE, a model-free framework that quantifies each decision's importance from the actual outcomes across the plausible decision space, avoiding issues of predictability by design. We demonstrate the effectiveness of DECIDE by applying it to real-world multiverse analyses. We further provide what is, to our knowledge, the first formal definition of the multiverse.
+
+在整个数据科学生命周期中做出的人类判断可能会改变从数据中得出的结论。独立分析师在获得相同数据时经常会做出不同的选择，从而导致结果经常出现不可接受的变化，并导致跨科学学科持续存在的可重复性危机。代理工具的迅速采用可能会加剧这场危机。人们已经开发了几种方法来通过遵循相同的策略来解决这种差异：在不同的分析决策组合下重复分析并检查结果的分布。示例包括多元宇宙分析、规格曲线分析和效应振动。更广泛地说，可预测性-可计算性-稳定性（PCS）框架评估整个数据科学生命周期中记录的判断调用如何影响结论，其中可预测性充当模型捕获信号的现实检查。这些方法中的每一种都会产生一个“多元宇宙”对象。虽然结果的分布反映了结论的总体变异性，但估计每个单独决策的影响需要额外的工具。常见的启发式方法是训练模型来预测这些决策的结果，并将其系数或特征重要性视为每个决策影响的代理。尽管此策略在某些情况下可能有效，但它假设模型已正确指定并准确预测结果，但我们表明情况并非总是如此。在这项工作中，我们引入了 DECIDE，这是一个无模型的框架，它根据合理的决策空间中的实际结果来量化每个决策的重要性，从而避免了设计的可预测性问题。我们通过将 DECIDE 应用于现实世界的多元宇宙分析来证明它的有效性。据我们所知，我们进一步提供了多元宇宙的第一个正式定义。
+
+</details>
+
+---
+
+## 4. Routed Continual Learning / 路由式持续学习
+
+**Date**: 2026-10-28 | **arXiv**: [2610.38796v1](http://arxiv.org/abs/2610.38796v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.38796v1)
+
+**Categories**: cs.LG, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Agents deployed at scale repeatedly encounter related problems, and it is natural to let them learn from each other's experience rather than starting over each time. Unfortunately, there is no single way to retain that experience that works well across settings, and no way to know in advance which future problems a given experience will help with. A global history preserves every detail but becomes expensive and mixes together experience that may not belong together; compressing that history into one fixed representation limits the cost but can throw away valuable details.   We introduce Routed Continual Learning (Routed CL), an architecture that decides how to partition and retain experience. Past trajectories are grouped into clusters, each of which maintains state using one memory system from a fixed library. Before each run, an LLM-based router either reuses an existing cluster or creates a new one, basing its decision on the problem statement, memory system descriptions, and cluster summaries. We also introduce Context Memory Adapter, which mediates between the memory system and the agentic loop.   We evaluate the architecture on a heterogeneous stream that interleaves 301 instances from the six CL-Bench tasks with 97 banking instances from $τ^3$-Bench. Across four language models and five matched rollouts, Routed Continual Learning raises normalized reward over a single global in-context learning (ICL) history by 15-30% of the maximum attainable normalized reward, achieves higher mean normalized reward than ICL-only clustering, and reduces estimated API cost by 65-72% relative to Global ICL. These results support approaching continual learning as a routing problem that chooses both a learning mechanism and a state cluster rather than committing to one representation globally.
+
+大规模部署的代理会反复遇到相关问题，很自然地让它们互相学习经验，而不是每次都重新开始。不幸的是，没有单一的方法可以保留跨环境的良好体验，也没有办法提前知道给定的体验将有助于解决未来的哪些问题。全球历史保留了每一个细节，但变得昂贵，并且将可能不属于一起的经验混合在一起；将历史压缩为一种固定的表示形式可以限制成本，但可能会丢弃有价值的细节。   我们引入路由持续学习（Roated CL），这是一种决定如何划分和保留经验的架构。过去的轨迹被分组为集群，每个集群使用固定库中的一个内存系统来维护状态。在每次运行之前，基于 LLM 的路由器要么重用现有集群，要么创建一个新集群，并根据问题陈述、内存系统描述和集群摘要做出决策。我们还引入了上下文内存适配器，它在内存系统和代理循环之间进行中介。   我们在异构流上评估架构，该异构流将来自 6 个 CL-Bench 任务的 301 个实例与来自 $τ^3$-Bench 的 97 个银行实例交错。在四种语言模型和五种匹配的部署中，路由持续学习将单个全局上下文学习 (ICL) 历史的标准化奖励提高了可达到的最大标准化奖励的 15-30%，实现了比仅 ICL 聚类更高的平均标准化奖励，并且相对于全局 ICL，将估计 API 成本降低了 65-72%。这些结果支持将持续学习视为一个路由问题，选择学习机制和状态集群，而不是全局致力于一种表示。
+
+</details>
+
+---
+
+## 5. Governance-Aware Federated Learning for Multi-Agent AI Systems: A Policy-Driven Framework for Trustworthy Collaborative AI / 多智能体人工智能系统的治理感知联合学习：可信赖的协作人工智能的策略驱动框架
+
+**Date**: 2026-10-28 | **arXiv**: [2610.38411v1](http://arxiv.org/abs/2610.38411v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.38411v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Federated Learning (FL) enables collaborative model training without exchanging raw data, but conventional FL provides limited runtime governance, evidence verification, fairness assessment, explainability monitoring, and auditability. This paper proposes Governance-Aware Federated Learning (GAFL), which combines independent governance-evidence verification, temporal trust, fairness and explanation assessment, anomaly detection, policy enforcement, normalized aggregation, and tamper-evident audit logging. Client-reported governance values are authenticated, bound to their submitted model updates, and independently recomputed before aggregation. A cross-silo prototype with 10 participants was evaluated on the Adult Income dataset under honest, benign non-IID, biased-data, malicious-update, non-compliant, falsified-evidence, and mixed-threat scenarios. Four methods were compared across five random seeds: FedAvg, FedAvg with anomaly filtering, GAFL without independent verification, and complete GAFL. Complete GAFL intervened on all affected participants at the final round across the evaluated risk scenarios, including identifying 100% of falsified-evidence participants, whereas GAFL without verification identified none of the falsified-evidence participants. Final macro-F1 ranged from 0.7520 to 0.7733 across GAFL scenarios. Complete GAFL required 173.67 plus or minus 26.94 ms of governance processing per round, compared with 3.82 plus or minus 0.79 ms for FedAvg. A strict demographic-parity threshold also caused frequent interventions for honest participants, demonstrating a significant fairness-policy and utility trade-off.
+
+联邦学习 (FL) 无需交换原始数据即可实现协作模型训练，但传统 FL 提供有限的运行时治理、证据验证、公平性评估、可解释性监控和可审计性。本文提出了治理感知联邦学习（GAFL），它结合了独立治理证据验证、时间信任、公平性和解释评估、异常检测、策略执行、规范化聚合和防篡改审计日志记录。客户报告的治理值经过身份验证，绑定到其提交的模型更新，并在聚合之前独立重新计算。在诚实、良性非独立同分布、有偏见数据、恶意更新、不合规、伪造证据和混合威胁场景下，在成人收入数据集上对包含 10 名参与者的跨孤岛原型进行了评估。对五个随机种子的四种方法进行了比较：FedAvg、带异常过滤的 FedAvg、不带独立验证的 GAFL 和完整 GAFL。完整的 GAFL 在最后一轮评估的风险场景中对所有受影响的参与者进行了干预，包括识别出 100% 的伪造证据参与者，而未经验证的 GAFL 则没有识别出任何伪造证据的参与者。在 GAFL 场景中，最终宏观 F1 的范围为 0.7520 至 0.7733。完整的 GAFL 每轮需要 173.67 正负 26.94 毫秒的治理处理，而 FedAvg 需要 3.82 正负 0.79 毫秒。严格的人口平等门槛也导致了对诚实参与者的频繁干预，这表明了公平政策和效用之间的重大权衡。
+
+</details>
+
+---
+
+## 6. Agent Transfer Protocol: Server-Mediated Agent-to-Agent Communication Architecture for the Agentic Web / 代理传输协议：用于代理 Web 的服务器介导的代理到代理通信架构
+
+**Date**: 2026-10-28 | **arXiv**: [2610.38398v1](http://arxiv.org/abs/2610.38398v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.38398v1)
+
+**Categories**: cs.AI, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The Agentic Web needs to support continuous collaboration among agents from different organizations. These collaborative relationships may span multiple tasks, network connections and execution instances. Such interactions require stable communication entries, message reception when instances are offline, and source verification after delayed reading. How to organize these responsibilities so that cross domain communication does not depend on specific execution instances being continuously online is a key issue for building long term agent interaction infrastructure. We propose ATP (Agent Transfer Protocol), a cross organization agent communication protocol adopting a domain mediated architecture. In this architecture, administrative domains maintain stable addresses and receiving entries for logical agents. The domain servers of both parties continuously undertake cross domain transmission. The receiving domain verifies and saves messages for execution instances to read later. The sending domain signs the complete message envelope. This allows the receiving instance to independently reverify the domain source and content integrity after the original connection ends, provided the original verification public key is still trusted and obtainable. We implemented an ATP prototype and evaluated it through a controlled cross organization LLM agent workflow, mechanism checks and latency measurements. The workflow completed subsequent business processing after instances went offline or were replaced. The independent verifier successfully verified the domain source and content integrity of saved messages. Latency measurements further quantified the communication and processing overhead introduced by the continuous mediation of domain servers.
+
+Agentic Web 需要支持来自不同组织的代理之间的持续协作。这些协作关系可以跨越多个任务、网络连接和执行实例。这种交互需要稳定的通信入口、实例离线时的消息接收以及延迟读取后的来源验证。如何组织这些职责，使得跨域通信不依赖于持续在线的特定执行实例，是构建长期代理交互基础设施的关键问题。我们提出了 ATP（代理传输协议），这是一种采用域中介架构的跨组织代理通信协议。在此体系结构中，管理域维护稳定的地址并接收逻辑代理的条目。双方的域服务器不断进行跨域传输。接收域验证并保存消息以供执行实例稍后读取。发送域对完整的消息信封进行签名。这允许接收实例在原始连接结束后独立地重新验证域源和内容完整性，前提是原始验证公钥仍然可信且可获取。我们实施了 ATP 原型，并通过受控的跨组织 LLM 代理工作流程、机制检查和延迟测量对其进行了评估。工作流在实例下线或更换后完成后续业务处理。独立验证者成功验证了已保存消息的域来源和内容完整性。延迟测量进一步量化了域服务器的连续中介带来的通信和处理开销。
+
+</details>
+
+---
+
+## 7. SCOPE: Selective Critical-Step On-Policy Self-Distillation for Agentic Reinforcement Learning / 范围：代理强化学习的选择性关键步骤策略自蒸馏
+
+**Date**: 2026-10-28 | **arXiv**: [2610.38391v1](http://arxiv.org/abs/2610.38391v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.38391v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Outcome-based reinforcement learning provides coarse supervision for long-horizon LLM agents: failed trajectories may contain correct steps, while successful trajectories can contain errors. Trajectory-level skills can also shift teacher preferences at unrelated steps, introducing off-target distillation signals. We introduce SCOPE, a framework for Selective Critical-Step On-Policy Self-Distillation. After a supervised warm-up, the policy analyzes its own trajectories, generates step-specific hindsight skills, and distills their guidance only at selected error steps. A bounded signed teacher-student coefficient stabilizes auxiliary updates while preserving positive reinforcement and negative correction. A success-relative pairwise length reward further encourages efficient task completion. Experiments on ALFWorld and WebShop demonstrate consistent improvements across multiple model backbones. With Qwen2.5-3B, SCOPE achieves 97.7% success on ALFWorld and 85.2% on WebShop, outperforming SEED by 5.9 and 6.3 percentage points, respectively. On unseen ALFWorld tasks, SCOPE reaches 89.6% success, improving over GRPO by 23.2 percentage points with 46.7% fewer interactions. Scaling to Qwen3-32B, SCOPE achieves 99.2% success on seen ALFWorld tasks and 94.0% on unseen tasks.
+
+基于结果的强化学习为长期 LLM 代理提供粗略监督：失败的轨迹可能包含正确的步骤，而成功的轨迹可能包含错误。轨迹级技能还可以改变教师对不相关步骤的偏好，引入偏离目标的蒸馏信号。我们引入了 SCOPE，一个选择性关键步骤按策略自蒸馏的框架。经过监督预热后，该策略会分析自己的轨迹，生成特定步骤的后见之明技能，并仅在选定的错误步骤中提取指导。有界签名师生系数可以稳定辅助更新，同时保留正强化和负校正。与成功相关的成对长度奖励进一步鼓励高效的任务完成。 ALFWorld 和 WebShop 上的实验证明了跨多个模型主干的一致改进。凭借 Qwen2.5-3B，SCOPE 在 ALFWorld 上取得了 97.7% 的成功率，在 WebShop 上取得了 85.2% 的成功率，分别比 SEED 高出 5.9 个和 6.3 个百分点。在未见过的 ALFWorld 任务中，SCOPE 取得了 89.6% 的成功率，比 GRPO 提高了 23.2 个百分点，交互次数减少了 46.7%。扩展到 Qwen3-32B，SCOPE 在已见的 ALFWorld 任务上取得了 99.2% 的成功率，在未见的任务上取得了 94.0% 的成功率。
+
+</details>
+
+---
+
+## 8. ELEVATE: Agentic Controller Acquisition from Task Failure for Quadrupedal Manipulation / ELEVATE：从四足操纵任务失败中获取代理控制器
+
+**Date**: 2026-10-28 | **arXiv**: [2610.38388v1](http://arxiv.org/abs/2610.38388v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.38388v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Quadrupedal manipulators can extend their workspace through whole-body interaction, but task-planning agents' capabilities remain limited by their available controllers. We present ELEVATE, a framework that uses persistent failures during task-program refinement to identify and acquire missing whole-body control capabilities. When these failures suggest a missing physical capability, a coding agent formulates and iteratively refines a reinforcement-learning problem, specifying behavior-specific rewards, curricula, and termination conditions. Validated controllers are added to the capability library and composed with existing controllers to retry the task. Starting from a single pretrained loco-manipulation controller, ELEVATE autonomously acquires controllers for wall-supported elevation, supported manipulation, and wall descent across a sequence of seven simulation tasks. These controllers are reused in subsequent reaching and object-manipulation tasks. On the five tasks beyond the initial controller's workspace, ELEVATE achieves mean success rates of 98.4%-100% across five independent runs, while coding-agent baselines with a fixed controller library fail to complete these tasks. The synthesized task programs, together with the acquired controllers, also transfer to a physical quadrupedal manipulator without real-robot training or fine-tuning, achieving 18/20 successes in rack retrieval and 16/20 in floor-to-rack placement. Videos and demonstrations are available at https://agentic-quad-elevate.github.io/public/.
+
+四足机械臂可以通过全身交互来扩展其工作空间，但任务规划代理的能力仍然受到可用控制器的限制。我们提出了 ELEVATE，这是一个框架，它在任务程序细化过程中使用持续失败来识别和获取缺失的全身控制能力。当这些失败表明身体能力缺失时，编码代理会制定并迭代完善强化学习问题，指定特定行为的奖励、课程和终止条件。经过验证的控制器将添加到功能库中，并与现有控制器组合以重试任务。从单个预训练的局部操纵控制器开始，ELEVATE 可在七个模拟任务序列中自动获取用于墙壁支撑提升、支撑操纵和墙壁下降的控制器。这些控制器在后续的到达和对象操作任务中重复使用。在初始控制器工作空间之外的五项任务上，ELEVATE 在五次独立运行中实现了 98.4%-100% 的平均成功率，而具有固定控制器库的编码代理基线无法完成这些任务。合成的任务程序与获得的控制器一起传输到物理四足机械手，无需真正的机器人训练或微调，在机架检索中实现 18/20 的成功率，在地板到机架放置中实现 16/20 的成功率。视频和演示可在 https://agentic-quad-elevate.github.io/public/ 获取。
+
+</details>
+
+---
+
+## 9. WeVisCut: The Whole Editing Room in One Agent From Narration to Long-Form Video / WeVisCut：从旁白到长视频的整个编辑室合一
+
+**Date**: 2026-10-28 | **arXiv**: [2610.38352v1](http://arxiv.org/abs/2610.38352v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.38352v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Producing long-form videos from narration requires interdependent decisions that remain coherent across shots. Existing agentic editors often use multi-stage workflows driven by general models, leaving the quality-cost trade-off of compact, task-adapted policies unclear. We address this gap with WeVisCut, a long-form script-to-video system that connects tool execution with policy learning. Its agent harness maintains shared production state so that tool feedback informs subsequent decisions and repairs. Because finished videos do not expose these decisions, our four-stage data pipeline combines editing inversion with verified replay to turn recovered editing intent into executable supervision. Applied to 3,750 finished videos, this pipeline yields over 130K training examples. We use this supervision to train a single 9B policy that coordinates production and recovers from failures within the same harness. Moreover, we introduce a 100-task benchmark and five metrics assessing editing quality and delivery reliability. Under a shared tool environment, WeVisCut substantially outperforms its base model and achieves comparable performance to Claude Opus 5 while using nearly 33x fewer generated tokens per successful output minute. It also outperforms task-matched native editors on our proposed metrics.
+
+根据旁白制作长视频需要相互依赖的决策，并且在各个镜头之间保持连贯。现有的代理编辑器经常使用由通用模型驱动的多阶段工作流程，使得紧凑的、适应任务的策略的质量成本权衡不明确。我们通过 WeVisCut 解决了这一差距，这是一种将工具执行与策略学习连接起来的长格式脚本到视频系统。其代理工具维护共享的生产状态，以便工具反馈为后续决策和修复提供信息。由于完成的视频不会暴露这些决策，因此我们的四阶段数据管道将编辑反转与经过验证的重放相结合，将恢复的编辑意图转化为可执行的监督。该管道应用于 3,750 个成品视频，产生超过 13 万个训练示例。我们使用这种监督来训练一个单一的 9B 策略，该策略可以在同一线束内协调生产并从故障中恢复。此外，我们还引入了 100 项任务基准和五个评估编辑质量和交付可靠性的指标。在共享工具环境下，WeVisCut 的性能大大优于其基本模型，并实现了与 Claude Opus 5 相当的性能，同时每成功输出分钟使用的生成令牌数量减少了近 33 倍。在我们提出的指标上，它也优于任务匹配的本机编辑器。
+
+</details>
+
+---
+
+## 10. A Case Study of a Multi-Agent Kernel-Optimization Loop That Learns a New AI Accelerator / 学习新人工智能加速器的多代理内核优化循环案例研究
+
+**Date**: 2026-10-28 | **arXiv**: [2610.38329v1](http://arxiv.org/abs/2610.38329v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.38329v1)
+
+**Categories**: cs.LG, cs.AI, cs.AR, cs.PL
+
+**Code**: https://github.com/bgchun-fs/multi-agent-kernel-gen-loop.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Frontier large language models write correct CUDA kernels for most single-operator benchmark tasks, yet their accuracy collapses on accelerators whose architecture and programming language they have rarely seen. We present a case study of an LLM agent loop built for such accelerators. Our example is the FuriosaAI RNGD NPU, programmed in a recent, sparsely documented Rust DSL, where the loop optimized three Gemma-4-12B decode kernels over 12 days on a shared, scarce device. The loop builds its own target knowledge: it writes and checks a summary of the DSL documentation, measures the chip with microbenchmarks, records compiler-derived legality rules, and revisits this knowledge when the toolchain changes, rechecking rules and measurements where it can. A role-based search over per-kernel Design Trees explores whole-kernel designs and accumulates small accepted changes in the best version of each kernel. Because device time is scarce and readings are noisy, cheap checks screen new designs before any device run, and late in the run a change was accepted only after repeated comparisons with the best kernel on the device. The final kernels reach a 9.293x geomean speedup over the official baseline, each within 1.25x of the cycles needed just to move its weights. Our prompts, profiler and acceptance test are available at https://github.com/bgchun-fs/multi-agent-kernel-gen-loop.
+
+前沿大型语言模型为大多数单算子基准测试任务编写了正确的 CUDA 内核，但其准确性在他们很少见过的架构和编程语言的加速器上崩溃了。我们提出了一个为此类加速器构建的 LLM 代理循环的案例研究。我们的示例是 FuriosaAI RNGD NPU，它是在最近记录很少的 Rust DSL 中进行编程的，其中循环在 12 天内在共享的稀缺设备上优化了三个 Gemma-4-12B 解码内核。该循环构建自己的目标知识：它编写并检查 DSL 文档的摘要，使用微基准测试芯片，记录编译器导出的合法性规则，并在工具链发生变化时重新访问这些知识，尽可能重新检查规则和测量。对每个内核设计树的基于角色的搜索探索整个内核设计并积累每个内核最佳版本中可接受的小更改。由于设备时间稀缺且读数嘈杂，因此在任何设备运行之前都会进行廉价检查来筛选新设计，并且在运行后期只有在与设备上的最佳内核进行反复比较后才接受更改。最终的内核比官方基线达到了 9.293 倍的几何平均加速，每个内核在移动其权重所需的周期的 1.25 倍之内。我们的提示、分析器和验收测试可在 https://github.com/bgchun-fs/multi-agent-kernel-gen-loop 上找到。
+
+</details>
+
+---
+
+## 11. Does 3D Pose Improve Action Valuation in Football? An Empirical Study of Pose Representations and Learning Objectives / 3D 姿势能否提高足球中的动作评价？姿势表示和学习目标的实证研究
+
+**Date**: 2026-10-28 | **arXiv**: [2610.38308v1](http://arxiv.org/abs/2610.38308v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.38308v1)
+
+**Categories**: cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Football action valuation estimates players' contributions to future scoring. Existing multi-agent deep reinforcement learning (MADRL) models use 2D positions and velocities, omitting posture information relevant to imminent actions. We investigate whether adding 3D pose to a SARSA-based model improves observed-action values relative to attack returns: goals, conceded goals or final expected possession value. Using UEFA Champions League 2022/23 event, tracking and 3D pose data, we compare six representations (no pose, raw joints, torso and head orientation, and spatial-temporal graph convolutional network (ST-GCN) embeddings) across five learning settings and three seeds. The settings vary temporal-difference targets and action-prediction loss, with Monte Carlo return regression as a reference. Across 50 on-ball and off-ball comparisons, pose robustly improved return prediction in only three, all using torso and head orientation, while worsening it in twelve, mostly with ST-GCN. Training choices had greater effects: removing the action-prediction loss raised on-ball skill of position-only values from 0.003 to 0.040 and their correlation with expected goals from 0.23 to 0.60; the improvement in return prediction persisted at matched training length. Separately, pose improved prediction of the on-ball action 0.2 s ahead (macro AUC 0.914 to 0.934 with raw joints), while the passer's pose during execution improved pass-success prediction (AUC 0.844 to 0.856). Within this training protocol, pose informed imminent actions but rarely improved observed-action values.
+
+足球动作评估评估球员对未来得分的贡献。现有的多智能体深度强化学习 (MADRL) 模型使用 2D 位置和速度，忽略与即将发生的动作相关的姿势信息。我们研究将 3D 姿势添加到基于 SARSA 的模型中是否可以改善相对于攻击回报的观察动作值：进球、失球或最终预期控球权值。使用 2022/23 年欧洲冠军联赛赛事、跟踪和 3D 姿势数据，我们比较了五种学习设置和三个种子的六种表示（无姿势、原始关节、躯干和头部方向以及时空图卷积网络 (ST-GCN) 嵌入）。这些设置会改变时间差异目标和动作预测损失，并以蒙特卡罗回归回归作为参考。在 50 项有球和无球比较中，只有 3 项的回球预测得到了显着改善，全部使用躯干和头部方向，而 12 项的回球预测则恶化，大部分使用 ST-GCN。训练选择具有更大的影响：消除动作预测损失将仅位置值的持球技能从 0.003 提高到 0.040，并将其与预期进球的相关性从 0.23 提高到 0.60；在匹配的训练长度下，回报预测的改善持续存在。另外，改进了对提前 0.2 秒的持球动作的预测（使用原始关节的宏 AUC 0.914 至 0.934），而传球者在执行过程中的姿势改进了传球成功预测（AUC 0.844 至 0.856）。在此培训协议中，提出了明智的迫在眉睫的行动，但很少改进观察到的行动值。
+
+</details>
+
+---
+
+## 12. Precedent or Intent? What Coding Agents Follow When Evolving Existing Code / 先例还是意图？编码代理在改进现有代码时遵循什么
+
+**Date**: 2026-10-28 | **arXiv**: [2610.38244v1](http://arxiv.org/abs/2610.38244v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.38244v1)
+
+**Categories**: cs.SE, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Existing code reveals past implementation decisions but rarely explains the reasoning behind them. When coding agents implement new features or modify existing functionality, past decisions may conflict with new task instructions. This raises a fundamental question for agentic software evolution: when multiple implementations satisfy the same functional requirements, how do coding agents decide whether to follow existing code or new task instructions? We investigate this question through bidirectional, controlled experiments in purpose-built repositories, followed by validation in real-world open-source repositories. Our approach isolates three competing sources of guidance: (1) agents' default preferences, (2) repository precedents, and (3) explicit task instructions. We conduct 5,625 trials across four coding agents and six implementation pairs, with validation in four open-source repositories spanning three programming languages. We find that agents share the same default implementation choices, yet overwhelmingly follow repository precedent when it conflicts with those defaults (359/360 trials). Crucially, not all precedents carry equal influence: three supporting local files yield 96% adoption, compared with only 4% for sibling-resource files, and changing file placement alone can shift adoption from 0% to 100% at a fixed example count. When new task intent conflicts with existing code, written priority rules achieve substantially higher success than code examples alone (59/60 versus 38/60 joint successes for two agents on two implementation pairs). The effectiveness of explicit rules also extends to open-source repositories, where a harness-loaded rule raises joint success from 0/120 to 117/120. These findings motivate design-decision traceability that preserves not only implementation choices but also the rationale and priorities that should guide future changes.
+
+现有代码揭示了过去的实施决策，但很少解释其背后的原因。当编码代理实现新功能或修改现有功能时，过去的决策可能与新的任务指令发生冲突。这就提出了代理软件演化的一个基本问题：当多个实现满足相同的功能需求时，编码代理如何决定是遵循现有代码还是遵循新的任务指令？我们通过在专门构建的存储库中进行双向受控实验来研究这个问题，然后在现实世界的开源存储库中进行验证。我们的方法隔离了三个相互竞争的指导来源：（1）代理的默认偏好，（2）存储库先例，以及（3）明确的任务指令。我们对四个编码代理和六个实现对进行了 5,625 次试验，并在跨越三种编程语言的四个开源存储库中进行了验证。我们发现代理共享相同的默认实现选择，但在与这些默认值冲突时绝大多数遵循存储库先例（359/360 试验）。至关重要的是，并非所有先例都具有相同的影响力：三个支持本地文件的采用率高达 96%，而同级资源文件的采用率仅为 4%，并且仅更改文件位置就可以在固定示例计数下将采用率从 0% 转变为 100%。当新任务意图与现有代码冲突时，书面优先级规则比单独的代码示例取得更高的成功（两个实现对上的两个代理的联合成功率为 59/60 与 38/60）。显式规则的有效性还扩展到开源存储库，其中加载规则的联合成功率从 0/120 提高到 117/120。这些发现激发了设计决策的可追溯性，不仅保留了实施选择，还保留了指导未来变革的基本原理和优先事项。
+
+</details>
+
+---
+
+## 13. FACTS-MAS: A Multi-Agent Architecture for Adaptive Forecasting from Heterogeneous Evidence / FACTS-MAS：根据异构证据进行自适应预测的多代理架构
+
+**Date**: 2026-10-28 | **arXiv**: [2610.38225v1](http://arxiv.org/abs/2610.38225v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.38225v1)
+
+**Categories**: cs.AI, stat.AP
+
+**Code**: https://github.com/Madumita24/FACTS-MAS.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Real-world forecasting often requires integrating heterogeneous evidence whose predictive value varies across horizons, operating regimes, and domains. We introduce FACTS-MAS, a domain-agnostic multi-agent forecasting framework that decomposes evidence into specialized channels for temporal dynamics, exogenous context, seasonality, structural information, and discrete events. Each agent generates an independently testable forecast through a common interface, while leakage-safe historical validation measures its predictive skill relative to a naive reference. These skill estimates are used to weight and combine agent forecasts, so that uninformative evidence is either removed or downweighted rather than forced to participate. A calibration procedure selects domain-specific constant means based on historical validation folds. We evaluate FACTS-MAS on weekly for-sale housing inventory from Zillow and weekly unemployment insurance claims from FRED, for 15 U.S. metropolitan areas at 4-, 8-, and 13-week forecasting horizons. Our method outperforms both a naive last-value forecast method and the TimesFM foundation model. However, a factor-adjusted exponential smoothing model performs as well as the fused forecast. The evidence therefore supports FACTS-MAS as a systematic protocol for testing, calibrating, and recomposing evidence channels before assembling them into the strongest single model for a specific application domain. Code, data, and results are available at https://github.com/Madumita24/FACTS-MAS.
+
+现实世界的预测通常需要整合异质证据，其预测价值因视野、操作制度和领域而异。我们引入了 FACTS-MAS，这是一种与领域无关的多智能体预测框架，它将证据分解为时间动态、外生背景、季节性、结构信息和离散事件的专门通道。每个代理通过通用接口生成可独立测试的预测，而防泄漏历史验证则衡量其相对于简单参考的预测能力。这些技能估计用于加权和组合代理的预测，以便删除或降低非信息性证据，而不是被迫参与。校准程序根据历史验证倍数选择特定于域的常数均值。我们根据 Zillow 的每周待售住房库存和 FRED 的每周失业保险索赔评估 FACTS-MAS，对美国 15 个大都市地区进行 4、8 和 13 周的预测。我们的方法优于朴素的最后值预测方法和 TimesFM 基础模型。然而，因子调整指数平滑模型的性能与融合预测一样好。因此，证据支持 FACTS-MAS 作为一种系统协议，用于测试、校准和重组证据通道，然后将它们组装成针对特定应用领域的最强单一模型。代码、数据和结果可在 https://github.com/Madumita24/FACTS-MAS 获取。
+
+</details>
+
+---
+
+## 14. Rubricon: Automated Rubric Generation and Refinement for LLM Evaluation and Training / Rubricon：用于法学硕士评估和培训的自动评分标准生成和细化
+
+**Date**: 2026-10-28 | **arXiv**: [2610.38220v1](http://arxiv.org/abs/2610.38220v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.38220v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Rubrics enable reward assignment on tasks without verifiable answers, but are expensive to manually produce from scratch. We present Rubricon, a pipeline that generates discriminative rubrics without requiring human preference labels, rubric annotation, or generator-model training. Using any LLM, Rubricon samples multiple rubrics, selects the most discriminative candidate, adds criteria to capture overlooked requirements or response flaws, and prunes criteria that are misaligned or shallow. Alongside LLM self-critique and test-time scaling, Rubricon uses observed criterion pass rates on example model responses to guide refinement. Across five professional, consumer, clinical, and general-use LLM benchmarks, Rubricon produces rubrics whose scores of frontier LLM responses exhibit 9% greater alignment with labor-intensive expert-authored rubrics, compared to the best alternative synthetic rubric generation method among RRD, QSRG, OpenRubrics, and agentic generation via harnesses like Codex. On HealthBench, post-training a Qwen3.5-9B model with Rubricon rubrics yields 4.5% better performance than training with rubrics from the strongest alternative synthetic rubric generator, RRD.
+
+评分标准可以在没有可验证答案的情况下对任务进行奖励分配，但从头开始手动生成的成本很高。我们提出了 Rubricon，一个可以生成有区别的评分标准的管道，无需人类偏好标签、评分标准注释或生成器模型训练。使用任何法学硕士，Rubricon 都会对多个标准进行抽样，选择最具辨别力的候选人，添加标准以捕获被忽视的要求或响应缺陷，并修剪不一致或肤浅的标准。除了法学硕士自我批评和测试时间缩放之外，Rubricon 还使用观察到的示例模型响应的标准通过率来指导改进。在五个专业、消费者、临床和通用 LLM 基准中，与 RRD、QSRG、OpenRubrics 和通过 Codex 等工具生成的代理生成方法中的最佳替代合成评分标准生成方法相比，Rubricon 生成的评分标准的前沿 LLM 响应分数与劳动密集型专家撰写的评分标准的一致性提高了 9%。在 HealthBench 上，使用 Rubricon 评分标准对 Qwen3.5-9B 模型进行后训练，其性能比使用来自最强替代合成评分生成器 RRD 的评分标准进行训练要好 4.5%。
+
+</details>
+
+---
+
+## 15. Disparity Laundering: Consensus Without Fairness in Clinical Multi-Agent Systems / 差异洗钱：临床多代理系统中没有公平的共识
+
+**Date**: 2026-10-28 | **arXiv**: [2610.38215v1](http://arxiv.org/abs/2610.38215v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.38215v1)
+
+**Categories**: cs.AI, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Clinical large language models are increasingly fielded as multi-agent teams, on the assumption that deliberation averages out individual error. It does not average out bias. Across a full factorial of five model families and four aggregation topologies on 120 real MIMIC-IV emergency cases under counterfactual demographic swaps, no configuration neutralizes the disparity: all 20 cells commit the direction of their agents' independent answers, giving Black patients more acute triage. Every model has a topology that amplifies its baseline gap, but which one varies by model, so no design is reliably safe or reliably amplifying: the disparity is relocated, never removed. Late-stage fixes fail: fairness instructions and demographic masking leave the gap untouched, and per-agent self-debiasing widens it, because the bias is already encoded in the agents' ordinary clinical numbers. We call this disparity laundering; the audits now applied to clinical AI, per model, per output, per version, can certify the parts but never the committed decision. Interventions close the gap exactly when they make counterfactual versions visible inside the system and pool them, through deliberation, into the committed decision. A diverse-perspective ensemble does both while keeping the team, with no retraining or architectural change: the disparity falls by 67 to 94% where all five perspectives pool at every round, and the one topology that never pools them is the one it cannot reliably repair. Medical multi-agent systems do not filter demographic bias; they launder it into plausible decisions no single-version audit can catch, and the only defense is to make the bias visible.
+
+临床大语言模型越来越多地被部署为多智能体团队，假设深思熟虑可以平均掉个体错误。它不会消除偏差。在反事实人口统计交换下的 120 个真实 MIMIC-IV 紧急情况下的 5 个模型家族和 4 个聚合拓扑的完整阶乘中，没有任何配置可以消除差异：所有 20 个单元都遵循其代理的独立答案的方向，为黑人患者提供更敏锐的分类。每个模型都有一种放大其基线差距的拓扑，但哪种拓扑因模型而异，因此没有一种设计能够可靠地安全或可靠地放大：差异会被重新定位，而不会被消除。后期修复失败了：公平指令和人口统计掩盖使差距保持不变，而每个代理人的自我偏差扩大了差距，因为偏见已经编码在代理人的普通临床数据中。我们称这种差异为“洗钱”；现在应用于临床人工智能的审计，每个模型、每个输出、每个版本，可以验证零件，但不能验证承诺的决策。当干预措施使反事实版本在系统内部可见，并通过深思熟虑将它们汇集到已提交的决策中时，干预措施就可以缩小差距。多元化视角的整体在保持团队不变的情况下做到了这两点，无需再培训或架构变化：当所有五个视角在每一轮都汇集时，差距下降了 67% 到 94%，而从不汇集它们的拓扑是它无法可靠修复的拓扑。医疗多智能体系统不会过滤人口统计偏差；他们将其清洗成单一版本审计无法捕捉到的看似合理的决策，唯一的防御措施就是让偏见可见。
+
+</details>
+
+---
+
+## 16. Nemotron 3.5 Super and Lightning: Open, Efficient Mixture-of-Experts Hybrid Mamba-Transformer Models for Agentic AI / Nemotron 3.5 Super 和 Lightning：用于代理 AI 的开放、高效专家混合 Mamba-Transformer 模型
+
+**Date**: 2026-10-28 | **arXiv**: [2610.38095v1](http://arxiv.org/abs/2610.38095v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.38095v1)
+
+**Categories**: cs.CL, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We introduce Nemotron 3.5 Super and Nemotron 3.5 Lightning, open and efficient Mixture-of-Experts Hybrid Mamba-Transformer models designed for reasoning, long-context understanding, and agentic workloads. Super is a 120B-parameter, 12B-active multimodal model, while Lightning is a smaller 30B-parameter, 3B-active text model; both designed for efficient deployment. Both models combine large-scale distillation, long-context training, and native speculative decoding, while Super further incorporates Indic continued pretraining and agentic software-engineering mid-training. We develop a comprehensive post-training pipeline spanning supervised fine-tuning and reinforcement learning (RLVR and RLHF), complemented in Super by specialized teacher training and multi- teacher on-policy distillation (MOPD). This transforms Super from a text-only base model into a multimodal agent capable of reasoning over text, images, video, and interactive tool environments. We further explore test-time scaling through parallel agent execution and self-verification. Across training and deployment, we jointly optimize capability and efficiency. Indic continued pretraining improves Indian-language benchmarks by up to 9.82 percentage points, while agentic mid-training strengthens software-engineering capabilities and robustness across agent harnesses. The post-trained Super model achieves 51.78% on SWE-bench Pro, surpassing Nemotron 3 Ultra despite using approximately 4.6x fewer active parameters. Post-training MTP boosting improves speculative- decoding acceptance length by up to 21.8% under probabilistic draft sampling, while NVFP4 quantization achieves 99.62% median accuracy recovery relative to BF16. Inference optimizations enable up to 4,856 output tokens/s/GPU on GB200 while sustaining at least 50 tokens/s/user.
+
+我们推出 Nemotron 3.5 Super 和 Nemotron 3.5 Lightning，这是开放且高效的专家混合 Mamba-Transformer 模型，专为推理、长上下文理解和代理工作负载而设计。 Super是一个120B参数、12B主动多模态模型，而Lightning是一个较小的30B参数、3B主动文本模型；两者都是为了高效部署而设计的。两种模型都结合了大规模蒸馏、长上下文训练和本机推测解码，而 Super 进一步结合了 Indic 持续预训练和代理软件工程中期训练。我们开发了一个全面的培训后管道，涵盖监督微调和强化学习（RLVR 和 RLHF），并在 Super 中通过专业教师培训和多教师策略蒸馏（MOPD）进行补充。这将 Super 从纯文本基础模型转变为能够对文本、图像、视频和交互式工具环境进行推理的多模式代理。我们通过并行代理执行和自我验证进一步探索测试时间扩展。在培训和部署过程中，我们共同优化能力和效率。 Indic 持续预训练将印度语言基准提高了 9.82 个百分点，而代理中期培训则增强了软件工程能力和跨代理工具的稳健性。训练后的 Super 模型在 SWE-bench Pro 上达到了 51.78%，尽管使用的有效参数减少了大约 4.6 倍，但仍超过了 Nemotron 3 Ultra。训练后 MTP 提升在概率草稿采样下将推测解码接受长度提高了 21.8%，而 NVFP4 量化相对于 BF16 实现了 99.62% 的中值精度恢复。推理优化可在 GB200 上实现高达 4,856 个输出令牌/秒/GPU，同时维持至少 50 个令牌/秒/用户。
+
+</details>
+
+---
+
+## 17. Cooperative EV Charging Assignment Using Multi-Agent Reinforcement Learning: A Comparison of QMIX and Independent Q-Learning Under Urban Traffic Uncertainty / 使用多智能体强化学习的协作电动汽车充电分配：城市交通不确定性下 QMIX 和独立 Q-Learning 的比较
+
+**Date**: 2026-10-27 | **arXiv**: [2610.38053v1](http://arxiv.org/abs/2610.38053v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.38053v1)
+
+**Categories**: cs.MA, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The allocation of electric vehicles to public charging stations is increasingly constrained by the fact that several heterogeneous facilities often serve the same stream of requests while observing only partial local information. An accept/reject decision that is defensible for one station may nevertheless reduce the efficiency of the charging district as a whole. We formulate this operational problem as a Decentralized Partially Observable Markov Decision Process (Dec-POMDP) and examine whether Centralized Training with Decentralized Execution (CTDE), instantiated through QMIX, improves assignment performance relative to a cooperative Independent Q-Learning baseline (IQL). The evaluation uses a six-station urban network simulated with SUMO, five independent random seeds, 200 training episodes, and four traffic flux scenarios ranging from 100 to 250 vehicles/hour. Under this protocol, QMIX reaches a mean reward per evaluated decision of +0.776, versus +0.578 for IQL (delta = +0.198, seed-paired Cohens dz = 2.98, exact two-sided Wilcoxon p = 0.0625, the minimum attainable value at this sample size), and raises the acceptance rate from 72.4% to 94.0% (delta = +21.6 pp, dz = 5.24, Wilcoxon p = 0.0625). A five-variant ablation suggests this gain is primarily attributable to the CTDE architecture when holding cooperative reward terms fixed, though not formally isolated with a single seed. By contrast, cooperative reward shaping and experience sharing show no clear descriptive benefit and may slightly reduce performance. These findings support the view that, for multi-station charging assignment, coordination should be embedded in the learning architecture rather than added only through heuristic cooperation terms.
+
+电动汽车向公共充电站的分配越来越受到以下事实的限制：多个异构设施通常服务于相同的请求流，同时仅观察部分本地信息。然而，对于一个充电站来说合理的接受/拒绝决定可能会降低整个充电区的效率。我们将这个操作问题表述为分散式部分可观察马尔可夫决策过程 (Dec-POMDP)，并检查通过 QMIX 实例化的集中式训练与分散式执行 (CTDE) 是否相对于协作式独立 Q-学习基线 (IQL) 提高了作业性能。该评估使用 SUMO 模拟的六站城市网络、五个独立随机种子、200 个训练集以及 100 至 250 辆车/小时之间的四种交通流量场景。在此协议下，QMIX 每个评估决策的平均奖励为 +0.776，而 IQL 为 +0.578（delta = +0.198，种子配对 Cohens dz = 2.98，精确两侧 Wilcoxon p = 0.0625，此样本量下可达到的最小值），并将接受率从 72.4% 提高到 94.0%（delta = +21.6） pp，dz = 5.24，Wilcoxon p = 0.0625）。五变体消融表明，这种收益主要归因于在保持合作奖励条件固定时的 CTDE 架构，尽管没有正式与单个种子隔离。相比之下，合作奖励塑造和经验共享没有显示出明显的描述性好处，并且可能会稍微降低绩效。这些发现支持这样的观点：对于多站充电分配，协调应该嵌入到学习架构中，而不是仅通过启发式合作术语添加。
+
+</details>
+
+---
+
+## 18. SkillMem: Compact External Skill Memory for Latent Multi-Agent Reasoning / SkillMem：用于潜在多智能体推理的紧凑外部技能记忆
+
+**Date**: 2026-10-27 | **arXiv**: [2610.37935v1](http://arxiv.org/abs/2610.37935v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.37935v1)
+
+**Categories**: cs.AI, cs.CL, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Latent multi-agent systems reduce inference cost by keeping intermediate reasoning and inter-agent communication in continuous representations.\ Reusable skills, however, are commonly supplied as text or stored as layer-wise Key-Value states or skill-specific model parameters, introducing repeated processing or substantial per-skill storage.\ We introduce \textbf{SkillMem}, which represents each reusable skill as a small external latent memory and makes it directly available during latent multi-agent reasoning.\ A role-conditioned cross-attention reader allows the same memory to guide different agents according to their roles and current hidden states.\ We train the skill memories and shared reader through behavioral distillation, matching the change in token predictions induced by a textual skill while keeping the backbone frozen.\ For our experiments, we obtain textual skills from paired successful and failed multi-agent trajectories, although existing skills can also be compiled directly.\ Across six benchmarks and Qwen3 models ranging from 4B to 14B parameters, SkillMem provides strong gains for smaller backbones while preserving efficient latent multi-agent inference across model scales.\ We use the same $8\times256$ memory configuration across all evaluated model scales, requiring 9.6\,KB of skill-specific storage per skill, including its retrieval embedding.\ For a library of 100 skills, SkillMem reduces total storage by more than $38\times$ compared with alternative skill representations and achieves up to a $4.23\times$ end-to-end inference speedup.\ These results show that compact procedural memories can be reused without sacrificing the efficiency of latent multi-agent reasoning.
+
+潜在多智能体系统通过保持连续表示中的中间推理和智能体间通信来降低推理成本。\然而，可重用技能通常以文本形式提供或存储为分层键值状态或特定于技能的模型参数，从而引入重复处理或大量的每个技能存储。\我们引入\textbf{SkillMem}，它将每个可重用技能表示为一个小的外部潜在内存，并使其在潜在多智能体推理过程中直接可用。\交叉注意力阅读器允许相同的记忆根据不同的智能体的角色和当前隐藏状态来引导它们。\我们通过行为蒸馏来训练技能记忆和共享阅读器，匹配文本技能引起的标记预测的变化，同时保持骨干网冻结。\在我们的实验中，我们从成对的成功和失败的多智能体轨迹中获得文本技能，尽管现有的技能也可以直接编译。\在从 4B 到 14B 参数的六个基准和 Qwen3 模型中，SkillMem 为较小的模型提供了强大的收益\ 我们在所有评估的模型规模中使用相同的 $8\times256$ 内存配置，每个技能需要 9.6\,KB 的特定于技能的存储，包括其检索嵌入。\ 对于包含 100 个技能的库，与替代技能表示相比，SkillMem 将总存储减少了超过 $38\times$，并实现了高达 $4.23\times$ 的端到端存储推理加速。\这些结果表明，紧凑的程序记忆可以重复使用，而不会牺牲潜在多智能体推理的效率。
+
+</details>
+
+---
+
+## 19. GARDEN: Generalist Autonomous Reward Design Through Evidence Navigation for Cooperative Multi-Agent Reinforcement Learning / GARDEN：通过证据导航进行多智能体协作强化学习的通才自主奖励设计
+
+**Date**: 2026-10-27 | **arXiv**: [2610.37926v1](http://arxiv.org/abs/2610.37926v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.37926v1)
+
+**Categories**: cs.AI, cs.MA, eess.SY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Cooperative multi-agent reinforcement learning (MARL) enables teams of agents, such as robots and autonomous vehicles, to learn coordinated behavior, but what such teams learn is largely determined by their reward function. Because task success alone provides too little guidance for learning, intermediate rewards are usually designed by hand, and this effort must often be repeated whenever the environment or the team changes. Large language models (LLMs) can automate the effort by writing reward functions as code, yet the resulting rewards are typically designed and tested in a single setting. To enable their reuse across settings, GARDEN (Generalist Autonomous Reward Design through Evidence Navigation) is proposed, in which one reward program is developed for a family of related scenarios and transferred, unchanged, to scenarios that were not available during its design. During development, environment code, training records, and agent behavior are investigated by an LLM reward engineer, and draft rewards are tested in trial training runs, while the learning algorithm and the rule for selecting the final reward are held fixed. On unseen scenarios of the Overcooked and SMAX benchmarks, task returns were increased by 58.2% and 52.5% over the default rewards on two kitchen layouts, and the mean win rate in two combat scenarios was raised from 51.0% to 89.9%. Under matched candidate and probe budgets, this exceeded the 84.2% and 79.2% obtained with fixed diagnostic feedback and Eureka-inspired reward reflection. These results show that a single autonomously engineered reward can be reused effectively across related cooperative scenarios.
+
+协作多智能体强化学习 (MARL) 使机器人和自动驾驶汽车等智能体团队能够学习协调行为，但此类团队学习的内容很大程度上取决于其奖励函数。由于任务成功本身对学习的指导太少，因此中间奖励通常是手工设计的，并且每当环境或团​​队发生变化时，通常必须重复这种努力。大型语言模型 (LLM) 可以通过将奖励函数编写为代码来自动化工作，但最终的奖励通常是在单一设置中设计和测试的。为了实现跨设置的重用，提出了 GARDEN（通过证据导航进行通才自主奖励设计），其中为一系列相关场景开发了一个奖励计划，并原封不动地转移到设计期间不可用的场景。在开发过程中，环境代码、训练记录和代理行为由LLM奖励工程师进行调查，并在试训练中测试草案奖励，而学习算法和选择最终奖励的规则保持不变。在 Overcooked 和 SMAX 基准测试的未见场景中，两种厨房布局的任务回报比默认奖励分别提高了 58.2% 和 52.5%，两种战斗场景的平均胜率从 51.0% 提高到 89.9%。在匹配的候选者和探测预算下，这超过了通过固定诊断反馈和尤里卡启发的奖励反映获得的 84.2% 和 79.2%。这些结果表明，单个自主设计的奖励可以在相关的合作场景中有效地重复使用。
+
+</details>
+
+---
+
+## 20. VerifiedLab: Harnessing Knowns for Unknowns / VerifiedLab：利用已知来应对未知
+
+**Date**: 2026-10-27 | **arXiv**: [2610.37923v1](http://arxiv.org/abs/2610.37923v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.37923v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Across human history, knowledge has undergone several transitions, from orality to writing and then to digital archives. At each transition, humans established new conventions to preserve knowledge for the new era. Nowadays, as research agents are increasingly deployed for laboratory experiments, knowledge is crossing another boundary: from records written for humans to those for machines. In this work, we introduce VerifiedLab, a multi-agent harness framework for this human-to-machine transition of knowledge. VerifiedLab transforms research output from passive artifacts into active systems that accelerate downstream use, adoption and prediction of future trends. In VerifiedLab, a team of AI scientists with distinct roles reasons over records verified field by field: a principal investigator plans, a librarian computes the evidence directly from the records, specialists draft, and a gate and a critic check each claim against the measured reliability of its data before the harness decides whether to release or withhold it. We demonstrate the efficacy of VerifiedLab through extensive experiments on perovskite solar cells: VerifiedLab recovers known physical trends, anticipates devices reported a year later, and lets AI scientists inherit the literature together with a measure of how far it can be trusted. By scaling the inference-time verification compute, VerifiedLab introduces a new pathway for knowledge dissemination and machine harness for AI co-scientists.
+
+纵观人类历史，知识经历了几次转变，从口头到书面，再到数字档案。在每一次转变中，人类都会制定新的惯例来保存新时代的知识。如今，随着研究人员越来越多地被部署到实验室实验中，知识正在跨越另一个边界：从为人类编写的记录到为机器编写的记录。在这项工作中，我们介绍了 VerifiedLab，这是一个用于人机知识转换的多代理框架。 VerifiedLab 将研究成果从被动工件转变为主动系统，加速下游的使用、采用和未来趋势的预测。在 VerifiedLab 中，一个由具有不同角色的人工智能科学家组成的团队对逐个领域验证的记录进行推理：首席研究员计划，图书馆员直接从记录中计算证据，专家草稿，以及门和评论家根据其数据的测量可靠性检查每项声明，然后再决定是否发布或保留它。我们通过对钙钛矿太阳能电池进行广泛的实验来证明 VerifiedLab 的功效：VerifiedLab 恢复已知的物理趋势，预测一年后报告的设备，并让 AI 科学家继承文献以及衡量其可信度的方法。通过扩展推理时间验证计算，VerifiedLab 为人工智能联合科学家引入了一条新的知识传播和机器利用途径。
+
+</details>
+
+---
+
+## 21. Multi-Agent Reinforcement Learning for Global Climate Policy Cooperation / 全球气候政策合作的多主体强化学习
+
+**Date**: 2026-10-27 | **arXiv**: [2610.37870v1](http://arxiv.org/abs/2610.37870v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.37870v1)
+
+**Categories**: cs.MA, cs.GT, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+International climate policy requires coordination among countries whose mitigation decisions impose local costs but generate global benefits. Classical game-theoretic and integrated assessment approaches can study these incentives, but typically rely on prescribed behavioural assumptions or equilibrium concepts. Recent work has therefore explored Multi-Agent Reinforcement Learning as a way to model climate-policy cooperation as an emergent outcome of repeated strategic interaction. We extend an existing MARL climate framework with a multi-stage negotiation mechanism in which agents propose agreements, accept or reject commitments, and face penalties for non-compliance. This allows us to study how agreement design affects learned mitigation behaviour, compliance, and climate outcomes. In an idealized setting with four homogeneous agents, we find that non-binding agreements do little to overcome free-riding, while moderate non-compliance penalties improve cooperation and reduce warming. However, excessively strong penalties discourage ambitious commitments, revealing a trade-off between enforcement and participation. We position the framework as a methodological contribution for testing agreement design rather than a predictive model of real negotiations.
+
+国际气候政策需要各国之间进行协调，其减缓决策会带来当地成本，但会产生全球效益。经典的博弈论和综合评估方法可以研究这些激励措施，但通常依赖于规定的行为假设或均衡概念。因此，最近的工作探索了多主体强化学习作为一种将气候政策合作建模为重复战略互动的新兴结果的方法。我们通过多阶段谈判机制扩展了现有的 MARL 气候框架，在该机制中，代理提出协议、接受或拒绝承诺，并因不遵守规定而面临处罚。这使我们能够研究协议设计如何影响习得的缓解行为、合规性和气候结果。在四个同质主体的理想化环境中，我们发现不具约束力的协议对于克服搭便车行为几乎没有作用，而适度的违规处罚则可以改善合作并减少变暖。然而，过于严厉的惩罚会阻碍雄心勃勃的承诺，揭示了执行和参与之间的权衡。我们将该框架定位为测试协议设计的方法论贡献，而不是实际谈判的预测模型。
+
+</details>
+
+---
+
+## 22. Seq@K: Evaluating Language Models Under Sequential Feedback / Seq@K：评估顺序反馈下的语言模型
+
+**Date**: 2026-10-27 | **arXiv**: [2610.37859v1](http://arxiv.org/abs/2610.37859v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.37859v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Language-model agents differ fundamentally from prior intelligent systems in their ability to learn from natural language in context. This capability enables agents to iteratively refine their answers in response to feedback, a prevalent mode of operation in modern agentic workflows. However, the community primarily ranks models by metrics such as Pass@1 or Pass@K, which cannot capture how they utilize feedback on prior attempts. We introduce Seq@K, a natural evaluation protocol that measures whether a model can solve a problem within K sequential attempts, provided feedback after each previous failure. Unlike multi-turn agentic benchmarks that examine long-horizon planning, Seq@K isolates and formalizes the core capability of refinement from feedback. We evaluate Seq@K on a suite of 7 benchmarks and 16 frontier models, and show that Seq@K reveals a materially different model-selection landscape: under Seq@K, (1) model rankings often differ, (2) the Pareto frontiers admit more efficient configurations and (3) the gains from choosing the optimal model configuration can widen or shrink relative to those of Pass@K. We further show that analyzing model trajectories under Seq@K helps characterize iterative refinement behavior, such as the rate at which models address issues raised in feedback, or how rigidly they hold onto their own answers. Finally, we study how the nature of feedback affects models' iterative refinement, showing that practitioners must carefully design and benchmark the feedback loops of iterative agentic systems. Together, these results establish how Seq@K offers a more faithful metric for intelligent systems that typically operate in such feedback loop, and the necessity to consider Seq@K in evaluating models for these systems.
+
+语言模型代理与之前的智能系统的根本区别在于它们从上下文中的自然语言学习的能力。此功能使代理能够根据反馈迭代地完善其答案，这是现代代理工作流程中普遍的操作模式。然而，社区主要通过 Pass@1 或 Pass@K 等指标对模型进行排名，这些指标无法捕获他们如何利用先前尝试的反馈。我们引入了 Seq@K，这是一种自然评估协议，用于衡量模型是否可以在 K 个连续尝试内解决问题，并在每次失败后提供反馈。与检查长期规划的多轮代理基准不同，Seq@K 从反馈中分离并形式化了细化的核心能力。我们在一组 7 个基准和 16 个前沿模型上评估 Seq@K，并表明 Seq@K 揭示了一种本质上不同的模型选择景观：在 Seq@K 下，（1）模型排名通常不同，（2）帕累托前沿允许更有效的配置，（3）选择最佳模型配置的收益相对于 Pass@K 可能会扩大或缩小。我们进一步表明，分析 Seq@K 下的模型轨迹有助于表征迭代细化行为，例如模型解决反馈中提出的问题的速度，或者它们对自己答案的严格程度。最后，我们研究反馈的性质如何影响模型的迭代细化，表明从业者必须仔细设计迭代代理系统的反馈循环并对其进行基准测试。总之，这些结果确立了 Seq@K 如何为通常在此类反馈循环中运行的智能系统提供更可靠的度量，以及在评估这些系统的模型时考虑 Seq@K 的必要性。
+
+</details>
+
+---
+
+## 23. Measuring Where Intent Gets Lost in Agentic Smart Contract Synthesis / 测量代理智能合约综合中意图丢失的位置
+
+**Date**: 2026-10-27 | **arXiv**: [2610.37830v1](http://arxiv.org/abs/2610.37830v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.37830v1)
+
+**Categories**: cs.AI, cs.HC, cs.IR, cs.MA, cs.SE
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+AI agents can now write software from a plain-English description, but code that runs is not the same as code that does what was asked. This gap matters most for smart contracts, the programs behind Web3 applications that move money on a blockchain and cannot be fixed once deployed. We ask how to check whether an AI-written contract behaves as it should, and where the requested behavior gets lost.   We design an evaluation built on execution rather than opinion. We replay the same transactions on an AI-written contract and on the original it should reproduce and measure how often they agree. We test every grading tool on planted mistakes, compare against an answer key written without the description, and audit our own scorer until known wrong answers cannot pass. Common methods, such as AI judges and standard analysis tools, miss obvious mistakes, and scoring choices matter too. Checking only the functions every system includes hid about half the difference between pipelines.   We then propose an elicitation-first architecture. Before writing code, the agent asks the client a short checklist of questions, checks the contract against an independently written executable answer key, and returns disagreements to the client instead of silently rewriting code. Asking first matters far more than reviewing or patching afterwards, across three AI models, while automated security fixes often break requested behavior. A few well-chosen questions recover much of what a short description omits, and their value can be estimated without the original contract. To our knowledge, this is the first study in smart contract synthesis to gather missing requirements before generation and check the result against an independently written executable model. The lessons extend to any setting where AI agents turn requests into programs. We release our tools, 600 tasks and all results.
+
+人工智能代理现在可以根据简单的英语描述编写软件，但运行的代码与执行要求的代码不同。这一差距对于智能合约来说最为重要，智能合约是 Web3 应用程序背后的程序，在区块链上转移资金，一旦部署就无法修复。我们询问如何检查人工智能编写的合约是否按其应有的方式运行，以及所请求的行为在哪里丢失。   我们设计的评估基于执行而不是意见。我们在人工智能编写的合同上重播相同的交易，并且在原始合同上它应该重现并衡量他们同意的频率。我们测试每个评分工具的植入错误，与没有描述的答案进行比较，并审核我们自己的评分员，直到已知的错误答案无法通过。常见的方法，例如人工智能法官和标准分析工具，会错过明显的错误，而评分选择也很重要。仅检查每个系统包含的功能隐藏了管道之间大约一半的差异。   然后，我们提出了一种启发优先的架构。在编写代码之前，代理会询问客户一个简短的问题清单，根据独立编写的可执行答案检查合同，并将分歧返回给客户，而不是默默地重写代码。在三种人工智能模型中，首先询问比事后检查或修补更重要，而自动安全修复通常会破坏所请求的行为。一些精心挑选的问题可以弥补简短描述所遗漏的大部分内容，并且无需原始合同即可估算其价值。据我们所知，这是智能合约综合领域的第一项研究，旨在在生成之前收集缺失的需求，并根据独立编写的可执行模型检查结果。这些经验教训适用于人工智能代理将请求转化为程序的任何环境。我们发布了我们的工具、600 项任务和所有结果。
+
+</details>
+
+---
+
+## 24. Selective and Hybrid-State Communication for Latent Multi-Agent Systems / 潜在多智能体系统的选择性和混合状态通信
+
+**Date**: 2026-10-27 | **arXiv**: [2610.37779v1](http://arxiv.org/abs/2610.37779v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.37779v1)
+
+**Categories**: cs.MA, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Efficient communication remains a major bottleneck in large language model multiagent systems. Latent communication reduces repeated natural-language exchange by transferring internal model states between agents, but these transfers remain costly and are typically designed around conventional KV-cache representations. We address this problem from two complementary perspectives. We introduce SelectKV, a boundary-aware method that selectively communicates KV states while protecting inherited context, and HyLaMAS, which extends latent collaboration to hybrid linear-attention models by communicating both KV caches and recurrent states through a shared workspace. Across six benchmarks, SelectKV reduces communicated KV positions and logical KV payload by 9.7-9.9%, with accuracy unchanged on two benchmarks, within one percentage point on three, and six points lower on HumanEval+. Across Qwen3.5 model scales, HyLaMAS reduces decoded output tokens by 53-80% and achieves 1.16-2.78x speedups relative to text-based multi-agent communication. Together, these independently evaluated methods represent two complementary approaches to efficient latent-state communication across conventional Transformer and hybrid model architectures.
+
+高效通信仍然是大型语言模型多智能体系统的主要瓶颈。潜在通信通过在代理之间传输内部模型状态来减少重复的自然语言交换，但这些传输仍然成本高昂，并且通常是围绕传统的 KV 缓存表示设计的。我们从两个互补的角度来解决这个问题。我们引入了 SelectKV，一种边界感知方法，可以选择性地通信 KV 状态，同时保护继承的上下文；以及 HyLaMAS，它通过共享工作区通信 KV 缓存和循环状态，将潜在协作扩展到混合线性注意力模型。在六个基准测试中，SelectKV 将通信的 KV 位置和逻辑 KV 有效负载减少了 9.7-9.9%，两个基准测试的准确度没有变化，比三个基准测试低 1 个百分点，在 HumanEval+ 上降低了 6 个百分点。在 Qwen3.5 模型规模上，HyLaMAS 将解码输出标记减少了 53-80%，并相对于基于文本的多代理通信实现了 1.16-2.78 倍的加速。总之，这些独立评估的方法代表了跨传统 Transformer 和混合模型架构进行高效潜在状态通信的两种互补方法。
+
+</details>
+
+---
+
+## 25. Agentic Backdoors via Pretraining Poisoning / 通过预训练中毒的代理后门
+
+**Date**: 2026-10-27 | **arXiv**: [2610.37741v1](http://arxiv.org/abs/2610.37741v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.37741v1)
+
+**Categories**: cs.CR, cs.CL, cs.LG
+
+**Code**: https://github.com/safety-research/agentic-backdoor.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language models are pretrained on vast, uncurated corpora scraped from the public web. This creates a security risk from attackers who plant poisoned content in the pretraining data. We show for the first time that such poisoning can plant a remote code execution backdoor in an agent, causing it to execute attacker-chosen commands on the user's machine. To measure the threat end to end, we pretrain Qwen3 models from scratch at sizes 0.6B, 1.7B, and 4B, and then post-train each into a CLI agent using a clean pipeline. Poisoning only 0.1% of the pretraining corpus with our new poison design implants the backdoor: the deployed agent executes the malicious command when the trigger is present while behaving normally on clean inputs. The attack success rate (ASR) increases with model scale, with the 4B model reaching roughly 92% ASR at a 0.1% poison rate and staying positive even when the poisoning rate drops to 0.0005%. Our code is available at https://github.com/safety-research/agentic-backdoor.
+
+大型语言模型是在从公共网络上抓取的大量未经整理的语料库上进行预训练的。这会造成攻击者在预训练数据中植入有毒内容的安全风险。我们首次表明，此类中毒可以在代理中植入远程代码执行后门，导致其在用户计算机上执行攻击者选择的命令。为了端到端地测量威胁，我们从头开始以 0.6B、1.7B 和 4B 的大小对 Qwen3 模型进行预训练，然后使用干净的管道将每个模型进行后训练到 CLI 代理中。使用我们新的毒药设计仅毒害预训练语料库的 0.1%，就会植入后门：当触发器存在时，部署的代理会执行恶意命令，同时在干净的输入上表现正常。攻击成功率 (ASR) 随着模型规模的增加而增加，4B 模型在 0.1% 的中毒率下达到大约 92% 的 ASR，并且即使在中毒率降至 0.0005% 时也保持正值。我们的代码可在 https://github.com/safety-research/agentic-backdoor 获取。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-10-28 (30 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-10-28
