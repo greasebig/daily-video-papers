@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-10-31](papers/2026-10-31.md) - 5 papers
 - [2026-10-30](papers/2026-10-30.md) - 2 papers
 - [2026-10-28](papers/2026-10-28.md) - 1 papers
 - [2026-10-26](papers/2026-10-26.md) - 3 papers
@@ -114,6 +115,100 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-10-31 (5 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-10-31
+
+**Paper Count**: 5
+
+---
+
+## 1. Beyond CCT: Multi-channel SPD recovery for per-shot camera color correction / 超越 CCT：多通道 SPD 恢复，用于每次拍摄的相机色彩校正
+
+**Date**: 2026-10-29 | **arXiv**: [2610.40175v1](http://arxiv.org/abs/2610.40175v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.40175v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Modern cameras correct color via two or three pre-calibrated 3x3 matrices interpolated by Correlated Color Temperature (CCT). This collapses the illuminant SPD to a scalar. LEDs, fluorescents, and mixed sources sit off the Planckian locus, and metameric illuminants with the same chromaticity demand different optimal CCMs that a CCT pipeline cannot distinguish. We recover the illuminant SPD instead using non-negative least squares against a basis dictionary, conditioned on the camera white point and a multi-channel ambient-light sensor (ALS). A closed-form 3x3 CCM is then fit per shot. On a synthetic benchmark of 300 illuminants and 3,100 reflectances, mean angular error drops from 1.89 to 1.20 degrees, with a 1.7x tail reduction on the LED-like off-Planckian group (n=45) where metameric ambiguity is tangible. The gain holds under realistic ALS imperfections and observation noise, and the same off-Planckian advantage carries over to 1,684 real measured SPDs.
+
+现代相机通过两个或三个由相关色温 (CCT) 插值的预校准 3x3 矩阵来校正颜色。这会将光源 SPD 压缩为标量。 LED、荧光灯和混合光源偏离普朗克轨迹，并且具有相同色度的同色异谱光源需要不同的最佳 CCM，而 CCT 管道无法区分。我们使用非负最小二乘法针对基础字典来恢复光源 SPD，以相机白点和多通道环境光传感器 (ALS) 为条件。然后为每个镜头安装一个封闭式 3x3 CCM。在 300 个光源和 3,100 个反射率的综合基准上，平均角度误差从 1.89 度下降到 1.20 度，在类似 LED 的非普朗克组 (n=45) 上，尾部减少了 1.7 倍，其中同色异谱模糊性是明显的。该增益在实际 ALS 缺陷和观测噪声下保持不变，并且相同的非普朗克优势也适用于 1,684 个实际测量的 SPD。
+
+</details>
+
+---
+
+## 2. EventSeeColor: Learning to Reconstruct Color from Monochrome Events / EventSeeColor：学习从单色事件重建颜色
+
+**Date**: 2026-10-29 | **arXiv**: [2610.40166v1](http://arxiv.org/abs/2610.40166v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.40166v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Event cameras capture visual brightness changes under challenging lighting conditions. However, traditional event-based image reconstruction targets grayscale intensity and produces images without scene color. Color distinguishes surfaces with similar intensity. Reconstructing color from events can reveal appearance differences that reconstructed grayscale images cannot express. Although monochrome event cameras do not directly measure color, their event-triggering patterns depend on surface reflectance, illumination, and the sensor's spectral response. These patterns may contain cues that support color reconstruction. In this paper, we present EventSeeColor, which uses event-reconstructed grayscale and aligned events to jointly guide a diffusion colorizer. Grayscale-derived semantic context supports color inference, while region-balanced chroma supervision and local RGB refinement improve color distribution, brightness, and texture. In the combined evaluation on two real event datasets, EventSeeColor achieves the best structural similarity, learned perceptual scores, and chromatic-region color difference among the external methods.
+
+事件摄像机捕捉具有挑战性的照明条件下的视觉亮度变化。然而，传统的基于事件的图像重建以灰度强度为目标，并生成没有场景颜色的图像。颜色区分具有相似强度的表面。从事件中重建颜色可以揭示重建灰度图像无法表达的外观差异。尽管单色事件相机不直接测量颜色，但其事件触发模式取决于表面反射率、照明和传感器的光谱响应。这些图案可能包含支持颜色重建的线索。在本文中，我们提出了 EventSeeColor，它使用事件重建灰度和对齐事件来共同引导扩散着色器。灰度衍生的语义上下文支持颜色推断，而区域平衡色度监督和局部 RGB 细化则改善颜色分布、亮度和纹理。在对两个真实事件数据集的综合评估中，EventSeeColor 在外部方法中实现了最佳的结构相似性、学习感知得分和彩色区域颜色差异。
+
+</details>
+
+---
+
+## 3. Multi-level Constrained Learning for Underwater Image Enhancement / 水下图像增强的多级约束学习
+
+**Date**: 2026-10-29 | **arXiv**: [2610.39183v1](http://arxiv.org/abs/2610.39183v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.39183v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/Wangtao-Bao/MCL-UIE.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Underwater image enhancement aims to correct color and recover detail degraded by wavelength-dependent attenuation, scattering, and noise. Paired-reference supervision constrains output similarity, but does not by itself specify the color mapping, the strength of local detail corrections, or consistency with the degraded observation. We propose MCL-UIE, a paired-supervised framework that addresses these requirements by constraining restoration operations and the training objective. Monotonic Chromatic Transform (MCT) restricts global color mapping in log-LMS space through positive diagonal entries and bounded cross-channel coefficients. Uncertainty-Gated Wavelet Reconstruction (UGWR) modulates high-frequency residuals with a learned confidence gate calibrated against normalized wavelet reconstruction errors. During training, Reference-Anchored Degradation Replay (RADR) renders the enhanced image and its paired reference using shared latent degradation proxies, encouraging both to reproduce the input. The three components share a restoration network that combines structured color correction, locally controlled detail recovery, and reference-anchored replay. MCL-UIE ranks first in thirteen of sixteen full-reference dataset-metric comparisons and produces competitive visual results on no-reference benchmarks. Objective ablations indicate that confidence calibration is most effective when combined with replay supervision. RADR is used only during training and adds no inference-time computation. Our code is available at https://github.com/Wangtao-Bao/MCL-UIE.
+
+水下图像增强旨在校正颜色并恢复因波长相关的衰减、散射和噪声而降低的细节。配对参考监督限制输出相似性，但其本身并不指定颜色映射、局部细节校正的强度或与降级观察的一致性。我们提出了 MCL-UIE，这是一个配对监督框架，通过限制恢复操作和训练目标来满足这些要求。单调色变换 (MCT) 通过正对角线条目和有界跨通道系数限制 log-LMS 空间中的全局颜色映射。不确定性门控小波重建 (UGWR) 使用针对归一化小波重建误差进行校准的学习置信门来调制高频残差。在训练期间，参考锚定退化重放 (RADR) 使用共享的潜在退化代理渲染增强图像及其配对参考，鼓励两者重现输入。这三个组件共享一个恢复网络，该网络结合了结构化色彩校正、本地控制的细节恢复和参考锚定重放。 MCL-UIE 在 16 项全参考数据集指标比较中的 13 项中排名第一，并在无参考基准上产生有竞争力的视觉结果。客观消融表明，置信度校准与重放监督相结合时最有效。 RADR 仅在训练期间使用，并且不添加推理时间计算。我们的代码可在 https://github.com/Wangtao-Bao/MCL-UIE 获取。
+
+</details>
+
+---
+
+## 4. LightHybridNet: A Lightweight Hybrid Deep Learning Framework for Efficient Multi-Label Ophthalmic Disease Classification in Imbalanced Fundus Images / LightHybridNet：一种轻量级混合深度学习框架，用于对不平衡眼底图像进行高效的多标签眼科疾病分类
+
+**Date**: 2026-10-14 | **arXiv**: [2610.20671v1](http://arxiv.org/abs/2610.20671v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.20671v1)
+
+**Categories**: eess.IV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Eye diseases are a major global cause of blindness and vision impairment, highlighting the need for accurate and early diagnosis to prevent further deterioration. Despite advances in medical imaging, classifying retinal diseases from fundus images remains challenging due to the complexity and subtlety of visual features. This study aims to develop and validate LightHybridNet, a novel lightweight hybrid deep learning framework, to improve the classification of eye diseases from fundus images. The model incorporates architectural features, such as depthwise separable convolutions and compound scaling mechanisms, to enhance diagnostic accuracy and robustness. To validate the model, the ODIR-5K dataset, comprising 8 disease categories, was used. To enhance image quality, pre-processing approaches were applied, including histogram equalisation, colour space conversion, and contrast adjustment, resulting in high-resolution images. Furthermore, image augmentation was employed to increase the dataset size, thereby improving the model's ability to generalise during training. The hybrid architecture helps the model concentrate on relevant image regions while capturing and integrating details at different scales, significantly improving classification performance. To evaluate its effectiveness, the model was compared with transfer-learning models. The results show that LightHybridNet outperforms the baselines, achieving a weighted F1-score of 91.51%, a macro AUC of 98.26%, and a Cohen's Kappa of 90.14% on the validation set. Furthermore, model interpretability was enhanced using explainable AI methods, including Grad-CAM, to identify and emphasise features influencing the decision-making process. LightHybridNet represents a promising advancement in automated ocular disease detection, offering improved diagnostic reliability for clinical use.
+
+眼部疾病是全球失明和视力障碍的主要原因，因此需要准确、早期诊断以防止病情进一步恶化。尽管医学成像取得了进步，但由于视觉特征的复杂性和微妙性，从眼底图像中对视网膜疾病进行分类仍然具有挑战性。本研究旨在开发和验证 LightHybridNet（一种新型轻量级混合深度学习框架），以改进眼底图像中眼部疾病的分类。该模型结合了深度可分离卷积和复合缩放机制等架构特征，以提高诊断准确性和鲁棒性。为了验证模型，使用了包含 8 个疾病类别的 ODIR-5K 数据集。为了提高图像质量，采用了预处理方法，包括直方图均衡、色彩空间转换和对比度调整，从而产生高分辨率图像。此外，还采用图像增强来增加数据集大小，从而提高模型在训练期间的泛化能力。混合架构帮助模型专注于相关图像区域，同时捕获和集成不同尺度的细节，从而显着提高分类性能。为了评估其有效性，将该模型与迁移学习模型进行了比较。结果表明，LightHybridNet 的性能优于基线，在验证集上实现了 91.51% 的加权 F1 分数、98.26% 的宏观 AUC 和 90.14% 的 Cohen's Kappa。此外，使用可解释的人工智能方法（包括 Grad-CAM）增强了模型的可解释性，以识别和强调影响决策过程的特征。 LightHybridNet 代表了自动眼部疾病检测领域的一项有前途的进步，为临床使用提供了更高的诊断可靠性。
+
+</details>
+
+---
+
+## 5. Diagnosing Diversity Collapse and Validating Mask-Conditioned Diffusion for Labeled Microtubule Microscopy / 诊断多样性崩溃并验证标记微管显微镜的掩模条件扩散
+
+**Date**: 2026-10-07 | **arXiv**: [2610.09957v2](http://arxiv.org/abs/2610.09957v2) | **PDF**: [Link](http://arxiv.org/pdf/2610.09957v2)
+
+**Categories**: eess.IV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Mask-conditioned diffusion models have become standard for generating labeled training data in biomedical imaging. But the tools used to evaluate them were built for a different problem. Standard metrics like FID and KID score images through ImageNet-trained features. Those features do not transfer to microscopy, leaving the metrics poorly calibrated for specialized domains. Even with a domain-appropriate feature space, a single blended number can still hide a real failure: a model can produce visually plausible images that still transfer poorly to downstream tasks. We identify a specific failure mode: Late in training, realism keeps improving while texture diversity collapses. The model settles onto a fixed color palette, converging to a high-similarity, low-diversity state that standard metrics do not penalize. Therefore, we propose a diversity-aware diagnostic in a domain-validated feature space. It combines a realism axis based on inter-similarity to real images with a diversity axis based on intra-similarity among generated samples. This diagnostic selects a checkpoint that domain experts cannot reliably distinguish from real recordings in a forced-choice study. It also yields useful downstream segmentation: a segmenter trained only on synthetically labeled data reaches a median skeletonised IoU comparable to one trained on real data, at lower cross-fold variance, and clearly ahead of the best available public alternative in this domain, a parametric renderer. We also reproduce a data-efficient hyperparameter-transfer experiment from prior work, tuning several foundation segmenters on a small labeled subset and evaluating on real images: transfer is stronger with our data. We release DiffuMT on HuggingFace, including the triplet dataset, code to reproduce the downstream-utility validation, and a standalone diagnostic tool for evaluating mask-conditioned diffusion models.
+
+掩模条件扩散模型已成为生物医学成像中生成标记训练数据的标准。但用于评估它们的工具是针对不同的问题而构建的。 FID 和 KID 等标准指标通过 ImageNet 训练的特征对图像进行评分。这些功能不会转移到显微镜中，导致专门领域的指标校准不佳。即使具有适合领域的特征空间，单个混合数字仍然可以隐藏真正的失败：模型可以生成视觉上合理的图像，但仍然很难转移到下游任务。我们确定了一种特定的失败模式：在训练后期，真实感不断提高，而纹理多样性却崩溃了。该模型采用固定的调色板，收敛到标准指标不会惩罚的高相似性、低多样性状态。因此，我们提出了在域验证的特征空间中进行多样性感知的诊断。它将基于真实图像间相似性的真实性轴与基于生成样本之间的内部相似性的多样性轴结合起来。此诊断选择一个检查点，领域专家无法将其与强制选择研究中的真实记录可靠地区分开。它还产生有用的下游分割：仅在综合标记数据上训练的分割器达到了与在真实数据上训练的分割器相当的中值骨架化 IoU，交叉折叠方差较低，并且明显领先于该领域中最佳可用的公共替代方案（参数化渲染器）。我们还从之前的工作中重现了一个数据高效的超参数传输实验，在一个小的标记子集上调整了几个基础分段器并评估了真实图像：我们的数据传输更强。我们在 HuggingFace 上发布了 DiffuMT，包括三元组数据集、重现下游实用程序验证的代码以及用于评估掩模条件扩散模型的独立诊断工具。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-10-30 (2 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-10-30
