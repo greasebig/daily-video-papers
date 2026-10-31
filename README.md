@@ -27,6 +27,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-10-31](papers/2026-10-31.md) - 16 papers
 - [2026-10-30](papers/2026-10-30.md) - 9 papers
 - [2026-10-28](papers/2026-10-28.md) - 29 papers
 - [2026-10-27](papers/2026-10-27.md) - 11 papers
@@ -208,6 +209,280 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-10-31 (16 papers)</b></summary>
+
+# arXiv Video Papers - 2026-10-31
+
+**Paper Count**: 16
+
+---
+
+## 1. L3G-World: Real-Time Infinite World Generation with Latent 3D Gaussian Memory / L3G-World：具有潜在 3D 高斯内存的实时无限世界生成
+
+**Date**: 2026-10-29 | **arXiv**: [2610.40614v1](http://arxiv.org/abs/2610.40614v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.40614v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Interactive world models generate visual content conditioned on user actions, yet maintaining spatial consistency over long-horizon exploration in real time remains challenging. Existing approaches rely on either temporal context or explicit 3D memory, both of which scale poorly because memory grows with the length of the generated stream. Moreover, explicit 3D memories condition latent video generators by re-encoding RGB renderings, which precludes real-time generation. In this paper, we introduce a Latent 3D Gaussian Memory (L3G) that combines the efficiency of feed-forward reconstruction with a compact, rapidly renderable scene representation. Building on this memory, we propose L3G-World, in which a memory updater and a video diffusion transformer (DiT) alternate autoregressively to generate spatially consistent worlds. The memory updater spawns Gaussians in newly observed regions and refines existing ones, so that the memory grows with scene extent rather than stream length. Each Gaussian further stores a VAE latent feature, allowing the memory to be rendered directly into the DiT's latent space without VAE re-encoding. Experiments show that L3G-World achieves state-of-the-art generation quality and long-horizon spatial consistency, with up to $38.6\times$ fewer 3D primitives, $3.2\times$ faster memory updates, and $359\times$ faster memory rendering relative to the most efficient prior 3D-memory baseline for each metric, enabling real-time world generation at 9 FPS.
+
+交互式世界模型根据用户操作生成视觉内容，但实时保持长视野探索的空间一致性仍然具有挑战性。现有方法依赖于时间上下文或显式 3D 内存，这两种方法的扩展性都很差，因为内存随着生成流的长度而增长。此外，显式 3D 存储器通过重新编码 RGB 渲染来调节潜在视频生成器，这妨碍了实时生成。在本文中，我们介绍了一种潜在 3D 高斯记忆 (L3G)，它将前馈重建的效率与紧凑、可快速渲染的场景表示相结合。在此内存的基础上，我们提出了 L3G-World，其中内存更新器和视频扩散变换器 (DiT) 自回归交替以生成空间一致的世界。内存更新器在新观察到的区域中生成高斯并优化现有区域，以便内存随着场景范围而不是流长度而增长。每个高斯还存储一个 VAE 潜在特征，允许将内存直接渲染到 DiT 的潜在空间中，而无需 VAE 重新编码。实验表明，L3G-World 实现了最先进的生成质量和长视野空间一致性，相对于每个指标最高效的先前 3D 内存基准，3D 图元减少高达 $38.6\time$，内存更新速度加快 $3.2\time$，内存渲染速度加快 $359\time$，从而实现 9 FPS 的实时世界生成。
+
+</details>
+
+---
+
+## 2. LucidLyra: Feed-Forward Generative 3D Scene Reconstruction and Joint Understanding via Multi-Task Distillation / LucidLyra：通过多任务蒸馏进行前馈生成 3D 场景重建和联合理解
+
+**Date**: 2026-10-29 | **arXiv**: [2610.40495v1](http://arxiv.org/abs/2610.40495v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.40495v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present LucidLyra, a framework that makes generatively reconstructed 3D scenes directly queryable for semantics and instances in a feed-forward manner from video latents. While generative 3D reconstruction can synthesize virtual environments from a single image, downstream applications in robotics and physical AI require not only visual realism but also access to scene semantics and object identities. Existing 3D understanding approaches, however, require captured multi-view scenes, have limited generalization capabilities, or rely on expensive per-scene processing and optimization. To bridge this gap, our method distills complementary knowledge from a camera-controlled video diffusion model and frozen 2D vision foundation models into a unified model to jointly infer 3D Gaussians encoding geometry, appearance, open-vocabulary semantics, and class-agnostic instance cues. The resulting scenes support novel-view rendering, open-vocabulary segmentation, and object grouping without per-scene optimization, while training requires neither manual 3D annotations nor captured multi-view data. Our method outperforms baselines combining state-of-the-art 3DGS segmentation approaches with generative 3D scene reconstruction on curated synthetic and real-image-conditioned benchmarks, while preserving reconstruction quality. Furthermore, our latent formulation naturally extends to monocular video, reconstructing structured dynamic 3D scenes across time. By turning renderable but unstructured outputs into queryable 3D worlds, LucidLyra enables downstream applications including 3D scene editing, 3D asset mining, and robotic simulation.
+
+我们提出了 LucidLyra，一个框架，它使得生成重建的 3D 场景可以通过视频潜在的前馈方式直接查询语义和实例。虽然生成 3D 重建可以从单个图像合成虚拟环境，但机器人和物理 AI 中的下游应用不仅需要视觉真实感，还需要访问场景语义和对象身份。然而，现有的 3D 理解方法需要捕获多视图场景，泛化能力有限，或者依赖于昂贵的每场景处理和优化。为了弥补这一差距，我们的方法将相机控制的视频扩散模型和冻结的 2D 视觉基础模型中的互补知识提炼成一个统一的模型，以联合推断 3D 高斯编码几何、外观、开放词汇语义和与类无关的实例线索。生成的场景支持新颖视图渲染、开放词汇分割和对象分组，无需按场景优化，而训练既不需要手动 3D 注释，也不需要捕获多视图数据。我们的方法优于基线，将最先进的 3DGS 分割方法与在策划的合成和真实图像条件基准上的生成 3D 场景重建相结合，同时保持重建质量。此外，我们的潜在公式自然地扩展到单目视频，跨时间重建结构化动态 3D 场景。通过将可渲染但非结构化的输出转换为可查询的 3D 世界，LucidLyra 支持下游应用程序，包括 3D 场景编辑、3D 资产挖掘和机器人模拟。
+
+</details>
+
+---
+
+## 3. Wizard: Manipulate Any World in Real Time via Agentic Control / 向导：通过代理控制实时操纵任何世界
+
+**Date**: 2026-10-29 | **arXiv**: [2610.40339v1](http://arxiv.org/abs/2610.40339v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.40339v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent advances in video world models have enabled the generation of increasingly realistic and interactive virtual environments, opening new possibilities for player-customizable gameplay. Agentic frameworks further advance this direction by decoupling explicit game logic and controllable world representations from visual generation. However, existing approaches support only simple game settings and predefined motion patterns, generalize poorly to unseen environments and characters, and offer limited real-time interactivity. In this paper, we introduce Wizard, an agentic game world model that enables real-time, precise control over character motions while generalizing zero-shot across novel scenes, characters, and actions. To achieve this, we construct a diverse dataset spanning 750 scenes and 178 characters, incorporating skeleton and geometry information as structured representations. We leverage these representations as intermediate proxies to condition a video generation model, together with an adaptive masking mechanism that improves alignment between the conditioning signals and generated video rollouts. Furthermore, we introduce an agentic framework that explicitly maintains and updates game states, allowing players to freely configure their virtual worlds and exercise fine-grained control over character motions while preserving visual quality and gameplay consistency. By combining agentic control with structured proxy-based generation, our framework unlocks new possibilities for player-driven game creation with real-time, generalizable, and mechanically consistent world simulation.
+
+视频世界模型的最新进展使得能够生成越来越真实和交互式的虚拟环境，为玩家可定制的游戏玩法开辟了新的可能性。代理框架通过将显式游戏逻辑和可控世界表示与视觉生成解耦，进一步推进了这一方向。然而，现有方法仅支持简单的游戏设置和预定义的运动模式，对于看不见的环境和角色的泛化能力较差，并且提供的实时交互性有限。在本文中，我们介绍了 Wizard，这是一种代理游戏世界模型，可以实时、精确地控制角色运动，同时在新颖的场景、角色和动作中推广零镜头。为了实现这一目标，我们构建了一个涵盖 750 个场景和 178 个角色的多样化数据集，将骨架和几何信息合并为结构化表示。我们利用这些表示作为中间代理来调节视频生成模型，并结合自适应屏蔽机制来改善调节信号和生成的视频推出之间的对齐。此外，我们引入了一个显式维护和更新游戏状态的代理框架，允许玩家自由配置他们的虚拟世界并对角色运动进行细粒度控制，同时保持视觉质量和游戏一致性。通过将代理控制与基于代理的结构化生成相结合，我们的框架通过实时、可推广且机械一致的世界模拟为玩家驱动的游戏创建释放了新的可能性。
+
+</details>
+
+---
+
+## 4. AcrossDEX 1.0: From Human Motion Pretraining to Bimanual Dexterous Manipulation across Hand Embodiments / AcrossDEX 1.0：从人体运动预训练到跨手实施例的双手灵巧操作
+
+**Date**: 2026-10-29 | **arXiv**: [2610.40210v1](http://arxiv.org/abs/2610.40210v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.40210v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Bimanual dexterous manipulation requires continuous coordination of wrist motion, finger contact, and object motion. Human videos provide rich manipulation experience. Using this experience for robot control requires aligning human poses with robot commands and accounting for embodiment-specific kinematics and contact dynamics. We present AcrossDEX 1.0, a learning system that connects human motion pretraining, simulation-based expert learning, robot demonstration collection, and visual closed-loop execution. Pretraining on HOT3D Aria predicts one second of bimanual motion from five images and thirty annotated hand states over the preceding second. Robot adaptation preserves the visual encoder, temporal backbone, and wrist parameters. Shared wrist representations, separate finger fields, and validity masks support both six-channel Inspire hands and sixteen-joint Allegro hands. The robot policy predicts sixty control targets from frontal images, command history, and task conditions. It executes a prefix and replans from updated observations. We compare direct regression, diffusion, and flow matching on lid opening and return and closed-lid object reorientation. Direct regression achieves success rates of 40.6\% for opening and return, 100.0\% for Inspire reorientation, and 93.3\% for Allegro reorientation. Flow matching achieves 90.0\% on Allegro reorientation. Paired comparisons further show that constraining replanning with the previous plan improves the continuous execution of generative policies. These results demonstrate a common adaptation pipeline for two hand embodiments and highlight the roles of contact coordination and action-chunk continuity.
+
+双手灵巧操作需要手腕运动、手指接触和物体运动的持续协调。真人视频提供丰富的操控体验。使用这种经验进行机器人控制需要将人体姿势与机器人命令对齐，并考虑具体实施例的运动学和接触动力学。我们推出了AcrossDEX 1.0，这是一个连接人体运动预训练、基于模拟的专家学习、机器人演示采集和视觉闭环执行的学习系统。 HOT3D Aria 上的预训练可根据前一秒内的 5 张图像和 30 个带注释的手部状态来预测一秒的双手运动。机器人适应保留了视觉编码器、颞骨骨干和手腕参数。共享手腕表示、单独的手指区域和有效性面罩支持六通道 Inspire 手和十六关节 Allegro 手。机器人策略根据正面图像、命令历史和任务条件预测 60 个控制目标。它执行前缀并根据更新的观察结果重新计划。我们比较了盖子打开和返回以及关闭盖子对象重新定向时的直接回归、扩散和流动匹配。直接回归的打开和返回成功率为 40.6%，Inspire 重定向成功率为 100.0%，Allegro 重定向成功率为 93.3%。 Allegro 重定向时流量匹配达到 90.0\%。配对比较进一步表明，用先前的计划限制重新规划可以提高生成策略的持续执行。这些结果展示了双手实施例的通用适应流程，并强调了接触协调和动作块连续性的作用。
+
+</details>
+
+---
+
+## 5. Video Generation Meets Agent Harness: Agentic Video Generation, Agentic World Modeling and Recursive Self-Improvement / 视频生成与智能体管理的结合：智能体视频生成、智能体世界建模和递归自我改进
+
+**Date**: 2026-10-29 | **arXiv**: [2610.40191v1](http://arxiv.org/abs/2610.40191v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.40191v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video generation is shifting from end-to-end synthesis toward agentic generation, where planning, tool use, and feedback enable coherent, controllable multi-shot videos. In parallel, video world models provide action-conditioned observations and predicted futures, serving as interactive environments for agents. We study their intersection through the agent harness: an executable runtime that constructs context, exposes tools, maintains state, routes feedback, and manages budgets around video models. This report examines three directions. First, agentic video generation, where harnesses coordinate scripting, shot planning, asset management, production, and editing, alongside the evaluation challenges of these systems. Second, agentic world modeling, where harnesses mediate observation, control, execution, and state. We discuss hybrid designs in which game engines or agent-written programs maintain world state while video models render observations, and how agents and world models can mutually evaluate and improve one another. Third, recursive self-improvement (RSI) in video model development, distinguishing output revisions, updates to harness state, generator parameters, and evaluators, and changes to the improvement procedure itself. We identify how these improvements feed back into subsequent development. Across these directions, we analyze essential agent capabilities, including audiovisual perception, long-horizon planning, memory, code-based interaction, feedback-guided control, skill reuse, and multi-agent coordination. We conclude with challenges in autonomous video production, lifelong memory, programmable hybrid control, autonomous model development, provenance, cost accounting, and evaluation linking video quality and task performance to sustained improvements in models and harnesses.
+
+视频生成正在从端到端合成转向代理生成，其中规划、工具使用和反馈可实现连贯、可控的多镜头视频。与此同时，视频世界模型提供以动作为条件的观察和预测的未来，作为代理的交互环境。我们通过代理工具来研究它们的交叉点：一个可执行的运行时，用于构建上下文、公开工具、维护状态、路由反馈并围绕视频模型管理预算。本报告探讨了三个方向。首先，代理视频生成，利用协调脚本、镜头规划、资产管理、制作和编辑，以及这些系统的评估挑战。其次，代理世界建模，利用中介观察、控制、执行和状态。我们讨论混合设计，其中游戏引擎或代理编写的程序维护世界状态，而视频模型呈现观察结果，以及代理和世界模型如何相互评估和改进。第三，视频模型开发中的递归自我改进（RSI），区分输出修订，更新线束状态、生成器参数和评估器，以及改进过程本身的更改。我们确定这些改进如何反馈到后续开发中。在这些方向上，我们分析了基本的代理能力，包括视听感知、长期规划、记忆、基于代码的交互、反馈引导的控制、技能重用和多代理协调。最后，我们提出了自主视频制作、终身记忆、可编程混合控制、自主模型开发、来源、成本核算以及将视频质量和任务性能与模型和线束的持续改进联系起来的评估方面的挑战。
+
+</details>
+
+---
+
+## 6. VideoMemBench: How Well Do MLLMs Remember in Video Conversations? / VideoMemBench：MLLM 在视频对话中的记忆力如何？
+
+**Date**: 2026-10-29 | **arXiv**: [2610.40131v1](http://arxiv.org/abs/2610.40131v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.40131v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multimodal large language models (MLLMs) can now process hour-long videos, making extended multi-turn dialogue over a single video a natural mode of use. Sustaining such a dialogue requires more than answering each question in isolation: the model must retrieve and reuse information established earlier in the conversation, both what it has seen and what it has said, an ability we term in-context video memory. Existing video QA benchmarks leave this ability unmeasured: their questions are mutually independent, never reference one another, and each is answerable from the video alone, so nothing ever requires carrying information across turns. We introduce VideoMemBench, in which each sample pairs a single video with a long multi-turn dialogue, whose turns are connected by typed cross-turn dependencies: an Episodic Dependency refers back to a visual episode described in an earlier turn, probing memory of what the model has seen, while an Answer Dependency builds on the model's own earlier answer, probing memory of what the model has said. Every dependency is verified considering two properties: 1) necessity, meaning the question cannot be answered without its earlier turns, and 2) non-leakage, meaning the question does not restate the information from its earlier turns. To enforce these properties, we design a construction pipeline with three LLM roles: a planner, a generator, and a judger, with each dialogue reviewed by human experts. VideoMemBench comprises 326 videos with 2,476 turns, of which 1,387 depend on earlier turns, including multi-parent dependencies and long-range call-back. Among over 20 evaluated open- and closed-source MLLMs, Claude Opus 5 performs the best with an overall score of only 45.7\%, highlighting the challenge of in-context video memory. Our dataset and evaluation are released.
+
+多模态大语言模型 (MLLM) 现在可以处理长达一小时的视频，使单个视频上的扩展多轮对话成为一种自然的使用模式。维持这样的对话需要的不仅仅是单独回答每个问题：模型必须检索和重用对话中先前建立的信息，包括它所看到的和它所说的，我们称之为上下文视频记忆的能力。现有的视频 QA 基准没有衡量这种能力：他们的问题是相互独立的，从不互相引用，并且每个问题都可以单独从视频中回答，因此不需要跨轮传递信息。我们引入了VideoMemBench，其中每个样本将一个视频与一个长的多回合对话配对，这些对话的回合通过类型化的交叉回合依赖性连接：情节依赖性指回先前回合中描述的视觉情节，探查模型所看到内容的记忆，而答案依赖性建立在模型自己的早期答案的基础上，探查模型所说内容的记忆。每个依赖性都经过考虑两个属性的验证：1）必要性，意味着问题没有其先前的回合就无法得到回答，2）非泄漏，意味着问题不会重述其先前回合的信息。为了强化这些属性，我们设计了一个具有三个 LLM 角色的构建管道：规划者、生成者和判断者，每个对话都由人类专家审查。 VideoMemBench 包含 326 个视频，2,476 个回合，其中 1,387 个依赖于较早的回合，包括多父依赖性和远程回调。在超过 20 个经过评估的开源和闭源 MLLM 中，Claude Opus 5 表现最好，总分仅为 45.7%，凸显了上下文视频内存的挑战。我们的数据集和评估已发布。
+
+</details>
+
+---
+
+## 7. Blind Video Denoising for Vocal Tract rtMRI using a Self-Supervised Ensemble / 使用自监督集成对声带 rtMRI 进行盲视频去噪
+
+**Date**: 2026-10-29 | **arXiv**: [2610.39972v1](http://arxiv.org/abs/2610.39972v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.39972v1)
+
+**Categories**: eess.IV, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Real-time magnetic resonance imaging of the vocal tract makes speech articulation directly observable, but the trade-off between temporal resolution and signal quality introduces substantial noise and obscures fine articulatory detail. Since clean references cannot be acquired for a moving vocal tract, supervised denoising approaches are not applicable in this setting. We propose a self-supervised denoising framework that combines spatiotemporal super-resolution learning with pseudo-supervision derived from a variance-stabilized non-local means filter. A dual-model fusion strategy balances noise suppression and preservation of high-frequency articulatory structure. Experiments on the USC-75 multi-speaker dataset under natural noise conditions show that the ensemble raises the signal-to-noise ratio by 11.9 dB on unseen subjects while attaining more high-frequency articulatory content in the frames. Among tuned implementations of anisotropic diffusion, block-matching filtering, non-local means and pre-smoothed non-local means, every configuration that achieves comparable noise suppression does so at the cost of high-frequency content or of structural fidelity. Under severe added Gaussian, Rayleigh and Rician noise, peak signal-to-noise ratio improves by 7.6 to 11.8 dB and structural similarity roughly triples. An ablation shows that the variance-stabilized pseudo-supervision is an essential element for denoising, and that the effect is attributable to the hard thresholding contained in the stabilization transform.
+
+声道的实时磁共振成像使得可以直接观察语音发音，但时间分辨率和信号质量之间的权衡会引入大量噪声并掩盖精细的发音细节。由于无法为移动声道获取干净的参考，因此有监督的去噪方法不适用于这种情况。我们提出了一种自监督去噪框架，该框架将时空超分辨率学习与源自方差稳定非局部均值滤波器的伪监督相结合。双模型融合策略平衡噪声抑制和高频关节结构的保留。在自然噪声条件下对 USC-75 多说话人数据集进行的实验表明，该合奏将看不见的受试者的信噪比提高了 11.9 dB，同时在帧中获得了更多的高频发音内容。在各向异性扩散、块匹配滤波、非局部均值和预平滑非局部均值的调整实现中，每种实现可比噪声抑制的配置都是以高频内容或结构保真度为代价的。在严重添加高斯、瑞利和莱斯噪声的情况下，峰值信噪比提高了 7.6 至 11.8 dB，结构相似性大约增加了三倍。消融表明方差稳定伪监督是去噪的基本要素，并且其效果可归因于稳定变换中包含的硬阈值。
+
+</details>
+
+---
+
+## 8. Event-SAMA: Language-Grounded Video Object Segmentation on Neuromorphic Event Streams / 事件-SAMA：神经形态事件流上基于语言的视频对象分割
+
+**Date**: 2026-10-29 | **arXiv**: [2610.39676v1](http://arxiv.org/abs/2610.39676v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.39676v1)
+
+**Categories**: cs.LG, cs.AI, cs.CL, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Event cameras offer microsecond temporal resolution, high dynamic range and no motion blur, but referring video object segmentation (RVOS) lacks event-stream datasets and models. We introduce Event-SAMA-239K, a synthetic-event conversion of the SAMA-239K grounded video-chat corpus and all additional SAMA training data: 30,650 video clips and 392,162 images. Optical-flow, FILM or saccade upsampling followed by a linear event generator preserves all mask, referring-expression and dialogue annotations. We also introduce Event-SAMA, adapting SAMA-4B with a two-channel polarity patch embedding initialised from pretrained RGB weights and a zero-initialised event adapter. End-to-end training yields 24.37 $\mathcal{J}\&\mathcal{F}$ on MeViS valid_u and 22.33 $\mathcal{J}\&\mathcal{F}$ on the converted ReVOS valid subset, establishing the first event-native RVOS baseline (RGB SAMA-4B: 55.4 on MeViS). Frozen RGB SAMA-4B with pseudo-RGB renderings or E2VID reconstructions of the same events scores 13.23 and 15.94 $\mathcal{J}\&\mathcal{F}$. Without retraining, Event-SAMA works on real event-camera recordings when the accumulation window matches their event density. A seed-controlled ablation with a measured noise floor of 0.47 $\mathcal{J}\&\mathcal{F}$ finds gains from diverse training sources over MeViS alone (+4.99), RGB-mean event-stem initialisation (+4.33), and a trainable SAM2 mask decoder (+2.76); the event adapter, partial ViT unfreezing and event polarity are within noise at this budget. An earlier, partially converted corpus snapshot trained with the identical recipe scores 1.38 $\mathcal{J}\&\mathcal{F}$ higher on MeViS and 1.12 higher on ReVOS. Both are single runs that also differ in schedule length, so we draw no conclusion about corpus scale.
+
+事件摄像机提供微秒时间分辨率、高动态范围且无运动模糊，但参考视频对象分割 (RVOS) 缺乏事件流数据集和模型。我们引入了 Event-SAMA-239K，这是 SAMA-239K 基础视频聊天语料库和所有其他 SAMA 训练数据的合成事件转换：30,650 个视频剪辑和 392,162 个图像。光流、FILM 或扫视上采样，然后是线性事件生成器，可保留所有掩模、引用表达和对话注释。我们还引入了 Event-SAMA，将 SAMA-4B 与从预训练 RGB 权重初始化的两通道极性补丁嵌入和零初始化事件适配器相适配。端到端训练在 MeViS valid_u 上产生 24.37 $\mathcal{J}\&\mathcal{F}$，在转换后的 ReVOS 有效子集上产生 22.33 $\mathcal{J}\&\mathcal{F}$，建立第一个事件原生 RVOS 基线（RGB SAMA-4B：在 MeViS 上为 55.4）。具有伪 RGB 渲染或相同事件的 E2VID 重建的冻结 RGB SAMA-4B 得分为 13.23 和 15.94 $\mathcal{J}\&\mathcal{F}$。当累积窗口与其事件密度相匹配时，Event-SAMA 无需重新训练即可处理真实的事件摄像机记录。测量本底噪声为 0.47 $\mathcal{J}\&\mathcal{F}$ 的种子控制消融发现，单独的 MeViS (+4.99)、RGB 平均事件干初始化 (+4.33) 和可训练的 SAM2 掩模解码器 (+2.76) 从不同训练源中获得收益；在此预算下，事件适配器、部分 ViT 解冻和事件极性均在噪声范围内。使用相同配方训练的早期部分转换的语料库快照在 MeViS 上得分高出 1.38 $\mathcal{J}\&\mathcal{F}$，在 ReVOS 上得分高出 1.12。两者都是单次运行，计划长度也不同，因此我们对语料库规模没有得出结论。
+
+</details>
+
+---
+
+## 9. AB-Attention: Accurate Block Attention for Accelerating Video Diffusion Transformers / AB-Attention：用于加速视频扩散变压器的准确块注意力
+
+**Date**: 2026-10-29 | **arXiv**: [2610.39663v1](http://arxiv.org/abs/2610.39663v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.39663v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/InfRec-Cardinal/AB-Attention.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video diffusion transformers generate high-quality videos, but the quadratic cost of 3D full attention dominates their inference. Dynamic block-sparse attention reduces this cost by computing exact attention only on key/value blocks selected from current activations. However, its fidelity degrades under aggressive sparsity: blocks are scored from coarse summaries or formed by costly global clustering, pruned blocks vanish from the softmax, and whole tiles are kept or dropped even when only a few of their keys matter. To address these limitations, we propose Accurate Block Attention (AB-Attention), a training-free method that accurately approximates dense attention at high sparsity. Its Intra-Block Clustering Selector (IBCS) estimates block importance faithfully yet cheaply by clustering queries only within each query block, without permuting tokens. Sampling with Inclusion-Probability Weighting (SIP) then samples blocks in proportion to these estimates and reweights them by inverse inclusion probability, so that one pass estimates dense attention rather than truncating it. Finally, its kernel gathers key/value blocks much smaller than a tile into full tensor-core tiles, refining selection at no extra tensor-core cost. On Wan2.1 and HunyuanVideo, AB-Attention skips 89--92\% of attention, whereas the baselines compute 1.8--3.6$\times$ as much, yet it still improves PSNR by up to 4.4~dB over the strongest baseline and achieves up to 2.23$\times$ end-to-end speedup. Our code is available at https://github.com/InfRec-Cardinal/AB-Attention.
+
+视频扩散变压器生成高质量视频，但 3D 全注意力的二次成本主导了他们的推论。动态块稀疏注意力通过仅计算从当前激活中选择的键/值块上的精确注意力来降低这种成本。然而，它的保真度在极度稀疏的情况下会降低：块是根据粗略的摘要进行评分的，或者是通过昂贵的全局聚类形成的，修剪后的块从 softmax 中消失，并且即使只有少数几个键重要，整个块也会被保留或丢弃。为了解决这些限制，我们提出了准确的块注意力（AB-Attention），这是一种无需训练的方法，可以在高稀疏性下准确地近似密集注意力。其块内聚类选择器 (IBCS) 通过仅在每个查询块内对查询进行聚类来忠实而廉价地估计块重要性，而无需排列标记。使用包含概率加权（SIP）进行采样，然后按照这些估计的比例对块进行采样，并通过逆包含概率对其进行重新加权，以便一次通过估计密集注意力而不是截断它。最后，它的内核将比图块小得多的键/值块收集到完整的张量核心图块中，无需额外的张量核心成本即可优化选择。在 Wan2.1 和 HunyuanVideo 上，AB-Attention 跳过了 89--92% 的注意力，而基线计算量为 1.8--3.6$\times$，但它仍然比最强基线提高了 4.4~dB 的 PSNR，并实现了高达 2.23$\times$ 的端到端加速。我们的代码可在 https://github.com/InfRec-Cardinal/AB-Attention 获取。
+
+</details>
+
+---
+
+## 10. FutureWorld: A Plug-and-Play Causal Next-State Predictor for Interactive Video World Exploration / FutureWorld：用于交互式视频世界探索的即插即用因果下一状态预测器
+
+**Date**: 2026-10-29 | **arXiv**: [2610.39619v1](http://arxiv.org/abs/2610.39619v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.39619v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Interactive video world models aim to follow user actions while maintaining scene consistency over extended interactions. History-based methods reuse generated latents to preserve scene content, but three limitations of this reuse contribute to error recirculation. 1) The latent generated at each interaction is retained as history, potentially containing blurred details, geometric distortions, or semantic drift. 2) Although retrieved historical content matches the current scene, it can still contain errors that are carried into the next chunk. 3) New outputs then become history for later interactions, potentially reinforcing the same errors through repeated reuse. To limit this cycle, we aim to predict the future scene state from the current generated latent and the next action before generating the next interaction's video chunk. This future-state prior provides guidance for the next chunk, with the aim of reducing the errors carried forward from history. To this end, we propose a plug-and-play Causal Next-Chunk Predictor (C-NCP) with cross-model adaptability and prediction-guided modulation. We integrate C-NCP into four base generators and evaluate the augmented models across three benchmarks for interactive long-video generation and action-conditioned world modeling. Extensive experiments demonstrate reduced error accumulation and improved long-horizon consistency across diverse generation settings. The project page is at https://GuangYuanKK.github.io/futureworld.
+
+交互式视频世界模型旨在跟踪用户操作，同时在扩展交互中保持场景一致性。基于历史的方法重用生成的潜在变量来保留场景内容，但这种重用的三个限制会导致错误再循环。 1）每次交互产生的潜在信息被保留为历史，可能包含模糊的细节、几何扭曲或语义漂移。 2) 尽管检索到的历史内容与当前场景匹配，但它仍然可能包含被带入下一个块的错误。 3) 新的输出将成为以后交互的历史，可能会通过重复使用而强化相同的错误。为了限制这个循环，我们的目标是在生成下一个交互的视频块之前根据当前生成的潜在变量和下一个动作来预测未来的场景状态。这个未来状态先验为下一个块提供指导，目的是减少历史遗留的错误。为此，我们提出了一种具有跨模型适应性和预测引导调制的即插即用因果下一个块预测器（C-NCP）。我们将 C-NCP 集成到四个基础生成器中，并在交互式长视频生成和动作条件世界建模的三个基准上评估增强模型。大量的实验表明，在不同的发电设置中，误差累积减少并提高了长期一致性。项目页面位于https://GuangYuanKK.github.io/futureworld。
+
+</details>
+
+---
+
+## 11. TactoHand: Learning Geometry-Based Dense Hand-Surface Interaction Fields from Video / TactoHand：从视频中学习基于几何的密集手表面交互场
+
+**Date**: 2026-10-29 | **arXiv**: [2610.39585v1](http://arxiv.org/abs/2610.39585v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.39585v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/zhenqis123/Tactohand.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Understanding how humans interact with the world requires a representation of physical interactions at the hand surface. Tactile sensing captures these interactions, but collecting tactile data at scale requires specialized hardware. We introduce TactoHand, a model that predicts three dense hand-surface interaction fields---contact, proximity, and 3D force---from monocular video. We derive geometry-based contact and proximity labels and motion-derived force labels from eligible training data within a curated collection spanning approximately 50 million source frames. TactoHand uses a temporal transformer to aggregate visual evidence across frames, while three learned queries decode the corresponding hand-surface fields. A differentiable physics layer further constrains force predictions using observed object motion. Across in-domain and out-of-domain benchmarks, TactoHand improves contact and proximity estimation over prior methods. In addition, physics supervision reduces position and rotation errors in motion rollouts, and the predicted contact and proximity fields improve downstream hand-object reconstruction. Together, these results show a scalable, low-cost path to learning hand-surface interaction fields without collecting tactile measurements. Code will be released at https://github.com/zhenqis123/Tactohand.
+
+了解人类如何与世界互动需要手表面的物理交互表示。触觉传感捕获这些交互，但大规模收集触觉数据需要专门的硬件。我们引入了 TactoHand，这是一个可以根据单眼视频预测三个密集手表面交互场（接触、接近和 3D 力）的模型。我们从涵盖约 5000 万个源帧的精选集合中的合格训练数据中导出基于几何的接触和接近标签以及运动导出的力标签。 TactoHand 使用时间转换器来聚合跨帧的视觉证据，同时三个学习查询对相应的手表面字段进行解码。可微分的物理层进一步限制使用观察到的物体运动的力预测。在域内和域外基准测试中，TactoHand 比之前的方法改进了接触和接近估计。此外，物理监督减少了运动卷展中的位置和旋转误差，并且预测的接触和邻近场改进了下游手部对象重建。总之，这些结果显示了一种可扩展的、低成本的路径来学习手表面交互领域，而无需收集触觉测量结果。代码将在 https://github.com/zhenqis123/Tactohand 发布。
+
+</details>
+
+---
+
+## 12. MorphSIG: Subject-Driven Image Generation via Decoupled Anchoring and Feature Transport / MorphSIG：通过解耦锚定和特征传输生成主题驱动的图像
+
+**Date**: 2026-10-29 | **arXiv**: [2610.39530v1](http://arxiv.org/abs/2610.39530v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.39530v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We propose MorphSIG, a training-free framework that reformulates subject-driven image generation (SIG) as pseudo-video feature transport. MorphSIG contains two core modules: Progressive Decoupled Anchoring, which uses frequency-domain decoupling and structural scrambling during early denoising to break structural locking and enable a gradual transition from free composition to identity alignment; and Pseudo-flow Guided Feature Transport, which constructs a latent-space pseudo-flow field to mimic Image-to-Video temporal coherence and transport subject semantics precisely. To address stylistic homogeneity and the lack of ground truth in existing benchmarks, we further introduce a benchmark with diverse stylized subjects. Extensive experiments show that MorphSIG significantly improves pose diversity and subject fidelity over baselines without additional training. Overall, MorphSIG bridges static generation and dynamic propagation, providing a cost-effective paradigm for high-fidelity subject consistency.
+
+我们提出了 MorphSIG，这是一种免训练框架，它将主题驱动图像生成（SIG）重新表述为伪视频特征传输。 MorphSIG包含两个核心模块：渐进解耦锚定，在早期去噪过程中使用频域解耦和结构置乱来打破结构锁定，实现从自由组合到身份对齐的逐步过渡；伪流引导特征传输，它构建了一个潜在空间伪流场来模拟图像到视频的时间相干性并精确地传输主题语义。为了解决现有基准中的风格同质性和缺乏基本事实的问题，我们进一步引入了具有不同风格主题的基准。大量实验表明，MorphSIG 无需额外训练即可显着提高姿势多样性和主体保真度。总体而言，MorphSIG 连接了静态生成和动态传播，为高保真主题一致性提供了一种经济高效的范例。
+
+</details>
+
+---
+
+## 13. Regional Anchor Routing for Multi-Object Motion Transfer / 用于多对象运动传输的区域锚定路由
+
+**Date**: 2026-10-29 | **arXiv**: [2610.39478v1](http://arxiv.org/abs/2610.39478v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.39478v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Compositional motion transfer requires a model to extract motions from multiple reference videos, and apply each motion to a user-specified object in one target scene. Existing methods normally struggle to reliably assign different reference motions to the correct target objects, thus a motion intended for one object may affect another. Meanwhile, some motion-specific tuning approaches are still facing another issue: they must run a new optimization whenever the reference video changes, making repeated transfers inefficient. To address these limitations, we propose RART, a framework that unifies object-wise motion extraction, target-region anchoring, and frame-aligned injection into a frozen video Diffusion Transformer for multi-object motion transfer. For each reference motion, RART extracts temporally ordered features from the masked reference video, and then conditions them on the target first-frame mask to form mask-anchored motion tokens. Frame-aligned motion cross-attention allows each generated frame to read only the motion tokens at the corresponding time slots, composing all object motions in one denoising process. During training, a motion-attention routing loss encourages each target region to attend to its corresponding motion tokens and reduces interference between objects. Therefore, RART can handle novel reference-target combinations without per-video optimization. Experiments show that RART achieves accurate motion preservation, efficient inference, and strong compositional generalization.
+
+组合运动迁移需要一个模型从多个参考视频中提取运动，并将每个运动应用于一个目标场景中用户指定的对象。现有方法通常难以可靠地将不同的参考运动分配给正确的目标对象，因此针对一个对象的运动可能会影响另一个对象。与此同时，一些特定于运动的调整方法仍然面临另一个问题：每当参考视频发生变化时，它们都必须运行新的优化，从而导致重复传输效率低下。为了解决这些限制，我们提出了 RART，这是一个框架，它将对象运动提取、目标区域锚定和帧对齐注入到冻结视频扩散变换器中，以实现多对象运动传输。对于每个参考运动，RART 从屏蔽参考视频中提取按时间顺序排列的特征，然后将它们限制在目标第一帧屏蔽上以形成屏蔽锚定的运动标记。帧对齐运动交叉注意允许每个生成的帧仅读取相应时隙​​的运动标记，从而在一个去噪过程中组成所有对象运动。在训练过程中，运动注意路由损失会鼓励每个目标区域关注其相应的运动标记，并减少对象之间的干扰。因此，RART 可以处理新颖的参考目标组合，而无需针对每个视频进行优化。实验表明，RART 实现了准确的运动保留、高效的推理和强大的构图泛化。
+
+</details>
+
+---
+
+## 14. Seeing and Imagining as One: Unified Video Generation and 4D Perception for Embodied World Modeling / 视与想象合一：用于具体世界建模的统一视频生成和 4D 感知
+
+**Date**: 2026-10-29 | **arXiv**: [2610.39232v1](http://arxiv.org/abs/2610.39232v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.39232v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Embodied world models should not only imagine plausible futures, but also perceive the geometric, semantic, and motion structure of the evolving world. We present GenSight, a unified embodied world model that brings future video generation and dense perception into a single pretrained video diffusion transformer. GenSight uses a unified spatiotemporal representation for video, depth, embodiment segmentation, and first-frame-relative 2D flow. Built on a shared DiT backbone, GenSight uses lightweight task modulation to predict all modalities within the same architecture. All tasks are jointly optimized within a unified velocity prediction space. At inference, GenSight supports two complementary modes: multi-step future video generation with aligned dense predictions and single-step dense perception from an observed video. By unifying modality representation, model architecture, and prediction space, GenSight avoids separate modality-specific pipelines and couples appearance, geometry, semantics, and motion in a shared representation. It promotes cross-modal consistency and allows dense perception to benefit from the spatiotemporal priors learned through video generation. Trained on embodied manipulation data spanning multiple robot embodiments and human-hand interactions, GenSight demonstrates strong performance in both video generation and dense 4D perception, highlighting the effectiveness of unifying seeing and imagining for embodied world modeling.
+
+具身世界模型不仅应该想象合理的未来，还应该感知不断发展的世界的几何、语义和运动结构。我们提出了 GenSight，这是一个统一的具体世界模型，它将未来的视频生成和密集感知带入单个预训练的视频扩散变压器中。 GenSight 对视频、深度、实施例分割和第一帧相关 2D 流使用统一的时空表示。 GenSight 基于共享 DiT 主干网络构建，使用轻量级任务调制来预测同一架构中的所有模式。所有任务都在统一的速度预测空间内联合优化。在推理方面，GenSight 支持两种互补模式：具有对齐密集预测的多步未来视频生成和来自观察视频的单步密集感知。通过统一模态表示、模型架构和预测空间，GenSight 避免了单独的模态特定管道，并将外观、几何、语义和运动耦合在共享表示中。它促进跨模式一致性，并允许密集感知受益于通过视频生成学习的时空先验。 GenSight 经过跨越多个机器人实施例和人手交互的具体操作数据的训练，在视频生成和密集 4D 感知方面展示了强大的性能，突出了统一具体世界建模的视觉和想象的有效性。
+
+</details>
+
+---
+
+## 15. Edited Endpoints as Partial Goals for Image-to-Video Generation / 编辑端点作为图像到视频生成的部分目标
+
+**Date**: 2026-10-29 | **arXiv**: [2610.39179v1](http://arxiv.org/abs/2610.39179v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.39179v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/wannagetacat/Edited-Endpoints-I2V.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Edited endpoint images make the target of an image-to-video transition explicit and can improve transition completion, but also preserve context in the source image's layout. Full-frame endpoint conditioning turns this preserved context into requirements on the video's final state, potentially inducing temporal artifacts. We measure discontinuity with Hard-Cut (HC), late background reversal with Background Motion Reversal (BMR), and motion suppression with Dynamic Degree (DD). These artifacts appear across five video models spanning training-free and learned endpoint conditioning, in model-specific forms. We study Partial, a selective conditioning scheme that constrains only an edit-relevant region estimated from image-editor attention and leaves the remaining terminal content to the video model. Across three backbones on TC-Bench-I2V, Partial reduces temporal artifacts relative to full-frame conditioning, with no significant difference in Transition Completion Ratio (TCR); on Wan2.2-Turbo, uniformly weakening conditioning does not reproduce these reductions. A donor-context intervention keeps full-frame conditioning and replaces only the context outside the edit-relevant region with the final frame of a Partial video. It lowers HC and BMR on HunyuanVideo-1.5 and lowers BMR while restoring DD on Wan2.2-Turbo, with no significant difference in TCR, so constraint extent alone does not account for these artifacts. Together, these findings suggest that edited endpoints should serve as partial future goals, although edit relevance does not guarantee future validity. Code and data will be released at https://github.com/wannagetacat/Edited-Endpoints-I2V.
+
+编辑后的端点图像使图像到视频转换的目标变得明确，并且可以提高转换完成度，而且还可以保留源图像布局中的上下文。全帧端点调节将这种保留的上下文转变为对视频最终状态的要求，可能会引起时间伪影。我们使用硬切 (HC) 测量不连续性，使用背景运动反转 (BMR) 测量后期背景反转，并使用动态度 (DD) 测量运动抑制。这些伪影以特定于模型的形式出现在五个视频模型中，涵盖免训练和学习的端点调节。我们研究 Partial，这是一种选择性调节方案，仅限制根据图像编辑器注意力估计的编辑相关区域，并将剩余的终端内容留给视频模型。在 TC-Bench-I2V 上的三个主干上，Partial 相对于全帧调节减少了时间伪影，且转换完成率 (TCR) 没有显着差异；在 Wan2.2-Turbo 上，均匀削弱调节不会重现这些减少。捐赠者上下文干预保持全帧调节，并仅用部分视频的最终帧替换编辑相关区域之外的上下文。它降低了 HunyuanVideo-1.5 上的 HC 和 BMR，并降低了 BMR，同时恢复了 Wan2.2-Turbo 上的 DD，TCR 没有显着差异，因此仅约束范围并不能解释这些伪影。总之，这些发现表明编辑的终点应该作为未来的部分目标，尽管编辑相关性并不能保证未来的有效性。代码和数据将在 https://github.com/wannagetacat/Edited-Endpoints-I2V 发布。
+
+</details>
+
+---
+
+## 16. AlbumVSR: Identity-Preserving Face Video Super-Resolution from a Personal Photo Album / AlbumVSR：个人相册中的身份保护人脸视频超分辨率
+
+**Date**: 2026-10-28 | **arXiv**: [2610.39001v1](http://arxiv.org/abs/2610.39001v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.39001v1)
+
+**Categories**: cs.CV, eess.IV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Severe blur, downsampling, noise, and compression can erase the identity cues needed to faithfully restore a person's face. We therefore use photographs of the same person as an external source of identity. AlbumVSR conditions a frozen, one-step streaming diffusion transformer on a personal album. We use four MagFace/CLIP set tokens to encode the album, and 64 texture tokens which come from a fused UV atlas rendered at the current window's estimated face pose. These tokens are appended to the transformer's cached cross-attention context. On an identity-disjoint VoxCeleb2 benchmark with heavy synthetic degradation, AlbumVSR raises ArcFace similarity to the ground truth from 0.586 to 0.670 and face PSNR from 24.98 to 26.71 dB. On the 91 test identities, its mean identity similarity is higher than that of all 14 baselines.
+
+严重的模糊、下采样、噪声和压缩可以消除忠实恢复人脸所需的身份线索。因此，我们使用同一个人的照片作为身份的外部来源。 AlbumVSR 在个人专辑上调节冻结的一步式流媒体扩散变压器。我们使用四个 MagFace/CLIP 设置标记来对相册进行编码，并使用 64 个纹理标记，这些标记来自在当前窗口的估计面部姿势渲染的融合 UV 图集。这些标记被附加到变压器的缓存交叉注意力上下文中。在具有严重合成退化的身份不相交的 VoxCeleb2 基准上，AlbumVSR 将 ArcFace 与地面真实情况的相似度从 0.586 提高到 0.670，并将面部 PSNR 从 24.98 dB 提高到 26.71 dB。在 91 个测试身份上，其平均身份相似度高于所有 14 个基线。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-10-30 (9 papers)</b></summary>
 
 # arXiv Video Papers - 2026-10-30
