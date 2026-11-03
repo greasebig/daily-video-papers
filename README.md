@@ -27,6 +27,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-11-03](papers/2026-11-03.md) - 4 papers
 - [2026-10-31](papers/2026-10-31.md) - 16 papers
 - [2026-10-30](papers/2026-10-30.md) - 9 papers
 - [2026-10-28](papers/2026-10-28.md) - 29 papers
@@ -209,6 +210,82 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-11-03 (4 papers)</b></summary>
+
+# arXiv Video Papers - 2026-11-03
+
+**Paper Count**: 4
+
+---
+
+## 1. StreamClarify: Proactive Clarification for Grounded Streaming Video Question Answering / StreamClarify：接地流视频问答的主动澄清
+
+**Date**: 2026-10-31 | **arXiv**: [2611.01263v1](http://arxiv.org/abs/2611.01263v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.01263v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Streaming video question answering (QA) requires real-time reasoning over continuous video streams under strict latency and active-context budgets. Current streaming vision-language models (VLMs) often give confident yet ungrounded answers when queries are ambiguous or have false premises, or when relevant visual evidence is no longer in the active context. Proactive clarification can help, but must satisfy the same latency and memory constraints. We present StreamClarify, a training-free framework for grounded streaming QA that combines a pre-answer uncertainty check with hierarchical memory. The check uses the entropy of a binary pre-answer judgment as a lightweight uncertainty score to decide whether to answer directly or request clarification. To support re-answering, a temporal-pyramid KV cache maintains a bounded active visual context, while a CPU-side semantic retrieval archive provides access to historical frames. We further construct StreamClarify-QA, a diagnostic benchmark of 1,837 QA pairs from StreamBench and OVO-Bench, spanning standard, referential ambiguity, and unanswerable scenarios. Across three VLM backbones, StreamClarify improves Macro accuracy by up to 8.2 points over backbone-matched baselines. At comparable trigger rates, entropy-based selection achieves more than 18 points higher precision than random selection in identifying initially incorrect answers. Under oracle user guidance, clarification improves Macro accuracy by up to 3.5 points. We also report a controlled, oracle-assisted Qwen3-VL simulation on Ambiguous QA with generated questions and referent-only user replies, where the entropy-gated condition improves accuracy by 8.3 points.
+
+流视频问答 (QA) 需要在严格的延迟和活动上下文预算下对连续视频流进行实时推理。当查询不明确或有错误前提时，或者当相关视觉证据不再处于活动上下文中时，当前的流式视觉语言模型（VLM）通常会给出自信但无根据的答案。主动澄清可以有所帮助，但必须满足相同的延迟和内存限制。我们提出了 StreamClarify，这是一种用于基础流 QA 的免训练框架，它将预答案不确定性检查与分层内存相结合。该检查使用二进制预回答判断的熵作为轻量级不确定性分数来决定是直接回答还是要求澄清。为了支持重新应答，时间金字塔 KV 缓存维护有界的活动视觉上下文，而 CPU 端语义检索存档提供对历史帧的访问。我们进一步构建了 StreamClarify-QA，这是一个来自 StreamBench 和 OVO-Bench 的 1,837 个 QA 对的诊断基准，涵盖标准、引用模糊性和无法回答的场景。在三个 VLM 主干上，StreamClarify 将宏准确度比主干匹配的基线提高了 8.2 个点。在可比较的触发率下，基于熵的选择在识别最初不正确的答案方面比随机选择的精度高出 18 个百分点。在 oracle 用户指导下，澄清可将宏准确性提高多达 3.5 分。我们还报告了对模糊 QA 的受控、Oracle 辅助 Qwen3-VL 模拟，其中生成了问题和仅限参考的用户回复，其中熵门控条件将准确性提高了 8.3 个百分点。
+
+</details>
+
+---
+
+## 2. Leap-VLA: High-Rate Robot Control from a Low-Rate VLM Backbone / Leap-VLA：通过低速率 VLM 骨干进行高速率机器人控制
+
+**Date**: 2026-10-31 | **arXiv**: [2611.01011v1](http://arxiv.org/abs/2611.01011v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.01011v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision-language-action (VLA) models re-encode the full observation through a multi-billion-parameter vision-language model (VLM) at every control step, even though scene semantics evolve at roughly 1 Hz while reactive control requires 20-50 Hz. We present a VLA that decouples the two: a VLM runs as a low-frequency semantic anchor whose cached context is reused across control steps, while a flow-matching action expert operates at high frequency, consuming the cached semantics with a fresh, low-latency visual stream from a compact encoder pretrained on robot video with masked reconstruction, optical flow, and depth. The measured age $τ$ of the cache conditions the expert through adaptive layer normalization. Reusing the cache makes the policy a function of its age, and training covers that function explicitly: cache ages sampled from real episode history, plus an age-ramped pixel corruption that erases the stale snapshot the way deployed staleness corrupts content. On the asynchronous deployment stack, the recipe closes most of the staleness gap: on LIBERO-Spatial, 61.4% to 95.5% at a 2 s semantic refresh (95.9% at 1 s, within 1.6 points of the frequency-matched anchor); averaged over the four LIBERO suites, the deployed policy holds 95.2% at a 1 s refresh and 94.5% at 2 s against a 96.3% matched anchor. A forward-only chunk-boundary correction (soft-nudge), an autograd-free reformulation of real-time-chunking guidance, carries per-control-step re-planning without loss (97.1%) at zero added latency. The same lens exposes a second defect: under an instruction-scene mismatch the policy keeps manipulating the scene, and a chain-of-thought verdict gate trained on zero-cost negative episodes freezes execution exactly on mismatched instructions without hurting feasible success.
+
+视觉语言动作 (VLA) 模型在每个控制步骤通过数十亿参数的视觉语言模型 (VLM) 重新编码完整的观察结果，即使场景语义以大约 1 Hz 的速度演化，而反应控制则需要 20-50 Hz。我们提出了一个将两者解耦的 VLA：VLM 作为低频语义锚点运行，其缓存的上下文在控制步骤中重复使用，而流匹配动作专家以高频运行，使用来自紧凑型编码器的新鲜、低延迟视觉流来消耗缓存的语义，该编码器在具有掩模重建、光流和深度的机器人视频上进行预训练。测量的缓存年龄 $τ$ 通过自适应层规范化为专家提供条件。重用缓存使策略成为其年龄的函数，并且训练明确地涵盖了该函数：从真实事件历史中采样的缓存年龄，加上年龄斜坡像素损坏，以部署陈旧损坏内容的方式擦除陈旧快照。在异步部署堆栈上，该配方弥补了大部分陈旧差距：在 LIBERO-Spatial 上，2 秒语义刷新时为 61.4% 至 95.5%（1 秒时为 95.9%，频率匹配锚点的 1.6 个点以内）；四个 LIBERO 套件的平均结果是，所部署的策略在 1 秒刷新时保持 95.2%，在 2 秒刷新时保持 94.5%，而锚点匹配率为 96.3%。仅前向的块边界校正（软微调）是一种实时分块指导的无自动梯度重新表述，可以在零添加延迟的情况下进行每个控制步骤的重新规划，而不会丢失 (97.1%)。同样的镜头暴露了第二个缺陷：在指令场景不匹配的情况下，策略不断操纵场景，并且在零成本负事件上训练的思想链判决门精确地冻结了不匹配指令的执行，而不会损害可行的成功。
+
+</details>
+
+---
+
+## 3. What Helps Denoising Can Hurt Memory: Rethinking History in Long Video Generation / 什么有助于去噪会损害记忆：重新思考长视频生成的历史
+
+**Date**: 2026-10-31 | **arXiv**: [2611.00937v1](http://arxiv.org/abs/2611.00937v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.00937v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Autoregressive video generators produce long videos block by block, using historical context to maintain temporal consistency. After denoising, a committing pass encodes each clean block into keys and values (KV) that later blocks read, and the same clean block can be encoded into different KV depending on the history it reads. We therefore study historical context not only as a condition for denoising but also as an input to committing. Older historical context that supports denoising can harm subsequent generation when read during committing. At fixed context size and temporal positions, older historical context lowers mean clip-to-clip Subject Consistency. Across 5 generator configurations supporting longer contexts, consistency rises, plateaus, and then declines as committing context expands. Motivated by these findings, we propose Commit Forcing, a training-free rule that organizes committing into a chain. During committing, each block reads only the preceding block's stored KV, so older historical context reaches new entries only through the chain. We apply this rule to 6 pretrained generators. On 60-second VBench, Commit Forcing improves Quality and Total on all 6 generators, by up to 1.27 Quality points and 1.10 Total points. Long-range consistency gains extend to 240-second videos. In a blinded comparison on 120-second LongLive videos, Commit Forcing achieves win rates of 83.5% for subject and scene consistency and 82.9% for overall preference against the base generator, excluding ties.
+
+自回归视频生成器逐块生成长视频，使用历史上下文来保持时间一致性。去噪后，提交过程将每个干净块编码为稍后块读取的键和值（KV），并且根据其读取的历史记录，相同的干净块可以被编码为不同的KV。因此，我们研究历史背景不仅作为去噪的条件，而且作为承诺的输入。在提交期间读取支持去噪的旧历史背景可能会损害下一代。在固定的上下文大小和时间位置下，较旧的历史上下文会降低平均剪辑到剪辑主题一致性。在支持更长上下文的 5 种生成器配置中，一致性会随着提交上下文的扩展而上升、稳定，然后下降。受这些发现的启发，我们提出了强制提交（Commit Forcing），这是一种无需培训的规则，可以将提交组织成一条链。在提交期间，每个块仅读取前一个块存储的 KV，因此较旧的历史上下文只能通过链到达新条目。我们将此规则应用于 6 个预训练的生成器。在 60 秒 VBench 上，Commit Forcing 将所有 6 个生成器的质量和总计提高了 1.27 质量点和 1.10 总计点。长距离一致性增益扩展到 240 秒的视频。在对 120 秒 LongLive 视频进行的盲法比较中，Commit Forcing 在主题和场景一致性方面实现了 83.5% 的胜率，在针对基础生成器的整体偏好方面实现了 82.9% 的胜率（不包括平局）。
+
+</details>
+
+---
+
+## 4. FilmTogether: Cinematic Video Generation from Low-Cost Inputs / FilmTogether：利用低成本输入生成电影视频
+
+**Date**: 2026-10-31 | **arXiv**: [2611.00899v1](http://arxiv.org/abs/2611.00899v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.00899v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The widespread adoption of mobile devices has democratized video recording, but a stark aesthetic divide persists between casual, low-cost captures and high-cost cinematic productions. Bridging this gap requires upgrading heterogeneous production elements, such as lighting, specialized costumes, and materials, without altering the core layout, identity, and temporal motion of the original footage. However, this task is heavily bottlenecked by two important challenges: 1) Lacking a high-quality paired training data specifically designed to handle complex low-to-high appearance shifts. 2) Ignoring the capacity of current video editing models to perceive and enhance the multiple low-cost compositions. To address these issues, we present CineCraft-120K, a large-scale dataset of aligned low- and high-cost video pairs annotated with pair-aware editing prompts. CineCraft-120K features a diverse, high-resolution and high-cost Cinematic Crafting bank spanning decades of media production, meticulously taxonomized into 5 broad domains and 23 fine-grained sub-categories. It also provides element-level mapping between low- and high-cost counterparts, offering pair-aware rich textual prompts that precisely detail the required aesthetic transformations while anchoring structural layout. Architecturally, we propose a simple yet effective dual-memory feature adapter, where a text-memory expands semantic capacity for low2high appearance changes, and a hint memory supplies layer-wise visual feature corrections of high-cost element before context injection. Extensive experiments and ablation studies demonstrate the superiority of CineCraft-120K for low-to-high-cost video editing, alongside the effectiveness of our dual-memory adapter.
+
+移动设备的广泛采用使视频录制变得民主化，但休闲、低成本的拍摄和高成本的电影制作之间仍然存在明显的审美鸿沟。弥合这一差距需要升级异构制作元素，例如灯光、专门的服装和材料，而不改变原始素材的核心布局、身份和时间运动。然而，这项任务受到两个重要挑战的严重瓶颈：1）缺乏专门为处理复杂的从低到高的外观变化而设计的高质量配对训练数据。 2）忽略当前视频编辑模型感知和增强多种低成本合成的能力。为了解决这些问题，我们提出了 CineCraft-120K，这是一个由对齐的低成本和高成本视频对组成的大型数据集，并带有配对感知编辑提示。 CineCraft-120K 具有多样化、高分辨率和高成本的电影制作库，涵盖数十年的媒体制作，精心分类为 5 个广泛的领域和 23 个细粒度的子类别。它还提供低成本和高成本对应项之间的元素级映射，提供配对感知的丰富文本提示，在锚定结构布局的同时精确详细说明所需的美学转换。在架构上，我们提出了一种简单而有效的双内存特征适配器，其中文本内存扩展了低到高外观变化的语义容量，提示内存在上下文注入之前提供高成本元素的分层视觉特征校正。大量的实验和消融研究证明了 CineCraft-120K 在从低成本到高成本的视频编辑方面的优越性，以及我们的双内存适配器的有效性。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-10-31 (16 papers)</b></summary>
 
 # arXiv Video Papers - 2026-10-31
