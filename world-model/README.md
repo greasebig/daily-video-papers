@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-11-04](papers/2026-11-04.md) - 18 papers
 - [2026-11-03](papers/2026-11-03.md) - 10 papers
 - [2026-10-31](papers/2026-10-31.md) - 13 papers
 - [2026-10-30](papers/2026-10-30.md) - 9 papers
@@ -181,6 +182,308 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-11-04 (18 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-11-04
+
+**Paper Count**: 18
+
+---
+
+## 1. A research world model of power engineering learns its dynamics and reveals what-ifs / 电力工程的研究世界模型了解其动态并揭示假设情况
+
+**Date**: 2026-11-03 | **arXiv**: [2611.04566v1](http://arxiv.org/abs/2611.04566v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.04566v1)
+
+**Categories**: cs.AI, eess.SY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Decisions about the direction of research in power engineering determine which technologies mature and, through them, shape infrastructure that lasts decades, yet their consequences cannot be observed before they are taken, and existing forecasts of research fields extrapolate a single trajectory. Here we introduce research world models, which treat a research field as a dynamical system that can be acted upon, and establish one for power engineering from 1.1 million papers. A distilled language model reads each paper into role-typed concepts, two sophisticated, high-fidelity graph-temporal neural network cores learn how the resulting concept network evolves, and operators learned from natural experiments in the publication record estimate the effects of interventions. In temporally held-out tests, the model forecast years ahead which concepts would grow and which method-target pairs would be joined for the first time, outperforming tuned machine-learning baselines in most settings, and its estimated intervention effects tracked those realized in natural experiments it had not seen. Its training scheme and three of its operators replicated in two fields withheld from development. Questions posed in natural language are compiled by a domain-specialized 27-billion-parameter language model into executable actions and answered as paired simulations with and without the intervention. The answers were rated 4.1 of 5 for faithfulness by an independent language-model judge. By revealing the latent dynamics of a research field and its response to interventions, research world models offer a new way to simulate and test research decisions before they are made.
+
+关于电力工程研究方向的决定决定了哪些技术成熟，并通过它们塑造持续数十年的基础设施，但其后果在采取之前无法观察到，并且现有的研究领域预测推断出单一的轨迹。在这里，我们引入研究世界模型，将研究领域视为一个可以作用的动力系统，并从110万篇论文中建立了一个电力工程模型。蒸馏语言模型将每篇论文读入角色类型的概念，两个复杂的高保真图时神经网络核心学习所得概念网络如何演变，从出版物记录中的自然实验中学习的运算符估计干预的效果。在暂时进行的测试中，该模型预测了未来几年哪些概念将增长以及哪些方法-目标对将首次加入，在大多数情况下都优于经过调整的机器学习基线，并且其估计的干预效果跟踪了它在未见过的自然实验中实现的效果。它的培训计划和三名操作员在两个被禁止开发的领域进行了复制。以自然语言提出的问题由领域专用的 270 亿参数语言模型编译为可执行动作，并在有或没有干预的情况下作为配对模拟进行回答。独立语言模型评委对答案的忠实度评分为 4.1 分（满分 5 分）。通过揭示研究领域的潜在动态及其对干预的反应，研究世界模型提供了一种在做出研究决策之前模拟和测试研究决策的新方法。
+
+</details>
+
+---
+
+## 2. Future Representation Distillation for Imagination-Free World Action Models / 无想象力世界行动模型的未来表示蒸馏
+
+**Date**: 2026-11-03 | **arXiv**: [2611.04527v1](http://arxiv.org/abs/2611.04527v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.04527v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World Action Models (WAMs) use the predictive knowledge of pretrained video diffusion models for robot control through future video prediction. However, iterative video denoising is costly, and inaccurate visual predictions can compromise action prediction. Our key idea is to make this predictive knowledge available through visual representations computed from the current observation, enabling action prediction without generating future videos. We introduce DreamFree, a WAM that repurposes a pretrained video diffusion model as a predictive visual encoder through representation distillation. The visual encoder learns to predict a frozen video diffusion model's representation using only the current observation. An action module is then trained to predict actions by extracting action-relevant information from the visual encoder. Across real-world and simulated tasks, DreamFree achieves higher success rates than state-of-the-art VLAs and WAMs, while performing real-time closed-loop control at 11Hz with a 14B video diffusion backbone. Experiments show that DreamFree can translate stronger video priors and additional video data into better robot control and enable learning new robot tasks from video demonstrations, including videos from a different embodiment, without action annotation for the new tasks.
+
+世界动作模型 (WAM) 使用预训练视频扩散模型的预测知识通过未来视频预测来进行机器人控制。然而，迭代视频去噪成本高昂，并且不准确的视觉预测可能会影响动作预测。我们的主要想法是通过根据当前观察计算出的视觉表示来提供这种预测知识，从而无需生成未来视频即可进行动作预测。我们引入了 DreamFree，这是一种 WAM，它通过表示蒸馏将预训练的视频扩散模型重新用作预测视觉编码器。视觉编码器学习仅使用当前观察来预测冻结视频扩散模型的表示。然后，训练动作模块通过从视觉编码器中提取动作相关信息来预测动作。在现实世界和模拟任务中，DreamFree 实现了比最先进的 VLA 和 WAM 更高的成功率，同时通过 14B 视频扩散主干以 11Hz 执行实时闭环控制。实验表明，DreamFree 可以将更强的视频先验和附加视频数据转化为更好的机器人控制，并能够从视频演示（包括来自不同实施例的视频）中学习新的机器人任务，而无需为新任务进行动作注释。
+
+</details>
+
+---
+
+## 3. Hybrid Particle-Voxel Dynamics for Multimodal 3D World Simulation / 用于多模态 3D 世界模拟的混合粒子体素动力学
+
+**Date**: 2026-11-03 | **arXiv**: [2611.04492v1](http://arxiv.org/abs/2611.04492v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.04492v1)
+
+**Categories**: cs.RO, cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Predicting how the world evolves in response to robot actions is central to policy learning, evaluation, and planning. However, many action-conditioned world models predict future observations in 2D image or video space without explicitly modeling the underlying 3D scene, making spatial consistency across viewpoints and over long-horizon interactions challenging. We introduce 3D World Simulator, an action-conditioned multimodal world modeling framework that jointly predicts appearance, geometry, and tactile observations from a unified 3D representation. Our approach combines a hybrid particle-voxel autoencoder that compresses point clouds into compact 3D voxel latents with an action-conditioned latent dynamics model that predicts their evolution. The shared 3D representation supports geometrically consistent rendering from arbitrary viewpoints and flexible integration of spatially aligned tactile signals. Our experiments demonstrate interactive, long-horizon, multimodal prediction at 50 Hz. We then show how our model enables scalable data generation for policy training and evaluation using tactile and multi-view visual observations, including wrist-mounted and novel camera views. Furthermore, we scale our method to large datasets containing diverse objects and demonstrate model-based planning with unseen objects and robot configurations. Together, these results highlight the potential of hybrid particle-voxel dynamics as a foundation for multimodal 3D world simulation.
+
+预测世界如何响应机器人行为而演变是政策学习、评估和规划的核心。然而，许多动作条件世界模型预测 2D 图像或视频空间中的未来观察结果，而无需明确建模底层 3D 场景，这使得跨视点和长视界交互的空间一致性具有挑战性。我们引入了 3D World Simulator，这是一个以动作为条件的多模态世界建模框架，可以通过统一的 3D 表示联合预测外观、几何形状和触觉观察。我们的方法结合了混合粒子-体素自动编码器，将点云压缩为紧凑的 3D 体素潜伏，以及预测其演化的动作条件潜伏动力学模型。共享 3D 表示支持从任意视点进行几何一致的渲染以及空间对齐的触觉信号的灵活集成。我们的实验展示了 50 Hz 下的交互式、长视野、多模态预测。然后，我们展示我们的模型如何使用触觉和多视图视觉观察（包括腕式和新颖的相机视图）来生成可扩展的数据，以进行政策培训和评估。此外，我们将我们的方法扩展到包含不同对象的大型数据集，并使用看不见的对象和机器人配置演示基于模型的规划。总之，这些结果凸显了混合粒子-体素动力学作为多模态 3D 世界模拟基础的潜力。
+
+</details>
+
+---
+
+## 4. Embodied AI for Scientific Discovery: From Physical Action to Scientific Evidence / 用于科学发现的具体人工智能：从物理行为到科学证据
+
+**Date**: 2026-11-03 | **arXiv**: [2611.04371v1](http://arxiv.org/abs/2611.04371v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.04371v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Scientific experiments are increasingly selected, executed and interpreted by learned systems that act through physical interfaces. Robot learning builds physical competence, whereas AI for science chooses which experiment to run, each reporting different endpoints. This review treats their interface as one problem, embodied AI for science, where the experiment itself is partially observed: specimen state, apparatus state and measurement processes are latent, actions are costly and irreversible, and missingness depends on execution and outcome. We organize the literature by three closures operating at distinct levels: operational closure (the experiment realized is the one intended), epistemic closure (the result updates beliefs or selects subsequent experiments) and evidential closure (the record supports a claim). We analyze workflows through a record-linked evidence cycle - Record, Diagnose, Calibrate, Confirm - as analytic functions with feedback. A taxonomy crosses these closures with six delegated decisions and five embodiment classes. Our formulation separates commanded, realized and observed conditions and models diagnosis with explicit resource, risk and sample-change costs. We compare experiment-selection methods by terminal decision, review perception, protocol compilation, visuomotor policies, world models, recovery and transfer by evidence emission requirements, and compare chemistry, materials, biology, microscopy and field workflows by what their records establish. An appendix provides an evidence map of 28 workflows (26 physical, two software-boundary), characterizing validation pathways and claim confirmation requirements. We propose evaluation that separates actions, valid experiments, campaigns and confirmed claims, framing open challenges as controlled comparisons with measurable failure conditions.
+
+科学实验越来越多地由通过物理接口起作用的学习系统来选择、执行和解释。机器人学习培养身体能力，而科学人工智能则选择要运行的实验，每个实验报告不同的终点。这篇评论将它们的界面视为一个问题，体现了科学的人工智能，其中实验本身是部分观察的：样本状态、设备状态和测量过程是潜在的，行动是昂贵且不可逆转的，缺失取决于执行和结果。我们通过在不同级别上运行的三个闭包来组织文献：操作闭包（实现的实验是预期的）、认知闭包（结果更新信念或选择后续实验）和证据闭包（记录支持主张）。我们通过与记录相关的证据循环（记录、诊断、校准、确认）来分析工作流程，作为带有反馈的分析功能。分类法通过六个委托决策和五个实施类来交叉这些闭包。我们的公式将命令、实现和观察到的条件和模型诊断与明确的资源、风险和样本更换成本分开。我们通过最终决策、审查感知、方案编制、视觉运动政策、世界模型、证据排放要求的恢复和转移来比较实验选择方法，并根据其记录建立的内容来比较化学、材料、生物学、显微镜和现场工作流程。附录提供了 28 个工作流程（26 个物理工作流程、2 个软件边界）的证据图，描述了验证路径和声明确认要求的特征。我们建议进行评估，将行动、有效实验、活动和已确认的主张分开，将开放挑战框架与可测量的失败条件进行受控比较。
+
+</details>
+
+---
+
+## 5. Computer-Use Agents Gain Little Benefit from a World Model When Conditioned on Tutorials / 当以教程为条件时，计算机使用代理从世界模型中获得的好处很少
+
+**Date**: 2026-11-02 | **arXiv**: [2611.04073v1](http://arxiv.org/abs/2611.04073v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.04073v1)
+
+**Categories**: cs.LG
+
+**Code**: https://github.com/realjoenguyen/RAGPJ-official.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Recent work has improved computer-use agents (CUAs) by combining retrieved task-relevant tutorials and look-ahead planning using world models with MLLM judges. However, the contribution of each component -- tutorials, the judge, and the world model -- to overall improvement has not been evaluated in isolation. To fill this gap, we first construct OSWorld-Tutorial and ScienceBoard-Tutorial: two datasets for CUAs with curated multimodal tutorials, covering everyday and scientific domains. We then propose RAG-PolicyJudge (RAG-PJ), a policy-judge framework for CUAs conditioned on task-specific tutorials: the policy proposes candidate actions, and the judge selects among them. To isolate the effect of world models given tutorials, we compare RAG-PJ with and without common world models: using either zero-shot text-based descriptions of next states or an oracle that returns ground-truth visual observations. We find that RAG-PJ gains little benefit from these rollouts when tutorials are present, even with perfect visual futures. This suggests prior world-model gains in tutorial-conditioned methods come mainly from tutorial understanding and the judge's ability to select the proposed actions, rather than from predicted rollouts. Error analysis reveals that the bottleneck is not rollout fidelity, but the judge's ability to reason over future states and recognize task completion. This highlights the need to improve not just next-state prediction in world models, but also reasoning over their predicted rollouts. Datasets and code are available at https://github.com/realjoenguyen/RAGPJ-official.
+
+最近的工作通过将检索到的任务相关教程和使用世界模型的前瞻规划与 MLLM 法官相结合，改进了计算机使用代理 (CUA)。然而，每个组成部分——教程、法官和世界模型——对整体改进的贡献尚未被单独评估。为了填补这一空白，我们首先构建了 OSWorld-Tutorial 和 ScienceBoard-Tutorial：两个 CUA 数据集，其中包含精心策划的多模式教程，涵盖日常和科学领域。然后，我们提出 RAG-PolicyJudge (RAG-PJ)，这是一种以特定任务教程为条件的 CUA 政策判断框架：政策提出候选行动，法官在其中进行选择。为了隔离给定教程中世界模型的影响，我们将 RAG-PJ 与通用世界模型进行比较：使用基于零样本文本的下一个状态描述或返回真实视觉观察结果的预言机。我们发现，即使有完美的视觉前景，当有教程时，RAG-PJ 从这些部署中获得的好处也很少。这表明教程条件方法中先前的世界模型增益主要来自教程理解和法官选择建议动作的能力，而不是来自预测的推出。错误分析表明，瓶颈不是推出保真度，而是法官推理未来状态和识别任务完成的能力。这凸显出不仅需要改进世界模型中的下一状态预测，还需要改进对其预测推出的推理。数据集和代码可在 https://github.com/realjoenguyen/RAGPJ-official 获取。
+
+</details>
+
+---
+
+## 6. Forgetting to Improve: Principled Data Removal in Active Learning / 忘记改进：主动学习中的有原则的数据删除
+
+**Date**: 2026-11-02 | **arXiv**: [2611.04054v1](http://arxiv.org/abs/2611.04054v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.04054v1)
+
+**Categories**: cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The uncertainty of a statistical model is most commonly factorized into an aleatoric and an epistemic part. This factorization changes how predictions are interpreted in downstream decision tasks. Importantly, except for the idealistic scenario with no model mismatch, the quantification is a characteristic of the model and not the data generating process. In this paper, we propose Forgetting to Improve a method that reduces this discrepancy by incorporating the task into the modeling framework. Our key insight is to acknowledge that in scenarios of model mismatch, data can have a detrimental effect on the modeling for a specific task. Based on this insight, we propose an influence function for Gaussian process models that allows for principled removal of detrimental data samples. We showcase the flexibility of this approach by demonstrating significant improvements across a range of tasks, including Bayesian optimization, model-based reinforcement learning, and transductive learning.
+
+统计模型的不确定性通常被分解为任意部分和认知部分。这种分解改变了下游决策任务中预测的解释方式。重要的是，除了没有模型不匹配的理想场景之外，量化是模型的特征，而不是数据生成过程的特征。在本文中，我们提出了一种忘记改进的方法，通过将任务合并到建模框架中来减少这种差异。我们的主要见解是承认，在模型不匹配的情况下，数据可能会对特定任务的建模产生不利影响。基于这一见解，我们提出了高斯过程模型的影响函数，可以原则性地删除有害数据样本。我们通过展示贝叶斯优化、基于模型的强化学习和传导学习等一系列任务的显着改进来展示这种方法的灵活性。
+
+</details>
+
+---
+
+## 7. Physical Experience Builds Continual Spatial World Models / 身体经验构建连续的空间世界模型
+
+**Date**: 2026-11-02 | **arXiv**: [2611.04016v1](http://arxiv.org/abs/2611.04016v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.04016v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models are increasingly used to support prediction and planning in embodied agents, but the knowledge is usually established before deployment and then carried into later encounters. Continual operation faces a different problem. A familiar environment may change, and the agent must use previous experience without allowing old expectations to override current physical evidence. This study asks what repeated physical experience must contribute for a spatial world model to become progressively more useful rather than simply more persistent. A physics-grounded dynamic maze separates recurring spatial change from the continuous consequences of action. Cross-episode Spatial Change Memory learns relations among environmental transformations, while state-action-outcome experience refines predictions of motion. Structured experience progressively reduces the need for future route correction and transfers to spatial transitions not encountered during learning. The advantage disappears when past changes contain no information about future ones. Continuous navigation further shows that predictive memory changes behavior when a previous decision becomes invalid but leaves behavior unchanged when the decision remains correct. Physical tests expose a complementary limit: correct topology does not guarantee correct action prediction, and accumulated physical experience reduces this mismatch within the modeled dynamics. The results characterize continual world knowledge as experience that improves future prediction and action beyond stored episodes while remaining revisable by the physical outcomes it is intended to predict.
+
+世界模型越来越多地用于支持实体代理的预测和规划，但知识通常是在部署之前建立的，然后带入以后的遭遇中。持续运营面临着不同的问题。熟悉的环境可能会发生变化，代理必须使用以前的经验，而不让旧的期望推翻当前的物理证据。这项研究提出了哪些重复的物理经验必须有助于空间世界模型变得越来越有用，而不是简单地更加持久。基于物理的动态迷宫将反复出现的空间变化与行动的连续后果分开。跨情节空间变化记忆学习环境转变之间的关系，而状态-行动-结果经验则完善对运动的预测。结构化经验逐渐减少了未来路线修正的需要，并转移到学习期间未遇到的空间转换。当过去的变化不包含有关未来变化的信息时，优势就会消失。连续导航进一步表明，当先前的决策无效时，预测记忆会改变行为，但当决策保持正确时，预测记忆会保持行为不变。物理测试暴露了一个互补的限制：正确的拓扑并不能保证正确的动作预测，而积累的物理经验可以减少建模动态中的这种不匹配。结果将持续的世界知识描述为经验，可以改进未来的预测和行动，超越存储的事件，同时保持可通过其旨在预测的物理结果进行修改。
+
+</details>
+
+---
+
+## 8. Decision Transformer with Task-Aware Representations for Offline Meta-Reinforcement Learning / 用于离线元强化学习的具有任务感知表示的决策转换器
+
+**Date**: 2026-11-02 | **arXiv**: [2611.04010v1](http://arxiv.org/abs/2611.04010v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.04010v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+To enable effective generalization in offline meta-RL, it is essential to accurately infer the underlying task through latent task representations, which provide a compact and transferable summary of task-specific characteristics for guiding policy generation. In this paper, we propose Contrastive Task-Aware Decision Transformer (CoTA-DT), a DT-based offline meta-RL framework that learns task representations by jointly integrating four complementary components: (i) contrastive learning from offline trajectories, (ii) alignment with natural-language task descriptions, (iii) one-step supervision via a task-conditioned world model, and (iv) long-term supervision via a task-conditioned Q function. The learned task representations are used as conditioning signals for a DT-based policy, enabling task-aware meta-policy learning. To further support generalization in both zero-shot and few-shot settings, we design a language-grounded, self-adaptive strategy that enables effective and reliable adaptation to unseen tasks. Notably, in CoTA-DT, the pretrained LLM serves as a shared backbone for language encoding, world modeling, Q-function estimation, and policy learning. This unified design facilitates parameter sharing, improving both efficiency and generalization. Extensive experiments across diverse offline meta-RL benchmarks demonstrate that CoTA-DT consistently outperforms prior methods, particularly in challenging zero-shot generalization scenarios.
+
+为了实现离线元强化学习的有效泛化，必须通过潜在任务表示准确推断底层任务，这为指导策略生成提供了任务特定特征的紧凑且可转移的摘要。在本文中，我们提出了对比任务感知决策转换器（CoTA-DT），这是一种基于DT的离线元强化学习框架，通过联合集成四个互补组件来学习任务表示：（i）离线轨迹的对比学习，（ii）与自然语言任务描述的对齐，（iii）通过任务条件世界模型进行一步监督，以及（iv）通过任务条件Q函数进行长期监督。学习到的任务表示用作基于 DT 的策略的条件信号，从而实现任务感知元策略学习。为了进一步支持零样本和少样本设置中的泛化，我们设计了一种基于语言的自适应策略，能够有效且可靠地适应未见过的任务。值得注意的是，在 CoTA-DT 中，预训练的 LLM 充当语言编码、世界建模、Q 函数估计和策略学习的共享主干。这种统一的设计有利于参数共享，提高效率和通用性。跨不同离线元强化学习基准的大量实验表明，CoTA-DT 始终优于先前的方法，特别是在具有挑战性的零样本泛化场景中。
+
+</details>
+
+---
+
+## 9. Controlling Action-Head Co-Adaptation to VLM Representation Anisotropy / 控制动作头协同适应 VLM 表示各向异性
+
+**Date**: 2026-11-02 | **arXiv**: [2611.04006v1](http://arxiv.org/abs/2611.04006v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.04006v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Modern learning systems increasingly combine pretrained models with downstream heads. Despite the growing importance of such modular designs, how the downstream model co-adapts to the geometry of pretrained representations remains relatively underexplored. We study this problem through vision-language-action models (VLAs), where a pretrained vision-language model (VLM) conditions an action model for control. We find that the action model progressively concentrates its sensitivity on high-variance dimensions of the VLM outputs. Through controlled experiments across different backbone-head models, we further show that counteracting this sensitivity concentration can be beneficial under representation--task mismatch settings. Motivated by these observations, we introduce \emph{Adaptive Interface Equalizer} (AdaIE), a parameter-free mechanism that reweights pretrained representations according to the evolving downstream sensitivity during training. AdaIE improves VLA success rates on simulation benchmarks, with gains of up to $+5.28$ percentage points (pp) on RoboCasa-GR1 and $+1.68$ pp on RoboTwin 2.0, and achieves an average gain of $+19$ pp across five real-world manipulation tasks. It further generalizes to diffusion policies and world models, improving downstream performance in both settings. Our results highlight interface co-adaptation as an important optimization problem when coupling pretrained representations with downstream models.
+
+现代学习系统越来越多地将预训练模型与下游头部相结合。尽管这种模块化设计越来越重要，但下游模型如何共同适应预训练表示的几何形状仍然相对未得到充分探索。我们通过视觉语言动作模型（VLA）研究这个问题，其中预训练的视觉语言模型（VLM）为控制的动作模型提供了条件。我们发现动作模型逐渐将其敏感性集中在 VLM 输出的高方差维度上。通过不同骨干头部模型的对照实验，我们进一步表明，在表征-任务不匹配设置下，抵消这种敏感性集中可能是有益的。受这些观察的启发，我们引入了 \emph{自适应接口均衡器} (AdaIE)，这是一种无参数机制，可根据训练期间不断变化的下游敏感性重新加权预训练表示。 AdaIE 提高了模拟基准上的 VLA 成功率，在 RoboCasa-GR1 上提高了高达 $+5.28$ 个百分点 (pp)，在 RoboTwin 2.0 上提高了 $+1​​.68$ 个百分点 (pp)，并且在五个现实世界操作任务中实现了 $+1​​9$ 个百分点的平均增益。它进一步推广到扩散政策和世界模型，从而提高这两种情况下的下游绩效。我们的结果强调，在将预训练表示与下游模型耦合时，界面协同适应是一个重要的优化问题。
+
+</details>
+
+---
+
+## 10. Measuring Model-Specific Alignment Drift in LLM-Based Opinion Dynamics / 测量基于 LLM 的意见动态中模型特定的对齐漂移
+
+**Date**: 2026-11-02 | **arXiv**: [2611.03980v1](http://arxiv.org/abs/2611.03980v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.03980v1)
+
+**Categories**: cs.AI, physics.soc-ph
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language model (LLM) agents are increasingly used as synthetic participants in opinion-dynamics experiments, often assuming that an agent's behaviour is fully determined by its prompt. We test this assumption with a framework in which LLM agents discuss a contested policy issue over repeated rounds while their stance is quantified by a fixed psychometric instrument independent of any dynamics model. Across six LLMs, committed personas are intrinsically stable: in each of the five models tested without peer input, every agent keeps its assigned side for 20 rounds. The observed loss of alignment under discussion is therefore interaction-induced, we call it alignment drift, and model-specific: gpt-4.1 keeps opinion clusters apart, claude-sonnet-5 holds them partially, and gpt-5.6-sol and claude-opus-5 abandon them. Under selective attention, one LLM maintains separated opinion clusters under stance-homophilous attention. Qualitative profiles persist at doubled population and horizon and on a second issue. Such heterogeneity makes the LLM choice a first-class validity variable for social simulation.
+
+大语言模型（LLM）智能体越来越多地用作意见动态实验中的综合参与者，通常假设智能体的行为完全由其提示决定。我们用一个框架来测试这个假设，在这个框架中，法学硕士代理人在重复的回合中讨论有争议的政策问题，同时他们的立场通过独立于任何动态模型的固定心理测量工具进行量化。在六个法学硕士中，忠诚的角色本质上是稳定的：在没有同行输入的情况下测试的五个模型中，每个代理在 20 轮中保持其指定的一侧。因此，所观察到的讨论中的对齐丢失是交互引起的，我们称之为对齐漂移，并且是特定于模型的：gpt-4.1 使观点簇分开，claude-sonnet-5 部分保留它们，gpt-5.6-sol 和 claude-opus-5 放弃它们。在选择性关注下，一位法学硕士在立场同质关注下维持独立的意见集群。在人口和视野加倍以及第二个问题上，定性概况仍然存在。这种异质性使得法学硕士的选择成为社会模拟的一流有效性变量。
+
+</details>
+
+---
+
+## 11. Toward Uncertainty-Aware, Physics-Grounded Human World Models / 迈向具有不确定性、基于物理的人类世界模型
+
+**Date**: 2026-11-02 | **arXiv**: [2611.03428v1](http://arxiv.org/abs/2611.03428v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.03428v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+A robot that acts around people needs a world model of the human: a belief over the person's body state and a dynamics model that predicts where that state goes next. This abstract argues that two published components form exactly these two halves, and specifies how to couple them. KNOWN [1] reconstructs the 3D human body while estimating both aleatoric and epistemic uncertainty in real time (11.6 ms per frame); its aleatoric term identifies unreliable observations, its epistemic term identifies inputs from low-density regions of the training data, and refinement driven by the epistemic term reduces the error on such inputs from 81.3 to 70.3 mm. PhysMoP [2] predicts future body configuration by solving the Euler-Lagrange equations of the body with learned dynamics terms, reducing the 80 ms prediction error from 9.6 to 2.1 mm on Human3.6M and from 12.1 to 0.7 mm on 3DPW. We define the interface between the two, propose three mechanisms by which KNOWN's uncertainty enters PhysMoP, and specify an evaluation protocol on in-the-wild video. No new experimental results are reported here.
+
+在人类周围行动的机器人需要人类的世界模型：对人的身体状态的信念以及预测该状态下一步走向的动态模型。该摘要认为两个已发布的组件恰好形成了这两部分，并指定了如何将它们耦合起来。 KNOWN [1] 重建 3D 人体，同时实时估计任意和认知不确定性（每帧 11.6 毫秒）；它的任意项识别不可靠的观察结果，它的认知项识别来自训练数据低密度区域的输入，并且认知项驱动的细化将这些输入的误差从 81.3 毫米减少到 70.3 毫米。 PhysMoP [2] 通过使用学习的动力学项求解身体的欧拉-拉格朗日方程来预测未来的身体配置，将 Human3.6M 上的 80 ms 预测误差从 9.6 毫米减少到 2.1 毫米，在 3DPW 上从 12.1 毫米减少到 0.7 毫米。我们定义了两者之间的接口，提出了已知的不确定性进入 PhysMoP 的三种机制，并指定了野外视频的评估协议。这里没有报道新的实验结果。
+
+</details>
+
+---
+
+## 12. ForceLDM: A Force-aware Latent Dynamics Model for Contact-Rich Manipulation / ForceLDM：用于富接触操作的力感知潜在动力学模型
+
+**Date**: 2026-11-02 | **arXiv**: [2611.03294v1](http://arxiv.org/abs/2611.03294v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.03294v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Contact-rich manipulation requires fine-grained control and complex physical interactions with the environment, posing significant challenges for robot policy learning. Vision-only policies struggle with such tasks, as contact states and interaction forces are difficult to infer from visual observations alone. Existing methods mitigate this issue by incorporating force or tactile sensing. However, they often treat these signals as auxiliary observations without fully exploiting their role in modeling future interaction dynamics. To address this, we propose ForceLDM, a force-aware latent dynamics model that learns future contact and motion dynamics to guide action generation. Rather than directly predicting future observations, which can entangle task-relevant dynamics with irrelevant sensory details, ForceLDM learns a compact representation of future dynamics through knowledge distillation. Specifically, a teacher network with privileged future force/torque and optical flow signals extracts future dynamic features, which are then distilled into a student network trained only on current observations. This enables the student model to reason about upcoming contacts and physical dynamics without relying on future sensory inputs at deployment. To improve robustness and generalization, we further introduce a curriculum-based progressive noise injection strategy to mitigate over-reliance on future features. Experiments on five real-world contact-rich manipulation tasks demonstrate that ForceLDM outperforms state-of-the-art baselines, generalizes effectively to novel objects, and remains robust to environmental perturbations. Project page and code are available at https://tpy001.github.io/ForceLDM/.
+
+富含接触的操纵需要细粒度的控制以及与环境的复杂的物理交互，这给机器人策略学习带来了重大挑战。仅视觉政策很难完成此类任务，因为接触状态和相互作用力很难仅从视觉观察中推断出来。现有方法通过结合力或触觉传感来缓解这个问题。然而，他们经常将这些信号视为辅助观察，而没有充分利用它们在建模未来交互动态中的作用。为了解决这个问题，我们提出了 ForceLDM，这是一种力感知的潜在动力学模型，可以学习未来的接触和运动动力学来指导动作生成。 ForceLDM 不是直接预测未来的观察结果，这可能会将与任务相关的动态与不相关的感官细节纠缠在一起，而是通过知识蒸馏来学习未来动态的紧凑表示。具体来说，具有优先的未来力/扭矩和光流信号的教师网络提取未来的动态特征，然后将其提炼到仅根据当前观察进行训练的学生网络中。这使得学生模型能够推理即将发生的接触和物理动态，而无需依赖未来部署时的感官输入。为了提高鲁棒性和泛化性，我们进一步引入了基于课程的渐进式噪声注入策略，以减轻对未来功能的过度依赖。对五个现实世界接触丰富的操作任务的实验表明，ForceLDM 的性能优于最先进的基线，可以有效地推广到新物体，并且对环境扰动保持鲁棒性。项目页面和代码可在 https://tpy001.github.io/ForceLDM/ 获取。
+
+</details>
+
+---
+
+## 13. An intelligent satellite must do nothing well / 智能卫星不能做好任何事
+
+**Date**: 2026-11-02 | **arXiv**: [2611.02922v1](http://arxiv.org/abs/2611.02922v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.02922v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Autonomous inspection of a resident space object is usually posed as a contest between classical next-best-view planning and reinforcement learning. We argue that the choice of algorithm is the least informative of the design axes. An inspector spacecraft has no rest state: when it stops thrusting, orbital dynamics carry it along a natural trajectory that can be used to observe the target at no fuel cost. On a controlled ladder in which one design axis is varied at a time, fuel efficiency turns out to be set by three things: whether the agent is allowed to drift, whether its state records where drifting has taken it, and whether its planning horizon is long enough for the benefit to appear. Removing any one of them doubles the fuel bill or more. The algorithm still matters, but through what it can represent: a model-based agent whose learned world model ignores fuel spends several times more of it. Finally, no learned policy is safe by construction, and a control barrier function filter beneath the decision layer removed every keep-out-zone violation in two thousand evaluation episodes.
+
+对常驻空间物体的自主检查通常被视为经典次佳视图规划和强化学习之间的竞争。我们认为算法的选择是设计轴中信息最少的。巡视航天器没有静止状态：当它停止推力时，轨道动力学使它沿着自然轨迹行驶，可以用来观察目标而无需燃料成本。在一次改变一个设计轴的受控梯子上，燃油效率由三件事决定：是否允许智能体漂移、其状态记录是否发生了漂移、以及其规划期限是否足够长以实现效益显现。删除其中任何一个都会使燃油费用增加一倍或更多。该算法仍然很重要，但通过它可以代表的内容：基于模型的代理，其学习的世界模型忽略燃料，花费的燃料是其数倍。最后，没有任何习得的策略通过构建是安全的，并且决策层下方的控制屏障功能过滤器消除了两千个评估事件中的所有禁区违规行为。
+
+</details>
+
+---
+
+## 14. Creating Hybrid Interactive Narrative Systems with LLM: From Formal Description to Evaluation / 使用法学硕士创建混合交互式叙事系统：从正式描述到评估
+
+**Date**: 2026-11-02 | **arXiv**: [2611.02807v1](http://arxiv.org/abs/2611.02807v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.02807v1)
+
+**Categories**: cs.AI, cs.CL, cs.HC
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Interactive narratives let users shape a story while an Experience Manager (EM) keeps it coherent, balancing player freedom against authorial control. Large Language Models now enable a new generation of hybrid EMs, which combine run-time generation from free-text input with symbolic narrative control. However, their heterogeneity makes them hard to compare: A manager's behaviour is generally tied to the unique and specific scenario in which it operates, and much of its decision-making takes place outside of any explicit and verifiable structure. We address this with an LLM-based narrative platform whose managers are interchangeable modules operating over a shared symbolic world model of facts, operations, and goals. Because every applied operation carries explicit preconditions and effects, each session can be analysed as a plan through a common state-transition representation and evaluated, independently of how the manager works internally, with shared indicators of four properties: player agency, EM controllability, author intent, and robustness. We implement three contrasting managers, based respectively on open generation, Monte Carlo repair, and autonomous characters, and compare them through functional analysis on an interactive Little Red Riding Hood scenario. The results show that no manager dominates on every property, giving authors and EM designers a concrete basis to select a manager according to their priorities.
+
+交互式叙述让用户塑造故事，而体验经理 (EM) 则保持故事的连贯性，平衡玩家自由与作者控制。大型语言模型现在支持新一代混合 EM，它将自由文本输入的运行时生成与符号叙述控制结合起来。然而，它们的异质性使得它们难以进行比较：管理者的行为通常与其运作的独特且特定的场景相关，并且其大部分决策是在任何明确且可验证的结构之外进行的。我们通过基于法学硕士的叙事平台来解决这个问题，该平台的管理者是可互换的模块，在事实、运营和目标的共享符号世界模型上运行。因为每个应用操作都带有明确的先决条件和效果，所以每个会话都可以通过公共状态转换表示作为计划进行分析和评估，独立于管理器内部的工作方式，具有四个属性的共享指标：玩家代理、EM 可控性、作者意图和鲁棒性。我们实现了三种对比管理器，分别基于开放生成、蒙特卡罗修复和自主角色，并通过交互式小红帽场景的功能分析对它们进行比较。结果表明，没有哪个经理能够主宰所有属性，这为作者和 EM 设计师提供了根据优先级选择经理的具体基础。
+
+</details>
+
+---
+
+## 15. Right Ranking, Wrong Scale: Reproducing the Robotic World Model's Dynamics Model and Testing the Uncertainty of Its Follow-up / 正确的排名，错误的尺度：再现机器人世界模型的动力学模型并测试其后续的不确定性
+
+**Date**: 2026-11-02 | **arXiv**: [2611.02699v1](http://arxiv.org/abs/2611.02699v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.02699v1)
+
+**Categories**: cs.RO, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We reimplement the dynamics model of the Robotic World Model (RWM) and test the uncertainty estimate that its follow-up, RWM-U, uses to penalize reward in offline policy optimization. Our implementation matches the released model's gradients. On held-out data, training on the model's own rollouts beats one-step training at the preregistered long horizon for all ten episodes, but loses on short one-step windows. RWM-U's ensemble disagreement ranks rollout errors better than forecast step (Spearman rho = 0.90 at 100 steps), yet its spread substantially understates error: one-sigma coverage on the released checkpoint is 4.6% at 100 steps, versus 68% for a calibrated Gaussian. Rolling ensemble members on their own predictions raises coverage to 33%. The implemented squared-error loss on sampled predictions drives each member's variance toward zero. A horizon-specific rescaling restores one-sigma coverage under leave-one-episode-out evaluation, but not two-sigma coverage. We also identify two defects in the released evaluation pipeline. The study covers one robot, one gait and one dataset; it trains no policy.
+
+我们重新实现了机器人世界模型（RWM）的动力学模型，并测试了其后续模型 RWM-U 用于惩罚离线策略优化中的奖励的不确定性估计。我们的实现与已发布模型的梯度相匹配。在保留数据上，模型自身的推出训练优于在所有十集的预先注册的长视野中的一步训练，但在短的一步窗口上失败。 RWM-U 的整体分歧将推出错误排名优于预测步骤（100 步时 Spearman rho = 0.90），但其分布大大低估了错误：已发布检查点的 1-sigma 覆盖率在 100 步时为 4.6%，而校准高斯为 68%。滚动集成成员根据自己的预测将覆盖率提高到 33%。对采样预测实施的平方误差损失将每个成员的方差趋向于零。在留一集评估下，特定范围的重新缩放可恢复一西格玛覆盖范围，但不能恢复两西格玛覆盖范围。我们还发现已发布的评估流程中存在两个缺陷。该研究涵盖一个机器人、一种步态和一个数据集；它不训练任何策略。
+
+</details>
+
+---
+
+## 16. W2A: Distilling World Priors into Action Models for Real-Time Robotic Control / W2A：将世界先例提炼为实时机器人控制的动作模型
+
+**Date**: 2026-11-02 | **arXiv**: [2611.02600v1](http://arxiv.org/abs/2611.02600v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.02600v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World Action Models (WAMs) have recently shown great promise in robotic control, benefiting from the future imagination capability of large-scale pretrained video models. However, most existing WAMs require explicitly imagining future states at test time, incurring substantial computational overhead and latency that make them unsuitable for real-time robotic control. In this paper, we propose W2A, a two-stage distillation framework for real-time robotic manipulation that distills intermediate denoising representations from a video diffusion model into an action model during training, while entirely discarding the video model at test time. We hypothesize that although video latent representations are high-dimensional, a compressed low-dimensional subspace is sufficient to provide effective supervision for action generation. This makes it possible to transfer such information effectively into an action model. Extensive experiments in both simulation and real-world settings demonstrate competitive success rates while significantly improving inference efficiency. On LIBERO, W2A achieves a 95.9% average success rate. More importantly, W2A achieves about 21x faster inference than the representative WAM baseline.
+
+受益于大规模预训练视频模型的未来想象能力，世界动作模型（WAM）最近在机器人控制方面显示出了巨大的前景。然而，大多数现有的 WAM 需要在测试时明确想象未来状态，从而产生大量的计算开销和延迟，使它们不适合实时机器人控制。在本文中，我们提出了 W2A，一种用于实时机器人操作的两阶段蒸馏框架，在训练期间将视频扩散模型的中间去噪表示蒸馏为动作模型，同时在测试时完全丢弃视频模型。我们假设，虽然视频潜在表示是高维的，但压缩的低维子空间足以为动作生成提供有效的监督。这使得可以有效地将这些信息转移到行动模型中。模拟和现实环境中的大量实验证明了具有竞争力的成功率，同时显着提高了推理效率。在 LIBERO 上，W2A 的平均成功率达到 95.9%。更重要的是，W2A 的推理速度比代表性 WAM 基线快约 21 倍。
+
+</details>
+
+---
+
+## 17. Beyond Ensemble Disagreement: Predictive STL Monitoring of RL Locomotion under Distribution Shift / 超越集合分歧：分布偏移下 RL 运动的预测 STL 监控
+
+**Date**: 2026-11-01 | **arXiv**: [2611.02218v1](http://arxiv.org/abs/2611.02218v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.02218v1)
+
+**Categories**: cs.RO, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+RL locomotion policies trained under nominal simulation conditions may encounter distribution shifts that compromise safety. Predictive monitors could anticipate violations, but their world-model forecasts may become unreliable under shift, and ensemble disagreement is not calibrated. We evaluate predictive Signal Temporal Logic (STL) monitoring for frozen Ant-v5 and HalfCheetah-v5 policies using closed-loop world-model rollouts and a three-model ensemble. Across external-force, observation-noise, and mass shifts, predicted robustness ranks HalfCheetah's future STL violations strongly, whereas disagreement does not reliably track observation prediction error or violations. Under severe noise, violations remain common ($64.2\pm24.4\%$ at $K{=}20$ across three PPO seeds), yet current-state robustness without prediction comes within $0.03$ AUROC of predictive robustness. Penalizing predicted robustness by disagreement does not consistently improve ranking. Ant provides complementary per-specification evidence, but its composite target has no positive violations and its any-violation target is single-class in most evaluated seed-condition slices. Overall, predictive robustness provides useful STL-specific ranking but little demonstrated additional ranking value over the current state; these findings caution against treating ensemble disagreement as a reliable indicator of safety uncertainty.
+
+在标称模拟条件下训练的强化学习运动策略可能会遇到危及安全的分布变化。预测监视器可以预测违规行为，但他们的世界模型预测在变化下可能变得不可靠，并且集合分歧没有得到校准。我们使用闭环世界模型推出和三模型集成来评估冻结 Ant-v5 和 HalfCheetah-v5 策略的预测信号时间逻辑 (STL) 监控。在外力、观测噪声和质量变化方面，预测的稳健性对 HalfCheetah 未来的 STL 违规行为进行了强烈排名，而分歧并不能可靠地跟踪观测预测错误或违规行为。在严重的噪声下，违规行为仍然很常见（三个 PPO 种子的 $K{=}20$ 处的 $64.2\pm24.4\%$ ），但没有预测的当前状态稳健性在预测稳健性的 $0.03$ AUROC 范围内。通过分歧来惩罚预测的稳健性并不能持续提高排名。 Ant 提供了补充的每规范证据，但其复合目标没有积极违规，并且其任何违规目标在大多数评估的种子条件切片中都是单类。总体而言，预测稳健性提供了有用的特定于 STL 的排名，但几乎没有显示出比当前状态有额外的排名价值；这些发现警告不要将整体分歧视为安全不确定性的可靠指标。
+
+</details>
+
+---
+
+## 18. OpenNWM: A Generalist Navigation World Model with Latent Action Pretraining / OpenNWM：具有潜在动作预训练的通用导航世界模型
+
+**Date**: 2026-11-01 | **arXiv**: [2611.01844v1](http://arxiv.org/abs/2611.01844v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.01844v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Navigation world models predict future observations conditioned on navigation actions to support planning, but their generalization across real-world environments remains constrained by the limited coverage of action-labeled data. Action-free navigation videos provide diverse visual experience, yet lack the recorded actions required for action-conditioned training. We introduce OpenNWM, a generalist navigation world model with latent action pretraining. It learns universal latent actions from large-scale action-free videos through visual prediction pretraining, and further aligns them with physical motions via action-conditioned post-training. To support video pretraining, we curate NavAnywhere, a large-scale action-free navigation video dataset comprising 17.5 million visual observations from 15 heterogeneous sources. It captures navigation by ground robots, humans, and drones, with diverse viewpoints and motion patterns across five broad scene types: residential areas, public and commercial spaces, urban settings, parks, and natural landscapes. Experiments demonstrate improved visual prediction on in-domain and out-of-domain benchmarks, together with improved navigation performance. These results show that latent-action pretraining enables diverse, action-free videos to improve dynamics learning and generalization for open-world navigation.
+
+导航世界模型预测以导航动作为条件的未来观测结果以支持规划，但它们在现实世界环境中的泛化仍然受到动作标记数据的有限覆盖范围的限制。无动作导航视频提供了多样化的视觉体验，但缺乏动作条件训练所需的记录动作。我们介绍 OpenNWM，一种具有潜在动作预训练的通用导航世界模型。它通过视觉预测预训练从大规模无动作视频中学习通用潜在动作，并通过动作条件后训练进一步将它们与物理运动对齐。为了支持视频预训练，我们策划了 NavAnywhere，这是一个大型无动作导航视频数据集，包含来自 15 个异构源的 1750 万个视觉观察数据。它捕获地面机器人、人类和无人机的导航，在五种广泛的场景类型中具有不同的视角和运动模式：住宅区、公共和商业空间、城市环境、公园和自然景观。实验证明了域内和域外基准的视觉预测得到了改进，并且导航性能也得到了改进。这些结果表明，潜在动作预训练可以实现多样化、无动作的视频，从而改善开放世界导航的动态学习和泛化。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-11-03 (10 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-11-03
