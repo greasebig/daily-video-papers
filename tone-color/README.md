@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-11-04](papers/2026-11-04.md) - 3 papers
 - [2026-11-02](papers/2026-11-02.md) - 1 papers
 - [2026-10-31](papers/2026-10-31.md) - 5 papers
 - [2026-10-30](papers/2026-10-30.md) - 2 papers
@@ -116,6 +117,66 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-11-04 (3 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-11-04
+
+**Paper Count**: 3
+
+---
+
+## 1. CHROMA-MILL: Joint Low-Light Enhancement and White Balance under Colored Illumination / CHROMA-MILL：彩色照明下联合低光增强和白平衡
+
+**Date**: 2026-11-03 | **arXiv**: [2611.04092v1](http://arxiv.org/abs/2611.04092v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.04092v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Capturing an image in a low-light environment produces a weak, noisy sensor signal. Low-light image enhancement (LLIE) aims to restore it. Auto white balance (AWB) is also required for every image, and the same noisy signal degrades its ability to infer the scene illuminant. LLIE is typically performed first, followed by AWB, but this strategy remains largely unexamined because existing low-light datasets span a narrow range of illuminants and lack illuminant ground truth for evaluating AWB. We address this with CHROMA-MILL, a RAW dataset of 50 scenes captured with a DSLR and smartphone under four calibrated illuminants at eleven intensity levels. Because light is additive, we blend these captures in the linear RAW domain to synthesize physically valid illuminant mixtures with exact chromaticity ground truth. Benchmarking on this data, we find joint correction is best, and introduce CTI-Retinexformer, which supervises an illumination map, a chromaticity prediction, and an illumination-invariant scene embedding, outperforming the best cascade by 0.7 dB PSNR$_L$ and 1.1 $ΔE_{00}$.
+
+在弱光环境中捕获图像会产生微弱且有噪声的传感器信号。低光图像增强（LLIE）旨在恢复它。每个图像还需要自动白平衡 (AWB)，并且相同的噪声信号会降低其推断场景光源的能力。通常首先执行 LLIE，然后执行 AWB，但这种策略在很大程度上仍未得到检验，因为现有的低光数据集涵盖的光源范围很窄，并且缺乏用于评估 AWB 的光源地面实况。我们通过 CHROMA-MILL 解决了这个问题，这是一个 RAW 数据集，包含使用 DSLR 和智能手机在 11 个强度级别的 4 个校准光源下拍摄的 50 个场景。由于光是相加的，因此我们将这些捕获混合在线性 RAW 域中，以合成具有精确色度基本事实的物理有效的光源混合物。通过对这些数据进行基准测试，我们发现联合校正是最好的，并引入了 CTI-Retinexformer，它可以监督照明图、色度预测和照明不变场景嵌入，比最佳级联高出 0.7 dB PSNR$_L$ 和 1.1 $ΔE_{00}$。
+
+</details>
+
+---
+
+## 2. What Does LOL Measure? Hidden Label Shifts in Low-Light Enhancement Benchmarks / LOL 衡量什么？低光增强基准中的隐藏标签变化
+
+**Date**: 2026-10-28 | **arXiv**: [2610.38121v1](http://arxiv.org/abs/2610.38121v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.38121v1)
+
+**Categories**: cs.CV, cs.LG, eess.IV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+LOL-v1 and LOLv2-Real are the standard benchmarks for supervised low-light image enhancement, and several leading methods ship hand-set test-time adjustments with their evaluation scripts. We audit both benchmarks with 18 public checkpoints of eight methods under one metric implementation that reproduces every published number to within 0.09 dB, and find that their test labels differ from their training labels. (i) The 15 LOL-v1 test labels are rendered differently: the same captures appear in LOLv2 with labels of identical luminance but 1.48x lower saturation, and LOL-v1's own training labels match the LOLv2 rendering; we confirm this on the official release. (ii) The LOLv2-Real test set is the contiguous block of images 690-789, whose labels are 14% darker than the training labels (Cliff's delta = -0.45, p < 1e-12) with no comparable shift in the input statistics we examined; methods trained without any labels score up to 5.5 dB higher on test than on train. (iii) All 15 LOL-v1 test inputs reappear in LOLv2-Real, 12 in its training set. The released test-time settings are consistent with compensating for these shifts. Separating what can be calibrated on training data from what only test-set tuning finds, the test-only residual has median 0.00 dB on LOLv2-Syn, which has no shift, but 0.37 dB on LOL-v1 and 0.92 dB on LOLv2-Real (up to 3.9 dB). Under the shift, test-set checkpoint selection inflates a from-scratch model by 0.9-2.0 dB, and removing the released settings changes which method ranks first. We give concrete reporting recommendations.
+
+LOL-v1 和 LOLv2-Real 是监督低光图像增强的标准基准，几种领先的方法通过其评估脚本进行手动设置测试时间调整。我们在一种度量实现下使用 8 种方法的 18 个公共检查点对这两个基准进行审核，该度量实现将每个已发布的数字复制到 0.09 dB 以内，并发现它们的测试标签与训练标签不同。 (i) 15 个 LOL-v1 测试标签的渲染方式不同：相同的捕获出现在 LOLv2 中，标签具有相同的亮度但饱和度低 1.48 倍，并且 LOL-v1 自己的训练标签与 LOLv2 渲染相匹配；我们在官方发布的版本中确认了这一点。 (ii) LOLv2-Real 测试集是图像 690-789 的连续块，其标签比训练标签暗 14%（Cliff 的 delta = -0.45，p < 1e-12），我们检查的输入统计数据没有可比较的变化；在没有任何标签的情况下训练的方法在测试中的得分比在训练中高出 5.5 dB。 (iii) 所有 15 个 LOL-v1 测试输入重新出现在 LOLv2-Real 中，其中 12 个出现在其训练集中。发布的测试时间设置与补偿这些变化是一致的。将训练数据上可校准的数据与仅测试集调整发现的数据分开，仅测试残差在 LOLv2-Syn 上的中位数为 0.00 dB，没有偏移，但在 LOL-v1 上为 0.37 dB，在 LOLv2-Real 上为 0.92 dB（高达 3.9 dB）。在这种转变下，测试集检查点选择会使从头开始的模型膨胀 0.9-2.0 dB，并且删除已发布的设置会更改排名第一的方法。我们给出具体的报告建议。
+
+</details>
+
+---
+
+## 3. Low-Cost Deep Learning for Automated Keyframe Interpolation in Sprite Animation / 用于精灵动画中自动关键帧插值的低成本深度学习
+
+**Date**: 2026-10-12 | **arXiv**: [2610.16423v1](http://arxiv.org/abs/2610.16423v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.16423v1)
+
+**Categories**: cs.GR
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Sprite-based animation remains prevalent in video game development, but manual in-betweening---generating intermediate frames between keyframes---is labor-intensive. Existing video frame interpolation methods, optimized for photorealistic content, introduce smoothing artifacts when applied to the sharp edges, limited color palettes, and stylized motion characteristic of hand-drawn sprites. We present a deep learning approach for sprite in-betweening that adapts a U-Net encoder-decoder architecture with domain-specific modifications, including RGBA-aware processing, multi-scale flow refinement, and alpha-gated blending to preserve pixel-perfect sprite aesthetics. Following data-centric AI principles, we demonstrate that a few carefully curated sprite animation triplets---selected for diversity, quality, and representative edge cases---enable effective training without requiring massive generic datasets. Experimental evaluation using the FLIP perceptual metric shows that our method achieves a mean error of 0.258 on 42 test triplets, outperforming state-of-the-art video interpolation RIFE (0.313, 17.5\% worse), traditional optical flow Lucas-Kanade (0.449, 42.6\% worse), and general frame synthesis CyclicGen (0.603, 57.2\% worse). This study shows that quality-over-quantity data curation and domain-specific architectural adaptations yield better interpolation quality than general-purpose methods trained on orders of magnitude more data, validating the data-centric AI paradigm for specialized visual domains. This is particularly important for small-to-medium-sized game development studios, where budget and time constraints are critical.
+
+基于精灵的动画在视频游戏开发中仍然很流行，但手动中间操作（在关键帧之间生成中间帧）是劳动密集型的。现有的视频帧插值方法针对逼真的内容进行了优化，当应用于锐利边缘、有限的调色板和手绘精灵的程式化运动特征时，会引入平滑伪影。我们提出了一种用于精灵中间的深度学习方法，该方法采用具有特定于域的修改的 U-Net 编码器-解码器架构，包括 RGBA 感知处理、多尺度流细化和 alpha 门控混合，以保留像素完美的精灵美学。遵循以数据为中心的人工智能原则，我们证明了一些精心策划的精灵动画三元组（根据多样性、质量和代表性边缘情况进行选择）可以实现有效的训练，而无需大量通用数据集。使用 FLIP 感知指标的实验评估表明，我们的方法在 42 个测试三元组上实现了 0.258 的平均误差，优于最先进的视频插值 RIFE（0.313，差 17.5%）、传统光流 Lucas-Kanade（0.449，差 42.6%）和通用帧合成 CyclicGen（0.603， 57.2\% 更差）。这项研究表明，质量胜于数量的数据管理和特定领域的架构适应比在更多数量级的数据上训练的通用方法产生更好的插值质量，验证了专门视觉领域以数据为中心的人工智能范式。这对于预算和时间限制至关重要的中小型游戏开发工作室尤其重要。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-11-02 (1 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-11-02
