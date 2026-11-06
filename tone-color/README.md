@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-11-06](papers/2026-11-06.md) - 1 papers
 - [2026-11-05](papers/2026-11-05.md) - 1 papers
 - [2026-11-04](papers/2026-11-04.md) - 3 papers
 - [2026-11-02](papers/2026-11-02.md) - 1 papers
@@ -118,6 +119,34 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-11-06 (1 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-11-06
+
+**Paper Count**: 1
+
+---
+
+## 1. CoGenRec: A Unified Generative Framework for Complementary Vision Reconstruction / CoGenRec：互补视觉重建的统一生成框架
+
+**Date**: 2026-11-05 | **arXiv**: [2611.07665v1](http://arxiv.org/abs/2611.07665v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.07665v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Capturing scenes with extreme motion and high dynamic range is fundamentally constrained by trade-offs among temporal resolution, spatial detail, signal-to-noise ratio, and dynamic range under practical bandwidth, power, and quantum-efficiency limits. Conventional frame-based cameras therefore suffer from temporal undersampling, exposure-induced motion blur, and sensor saturation. The Complementary Vision Sensor (CVS) addresses these limitations by decomposing visual information across two complementary pathways, a spatially dense, temporally sparse, long-exposure RGB pathway and a temporally dense, spatially sparse, short-exposure patiotemporal difference pathway. Their complementary measurements provide appearance, structural, and motion cues across a wide dynamic range that enable reconstruction beyond conventional imaging. We present CoGenRec, a complementarity-driven generative reconstruction framework that unifies video deblurring, high-temporal-resolution frame interpolation, and HDR fusion. CoGenRec encodes complementary measurements into multi-scale spatiotemporal features using exposure-aware appearance modeling and bidirectional temporal propagation. These features constrain a video diffusion model and are injected into the VAE decoder to recover fine structures lost during latent-space compression, combining the scene fidelity of physical measurements with the appearance recovery capabilities of learned video priors. On SportsSloMo-CVS, CoGenRec improves PSNR over the strongest general-purpose baseline by 4.40 dB for deblurring, 3.89 dB for frame interpolation, and 5.04 dB for HDR fusion, respectively. It also achieves strong perceptual quality on 129 unseen scenes captured with real CVS. These results establish a unified approach to advance high-quality reconstruction under challenging motion and illumination conditions. Project page: https://cogenrec.github.io/.
+
+捕捉极端运动和高动态范围的场景从根本上受到实际带宽、功率和量子效率限制下时间分辨率、空间细节、信噪比和动态范围之间权衡的限制。因此，传统的基于帧的相机面临时间欠采样、曝光引起的运动模糊和传感器饱和的问题。互补视觉传感器 (CVS) 通过在两个互补路径（空间密集、时间稀疏、长曝光 RGB 路径和时间密集、空间稀疏、短曝光时空差异路径）分解视觉信息来解决这些限制。它们的互补测量提供了宽动态范围内的外观、结构和运动线索，使重建能够超越传统成像。我们提出了 CoGenRec，一个互补驱动的生成重建框架，它统一了视频去模糊、高时间分辨率帧插值和 HDR 融合。 CoGenRec 使用曝光感知外观建模和双向时间传播将互补测量编码为多尺度时空特征。这些特征约束视频扩散模型，并被注入 VAE 解码器中，以恢复潜在空间压缩期间丢失的精细结构，将物理测量的场景保真度与学习视频先验的外观恢复能力相结合。在 SportsSloMo-CVS 上，CoGenRec 将去模糊的 PSNR 相对于最强通用基线分别提高了 4.40 dB，帧插值提高了 3.89 dB，HDR 融合提高了 5.04 dB。它还对使用真实 CVS 捕获的 129 个未见过的场景实现了强大的感知质量。这些结果建立了一种统一的方法，可以在具有挑战性的运动和照明条件下推进高质量重建。项目页面：https://cogenrec.github.io/。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-11-05 (1 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-11-05
