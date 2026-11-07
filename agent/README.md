@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-11-07](papers/2026-11-07.md) - 8 papers
 - [2026-11-06](papers/2026-11-06.md) - 29 papers
 - [2026-11-05](papers/2026-11-05.md) - 34 papers
 - [2026-11-04](papers/2026-11-04.md) - 56 papers
@@ -198,6 +199,148 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-11-07 (8 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-11-07
+
+**Paper Count**: 8
+
+---
+
+## 1. The Power of Meta Access in the Software of the Future --- Demonstrated on LLM Chat UIs and Chat AI / 未来软件中元访问的力量 --- 在 LLM 聊天 UI 和聊天 AI 上展示
+
+**Date**: 2026-11-05 | **arXiv**: [2611.08428v1](http://arxiv.org/abs/2611.08428v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.08428v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Chat remains the default surface for many large language model (LLM) tasks, even as agentic tools such as OpenCode excel at coding and automation. Yet the model sees the current dialogue but not the workspace around it. We explore meta access---giving the assistant a structured, permissioned view of the interface itself and propose a ladder of levels: feature tutoring; metadata, settings, and preference access; retrieval over summaries and messages, confirmed mutation, and full orchestration. Meta access can turn a chat client from many screens into one entry point for finding, navigating, organising, and operating it, while raising risks around grounding, privacy, prompt injection, and trust. General-purpose agentic harnesses are runtimes; because they can change their own settings, meta access becomes reflexive and needs a separate control-plane boundary. We ground this in the Meta Chat prototype of the Chat AI client. It builds bounded context from, e.g., summaries, settings, and relevant messages; links references to conversations, topics, and personas; supports confirmed, reversible changes; offers a browsable tutorial library; and recommends personas as user-started conversations. By exposing application state in structured form, meta access can extend screen readers from widget descriptions to semantic workspace operations. Meta access thus turns chat from a window onto one conversation into a control layer for the whole workspace, extending chat toward agentic capability without surrendering user control. As assistants become embedded in IDEs, dashboards, office suites, and operating systems, AI-era interfaces should expose a structured, permissioned model of their state and capabilities, ideally by opening their existing metamodels through a debugger-like interface.
+
+即使 OpenCode 等代理工具擅长编码和自动化，聊天仍然是许多大型语言模型 (LLM) 任务的默认界面。然而，该模型看到了当前的对话，但看不到它周围的工作空间。我们探索元访问——为助手提供界面本身的结构化、许可视图，并提出一个层次阶梯：功能辅导；元数据、设置和首选项访问；检索摘要和消息、确认突变和完整编排。元访问可以将聊天客户端从多个屏幕转变为一个用于查找、导航、组织和操作的入口点，同时增加了基础、隐私、提示注入和信任方面的风险。通用代理工具是运行时；因为他们可以更改自己的设置，所以元访问变得自反，并且需要单独的控制平面边界。我们将其融入聊天 AI 客户端的元聊天原型中。它根据摘要、设置和相关消息等构建有界上下文；链接对对话、主题和人物角色的引用；支持已确认的、可逆的变更；提供可浏览的教程库；并推荐角色作为用户启动的对话。通过以结构化形式公开应用程序状态，元访问可以将屏幕阅读器从小部件描述扩展到语义工作区操作。因此，元访问将聊天从一个窗口到一个对话转变为整个工作区的控制层，将聊天扩展到代理功能而不放弃用户控制。随着助手嵌入到 IDE、仪表板、办公套件和操作系统中，人工智能时代的界面应该公开其状态和功能的结构化、许可模型，理想情况下是通过类似调试器的界面打开现有的元模型。
+
+</details>
+
+---
+
+## 2. Benchmarks as Software: Terminal-Bench and the Case for Continuous Benchmarks / 作为软件的基准：终端基准和连续基准的案例
+
+**Date**: 2026-11-05 | **arXiv**: [2611.08417v1](http://arxiv.org/abs/2611.08417v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.08417v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Coding agents are among the most economically consequential deployments of LLMs to date, making reliable evaluation increasingly important. Yet even benchmarks that are carefully validated at release can become stale. As models improve, they can discover valid solutions that existing verifiers reject, while changes to evaluation infrastructure can invalidate assumptions embedded in tasks and tests. We call the resulting accumulation of defects benchmark maintenance debt: a growing gap between benchmark scores and the capabilities they are intended to measure. We introduce a continuous-validation workflow for agentic benchmarks that combines community reports, task artifacts, agent traces, automated oracle checks, and human-gated repairs. We apply this workflow to Terminal-Bench 2.0, a benchmark that underwent extensive human and LM-assisted review and red-teaming before release. Our audit identifies issues in roughly 30% of the benchmark, and we release the resulting repairs as Terminal-Bench 2.1. These repairs change evaluation results: accuracy increased by over 10 percentage points and leaderboard positions move by up to three ranks, even as the overall ranking remains highly correlated (Spearman rho = 0.958).   We evaluate how resource allocation shapes benchmark conclusions. We show that fixed wall-clock can materially change agent performance: For example, extending the time limit closes a 20pp harness gap on GPT 5.4 and shrinks a 30 pp gap on GPT 5.4 mini to 5 pp. Benchmark maintenance is therefore not only about repairing task artifacts: resource budgets are part of the measurement specification and must be validated alongside the tasks themselves.   More broadly, benchmark maintenance debt is not just accumulated implementation bugs: our results show that as models improve, both evaluation assumptions and resource settings may need to be revalidated.
+
+编码代理是迄今为止最具经济意义的法学硕士部署之一，这使得可靠的评估变得越来越重要。然而，即使在发布时经过仔细验证的基准也可能变得过时。随着模型的改进，他们可以发现现有验证者拒绝的有效解决方案，而评估基础设施的更改可能会使任务和测试中嵌入的假设失效。我们将由此产生的缺陷累积称为基准维护债务：基准分数与其要衡量的能力之间的差距越来越大。我们引入了针对代理基准的持续验证工作流程，该工作流程结合了社区报告、任务工件、代理跟踪、自动化预言机检查和人工门控修复。我们将此工作流程应用于 Terminal-Bench 2.0，该基准在发布前经过了广泛的人工和 LM 辅助审查以及红队。我们的审计发现了基准测试中大约 30% 的问题，并将修复结果作为 Terminal-Bench 2.1 发布。这些修复改变了评估结果：准确度提高了 10 个百分点以上，排行榜位置最多移动了三个排名，尽管总体排名仍然高度相关 (Spearman rho = 0.958)。   我们评估资源分配如何形成基准结论。我们证明固定挂钟可以显着改变代理性能：例如，延长时间限制可以缩小 GPT 5.4 上 20pp 的差距，并将 GPT 5.4 mini 上 30pp 的差距缩小到 5pp。因此，基准维护不仅仅是修复任务工件：资源预算是测量规范的一部分，必须与任务本身一起进行验证。   更广泛地说，基准维护债务不仅仅是累积的实施错误：我们的结果表明，随着模型的改进，评估假设和资源设置可能都需要重新验证。
+
+</details>
+
+---
+
+## 3. Terminal-style Mathematical Modeling Bench: The First Agentic and Verifiable Benchmark for Mathematical Modeling / 终端式数学建模平台：第一个可代理、可验证的数学建模基准
+
+**Date**: 2026-11-05 | **arXiv**: [2611.08237v1](http://arxiv.org/abs/2611.08237v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.08237v1)
+
+**Categories**: cs.CL
+
+**Code**: https://github.com/wxj630/terminal-bench-math-modeling.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Mathematical modeling turns an open-ended real-world problem into assumptions, a model, a solution, and a defended recommendation, and its answers matter only if they are both close to a credible reference and physically feasible; existing benchmarks either score solver fragments or grade reports with an LLM judge, leaving those numbers unchecked. We introduce TB-MathModel (the Terminal-style Mathematical Modeling Bench), the first benchmark to make complete contest-style modeling problems agentic, verifiable, and terminal at once, over 18 real CUMCM and MCM problems (2023--2025). Each task ships the verbatim statement, official attachments, and figures in a containerized terminal; the agent returns one JSON artifact, scored on the numeric core of the final question against a reproduction of the Outstanding-award paper. Two design choices distinguish it: direction-aware, one-sided scoring, which never penalises beating the anchor, and two-layer feasibility verification---a programmatic gate over six decidable invariant forms plus 624 Lean~4 obligations---with a hard gate that zeroes infeasible answers. Each task is scored against a panel of human outstanding papers rather than one, so a model must be close to many accepted answers; across seven multimodal entries (three seeds each) the strongest reach a multi-reference O-Eval of 64.58\%, while the \$2.54 open model holds 59.81\% at $1/100$ the cost. TB-MathModel turns the numeric core of modeling into a reproducible, machine-checkable signal for measuring long-horizon modeling competence and for collecting agent trajectories. The source code is available at https://github.com/wxj630/terminal-bench-math-modeling.
+
+数学建模将开放式的现实世界问题转化为假设、模型、解决方案和有说服力的建议，只有当其答案接近可信参考且物理上可行时，它的答案才重要；现有的基准要么对解算器片段进行评分，要么对法学硕士法官的成绩报告进行评分，而对这些数字不加检查。我们推出了 TB-MathModel（终端式数学建模平台），这是第一个使完整竞赛式建模问题同时变得可代理、可验证和终端的基准，超过 18 个真实的 CUMCM 和 MCM 问题（2023--2025）。每项任务都会在集装箱码头中运送逐字陈述、官方附件和数据；代理返回一个 JSON 工件，根据最终问题的数字核心与杰出奖论文的复制品进行评分。两种设计选择使其与众不同：方向感知、片面评分，永远不会惩罚击中锚点，以及两层可行性验证——超过 6 个可判定不变形式的程序化门加上 624 个 Lean~4 义务——以及一个将不可行答案归零的硬门。每项任务都是根据一组人类杰出论文而不是一篇进行评分，因此模型必须接近许多公认的答案；在七个多模式条目（每个三个种子）中，最强的多参考 O-Eval 达到 64.58%，而 2.54 美元的开放模型以 1/100 美元的成本保持 59.81%。 TB-MathModel 将建模的数字核心转化为可重复的、机器可检查的信号，用于测量长期建模能力并收集代理轨迹。源代码可在 https://github.com/wxj630/terminal-bench-math-modeling 获取。
+
+</details>
+
+---
+
+## 4. Agent-R$^2$: Scaling Agents for Realistic Productivity Work via Real-Source Data Synthesis / Agent-R$^2$：通过真实源数据合成扩展代理以实现实际生产力工作
+
+**Date**: 2026-11-05 | **arXiv**: [2611.08219v1](http://arxiv.org/abs/2611.08219v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.08219v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language models have made rapid progress in agentic reasoning and tool use, raising expectations for agents that can take over realistic productivity work from humans. However, current agents still struggle to finish such tasks, where success requires following long-horizon professional workflows, understanding heterogeneous file contexts, and producing usable deliverables under fine-grained requirements. A key bottleneck is the lack of scalable post-training data that reflects real work intent, authentic file environments, and deliverable-level evaluation. To close this gap, we introduce Agent-R$^2$, a $\textbf{r}$eal-source data synthesis framework that scales training data for $\textbf{r}$ealistic productivity work. Instead of relying on manually specified workflows or LLM-generated files, Agent-R$^2$ grounds synthesis throughout the pipeline in real occupational seeds, corpus-derived workflow evidence, and authentic web-sourced files. From 10k web-corpus candidates, Agent-R$^2$ distills 4k task instances that pair real multi-format attachments with fine-grained, deliverable-level rubrics. On this data, we train Agent-R$^2$-4B via supervised fine-tuning and rubric-based reinforcement learning, improving both end-to-end productivity performance and file-grounded reasoning. Trained on only 4k instances, Agent-R$^2$-4B surpasses Qwen3-235B-A22B-Thinking-2507 on both GDPval (51.0$\%$ vs. 48.0$\%$) and OfficeQA (14.8$\%$ vs. 13.8$\%$). Further analysis shows that Agent-R$^2$ mitigates shortcut behavior, where agents produce superficially plausible deliverables before sufficiently grounding, constructing, or verifying them, while promoting sustained exploration.
+
+大型语言模型在代理推理和工具使用方面取得了快速进展，提高了人们对能够接管人类实际生产力工作的代理的期望。然而，当前的代理仍然难以完成此类任务，成功需要遵循长期的专业工作流程、理解异构文件上下文并在细粒度的要求下生成可用的可交付成果。一个关键瓶颈是缺乏可反映真实工作意图、真实文件环境和可交付水平评估的可扩展的培训后数据。为了弥补这一差距，我们引入了 Agent-R$^2$，这是一个 $\textbf{r}$ 真实源数据合成框架，可扩展训练数据以实现 $\textbf{r}$ 真实的生产力工作。 Agent-R$^2$ 不依赖于手动指定的工作流程或 LLM 生成的文件，而是在整个管道中以真实的职业种子、语料库衍生的工作流程证据和真实的网络来源文件为基础进行综合。 Agent-R$^2$ 从 10k 个网络语料库候选人中提炼出 4k 个任务实例，将真实的多格式附件与细粒度、可交付级别的标准配对。在此数据上，我们通过监督微调和基于规则的强化学习来训练 Agent-R$^2$-4B，从而提高端到端生产力性能和基于文件的推理。仅在 4k 实例上进行训练，Agent-R$^2$-4B 在 GDPval（51.0$\%$ vs. 48.0$\%$）和 OfficeQA（14.8$\%$ vs. 13.8$\%$）上都超过了 Qwen3-235B-A22B-Thinking-2507。进一步的分析表明，Agent-R$^2$ 减轻了捷径行为，即智能体在充分基础、构建或验证之前产生表面上合理的可交付成果，同时促进持续探索。
+
+</details>
+
+---
+
+## 5. RoboARCade: Benchmarking Agentic Robot Control / RoboARCade：代理机器人控制基准测试
+
+**Date**: 2026-11-05 | **arXiv**: [2611.08209v1](http://arxiv.org/abs/2611.08209v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.08209v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Improvements in multi-modal capabilities have enabled agents to act directly as robot policies, a setting we refer to as agentic robot control (ARC). We introduce RoboARCade, a benchmark of long-horizon manipulation tasks across three embodiments designed to test in-context adaptation, memory, and reasoning for precise control. The tasks build on existing open-source benchmarks, which we make harder by widening the range of initial conditions. RoboARCade is easy to use and extend: all tasks run on a single simulation backend, MuJoCo, each task is a self-contained data pack, and agents connect through interchangeable interfaces, so new tasks, agents, and interfaces can be added independently. The benchmark separates leading agents: GPT-6 Astra achieves 49.8% compared with 43.6% for Claude Fable 5.1, leaving substantial room for improvement. Comparing two interfaces, we find that a richer visual interface adds only 1.5 to 6.8 points at 1.7 to 2.3 times the cost. Failures stem mostly from choosing a poor manipulation strategy or executing a good one imprecisely, rarely from misunderstanding the scene, and agents incorrectly claim success on 24% to 39% of attempted subtasks. Agents can also improve without human input: one successful demonstration in context raises Astra's score from 53.5% to 73.0% on a five-task subset, and a prompt the agent writes and revises itself reaches 72.0%. Code, videos and full traces are available at roboarcade.org.
+
+多模式功能的改进使代理能够直接充当机器人策略，我们将这种设置称为代理机器人控制（ARC）。我们引入了 RoboARCade，这是跨三个实施例的长视野操作任务的基准，旨在测试上下文适应、记忆和推理以实现精确控制。这些任务建立在现有的开源基准的基础上，我们通过扩大初始条件的范围来使其变得更加困难。 RoboARCade 易于使用和扩展：所有任务都在单个模拟后端 MuJoCo 上运行，每个任务都是一个独立的数据包，代理通过可互换的接口进行连接，因此可以独立添加新的任务、代理和接口。该基准将领先的代理分开：GPT-6 Astra 达到了 49.8%，而 Claude Fable 5.1 为 43.6%，留下了很大的改进空间。比较两个界面，我们发现更丰富的视觉界面仅增加1.5至6.8分，成本却增加1.7至2.3倍。失败主要源于选择了糟糕的操纵策略或不精确地执行了良好的策略，很少是由于误解了场景，代理错误地声称 24% 到 39% 的子任务尝试成功。智能体也可以在没有人工输入的情况下进行改进：一次成功的上下文演示将 Astra 在五任务子集上的得分从 53.5% 提高到 73.0%，而智能体自行编写和修改的提示则达到 72.0%。代码、视频和完整轨迹可在 roboarcade.org 上找到。
+
+</details>
+
+---
+
+## 6. SMART: State-based Multi Agent Reasoning Traces for Verification-oriented Problem-Solving / SMART：基于状态的多代理推理跟踪，用于面向验证的问题解决
+
+**Date**: 2026-11-05 | **arXiv**: [2611.08196v1](http://arxiv.org/abs/2611.08196v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.08196v1)
+
+**Categories**: cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Complex problems with limited context, such as claims, require a means to obtain additional knowledge necessary for solution reasoning. We propose a multi-agent framework, SMART, to obtain knowledge through capturing the implicit state of participating entities in a problem context. SMART curates the state knowledge as diverse, complementary and solution-salient premises using a variety of LLMs and a structured role-based prompt strategy. Using knowledge from these real-world verified curated premises, SMART's knowledge guided solution reasoning improves validation performance up to 20% on complex scientific claims spanning 3 datasets. We show that grounding premises in real-world knowledge is necessary and improves performance up to 5%.
+
+上下文有限的复杂问题（例如权利要求）需要一种方法来获取解决方案推理所需的额外知识。我们提出了一个多智能体框架 SMART，通过捕获问题上下文中参与实体的隐式状态来获取知识。 SMART 使用各种法学硕士和基于角色的结构化提示策略，将国家知识作为多样化、互补性和解决方案突出的前提进行管理。利用来自这些现实世界经过验证的策划前提的知识，SMART 的知识引导解决方案推理将跨越 3 个数据集的复杂科学主张的验证性能提高了 20%。我们证明，以现实世界知识为基础的前提是必要的，并且可以将性能提高高达 5%。
+
+</details>
+
+---
+
+## 7. Detecting Silent Faults at the Environment-Trainer Boundary in Reinforcement Learning / 检测强化学习中环境-训练者边界的无声故障
+
+**Date**: 2026-11-05 | **arXiv**: [2611.08144v1](http://arxiv.org/abs/2611.08144v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.08144v1)
+
+**Categories**: cs.RO, cs.LG, cs.SE
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Robot reinforcement learning increasingly runs environments outside the trainer: in another process, on another machine, in another language. Many faults at this boundary raise no error. We make the boundary a wire protocol and ask what notices a fault in it.   On Pendulum, HalfCheetah, Hopper and a 7-joint arm (Pusher), we injected up to 23 faults into what crosses the wire and 2 into the trainer's log, from one value to every value. Unless every value was wrong, a learning-curve threshold caught at most one run in ten, and a comparison with ten fault-free seeds at most 21%. A clean evaluation of all 1,060 final policies agreed with the curves: of the 728 boundary-fault runs both curve checks passed, 723 scored no more than three standard deviations below fault-free seeds, though nearly all ended on other weights and, for reward faults, logged other returns.   Checks of the run itself, not of its outcome, saw every fault. A step ledger kept on both sides and compared step by step caught and located every fault that crossed, on Pendulum, Hopper and Pusher on one machine and on Pendulum across two, with no fault-free run and, on Pendulum, a median 3% more training time. An episode record kept at the environment caught the faults in the trainer's log. We list such faults found in practice, in Gymnasium 1.3 and our own code and, reported by others, in five multi-agent libraries, and recommend a step ledger and episode counts kept at the environment.
+
+机器人强化学习越来越多地运行训练器之外的环境：在另一个过程中，在另一台机器上，使用另一种语言。此边界上的许多故障不会引起错误。我们将边界设置为有线协议，并询问什么注意到其中的错误。   在 Pendulum、HalfCheetah、Hopper 和 7 关节臂（Pusher）上，我们将多达 23 个错误注入到穿过电线的部分，将 2 个错误注入训练员的日志中，从一个值到每个值。除非每个值都是错误的，否则学习曲线阈值最多捕获十分之一，与 10 个无故障种子的比较最多捕获 21%。对所有 1,060 个最终策略的清晰评估与曲线一致：在 728 个边界故障运行中，两条曲线检查都通过了，其中 723 个的得分低于无故障种子不超过三个标准差，尽管几乎所有策略都以其他权重结束，并且对于奖励故障，记录了其他回报。   检查运行本身，而不是检查结果，发现了所有错误。在一台机器上的摆式、料斗式和推杆式机器上以及在两台机器上的摆式上，在两台机器上都保留了步骤分类帐，并逐步进行比较，捕获并定位了交叉的每个错误，没有无故障运行，并且在摆式机器上，训练时间中位数增加了 3%。保存在环境中的事件记录在训练员日志中发现了错误。我们列出了在 Gymnasium 1.3 和我们自己的代码中以及其他人报告的五个多代理库中实际发现的此类错误，并建议在环境中保存步骤分类账和事件计数。
+
+</details>
+
+---
+
+## 8. PersonaAgent: Retrieval-Augmented Transaction Anomaly Scoring with Refreshable Multi-Entity Persona Memory / PersonaAgent：使用可刷新的多实体角色内存进行检索增强的事务异常评分
+
+**Date**: 2026-11-05 | **arXiv**: [2611.08094v1](http://arxiv.org/abs/2611.08094v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.08094v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In large-scale payment networks, entities (card, merchant, etc.) and their interactions play a key role in transaction anomaly detection. However, transaction patterns between different entities usually change more frequently than the production model refresh schedule. Meanwhile, entity embedding tables suffer from high-cardinality and sparse interaction issues. To resolve the above challenges, we present PersonaAgent, an agentic transaction anomaly detection framework which represents the latest entity behavior signals as personas and saves them in a refreshable memory. Offline, a weekly scheduled batch job is used to extract the latest behavior signals and update them in the memory. At inference time, a lightweight adapter retrieves the corresponding entity behavior signals of each transaction from memory and uses them to augment the base anomaly classifier's scoring. Through comprehensive benchmarking with different anomaly detection models at Visa, PersonaAgent is able to score transactions efficiently (a 1,000-transaction CPU batch in 1-2 ms), lifting the PR-AUC by 0.65-6.58% and the production business metric by 8.93-14.24% relatively in deployment.
+
+在大规模支付网络中，实体（卡、商户等）及其交互在交易异常检测中发挥着关键作用。然而，不同实体之间的事务模式通常比生产模型刷新计划更频繁地变化。同时，实体嵌入表面临高基数和稀疏交互问题。为了解决上述挑战，我们提出了 PersonaAgent，一种代理事务异常检测框架，它将最新的实体行为信号表示为角色并将其保存在可刷新的内存中。离线时，每周安排一次批处理作业，用于提取最新的行为信号并将其更新到内存中。在推理时，轻量级适配器从内存中检索每个事务的相应实体行为信号，并使用它们来增强基本异常分类器的评分。通过对 Visa 不同异常检测模型进行全面基准测试，PersonaAgent 能够高效地对交易进行评分（1-2 毫秒内处理 1,000 笔交易的 CPU 批次），相对部署中的 PR-AUC 提升 0.65-6.58%，生产业务指标提升 8.93-14.24%。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-11-06 (29 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-11-06
