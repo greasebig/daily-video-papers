@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-11-07](papers/2026-11-07.md) - 2 papers
 - [2026-11-06](papers/2026-11-06.md) - 7 papers
 - [2026-11-05](papers/2026-11-05.md) - 14 papers
 - [2026-11-04](papers/2026-11-04.md) - 18 papers
@@ -184,6 +185,50 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-11-07 (2 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-11-07
+
+**Paper Count**: 2
+
+---
+
+## 1. Learning a patient world model for health system simulation in intensive care / 学习重症监护中健康系统模拟的患者世界模型
+
+**Date**: 2026-11-05 | **arXiv**: [2611.08392v1](http://arxiv.org/abs/2611.08392v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.08392v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Designing healthcare strategies requires anticipating their clinical and operational consequences before implementation, a task that often relies on health system simulation. Such a simulation necessitates modeling how patient states evolve and generate care demands. However, conventional approaches typically tailor compact state transitions to a single policy question and omit history-dependent dynamics, thus requiring the redefinition of states and transitions when there is a new question that entails different clinical information. We propose to learn a patient world model from longitudinal EHRs using a neural network to provide a shared clinical representation of patient trajectories that can serve simulation questions across scenarios. Taking ICU operations as an example, we train the model on MIMIC-IV, freeze it, and couple its time-queryable predictions to shared ICU calendars, resources, and queues via scenario-specific mappings, so that one model renders admission demand, care tasks, and discharge proposals across simulations evaluating ICU bed capacity, care dispatch, and post-ICU transfer capacity. Experiments show that our model matches Markov and semi-Markov comparators in aggregate occupancy and directional responses to capacity and dispatch policies. It also reproduces policy gains from replayed observed trajectories. For patients entering the same support state from different prior trajectories, the learned representation captures a 24-h recovery difference (-6.4 predicted versus -6.7 observed percentage points), a contrast missed by compact state models, which propagates into distinct simulated care demand, queue burden, and bed use. These results indicate that a learned world model of patient dynamics has the potential to replace question-specific state models, allowing new care policies to be evaluated by reconfiguring the scenario without model rebuilding.
+
+设计医疗保健策略需要在实施之前预测其临床和操作后果，这项任务通常依赖于卫生系统模拟。这种模拟需要对患者状态如何演变和产生护理需求进行建模。然而，传统方法通常针对单个政策问题定制紧凑的状态转换，并忽略历史相关的动态，因此当出现需要不同临床信息的新问题时需要重新定义状态和转换。我们建议使用神经网络从纵向 EHR 中学习患者世界模型，以提供患者轨迹的共享临床表示，从而可以解决跨场景的模拟问题。以 ICU 操作为例，我们在 MIMIC-IV 上训练模型，冻结模型，并通过特定场景映射将其可时间查询的预测与共享 ICU 日历、资源和队列耦合，以便一个模型在评估 ICU 床位容量、护理调度和 ICU 后转运能力的模拟中呈现入院需求、护理任务和出院建议。实验表明，我们的模型在总占用率以及对容量和调度策略的定向响应方面与马尔可夫和半马尔可夫比较器相匹配。它还从重播的观察轨迹中再现政策收益。对于从不同的先前轨迹进入相同支持状态的患者，学习的表示捕获了 24 小时恢复差异（预测的 -6.4 个百分点与观察的 -6.7 个百分点），这是紧凑状态模型错过的对比，它传播到不同的模拟护理需求、队列负担和床位使用。这些结果表明，学习的患者动态世界模型有可能取代特定问题的状态模型，从而允许通过重新配置场景来评估新的护理政策，而无需重建模型。
+
+</details>
+
+---
+
+## 2. GPWM: Modeling the World as 3D Particle Motion / GPWM：将世界建模为 3D 粒子运动
+
+**Date**: 2026-11-05 | **arXiv**: [2611.08338v1](http://arxiv.org/abs/2611.08338v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.08338v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We introduce GPWM, a Generative Particle World Model that predicts how 3D scenes evolve by generating the motion of particles and rigid bodies over time. Unlike video world models that generate scene appearance, GPWM operates directly in 3D physical space. A single representation and architecture cover rigid, deformable, cloth, and granular materials, in both passive physics and robotic interaction. GPWM is an object-aware multi-resolution transformer that combines flow matching with diffusion forcing to generate coherent physical trajectories far beyond its training horizon. We train and evaluate GPWM on ParticleWorlds, a 25.5-million-frame corpus spanning diverse geometries, materials, interactions, and robot embodiments. GPWM outperforms the best prior learned-dynamics baseline in each of six physical domains, reducing prediction error by 31% on average. Breaking from the domain-specific setting of prior methods, a single Unified GPWM models these heterogeneous regimes with one set of weights, largely outperforming per-domain baselines and even surpassing our own specialist models in two domains. GPWM further generalizes to unseen geometries, physical properties, object counts, and rollout horizons. Beyond prediction, GPWM enables contact-rich planning by learning a generative prior over joint actuator-object motion. Instead of searching over unconstrained actions, planning searches the model's latent noise for interactions that achieve a desired object-space goal. With the same world model, noise-space planning substantially outperforms action-space search on pushing and picking, where complex contact sequences are hard to discover. Executed open-loop in simulation, the resulting plans achieve goal-directed manipulation without reference action trajectories or goal-specific policies.
+
+我们引入了 GPWM，一种生成粒子世界模型，它通过生成粒子和刚体随时间的运动来预测 3D 场景如何演变。与生成场景外观的视频世界模型不同，GPWM 直接在 3D 物理空间中运行。单一的表示和架构涵盖了被动物理和机器人交互中的刚性、可变形、布料和颗粒材料。 GPWM 是一种对象感知多分辨率转换器，它将流量匹配与扩散强迫相结合，生成远远超出其训练范围的连贯物理轨迹。我们在 ParticleWorlds 上训练和评估 GPWM，ParticleWorlds 是一个包含 2550 万帧的语料库，涵盖不同的几何形状、材料、交互和机器人实施例。 GPWM 在六个物理领域中的每一个领域均优于最佳的先验动态学习基线，平均将预测误差降低了 31%。打破了先前方法的特定于域的设置，单个统一 GPWM 使用一组权重对这些异构机制进行建模，很大程度上优于每个域的基线，甚至在两个域中超越了我们自己的专业模型。 GPWM 进一步推广到看不见的几何形状、物理属性、对象计数和推出范围。除了预测之外，GPWM 通过学习关节执行器-物体运动的生成先验，可以实现接触丰富的规划。规划不是搜索不受约束的动作，而是搜索模型的潜在噪声以寻找实现所需对象空间目标的交互。在相同的世界模型下，噪声空间规划在推和拾取方面的性能明显优于动作空间搜索，而复杂的接触序列很难发现。在模拟中开环执行，生成的计划无需参考行动轨迹或特定于目标的策略即可实现目标导向的操作。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-11-06 (7 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-11-06
