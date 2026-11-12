@@ -27,6 +27,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-11-12](papers/2026-11-12.md) - 5 papers
 - [2026-11-11](papers/2026-11-11.md) - 15 papers
 - [2026-11-07](papers/2026-11-07.md) - 3 papers
 - [2026-11-06](papers/2026-11-06.md) - 16 papers
@@ -215,6 +216,102 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-11-12 (5 papers)</b></summary>
+
+# arXiv Video Papers - 2026-11-12
+
+**Paper Count**: 5
+
+---
+
+## 1. UGG: Unified Generative Geometry Model / UGG：统一生成几何模型
+
+**Date**: 2026-11-10 | **arXiv**: [2611.14440v1](http://arxiv.org/abs/2611.14440v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.14440v1)
+
+**Categories**: cs.CV, cs.LG, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Understanding 4D scenes is a core challenge in visual intelligence, requiring models to jointly capture scene geometry, appearance, and dynamics from partial observations. However, existing approaches are subdivided into feedforward models for direct geometric prediction, and generative models for visual synthesis. We introduce UGG, a unified framework for 4D scene understanding that jointly models RGB video and geometric representations such as depth and camera pose. By assigning different noise levels across modalities and time, UGG formulates visual generation and geometric prediction as conditional completion within a single generative model. This flexible formulation enables the model to learn from diverse, heterogeneous datasets with different subsets of geometric and visual annotations. Furthermore, our generative formulation enables inference-time search over multiple plausible scene hypotheses, using geometric evidence extracted from observed RGB frames to improve geometric prediction without ground truth geometry. We demonstrate UGG's effectiveness over non-unified baselines across camera-controlled video generation, depth estimation, and camera pose prediction, including in challenging sparse observation settings. Code and visualizations are available at https://ugg-model.github.io/
+
+理解 4D 场景是视觉智能的核心挑战，需要模型从部分观察中联合捕获场景几何形状、外观和动态。然而，现有的方法被细分为用于直接几何预测的前馈模型和用于视觉合成的生成模型。我们引入 UGG，这是一个用于 4D 场景理解的统一框架，它联合建模 RGB 视频和几何表示（例如深度和相机姿势）。通过在模式和时间上分配不同的噪声水平，UGG 将视觉生成和几何预测制定为单个生成模型中的条件完成。这种灵活的公式使模型能够从具有不同几何和视觉注释子集的多样化、异构数据集中学习。此外，我们的生成式公式能够使用从观察到的 RGB 帧中提取的几何证据来对多个看似合理的场景假设进行推理时搜索，从而在没有地面真实几何的情况下改进几何预测。我们证明了 UGG 在摄像机控制的视频生成、深度估计和摄像机姿态预测（包括具有挑战性的稀疏观察设置）中相对于非统一基线的有效性。代码和可视化可在 https://ugg-model.github.io/ 获取
+
+</details>
+
+---
+
+## 2. OnlyAct: Extracting Action Representations from Foundation Models for World Models / OnlyAct：从世界模型的基础模型中提取动作表示
+
+**Date**: 2026-11-10 | **arXiv**: [2611.14420v1](http://arxiv.org/abs/2611.14420v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.14420v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video world models promise general-purpose interactive simulators, but their training is limited by action supervision: action labels are scarce, fragmented across incompatible specifications, and do not scale with the unlabeled video pretraining corpus. A common workaround jointly trains an action encoder to compress consecutive frames into a latent action and a decoder to reconstruct the next frame from the previous frame and that latent, forcing the latent to capture only new information. This has two limitations: learning the action space from scratch can limit generalization to unseen domains, and the bottleneck trades expressiveness for separation, with tighter settings losing nuance and looser ones risking scene leakage under domain shifts. We argue for a different starting point: rather than learning actions from scratch, we start from a pretrained foundation model (V-JEPA 2), whose embeddings of a frame pair already carry substantial action information after large-scale, diverse video pretraining. The remaining challenge is to extract the action while discarding the scene. We propose a label-free contrastive adaptation framework that pulls together frame pairs sharing the same motion under a different scene and pushes apart pairs from the same scene with different motion, reshaping the geometry of the pretrained space without imposing a reconstruction bottleneck. We introduce a unified evaluation protocol along three axes (action expressiveness, scene invariance, and action-conditioned video generation quality) across robot manipulation, camera navigation, game, and driving benchmarks, most of which are unseen during adaptation. Compared with annotation-free latent-action methods, our representations are substantially more expressive while matching their scene invariance, and they yield world models that transfer demonstrated actions to new scenes more faithfully.
+
+视频世界模型有望成为通用的交互式模拟器，但它们的训练受到动作监督的限制：动作标签稀缺，在不兼容的规范中分散，并且无法与未标记的视频预训练语料库进行扩展。一种常见的解决方法联合训练动作编码器将连续帧压缩为潜在动作，并联合训练解码器根据前一帧和该潜在动作重建下一帧，迫使潜在动作仅捕获新信息。这有两个限制：从头开始学习动作空间可能会限制对未见域的泛化，并且瓶颈会用表现力换取分离，更严格的设置会失去细微差别，而更宽松的设置会在域转换下面临场景泄漏的风险。我们主张不同的起点：我们不是从头开始学习动作，而是从预训练的基础模型（V-JEPA 2）开始，其帧对的嵌入在大规模、多样化的视频预训练之后已经携带了大量的动作信息。剩下的挑战是在丢弃场景的同时提取动作。我们提出了一种无标签对比适应框架，它将在不同场景下共享相同运动的帧对聚集在一起，并将来自同一场景的具有不同运动的帧对分开，从而重塑预训练空间的几何形状，而不会造成重建瓶颈。我们沿着三个轴（动作表现力、场景不变性和动作条件视频生成质量）引入了一个统一的评估协议，涉及机器人操作、相机导航、游戏和驾驶基准，其中大部分在适应过程中是看不见的。与无注释的潜在动作方法相比，我们的表示在匹配其场景不变性的同时更具表现力，并且它们产生的世界模型可以更忠实地将演示的动作转移到新场景。
+
+</details>
+
+---
+
+## 3. From Video Frames to Robot Meta-Frames: A Unified Latent Interface for World Action Models / 从视频帧到机器人元框架：世界动作模型的统一潜在接口
+
+**Date**: 2026-11-10 | **arXiv**: [2611.14365v1](http://arxiv.org/abs/2611.14365v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.14365v1)
+
+**Categories**: cs.CV, cs.RO
+
+**Code**: https://github.com/showlab/MetaWAM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Pretrained video diffusion models (VDMs) offer a powerful foundation for World Action Models (WAMs), which jointly predict robot actions and future observations. Building such models requires injecting low-dimensional robot signals (e.g. proprioception, actions, and values) into a latent space shaped by natural videos, and a key design choice is the interface through which these signals enter: existing schemes treat it as a formatting detail, spending a separate latent frame on each signal or bolting on dedicated encoders and decoders. We argue that signal injection is instead a distribution-alignment problem: how well a representation matches the prior of the pretrained VDMs during denoising. Using the relative reconstruction error of a frozen VDM denoiser as a probe, we find that conventional spatial encodings sit far off this prior, whereas frequency-domain packing yields latents that the denoiser corrects far less. Motivated by this diagnostic result, we propose MetaWAM, which folds all robot signals into a single unified meta-frame: each signal is assigned to a disjoint frequency-domain channel band and lifted to the spatial latent by an inverse DCT, yielding a decodable interface aligned with the pretrained VDM prior without any added module or architectural change. A fixed band layout together with slot-aware routing lets the same meta-frame support policy, world-model, and value prediction over a shared set of robot variables. On RoboCasa, MetaWAM reaches 68.9% success while collapsing the per-signal frames into one and cutting inference latency by 39%, and attains 85.0% success on three real-world Franka tasks. Code and models are available at https://github.com/showlab/MetaWAM
+
+预训练视频扩散模型 (VDM) 为世界动作模型 (WAM) 提供了强大的基础，可共同预测机器人动作和未来观察。构建此类模型需要将低维机器人信号（例如本体感觉、动作和值）注入由自然视频形成的潜在空间中，关键的设计选择是这些信号进入的接口：现有方案将其视为格式化细节，在每个信号上花费单独的潜在帧或固定在专用编码器和解码器上。我们认为信号注入是一个分布对齐问题：去噪期间表示与预训练 VDM 的先验匹配程度如何。使用冻结 VDM 降噪器的相对重建误差作为探针，我们发现传统的空间编码与先验相差甚远，而频域打包产生的潜在特征则被降噪器纠正得少得多。受此诊断结果的启发，我们提出了 MetaWAM，它将所有机器人信号折叠成一个统一的元框架：每个信号被分配到不相交的频域通道带，并通过逆 DCT 提升到空间潜在，产生与预先训练的 VDM 对齐的可解码接口，无需任何添加的模块或架构更改。固定的带布局与槽感知路由相结合，使相同的元框架支持策略、世界模型和对一组共享机器人变量的值预测。在 RoboCasa 上，MetaWAM 取得了 68.9% 的成功率，同时将每个信号帧压缩为一个帧并将推理延迟减少了 39%，并且在三个现实世界的 Franka 任务中取得了 85.0% 的成功率。代码和模型可在 https://github.com/showlab/MetaWAM 获取
+
+</details>
+
+---
+
+## 4. TaoMate-R1: Temporal Role Specialization for Streaming Multi-Reference Video Generation / TaoMate-R1：流式多参考视频生成的时间角色专业化
+
+**Date**: 2026-11-10 | **arXiv**: [2611.14307v1](http://arxiv.org/abs/2611.14307v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.14307v1)
+
+**Categories**: cs.CV
+
+**Code**: https://github.com/TaoLiveAIGC/TaoMate-H3.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Streaming multi-reference video generation establishes a scene from specified people and objects, then continues it under changing instructions. We introduce TaoMate-R1, a streaming multi-reference generator that organizes adaptation parameters through temporal role specialization. It assigns separate low-rank adapters to scene establishment and continuation on a frozen backbone. Each adapter performs both denoising and context writing for its role; Self Gradient Forcing jointly trains the roles through the history they construct. This allocation contrasts with operation-based specialization, which separates denoising from context writing across all chunks. A fixed-replay gradient analysis characterizes the update directions admitted by the two sharing schemes. On 32 multi-reference cases, we compare the schemes at the same two-adapter budget. Across ten approximately two-minute streams with changing instructions and shared teacher-audio conditioning, TaoMate-R1 reduces the mean boundary luminance jump from 1.96 to 0.613, with higher boundary feature similarity. It also achieves higher mean CLIP and DINO temporal similarity across short interactions, long streams, and public reference compositions. These results support grouping adaptation parameters by scene establishment and continuation for streaming multi-reference generation. Our code and model are released at https://github.com/TaoLiveAIGC/TaoMate-H3.
+
+流式多参考视频生成根据指定的人和对象建立场景，然后在不断变化的指令下继续该场景。我们引入了TaoMate-R1，一种流式多参考生成器，它通过时间角色专门化来组织适应参数。它为冻结主干上的场景建立和延续分配单独的低级适配器。每个适配器都执行其角色的去噪和上下文写入；自梯度强迫通过角色构建的历史来共同训练角色。这种分配与基于操作的专门化形成对比，后者将去噪与跨所有块的上下文写入分开。固定重放梯度分析表征了两种共享方案所允许的更新方向。在 32 个多参考案例中，我们在相同的两个适配器预算下比较了这些方案。在具有不断变化的指令和共享教师音频调节的 10 个大约两分钟的流中，TaoMate-R1 将平均边界亮度跳变从 1.96 降低到 0.613，并且具有更高的边界特征相似性。它还在短交互、长流和公共参考组合中实现了更高的平均 CLIP 和 DINO 时间相似性。这些结果支持通过场景建立和流式多参考生成的延续来对适应参数进行分组。我们的代码和模型发布在https://github.com/TaoLiveAIGC/TaoMate-H3。
+
+</details>
+
+---
+
+## 5. Elastic-WAM: Adaptive Spatiotemporal Imagination for Efficient Robot Control / Elastic-WAM：用于高效机器人控制的自适应时空想象
+
+**Date**: 2026-11-10 | **arXiv**: [2611.14257v1](http://arxiv.org/abs/2611.14257v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.14257v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World-Action Models improve robot control by predicting future visual dynamics, but iterative video denoising incurs substantial inference overhead. Recent approaches reduce this cost through partial future denoising, yet typically rely on fixed refinement budgets. Our empirical observations reveal that preferred refinement depths vary across tasks and states, while different future regions exhibit varying relevance to action generation. Motivated by these findings, we propose Elastic-WAM, which adaptively allocates world refinement computation across temporal denoising time and spatial future space. A unified spatiotemporal refinement demand field governs when to stop world refinement, how far to advance each denoising step, and which regions to refresh. We parameterize this field with a shared temporal basis and spatial amplitudes, and learn it through a three-stage action-grounded supervised procedure. At inference, the learned field guides recurrent sparse world refinement to improve task success while reducing inference overhead. Evaluations across diverse simulation benchmarks and real-world long-horizon manipulation demonstrate state-of-the-art control performance with reduced inference latency.
+
+世界动作模型通过预测未来的视觉动态来改进机器人控制，但迭代视频去噪会产生大量的推理开销。最近的方法通过部分未来去噪来降低这种成本，但通常依赖于固定的细化预算。我们的实证观察表明，首选的细化深度因任务和状态而异，而不同的未来区域与动作生成表现出不同的相关性。受这些发现的启发，我们提出了 Elastic-WAM，它可以跨时间去噪时间和空间未来空间自适应地分配世界细化计算。统一的时空细化需求场控制何时停止世界细化、每个去噪步骤推进多远以及刷新哪些区域。我们用共享的时间基础和空间幅度参数化这个场，并通过三阶段基于动作的监督程序来学习它。在推理时，学习的字段指导循环稀疏世界细化，以提高任务成功率，同时减少推理开销。对不同模拟基准和现实世界长视野操作的评估展示了最先进的控制性能，同时减少了推理延迟。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-11-11 (15 papers)</b></summary>
 
 # arXiv Video Papers - 2026-11-11
