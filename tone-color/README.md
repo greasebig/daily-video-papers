@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-11-12](papers/2026-11-12.md) - 1 papers
 - [2026-11-09](papers/2026-11-09.md) - 2 papers
 - [2026-11-07](papers/2026-11-07.md) - 1 papers
 - [2026-11-06](papers/2026-11-06.md) - 1 papers
@@ -121,6 +122,34 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-11-12 (1 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-11-12
+
+**Paper Count**: 1
+
+---
+
+## 1. Prior-Guided Single-Exposure HDR Novel View Synthesis via Base-Gain Representation / 通过基础增益表示的先验引导单次曝光 HDR 新视图合成
+
+**Date**: 2026-10-29 | **arXiv**: [2610.41011v1](http://arxiv.org/abs/2610.41011v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.41011v1)
+
+**Categories**: cs.CV, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Single-exposure high dynamic range (HDR) novel view synthesis (NVS) recovers HDR scenes from low dynamic range (LDR) views captured at a single exposure and estimates camera response function (CRF) for LDR re-exposure. Without HDR ground-truth, using single-exposure LDR views as the sole source of direct supervision underconstrains HDR reconstruction and cannot ensure its faithful recovery, motivating the need for learned LDR-to-HDR reconstruction priors. Moreover, single-exposure LDR views supervise CRF only over a limited range, necessitating a learnable prior for reliable re-exposure beyond it. We propose PriorGS, a 3D Gaussian Splatting framework that addresses both challenges by (1) guiding HDR recovery with pseudo-HDR supervision from 2D single-exposure HDR reconstruction methods while anchoring it to input LDR views through a closed reconstruction loop; and (2) regularizing CRF modeling with a learnable prior that guarantees monotonicity and promotes plausible responses. Yet cross-view inconsistencies in independently generated pseudo-HDR targets impair scene reconstruction when HDR is encoded directly as Gaussian's color attribute. We therefore introduce a 3D base-gain HDR representation that factors HDR radiance into an LDR base and an overlaid 3D gain field, promoting robustness to such inconsistencies and enabling 3D HDR appearance editing. Extensive experiments demonstrate PriorGS's substantial superiority over baselines.
+
+单次曝光高动态范围 (HDR) 新颖视图合成 (NVS) 从单次曝光捕获的低动态范围 (LDR) 视图中恢复 HDR 场景，并估计 LDR 重新曝光的相机响应函数 (CRF)。如果没有 HDR 地面实况，使用单曝光 LDR 视图作为直接监督的唯一来源会限制 HDR 重建，并且无法确保其忠实恢复，从而激发了学习 LDR 到 HDR 重建先验的需要。此外，单次曝光 LDR 视图仅在有限范围内监督 CRF，因此需要可学习的先验才能可靠地重新曝光。我们提出了 PriorGS，一种 3D 高斯 Splatting 框架，它通过以下方式解决这两个挑战：(1) 通过 2D 单曝光 HDR 重建方法的伪 HDR 监督指导 HDR 恢复，同时通过闭合重建循环将其锚定到输入 LDR 视图； (2) 使用可学习的先验规范 CRF 建模，保证单调性并促进合理的响应。然而，当 HDR 直接编码为高斯颜色属性时，独立生成的伪 HDR 目标中的跨视图不一致会损害场景重建。因此，我们引入了 3D 基本增益 HDR 表示，将 HDR 辐射度纳入 LDR 基础和重叠的 3D 增益场中，从而提高了对此类不一致的鲁棒性并支持 3D HDR 外观编辑。大量实验证明 PriorGS 相对于基线具有显着的优越性。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-11-09 (2 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-11-09
