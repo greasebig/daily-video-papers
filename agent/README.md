@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-11-12](papers/2026-11-12.md) - 8 papers
 - [2026-11-11](papers/2026-11-11.md) - 45 papers
 - [2026-11-07](papers/2026-11-07.md) - 8 papers
 - [2026-11-06](papers/2026-11-06.md) - 29 papers
@@ -200,6 +201,148 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-11-12 (8 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-11-12
+
+**Paper Count**: 8
+
+---
+
+## 1. Evaluating LLM-Generated World Models for Neuro-Symbolic Reasoning / 评估 LLM 生成的神经符号推理世界模型
+
+**Date**: 2026-11-10 | **arXiv**: [2611.14419v1](http://arxiv.org/abs/2611.14419v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.14419v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Formal world models can support planning, verification, and safety reasoning, but constructing them from open-ended natural-language situations is difficult, particularly in multi-agent settings where several formalizations may be plausible. We study whether five LLMs can generate such world models as partially observable stochastic games and whether mechanical validity is sufficient to establish that the resulting model faithfully represents the intended decision problem. We introduce a benchmark of 44 scenarios spanning game, situational, and cultural settings and evaluate generated world models along three dimensions: mechanical validity, reference-relative structural agreement, and semantic criteria. Across three empirical tracks, we analyze 410 first-pass generations. In the reference-backed game track, 134/135 generated world models pass a strict mechanical audit, yet mean permutation-invariant structural F1 is only 0.366, with just 28/134 mechanically valid models exactly matching the authored reference. In the cultural track, explicitly naming the country changes the generated structural representation for most LLMs while producing only small changes in automated semantic scores. These results show that executability is a necessary but insufficient criterion for LLM-generated world models: models that are mechanically valid can still differ substantially in the structure used by downstream neuro-symbolic reasoning and planning.
+
+正式的世界模型可以支持规划、验证和安全推理，但从开放式自然语言情况构建它们是很困难的，特别是在多智能体环境中，其中几种形式化可能是合理的。我们研究了五个法学硕士是否可以生成部分可观察的随机博弈这样的世界模型，以及机械有效性是否足以证明所得模型忠实地代表了预期的决策问题。我们引入了涵盖游戏、情境和文化设置的 44 个场景的基准，并从三个维度评估生成的世界模型：机械有效性、参考相对结构一致性和语义标准。我们通过三个实证轨道分析了 410 个首代。在参考支持的游戏轨道中，134/135 个生成的世界模型通过了严格的机械审核，但平均排列不变结构 F1 仅为 0.366，只有 28/134 个机械有效模型与所编写的参考完全匹配。在文化轨道上，明确命名国家会改变大多数法学硕士生成的结构表征，同时只会对自动语义分数产生微小的变化。这些结果表明，可执行性是 LLM 生成的世界模型的必要但不充分的标准：机械上有效的模型在下游神经符号推理和规划所使用的结构中仍然可能存在很大差异。
+
+</details>
+
+---
+
+## 2. EngineAgent: Agentizing On-Device LLM Inference Engines with Inference Stack Hierarchy Awareness and Hardware Abilities / EngineAgent：利用推理堆栈层次结构感知和硬件功能代理设备上 LLM 推理引擎
+
+**Date**: 2026-11-10 | **arXiv**: [2611.14356v1](http://arxiv.org/abs/2611.14356v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.14356v1)
+
+**Categories**: cs.OS, cs.AI, cs.CL, cs.SE
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Rapidly evolving LLM architectures and heterogeneous mobile hardware make supporting new models in on-device inference engines a recurring and costly system challenge. Each model may require coordinated changes across conversion, graph construction, operators, and hardware backends. Existing coding agents often miss these cross-layer dependencies and struggle to diagnose failures across host--device execution paths. We present EngineAgent, an agentic system for automating on-device LLM model enablement. Its key insight is to separate reusable engine and hardware knowledge from model-specific implementation. Before enablement, EngineAgent constructs a hierarchy-aware engine index that captures engine abstraction layers and cross-layer dependencies, and pre-validates backend-specific build, execution, and debugging workflows using already supported models. For each new model, a builder uses this knowledge to coordinate cross-layer changes, while an auditor checks implementation completeness and drives iterative debugging through device-side validation. Across 12 tasks spanning three mobile LLMs and four engine--backend pairs on CPUs, GPUs, and NPUs, EngineAgent achieves 75% end-to-end success with either of two underlying LLMs, versus 33.3% for the strongest coding-agent baseline. Success requires compilation, on-device execution, and output-logit agreement with reference implementations. EngineAgent also reduces average per-task time and model-API cost relative to baselines using the same underlying LLMs.
+
+快速发展的法学硕士架构和异构移动硬件使得支持设备推理引擎中的新模型成为一项反复出现且成本高昂的系统挑战。每个模型可能需要跨转换、图形构建、运算符和硬件后端进行协调更改。现有的编码代理经常会错过这些跨层依赖关系，并且难以跨主机-设备执行路径诊断故障。我们推出了 EngineAgent，这是一个用于自动化设备上 LLM 模型启用的代理系统。其关键见解是将可重用的引擎和硬件知识与特定于模型的实现分开。在启用之前，EngineAgent 构建一个层次结构感知的引擎索引，捕获引擎抽象层和跨层依赖关系，并使用已支持的模型预先验证特定于后端的构建、执行和调试工作流程。对于每个新模型，构建者使用这些知识来协调跨层更改，而审核员则检查实现完整性并通过设备端验证驱动迭代调试。在涵盖三个移动 LLM 和 CPU、GPU 和 NPU 上的四个引擎后端对的 12 项任务中，EngineAgent 使用两个底层 LLM 中的任何一个实现了 75% 的端到端成功率，而最强的编码代理基线则为 33.3%。成功需要编译、设备上执行以及输出-logit 与参考实现的一致性。相对于使用相同底层 LLM 的基线，EngineAgent 还减少了平均每个任务时间和模型 API 成本。
+
+</details>
+
+---
+
+## 3. Don't Just Trust Your Memory: Evidence-Linked Memory Reduces Memory-Induced Degradation in LLM Agents / 不要只相信你的记忆：与证据相关的记忆可以减少法学硕士代理中记忆引起的退化
+
+**Date**: 2026-11-10 | **arXiv**: [2611.14320v1](http://arxiv.org/abs/2611.14320v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.14320v1)
+
+**Categories**: cs.AI, cs.MA
+
+**Code**: https://github.com/yukyeongleee/wikitrace
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+External memory enables LLM agents to improve from experience by distilling trajectories of past tasks into concise lessons for new tasks. However, memory can also lead to memory-induced degradation, where an agent fails on tasks it would solve without memory, often because it follows a lesson that is incorrect, or misapplies or misreads a valid one. This is because lessons are inferred from trajectories labeled only with task success or failure, yet are typically provided without the trajectories they came from, leaving the agent no way to check them. To address this, we introduce WikiTrace, an evidence-linked memory system designed to let agents check each lesson against its original trajectory. Specifically, motivated by the finding that a trajectory often still holds the evidence needed to catch an erroneous lesson, WikiTrace stores each lesson as a concise insight linked to a summary of why its trajectory succeeded or failed and to the raw trajectory itself. Then, on a new task, the agent starts from all insights and, whenever one lacks details needed to act, conflicts with another, or comes from a failed task, descends through its links with terminal tools to fill in missing details or correct the insight before acting. We validate WikiTrace on five agentic benchmarks, showing that it consistently outperforms existing memory approaches and a baseline given the same insights alone, while also reducing memory-induced degradation. Our code is available at https://github.com/yukyeongleee/wikitrace
+
+外部记忆使 LLM 代理能够通过将过去任务的轨迹提炼成新任务的简洁教训来从经验中进行改进。然而，记忆也可能导致记忆引起的退化，即代理在没有记忆的情况下无法完成其可以解决的任务，通常是因为它遵循了不正确的教训，或者误用或误读了有效的教训。这是因为经验教训是从仅标记任务成功或失败的轨迹中推断出来的，但通常没有提供它们来自的轨迹，使代理无法检查它们。为了解决这个问题，我们引入了 WikiTrace，这是一种与证据相关的记忆系统，旨在让代理根据其原始轨迹检查每节课程。具体来说，由于发现轨迹通常仍然包含捕捉错误教训所需的证据，WikiTrace 将每个教训存储为简洁的见解，与轨迹成功或失败原因的摘要以及原始轨迹本身相关联。然后，在一项新任务中，代理从所有洞察开始，每当一个缺乏行动所需的细节、与另一个人发生冲突或来自失败的任务时，代理就会通过其与终端工具的链接下降，以填充缺失的细节或在行动之前纠正洞察。我们在五个代理基准上验证了 WikiTrace，结果表明它始终优于现有的内存方法和单独给出相同见解的基线，同时还减少了内存引起的退化。我们的代码可在 https://github.com/yukyeongleee/wikitrace 获取
+
+</details>
+
+---
+
+## 4. Lilo: A Multi-Agent Conversational Sandbox for Children's Digital Communication / Lilo：用于儿童数字通信的多代理会话沙箱
+
+**Date**: 2026-11-10 | **arXiv**: [2611.14260v1](http://arxiv.org/abs/2611.14260v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.14260v1)
+
+**Categories**: cs.HC, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Children's peer conflicts increasingly play out in group chats, where tone and timing are stripped away, and a hurtful message is easier to send than to say aloud. We present Lilo, a multi-agent conversational system that lets children practice such conversations, so they are better prepared when they encounter them in real digital communication. In Lilo, the child joins two AI-driven peers mid-argument, coached by a mentor character, also named Lilo, through a Stop-Think-Act traffic light. Through an exploratory study with 28 children (aged 9-11), we examine how children engage with Lilo's simulated peer conflict and the mentor's traffic-light interventions. The study included an intervention with Lilo, surveys before and after the intervention, and exit interviews. Participants reported significantly higher self-efficacy for coping with unpleasant messages after their interaction with Lilo. They felt safe experimenting, knowing nothing they wrote would be held against them.
+
+孩子们的同伴冲突越来越多地在群聊中上演，群聊中的语气和时间都被剥夺了，发送伤人的信息比大声说出来更容易。我们推出了 Lilo，这是一个多代理对话系统，可以让孩子们练习此类对话，以便他们在真正的数字通信中遇到此类对话时做好更好的准备。在《Lilo》中，孩子在争论中加入了两个人工智能驱动的同龄人，并在导师角色（也叫 Lilo）的指导下，通过停止思考行动红绿灯。通过对 28 名儿童（9-11 岁）进行的探索性研究，我们研究了儿童如何参与 Lilo 模拟的同伴冲突和导师的红绿灯干预。该研究包括对 Lilo 的干预、干预前后的调查以及退出访谈。参与者表示，在与 Lilo 互动后，应对不愉快信息的自我效能显着提高。他们觉得实验是安全的，因为他们知道自己写的任何内容都不会受到反对。
+
+</details>
+
+---
+
+## 5. Verifiable Agentic Traffic Class: A Policed Quality-of-Service Mechanism for Agentic AI Traffic, Evaluated from Simulation to Real-Kernel Adversarial Testing / 可验证的代理流量类别：代理 AI 流量的监管服务质量机制，从模拟到真实内核对抗性测试进行评估
+
+**Date**: 2026-11-10 | **arXiv**: [2611.14211v1](http://arxiv.org/abs/2611.14211v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.14211v1)
+
+**Categories**: cs.LG, cs.AI, cs.NI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Software agents built on large language models generate traffic unlike human web traffic, yet routers have no class for it and cannot verify a sender's claim to be an agent. This paper proposes the Verifiable Agentic Traffic Class (VATC), which combines a reserved Differentiated Services Code Point (DSCP) value declaring agent traffic, a router-side classifier that demotes flows contradicting the declaration to a class served after best-effort traffic, and a rate-limited priority queue. VATC was compared with static Differentiated Services (DiffServ), a dedicated class that trusts the marking, and fq_codel, a per-flow fair-queuing scheduler, in two simulators and on a real Linux kernel. VATC matched DiffServ under steady load. In a constructed burst it cut mean agent queuing delay by 98% relative to DiffServ in simulation (assuming an immediate verdict), at a 12% increase in human delay; most of the gain came from the separate class. Under a spoofed flood in the kernel, the rate limit held human latency 11 times below DiffServ's. Without verification, DiffServ and a tightly configured fq_codel gave legitimate agents lower latency than VATC; a live four-feature classifier then demoted all 20 bulk-shaped spoofers and gave agents 0.30 ms, but missed six spoofers that copied the agent pattern. With emulated network delay, a timing feature of the classifier stopped separating agent from human flows. In real agent harnesses on a congested link, router queueing took 13% to 63% of task time, depending on harness and assumed model latency. The traffic was synthetic or sandbox-scale.
+
+基于大型语言模型构建的软件代理生成的流量与人类网络流量不同，但路由器没有相应的类，也无法验证发送者是否声称是代理。本文提出了可验证代理流量类别 (VATC)，它结合了声明代理流量的保留差分服务代码点 (DSCP) 值、将与声明相矛盾的流量降级为尽力而为流量后服务的类别的路由器端分类器，以及速率限制的优先级队列。在两个模拟器和真实的 Linux 内核上，将 VATC 与静态差分服务 (DiffServ)（一种信任标记的专用类）和 fq_codel（每流公平排队调度程序）进行了比较。 VATC在稳定负载下匹配DiffServ。在构建的突发中，相对于模拟中的 DiffServ（假设立即判决），它使平均座席排队延迟减少了 98%，而人为延迟增加了 12%；大部分收益来自于单独的班级。在内核中的欺骗性泛洪下，速率限制使人类延迟比 DiffServ 低 11 倍。在没有验证的情况下，DiffServ 和严格配置的 fq_codel 为合法代理提供了比 VATC 更低的延迟；然后，实时四特征分类器将所有 20 个块状欺骗器降级，并给代理 0.30 毫秒的时间，但错过了复制代理模式的 6 个欺骗器。通过模拟网络延迟，分类器的计时功能停止将代理与人流分开。在拥塞链路上的真实代理线束中，路由器排队占用了 13% 到 63% 的任务时间，具体取决于线束和假设的模型延迟。流量是合成的或沙箱规模的。
+
+</details>
+
+---
+
+## 6. LEASH: Stay Safe in Agentic Robotics / LEASH：在代理机器人中保持安全
+
+**Date**: 2026-11-10 | **arXiv**: [2611.14115v1](http://arxiv.org/abs/2611.14115v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.14115v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Foundation models such as GPT and Claude have shown strong capabilities in spatial understanding and embodied intelligence. These advances make agentic robotics a promising path toward artificial general intelligence in robotics. However, we find that using foundation models to control robots poses serious safety risks, and comprehensive safety evaluation is still lacking. We introduce RoboRisk, a comprehensive benchmark for evaluating safety in agentic robotics. Its 92 simulated tasks and 13 physical-robot tasks fall into five categories: Task-level Refusal (T), Plan Repair (P), Execution-time Hazard (E), Injection (I), and Sequential Memory (S). Prior benchmarks cover at most two of these categories, and several evaluate only text outputs. In contrast, RoboRisk covers all five and executes every task in closed loop. We evaluate six state-of-the-art foundation models on RoboRisk: GPT-6 Astra, GPT-6.1 Sol, GPT-6 Luna, Claude Opus 5.5, Gemini 4 Argon, and Grok 4.7. These models generally show high harm rates. We also evaluate two robot-specific APIs: the Dream API and PokeBot's RoboAPI. We further propose the Lease-Enforced Agentic Safety Harness (LEASH), which offers essential safety infrastructure for agentic robotics and can be integrated into nearly any agentic architecture. LEASH leverages a decision model (Jev or OpenAI's Decisions API) to implement task, action, and commit gates, which review the task, each action, and each irreversible operation in their visual context. The planner and all three gates share a common safety policy. Experiments on RoboRisk in simulation and on physical robots show that LEASH effectively reduces harm across all six foundation models. It largely preserves their task completion performance and adds little time and token overhead.
+
+GPT和Claude等基础模型在空间理解和体现智能方面表现出了强大的能力。这些进步使代理机器人技术成为机器人领域通向通用人工智能的有希望的道路。然而，我们发现使用基础模型控制机器人存在严重的安全风险，且仍缺乏全面的安全评估。我们推出 RoboRisk，这是一个用于评估代理机器人安全性的综合基准。其 92 个模拟任务和 13 个物理机器人任务分为五类：任务级拒绝 (T)、计划修复 (P)、执行时危险 (E)、注入 (I) 和顺序内存 (S)。先前的基准测试最多涵盖其中两个类别，并且一些基准测试仅评估文本输出。相比之下，RoboRisk 涵盖了所有五个任务并在闭环中执行每个任务。我们在 RoboRisk 上评估了六种最先进的基础模型：GPT-6 Astra、GPT-6.1 Sol、GPT-6 Luna、Claude Opus 5.5、Gemini 4 Argon 和 Grok 4.7。这些模型通常表现出较高的危害率。我们还评估了两个特定于机器人的 API：Dream API 和 PokeBot 的 RoboAPI。我们进一步提出了租赁强制代理安全带（LEASH），它为代理机器人技术提供了必要的安全基础设施，并且可以集成到几乎任何代理架构中。 LEASH 利用决策模型（Jev 或 OpenAI 的决策 API）来实现任务、操作和提交门，这些门在其视觉上下文中审查任务、每个操作以及每个不可逆操作。规划器和所有三个大门共享共同的安全政策。 RoboRisk 模拟实验和物理机器人实验表明，LEASH 有效减少了所有六种基础模型的伤害。它在很大程度上保留了他们的任务完成性能，并且几乎不增加时间和令牌开销。
+
+</details>
+
+---
+
+## 7. ProofCoder: Continuous Reasoning for Automated Software Verification / ProofCoder：自动化软件验证的持续推理
+
+**Date**: 2026-11-10 | **arXiv**: [2611.14106v1](http://arxiv.org/abs/2611.14106v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.14106v1)
+
+**Categories**: cs.SE, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Formal verification using proof assistants provides strong correctness guarantees for software, but constructing proofs remains labor-intensive and requires significant expertise. Recent approaches based on large language models (LLMs) have shown promise in automating proof synthesis. However, these approaches typically constrain the model to a rigid tactic-generation loop, in which the surrounding system controls premise retrieval, proof-state management, and backtracking. We introduce ProofCoder, an agentic proof-synthesis system for Rocq that approaches theorem proving from a coding-agent perspective. Rather than generating tactics within a fixed loop, ProofCoder reasons continuously throughout proof search and uses proof-assistant feedback to decide when to gather additional information, inspect proof states, revise previously generated proof fragments, or backtrack to an earlier point in the proof. This allows it to iteratively construct, repair, and refine proofs, at either tactic-level or whole-proof granularity. We evaluate ProofCoder on 280 challenging verification tasks from the AutoRocq Benchmark. On the best-performing configurations, ProofCoder increases proof success from 47% to 60% over the state-of-theart AutoRocq system, corresponding to a 27.7% relative improvement at approximately half the cost. Our ablations identify continuous reasoning as a key design choice: without it, the agent solves fewer lemmas at substantially higher cost, backtracks four to six times more often, and more frequently discards its own revisions. Whole-proof and tactic-level generation achieve similar success rates but follow distinct search and repair strategies. These results suggest that effective automated software verification requires more than improved tactic selection: continuous reasoning and feedback-guided proof revision are critical ingredients for robust proof synthesis.
+
+使用证明助手的形式验证为软件提供了强有力的正确性保证，但构建证明仍然是劳动密集型的，并且需要大量的专业知识。最近基于大型语言模型（LLM）的方法在自动化证明合成方面显示出了希望。然而，这些方法通常将模型限制在严格的策略生成循环中，其中周围的系统控制前提检索、证明状态管理和回溯。我们介绍 ProofCoder，这是一个 Rocq 的代理证明综合系统，它从编码代理的角度进行定理证明。 ProofCoder 不是在固定循环内生成策略，而是在整个证明搜索过程中不断推理，并使用证明辅助反馈来决定何时收集附加信息、检查证明状态、修改先前生成的证明片段或回溯到证明中的较早点。这使得它能够在策略级别或整体证明粒度上迭代地构建、修复和完善证明。我们根据 AutoRocq 基准测试的 280 项具有挑战性的验证任务对 ProofCoder 进行了评估。在性能最佳的配置上，与最先进的 AutoRocq 系统相比，ProofCoder 将证明成功率从 47% 提高到 60%，相当于以大约一半的成本实现了 27.7% 的相对改进。我们的消融将连续推理确定为关键的设计选择：没有它，智能体以更高的成本解决更少的引理，回溯的频率增加四到六倍，并且更频繁地丢弃自己的修订。整体证明和策略级生成实现了相似的成功率，但遵循不同的搜索和修复策略。这些结果表明，有效的自动化软件验证需要的不仅仅是改进的策略选择：持续推理和反馈引导的证明修订是稳健证明合成的关键要素。
+
+</details>
+
+---
+
+## 8. What a CAGE 4 Score Measures: An Audit of a Learned Cyber-Defense Benchmark, Its Reference Defenders, and the Tables Built on Them / CAGE 4 分数衡量的是什么：对学习网络防御基准、其参考防御者以及基于它们构建的表格的审核
+
+**Date**: 2026-11-10 | **arXiv**: [2611.14068v1](http://arxiv.org/abs/2611.14068v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.14068v1)
+
+**Categories**: cs.CR, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+CAGE Challenge 4 is the benchmark on which learned multi-agent cyber defenders are compared. We reproduce its two reference defenders, KEEP and H-MARL Expert, in a pinned container and show that three things read from it measure less than they are taken to measure. First, the simulator silently discards any action asserted for an agent whose previous action is still running, and charges one point for a discarded Restore as for one that runs. The documented observation does not expose the busy flag. Both reference defenders read it in their own wrappers, and switching that check off at evaluation costs KEEP's released policy 99.58 points per episode and H-MARL's 145.98, in both cases the charge for Restores sent to busy agents, with H-MARL's executed actions unchanged step for step. On a supervisory harness, holding interventions until the agent is idle is worth 25.3 and 27.6 points per episode at the published setting. In training, the check decides how a busy step enters the trajectory. Trained without it, KEEP leads at a hundred updates in all four paired seeds and trails from two hundred on in all four. Continued to two thousand updates on three seeds, the repaired recipe ends inside the released interval on one seed and short on two, by 27 and 125 points, a spread across training seeds far wider than the released reproduction interval. Second, the evaluation seeds the environment but not the policy, so a reported mean is one draw, and 88.9% of per-episode outcome variance is the policy's own sampling draw. Third, recovery precision depends on the truth it is scored against. Across five published comparison tables, none states the artifact, sampling, criterion and adversary that would make its numbers comparable. We release the instrument, our patches to both defenders, the traces and checkpoints behind every number, and a five-item disclosure checklist.
+
+CAGE Challenge 4 是比较学习型多智能体网络防御者的基准。我们在固定容器中重现了它的两个参考防御者 KEEP 和 H-MARL Expert，并表明从其中读取的三件事的测量值小于测量值。首先，模拟器会默默地放弃为先前操作仍在运行的代理断言的任何操作，并为已放弃的恢复和正在运行的恢复收取一分。记录的观察结果并未暴露繁忙标志。两个参考防御者都在自己的包装中阅读它，并且在评估时切换该检查会导致 KEEP 发布的策略每集 99.58 分，H-MARL 的每集 145.98 分，在这两种情况下，恢复费用都会发送给繁忙的特工，而 H-MARL 执行的操作一步一步保持不变。在监督工具上，在已发布的设置中，保持干预直至代理空闲，每集分别值得 25.3 和 27.6 分。在训练中，检查决定繁忙的步骤如何进入轨迹。在没有它的情况下进行训练，KEEP 在所有四对种子的一百次更新中领先，并且在所有四对种子中领先 200 次。继续对三颗种子进行 2000 次更新，修复后的配方在一颗种子的发布间隔内结束，而在两颗种子上则相差 27 点和 125 点，训练种子的分布远大于发布的繁殖间隔。其次，评估的种子是环境而不是政策，因此报告的平均值是一次抽取，每集结果方差的 88.9% 是政策自己的抽样抽取。第三，恢复精度取决于其评分的真实情况。在五个已发布的比较表中，没有一个表说明了可以使其数字具有可比性的工件、样本、标准和对手。我们发布了该工具、给两名防守者的补丁、每个数字背后的痕迹和检查点，以及包含五项的披露清单。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-11-11 (45 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-11-11
