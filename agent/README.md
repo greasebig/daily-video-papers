@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-11-13](papers/2026-11-13.md) - 15 papers
 - [2026-11-12](papers/2026-11-12.md) - 8 papers
 - [2026-11-11](papers/2026-11-11.md) - 45 papers
 - [2026-11-07](papers/2026-11-07.md) - 8 papers
@@ -201,6 +202,260 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-11-13 (15 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-11-13
+
+**Paper Count**: 15
+
+---
+
+## 1. Can We Make an LLM Dumber, or Is It Just Playing Dumb? An Empirical Study of Believable Performance Throttling / 我们能让法学硕士变傻吗，还是只是装傻？可信性能节流的实证研究
+
+**Date**: 2026-11-11 | **arXiv**: [2611.15568v1](http://arxiv.org/abs/2611.15568v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.15568v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+A benchmark score is commonly read as a proxy for model capability. We study the inverse problem: can a model be driven to a target score, and do its failures resemble those of a naturally weaker model? We operationalize believable performance reduction along three axes: target calibration, item-difficulty structure, and error-distribution similarity to a real weak reference. We introduce CapLadder, an IRT-calibrated suite of 1,985 items spanning mathematics, code, multiple-choice reasoning, and tool use. A simple weak-teacher LoRA dial reaches unseen target levels on reasoning with a 1.9-point held-out calibration error, whereas prompting, temperature, and weight noise cannot combine comparable range and precision. Yet on multiple choice, the dial converges to an answer-token attractor: up to 97% of its newly introduced errors land on one letter, with the attractor changing from D in Qwen to A in Llama. Logit interventions identify a dominant near-constant shift: subtracting the estimated shift on held-out items recovers 52 to 59% of lost accuracy and removes the dominant attractor, while option permutation confirms that the bias tracks token position rather than option content. With high inter-annotator agreement ($κ=0.94$), human-coded error-category distributions nonetheless match the weak reference on reasoning (JS = 0.00), showing that local plausibility and aggregate detectability differ. Structured tool calls exhibit more natural degradation in the Qwen family (JS = 0.09), while a globally calibrated dial transfers poorly across benchmarks (14.2-point error on two usable benchmarks). Precise score control, therefore, does not imply a portable or believable reduction in skill.
+
+基准分数通常被视为模型能力的代表。我们研究反问题：模型能否达到目标分数，其失败是否与自然较弱的模型类似？我们沿着三个轴实现可信的性能降低：目标校准、项目难度结构以及与真实弱参考的误差分布相似性。我们推出 CapLadder，这是一套经过 IRT 校准的套件，包含 1,985 个项目，涵盖数学、代码、多项选择推理和工具使用。一个简单的弱教师 LoRA 表盘在推理上达到了看不见的目标水平，并具有 1.9 点的保留校准误差，而提示、温度和重量噪声无法将可比较的范围和精度结合起来。然而，在多项选择中，表盘会收敛到一个答案标记吸引子：高达 97% 的新引入错误都集中在一个字母上，吸引子从 Qwen 中的 D 变为 Llama 中的 A。 Logit 干预确定了一个主要的近乎恒定的变化：减去保留项目的估计变化可以恢复 52% 到 59% 的损失准确性并消除主要吸引子，而选项排列确认偏差跟踪令牌位置而不是选项内容。由于注释者间高度一致 ($κ=0.94$)，人工编码的错误类别分布仍然与推理上的弱参考 (JS = 0.00) 相匹配，这表明局部合理性和聚合可检测性不同。 Qwen 系列中的结构化工具调用表现出更自然的退化（JS = 0.09），而全局校准的表盘在基准测试中的传输效果很差（两个可用基准测试中的误差为 14.2 点）。因此，精确的分数控制并不意味着技能的可移植或可信的降低。
+
+</details>
+
+---
+
+## 2. GHAgentCI: A Dataset of Coding-Agent Invocations in CI Workflow Histories / GHAgentCI：CI 工作流历史中编码代理调用的数据集
+
+**Date**: 2026-11-11 | **arXiv**: [2611.15522v1](http://arxiv.org/abs/2611.15522v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.15522v1)
+
+**Categories**: cs.SE, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Coding agents are increasingly integrated into GitHub Actions to review pull requests, triage issues and modify code. Identifying these integrations is challenging because agentic workflows often resemble ordinary CI files, with evidence appearing in action references, shell commands and workflow conventions. We present GHAgentCI, a dataset of 15K+ workflow histories from 6K+ of 196K+ mined GitHub repositories, comprising 159K+ revisions and 205K+ agent-evidence records linked to workflow triggers and declared execution constraints. Our open-source extractor, cai-miner, detects agent-related evidence using an extensible catalogue. Manual validation of 576 stratified records confirmed 96.1% of dedicated-action matches and 98.8% of GitHub Agentic Workflow matches, with lower rates for other evidence kinds. Exploratory analyses reveal a shift toward command-line and GitHub Agentic Workflow integrations, differences in declared safeguards, and frequent removal of detected agentic workflows. GHAgentCI supports longitudinal studies of coding-agent integration into CI.
+
+编码代理越来越多地集成到 GitHub Actions 中，以审查拉取请求、分类问题和修改代码。识别这些集成具有挑战性，因为代理工作流通常类似于普通 CI 文件，证据出现在操作引用、shell 命令和工作流约定中。我们提出了 GHAgentCI，这是一个来自 6K+ 196K+ 挖掘的 GitHub 存储库的 15K+ 工作流历史数据集，其中包含 159K+ 修订版本和 205K+ 与工作流触发器和声明的执行约束相关的代理证据记录。我们的开源提取器 cai-miner 使用可扩展的目录检测与代理相关的证据。对 576 条分层记录的手动验证确认了 96.1% 的专用操作匹配和 98.8% 的 GitHub Agentic Workflow 匹配，其他证据类型的比率较低。探索性分析揭示了向命令行和 GitHub 代理工作流程集成的转变、声明的安全措施的差异以及频繁删除检测到的代理工作流程。 GHAgentCI 支持编码代理集成到 CI 中的纵向研究。
+
+</details>
+
+---
+
+## 3. DecArena: Evaluating Large-Scale Decentralized Multi-Agent Collaboration / DecArena：评估大规模去中心化多代理协作
+
+**Date**: 2026-11-11 | **arXiv**: [2611.15521v1](http://arxiv.org/abs/2611.15521v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.15521v1)
+
+**Categories**: cs.MA, cs.AI, cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Emerging personal AI agents raise fundamental scalability and privacy concerns for centralized multi-agent systems (MASs), which rely on a global orchestrator with broad access to agents, resources, and communication. In decentralized environments, global visibility is unavailable. Agents need to proactively discover non-local resources (e.g. tools, skills), and collaborate with other agents to solve tasks. We study decentralized multi-agent collaboration under graph-constrained communication, a natural reflection of human structures. Each agent observes only its local state and can interact only with neighboring agents. We introduce a benchmark with synthetic scalable distributed tool calling with 100K+ tools. Our experiments reveal that recent LLM agents struggle to discover non-local relevant resources and collaborate in decentralized setting. Moreover, standard reinforcement learning fails to reliably overcome this limitation, suggesting that decentralized MAS needs more explicit harness mechanisms for effective collaboration, even using SOTA LLMs. We then present a strong baseline \textbf{GraphHarness}, combining topology-aware warmup with self-improving LLM-based routing. Results show that GraphHarness substantially improves task success (+48.5) and produces higher quality collaboration (+30.6), while using fewer costs (+34.0) than baselines.
+
+新兴的个人人工智能代理引发了集中式多代理系统（MAS）的基本可扩展性和隐私问题，该系统依赖于能够广泛访问代理、资源和通信的全球协调器。在去中心化环境中，全球可见性不可用。智能体需要主动发现非本地资源（例如工具、技能），并与其他智能体协作解决任务。我们研究图约束通信下的去中心化多智能体协作，这是人类结构的自然反映。每个智能体仅观察其本地状态，并且只能与相邻智能体交互。我们引入了一个具有 100K+ 工具调用的综合可扩展分布式工具的基准测试。我们的实验表明，最近的法学硕士代理人很难发现非本地相关资源并在分散的环境中进行协作。此外，标准强化学习无法可靠地克服这一限制，这表明去中心化 MAS 需要更明确的利用机制来实现有效协作，即使使用 SOTA LLM 也是如此。然后，我们提出了一个强大的基线 \textbf{GraphHarness}，将拓扑感知预热与自我改进的基于 LLM 的路由相结合。结果表明，GraphHarness 显着提高了任务成功率 (+48.5)，并产生了更高质量的协作 (+30.6)，同时比基线使用更少的成本 (+34.0)。
+
+</details>
+
+---
+
+## 4. SimRec: Learning to Search, Ask, and Recommend from Simulated Interaction / SimRec：从模拟交互中学习搜索、询问和推荐
+
+**Date**: 2026-11-11 | **arXiv**: [2611.15426v1](http://arxiv.org/abs/2611.15426v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.15426v1)
+
+**Categories**: cs.CL, cs.AI, cs.IR
+
+**Code**: https://github.com/ZJU-REAL/SimRec
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+LLM-based recommendation agents can search catalogs, inspect products, ask users, and revise rejected recommendations. However, these behaviors are often governed by hand-designed workflows, while existing training methods optimize isolated components such as query rewriting or list ranking rather than the interaction policy as a whole. We present SimRec, a reinforcement learning framework that trains the full interaction policy of a tool-integrated recommendation agent. SimRec introduces two components. A task-anchored user simulator provides feedback on every recommendation: conditioned on the current task need rather than on user profile, and it can be an external LLM or the recommender itself under self-play. A task-aligned reward optimizes the whole trajectory with GRPO, crediting natural retrieval quality and valid tool use alongside the final hit, with training-only target injection to handle sparse hits over large catalogs. On ESCI and Amazon C4, SimRec improves the NDCG@100 of a Qwen3-4B agent from 32.23% to 35.42% and from 22.94% to 24.72%}, outperforming training-free agents on far larger backbones and task-aligned baselines on NDCG. Analysis shows that the trained agent verifies candidates, uses preferences, and recovers from rejected recommendations far more often than its untrained counterpart. Our code is available at https://github.com/ZJU-REAL/SimRec .
+
+基于法学硕士的推荐代理可以搜索目录、检查产品、询问用户以及修改被拒绝的推荐。然而，这些行为通常由手工设计的工作流程控制，而现有的训练方法优化查询重写或列表排名等孤立的组件，而不是整体交互策略。我们提出了 SimRec，这是一个强化学习框架，可训练工具集成推荐代理的完整交互策略。 SimRec 引入了两个组件。任务锚定的用户模拟器提供对每个推荐的反馈：以当前任务需求而不是用户配置文件为条件，它可以是外部 LLM 或自我游戏下的推荐器本身。与任务一致的奖励通过 GRPO 优化整个轨迹，归功于自然检索质量和有效工具的使用以及最终命中，并通过仅训练的目标注入来处理大型目录上的稀疏命中。在 ESCI 和 Amazon C4 上，SimRec 将 Qwen3-4B 代理的 NDCG@100 从 32.23% 提高到 35.42%，从 22.94% 提高到 24.72%}，在更大的骨干网和 NDCG 上的任务对齐基线上优于免训练代理。分析表明，经过训练的智能体比未经训练的智能体更频繁地验证候选人、使用偏好以及从拒绝的建议中恢复。我们的代码可在 https://github.com/ZJU-REAL/SimRec 获取。
+
+</details>
+
+---
+
+## 5. Where Autonomy Belongs: A Separation of Powers for Agentic Program Evolution / 自主权归属：代理程序演化的权力分离
+
+**Date**: 2026-11-11 | **arXiv**: [2611.15309v1](http://arxiv.org/abs/2611.15309v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.15309v1)
+
+**Categories**: cs.AI, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+LLM-driven program evolution rests on three decisions: govern directs the search from accumulated evidence, propose constructs the next candidate, and judge settles validity and fitness. All three appear in every system, and existing work splits into two lines over who makes each. Controller-centric systems strengthen govern and neglect the autonomy of propose, which caps what evolution can reach. Agent-centric systems let a coding agent take over both govern and propose, at a cognitive and computational cost. Neither line protects the independent authority of judge, so benchmark reliability suffers. These failures share one root: autonomy is misallocated across the three decisions. We address this problem with EvoTrias, a separation-of-powers architecture in which each decision has one owner: Structured Governance for what spans evolution rounds, Open Proposal for construction inside a task, and Protected Judgment behind a private evaluator. These owners exchange typed contracts only, and runtime hooks reinforce the boundaries. This separation also lets EvoTrias run as a plugin that turns an existing coding agent into an evolution system. EvoTrias sets a new state of the art on mathematical, systems, and algorithm-design benchmarks. Three further results show what each owner buys: separating Governance from Proposal cuts token cost by 64%, Open Proposal extends evolution to a 680K-line industrial repository, and Protected Judgment keeps benchmark scores faithful to transfer.
+
+LLM 驱动的项目演变取决于三个决策：管理指导根据积累的证据进行搜索，建议构建下一个候选人，并判断确定有效性和适用性。这三者都出现在每个系统中，现有的工作根据谁制作每一个而分为两条线。以控制器为中心的系统加强了治理，却忽视了提议的自主性，这限制了进化所能达到的目标。以代理为中心的系统让编码代理以认知和计算成本接管治理和建议。这两条线都不能保护法官的独立权威，因此基准的可靠性受到影响。这些失败有一个共同的根源：自主权在三个决策中分配不当。我们通过 EvoTrias 解决了这个问题，这是一种权力分立架构，其中每个决策都有一个所有者：跨越进化轮次的结构化治理、任务内部构建的开放提案以及私人评估者背后的受保护判断。这些所有者仅交换类型化合约，而运行时挂钩则强化了边界。这种分离还允许 EvoTrias 作为插件运行，将现有的编码代理转变为进化系统。 EvoTrias 在数学、系统和算法设计基准方面树立了新的最先进水平。三个进一步的结果显示了每个所有者所购买的内容：将治理与提案分开，将代币成本降低了 64％，开放提案将演进扩展到 68 万行工业存储库，受保护的判断使基准分数忠实于转移。
+
+</details>
+
+---
+
+## 6. CastWorld: Benchmarking Context-Aware Agentic Time Series Forecasting Beyond Predictive Accuracy / CastWorld：超越预测准确性的上下文感知代理时间序列预测基准测试
+
+**Date**: 2026-11-11 | **arXiv**: [2611.15262v1](http://arxiv.org/abs/2611.15262v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.15262v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Agentic time series forecasting extends conventional approaches beyond one-shot numerical prediction toward autonomous, context-aware interaction. However, existing benchmarks offer limited integrated support for diverse contextual information, forecasting-specific adaptive interactions, and systematic evaluation of forecasting agents. In this paper, we introduce CastWorld, an agentic benchmark for context-aware time series forecasting. First, its context-rich dataset suite spans 8 domains and 25 real-world datasets, covering external variables, events, and historical cases under a unified context specification. Second, a lightweight, modular forecasting-native harness provides 49 core tools and a state-adaptive loop that tracks forecast versions and enables iterative evidence gathering and forecast revision. Intermediate forecasts can expose information gaps, while newly acquired evidence guides subsequent revisions and final version selection. Third, model-level evaluation assesses forecast quality, process execution, behavioral trustworthiness, and resource efficiency through decision trajectories and forecast-version histories. Also, systems-level evaluation compares predictive accuracy across forecasting systems. Experiments reveal distinct decision behaviors among agents with comparable accuracy. Additional interactions do not necessarily improve forecasts, and agents may fail to select their best previously generated predictions. Allowing evidence acquisition during forecast refinement improves task-aware forecast scores across all three evaluated models. CastWorld provides a reusable foundation for evaluating agentic time series forecasting under controlled conditions.
+
+代理时间序列预测将传统方法从一次性数值预测扩展到自主的、上下文感知的交互。然而，现有的基准为不同的上下文信息、预测特定的自适应交互以及预测代理的系统评估提供了有限的综合支持。在本文中，我们介绍了 CastWorld，它是上下文感知时间序列预测的代理基准。首先，其上下文丰富的数据集涵盖8个领域和25个真实世界数据集，涵盖统一上下文规范下的外部变量、事件和历史案例。其次，轻量级、模块化的预测原生工具提供了 49 个核心工具和一个状态自适应循环，可跟踪预测版本并支持迭代证据收集和预测修订。中间预测可以暴露信息差距，而新获得的证据可以指导后续的修订和最终版本的选择。第三，模型级评估通过决策轨迹和预测版本历史来评估预测质量、流程执行、行为可信度和资源效率。此外，系统级评估还比较了预测系统的预测准确性。实验揭示了代理人之间具有相似准确度的不同决策行为。额外的交互不一定会改善预测，并且代理可能无法选择之前生成的最佳预测。在预测细化期间允许获取证据可以提高所有三个评估模型的任务感知预测分数。 CastWorld 为在受控条件下评估代理时间序列预测提供了可重用的基础。
+
+</details>
+
+---
+
+## 7. GuardianAgentFlow: Multi-Agent Coordination for Web Privacy Protection / GuardianAgentFlow：网络隐私保护的多代理协调
+
+**Date**: 2026-11-11 | **arXiv**: [2611.15097v1](http://arxiv.org/abs/2611.15097v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.15097v1)
+
+**Categories**: cs.AI, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Web agents need to use private context without unnecessarily disclosing it. Effective protection must distinguish between requests that may be sent after sanitization and those that must be withheld, while preserving the information needed for authorized tasks. We present GuardianAgentFlow, a multi-agent framework that mediates outgoing Web requests through an explicit release contract. A dedicated restriction check grounds permission in the user's instruction; a shared protection scope aligns rewriting with disclosure checking; and candidate-grounded feedback guides revision before transmission. Experiments on Web requests with human-reviewed intent labels show improved request-contract success, while controlled comparisons and role ablations identify the contributions of restriction handling, policy evidence, and candidate checking. Evaluations of action proposals from PrivacyLens and AgentDAM demonstrate complementary protection when mediation is composed with privacy-aware agents. Experiments with smaller mediation models show that the coordination benefit persists with reduced model capacity. Dedicated-server measurements show lower mediation latency than full-policy reasoning, while real-site browser tests quantify integration overhead.
+
+Web 代理需要使用私有上下文，而不必公开它。有效的保护必须区分清理后可能发送的请求和必须保留的请求，同时保留授权任务所需的信息。我们提出了 GuardianAgentFlow，这是一个多代理框架，它通过显式发布合约来协调传出的 Web 请求。专门的限制检查根据用户指令中的许可；共享保护范围使重写与披露检查保持一致；以候选人为基础的反馈指导传输前的修改。对带有人工审查意图标签的 Web 请求进行的实验表明，请求契约的成功率有所提高，而受控比较和角色消除则确定了限制处理、策略证据和候选者检查的贡献。对 PrivacyLens 和 AgentDAM 的行动建议的评估表明，当调解由具有隐私意识的代理组成时，可提供补充保护。使用较小中介模型的实验表明，随着模型容量的减少，协调效益仍然存在。专用服务器测量显示中介延迟比全策略推理更低，而真实站点浏览器测试则量化了集成开销。
+
+</details>
+
+---
+
+## 8. CoLFA: Collaboration-Guided Lightweight Failure Attribution for LLM-Based Multi-Agent Systems / CoLFA：基于 LLM 的多代理系统的协作引导的轻量级故障归因
+
+**Date**: 2026-11-11 | **arXiv**: [2611.14980v1](http://arxiv.org/abs/2611.14980v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.14980v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Failure attribution in multi-agent systems requires tracing error formation to identify the decisive error step and the responsible agent. However, agents' division of work and information exchange lead to Interleaved Steps and Cluttered Content, requiring models to link executions and check details in lengthy records. This makes it difficult to balance localization accuracy and token cost. We find that multi-agent collaboration also leaves records of how executions connect and content passes between them as results are formed, providing evidence for tracing error formation. Based on this observation, we propose CoLFA (Collaboration-Guided Lightweight Failure Attribution), which uses collaboration cues to organize the attribution input according to how results are formed, determining which steps are examined and how their content is presented. Through Handoff-Guided Step Expansion and Cross-Referenced Content Organization, CoLFA helps the model focus on examining error formation and the role of each decision while reducing the processing of irrelevant and repeated records. Across five settings spanning Who&When and LongRCA and three backbone models, CoLFA achieves the highest exact step-localization accuracy with the lowest token consumption. Compared with individual baselines in each setting, CoLFA improves accuracy by up to 37.50% and reduces token consumption by up to 97.6%.
+
+多代理系统中的故障归因需要跟踪错误形成，以识别决定性错误步骤和负责的代理。然而，代理的工作分工和信息交换导致步骤交错和内容混乱，需要模型链接执行并检查冗长记录中的详细信息。这使得很难平衡定位准确性和令牌成本。我们发现，多代理协作还留下了结果形成时执行如何连接以及内容如何在它们之间传递的记录，为跟踪错误形成提供了证据。基于这一观察，我们提出了CoLFA（协作引导的轻量级故障归因），它使用协作线索根据结果的形成方式组织归因输入，确定检查哪些步骤以及如何呈现其内容。通过切换引导的步骤扩展和交叉引用的内容组织，CoLFA 帮助模型专注于检查错误形成和每个决策的作用，同时减少不相关和重复记录的处理。在涵盖 Who&When 和 LongRCA 的五种设置以及三个骨干模型中，CoLFA 以最低的令牌消耗实现了最高的精确步骤定位精度。与每个设置中的单独基线相比，CoLFA 将准确率提高了高达 37.50%，并将令牌消耗减少了高达 97.6%。
+
+</details>
+
+---
+
+## 9. ToolTurns: Benchmarking LLM Agents in Multi-Turn Dialogue / ToolTurns：多轮对话中 LLM 代理的基准测试
+
+**Date**: 2026-11-11 | **arXiv**: [2611.14925v1](http://arxiv.org/abs/2611.14925v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.14925v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Tool-using language models are increasingly deployed in conversational settings, yet most large-scale tool-use benchmarks focus on isolated requests. We introduce ToolTurns, a benchmark of 2,620 problems spanning 1,827 tools and 11,004 API endpoints across 47 categories. Each dialogue begins with an intentionally underspecified request and continues through two context-dependent follow-ups, testing clarification, tool use, and retention of conversational context. We also introduce an open-source user simulator that reveals withheld context through dialogue and generates follow-up requests, with a checker--fixer pipeline for improving its turns. Across nine language models, the best agent resolves 69.6% of individual requests but completes only 39.8% of full dialogues. Under this evaluation protocol, every evaluated model receives lower success scores on follow-up requests than on the initial request, and dialogue-quality rubric scores and task success can rank models very differently. Paired turn-level evaluation shows that the checker--fixer reduces detected dialogue defects, and blind human evaluation favors the revised turns. ToolTurns provides a testbed for evaluating whether agents sustain task success across multi-turn dialogue with tools.
+
+使用工具的语言模型越来越多地部署在对话环境中，但大多数大规模工具使用基准测试都集中在孤立的请求上。我们推出了 ToolTurns，这是一个涵盖 47 个类别的 1,827 个工具和 11,004 个 API 端点的 2,620 个问题的基准。每次对话都以故意未指定的请求开始，然后通过两个依赖于上下文的后续行动、测试澄清、工具使用和对话上下文的保留来继续。我们还引入了一个开源用户模拟器，它通过对话揭示隐藏的上下文并生成后续请求，并具有用于改进其轮次的检查器-修复器管道。在 9 种语言模型中，最好的代理可以解决 69.6% 的个人请求，但只能完成 39.8% 的完整对话。在此评估协议下，每个评估的模型在后续请求上获得的成功分数都低于在初始请求上的成功分数，并且对话质量评分和任务成功对模型的排名可能非常不同。配对轮次评估表明，检查器-修复器减少了检测到的对话缺陷，而盲目的人类评估有利于修改后的轮次。 ToolTurns 提供了一个测试平台，用于评估智能体是否能够在与工具的多轮对话中维持任务成功。
+
+</details>
+
+---
+
+## 10. Understanding the Effects of Multi-Agent Deliberation for Human-AI Decision-Making / 了解多智能体审议对人类人工智能决策的影响
+
+**Date**: 2026-11-11 | **arXiv**: [2611.14901v1](http://arxiv.org/abs/2611.14901v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.14901v1)
+
+**Categories**: cs.HC, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multi-agent deliberation (MAD), where multiple LLMs engage in structured discussion, improves AI performance on many benchmarks, but whether it helps humans make better decisions remains untested. We conduct two user studies on LLM-response-verification and fact-checking. We first compare MAD against common AI decision-support methods that isolate its two defining dimensions --- multiple AIs and multi-round interaction. We find MAD outperformed single-round AI assistance on both tasks; multi-round interaction was the main driver of this benefit, while a second AI added value when the single AI had room to improve. Then, we study two design choices in MAD --- AI persona and human engagement level --- finding a devil's advocate persona to lower accuracy and user experience, while humans' active participation in MAD improved accuracy in one task at the cost of frustration. We conclude by discussing implications for when, why, and how multi-agent deliberation can support human decision-making.
+
+多智能体商议（MAD），即多个法学硕士参与结构化讨论，可以提高人工智能在许多基准上的性能，但它是否有助于人类做出更好的决策仍有待测试。我们对法学硕士回答验证和事实核查进行了两项用户研究。我们首先将 MAD 与常见的人工智能决策支持方法进行比较，这些方法隔离了其两个定义维度——多个人工智能和多轮交互。我们发现 MAD 在这两项任务上都优于单轮人工智能辅助；多轮交互是这一优势的主要驱动力，而当单个人工智能有改进空间时，第二个人工智能会增加价值。然后，我们研究了 MAD 中的两种设计选择——人工智能角色和人类参与水平——找到魔鬼代言人角色来降低准确性和用户体验，而人类对 MAD 的积极参与以挫折为代价提高了一项任务的准确性。最后，我们讨论了多主体审议何时、为何以及如何支持人类决策的影响。
+
+</details>
+
+---
+
+## 11. MLIRBench - A Benchmark and Dataset for Compiler and Hardware-Aware Reasoning / MLIRBench - 编译器和硬件感知推理的基准和数据集
+
+**Date**: 2026-11-11 | **arXiv**: [2611.14881v1](http://arxiv.org/abs/2611.14881v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.14881v1)
+
+**Categories**: cs.PL, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In recent years, large language models (LLMs) have become increasingly popular in software engineering and have performed well on different programming tasks. However, it is still difficult to know whether these models truly understand program behavior or whether they mainly rely on patterns learned from their training data. This distinction is particularly important for intermediate representations (IRs), where operations, dataflow, and execution semantics are explicitly represented. In this paper, we introduce MLIRBench, a benchmark for evaluating how LLMs reason about MLIR programs. MLIRBench uses a multi-agent pipeline to generate program mutations, validate their behavior through execution, and construct reasoning tasks from torch and linalg program pairs. The dataset contains 1,768 validated pairs, including 888 linalg pairs and 880 torch pairs, labeled as EQUIV, DIVERGE, or ERROR. We evaluated nine models, including five open-weight and four proprietary models. Gemini 3.1 Pro achieved the highest hard-label accuracy of 92.65% across all 1,768 pairs, counting unsuccessful predictions as incorrect. Across its 1,768 scored predictions, it achieved an aggregate score of 74.18 and a judge-assigned result-behavior score of 5.04/10. These results show that strong semantic classification does not necessarily imply accurate prediction of detailed execution behavior, highlighting a gap in current LLM reasoning over compiler IRs. By exposing this gap through execution-validated program pairs, MLIRBench provides a reproducible foundation for studying semantic reasoning over compiler IRs and related tasks such as program repair and semantic classification.
+
+近年来，大型语言模型（LLM）在软件工程中越来越受欢迎，并且在不同的编程任务上表现良好。然而，仍然很难知道这些模型是否真正理解程序行为，或者它们是否主要依赖于从训练数据中学到的模式。这种区别对于中间表示 (IR) 尤为重要，其中操作、数据流和执行语义都是显式表示的。在本文中，我们介绍了 MLIRBench，这是一个评估法学硕士如何推理 MLIR 程序的基准。 MLIRBench 使用多代理管道来生成程序突变，通过执行验证其行为，并从 torch 和 linalg 程序对构建推理任务。该数据集包含 1,768 个经过验证的对，其中包括 888 个 linalg 对和 880 个火炬对，标记为 EQUIV、DIVERGE 或 ERROR。我们评估了九个模型，包括五个开放重量模型和四个专有模型。 Gemini 3.1 Pro 在所有 1,768 对中实现了 92.65% 的最高硬标签准确率，将不成功的预测视为不正确。在 1,768 个评分预测中，其总分为 74.18 分，法官指定的结果行为得分为 5.04/10。这些结果表明，强语义分类并不一定意味着对详细执行行为的准确预测，凸显了当前 LLM 推理相对于编译器 IR 的差距。通过执行验证的程序对揭示这一差距，MLIRBench 为研究编译器 IR 上的语义推理以及程序修复和语义分类等相关任务提供了可重复的基础。
+
+</details>
+
+---
+
+## 12. Open Challenges and Opportunities in Human-Agent Systems / 人类代理系统中的开放挑战和机遇
+
+**Date**: 2026-11-10 | **arXiv**: [2611.14846v1](http://arxiv.org/abs/2611.14846v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.14846v1)
+
+**Categories**: cs.AI, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Agentic AI systems increasingly undertake extended tasks and act on people's behalf, making human-agent interaction central to their effectiveness. Successful interaction requires understanding human perspectives, coordinating complementary capabilities, and maintaining productive relationships within socio-technical environments. This paper examines how foundations developed by the Autonomous Agents and Multi-Agent Systems (AAMAS) community inform these demands. We consider interactions ranging from individual human-agent partnerships to teams and larger groups, where participants differ in their roles, decision authority, capabilities, and objectives. We organize computational approaches around the connected challenges of understanding others and deciding how to interact with them. Theory of Mind, belief-desire-intention architectures, goal and plan recognition, inverse planning, and recursive reasoning provide mechanisms for representing and inferring partially observable mental states. Observer-aware planning, model reconciliation, and decision-theoretic communication connect these inferences to action, explanation, and information exchange. Together with shared autonomy, argumentation, and cooperative inverse reinforcement learning, these approaches offer foundations for agentic systems that account for evolving human knowledge, intentions, and expectations. We argue that progress requires treating human interaction as an ongoing decision problem shaped by uncertainty, interdependence, and potentially conflicting objectives.
+
+代理人工智能系统越来越多地承担扩展任务并代表人们行事，使人机交互成为其有效性的核心。成功的互动需要理解人类的观点、协调互补能力以及在社会技术环境中维持富有成效的关系。本文探讨了自治代理和多代理系统 (AAMAS) 社区开发的基础如何满足这些需求。我们考虑的互动范围从个人与代理伙伴关系到团队和更大的团体，其中参与者的角色、决策权限、能力和目标各不相同。我们围绕理解他人并决定如何与他们互动的相互关联的挑战来组织计算方法。心灵理论、信念-欲望-意图架构、目标和计划识别、逆向规划和递归推理提供了表示和推断部分可观察心理状态的机制。观察者感知的规划、模型协调和决策理论沟通将这些推论与行动、解释和信息交换联系起来。与共享自主、论证和合作逆强化学习一起，这些方法为解释人类知识、意图和期望不断发展的代理系统提供了基础。我们认为，进步需要将人类互动视为一个持续的决策问题，该问题由不确定性、相互依赖和潜在冲突的目标构成。
+
+</details>
+
+---
+
+## 13. OverServe: Resource Amplification Attacks on SaaS Agents via Tool--Prompt Co-Design / OverServe：通过工具提示协同设计对 SaaS 代理进行资源放大攻击
+
+**Date**: 2026-11-10 | **arXiv**: [2611.14808v1](http://arxiv.org/abs/2611.14808v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.14808v1)
+
+**Categories**: cs.CR, cs.AI, cs.SE
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Advances in large language models (LLMs) are enabling software-as-a-service (SaaS) providers to automate longer business workflows with agents. In subscription-based SaaS deployments, model and tool calls consume provider resources without additional customer payments. Because the agent autonomously decides when to stop, a malicious tenant can send a prompt to the agent, exploiting its completion decisions to extend execution and waste provider resources. In this paper, we present OverServe, a multi-agent framework for constructing such attacks against SaaS agents. OverServe co-designs Model Context Protocol (MCP) status tools and completion-confirmation prompts for the attacker. Each tool call returns accurate status and terminates normally, yet the agent may repeatedly check an unfinished condition to satisfy the prompt. This consumes the SaaS provider's resources even after the original business task is completed. OverServe constructs service-specific tool--prompt pairs and uses separate tool and prompt reviews to guide candidate pair selection. Tested tool specifications trigger no alerts in the evaluated MCP scanners. We evaluate Qwen, Nemotron, DeepSeek, and Sonnet on selected tasks from nine benchmarks. All OverServe runs pass the original task checks. OverServe can reach a maximal amplification of API requests by $93.88\times$ while preserving the original task goal and collateral checks.
+
+大语言模型 (LLM) 的进步使软件即服务 (SaaS) 提供商能够通过代理实现较长业务工作流程的自动化。在基于订阅的 SaaS 部署中，模型和工具调用会消耗提供商资源，而无需额外的客户付费。由于代理自主决定何时停止，因此恶意租户可以向代理发送提示，利用其完成决策来延长执行时间并浪费提供程序资源。在本文中，我们提出了 OverServe，一个用于构建针对 SaaS 代理的此类攻击的多代理框架。 OverServe 为攻击者共同设计了模型上下文协议 (MCP) 状态工具和完成确认提示。每个工具调用都会返回准确的状态并正常终止，但代理可能会重复检查未完成的条件以满足提示。即使原始业务任务完成后，这也会消耗 SaaS 提供商的资源。 OverServe 构建了特定于服务的工具——提示对，并使用单独的工具和提示评论来指导候选对选择。测试的工具规格不会在评估的 MCP 扫描仪中触发任何警报。我们根据九个基准测试中选定的任务对 Qwen、Nelotron、DeepSeek 和 Sonnet 进行评估。所有 OverServe 运行都通过了原始任务检查。 OverServe 可以将 API 请求最大放大 $93.88\times$，同时保留原始任务目标和附带检查。
+
+</details>
+
+---
+
+## 14. MITRA-Swarm: Injecting Explicit Linguistic Structure into Foundation Models for Classical Machine Translation / MITRA-Swarm：将显式语言结构注入经典机器翻译的基础模型
+
+**Date**: 2026-11-10 | **arXiv**: [2611.14675v1](http://arxiv.org/abs/2611.14675v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.14675v1)
+
+**Categories**: cs.CL, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Classical Sanskrit poses three challenges unresolved by single-call monolithic models: morphophonemic fusion Sandhi, dense nominal compounding Samāsa, and discourse-level zero-anaphora forced by poetic meter. We present MITRA-Swarm, a multi-agent architecture injecting explicit linguistic structure into an otherwise monolithic pipeline: a Sandhi-splitting agent, a parallel array of generalist gemma-4-26B-A4B-it and domain-specialized gemma-2-mitra-it translators, and a discourse-aware Ellipsis Restorer that consults corpus-derived register tags to avoid inventing active-voice subjects in impersonal legal and philosophical registers. Two separated judges evaluate quality: a routing judge ($J_{\text{route}}$, same model family as the generators) driving an internal critique loop, and an independent reporting judge ($J_{\text{report}}=$gpt-4o-mini, no shared vendor lineage) scoring every output exactly once. On a stratified benchmark of 1,000 verses across five registers (23,990 scored verdicts, 12-condition pre-registered ablation), the full swarm reaches $85.90$ MQM against a monolithic baseline of $85.27$ ($Δ=+0.63$, $p_{\text{adj}}=0.0018$, 95% CI $[+0.30,+0.97]$), and isolated discourse restoration alone accounts for $+0.44$ MQM ($p_{\text{adj}}=0.0288$), outperforming a call-count-matched self-refinement baseline by $+0.51$ MQM ($p_{\text{adj}}=0.0288$). Severe per-verse failures (MQM$<80$) fall from $9.0\%$ to $7.6\%$, at roughly $9\times$ the per-verse inference cost of the baseline. Additionally, $J_{\text{route}}$ scores its own family's outputs $2$-$7$ MQM higher than $J_{\text{report}}$ on every one of the 12 conditions, empirically motivating the two-judge split; and a preflight screen of a 192,151-entry retrieval index against all 12 evaluation works verifies 0 reference leaks across 269 runtime checks. These are small gains on a metric saturating near 85-86.
+
+古典梵文提出了单调用整体模型无法解决的三个挑战：形态音素融合连读（Sandhi）、密集名词复合萨玛萨（Samāsa）以及诗意韵律强制的话语级零照应。我们提出了 MITRA-Swarm，一种将显式语言结构注入到整体管道中的多智能体架构：一个 Sandhi-splitting 智能体、一个通用 gemma-4-26B-A4B-it 和领域专用 gemma-2-mitra-it 翻译器的并行数组，以及一个话语感知的省略号恢复器，它咨询语料库派生的寄存器标签，以避免在非个人法律和哲学领域发明主动语态主题。寄存器。两个独立的评委评估质量：一个路由评委（$J_{\text{route}}$，与生成器相同的模型系列）驱动内部批评循环，以及一个独立的报告评委（$J_{\text{report}}=$gpt-4o-mini，没有共享的供应商谱系）对每个输出进行一次评分。在跨五个寄存器的 1,000 节经文的分层基准上（23,990 个评分判决，12 条件预注册消融），整个集群达到 85.90$ MQM，而整体基线为 85.27$（$Δ=+0.63$，$p_{\text{adj}}=0.0018$，95% CI $[+0.30,+0.97]$)，单独的话语恢复占$+0.44$ MQM ($p_{\text{adj}}=0.0288$)，比调用计数匹配的自我优化基线高出$+0.51$ MQM ($p_{\text{adj}}=0.0288$)。严重的每节失败 (MQM$<80$) 从 $9.0\%$ 下降到 $7.6\%$，大约是基线的每节推理成本的 9\times$。此外，在 12 个条件中的每一个上，$J_{\text{route}}$ 对自己家庭的输出的 MQM 得分 $2$-$7$ MQM 均高于 $J_{\text{report}}$，这从经验上激发了两位法官的分裂；针对所有 12 个评估作品的 192,151 个条目检索索引的预检屏幕在 269 个运行时检查中验证了 0 个引用泄漏。这些对于接近 85-86 饱和的指标来说只是小幅增长。
+
+</details>
+
+---
+
+## 15. KernelMosaic: An Open Dataset and Agentic Framework for CUDA Kernel Generation / KernelMosaic：用于 CUDA 内核生成的开放数据集和代理框架
+
+**Date**: 2026-11-10 | **arXiv**: [2611.14604v1](http://arxiv.org/abs/2611.14604v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.14604v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Training large language models to generate efficient CUDA kernels requires supervision spanning diverse computational requirements and iterative code optimization. Constructing this supervision is challenging because of heterogeneous specifications, and useful implementations emerge through iterative complicated testing and refinement. We introduce KernelMosaic, an open dataset pairing diverse CUDA tasks with verified solutions and trajectories. Human-guided review and diversity-aware selection curate tasks expressed as natural-language descriptions, reference programs, mathematical specifications, and their intersections. To build the solutions and trajectories, our agentic framework guides a strong LLM through implementation, correctness repair, and performance optimization with reusable CUDA guidance and execution feedback. Supervised fine-tuning of a small open-source model on KernelMosaic raises correctness from 4%, 0%, and 0% to 88%, 82%, and 16% on KernelBench L1, L2, and L3, respectively, while increasing the fraction of tasks with kernels faster than PyTorch eager at every level. Further training experiments show that supervision from the curated trajectories substantially outperforms direct responses and promotes sustained testing and revision. These results demonstrate that KernelMosaic enables a general-purpose model to achieve substantial gains in CUDA kernel generation.
+
+训练大型语言模型以生成高效的 CUDA 内核需要跨越不同计算要求和迭代代码优化的监督。由于规范异构，构建这种监督具有挑战性，并且通过迭代复杂的测试和细化会出现有用的实现。我们引入 KernelMosaic，这是一个开放数据集，将不同的 CUDA 任务与经过验证的解决方案和轨迹配对。人工指导的审查和多样性意识的选择将任务表达为自然语言描述、参考程序、数学规范及其交叉点。为了构建解决方案和轨迹，我们的代理框架通过可重用的 CUDA 指导和执行反馈，通过实施、正确性修复和性能优化来指导强大的法学硕士。对 KernelMosaic 上的小型开源模型进行监督微调，在 KernelBench L1、L2 和 L3 上的正确率分别从 4%、0% 和 0% 提高到 88%、82% 和 16%，同时在每个级别都增加了比 PyTorch eager 更快的内核任务比例。进一步的训练实验表明，来自策划轨迹的监督大大优于直接响应，并促进持续的测试和修订。这些结果表明 KernelMosaic 使通用模型能够在 CUDA 内核生成方面取得实质性进展。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-11-12 (8 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-11-12
