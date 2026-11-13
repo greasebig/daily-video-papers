@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-11-13](papers/2026-11-13.md) - 1 papers
 - [2026-11-12](papers/2026-11-12.md) - 1 papers
 - [2026-11-09](papers/2026-11-09.md) - 2 papers
 - [2026-11-07](papers/2026-11-07.md) - 1 papers
@@ -122,6 +123,34 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-11-13 (1 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-11-13
+
+**Paper Count**: 1
+
+---
+
+## 1. Reframing Video Inverse Tone Mapping as Blind Posterior Inference via Latent Luminance Supervision / 通过潜在亮度监督将视频逆色调映射重新构建为盲后推理
+
+**Date**: 2026-11-11 | **arXiv**: [2611.15146v1](http://arxiv.org/abs/2611.15146v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.15146v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+High-dynamic-range (HDR) displays are now common, but most video content, such as archival footage, broadcast material, and the output of generative video models, exists only in standard dynamic range (SDR). The need is sharpest for generated video, which has no HDR master at all and is graded alongside live-action and visual-effects material finished in HDR. Converting SDR to HDR means undoing a tone-mapping operation that was never recorded, and clipping destroys the radiance wherever it acts, so HDR recovery is a blind inverse problem. Methods built on generative video priors fill clipped regions with plausible structure, but their reconstructions are systematically biased: in every public method we test, saturated content leans too bright or too dark, and the direction of the lean moves with the tone operator behind the input. We call this failure the luminance error, measure both its magnitude and its sign, and make it the focus of this work. Reframing ITM as posterior inference under an unknown operator locates the failure in two places and yields two corrections. A fixed affine functional of the video-diffusion latent reads log-luminance without decoding; on that coordinate an asymmetric loss selects an expectile of the posterior, applied only where clipping leaves luminance unconstrained. We also synthesize training SDR through an explicit family of tone operators, so the model marginalizes over what the observation cannot show. Trained this way, our luminance error stays flatter across operators and smaller on average than any public method, and the full system achieves the best perceptual quality on all three benchmarks.
+
+高动态范围 (HDR) 显示器现在很常见，但大多数视频内容（例如档案片段、广播材料和生成视频模型的输出）仅存在于标准动态范围 (SDR) 中。对生成视频的需求最为迫切，它根本没有 HDR 主控，而是与以 HDR 完成的真人动作和视觉效果材料一起分级。将 SDR 转换为 HDR 意味着撤消从未记录过的色调映射操作，并且剪辑会破坏其作用的任何地方的辐射度，因此 HDR 恢复是一个盲逆问题。基于生成视频先验构建的方法用合理的结构填充剪切区域，但它们的重建存在系统偏差：在我们测试的每种公共方法中，饱和内容都倾向于太亮或太暗，并且倾斜的方向随着输入后面的色调运算符而移动。我们将这种故障称为亮度误差，测量其大小和符号，并将其作为这项工作的重点。将 ITM 重新构建为未知算子下的后验推理，将故障定位在两个位置并产生两个更正。视频扩散潜伏读取对数亮度的固定仿射函数，无需解码；在该坐标上，不对称损失选择后验的期望值，仅在剪切使亮度不受约束的情况下应用。我们还通过一系列显式的音调算子来综合训练 SDR，因此该模型会边缘化观察无法显示的内容。通过这种方式训练，我们的亮度误差在各个操作员之间保持平坦，并且平均比任何公共方法更小，并且整个系统在所有三个基准上实现了最佳感知质量。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-11-12 (1 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-11-12
