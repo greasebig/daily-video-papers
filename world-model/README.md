@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-11-14](papers/2026-11-14.md) - 7 papers
 - [2026-11-13](papers/2026-11-13.md) - 9 papers
 - [2026-11-12](papers/2026-11-12.md) - 8 papers
 - [2026-11-11](papers/2026-11-11.md) - 22 papers
@@ -188,6 +189,134 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-11-14 (7 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-11-14
+
+**Paper Count**: 7
+
+---
+
+## 1. ProtoVis-Nav: Prototypical Visual Imagination for Visual-Spatial Aligned UAV Navigation / ProtoVis-Nav：视觉空间对齐无人机导航的原型视觉想象力
+
+**Date**: 2026-11-12 | **arXiv**: [2611.17330v1](http://arxiv.org/abs/2611.17330v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.17330v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision language navigation (VLN) is very challenging for Unmanned Aerial Vehicles (UAVs) since small errors in 3D motion prediction can lead to navigation errors and collisions. Unable to fathom execution outcomes in 3D environments, existing methods often struggle to predict accurate navigation waypoints from language instructions. To solve this, we introduce the Prototypical Visual Imagination framework, shortened as ProtoVis-Nav, which forces the model to imagine an outcome-associated local visual representation for the intended next UAV movement. Specifically, we predict feature prototypes and use their linear combination to estimate the visual feature of the target region. In this manner, the VLN model first imagines the local visual representation of the next intended location, and then uses predicted prototypes as context for generating the final action, promoting alignment between visual context and waypoint outputs. Extensive experiments demonstrate the effectiveness of the ProtoVis-Nav framework and show substantial improvements over existing baselines.
+
+视觉语言导航 (VLN) 对于无人机 (UAV) 来说非常具有挑战性，因为 3D 运动预测中的小错误可能会导致导航错误和碰撞。由于无法理解 3D 环境中的执行结果，现有方法通常难以根据语言指令预测准确的导航路径点。为了解决这个问题，我们引入了原型视觉想象框架，简称为 ProtoVis-Nav，它迫使模型为预期的下一次无人机运动想象与结果相关的局部视觉表示。具体来说，我们预测特征原型并使用它们的线性组合来估计目标区域的视觉特征。通过这种方式，VLN 模型首先想象下一个预期位置的局部视觉表示，然后使用预测的原型作为生成最终动作的上下文，从而促进视觉上下文和航路点输出之间的对齐。大量实验证明了 ProtoVis-Nav 框架的有效性，并显示出相对于现有基线的实质性改进。
+
+</details>
+
+---
+
+## 2. InertiaMPDD: Multimodal Personalized Depression Detection via Emotional Inertia-Inspired Dynamics Modeling / InertiaMPDD：通过情绪惯性启发的动力学建模进行多模式个性化抑郁症检测
+
+**Date**: 2026-11-12 | **arXiv**: [2611.16647v1](http://arxiv.org/abs/2611.16647v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.16647v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multimodal depression screening estimates risk from speech, visual behavior and language. Current methods mainly predict labels, with limited evidence of departures from a non-depressed reference. Recording-level supervision also leaves fine-grained emotional dynamics unannotated. Motivated by emotional inertia, the persistence of affect, InertiaMPDD learns healthy next-state patterns using a world-model-inspired latent predictor. Using pretrained multimodal representations, it predicts from observed history and context. Reference deviation, residual decay rate and a Jacobian spectral descriptor form reference-derived emotional dynamics descriptors, evaluated as candidate proxy biomarkers for standalone screening and personalized decision correction. Across five cohorts from four datasets, fusion reaches 98.41% F1 on D-Vlog and 84.98% on LMVD. Standalone descriptors outperform fixed additive fusion on MPDD but discriminate weakly on AVEC2014. These findings distinguish reference informativeness from fusion benefit and reveal context-dependent utility.
+
+多模式抑郁症筛查可评估言语、视觉行为和语言的风险。目前的方法主要预测标签，与非抑郁参考偏离的证据有限。录音级别的监督也没有对细粒度的情感动态进行注释。在情感惰性和情感持续性的推动下，InertiaMPDD 使用受世界模型启发的潜在预测器来学习健康的下一状态模式。它使用预先训练的多模态表示，根据观察到的历史和上下文进行预测。参考偏差、残余衰减率和雅可比谱描述符形成参考衍生的情绪动态描述符，作为独立筛选和个性化决策校正的候选代理生物标志物进行评估。在来自四个数据集的五个队列中，融合在 D-Vlog 上达到 98.41% F1，在 LMVD 上达到 84.98%。独立描述符在 MPDD 上优于固定加性融合，但在 AVEC2014 上区分较弱。这些发现将参考信息与融合益处区分开来，并揭示了上下文相关的效用。
+
+</details>
+
+---
+
+## 3. Rethinking Actions: Continuity-Aware Priors for World-Model Planning / 重新思考行动：世界模型规划的连续性意识先验
+
+**Date**: 2026-11-12 | **arXiv**: [2611.16645v1](http://arxiv.org/abs/2611.16645v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.16645v1)
+
+**Categories**: cs.RO, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Actions in expert demonstrations exhibit temporal structure. An ordered-versus-shuffled analysis across five environments confirms this dependence. We ask whether action proposals that better reflect expert continuity can improve visual world-model planning. Rather than imposing generic smoothness, we learn continuations from the temporal structure of demonstrated actions. Our locality-gated deep-kernel Gaussian-process prior, LG-DKGP, combines recent and longer-range executed action history, predicts a neural continuation, and learns a temporal Gaussian-process (GP) residual. A training-derived exploration scale initializes search around the corrected mean; a frozen world model evaluates progress toward the goal. Training first fits the neural mean, then jointly optimizes the prior with the GP residual using expert future actions. The resulting planner achieves 87.07\% macro success across five simulated tasks spanning native and fragment-level goal attainment, compared with 71.03\% for INTACT, 61.66\% for PRISM, and 58.66\% for LeWM. Component interventions and expert-relative action-structure comparisons support demonstration-informed continuations and reveal task-dependent effects of visual conditioning, history length, and planning horizon.
+
+专家演示中的动作表现出时间结构。跨五个环境的有序与混洗分析证实了这种依赖性。我们询问更好地反映专家连续性的行动建议是否可以改进视觉世界模型规划。我们不是强加一般的平滑性，而是从演示动作的时间结构中学习连续性。我们的局部门控深度内核高斯过程先验 LG-DKGP 结合了最近和长期执行的动作历史，预测神经延续，并学习时间高斯过程 (GP) 残差。训练衍生的探索量表围绕校正后的平均值初始化搜索；冻结的世界模型评估实现目标的进展。训练首先拟合神经均值，然后使用专家未来行动联合优化先验与 GP 残差。由此产生的规划器在跨越本机和片段级目标实现的五个模拟任务中实现了 87.07\% 的宏观成功，而 INTACT 为 71.03\%，PRISM 为 61.66\%，LeWM 为 58.66\%。成分干预和专家相关的行动结构比较支持示范知情的延续，并揭示视觉调节、历史长度和规划视野的任务依赖效应。
+
+</details>
+
+---
+
+## 4. PhysCapBench: A Cross-Domain Benchmark for Physically Grounded Video Captioning / PhysCapBench：基于物理的视频字幕的跨域基准
+
+**Date**: 2026-11-12 | **arXiv**: [2611.16424v1](http://arxiv.org/abs/2611.16424v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.16424v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Physical AI aims to learn transferable physical knowledge from real-world experience to understand, predict, and act in the physical world. Internet videos and embodied demonstrations provide complementary observations of motion, interaction, and state evolution. A foundational data challenge is to measure and preserve this physical information as training supervision. In video-language pretraining, captions express observed processes in language, yet a semantically correct description can omit the interactions and transitions that define those processes. Rich physical experience in video does not automatically translate into sufficient language supervision. This gap calls for a yardstick to assess annotation quality, compare captioning strategies, and guide training-data refinement. Motivated by our data construction for world-model pretraining, we introduce PhysCapBench, to our knowledge the first unified physical-caption benchmark spanning all three domains: third-person scenes, egocentric manipulation, and handheld-gripper demonstrations. It provides human-verified annotations for 1,500 video sequences and evaluates accuracy and coverage through seven physical dimensions. We examine downstream utility through video reconstruction and manipulation-policy fine-tuning. Physical captions reduce reconstruction LPIPS by 8.6-9.5% on third-person videos and 26.9-30.9% on egocentric videos relative to metadata captions. Training-instruction enrichment improves both PhysCapBench scores and policy success, including a 7.5-percentage-point gain for pi0.5 on a RoboTwin 2.0 subtask. PhysCapBench makes the physical content of language supervision inspectable and comparable, providing a cross-domain basis for its evaluation and improvement.
+
+物理人工智能旨在从现实世界的经验中学习可转移的物理知识，以理解、预测和在物理世界中采取行动。互联网视频和具体演示提供了对运动、交互和状态演化的补充观察。一个基本的数据挑战是测量和保存这些身体信息作为训练监督。在视频语言预训练中，字幕用语言表达观察到的过程，但语义上正确的描述可以省略定义这些过程的交互和转换。视频中丰富的身体体验并不会自动转化为足够的语言监督。这一差距需要一个衡量标准来评估注释质量、比较字幕策略并指导训练数据细化。受世界模型预训练数据构建的推动，我们推出了 PhysCapBench，据我们所知，这是第一个跨越所有三个领域的统一物理字幕基准：第三人称场景、以自我为中心的操作和手持式抓手演示。它为 1,500 个视频序列提供经过人工验证的注释，并通过七个物理维度评估准确性和覆盖范围。我们通过视频重建和操作策略微调来检查下游效用。相对于元数据字幕，物理字幕将第三人称视频的重建 LPIPS 降低了 8.6-9.5%，将自我中心视频的重建 LPIPS 降低了 26.9-30.9%。训练指令丰富化提高了 PhysCapBench 分数和策略成功率，包括在 RoboTwin 2.0 子任务上 pi0.5 提高了 7.5 个百分点。 PhysCapBench使得语言监督的物理内容具有可检验性和可比性，为其评估和改进提供跨领域基础。
+
+</details>
+
+---
+
+## 5. BlinkMimic: Training a Humanoid Motion Tracker in Minutes on a Single GPU / BlinkMimic：在单个 GPU 上在几分钟内训练人形运动跟踪器
+
+**Date**: 2026-11-12 | **arXiv**: [2611.16422v1](http://arxiv.org/abs/2611.16422v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.16422v1)
+
+**Categories**: cs.RO, cs.LG
+
+**Code**: https://github.com/fuyichen0725/blinkmimic.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Whole-body motion tracking lets a humanoid robot follow reference motions, but training a tracking policy for a library of motions has usually taken hours of GPU time. SuperMimic showed that the policy can instead be trained by backpropagating through a world model learned from parallel simulation, and InstantTrack added Muon updates, a residual policy around the reference and an averaged deployed policy. We build on both and present BlinkMimic, a recipe that makes this training faster. On a simulated Unitree G1, BlinkMimic trains one policy for all 40 LAFAN1 clips in 3.4 minutes on a single RTX 4090, measured until three consecutive checkpoints reach a normalized return of at least 0.82 with no failed clip (mean of three seeds). We split training time into the cost of an iteration, the iterations needed to fit the motions, and the iterations needed to remove the last failures, and assign each component, inherited or new, to one of these terms. The new components are a step size that decreases once training has progressed, resets directed by failures of the deployed policy under deployment conditions, and GPU graph capture of the whole iteration. A leave-one-out ablation with three seeds per component shows which term each component affects, and further measurements of the gradient, the update rule and the failure cases explain these effects. Code and per-seed results are available at https://github.com/fuyichen0725/blinkmimic.
+
+全身运动跟踪可让人形机器人遵循参考运动，但训练运动库的跟踪策略通常需要数小时的 GPU 时间。 SuperMimic 表明，可以通过从并行模拟中学习的世界模型进行反向传播来训练策略，并且 InstantTrack 添加了 Muon 更新、围绕参考的剩余策略和平均部署策略。我们在两者的基础上提出了 BlinkMimic，这是一种可以使训练速度更快的方法。在模拟的 Unitree G1 上，BlinkMimic 在单个 RTX 4090 上在 3.4 分钟内为所有 40 个 LAFAN1 剪辑训练一个策略，测量直到三个连续检查点达到至少 0.82 的标准化回报，并且没有失败的剪辑（三个种子的平均值）。我们将训练时间分为迭代成本、适应运动所需的迭代以及消除最后一次失败所需的迭代，并将每个组件（继承的或新的）分配给这些项之一。新组件包括训练进展后步长减小、根据部署条件下部署策略失败进行的重置以及整个迭代的 GPU 图形捕获。每个组件具有三个种子的留一消融显示了每个组件影响的项，并且对梯度、更新规则和失败案例的进一步测量解释了这些影响。代码和每个种子的结果可在 https://github.com/fuyichen0725/blinkmimic 获取。
+
+</details>
+
+---
+
+## 6. Latent Imagination for Parameterized Action Spaces / 参数化动作空间的潜在想象力
+
+**Date**: 2026-11-11 | **arXiv**: [2611.15744v1](http://arxiv.org/abs/2611.15744v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.15744v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Parameterized-action MDPs (PAMDPs) ask an agent to choose a discrete action together with continuous parameters whose meaning depends on that choice. Model-free PAMDP methods act fast but need many interactions; model-based methods are sample-efficient but plan at every decision, which makes them slow to act. We introduce HyLI (Hybrid Latent Imagination), a model-based agent that learns a hybrid policy entirely in the latent imagination of a world model and acts with a single forward pass. To address learning problems that the PAMDP structure creates, HyLI adds counterfactual mode evaluation, which gives every discrete action a learning signal at every imagined state, and success-window replay, which keeps rare successes in training. On seven standard PAMDP benchmarks, HyLI is within one published standard deviation of, or above, the published score of the strongest model-free baseline in our comparison on all 7 tasks, reaches 90% of that score with 2.4x fewer environment steps than that baseline (5.0x when its reward-free pre-training is counted), and decides 67x faster than the model-based planner DLPA at its published planner settings. It is the only method in our comparison that is both more sample-efficient than that baseline and fast enough for real-time control.
+
+参数化动作 MDP (PAMDP) 要求代理选择离散动作以及连续参数，连续参数的含义取决于该选择。无模型 PAMDP 方法反应速度快，但需要大量交互；基于模型的方法样本效率高，但会在每个决策时进行计划，这使得它们行动缓慢。我们引入了 HyLI（混合潜在想象），这是一种基于模型的代理，它完全在世界模型的潜在想象中学习混合策略，并通过单个前向传递进行操作。为了解决 PAMDP 结构产生的学习问题，HyLI 增加了反事实模式评估，在每个想象的状态下为每个离散动作提供学习信号，并添加了成功窗口重播，从而在训练中保持罕见的成功。在七个标准 PAMDP 基准上，HyLI 在我们对所有 7 项任务的比较中最强无模型基线的已发布分数的一个已发布标准差内或高于该分数，以比该基线少 2.4 倍的环境步骤（计算其无奖励预训练时为 5.0 倍）达到该分数的 90%，并且在其已发布的规划器设置下，其决策速度比基于模型的规划器 DLPA 快 67 倍。这是我们比较中唯一比基准更高效且足够快以进行实时控制的方法。
+
+</details>
+
+---
+
+## 7. What World Model Does Active Object Search Need? A Study under Imperfect Detection / 主动对象搜索需要什么世界模型？不完美检测下的研究
+
+**Date**: 2026-11-11 | **arXiv**: [2611.15689v1](http://arxiv.org/abs/2611.15689v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.15689v1)
+
+**Categories**: cs.RO, eess.SY
+
+**Code**: https://github.com/gokyeongryeol/BAMOS.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In active object search, a robot must decide where to look and when to stop. Imperfect detection complicates both decisions: a non-detection may indicate occlusion, an out-of-view target, or a false negative, while a detection may be a false positive. This raises the question of which representations a world model needs to support reliable search under imperfect detection. We introduce Bayesian Active Miss-aware Object Search (BAMOS) to investigate how target belief, occupancy belief, and detector errors affect search decisions. Through comprehensive ablations in Isaac Sim and HSSD houses, we examine the roles of these representations and their update mechanisms across different detector configurations. Notably, target belief and its update mechanisms are critical to search performance, with their contribution generally increasing as detection errors become more prevalent. These findings highlight the importance of maintaining and updating target beliefs to support reliable active search under uncertain detector observations, providing insights into the design of world models for embodied agents. Code is available in https://github.com/gokyeongryeol/BAMOS.
+
+在主动物体搜索中，机器人必须决定看向哪里以及何时停止。不完美的检测使这两个决策变得复杂：未检测到可能表明遮挡、视野外目标或误报，而检测则可能是误报。这就提出了一个问题：世界模型需要哪些表示来支持不完美检测下的可靠搜索。我们引入贝叶斯主动丢失感知对象搜索（BAMOS）来研究目标置信度、占用置信度和探测器错误如何影响搜索决策。通过 Isaac Sim 和 HSSD 房屋的全面消融，我们研究了这些表示的作用及其在不同探测器配置中的更新机制。值得注意的是，目标信念及其更新机制对于搜索性能至关重要，随着检测错误变得更加普遍，它们的贡献通常会增加。这些发现强调了维护和更新目标信念的重要性，以支持在不确定的探测器观察下进行可靠的主动搜索，从而为具体代理的世界模型的设计提供见解。代码可在 https://github.com/gokyeongryeol/BAMOS 中获取。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-11-13 (9 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-11-13
