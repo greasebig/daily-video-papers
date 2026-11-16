@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-11-16](papers/2026-11-16.md) - 2 papers
 - [2026-11-14](papers/2026-11-14.md) - 7 papers
 - [2026-11-13](papers/2026-11-13.md) - 9 papers
 - [2026-11-12](papers/2026-11-12.md) - 8 papers
@@ -189,6 +190,50 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-11-16 (2 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-11-16
+
+**Paper Count**: 2
+
+---
+
+## 1. When to Trust Simulated Patient Responses:Support-Gated World Models for Vasopressor Decision Support / 何时相信模拟患者的反应：用于血管加压药决策支持的受支持约束的世界模型
+
+**Date**: 2026-11-13 | **arXiv**: [2611.18458v1](http://arxiv.org/abs/2611.18458v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.18458v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Clinical world models expose language-model agents to predicted patient responses, but simulations can be unreliable for poorly supported treatments or unfamiliar hospitals. We introduce Support-Gated World-Model decision support, a lightweight extension of a propose--simulate--refine agent. A recurrent dynamics ensemble predicts short-horizon physiological responses to documented norepinephrine dose categories, while a behavior model estimates observational action support. The interface withholds predictions with insufficient support or excessive ensemble disagreement and abstains when no candidate qualifies. Evaluation on eICU-CRD includes 70 hospitals and 30,700 decision transitions, with 14 hospitals held out for testing. At 62.0% factual-transition coverage, joint gating yields a MAP mean absolute error of 7.3 mmHg, compared with 9.2 mmHg for random selection at the same coverage. The gated agent achieves 60.0% agreement with recorded actions at 81.0% decision coverage, compared with 55.0% agreement and 99.5% coverage for an ungated ensemble agent. Component ablations show lower factual risk with joint gating than with either gate alone.These results characterize a reliability--coverage trade-off in selective clinical simulation; they do not identify individualized treatment effects or establish improved patient outcomes.
+
+临床世界模型使语言模型智能体能够接触到预测的患者反应，但对于证据不足的治疗方案或不熟悉的医院，模拟结果可能不可靠。我们引入了支持门控世界模型决策支持，这是“提出-模拟-优化”智能体的轻量级扩展。递归动态集成模型预测对有文献记载的去甲肾上腺素剂量类别的短期生理反应，而行为模型则估算观察性行动支持。界面会屏蔽支持不足或集成体分歧过大的预测，并在没有合格候选方案时弃权。对eICU-CRD的评估包括70家医院和30,700次决策转换，其中14家医院被留作测试。在62.0%的实际转换覆盖率下，联合门控的MAP平均绝对误差为7.3 mmHg，而相同覆盖率下随机选择的平均绝对误差为9.2 mmHg。在81.0%的决策覆盖率下，门控智能体与记录的操作的一致性达到60.0%，而未门控集成智能体的一致性为55.0%，覆盖率为99.5%。成分消融显示，与单独使用任一门控相比，联合门控的事实风险更低。这些结果揭示了选择性临床模拟中可靠性与覆盖率之间的权衡；它们并未识别出个体化治疗效果，也未确立改善的患者结局。
+
+</details>
+
+---
+
+## 2. WeatherDreamer: Learning a World Model from Multimodal Earth Observations / WeatherDreamer：从多模态地球观测中学习世界模型
+
+**Date**: 2026-11-13 | **arXiv**: [2611.18393v1](http://arxiv.org/abs/2611.18393v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.18393v1)
+
+**Categories**: cs.LG, physics.ao-ph
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Machine learning weather models now rival operational global forecasts but still start from analyses produced by separate, expensive data assimilation (DA) systems, which for global models are typically updated every six hours. Observation-to-observation models avoid this dependence, but most omit the recursive filtering cycle that lets DA systems carry a background state through sparse, irregular observations. We introduce WeatherDreamer, a world model that learns this cycle end-to-end from 18 global observing systems, without reanalysis. It infers a latent state from observations, carries it forward hour by hour with learned dynamics, corrects it each hour with new observations, and can predict what any of its observing systems would measure at any location. At held-out stations, its ensembles beat NOAA's Global Ensemble Forecast System (GEFS) for temperature, dew point and wind out to 12 h and are better calibrated than GEFS and the ECMWF ensemble. Precipitation, cloud-top height and solar irradiance, never inputs at inference, are inferred with skill matching or exceeding operational products at short leads. Against the first guess of NOAA's Gridpoint Statistical Interpolation (GSI) DA system, WeatherDreamer's short-range departures are within 10% of GSI's at surface stations and within 25% for moisture-sensitive microwave channels, but up to five times larger for temperature-sounding channels. Never given observation errors, its learned update assumes errors close to known instrument and retrieval errors of microwave sounders and scatterometer winds. WeatherDreamer also separates viewing geometry from atmospheric state, recovering 83-96% of observed limb darkening and producing seamless nadir-view imagery. Producing an hourly global analysis in about 1.5 minutes on one GPU, WeatherDreamer shows that assimilation and forecasting can be learned together directly from observations.
+
+如今，机器学习天气模型已能与业务性全球预报相媲美，但仍需以独立且昂贵的数据同化（DA）系统所生成的分析结果为起点。对于全球模型而言，这些分析结果通常每六小时更新一次。观测到观测模型避免了这种依赖性，但大多数模型都省略了递归滤波循环，而该循环使DA系统能够通过稀疏、不规则的观测来传递背景状态。我们推出了WeatherDreamer，这是一个世界模型，能够从18个全球观测系统端到端地学习这一循环，无需进行再分析。它从观测数据中推断出潜在状态，利用所学习到的动力学逐小时向前推进，每小时用新的观测数据对其进行校正，并能够预测其任何观测系统在任何地点测得的结果。在留出站点，其集合在温度、露点和风速方面优于NOAA的全球集合预报系统（GEFS），预测时效长达12小时，并且校准效果优于GEFS和ECMWF集合。降水、云顶高度和太阳辐照度在推理时从未作为输入，但在短期预测中，其推理能力与业务产品相当或优于业务产品。与NOAA的网格点统计插值（GSI）DA系统的初始估值相比，WeatherDreamer的短期偏差在地面观测站与GSI的偏差相差10%以内，在湿度敏感的微波通道相差25%以内，但在温度探测通道相差高达5倍。由于从未提供过观测误差，其学习更新假设误差接近
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-11-14 (7 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-11-14
