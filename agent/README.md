@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-11-16](papers/2026-11-16.md) - 6 papers
 - [2026-11-14](papers/2026-11-14.md) - 35 papers
 - [2026-11-13](papers/2026-11-13.md) - 15 papers
 - [2026-11-12](papers/2026-11-12.md) - 8 papers
@@ -203,6 +204,114 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-11-16 (6 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-11-16
+
+**Paper Count**: 6
+
+---
+
+## 1. Envisioning Agentic Robotics: A New Era of Robotic Systems / 展望自主机器人：机器人系统的新时代
+
+**Date**: 2026-11-13 | **arXiv**: [2611.18359v1](http://arxiv.org/abs/2611.18359v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.18359v1)
+
+**Categories**: cs.RO, cs.AI, cs.CL, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The release of GPT-6 Astra marks the emergence of a new paradigm in robotics: agentic robotics. Within weeks, frontier models with agentic harnesses matched or exceeded task-specific policies on many embodied benchmarks. Instead of training a dedicated policy for each family of tasks, an agentic robotic system applies a foundation model to open-world embodied tasks. It operates in a closed loop: observing the environment, interpreting user intent, reasoning about the task, invoking skills and tools, verifying outcomes, and adapting its strategy. Despite these advances, the community has yet to converge on a shared definition, a reliable evaluation framework, or a research roadmap. We argue that Embodied System 2, realized by a foundation model together with an embodied harness, forms the decision-making core of agentic robotics. Its central challenge is to translate general-purpose reasoning into effective and verifiable actions under physical constraints such as limited reaction time, mechanical limits, unpredictable environment changes, and irreversible consequences. Motivated by this perspective, we propose an evaluation framework that measures both model capabilities and closed-loop system performance. Furthermore, we identify the principles that carry over from digital to physical agents and the challenges that must be addressed to achieve reliable physical autonomy. On top of the Embodied System 2 and the evaluation framework, we envision a research roadmap toward sustained autonomy: the ability to perform work safely and reliably with progressively broader responsibility, from executing individual primitives to fulfilling standing roles.
+
+GPT-6 Astra 的发布标志着机器人技术新范式的出现：智能体机器人技术。在短短几周内，配备智能体框架的前沿模型在许多具身基准测试中达到了或超过了针对特定任务的策略。智能体机器人系统不会为每个任务族群训练专用策略，而是将基础模型应用于开放世界的具身任务。它在闭环中运行：观察环境、解读用户意图、对任务进行推理、调用技能和工具、验证结果并调整策略。尽管取得了这些进展，但业界尚未就共同的定义、可靠的评估框架或研究路线图达成一致。我们认为，由基础模型与具身化框架共同实现的具身化系统2构成了智能体机器人学的决策核心。它的核心挑战是将通用推理转化为在反应时间有限、机械限制、环境变化不可预测和后果不可逆转等物理约束条件下有效且可验证的行动。基于这一视角，我们提出了一种评估框架，用于衡量模型能力和闭环系统性能。此外，我们还确定了从数字智能体到物理智能体的迁移原则，以及为实现可靠的物理自主性而必须应对的挑战。在具身系统2和评估框架的基础上，我们设想了一条通往……的研究路线图。
+
+</details>
+
+---
+
+## 2. Who Should Be on the Panel? Task-Conditioned Persona Selection for LLM Trading Agents / 谁应该成为小组成员？针对 LLM 交易代理的任务条件性角色选择
+
+**Date**: 2026-11-13 | **arXiv**: [2611.18150v1](http://arxiv.org/abs/2611.18150v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.18150v1)
+
+**Categories**: q-fin.TR, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multi-agent LLM systems are built by fixing a cast of roles and then designing how the cast coordinates. Which agents should make up the group for a given task is left to the designer, and the same cast is reused for every task. Financial trading makes the cost of that choice visible: stocks trade differently, and the trading styles suited to one need not suit another. We study task-conditioned persona selection, composing the group from the characteristics of the task it will face, and instantiate it with FinPanel, an LLM multi-agent trading system in which a recruiter selects a panel of named trader personas for each stock from a direction-blind statistical sketch of how the stock trades, each persona gives an independent daily call in its own style, and a manager commits the trade after reading the panel's arguments and their desk-kept, hierarchical track records. Because nothing is returned to the traders, the panel stays the panel that was selected, and it can trade a new stock from an empty record. On eight US stocks over the out-of-knowledge year 2025, against three prior LLM trading agents re-implemented in the same framework and against rule-based, predictive and reinforcement-learning baselines, the selected panel is ahead of a fixed panel of the same size and of the prior agents run as their papers prescribe, with a shallower drawdown than buy-and-hold on every stock; it keeps its performance with no warm-up and with no record at all, whereas the memory-augmented agents' returns swing with their warm-up; and neither more seats nor the manager's reading of the arguments substitutes for selecting the right ones. Who is in the group is a design decision to be made per task, before how the group coordinates.
+
+多智能体 LLM 系统是通过确定一组角色，然后设计这些角色如何协调来构建的。对于给定任务，应由哪些代理组成该群组由设计者决定，并且对于每个任务都重复使用相同的角色阵容。金融交易让这种选择的成本变得显而易见：股票的交易方式各不相同，适合一种股票的交易风格不一定适合另一种股票。我们研究了基于任务的人设选择，根据任务的特点来组成团队，并使用FinPanel对其进行实例化。FinPanel是一个LLM多智能体交易系统，其中招募者根据股票交易方式的无方向统计概览，为每只股票选择一个由具名交易员人设组成的团队，每个角色以自己的风格给出独立的每日建议，经理在阅读团队的论点及其在交易台保留的分层过往业绩后下单交易。由于交易员得不到任何反馈，因此小组仍是所选的小组，并且可以从空记录开始交易新股票。在2025年这个超出知识范围的年份，针对八只美国股票，与在同一框架中重新实现的三个先前的LLM交易代理相比，以及与基于规则、预测和强化学习的基准相比，所选小组优于同等规模的固定小组，也优于按照其论文规定运行的先前代理，并且在每只股票上的回撤都比“买入并持有”策略更小；该小组在没有预热和没有任何记录的情况下保持了其表现，而增强记忆的
+
+</details>
+
+---
+
+## 3. PUMA-Former: Uncertainty-Aware Agentic Computation Offloading in MEO-LEO Satellite Networks With Incomplete Information / PUMA-Former：具有不完全信息的MEO-LEO卫星网络中感知不确定性的智能体计算卸载
+
+**Date**: 2026-11-13 | **arXiv**: [2611.18139v1](http://arxiv.org/abs/2611.18139v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.18139v1)
+
+**Categories**: cs.NI, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Satellite edge computing distributes mobile workloads across moving processors whose service capacity must be coordinated over time. In medium Earth orbit (MEO)--low Earth orbit (LEO) networks, periodic reports leave CPU states stale or missing, making offloading sensitive to uncertain capacity and shared-destination congestion. We propose PUMA-Former, an uncertainty-aware agentic framework for cooperative offloading under incomplete information that balances completed work, service delay, and execution cost. A MEO coordinator maintains distinct-report memory and closes the loop between available evidence, capacity estimates, allocation commands, and execution feedback. Latent-delay attention weights plausible measurement-age hypotheses, and historical innovations refine CPU estimates around the latest received report. Queue-error-aware fusion incorporates auxiliary pressure while accounting for backlog uncertainty. The inferred resource moments condition a structured Transformer allocator for joint destination, partition, bandwidth, CPU, and power decisions. Bounded risk-aware calibration then adjusts workload splits to reflect uncertainty and shared destination load. In traffic-driven development evaluation, PUMA-Former increases admitted compute-work completion by 8.62%, reduces mean modeled service delay by 34.78%, and reduces mean episode-P95 delay by 71.08% relative to ATLA-adapt. It also improves completion and normalized energy over fixed-half round-robin offloading. Service gains over the learning baselines involve higher normalized energy.
+
+卫星边缘计算将移动工作负载分配到移动处理器上，这些处理器的服务能力必须随着时间的推移进行协调。在中地球轨道（MEO）—低地球轨道（LEO）网络中，由于定期报告的原因，CPU状态会过时或缺失，导致卸载对不确定的容量和共享目的地拥塞较为敏感。我们提出了PUMA-Former，这是一个不确定性感知的代理框架，用于在信息不完整的情况下进行协同卸载，在已完成工作、服务延迟和执行成本之间实现平衡。MEO协调器维护独立报告的记忆，并在可用证据、容量估算、分配命令和执行反馈之间形成闭环。潜在延迟注意力机制对合理的测量时效假设赋予权重，而历史创新则根据最新收到的报告对CPU估算进行优化。队列误差感知融合纳入了辅助压力，同时考虑了积压任务的不确定性。推断的资源矩为结构化Transformer分配器提供条件，用于联合做出目标、分区、带宽、CPU和功耗方面的决策。然后，有界风险感知校准会调整工作负载的划分，以反映不确定性和共享的目标负载。在流量驱动的开发评估中，与ATLA-adapt相比，PUMA-Former将已接纳计算任务的完成率提高了8.62%，将建模的平均服务延迟降低了34.78%，并将平均 эпизод-P95延迟降低了71.08%。与固定半轮询卸载相比，它还提高了完成率和归一化能耗。
+
+</details>
+
+---
+
+## 4. JFinBench: A Continuously Refreshable Japanese Financial Benchmark from the Latest Certification Exams / JFinBench：基于最新认证考试的持续更新的日本金融基准
+
+**Date**: 2026-11-13 | **arXiv**: [2611.18130v1](http://arxiv.org/abs/2611.18130v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.18130v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large language models (LLMs) are increasingly applied to finance, creating a need for benchmarks that evaluate their capabilities across financial systems with different regulations and practices. However, existing financial benchmarks provide limited coverage of country-specific financial systems, and they are difficult to keep up to date as released questions leak into training data. We introduce JFinBench, a Japanese financial benchmark comprising 321 examples from the 2026 editions of six regularly administered certification exams covering accounting, tax, financial planning, and banking. To construct it, we develop a human-in-the-loop agentic pipeline in which a coding agent writes exam-specific conversion code and a review page, while a human verifies every example and feeds corrections back to the agent. This pipeline adapts to heterogeneous exam formats and reduces the effort of incorporating new exam editions, enabling periodic refreshes that mitigate data contamination. Evaluating 12 recent LLMs, we find that Claude Fable 5 and GPT-6 Astra exceed 93% overall, while even the best open-weight model, Kimi K3.1 Pro, trails Claude Fable 5 by 12 percentage points. When models can additionally use a terminal and web access, they retrieve the knowledge they lack and every model improves. The gap narrows but about 4 points remain, and the ranking of models stays largely the same, suggesting that knowledge held in the model itself remains valuable even with tools. We release the dataset, the evaluation code, and the construction pipeline.
+
+大型语言模型（LLM）在金融领域的应用日益广泛，因此需要制定基准，以评估它们在具有不同监管法规和实践的金融系统中的能力。然而，现有的金融基准对特定国家的金融体系覆盖有限，并且由于已发布的题目会泄露到训练数据中，因此难以保持最新。我们推出了JFinBench，这是一个日本金融基准，包含来自2026年版六项定期举行的认证考试的321个范例，涵盖会计、税务、财务规划和银行业务。为了构建该基准，我们开发了一条“人机协同”的智能体管道，其中编码智能体编写针对具体考试的转换代码和审核页面，而人类则验证每个示例并将更正反馈给智能体。该管道可适应异构的考试形式，并减少纳入新版考试的工作量，从而实现定期更新，以减轻数据污染。我们对12个最新的大语言模型进行了评估，发现Claude Fable 5和GPT-6 Astra的总体得分均超过93%，而即使是表现最佳的开源模型Kimi K3.1 Pro，其得分也比Claude Fable 5低12个百分点。当模型还可以使用终端和网络访问时，它们就能检索到自己所缺少的知识，并且每个模型都会得到提升。差距有所缩小，但仍有约4个百分点的差距，且各模型的排名基本保持不变，这表明即使有工具的辅助，模型本身所具备的知识仍然具有价值。我们发布了
+
+</details>
+
+---
+
+## 5. TelePhysica: Agentic Reconstruction of Physically Interactive Scenes / TelePhysica：物理交互场景的智能体重建
+
+**Date**: 2026-11-13 | **arXiv**: [2611.18078v1](http://arxiv.org/abs/2611.18078v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.18078v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Direct image-to-video diffusion models entangle pixel synthesis with implicit latent motion, precluding persistent 3D mechanical equilibrium, mid-rollout intervention, and counterfactual force control. Conversely, single-pass programmatic 3D reconstruction from an uncalibrated photograph leaves monocular depth and support clearance underconstrained, causing reconstructed scenes to interpenetrate or collapse under gravity. We present TelePhysica, a closed-loop framework that reconstructs an executable, multi-regime physical world from a single photograph to drive stateful 3D interaction and trajectory-grounded video synthesis. A vision-language coding agent synthesizes separable visual meshes and declarative physical models within a two-stage verification loop that pairs pixel-aligned silhouette critique with a zero-force gravitational equilibrium preflight. The verified world compiles into a unified solver coupling rigid bodies, articulated chains, co-dimensional cloth shells, and 3D tetrahedral elastodynamics, whose simulated rollouts condition pretrained video diffusion models through pixel-aligned structural streams. On a 100-scene single-image benchmark, closed-loop execution raises equilibrium-verified world recovery from $0\%$ in single-pass synthesis to $81\%$. Controlled constitutive ablations show over an order-of-magnitude larger localized corner displacement and out-of-plane pleating in finite-element cloth than in matched rigid-plate proxies. Conditioning video diffusion on simulated trajectories increases dynamic motion-mask overlap by $2{\times}\text{--}5{\times}$ and preserves motion direction under counterfactual force reversals where direct image-to-video models fail.
+
+直接的图像到视频扩散模型将像素合成与隐式潜在运动纠缠在一起，从而排除了持续的3D机械平衡、展开过程中的干预以及反事实力控制。相反，从未校准的照片进行单次编程式3D重建时，单目深度和支撑间隙的约束不足，导致重建的场景相互穿透或在重力作用下坍塌。我们推出了TelePhysica，这是一个闭环框架，能够从单张照片中重建一个可执行的多机制物理世界，以驱动有状态的3D交互和基于轨迹的视频合成。视觉-语言编码代理在一个两阶段验证循环中合成可分离的视觉网格和声明式物理模型，该循环将像素对齐的轮廓评判与零力重力平衡预检相结合。经过验证的世界被编译成一个统一的求解器，将刚体、铰链链、同维布料壳和3D四面体弹性动力学耦合在一起，其模拟的展开过程通过像素对齐的结构流来对预训练的视频扩散模型进行条件化。在包含100个场景的单图像基准测试中，闭环执行将经过平衡性验证的世界恢复率从单次合成的$0\%$提高到$81\%$。受控的组成消融显示，与匹配的刚性板代理相比，有限元布料的局部角位移和面外褶皱大了一个数量级。条件化视频
+
+</details>
+
+---
+
+## 6. Agent-as-a-Judge / 客服代表作为裁判
+
+**Date**: 2026-11-13 | **arXiv**: [2611.18067v1](http://arxiv.org/abs/2611.18067v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.18067v1)
+
+**Categories**: cs.CL
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Artificial intelligence has progressed from task-specific systems toward general models spanning perception, generation, reasoning, and autonomous interaction, making reliable evaluation essential for comparison, deployment, and post-training feedback. At scale, modern evaluation pipelines increasingly rely on LLM-as-a-Judge to produce scores, preferences, and critiques; in its fixed-context setting, the judge relies on the supplied evaluand and evaluation materials. Yet a reliable verdict may require evidence beyond the supplied evaluand and context---either because critical environmental states remain unrecorded in the static execution log, or because controversial factual claims require external verification. Passive judges cannot obtain that missing evidence before deciding, especially when evaluating agent trajectories, executable artifacts, or domain-specific reports. Recent work therefore develops active evaluators that seek missing evidence and update their grounds for judgment before deciding. We bring these advances together through Agent-as-a-Judge, focusing on how evaluators construct and control checking processes within the broader LLM-based judging landscape. We define the scope through evaluation-directed checks and the use of their results, covering both structured workflows and observation-driven control. We organize the design space by multi-agent collaboration, tool integration, memory, and planning, and show how these mechanisms supply the checks and evidence on which a verdict rests. We consolidate published scores and reproduce missing entries for key agentic judges; the comparison reveals uneven agentic gains and motivates dedicated agentic evaluation. We conclude by characterizing application demands and open challenges in cost, reliability, safety, and governance that condition trusted deployment of agentic judges at scale.
+
+人工智能已从针对特定任务的系统发展为涵盖感知、生成、推理和自主交互的一般模型，因此可靠的评估对于比较、部署和训练后反馈至关重要。在大规模应用中，现代评估管道越来越依赖于“LLM作为评判者”来生成评分、偏好和 Critique；在其固定上下文的设置中，评判者依赖于提供的被评估对象和评估材料。然而，要得出可靠的评判结果，可能需要超出所提供的被评价对象和上下文范围的证据——这可能是因为关键的环境状态未在静态执行日志中记录，也可能是因为有争议的事实主张需要外部核实。被动型评判者在做出决定之前无法获得缺失的证据，在评估智能体轨迹、可执行工件或特定领域的报告时尤其如此。因此，最近的研究开发了主动型评估器，它们会在做出决定之前寻找缺失的证据并更新其判断依据。我们通过“代理即评判者”将这些进展整合在一起，重点关注评估者如何在更广泛的基于大语言模型的评判领域构建和控制检查过程。我们通过评估导向的检查及其结果的使用来界定范围，涵盖结构化工作流程和观察驱动的控制。我们通过多智能体协作、工具集成、记忆和规划来组织设计空间，并展示这些机制如何提供检查和
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-11-14 (35 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-11-14
