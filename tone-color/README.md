@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-11-17](papers/2026-11-17.md) - 2 papers
 - [2026-11-14](papers/2026-11-14.md) - 1 papers
 - [2026-11-13](papers/2026-11-13.md) - 1 papers
 - [2026-11-12](papers/2026-11-12.md) - 1 papers
@@ -124,6 +125,50 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-11-17 (2 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-11-17
+
+**Paper Count**: 2
+
+---
+
+## 1. Streaming across viewing conditions - The effect of viewing distance and display luminance on video quality / 跨观看条件的流式传输 - 观看距离和显示亮度对视频质量的影响
+
+**Date**: 2026-11-15 | **arXiv**: [2611.20226v1](http://arxiv.org/abs/2611.20226v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.20226v1)
+
+**Categories**: eess.IV, cs.CV, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+The visibility of streamed video distortions is affected by the user's display and viewing conditions, such as their display's luminance or the viewing distance. Distortions become less visible at lower luminance levels or farther viewing distances. However, most image and video quality metrics assume fixed optimal display and viewing conditions, making them insensitive to the viewing conditions. In this work, we demonstrate how existing metrics can be adapted to account for both factors and compare such an adaptation with the metrics that natively model viewing conditions. First, we collected a new video quality dataset, HDR-VDC, which contains streaming distortions in 4K HDR videos. The dataset consists of 12 4K and 4 FHD HDR source video content, each distorted with AV1 encoding and Lanczos upscaling from a lower resolution. The quality loss due to the distortions was measured at two viewing distances, corresponding to 60 and 120 pixels per visual degree, and two display mean luminance levels, varying by a factor of 8 in terms of luminance. Next, we developed a pre-processing framework that lets us adapt many quality metrics so that they can evaluate content across the viewing distances and luminance levels. The framework employs a display model and perceptually uniform encoding, PU21, to account for the effect of display luminance, and perspective projection scaling (PPS) to account for the effect of viewing distance. We used the framework to compare the performance of 35 state-of-the-art metrics. This allowed us to identify a selection of existing quality metrics that can be effectively adapted to account for the viewing conditions.
+
+流视频失真的可见性受到用户的显示器和观看条件的影响，例如显示器的亮度或观看距离。在较低的亮度水平或较远的观看距离下，失真变得不那么明显。然而，大多数图像和视频质量指标都假设固定的最佳显示和观看条件，这使得它们对观看条件不敏感。在这项工作中，我们演示了如何调整现有指标来考虑这两个因素，并将这种调整与本地模拟观看条件的指标进行比较。首先，我们收集了一个新的视频质量数据集 HDR-VDC，其中包含 4K HDR 视频中的流失真。该数据集由 12 个 4K 和 4 个 FHD HDR 源视频内容组成，每个内容都通过 AV1 编码和 Lanczos 从较低分辨率进行升级而失真。在两个观看距离（对应于每视觉度 60 和 120 像素）和两个显示器平均亮度水平（亮度变化 8 倍）下测量了由于失真而造成的质量损失。接下来，我们开发了一个预处理框架，使我们能够调整许多质量指标，以便他们可以跨观看距离和亮度级别评估内容。该框架采用显示模型和感知均匀编码 PU21 来考虑显示亮度的影响，并采用透视投影缩放 (PPS) 来考虑观看距离的影响。我们使用该框架来比较 35 个最先进指标的性能。这使我们能够确定一系列现有的质量指标，这些指标可以有效地适应观看条件。
+
+</details>
+
+---
+
+## 2. Prior-Guided Single-Exposure HDR Novel View Synthesis via Base-Gain Representation / 通过基础增益表示的先验引导单次曝光 HDR 新视图合成
+
+**Date**: 2026-10-29 | **arXiv**: [2610.41011v1](http://arxiv.org/abs/2610.41011v1) | **PDF**: [Link](http://arxiv.org/pdf/2610.41011v1)
+
+**Categories**: cs.CV, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Single-exposure high dynamic range (HDR) novel view synthesis (NVS) recovers HDR scenes from low dynamic range (LDR) views captured at a single exposure and estimates camera response function (CRF) for LDR re-exposure. Without HDR ground-truth, using single-exposure LDR views as the sole source of direct supervision underconstrains HDR reconstruction and cannot ensure its faithful recovery, motivating the need for learned LDR-to-HDR reconstruction priors. Moreover, single-exposure LDR views supervise CRF only over a limited range, necessitating a learnable prior for reliable re-exposure beyond it. We propose PriorGS, a 3D Gaussian Splatting framework that addresses both challenges by (1) guiding HDR recovery with pseudo-HDR supervision from 2D single-exposure HDR reconstruction methods while anchoring it to input LDR views through a closed reconstruction loop; and (2) regularizing CRF modeling with a learnable prior that guarantees monotonicity and promotes plausible responses. Yet cross-view inconsistencies in independently generated pseudo-HDR targets impair scene reconstruction when HDR is encoded directly as Gaussian's color attribute. We therefore introduce a 3D base-gain HDR representation that factors HDR radiance into an LDR base and an overlaid 3D gain field, promoting robustness to such inconsistencies and enabling 3D HDR appearance editing. Extensive experiments demonstrate PriorGS's substantial superiority over baselines.
+
+单次曝光高动态范围 (HDR) 新颖视图合成 (NVS) 从单次曝光捕获的低动态范围 (LDR) 视图中恢复 HDR 场景，并估计 LDR 重新曝光的相机响应函数 (CRF)。如果没有 HDR 地面实况，使用单曝光 LDR 视图作为直接监督的唯一来源会限制 HDR 重建，并且无法确保其忠实恢复，从而激发了学习 LDR 到 HDR 重建先验的需要。此外，单次曝光 LDR 视图仅在有限范围内监督 CRF，因此需要可学习的先验才能可靠地重新曝光。我们提出了 PriorGS，一种 3D 高斯 Splatting 框架，它通过以下方式解决这两个挑战：(1) 通过 2D 单曝光 HDR 重建方法的伪 HDR 监督指导 HDR 恢复，同时通过闭合重建循环将其锚定到输入 LDR 视图； (2) 使用可学习的先验规范 CRF 建模，保证单调性并促进合理的响应。然而，当 HDR 直接编码为高斯颜色属性时，独立生成的伪 HDR 目标中的跨视图不一致会损害场景重建。因此，我们引入了 3D 基本增益 HDR 表示，将 HDR 辐射度纳入 LDR 基础和重叠的 3D 增益场中，从而提高了对此类不一致的鲁棒性并支持 3D HDR 外观编辑。大量实验证明 PriorGS 相对于基线具有显着的优越性。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-11-14 (1 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-11-14
