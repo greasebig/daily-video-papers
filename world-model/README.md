@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-11-17](papers/2026-11-17.md) - 11 papers
 - [2026-11-16](papers/2026-11-16.md) - 2 papers
 - [2026-11-14](papers/2026-11-14.md) - 7 papers
 - [2026-11-13](papers/2026-11-13.md) - 9 papers
@@ -190,6 +191,196 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-11-17 (11 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-11-17
+
+**Paper Count**: 11
+
+---
+
+## 1. XMimic and XSoma: Learning Humanoid Motion Tracking and Locomotion in Under a Minute / XMimic 和 XSoma：在一分钟内学习人形运动跟踪和运动
+
+**Date**: 2026-11-16 | **arXiv**: [2611.20452v1](http://arxiv.org/abs/2611.20452v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.20452v1)
+
+**Categories**: cs.RO, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+We present XMimic and XSoma, which learn humanoid motion tracking and locomotion on rough terrain in under a minute of training. Both follow SuperMimic, which learns a world model of the robot and optimizes the policy with analytic gradients through short rollouts imagined in this model. Existing implementations of this method do not make use of larger GPUs, as every training iteration is a long chain of small GPU operations that run one after another. XMimic and XSoma therefore shorten this chain and run the steps of every iteration at the same time on up to four GPUs. We compile the complete training loop with JAX, including the MuJoCo Warp simulator. For locomotion, XSoma leaves only the dynamics of the robot to the world model and computes everything else exactly, including the terrain height under the feet. It learns with a horizon of one second and without a critic. On four H100 GPUs, XMimic learns to track all 40 LAFAN1 clips with the Unitree G1 in 0.86 minutes, 3.7 times faster than BlinkMimic on one GPU. XSoma reaches the tracking target that Holosoma's tests set for FastSAC in 0.77 minutes, 12.3 times faster than FastSAC on one GPU, while needing only an eighth of its environment steps.
+
+我们推出了 XMimic 和 XSoma，它们可以在一分钟的训练内学习人形运动跟踪和在崎岖地形上的运动。两者都遵循 SuperMimic，它学习机器人的世界模型，并通过该模型中设想的短期部署，利用分析梯度来优化策略。此方法的现有实现不使用更大的 GPU，因为每次训练迭代都是一长串依次运行的小型 GPU 操作。因此，XMimic 和 XSoma 缩短了这条链，并在最多四个 GPU 上同时运行每次迭代的步骤。我们使用 JAX 编译完整的训练循环，包括 MuJoCo Warp 模拟器。对于运动，XSoma 仅将机器人的动力学留给世界模型，并精确计算其他所有内容，包括脚下的地形高度。它以一秒的视野进行学习，并且没有批评。在四个 H100 GPU 上，XMimic 在 0.86 分钟内学会了使用 Unitree G1 跟踪所有 40 个 LAFAN1 剪辑，比单个 GPU 上的 BlinkMimic 快 3.7 倍。 XSoma 在 0.77 分钟内达到了 Holosoma 测试为 FastSAC 设定的跟踪目标，比单个 GPU 上的 FastSAC 快 12.3 倍，同时只需要其环境步骤的八分之一。
+
+</details>
+
+---
+
+## 2. High-Speed Forward and Reverse Tractor-Trailer Driving with Learned Vehicle Dynamics / 利用学习的车辆动力学进行高速前进和后退牵引车拖车驾驶
+
+**Date**: 2026-11-15 | **arXiv**: [2611.20324v1](http://arxiv.org/abs/2611.20324v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.20324v1)
+
+**Categories**: cs.RO, eess.SY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Tractor-trailer systems are difficult to control, especially unstable during reverse motion, and their dynamics depend on difficult-to-measure factors, including road friction and suspension coefficients. We introduce a learned dynamics model for tractor-trailer control and compare it with a reduced-order dynamics model with Fiala tire forces as an analytic baseline. Specifically, we compare a model predictive path integral (MPPI) controller that uses the learned dynamics model to an MPPI controller that uses the analytic model, as well as to three additional baseline controllers. In the main closed-loop tracking experiments across four simulated environments, MPPI with learned dynamics achieves mean speeds closer to the target magnitudes and lower root-mean-square (RMS) hitch angles than MPPI with the analytic model at every tested setpoint, with higher completion rates in seven of eight reverse configurations.
+
+牵引车拖车系统难以控制，特别是在反向运动时不稳定，并且其动力学取决于难以测量的因素，包括道路摩擦力和悬架系数。我们引入了用于牵引车拖车控制的学习动力学模型，并将其与以 Fiala 轮胎力作为分析基线的降阶动力学模型进行比较。具体来说，我们将使用学习动态模型的模型预测路径积分 (MPPI) 控制器与使用解析模型的 MPPI 控制器以及三个附加基线控制器进行比较。在四个模拟环境的主要闭环跟踪实验中，与使用分析模型的 MPPI 在每个测试设定点相比，具有学习动态的 MPPI 实现的平均速度更接近目标幅度，并且均方根 (RMS) 牵引角更低，并且在八个反向配置中的七个中具有更高的完成率。
+
+</details>
+
+---
+
+## 3. SAFER: Navigating the Exploration-Exploitation Dilemma in World-Model-Based Planning for Autonomous Driving / 更安全：在基于世界模型的自动驾驶规划中解决探索-利用困境
+
+**Date**: 2026-11-15 | **arXiv**: [2611.20107v1](http://arxiv.org/abs/2611.20107v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.20107v1)
+
+**Categories**: cs.RO, cs.AI
+
+**Project**: https://ys-qu.github.io/safer-website.  <details><summary><b>Abstract / 摘要</b></summary>
+
+An autonomous vehicle must foresee the consequences of its actions, especially in the rare, time-critical situations where crashes happen. A world model offers this foresight, but only within the coverage of its training data, which poses an exploration-exploitation dilemma. Within this coverage a planner can hardly improve on the data, and beyond it the model's errors mislead it. Logs of competent driving rarely contain the failures that would widen the coverage, and agents that learn from interaction gain them only by failing themselves, without being shown what to do instead. We propose SAFER, a framework that learns offline from failures that others make, judged by an expert, and keeps learning online from its own driving. Offline, partially trained agents and scripted, recoverable perturbations Stage failures in simulation, and an expert Annotates every visited state with its action and value, so that much of what the planner explores is covered before it drives. In planning, a chunked latent world model Foresees the consequences fast enough for real-time use, and a risk-aware sampling-based planner Evaluates candidate maneuvers by their return minus a bounded collision penalty. Online, a loop continuously Refines the model wherever this driving leaves the coverage of the offline data. In closed-loop evaluation against the compared methods, SAFER reaches the highest route completion and reward per step on the CARLA Leaderboard routes, 0.95 and 0.77 from a privileged bird's-eye view, and the highest episode reward in MetaDrive, 53.4 in regular and 49.0 in safety-critical traffic. Project page: https://ys-qu.github.io/safer-website.
+
+自动驾驶汽车必须预见其行为的后果，特别是在发生碰撞的罕见、时间紧迫的情况下。世界模型提供了这种远见，但仅限于其训练数据的范围内，这造成了探索与利用的困境。在这个范围内，规划者很难改进数据，而在这个范围之外，模型的错误会误导它。合格的驾驶日志很少包含会扩大覆盖范围的故障，而从交互中学习的代理只能通过自己失败来获得这些故障，而不会被告知该怎么做。我们提出了 SAFER，这是一个框架，可以从其他人的失败中离线学习，并由专家判断，并通过自己的驱动不断在线学习。离线、部分训练的代理和脚本化的、可恢复的扰动模拟中的阶段失败，专家用其操作和值注释每个访问的状态，以便规划器在驾驶之前探索的大部分内容都已被涵盖。在规划中，分块的潜在世界模型足够快地预见后果以供实时使用，并且基于风险意识的采样规划器通过返回值减去有界碰撞惩罚来评估候选动作。在线，循环不断地在驾驶离开离线数据覆盖范围的任何地方完善模型。在针对比较方法的闭环评估中，SAFER 在 CARLA 排行榜路线上达到了最高的路线完成度和每步奖励，从特权鸟瞰图来看为 0.95 和 0.77，在 MetaDrive 中达到了最高的剧集奖励，在常规交通中为 53.4，在安全关键交通中为 49.0。项目页面：https://ys-qu.github.io/safer-website。
+
+</details>
+
+---
+
+## 4. Value and Policy Calibration from Execution Feedback for Socially Compatible Driving / 社会兼容驾驶执行反馈的价值和政策校准
+
+**Date**: 2026-11-15 | **arXiv**: [2611.19969v1](http://arxiv.org/abs/2611.19969v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.19969v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Autonomous vehicle (AV) decisions at intersections affect the delay, braking, and motion smoothness of surrounding human-driven vehicles (HDVs). Learning socially compatible behavior requires connecting imagined interaction outcomes with feedback from executed actions. We propose a world-model reinforcement learning framework combines imagined policy improvement with direct value and policy calibration from finalized interactions, balancing AV progress with HDV interaction burden. An interaction-aware latent model supports imagination, while off-policy correction and replay updates enable observed rewards and transitions to supervise both the critic and actor. Simulation experiments at an unsignalized intersection achieve a 100% success and reductions in following-HDV acceleration variation of 65.5% and 44.0% relative to PIWM and DreamerV3, respectively. Ablations identify complementary roles for value calibration in reducing HDV burden and policy calibration in improving passage efficiency. Tests under out-of-distribution traffic shifts further show lower ego jerk and HDV acceleration variation than PIWM at comparable passage times.
+
+交叉路口的自动驾驶车辆 (AV) 决策会影响周围人类驾驶车辆 (HDV) 的延迟、制动和运动平稳性。学习社交兼容行为需要将想象的交互结果与执行行为的反馈联系起来。我们提出了一个世界模型强化学习框架，将想象中的策略改进与最终交互的直接价值和策略校准结合起来，平衡 AV 进度与 HDV 交互负担。交互感知的潜在模型支持想象力，而离策略校正和重放更新则支持观察到的奖励和转换，以监督评论家和演员。无信号交叉口的模拟实验取得了 100% 的成功，并且相对于 PIWM 和 DreamerV3，跟随 HDV 加速度变化分别减少了 65.5% 和 44.0%。消融确定了价值校准在减少 HDV 负担和政策校准在提高通行效率方面的互补作用。分布外交通变化下的测试进一步表明，在可比较的通行时间下，自我急动度和 HDV 加速度变化比 PIWM 更低。
+
+</details>
+
+---
+
+## 5. The Flip Test: Video World Models Fail to Learn the World State / 翻转测试：视频世界模型无法了解世界状态
+
+**Date**: 2026-11-15 | **arXiv**: [2611.19822v1](http://arxiv.org/abs/2611.19822v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.19822v1)
+
+**Categories**: cs.CV, cs.AI, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video world models promise to predict the future of a scene from its present. Do current models keep this promise? We probe this question counterfactually. When a small change to the present flips the future, such as a box resting a few millimeters before or past a table edge, a model that tracks the state of the world must flip its prediction too. We build FlipTest, a three-level hierarchy of increasingly strict tests over 1,680 initial frames from 10 simulated and 15 real-world tasks. At the base, visual minimal pairs, two nearly identical frames whose true futures differ, test whether predictions change across the boundary; matched controls go further and test whether they change only where the future does; and dense sweeps, the strictest level, locate exactly where they change. All 11 video world models we evaluate fall short. The best averages 18.3% pair accuracy over real and simulated scenes, below the 25% of random guessing. Models flip as often on steps that leave the future unchanged as on steps that change it, and their response stays flat across the sweeps. On the same frames, a vision-language model is selective and traces a near S-shaped curve near the boundary, and a coding agent that measures the image comes close to the true boundary. This implies that the deciding information is in the frame, and video models just miss it. We therefore urge the community to rethink world modeling as pure video prediction. Next-frame prediction must do more than draw plausible pixels; it must also identify the causal states that control future dynamics.
+
+视频世界模型有望从当前场景预测其未来。当前的模型是否兑现了这一承诺？我们反事实地探讨这个问题。当现在的一个小变化会翻转未来时，例如一个盒子停在桌子边缘之前或之后几毫米处，跟踪世界状态的模型也必须翻转其预测。我们构建了 FlipTest，这是一个三级层次结构，对来自 10 个模拟任务和 15 个真实世界任务的 1,680 个初始帧进行了越来越严格的测试。在底层，视觉最小对（两个几乎相同的帧，但真实的未来不同）测试预测是否跨越边界发生变化；匹配的控制更进一步，测试它们是否只改变未来发生的情况；密集扫描（最严格的级别）可以准确定位它们发生变化的位置。我们评估的所有 11 个视频世界模型都达不到要求。在真实和模拟场景中，最好的平均配对准确度为 18.3%，低于随机猜测的 25%。模型在保持未来不变的步骤和改变未来的步骤上翻转的频率一样高，并且它们的响应在整个扫描过程中保持平坦。在相同的帧上，视觉语言模型是有选择性的，并在边界附近追踪近S形曲线，并且测量图像的编码代理接近真实边界。这意味着决定性信息位于帧中，而视频模型只是错过了它。因此，我们敦促社区重新思考世界建模作为纯粹的视频预测。下一帧预测必须不仅仅绘制合理的像素；它还必须确定控制未来动态的因果状态。
+
+</details>
+
+---
+
+## 6. The Sense Paradigm for World Models / 世界模型的感知范式
+
+**Date**: 2026-11-15 | **arXiv**: [2611.19796v1](http://arxiv.org/abs/2611.19796v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.19796v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Latent world models predict the future in an embedding space rather than in pixels. An encoder trained only to predict collapses and maps every observation to the same point, so existing models add a mechanism against collapse, such as a target network, a variance penalty or a distribution penalty. These mechanisms keep the embedding from collapsing, but they leave its distances without meaning, and the model cannot tell a reversible transition from an irreversible one. We propose Sense, a single cross-entropy loss over the directed distance $d(x\to y)=\sum_i \mathrm{ReLU}(y_i-x_i)$ that replaces these mechanisms. The loss avoids collapse on its own, and since the encoder no longer needs the predictor, the predictor is fitted afterwards to fixed embeddings by plain regression. On four pixel environments, the return distance learned by Sense detects irreversible transitions with an AUC between 0.95 and 1.00, where LeWorldModel stays between 0.39 and 0.59. On TwoRoom, the navigation benchmark of LeWorldModel, planning with Sense reaches the goal in 100% of episodes against 91% for LeWorldModel. As the goal moves farther away, the planning failure rate of every baseline grows, while that of Sense stays near zero in Cup, Cliff and Sokoban and is the lowest of all methods in Pendulum.
+
+潜在世界模型在嵌入空间而不是像素中预测未来。编码器仅经过训练来预测崩溃并将每个观察结果映射到同一点，因此现有模型添加了防止崩溃的机制，例如目标网络、方差惩罚或分布惩罚。这些机制可以防止嵌入崩溃，但它们使距离变得毫无意义，并且模型无法区分可逆转变和不可逆转变。我们提出了 Sense，在有向距离 $d(x\to y)=\sum_i \mathrm{ReLU}(y_i-x_i)$ 上的单个交叉熵损失来取代这些机制。损失本身避免了崩溃，并且由于编码器不再需要预测器，因此预测器随后通过简单回归拟合到固定嵌入。在四个像素环境中，Sense 学习到的返回距离检测到 AUC 在 0.95 到 1.00 之间的不可逆转换，而 LeWorldModel 保持在 0.39 到 0.59 之间。在 LeWorldModel 的导航基准 TwoRoom 上，使用 Sense 进行的规划在 100% 的剧集中达到了目标，而 LeWorldModel 为 91%。随着目标越来越远，每个基线的规划失败率都会增加，而 Sense 在 Cup、Cliff 和 Sokoban 中保持接近于零，并且是 Pendulum 中所有方法中最低的。
+
+</details>
+
+---
+
+## 7. JEPA4R: Embodied JEPA World Models with 4D Point Planning / JEPA4R：具有 4D 点规划的具体化 JEPA 世界模型
+
+**Date**: 2026-11-15 | **arXiv**: [2611.19771v1](http://arxiv.org/abs/2611.19771v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.19771v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Joint-embedding predictive architecture (JEPA) world models predict future embeddings instead of pixels and plan in latent space. Two challenges remain: 2D images leave the metric geometry that manipulation acts on implicit and entangled with appearance, and what these models imagine stays hidden, as they are mostly judged in simulation by short-horizon latent planning. We present JEPA4R, a JEPA world model that observes single-depth-camera point clouds, predicts and plans in their latent space, and acts through a policy head on its frozen latents; we call this 4D point planning. A decoder on the frozen world model shows what it imagines as 4D point clouds, with a mean point error within 1.1 cm over 200 steps. Under the policy-learning protocols of OGBench and CortexBench, JEPA4R leads pixel JEPA models on OGBench Cube-Single, Cube-Double, Cube-Triple and Scene, and ranks first on MetaWorld and Adroit Relocate with 98.4% and 88.0%, above the runner-up, R3M, at 96.0% and 65.3%. Trained only in a digital twin, JEPA4R and its policy heads run zero-shot on the real arm with both a gripper and a dexterous hand.
+
+联合嵌入预测架构（JEPA）世界模型预测未来的嵌入而不是像素并在潜在空间中进行规划。仍然存在两个挑战：二维图像留下了操纵作用隐式并与外观纠缠在一起的度量几何，而这些模型的想象仍然是隐藏的，因为它们在模拟中主要是通过短视界潜在规划来判断的。我们提出了 JEPA4R，这是一种 JEPA 世界模型，可以观察单深度相机点云，在其潜在空间中进行预测和规划，并通过策略头对其冻结的潜在空间采取行动；我们称之为 4D 点规划。冻结世界模型上的解码器显示了它所想象的 4D 点云，200 个步骤的平均点误差在 1.1 厘米以内。在 OGBench 和 CortexBench 的策略学习协议下，JEPA4R 在 OGBench Cube-Single、Cube-Double、Cube-Triple 和 Scene 上领先像素 JEPA 模型，并在 MetaWorld 和 Adroit Relocate 上以 98.4% 和 88.0% 排名第一，高于第二名 R3M（96.0% 和 65.3%）。 JEPA4R 及其政策负责人仅在数字孪生中接受过训练，并使用抓手和灵巧的手在真实手臂上进行零射击。
+
+</details>
+
+---
+
+## 8. Score-Based Stochastic Closure Modeling via Offline Indirect Learning and Online Data Assimilation / 通过离线间接学习和在线数据同化进行基于分数的随机闭合建模
+
+**Date**: 2026-11-15 | **arXiv**: [2611.19676v1](http://arxiv.org/abs/2611.19676v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.19676v1)
+
+**Categories**: cs.LG, physics.comp-ph, physics.flu-dyn
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Stochastic closure modeling is an emerging area in reduced-order modeling of large and complex (e.g., multiscale, multi-physics) systems, for which the computationally affordable reduced-order physical descriptions (e.g., digital twins for additive manufacturing, world models for AI agents) in numerical simulations inevitably lead to information losses that cannot be well addressed by classical deterministic closures. However, learning stochastic closures typically requires closure data that are difficult to obtain from measurements or often prohibitively expensive to compute using first-principles simulations. In this work, we develop a stochastic closure modeling framework that builds on score-based diffusion models, leveraging indirect offline training and online data assimilation without requiring the direct data of closures. Numerical experiments on two-dimensional turbulent flows demonstrate that indirect offline learning captures key closure statistics and improves predictions of system state. In addition, combining the learned closure with known physical dynamics leads to better generalization capability across different regimes than purely data-driven models that directly predict system state. Compared to standard data assimilation methods with a Gaussian assumption, the posterior-score assimilation better represents non-Gaussian features of the learned closure, and its combination with state-level data assimilation further improves prediction of the system state. The proposed framework enables stochastic closure modeling in realistic and challenging scenarios of complex dynamical systems in mechanics and engineering problems, where non-Gaussian statistics of model-form uncertainties are non-negligible (e.g., due to the nonlinearities of the system dynamics and/or the observations) and true closure data are not available, for both offline learning and online assimilation.
+
+随机闭包建模是大型复杂（例如多尺度、多物理）系统降阶建模的一个新兴领域，数值模拟中计算可承受的降阶物理描述（例如增材制造的数​​字孪生、人工智能代理的世界模型）不可避免地会导致信息丢失，而经典的确定性闭包无法很好地解决这一问题。然而，学习随机闭包通常需要闭包数据，而这些闭包数据很难从测量中获得，或者使用第一原理模拟进行计算通常成本高昂。在这项工作中，我们开发了一个随机闭包建模框架，该框架建立在基于分数的扩散模型的基础上，利用间接离线训练和在线数据同化，而不需要闭包的直接数据。二维湍流的数值实验表明，间接离线学习可以捕获关键的闭包统计数据并改进系统状态的预测。此外，与直接预测系统状态的纯数据驱动模型相比，将学习到的闭包与已知的物理动力学相结合可以在不同的情况下提供更好的泛化能力。与具有高斯假设的标准数据同化方法相比，后验分数同化更好地表示了学习闭包的非高斯特征，并且其与状态级数据同化的结合进一步改进了系统状态的预测。所提出的框架能够在力学和工程问题中的复杂动力系统的现实和具有挑战性的场景中进行随机闭合建模，其中模型形式不确定性的非高斯统计是不可忽略的（例如，由于系统动力学和/或观测的非线性）并且对于离线学习和在线同化都无法获得真正的闭合数据。
+
+</details>
+
+---
+
+## 9. Toward Planning Representations That Separate Task Structure from Visual Content / 走向将任务结构与视觉内容分开的规划表示
+
+**Date**: 2026-11-14 | **arXiv**: [2611.19621v1](http://arxiv.org/abs/2611.19621v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.19621v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Effective planning requires representations that preserve task-relevant geometry and object identity while ignoring visual variation that does not alter the task. Existing evaluations of visual generalization often change several factors simultaneously, making the source of a failure difficult to identify. We introduce a controlled evaluation of object-goal navigation (ObjectNav), the task of reaching an instance of a named object category, in procedurally generated ProcTHOR houses. Training and evaluation houses share floor plans, object locations, goals, and start states, while visual factors are changed individually or in combination. Across model-free reinforcement learning (RL), model-based RL, and agents using frozen pretrained visual representations, our results show that appearance changes impair navigation, but their effects differ sharply by factor. Surface material changes account for most of the average change in success, whereas clutter and lighting have little effect. The magnitude of a global image statistics shift does not reliably predict performance: changing only the goal object's appearance can substantially impair an end-to-end agent despite a small image-level change. We found that a model based agent that plans over frozen features from the pretrained DINOv2 image encoder achieves the highest success (0.83) under the full shift, but remains sensitive to surface appearance. Our experiments reveal an important requirement for planning representations: they must separate invariant spatial task structure from appearance.
+
+有效的规划需要保留与任务相关的几何形状和对象身份的表示，同时忽略不会改变任务的视觉变化。现有的视觉泛化评估通常会同时改变多个因素，导致难以识别失败的根源。我们引入了对象目标导航（ObjectNav）的受控评估，即在程序生成的 ProcTHOR 房屋中到达指定对象类别的实例的任务。培训和评估室共享平面图、对象位置、目标和开始状态，而视觉因素则单独或组合更改。在无模型强化学习（RL）、基于模型的强化学习和使用冻结预训练视觉表示的代理中，我们的结果表明，外观变化会损害导航，但它们的影响因因素而异。表面材料的变化占成功平均变化的大部分，而杂乱和照明的影响很小。全局图像统计变化的幅度并不能可靠地预测性能：尽管图像级别的变化很小，但仅更改目标对象的外观可能会严重损害端到端代理。我们发现，基于模型的代理对预训练的 DINOv2 图像编码器的冻结特征进行规划，在全移位下取得了最高的成功率 (0.83)，但仍然对表面外观敏感。我们的实验揭示了规划表示的一个重要要求：它们必须将不变的空间任务结构与外观分开。
+
+</details>
+
+---
+
+## 10. ResWAM: Learning What Changes, Not What Stays, for World-Action Models / ResWAM：了解世界行动模型中哪些内容发生了变化，而不是哪些内容保持不变
+
+**Date**: 2026-11-14 | **arXiv**: [2611.19559v1](http://arxiv.org/abs/2611.19559v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.19559v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World-action models (WAMs) augment vision-language-action policies (VLAs) with future prediction so that the policy can anticipate how its actions will affect the physical world. Existing WAMs supervise complete future observations. However, observations typically change little over an action chunk, so the future loss is dominated by copying static background content rather than learning task-relevant robot and object motion, limiting policy learning. Moreover, existing WAMs rely on large video generation models or separate world models, incurring heavy training and inference compute that hinders closed-loop deployment. To improve policy performance, we propose visual residual learning, supervising only the feature change from the current frame to the future frame in a frozen DINOv3 space. Compared with complete future features, this residual learning target yields a higher feature rank with richer and more diverse representations of scene changes, and spatially concentrates on the robot arm and manipulated objects rather than the background. To further improve computational efficiency, we present ResWAM, a residual world-action model with 2.3B parameters in total, including a lightweight 0.5B dual-branch DiT that jointly trains an action branch and a residual branch via conditional flow matching. Without robot pretraining (i.e., pretraining on external robot action trajectories beyond the benchmark demonstrations), ResWAM achieves top average success rates on LIBERO-Plus (81.1%), RoboTwin 2.0 (93.8%), and RoboDojo (9.40% success, 13.41 score) at the lowest training (2.7-4.0 TFLOPs) and inference compute (1.0-1.4 TFLOPs), and leads real-robot Open, Put, and Stack (80.0% average, +10.0% over $π_{0.5}$) at 92.7 ms latency.
+
+世界行动模型 (WAM) 通过未来预测增强视觉语言行动政策 (VLA)，以便政策能够预测其行动将如何影响物理世界。现有的 WAM 监督完整的未来观测。然而，观察结果通常在动作块上变化不大，因此未来的损失主要是复制静态背景内容，而不是学习与任务相关的机器人和物体运动，从而限制了策略学习。此外，现有的 WAM 依赖于大型视频生成模型或单独的世界模型，导致繁重的训练和推理计算，阻碍了闭环部署。为了提高策略性能，我们提出了视觉残差学习，仅监督冻结 DINOv3 空间中从当前帧到未来帧的特征变化。与完整的未来特征相比，这种残差学习目标产生了更高的特征等级，具有更丰富、更多样化的场景变化表示，并且在空间上集中于机器人手臂和被操纵的物体而不是背景。为了进一步提高计算效率，我们提出了 ResWAM，一种总共有 2.3B 个参数的残差世界动作模型，其中包括一个轻量级的 0.5B 双分支 DiT，它通过条件流匹配联合训练动作分支和残差分支。在没有机器人预训练（即对超出基准演示的外部机器人动作轨迹进行预训练）的情况下，ResWAM 在最低训练（2.7-4.0 TFLOPs）和推理计算下，在 LIBERO-Plus (81.1%)、RoboTwin 2.0 (93.8%) 和 RoboDojo（9.40% 成功，13.41 分数）上实现了最高的平均成功率(1.0-1.4 TFLOPs)，并以 92.7 毫秒的延迟领先真实机器人 Open、Put 和 Stack（平均 80.0%，比 $π_{0.5}$ + 10.0%）。
+
+</details>
+
+---
+
+## 11. Successive Convexification in Learned World Models for Safe Offline Planning / 用于安全离线规划的学习世界模型中的连续凸化
+
+**Date**: 2026-11-14 | **arXiv**: [2611.19466v1](http://arxiv.org/abs/2611.19466v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.19466v1)
+
+**Categories**: cs.LG, cs.RO, eess.SY
+
+**Code**: https://github.com/youngers2006/scwm.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models learned from offline data allow an agent to plan without further interaction with the environment, but the sampling-based planners used with them handle safety constraints only by scoring or rejecting sampled action sequences. We instead pose safe planning in the latent space of a learned world model as a successive convex program (SCP), in which a learned discrete-time control barrier function is imposed as a constraint at every step of the horizon. SCP requires smooth dynamics, so we build the networks from smoothed MaxMin activations and spectrally normalised layers, and bound the resulting linearisation error in terms of the Lipschitz bound and the smoothing width. As SCP is a local method, we start it from a sampled plan. On two Safety-Gymnasium navigation tasks with offline data, this planner has fewer violations than MPPI and CEM drawing 128 times as many samples at equal wall-clock time in our main comparison, though not significantly, and earns greater return at longer horizons, and is much safer than SCP without a sampled start. SCP converged more often on Lipschitz-bounded models. Unlike sampling, it also reports at each step whether its plan is a feasible, first-order optimal KKT point of the planning problem in the model, or that no feasible plan was found nearby. Our implementation is publicly available at https://github.com/youngers2006/scwm.
+
+从离线数据中学习的世界模型允许代理在不与环境进一步交互的情况下进行规划，但与它们一起使用的基于采样的规划器仅通过评分或拒绝采样的动作序列来处理安全约束。相反，我们将学习世界模型的潜在空间中的安全规划作为连续凸程序（SCP），其中学习的离散时间控制障碍函数被强加为地平线每一步的约束。 SCP 需要平滑的动力学，因此我们从平滑的 MaxMin 激活和谱归一化层构建网络，并根据 Lipschitz 界限和平滑宽度限制由此产生的线性化误差。由于 SCP 是一种本地方法，因此我们从抽样计划开始。在两个使用离线数据的 Safety-Gymnasium 导航任务中，该规划器的违规次数比 MPPI 和 CEM 少，在我们的主要比较中，在相同的挂钟时间上绘制了 128 倍的样本，尽管并不显着，并且在更长的时间范围内获得了更大的回报，并且比没有采样启动的 SCP 安全得多。 SCP 更频繁地收敛于 Lipschitz 有界模型。与采样不同，它还在每一步报告其计划是否是模型中规划问题的可行的一阶最优 KKT 点，或者附近没有找到可行的计划。我们的实现可在 https://github.com/youngers2006/scwm 上公开获取。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-11-16 (2 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-11-16
