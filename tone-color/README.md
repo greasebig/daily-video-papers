@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-11-18](papers/2026-11-18.md) - 2 papers
 - [2026-11-17](papers/2026-11-17.md) - 2 papers
 - [2026-11-14](papers/2026-11-14.md) - 1 papers
 - [2026-11-13](papers/2026-11-13.md) - 1 papers
@@ -125,6 +126,50 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-11-18 (2 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-11-18
+
+**Paper Count**: 2
+
+---
+
+## 1. LUTBench: Benchmarking Text-Driven Photographic Look Transfer / LUTBench：文本驱动的摄影外观迁移基准测试
+
+**Date**: 2026-11-17 | **arXiv**: [2611.23113v1](http://arxiv.org/abs/2611.23113v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.23113v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Photographic color grading shapes the tone and color of a photograph to achieve a desired look. Text-driven photographic look transfer lets users specify these adjustments in natural language, with the goal of reproducing the requested look across photographs while preserving their content. However, prior research on text-driven color grading uses different datasets, text instructions, target definitions, and metrics. These differences make it difficult to compare how faithfully the methods reproduce the same look. To compare methods under a shared protocol, we introduce LUTBench. We collect 91 three-dimensional lookup tables (3D LUTs) and define one photographic look per LUT with a specified input conversion. Applying these looks to 5,000 MIT-Adobe FiveK photographs produces 455,000 input-target image pairs with reproducible target images. For each look, we use templates to turn measured tone and color changes on fixed color samples into candidate clauses. We use training image measurements to verify applicable clauses before composing the text description. The evaluation measures target fidelity, tests sensitivity to predefined input conversions, and separates generalization to unseen looks from reproduction of seen looks on new photographs. Across 16 methods, stronger text alignment does not guarantee target fidelity. However, most supervised variants improve fidelity on both seen and unseen looks.
+
+摄影调色可以调整照片的色调和色彩，以达到理想的观感。文本驱动的照片风格迁移让用户能够用自然语言指定这些调整，其目标是在保留照片内容的同时，在多张照片中再现所要求的风格。然而，以往关于文本驱动的色彩分级的研究使用了不同的数据集、文本指令、目标定义和指标。这些差异使得难以比较各种方法在再现相同外观方面的忠实度。为了在统一的协议下比较各种方法，我们推出了LUTBench。我们收集了 91 个三维查找表 (3D LUT)，并为每个 LUT 定义了一种摄影外观，并指定了输入转换。将这些外观应用于5,000张MIT-Adobe FiveK照片，可生成455,000对具有可重现目标图像的输入-目标图像对。对于每种外观，我们使用模板将固定颜色样本上测得的色调和颜色变化转换为候选子句。在撰写文本描述之前，我们使用训练图像测量结果来验证适用的子句。该评估衡量目标保真度，测试对预定义输入转换的敏感性，并将对未见外观的泛化与在新照片上重现已见外观区分开来。在 16 种方法中，更强的文本对齐并不能保证目标保真度。然而，大多数有监督变体都能提高已见和未见外观的保真度。
+
+</details>
+
+---
+
+## 2. Diagnosing and Correcting Skin-Tone Color Casts in Ultra-Lightweight Photo Retouching Networks / 在超轻量级照片润色网络中诊断和校正肤色偏色
+
+**Date**: 2026-11-17 | **arXiv**: [2611.22106v1](http://arxiv.org/abs/2611.22106v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.22106v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Color casts are expected to come from the scene or camera, and a retouching model removes them. We report a case where the model leaves one: an ultra-lightweight retouching network renders human skin greener than the original because it under-restores the skin chroma that a degradation removes and, even on clean inputs, adds a small hue shift of its own. A common paired-data-free recipe, synthetic self-supervision (degrade high-quality images, learn to restore them), silently produces this cast while whole-frame PSNR/SSIM stay essentially unchanged. In a representative 6,825-parameter histogram-conditioned network, the cast appears in 52 of 70 portraits under a ground-truth-anchored, white-balance-free protocol. Both a histogram-conditioned and a CNN-conditioned network develop the cast under synthetic self-supervision, yet both are near-neutral in-domain when trained on MIT-Adobe FiveK expert pairs. Image-level objectives miss it: a global-mean green loss worsens the cast (52/70 to 57/70). With zero added parameters, our per-pixel, skin-masked, asymmetric green-excess loss reduces the cast to 1/70 across stratified skin tones (68.1% to 2.2% over the 70,000-image FFHQ corpus; 64.4% to 0.8% on held-out CelebA-HQ photos). In-domain FiveK PSNR/SSIM are unchanged (+0.13 dB, +0.004), at the cost of a small whole-frame CIEDE2000 increase (8.77 to 9.69) and a magenta over-correction where skin is nearly neutral (skin Delta a* -1.5 to +4.4 and CIEDE2000 5.6 to 6.4 on clean inputs): the loss targets the signed green-magenta axis, not total skin-color fidelity. The same loss suppresses the cast across three ultra-light architectures. A whole-frame green metric correlates with skin-region CIEDE2000 at the method level (Spearman rho = 0.89). The final network exports to a 35 KB TFLite model.
+
+色偏通常来自场景或相机，而润色模型会将其消除。我们报告了一个模型留下偏色的案例：一个超轻量级修图网络使人皮肤的颜色比原图更绿，因为它对退化所去除的皮肤色度恢复不足，并且即使在干净的输入上，也会自行添加一点色相偏移。一种常见的无配对数据方案，即合成自监督（使高品质图像降质，然后学习如何将其恢复），会在全帧 PSNR/SSIM 基本保持不变的情况下悄然产生这种色偏。在一个具有 6825 个参数的代表性直方图条件网络中，在以真实值作为锚定、不使用白平衡的协议下，70 张肖像中有 52 张出现了偏色。直方图条件网络和 CNN 条件网络在合成自监督下都会产生色偏，但当使用 MIT-Adobe FiveK 专家对进行训练时，两者在域内都接近中性。图像级目标未能发现这一问题：全局均值绿色损失使偏色情况恶化（52/70 变为 57/70）。在不增加任何参数的情况下，我们的逐像素、皮肤遮蔽、非对称绿色过量损失将偏色率降低至跨分层肤色的 1/70（在 70,000 张图像的 FFHQ 语料库中从 68.1% 降至 2.2%；在留出的 CelebA-HQ 照片中从 64.4% 降至 0.8%）。域内 FiveK PSNR/SSIM 保持不变（+0.13 dB、+0.004），代价是全帧 CIEDE2000 略有增加（8.77 至 9.69），以及在肤色接近中性时出现洋红色过度校正（肤色 Delta a* -1.5 至 +4.4，干净输入上的 CIEDE2000 5.6 至 6.4）：
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-11-17 (2 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-11-17
