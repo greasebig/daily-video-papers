@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-11-19](papers/2026-11-19.md) - 18 papers
 - [2026-11-18](papers/2026-11-18.md) - 22 papers
 - [2026-11-17](papers/2026-11-17.md) - 11 papers
 - [2026-11-16](papers/2026-11-16.md) - 2 papers
@@ -192,6 +193,310 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-11-19 (18 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-11-19
+
+**Paper Count**: 18
+
+---
+
+## 1. Render the Robot, Generate the World: One Video World Model Across Embodiments / 渲染机器人，生成世界：跨实施例的一个视频世界模型
+
+**Date**: 2026-11-18 | **arXiv**: [2611.24925v1](http://arxiv.org/abs/2611.24925v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.24925v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Predicting the consequences of an agent's actions requires modeling both the body's motion and the environment's response. Most video world models attempt to learn both from numerical actions, even though geometry and kinematics already specify the intended motion. We introduce Doppel, an embodiment-agnostic video world model conditioned on camera-aligned renderings of future body configurations and numerical action trajectories. By explicitly providing the intended motion, Doppel can focus on predicting object motion and interaction-driven changes in the environment. Rendered motion also provides a common visual interface across different embodiments and action spaces. To train on robot datasets without camera extrinsics, we recover camera poses and align rendered trajectories with recorded observations. We jointly train a single shared video backbone and conditioning adapter on eight datasets spanning eight robot and human embodiments, from single- and bimanual robot arms to a dexterous humanoid and human hands and bodies, using about 600 hours of video without embodiment labels. Across three robot-arm datasets, Doppel improves PSNR over action-only baselines by 1.00 dB on held-out trajectories and 1.20 dB under out-of-distribution evaluation, while predicting more consistent object motion. Training on all eight embodiments (Doppel-8) improves robot predictions over the three-robot model (Doppel-3) on four of six evaluation sets. Project page: https://doppelwm.github.io/.
+
+预测代理行为的后果需要对身体的运动和环境的响应进行建模。大多数视频世界模型都试图从数值动作中学习，尽管几何和运动学已经指定了预期的运动。我们引入了 Doppel，一种与具体实施方式无关的视频世界模型，以未来身体配置和数值动作轨迹的摄像机对齐渲染为条件。通过明确提供预期的运动，Doppel 可以专注于预测对象运动和交互驱动的环境变化。渲染的运动还提供跨不同实施例和动作空间的公共视觉界面。为了在没有相机外在因素的情况下训练机器人数据集，我们恢复相机姿势并将渲染的轨迹与记录的观察结果对齐。我们使用大约 600 小时的没有实体标签的视频，在涵盖 8 个机器人和人类实施例（从单手和双手机器人手臂到灵巧的人形和人类手和身体）的 8 个数据集上联合训练单个共享视频主干和调节适配器。在三个机器人手臂数据集中，Doppel 在保持轨迹上将 PSNR 比仅动作基线提高了 1.00 dB，在分布外评估下将 PSNR 提高了 1.20 dB，同时预测更一致的物体运动。对所有八个实施例 (Doppel-8) 的训练在六个评估集中的四个上改进了三机器人模型 (Doppel-3) 的机器人预测。项目页面：https://doppelwm.github.io/。
+
+</details>
+
+---
+
+## 2. WorldRuler: Interactive World Modeling under Configurable Rules / WorldRuler：可配置规则下的交互式世界建模
+
+**Date**: 2026-11-18 | **arXiv**: [2611.24869v1](http://arxiv.org/abs/2611.24869v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.24869v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Rules govern how player actions change interactive worlds. Different rules create distinct gameplay experiences within similar scenes and action spaces. For customizable gameplay, generative world models must follow user-defined rules beyond real-world behaviors. However, realizing user-defined rules presents two challenges: Rule-State Persistence and Rule-to-Visual Realization. The former requires preserving rule definitions, dependencies, and world states across saving and loading, so that restored worlds follow the established rules. The latter requires accurately realizing rule-induced changes on designated objects and attributes, particularly when affected objects are unseen. In this paper, we propose WorldRuler, which organizes rule definitions, dependencies, and object states in an executable 3D rule graph and connects rule execution, video generation, and perceptual feedback in a closed loop. The graph supports joint saving and restoration of rules and world states, while dynamic object binding grounds rule-specified entities in visual instances and uses stored states to constrain generation from their first appearance. We further introduce object attribute state replacement and counterfactual reconstruction training, enabling accurate attribute control and compatible appearance and motion changes while limiting interference with unrelated content. We develop an automated data collection and annotation pipeline using GTA-V and Habitat to construct RuleVerse, a dataset of rule-driven interactions with detailed state and event annotations, including cases where rules take effect before affected objects become visible. Extensive experiments demonstrate the effectiveness of WorldRuler in preserving rule-state consistency across saving and loading and accurately realizing rule outcomes on designated objects and attributes.
+
+规则控制着玩家的行为如何改变互动世界。不同的规则在相似的场景和动作空间中创造出不同的游戏体验。对于可定制的游戏玩法，生成世界模型必须遵循用户定义的超出现实世界行为的规则。然而，实现用户定义的规则面临两个挑战：规则状态持久性和规则到视觉实现。前者需要在保存和加载过程中保留规则定义、依赖关系和世界状态，以便恢复的世界遵循既定规则。后者需要准确地实现规则引起的指定对象和属性的变化，特别是当受影响的对象不可见时。在本文中，我们提出了 WorldRuler，它将规则定义、依赖关系和对象状态组织在可执行的 3D 规则图中，并将规则执行、视频生成和感知反馈连接在一个闭环中。该图支持规则和世界状态的联合保存和恢复，而动态对象绑定将规则指定的实体置于视觉实例中，并使用存储的状态来约束从其第一次出现开始的生成。我们进一步引入对象属性状态替换和反事实重建训练，实现精确的属性控制和兼容的外观和运动变化，同时限制对不相关内容的干扰。我们使用 GTA-V 和 Habitat 开发自动化数据收集和注释管道来构建 RuleVerse，这是一个具有详细状态和事件注释的规则驱动交互数据集，包括规则在受影响对象可见之前生效的情况。大量实验证明了 WorldRuler 在保存和加载过程中保持规则状态一致性以及在指定对象和属性上准确实现规则结果方面的有效性。
+
+</details>
+
+---
+
+## 3. Does the Action Matter? Probing Action-Conditioned Semantic Forecasting as a World Model for Autonomous Driving / 行动重要吗？探索动作条件语义预测作为自动驾驶的世界模型
+
+**Date**: 2026-11-18 | **arXiv**: [2611.24840v1](http://arxiv.org/abs/2611.24840v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.24840v1)
+
+**Categories**: cs.CV, cs.AI, cs.LG, cs.RO
+
+**Code**: https://github.com/binayksingh/does-action-matter.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models are increasingly used in autonomous driving to predict how a scene evolves under the ego vehicle's actions, supporting counterfactual reasoning and model-based planning. However, existing evaluations focus on prediction fidelity and planning performance, and rarely verify that the predictions depend on the conditioning action. In this paper, we study action dependence in action-conditioned semantic forecasting, which predicts future semantic segmentation from past segmentations and the ego action. We compare a forecaster with feature-wise and input-level action conditioning against an identical model without action input, and measure action dependence with test-time action interventions scored by standard segmentation metrics. The evaluation is validated in a synthetic environment with known action-dependent dynamics and applied to Cityscapes and BDD100K, both within each dataset and across the two vehicle platforms. Experiments show that the executed action improves mid-term mIoU by at most 2.5 points on Cityscapes and 0.6 points on BDD100K, whereas a wrong action reduces it by up to 23.2 and 7.0 points, below the model without action input. On real data, feature-wise conditioning depends 1.6 times more on the action than input-level conditioning at similar accuracy, whereas both depend on it equally in the synthetic environment, where the history does not determine the action. These results show that an accuracy gain indicates that a driving world model uses its action, but not how strongly its forecasts depend on it. Code is available at https://github.com/binayksingh/does-action-matter.
+
+世界模型越来越多地用于自动驾驶，以预测场景在自我车辆的动作下如何演变，支持反事实推理和基于模型的规划。然而，现有的评估侧重于预测保真度和规划性能，很少验证预测是否依赖于调节动作。在本文中，我们研究了动作条件语义预测中的动作依赖性，该预测根据过去的分割和自我动作来预测未来的语义分割。我们将具有特征和输入级动作调节的预测器与没有动作输入的相同模型进行比较，并通过标准细分指标评分的测试时动作干预来测量动作依赖性。该评估在具有已知的动作相关动态的合成环境中进行了验证，并应用于 Cityscapes 和 BDD100K，无论是在每个数据集内还是跨两个车辆平台。实验表明，执行的动作在 Cityscapes 上最多将中期 mIoU 提高 2.5 点，在 BDD100K 上最多提高 0.6 点，而错误的动作会使其最多降低 23.2 点和 7.0 点，低于没有动作输入的模型。在真实数据上，在相似的精度下，特征级条件对动作的依赖程度是输入级条件的 1.6 倍，而在合成环境中，两者对动作的依赖程度相同，而历史并不决定动作。这些结果表明，准确性的提高表明驾驶世界模型使用了其行为，但并不表明其预测对其的依赖程度。代码可在 https://github.com/binayksingh/does-action-matter 获取。
+
+</details>
+
+---
+
+## 4. DiWALI: Diffusion Policy Learning in World Models via Latent Action Inference from Human and Robot Play / DiWALI：通过人类和机器人游戏的潜在动作推断在世界模型中进行扩散政策学习
+
+**Date**: 2026-11-18 | **arXiv**: [2611.24836v1](http://arxiv.org/abs/2611.24836v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.24836v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Learning robot manipulation is constrained by the availability of action-labeled robot data, for both imitation and world models. Humans can demonstrate skills in seconds, but their demonstrations lack the required robot actions. We introduce DiWALI, a framework that learns and improves diffusion policies within a world model trained on human and robot play. DiWALI infers latent actions from consecutive frames using an inverse dynamics model, enabling world model training without action labels, and grounds them in robot commands through a decoder trained separately on robot play. Skill policies are trained over latent actions from action-free human demonstrations and improved with reinforcement learning in imagination. On the CALVIN benchmark, DiWALI policies trained solely from human demonstrations substantially outperform baselines trained with robot demonstrations. Incorporating human play into the world model training also yields stronger policies after fine-tuning than using the same amount of robot play alone. Experiments on a physical robot show that skills learned primarily from human demonstrations are further improved in imagination with a world model trained on human and robot play. Together, these results demonstrate that human experience can support both manipulation skill acquisition and subsequent policy improvement, reducing reliance on action-labeled robot data. Videos, dataset and code are available at https://diwali.cs.uni-freiburg.de.
+
+学习机器人操作受到模仿模型和世界模型的动作标记机器人数据的可用性的限制。人类可以在几秒钟内展示技能，但他们的演示缺乏所需的机器人动作。我们引入了 DiWALI，这是一个在人类和机器人游戏训练的世界模型中学习和改进扩散策略的框架。 DiWALI 使用逆动力学模型从连续帧推断潜在动作，从而无需动作标签即可进行世界模型训练，并通过在机器人游戏中单独训练的解码器将它们置于机器人命令中。技能政策是根据无行动人类演示的潜在行动进行训练的，并通过想象中的强化学习进行改进。在 CALVIN 基准上，仅通过人类演示训练的 DiWALI 策略大大优于通过机器人演示训练的基线。将人类游戏纳入世界模型训练中，经过微调后，比单独使用相同数量的机器人游戏也能产生更强大的策略。在实体机器人上进行的实验表明，主要从人类演示中学到的技能通过经过人类和机器人游戏训练的世界模型进一步提高了想象力。总之，这些结果表明，人类经验可以支持操作技能的获取和随后的政策改进，从而减少对带有动作标记的机器人数据的依赖。视频、数据集和代码可在 https://diwali.cs.uni-freiburg.de 获取。
+
+</details>
+
+---
+
+## 5. Counterfactual World Models: JEPAs That Reason About "What If" / 反事实世界模型：关于“假设”的 JEPA 推理
+
+**Date**: 2026-11-18 | **arXiv**: [2611.24778v1](http://arxiv.org/abs/2611.24778v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.24778v1)
+
+**Categories**: cs.LG, cs.AI, cs.CV, cs.RO, stat.ML
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models operate in a world they cannot fully observe. When a hidden disturbance, such as a current pushing a boat, changes the outcome of an action, a counterfactual question follows: what would have happened under a different action, subject to the same disturbance? Its answer separates bad decisions from bad luck. We prove that world models trained on factual transitions cannot answer it on their own, whatever their data or capacity. For many physical systems, the observed outcome and a simple property of the dynamics suffice: natura non facit saltus, nature makes no leaps. When actions and disturbances act as separate forces, their interaction is second-order in time, so the counterfactual outcome is, to first order, the observed outcome plus the difference between the world model's predictions under the alternative and factual actions. This yields a counterfactual world model with no counterfactual data, extra parameters, or retraining. For transitions of duration $h$, we prove an $O(h^2)$ bound on the counterfactual error relative to the disturbance variance, establish a matching minimax lower bound from unpaired factual data, and characterize failures at discontinuities, coordinate folds, and disturbances that scale the command. We validate these predictions from pixels with JEPA world models on frozen DINOv2 and masked autoencoder (MAE) encoders. On four rendered simulators, our approach improves counterfactual $R^2$ from $38$--$46\%$ to $86$--$96\%$ with the same world models; on a fifth, an underwater vehicle, it reaches $90$--$94\%$ with sixteen times more factual data. Four further frozen encoders, DINOv3, SigLIP~2, CLIP and EVA-02, give $81$--$95\%$ on the same simulators. In hindsight planning, it finds the action that would have reached the goal in $35$--$69\%$ of events, against $14$--$23\%$ for an oracle planner that knows the simulator but not the outcome.
+
+世界模型在一个他们无法完全观察的世界中运作。当隐藏的干扰（例如水流推动船只）改变行动的结果时，就会出现一个反事实问题：在受到相同干扰的情况下，在不同的行动下会发生什么？它的答案将错误的决定与坏运气区分开来。我们证明，经过事实转变训练的世界模型无法自行回答这个问题，无论其数据或能力如何。对于许多物理系统来说，观察到的结果和动力学的简单属性就足够了：natura non facit saltus，自然不会跳跃。当行动和干扰作为单独的力量时，它们的相互作用在时间上是二阶的，因此反事实结果是一阶观察到的结果加上世界模型在替代行动和事实行动下的预测之间的差异。这会产生一个反事实世界模型，没有反事实数据、额外参数或重新训练。对于持续时间 $h$ 的转换，我们证明反事实误差相对于扰动方差的 $O(h^2)$ 界限，根据不成对的事实数据建立匹配的极小极大下界，并表征不连续性、坐标折叠和缩放命令的扰动处的故障。我们在冻结的 DINOv2 和屏蔽自动编码器 (MAE) 编码器上使用 JEPA 世界模型验证这些像素预测。在四个渲染模拟器上，我们的方法使用相同的世界模型将反事实 $R^2$ 从 $38$--$46\%$ 提高到 $86$--$96\%$；在第五个水下航行器上，它达到了 90$--$94\%$，事实数据是原来的十六倍。四个进一步冻结的编码器，DINOv3、SigLIP~2、CLIP 和 EVA-02，在相同的模拟器上给出 $81$--$95\%$。在事后规划中，它发现在 $35$-$69\%$ 的事件中可以达到目标的行动，而对于知道模拟器但不知道结果的预言机规划者来说，$14$-$23\%$ 是可以达到目标的。
+
+</details>
+
+---
+
+## 6. When to Refine: Selective Search for Frozen Visual World Models / 何时细化：选择性搜索冻结的视觉世界模型
+
+**Date**: 2026-11-18 | **arXiv**: [2611.24470v1](http://arxiv.org/abs/2611.24470v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.24470v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Planning with a visual world model requires deciding both which actions to execute and how long to search for them. We introduce Selective CEM Refinement (SCR), a learned rule for deciding whether to continue cross-entropy method (CEM) search with a frozen LeWorldModel. After five it- erations, the gate measures how far the mean first action chunk has moved, how much the mean terminal cost of elite plans has fallen, and how widely their first chunks vary. It returns the current plan for execution or continues the same search for ten more iterations. The gate requires no addi- tional world-model rollout. On 16 PushT scenes evaluated with two planning seeds, SCR succeeded in 25 of 32 trials, compared with 28 of 32 for fixed 15-iteration search (Fixed-15). All 25 SCR suc- cesses occurred in trials that Fixed-15 also solved, yield- ing 89.29% paired success retention. Across complete episodes, including replanning, SCR evaluated 23.81% fewer candidate plans and reduced mean controller time per eight-environment batch by 17.22%. Its observed suc- cess rate was 5.36 percentage points above an analytic mix- ture of the two fixed-depth controllers at the same expected candidate workload, although the difference changed sign across planning seeds. Compared with gating only at the initial solve under the same random-draw padding proto- col, gating again at replanning produced nine additional early exits. This reduced total candidate evaluations by 15.79%, while successes fell from 27 to 25.
+
+使用视觉世界模型进行规划需要决定执行哪些操作以及搜索它们的时间。我们引入选择性 CEM 细化 (SCR)，这是一种学习规则，用于决定是否使用冻结的 LeWorldModel 继续进行交叉熵方法 (CEM) 搜索。经过五次迭代后，门测量平均第一个行动块移动了多远，精英计划的平均最终成本下降了多少，以及它们的第一个行动块的变化范围有多大。它返回当前的执行计划或继续进行相同的搜索十次迭代。该门不需要额外的世界模型部署。在使用两个规划种子评估的 16 个 PushT 场景中，SCR 在 32 次试验中成功了 25 次，而固定 15 次迭代搜索 (Fixed-15) 在 32 次试验中成功了 28 次。所有 25 项 SCR 成功发生在固定-15 也解决的试验中，产生 89.29% 的配对成功保留率。在包括重新规划在内的完整事件中，SCR 评估的候选计划减少了 23.81%，并将每八个环境批次的平均控制器时间减少了 17.22%。在相同的预期候选工作负载下，其观察到的成功率比两个固定深度控制器的分析混合高出 5.36 个百分点，尽管差异在不同的规划种子中发生了变化。与在相同的随机抽取填充协议下仅在初始求解时进行门控相比，在重新规划时再次进行门控产生了九个额外的提前退出。这使得候选人的总评估减少了 15.79%，成功率从 27 下降到 25。
+
+</details>
+
+---
+
+## 7. Risk-Triggered Search: Behavior-Preserving Safe Control / 风险触发搜索：行为保护安全控制
+
+**Date**: 2026-11-18 | **arXiv**: [2611.24409v1](http://arxiv.org/abs/2611.24409v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.24409v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Pre-trained visual world models generate multi-step action plans from current and goal observations, yet terminal-proximity objectives fail to prevent forbidden-zone traversal or rigid-body collision sliding. Purely visual interfaces may lack analytical dynamics, structured states, or explicit collision geometry, requiring internal prediction of action-conditioned process risk. We propose Risk-Triggered Search (RTS) for frozen Joint-Embedding Predictive Architecture (JEPA) world models. Rather than relying on static state features that cannot distinguish candidate plans sharing an observation, RTS unrolls action-conditioned future latent prefixes in the frozen world model and trains a lightweight risk head with process-violation supervision. To intervene selectively while preserving safe nominal behavior, RTS uses the same predicted prefix-risk criterion as both the search trigger gate and hard feasibility gate: safe nominal plans execute directly, whereas alarms trigger local Cross-Entropy Method (CEM) search to minimize nominal deviation within the feasible set. To prevent isotropic Euclidean minimal modification from shrinking obstacle-directed actions into zero-amplitude stalling, we introduce an amplitude-preserving metric $d_{\mathrm{AP}}$ that retains tangential progression while maintaining a unique zero at the nominal plan. Under unified gating and this unique-zero condition, bypassing safe-state search yields closed-loop trajectories strictly identical to every-step same-kernel search. Evaluated under a process-safety benchmark and Safe Arrival Rate (SAR) metric across five tasks, RTS improves SAR over Direct by 12.67--41.67 percentage points on navigation and articulated control and +2.08/+4.17 pp on Cube/PushT boundary cohorts, maintaining 100% action identity with every-step search while cutting controller time by 17.71%--70.41% across 1,968 paired trajectories.
+
+预先训练的视觉世界模型根据当前和目标观察生成多步行动计划，但终端邻近目标无法防止禁区穿越或刚体碰撞滑动。纯视觉界面可能缺乏分析动力学、结构化状态或显式碰撞几何形状，需要对动作条件过程风险进行内部预测。我们提出针对冻结的联合嵌入预测架构（JEPA）世界模型的风险触发搜索（RTS）。 RTS 不是依赖于无法区分共享观察的候选计划的静态特征，而是在冻结世界模型中展开以动作为条件的未来潜在前缀，并训练具有流程违规监督的轻量级风险头。为了在保持安全名义行为的同时进行选择性干预，RTS 使用相同的预测前缀风险标准作为搜索触发门和硬可行性门：安全名义计划直接执行，而警报触发本地交叉熵方法 (CEM) 搜索，以最大限度地减少可行集中的名义偏差。为了防止各向同性欧几里得最小修改将障碍物导向的作用收缩为零幅度失速，我们引入了幅度保持度量 $d_{\mathrm{AP}}$ ，它保留切向进展，同时在标称计划上保持唯一的零。在统一门控和这种唯一的零条件下，绕过安全状态搜索会产生与每步同内核搜索严格相同的闭环轨迹。在五项任务的过程安全基准和安全到达率 (SAR) 指标下进行评估，RTS 在导航和铰接控制方面比 Direct 提高了 12.67--41.67 个百分点，在 Cube/PushT 边界队列上提高了 +2.08/+4.17 个百分点，通过每一步搜索保持 100% 的动作一致性，同时将控制器时间缩短了 17.71%--70.41% 1,968 条配对轨迹。
+
+</details>
+
+---
+
+## 8. Enhancing Active Learning Performance with Initial Data Selection Based on Foundation Models / 通过基于基础模型的初始数据选择来提高主动学习性能
+
+**Date**: 2026-11-18 | **arXiv**: [2611.24384v1](http://arxiv.org/abs/2611.24384v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.24384v1)
+
+**Categories**: cs.CV, cs.AI
+
+**Code**: https://github.com/Mhrshd-fllh/ALBoost-FM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In active object detection, selecting the initial labeled pool is essential, especially in complex datasets with expensive labeling and low resource budget. This study presents an active learning framework designed to optimize the initial training cycle of active learning for the object detection task. Our approach diverges from traditional methods by utilizing feature-based clustering from the YOLO-World model and refining images based on objectness scores rather than relying on uncertainty sampling in the initial cycle. This approach focuses on finding samples with various features and emphasizes training in areas where the foundation model is most confident. Doing so helps the model better understand different types of objects. For subsequent cycles, we employ a consistency-based sampling technique to maintain the robustness of the training process. To evaluate our method, we use two complex datasets called Aquarium and NWPU VHR-10, which are well known for their diverse object sizes and challenging conditions. In the NWPU dataset, our method increases mAP50 by an average of 6.6% in image-based evaluation. Moreover, the image refinement method shows an improvement of approximately 11% in object-based evaluation. The results show improvements in model performance and labeling time, demonstrating the advantages of using foundation models in early cycles of active learning. An implementation of the algorithm is available at https://github.com/Mhrshd-fllh/ALBoost-FM
+
+在活动对象检测中，选择初始标记池至关重要，特别是在标记昂贵且资源预算低的复杂数据集中。本研究提出了一种主动学习框架，旨在优化目标检测任务主动学习的初始训练周期。我们的方法与传统方法不同，它利用 YOLO-World 模型中基于特征的聚类，并根据客观性分数来细化图像，而不是依赖于初始周期中的不确定性采样。这种方法侧重于寻找具有各种特征的样本，并强调在基础模型最有信心的领域进行训练。这样做有助于模型更好地理解不同类型的对象。对于后续周期，我们采用基于一致性的采样技术来保持训练过程的稳健性。为了评估我们的方法，我们使用了两个复杂的数据集，称为 Aquarium 和 NWPU VHR-10，这两个数据集以其不同的物体大小和具有挑战性的条件而闻名。在 NWPU 数据集中，我们的方法在基于图像的评估中将 mAP50 平均提高了 6.6%。此外，图像细化方法在基于对象的评估中显示出约 11% 的改进。结果显示模型性能和标记时间有所改善，证明了在主动学习的早期周期中使用基础模型的优势。该算法的实现可在 https://github.com/Mhrshd-fllh/ALBoost-FM 上找到
+
+</details>
+
+---
+
+## 9. CommDreamer: Radio-Geometric World Models for Mapless Cellular-Connected UAV Trajectory Planning / CommDreamer：用于无地图蜂窝连接无人机轨迹规划的无线电几何世界模型
+
+**Date**: 2026-11-18 | **arXiv**: [2611.24244v1](http://arxiv.org/abs/2611.24244v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.24244v1)
+
+**Categories**: cs.RO, eess.SY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reliable cellular connectivity and collision-free flight are essential for unmanned aerial vehicle (UAV) operations in low-altitude urban canyons, where dense 3D buildings obstruct flight clearance, shadow serving base stations, and create strong co-channel interference at street intersections. Existing planners either require prior 3D city meshes and channel knowledge maps unavailable onboard, or rely on model-free reinforcement learning with low sample efficiency and poor cross-city generalization. We propose CommDreamer, a mapless radio-geometric world model that fuses raw onboard 3D LiDAR scans, multicell cellular reports, and shift-invariant relative kinematics to jointly infer local obstacle clearance and directional signal-to-interference-plus-noise ratio (SINR) dynamics. Using a categorical recurrent state-space model, CommDreamer compresses multimodal measurement histories into a coordinate-invariant latent belief, enabling the UAV to foresee deep shadow zones and train a lightweight online policy purely via multi-step latent imagination without prior maps or antenna patterns. Zero-shot evaluations across unseen urban morphologies in our open-source ray-tracing simulator, AeroCity-RT, show that CommDreamer converges within 150 episodes where model-free reinforcement learning fails to complete flights, achieving 100.0% mission success with zero collisions while lifting median route SINR to 8.02 dB and cutting effective SINR outage by over 50% relative to radio-blind world-model and reactive LiDAR baselines.
+
+可靠的蜂窝连接和无碰撞飞行对于低空城市峡谷中的无人机 (UAV) 操作至关重要，这里密集的 3D 建筑阻碍了飞行许可、影子服务基站，并在街道交叉口产生强烈的同信道干扰。现有的规划人员要么需要现有的 3D 城市网格和航道知识图，而这些知识图谱在船上不可用，要么依赖样本效率低、跨城市泛化能力差的无模型强化学习。我们提出了 CommDreamer，这是一种无地图无线电几何世界模型，它融合了原始机载 3D LiDAR 扫描、多小区蜂窝报告和平移不变相对运动学，以共同推断局部障碍物间隙和定向信号干扰加噪声比 (SINR) 动态。 CommDreamer 使用分类循环状态空间模型，将多模态测量历史压缩为坐标不变的潜在信念，使无人机能够预见深层阴影区域，并纯粹通过多步骤潜在想象来训练轻量级在线策略，而无需先验地图或天线模式。在我们的开源光线追踪模拟器 AeroCity-RT 中对未见过的城市形态进行的零样本评估表明，CommDreamer 在无模型强化学习无法完成飞行的 150 个情节内收敛，实现了 100.0% 的零碰撞任务成功率，同时将中线 SINR 提升至 8.02 dB，并将有效 SINR 中断相对于无线电盲世界模型和反应式 LiDAR 基线减少了 50% 以上。
+
+</details>
+
+---
+
+## 10. ProbeShare: Probing a Few, Sharing Across Many for Fast World-Model Planning / ProbeShare：探索少数，在许多中共享以实现快速世界模型规划
+
+**Date**: 2026-11-18 | **arXiv**: [2611.24229v1](http://arxiv.org/abs/2611.24229v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.24229v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Visual planning with a frozen joint-embedding world model supports robotic reaching and object manipulation by evaluating candidate action sequences against an image goal before execution. Standard cross-entropy method (CEM) planners roll out every candidate independently through a billion-parameter predictor, even when nearby actions induce similar scene changes. This redundant computation grows with population size and search rounds, slowing closed-loop replanning. We observe that candidates within a planning step share an observation history and thus a common action-to-feature map. Based on this insight, we propose ProbeShare, which measures local responses with a few representative probes and reconstructs each candidate's feature grid through scene-conditioned, geometry-aware weighting. When promising candidates move beyond existing probe coverage, ProbeShare evaluates a new probe to rescore nearby candidates. Across four RoboCasa tasks, ProbeShare accelerates episode planning by 43.8--128.9 times over dense RoboJEPA and at least $14.2\times$ over competitive baselines, with greater mean goal progress in a matched-time comparison.
+
+使用冻结关节嵌入世界模型的视觉规划通过在执行前根据图像目标评估候选动作序列来支持机器人到达和对象操作。标准交叉熵方法 (CEM) 规划器通过十亿参数预测器独立推出每个候选者，即使附近的动作引起类似的场景变化也是如此。这种冗余计算随着种群规模和搜索轮次的增加而增长，从而减慢了闭环重新规划的速度。我们观察到，规划步骤中的候选者共享观察历史，从而共享共同的行动到特征图。基于这一见解，我们提出了 ProbeShare，它使用一些代表性探针来测量局部响应，并通过场景条件、几何感知加权来重建每个候选者的特征网格。当有希望的候选者超出现有探测覆盖范围时，ProbeShare 会评估新的探测以重新对附近的候选者进行评分。在四项 RoboCasa 任务中，ProbeShare 的情节规划速度比密集的 RoboJEPA 提高了 43.8--128.9 倍，比竞争基线至少提高了 14.2 倍，在匹配时间比较中平均目标进度更大。
+
+</details>
+
+---
+
+## 11. Worth Another Look:Constrained World-Model Planning for Visual Inspection / 值得再看一下：用于视觉检查的约束世界模型规划
+
+**Date**: 2026-11-18 | **arXiv**: [2611.24187v1](http://arxiv.org/abs/2611.24187v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.24187v1)
+
+**Categories**: cs.RO, cs.AI, cs.LG, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Visual inspection in field robotics and environmental monitoring must localize multiple targets under strict compute and sensing caps. Exhaustive sweeps waste calls on absent classes, while myopic and search-free policies stumble over heterogeneous tariff cliffs or discard viewport edits whose value emerges only after re-querying. We formulate inspection over frozen detectors as neuro-symbolic observation planning under partial observability, decoupling a compact recurrent world model (WM) from exact symbolic feasibility and tariff rules. Receding-horizon beam search with online replanning jointly schedules class queries, crops, enhancements, and termination (stop), paired with slack-aware shadow pricing and legal fallback at larger budgets. Across eight terrestrial, optical, and sonar benchmarks, multi-step lookahead outperforms static schedules and search-free offline RL under tight budgets -- gaining up to 28.4 AP percentage points over static priority on RUOD and 15.1 on ARIS -- while dynamic pricing lifts large-budget performance on all eight domains at 11 ms planning cost. Ultimately, pairing lightweight learned dynamics with exact symbolic constraints turns frozen detectors into adaptive, budget-aware inspection agents without retraining.
+
+现场机器人和环境监测中的视觉检查必须在严格的计算和传感上限下定位多个目标。彻底的扫荡浪费了对缺席课程的呼吁，而短视和免搜索的政策则因异构关税悬崖而绊倒，或放弃视口编辑，其价值只有在重新查询后才会出现。我们将对冻结探测器的检查制定为部分可观测性下的神经符号观测规划，将紧凑的循环世界模型（WM）与精确的符号可行性和关税规则解耦。后退波束搜索与在线重新规划共同安排类查询、裁剪、增强和终止（停止），并与具有松弛意识的影子定价和较大预算的法律回退相结合。在八个地面、光学和声纳基准测试中，多步前瞻在预算紧张的情况下优于静态计划和免搜索离线强化学习，在 RUOD 上比静态优先级高出 28.4 个百分点，在 ARIS 上比静态优先级高出 15.1 个百分点，而动态定价以 11 毫秒的规划成本提升了所有八个域的大预算性能。最终，将轻量级的学习动力学与精确的符号约束相结合，将冻结的探测器变成自适应的、具有预算意识的检查代理，而无需重新训练。
+
+</details>
+
+---
+
+## 12. Dual-Actuation Emulation of Scaled Relative Orbital Dynamics on a Free-Flyer / 自由飞行器上缩放相对轨道动力学的双驱动仿真
+
+**Date**: 2026-11-18 | **arXiv**: [2611.24173v1](http://arxiv.org/abs/2611.24173v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.24173v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Ground-based free-flyer testbeds reproduce the planar motion of a free-floating spacecraft using air bearings, but not the relative dynamics of spacecraft in orbit. We present a dual-actuation architecture that physically emulates Clohessy-Wiltshire dynamics on an open-source free-flyer. Two model predictive controllers run in parallel: one drives the solenoid thrusters with an orbital dynamics model, representing the spacecraft under test; the other drives bidirectional propellers that physically apply the orbital accelerations, continuously updating its reference to account for thruster-induced velocity changes. A dynamic similitude maps the orbital scenario onto the limited floor area and actuation rates of the testbed, letting the spacecraft controller run directly at orbital scale. We validate the architecture on hardware and against a high-fidelity orbital simulation, where the orbital accelerations instead arise naturally, both driven by the identical spacecraft controller. Their agreement indicates that the testbed reproduces the relative orbital motion the controller would encounter in flight.
+
+地面自由飞行器测试台使用空气轴承重现自由漂浮航天器的平面运动，但不能重现在轨航天器的相对动力学。我们提出了一种双驱动架构，可以在开源自由飞行器上物理模拟 Clohessy-Wiltshire 动力学。两个模型预测控制器并行运行：一个用轨道动力学模型驱动螺线管推进器，代表被测航天器；另一个用轨道动力学模型驱动螺线管推进器。另一个驱动双向螺旋桨，物理地应用轨道加速度，不断更新其参考以考虑推进器引起的速度变化。动态相似将轨道场景映射到测试台的有限占地面积和驱动速率上，让航天器控制器直接在轨道尺度上运行。我们在硬件上验证了该架构，并针对高保真轨道模拟进行了验证，其中轨道加速度是自然产生的，两者均由相同的航天器控制器驱动。他们的协议表明，测试台再现了控制器在飞行中遇到的相对轨道运动。
+
+</details>
+
+---
+
+## 13. Efficient World-Model Planning via Physics-Guided Search Distillation / 通过物理引导搜索蒸馏进行高效的世界模型规划
+
+**Date**: 2026-11-18 | **arXiv**: [2611.24171v1](http://arxiv.org/abs/2611.24171v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.24171v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models support autonomous driving by evaluating candidate trajectories through predicted future scene evolution. However, accurate future prediction does not ensure road-compliant execution; when all candidates violate road boundaries, re-ranking cannot select a feasible trajectory. We propose Physics-Guided Search Distillation (PGSD), a single-view planning framework that combines future representations and execution feedback for verified beyond-pool repair through three components: (1) Execution-Aware Selection checks ego-vehicle road compliance under simulated execution and selects the highest-scoring feasible trajectory; (2) a Clearance-Aware Search Teacher generates beyond-pool corrections and selects demonstrations with larger minimum road-boundary clearance during execution to buffer imitation errors; and (3) a Future-Conditioned Repair Student predicts one correction from rewarder features and execution feedback for single-rollout verification. The pretrained planner and rewarder remain frozen; no future scenes are generated online. On NAVSIM v1, single-view PGSD achieves 90.97 PDMS, exceeding all compared prior single-view planners and retaining 73.2% of the search teacher's PDMS gain over execution-aware selection. On NAVSIM v2 navhard, it reaches 38.96 EPDMS, improving on WorldDrive by 11.24 points (40.5%). The student replaces up to ten search rollouts with a single verification rollout per repair trigger. HUGSIM Hard examples provide qualitative evidence of zero-shot transfer.
+
+世界模型通过预测的未来场景演化来评估候选轨迹，从而支持自动驾驶。然而，准确的未来预测并不能确保道路合规执行；当所有候选者都违反道路边界时，重新排序无法选择可行的轨迹。我们提出物理引导搜索蒸馏（PGSD），这是一种单视图规划框架，它结合了未来表示和执行反馈，通过三个组件来验证池外修复：（1）执行感知选择在模拟执行下检查自我车辆道路合规性，并选择得分最高的可行轨迹； (2) 间隙感知搜索教师生成池外修正，并在执行过程中选择最小道路边界间隙较大的示范，以缓冲模仿错误； (3) 未来条件修复学生根据奖励者特征和单次部署验证的执行反馈预测一次修正。预训练的计划者和奖励者保持冻结状态；未来场景不会在线生成。在 NAVSIM v1 上，单视图 PGSD 达到 90.97 PDMS，超过了之前所有比较的单视图规划器，并保留了搜索教师相对于执行感知选择的 PDMS 增益的 73.2%。在 NAVSIM v2 navhard 上，它达到 38.96 EPDMS，在 WorldDrive 上提高了 11.24 点 (40.5%)。学生将最多十个搜索转出替换为每个修复触发器的单个验证转出。 HUGSIM Hard 示例提供了零样本迁移的定性证据。
+
+</details>
+
+---
+
+## 14. Embodied Graph: A Relational World Model for Long-Horizon Tasks / 体现图：长期任务的关系世界模型
+
+**Date**: 2026-11-18 | **arXiv**: [2611.24115v1](http://arxiv.org/abs/2611.24115v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.24115v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long-horizon tasks in embodied and web environments involve extended decision sequences and delayed feedback, making accurate planning crucial for success. World models tackle this by learning latent dynamics for imagination-based planning. However, existing approaches merely rely on dense pixel-level observations, which forces the model to absorb redundant information while overlooking relations among task-relevant entities. Consequently, small errors may accumulate over long imagined rollouts and gradually corrupt the predictions. In this paper, we explore world models that imagine over sparse state abstractions, which poses two key challenges: 1) how to remove redundant information and form a compact state abstraction; 2) how to incorporate the relational structure to learn reliable long-horizon dynamics. To address these challenges, we propose Embodied Graph, a relational state abstraction that supports structured dynamics modeling and long-horizon imagination, and the Relational World Model (RWM), which performs imagination directly over graph states. RWM consists of (i) a Task-Aware Embodied Graph Constructor that filters redundant details and maintains graph memory through online updates, and (ii) an Embodied Graph Recurrent State Space Model that learns node-wise latent dynamics while capturing inter-node dependencies. The imagined graph states provide predictions of action consequences to guide decision-making. Experiments on Minecraft and Crafter demonstrate the effectiveness of RWM in embodied environments. Notably, in Minecraft, RWM is the only method that obtains diamonds within the given budget. Experiments on web interaction further illustrate the applicability of relational state prediction to the decision making process of web agents.
+
+实体和网络环境中的长期任务涉及扩展的决策序列和延迟的反馈，因此准确的规划对于成功至关重要。世界模型通过学习基于想象力的规划的潜在动态来解决这个问题。然而，现有的方法仅依赖于密集的像素级观察，这迫使模型吸收冗余信息，同时忽略任务相关实体之间的关系。因此，小错误可能会在长期想象的部署中积累并逐渐破坏预测。在本文中，我们探索了想象稀疏状态抽象的世界模型，这提出了两个关键挑战：1）如何去除冗余信息并形成紧凑的状态抽象； 2）如何结合关系结构来学习可靠的长期动态。为了应对这些挑战，我们提出了体现图（Embodied Graph）和关系世界模型（RWM），前者是一种支持结构化动力学建模和长期想象的关系状态抽象，后者直接在图状态上进行想象。 RWM 包含 (i) 一个任务感知的体现图构造函数，用于过滤冗余细节并通过在线更新维护图内存，以及 (ii) 一个体现图循环状态空间模型，用于学习节点级潜在动态，同时捕获节点间依赖关系。想象的图状态提供了行动后果的预测来指导决策。 Minecraft 和 Crafter 上的实验证明了 RWM 在具体环境中的有效性。值得注意的是，在《我的世界》中，RWM 是在给定预算内获得钻石的唯一方法。 Web交互实验进一步说明了关系状态预测在Web代理决策过程中的适用性。
+
+</details>
+
+---
+
+## 15. SemPhys: Semantic-Physical Co-Learning for Humanoid Motion Generation via Differentiable World Models / SemPhys：通过可微世界模型生成人形运动的语义物理联合学习
+
+**Date**: 2026-11-18 | **arXiv**: [2611.24074v1](http://arxiv.org/abs/2611.24074v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.24074v1)
+
+**Categories**: cs.RO, cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+In human-robot collaboration, natural language lets people direct a humanoid's whole-body movements without programming joint trajectories. A common approach generates a kinematic reference from an instruction and relies on a tracking controller to execute it. However, as the controller maintains balance under contact constraints, the executed motion can depart from the reference in ways that change the action it conveys. Our central insight is that semantic alignment must be evaluated directly on the complete motion the robot physically executes. Building on this insight, we introduce \textbf{SemPhys}, a framework that trains motion generators using semantic feedback from simulated executions. A differentiable world model and a fixed tracking controller predict a short segment of a recorded execution. SemPhys inserts this prediction at its original position, scores the complete trajectory against the instruction, and backpropagates through the predicted segment. A paired anchoring loss stabilizes adaptation by keeping each generated reference close to its counterpart from the initial generator. On BONES-SEED, SemPhys largely preserves instruction retrieval accuracy from reference to execution and achieves the highest retrieval accuracy on executed motions among the evaluated methods.
+
+在人机协作中，自然语言可以让人们指导人形机器人的全身运动，而无需对关节轨迹进行编程。一种常见的方法是根据指令生成运动学参考，并依靠跟踪控制器来执行它。然而，当控制器在接触约束下保持平衡时，执行的运动可能会以改变其传达的动作的方式偏离参考。我们的核心见解是，语义对齐必须直接根据机器人物理执行的完整运动进行评估。基于这一见解，我们引入了 \textbf{SemPhys}，这是一个使用模拟执行的语义反馈来训练运动生成器的框架。可微世界模型和固定跟踪控制器预测记录执行的一小段。 SemPhys 将此预测插入其原始位置，根据指令对完整轨迹进行评分，并通过预测段进行反向传播。成对的锚定损失通过使每个生成的参考与初始生成器中的对应参考保持接近来稳定适应。在 BONES-SEED 上，SemPhys 在很大程度上保留了从参考到执行的指令检索精度，并在评估的方法中实现了执行动作的最高检索精度。
+
+</details>
+
+---
+
+## 16. JEPA Dots: Dual-Latent World Model for Language-Guided Robot Control / JEPA Dots：语言引导机器人控制的双潜在世界模型
+
+**Date**: 2026-11-18 | **arXiv**: [2611.24062v1](http://arxiv.org/abs/2611.24062v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.24062v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Predictive world models for language-guided robot control face a fundamental conditioning challenge: instructions should influence action selection without altering the predicted consequences of fixed actions under identical observations. To address this challenge, we introduce JEPA Dots (Dynamics-Oriented Task Separation), a compact dual-latent framework that jointly learns visual dynamics and language-guided control through separate dynamics and task representations. Language-conditioned task features guide a flow-matching policy, while masked attention restricts world prediction to instruction-independent dynamics history and supplied actions. In closed-loop evaluation on 40 trained LIBERO tasks, JEPA Dots achieves 84.9% overall success with approximately 39.1M parameters, compared with the published 78.7% of NanoVLA-S with 161.0M parameters under a different evaluation protocol. In the reference experiment, JEPA Dots also improves overall success from 76.0% for our task-ID-conditioned adaptation baseline to 84.9%, with LIBERO-Goal success increasing from 67.1% to 88.5%. Instruction-switching experiments further confirm that task representations and policy outputs respond to language changes, while dynamics representations and world predictions remain invariant under fixed observations and supplied actions.
+
+语言引导机器人控制的预测世界模型面临着基本的条件挑战：指令应该影响动作选择，而不改变相同观察下固定动作的预测结果。为了应对这一挑战，我们引入了 JEPA Dots（面向动力学的任务分离），这是一种紧凑的双潜在框架，可通过单独的动力学和任务表示来共同学习视觉动力学和语言引导控制。语言条件任务特征指导流程匹配策略，而屏蔽注意力将世界预测限制为与指令无关的动态历史和提供的动作。在对 40 个经过训练的 LIBERO 任务进行闭环评估时，JEPA Dots 凭借约 3910 万个参数实现了 84.9% 的总体成功率，而在不同的评估协议下，已发布的具有 16100 万个参数的 NanoVLA-S 的总体成功率为 78.7%。在参考实验中，JEPA Dots 还将任务 ID 条件适应基线的总体成功率从 76.0% 提高到 84.9%，LIBERO 目标成功率从 67.1% 提高到 88.5%。指令切换实验进一步证实任务表示和策略输出对语言变化做出响应，而动态表示和世界预测在固定观察和提供的动作下保持不变。
+
+</details>
+
+---
+
+## 17. Measuring the Conservatism of Latent Safety Filters for World Models / 衡量世界模型潜在安全过滤器的保守性
+
+**Date**: 2026-11-18 | **arXiv**: [2611.23685v1](http://arxiv.org/abs/2611.23685v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.23685v1)
+
+**Categories**: cs.RO, cs.LG, eess.SY
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+A latent safety filter decides from the latent of a world model whether a planned action is safe. Conformal calibration sets the threshold of the filter so that it accepts an unsafe action only with a small probability. However, the filter can still be conservative and refuse many safe actions, depending on the latent. To measure the conservatism that a latent forces on the filter, we group similar latents and actions into cells. A filter that gives one decision per cell can refuse the unsafe transitions of a cell only by refusing the safe ones in it as well. We call the share of safe transitions that lie in such cells the overlap. We prove that the overlap is the minimum share of safe transitions that such a filter has to refuse in order to accept no unsafe transition in the data. Both the overlap and the conformal calibration can be applied to any latent. We use this to compare three existing designs, in which the safety labels train a classifier on top of the world model, the world model itself, or a separate encoder beside it. In a visual navigation task, the separate encoder has the lowest overlap, and at the same conformal level its filter refuses the fewest safe actions and lets the planner reach the most goals of the three.
+
+潜在的安全过滤器根据世界模型的潜在因素来决定计划的行动是否安全。保形校准设置滤波器的阈值，使其仅以很小的概率接受不安全的操作。然而，过滤器仍然可以是保守的并拒绝许多安全操作，具体取决于潜伏。为了测量潜在因素对过滤器的保守性，我们将类似的潜在因素和动作分组到单元格中。为每个单元格提供一个决策的过滤器只能通过拒绝单元格中的安全转换来拒绝单元格的不安全转换。我们将这些单元中的安全转换份额称为重叠。我们证明重叠是此类过滤器必须拒绝的安全转换的最小份额，以便接受数据中没有不安全的转换。重叠和共形校准都可以应用于任何潜在的。我们用它来比较三种现有的设计，其中安全标签在世界模型、世界模型本身或其旁边的单独编码器之上训练分类器。在视觉导航任务中，单独的编码器具有最低的重叠，并且在相同的共形水平下，其过滤器拒绝最少的安全操作，并让规划器实现三者中最多的目标。
+
+</details>
+
+---
+
+## 18. How Uncertain Is My Action? Self-Correcting Visual Planning with Frozen World Models / 我的行动有多不确定？使用冻结世界模型进行自我校正视觉规划
+
+**Date**: 2026-11-17 | **arXiv**: [2611.23620v1](http://arxiv.org/abs/2611.23620v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.23620v1)
+
+**Categories**: cs.RO, cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+A frozen latent world model combined with sampling-based model predictive control is a visual planner. At deployment, the executed action can depart from the commanded one, and the frozen model has no way to notice. We show that the model can be run in reverse: for any hypothesized actuation shift, it predicts what it should have observed under that shift, and comparing this prediction with what was actually observed quantifies the shift and lets the planner correct itself. Unlike the residual energy, which mixes the shift with the model's own error, the score keeps only the part of the residual that a shift can produce. This shift score detects the shift with a locally optimal test, estimates it with Cramer-Rao error bars, names the dominant generator, and compensates the planner once an alarm fires. On PushT, TwoRoom and OGBench-Cube with a frozen latent world model, measured detection follows the prediction to within 0.05 AUROC. Self-correction raises success from 0.650 to 0.862 on PushT and from 0.378 to 0.432 on the harder Cube task, levels with an oracle that is told the true shift at the same block, better than five common test-time adaptation methods. On a real robotic arm, the score identifies a base-joint offset that no joint encoder registers and reduces the reach error from 36 mm to 3-5 mm, and under shifts drawn at random and sealed before the session, estimates recover 92-94% of the error reduction achieved with the true shift. The broader implication is that a frozen world model can act as a filter by predicting the future, testing action-interface uncertainty and validity, and finally correcting failures.
+
+冻结的潜在世界模型与基于采样的模型预测控制相结合是一个视觉规划器。在部署时，执行的操作可能会偏离命令的操作，并且冻结的模型无法注意到。我们证明该模型可以反向运行：对于任何假设的驱动转变，它都会预测在该转变下应该观察到的情况，并将该预测与实际观察到的情况进行比较，从而量化该转变并让规划器自行纠正。与将偏移与模型自身误差混合在一起的残差能量不同，分数仅保留偏移可能产生的残差部分。该偏移分数通过局部最优测试检测偏移，使用 Cramer-Rao 误差线对其进行估计，命名主导生成器，并在警报触发后补偿规划器。在具有冻结潜在世界模型的 PushT、TwoRoom 和 OGBench-Cube 上，测量检测与预测的误差在 0.05 AUROC 以内。自我修正将 PushT 上的成功率从 0.650 提高到 0.862，将更困难的 Cube 任务上的成功率从 0.378 提高到 0.432，与被告知同一块的真实变化的预言机持平，优于五种常见的测试时间适应方法。在真实的机械臂上，该分数识别出没有关节编码器记录的基部关节偏移，并将触及误差从 36 毫米减少到 3-5 毫米，并且在随机绘制并在训练前密封的班次下，估计恢复了真实班次所实现的误差减少的 92-94%。更广泛的含义是，冻结的世界模型可以通过预测未来、测试操作界面的不确定性和有效性并最终纠正失败来充当过滤器。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-11-18 (22 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-11-18
