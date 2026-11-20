@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-11-20](papers/2026-11-20.md) - 2 papers
 - [2026-11-19](papers/2026-11-19.md) - 1 papers
 - [2026-11-18](papers/2026-11-18.md) - 2 papers
 - [2026-11-17](papers/2026-11-17.md) - 2 papers
@@ -127,6 +128,50 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-11-20 (2 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-11-20
+
+**Paper Count**: 2
+
+---
+
+## 1. AesDistill: Distilling Generative Aesthetics for Image Color Enhancement / AesDistill：提炼生成式美学以增强图像色彩
+
+**Date**: 2026-11-19 | **arXiv**: [2611.25635v1](http://arxiv.org/abs/2611.25635v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.25635v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Image color enhancement aims to improve visual appeal, but previous methods often learn to reproduce ground-truth expert targets. These targets reflect the preferences of a few experts and cover a limited range of aesthetic choices. Matching them does not ensure stronger aesthetic quality across different tastes and scenes. By contrast, large generative models learn rich visual knowledge from large image collections and often produce vivid, appealing image edits. However, direct generation can change the source image's semantic structure along with its colors. In this paper, we introduce AesDistill, a framework for distilling generative aesthetics into image color enhancement. We use 4 leading open-source large generative models to produce 64,644 edited images as teacher targets at a cost of about 3,360 H100 GPU-hours, forming the AesDistill Dataset. AesDistill also includes AesDistill Student, a 1.13M-parameter model that learns teacher color changes through confidence-weighted supervision while preserving the source image's semantic structure. We evaluate AesDistill with 12 aesthetic and 4 image-quality assessment models. Every teacher's targets rank above the FiveK and PPR10K expert target means in the joint assessment. Across both datasets, AesDistill Student outperforms all 20 baseline methods and ranks directly behind the 4 teachers. These results demonstrate that distilling aesthetics from generative models enables a compact student to outperform methods trained on expert targets.
+
+图像色彩增强旨在提升视觉吸引力，但以往的方法往往学会再现专家给出的真实目标。这些目标反映了少数专家的偏好，涵盖的美学选择范围有限。与之匹配并不能确保在不同品味和场景下具有更强的审美品质。相比之下，大型生成模型从庞大的图像集合中学习丰富的视觉知识，通常能够生成生动、有吸引力的图像编辑。然而，直接生成可能会改变源图像的语义结构及其色彩。本文介绍了 AesDistill，这是一个将生成式美学提炼到图像色彩增强中的框架。我们使用 4 个领先的开源大型生成模型，以约 3,360 个 H100 GPU 小时的成本生成 64,644 张编辑后的图像作为教师目标，从而形成 AesDistill 数据集。AesDistill 还包括 AesDistill Student，这是一个具有 113 万个参数的模型，它通过置信度加权监督来学习教师的色彩变化，同时保留源图像的语义结构。我们使用 12 个美学评估模型和 4 个图像质量评估模型对 AesDistill 进行了评估。在联合评估中，每个教师的目标均高于 FiveK 和 PPR10K 专家目标的平均值。在两个数据集中，AesDistill Student 的表现均优于所有 20 种基准方法，仅次于 4 个教师。这些结果表明，从生成式模型中提炼美学可以让一个精简的学生模型优于在……上训练的方法。
+
+</details>
+
+---
+
+## 2. A Wolf in Sheep's Pixels: Visual Camouflage Attacks via HDR Gain Maps / 披着羊皮的狼：通过 HDR 增益图进行的视觉伪装攻击
+
+**Date**: 2026-11-19 | **arXiv**: [2611.25469v1](http://arxiv.org/abs/2611.25469v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.25469v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+An image can pass automated safety checks while showing harmful content to its human viewer. We introduce DRJanus, a visual camouflage attack that exploits the gap between standard dynamic range (SDR) processing and high dynamic range (HDR) display. Automated systems often read only an image's SDR base, whereas HDR viewers reconstruct its appearance using an auxiliary gain map. DRJanus inverts this reconstruction to embed two independently chosen color images in a single JPEG, without querying or optimizing against the target model. It preserves the chosen SDR base exactly and reconstructs HDR targets at an average PSNR of 43.03 dB across 400 images. On a benchmark of 100 sexual-content images, DRJanus evades detection by all six tested commercial moderation services and nine vision-language models. Across five agents, each evaluated on 120 task cases per threat setting, attack success ranges from 31.67% to 100% for moderation evasion and from 95% to 100% for task manipulation. We also explore cross-view consistency checks as a mitigation. These findings expose a gap in visual trust: securing what a machine reads does not secure what a user sees. A demo is available at https://qshen0629.github.io/DRJanus/
+
+一张图像可能通过自动化安全检查，但却向人类观看者展示有害内容。我们推出了DRJanus，这是一种视觉伪装攻击，它利用了标准动态范围（SDR）处理与高动态范围（HDR）显示之间的差距。自动化系统通常只读取图像的 SDR 基准，而 HDR 查看器则使用辅助增益映射来重建其外观。DRJanus 对这种重建进行反向操作，将两个独立选择的彩色图像嵌入到一个 JPEG 文件中，而无需针对目标模型进行查询或优化。它完全保留了所选的SDR基准，并在400张图像中以43.03 dB的平均PSNR重建HDR目标。在一项包含 100 张色情内容图像的基准测试中，DRJanus 成功避开了所有六项经测试的商业审核服务和九个视觉-语言模型的检测。在五种代理中，每种代理在每种威胁设置下均接受了 120 个任务案例的评估，其中规避审核的攻击成功率在 31.67% 至 100% 之间，任务操纵的攻击成功率在 95% 至 100% 之间。我们还探索了将跨视图一致性检查作为一种缓解措施。这些发现揭示了视觉信任方面的一个漏洞：确保机器读取的内容并不能确保用户看到的内容。演示版可在此处查看：https://qshen0629.github.io/DRJanus/
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-11-19 (1 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-11-19
