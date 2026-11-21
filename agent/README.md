@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-11-21](papers/2026-11-21.md) - 6 papers
 - [2026-11-20](papers/2026-11-20.md) - 31 papers
 - [2026-11-19](papers/2026-11-19.md) - 38 papers
 - [2026-11-18](papers/2026-11-18.md) - 43 papers
@@ -208,6 +209,116 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-11-21 (6 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-11-21
+
+**Paper Count**: 6
+
+---
+
+## 1. Replication of Agentic Security Events: Audit and Investigation (ROGUE-AI) / 代理安全事件的重现：审计与调查（ROGUE-AI）
+
+**Date**: 2026-11-19 | **arXiv**: [2611.26553v1](http://arxiv.org/abs/2611.26553v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.26553v1)
+
+**Categories**: cs.CR, cs.AI, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Agents based on large language models (LLMs) can now delete files and send payments on behalf of their users. News media reports routinely describe failures of these agents (e.g., Replit's coding agent deleting a production database), but a report often only says what went wrong and rarely (in)validates the incident or finds its root cause. Incident catalogs collect these reports, and benchmarks record whether agents fail, but neither replicates an incident nor tests the cause its report might identify. In this paper, we present ROGUE-AI (Replication of Agentic Security Events: Audit and Investigation), a multi-agent framework that closes the above gap and rebuilds each reported incident offline together with a matched control that lacks only the blamed cause, and runs agents on both. Our results suggest that ROGUE-AI is able to reproduce the reported harm in 89% of its 108 attempted replications. Agents built on five current GPT, Claude, Gemini and DeepSeek models made the reported mistake in 18% to 33% of runs, against at most 1% without the blamed cause. Of the 72 incidents with real-world harm, 62 had no underlying attacker, and in these, agents did what their task asked for but missed an ordinary hazard, such as a database shared with the live site. Replications without an attacker caused more harm than replications of prompt injection for all five models. Defenses against prompt injection look for injected instructions, but these replications contain none. Further, a warning after each tool output that names the hazard and its consequence lowered harm for all five models, whereas a note of the same length that does not mention the hazard left most of the harm in place. Built from real incidents, the ROGUE-AI replications form a reusable audit framework that vendors can rerun before each new release.
+
+基于大型语言模型（LLM）的代理现在可以代表其用户删除文件和发送付款。新闻媒体的报道经常描述这些代理的故障（例如，Replit的编码代理删除了生产数据库），但报道往往只说明出了什么问题，很少对事件进行（无）效验证或找出其根本原因。事件目录收集这些报告，基准记录代理是否发生故障，但两者既不重现事件，也不测试报告可能指出的原因。在本文中，我们介绍了 ROGUE-AI（代理安全事件的重现：审计与调查），这是一个多代理框架，旨在弥补上述缺陷，并离线重现每个报告的事件，同时提供一个仅缺少被指责原因的匹配对照，并在两者上运行代理。我们的结果表明，在 108 次尝试的重现中，ROGUE-AI 能够重现 89% 的报告危害。基于当前五种GPT、Claude、Gemini和DeepSeek模型构建的代理在18%至33%的运行中犯下了所报告的错误，而在没有被指责原因的情况下，犯错的比例最多为1%。在 72 起造成现实世界危害的事件中，62 起没有幕后攻击者，在这些事件中，代理执行了任务要求的操作，但忽视了常见的风险，例如与线上网站共享的数据库。对于所有五个模型，没有攻击者的复现造成的危害都大于提示注入的复现。针对提示注入的防御措施会寻找被注入的指令，但这些复现中并不包含此类指令。此外，
+
+</details>
+
+---
+
+## 2. Cost-Aware Agentic Feature Optimization System for Fleet-Scale Ranking Models / 面向车队规模排名模型的成本感知代理功能优化系统
+
+**Date**: 2026-11-19 | **arXiv**: [2611.26531v1](http://arxiv.org/abs/2611.26531v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.26531v1)
+
+**Categories**: cs.IR, cs.AI, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Large Web platforms operate large fleets of ranking models, each selecting features from a shared pool of tens of thousands. We present an end-to-end agentic system that optimizes features across the fleet under resource constraints shared across models and those set per model, such as feature pipeline cost and serving throughput (QPS), respectively. In this system, LLM agents propose hypotheses, and deterministic tools execute experiments and verify them. For each model, an LLM generates and shortlists cross features from a combinatorial candidate space, and all features are then ranked by several importance methods. Feature blending mixes these rankings into a single selection, using Pareto fronts across tasks for multi-task models. An LLM Researcher agent then tunes the feature selection in 10--25 asynchronous trials under resource caps, and a trimming step keeps the pipeline cost within budget. Across production models, the system improves normalized entropy by 0.31% on average within each model's budget, and the trimming step cuts pipeline cost by 2.3% with no regression beyond measurement noise. The optimized models were launched, and in online A/B tests they improved a primary online metric by 0.20%.
+
+大型网络平台运行着庞大的排名模型群，每个模型都从包含数万个特征的共享池中选择特征。我们提出了一种端到端代理系统，该系统在各模型共享的资源约束以及各模型单独设定的资源约束（例如，分别为特征管道成本和Serving吞吐量（QPS））下，对整个模型群的特征进行优化。在这个系统中，LLM 代理提出假设，而确定性工具则执行实验并对其进行验证。对于每个模型，LLM都会从组合候选空间中生成交叉特征并将其列入备选名单，然后通过几种重要性方法对所有特征进行排序。特征融合将这些排名混合成一个单一的选集，对于多任务模型，则跨任务使用帕累托前沿。然后，LLM研究员代理在资源上限下通过10–25次异步试验来调整特征选择，而修剪步骤则将管道成本控制在预算范围内。在所有生产模型中，该系统在每个模型的预算范围内将归一化熵平均提高了0.31%，而修剪步骤将管道成本降低了2.3%，且性能下降未超过测量噪声。优化后的模型已上线，在在线A/B测试中，它们将一项主要在线指标提高了0.20%。
+
+</details>
+
+---
+
+## 3. ZeroVLN: Learning to Navigate without Supervised Fine-Tuning of the VLM Brain / ZeroVLN：学习在没有对 VLM 大脑进行监督式微调的情况下进行导航
+
+**Date**: 2026-11-19 | **arXiv**: [2611.26414v1](http://arxiv.org/abs/2611.26414v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.26414v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Representative vision-language navigation (VLN) methods typically couple a vision-language model (VLM) brain with a learnable action head and fine-tune the VLM brain on navigation-domain data to predict geometric goals. However, such adaptation can substantially alter base VLM weights and degrade general visual capabilities. We introduce ZeroVLN, a slow-fast navigation framework that achieves effective navigation with zero navigation-domain SFT of the VLM brain. Rather than teaching the brain to predict geometric goals, we equip it with a semantic tool-calling interface for conveying movement decisions to an action expert in natural language. We first adapt the action expert to carry out these movement requests, then jointly improve the brain's movement decisions and the action expert's continuous execution through closed-loop reinforcement learning (RL). Trained on the same navigation episodes, ZeroVLN substantially outperforms representative SFT-based hierarchical VLN methods on standard VLN-CE (continuous environments) benchmarks, while inducing only minor changes to the brain's weights and largely preserving its general capabilities. To our knowledge, ZeroVLN is the first slow-fast VLN framework with zero navigation-domain SFT of the VLM brain, and the first to jointly optimize its slow and fast policies through closed-loop agentic RL in VLN-CE.
+
+具有代表性的视觉-语言导航（VLN）方法通常将视觉-语言模型（VLM）大脑与可学习的动作头相结合，并在导航领域数据上对VLM大脑进行微调，以预测几何目标。然而，这种适配可能会大幅改变基础 VLM 的权重，并降低一般的视觉能力。我们推出了 ZeroVLN，这是一个慢-快导航框架，无需对 VLM 脑进行导航域 SFT 即可实现有效的导航。我们没有让大脑学会预测几何目标，而是为其配备了一个语义工具调用接口，用于以自然语言将运动决策传达给动作专家。我们首先使动作专家适应执行这些移动请求，然后通过闭环强化学习（RL）共同改进大脑的移动决策和动作专家的持续执行。在相同的导航片段上进行训练后，ZeroVLN 在标准 VLN-CE（连续环境）基准测试中显著优于具有代表性的基于 SFT 的分层 VLN 方法，同时仅对大脑的权重造成轻微变化，并基本保留其一般能力。据我们所知，ZeroVLN 是首个对 VLM 脑部不进行导航域 SFT 的慢-快 VLN 框架，也是首个通过 VLN-CE 中的闭环智能体强化学习（RL）联合优化其慢策略和快策略的框架。
+
+</details>
+
+---
+
+## 4. Perfumer: A Large Language Model-based Agentic Framework Accelerating Structural Relaxation and Electronic Band Prediction for First-Principle Calculation / Perfumer：一种基于大型语言模型的智能体框架，可加速结构弛豫和电子能带预测，用于第一性原理计算
+
+**Date**: 2026-11-19 | **arXiv**: [2611.26349v1](http://arxiv.org/abs/2611.26349v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.26349v1)
+
+**Categories**: cond-mat.mtrl-sci, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+First-principles structural relaxation and band calculations require substantial computation and expertise. Here we present Perfumer, a large language model-based agentic framework that couples Quantum ESPRESSO with two predictive models. Across tested structures, pre-relaxation with Perfumer-relax model followed by QE refinement yielded a 2.75-fold overall speedup over QE alone. Perfumer-band model combines a periodic graph neural network with a latent Hermitian spectral head returns 12 band energies at any requested wavevector, preserving reciprocal lattice periodicity and time-reversal symmetry without constructing Hamiltonian. Trained on 125,153 self-curated band structures, Perfumer-band model reaches a median per-material mean absolute error of 0.157 eV on 2,607 test materials, including lanthanide, actinide and magnetic compounds, from held-out composition families spanning 85 elements, taking about 97 ms per material on two consumer CPU cores. The agent turns natural-language requests into relaxation-to-band workflows, from a single uploaded structure to automatically constructed new candidates and returns predicted properties.
+
+第一性原理结构弛豫和能带计算需要大量的计算和专业知识。本文介绍了Perfumer，这是一个基于大型语言模型的智能体框架，将Quantum ESPRESSO与两个预测模型相结合。在所有测试的结构中，使用Perfumer-relax模型进行预弛豫，然后进行QE精化，与仅使用QE相比，整体速度提高了2.75倍。Perfumer-band模型将周期性图神经网络与隐埃尔米特谱头相结合，可在任何请求的波矢量处返回12个能带能量，从而在不构建哈密顿量的情况下保持倒格周期性和时间反演对称性。Perfumer-band模型在125,153个自行整理的能带结构上进行了训练，在2,607种测试材料（包括镧系元素、锕系元素和磁性化合物）上达到了0.157 eV的每种材料中位数平均绝对误差，这些材料来自涵盖85种元素的留出成分族，在两个消费级CPU核心上每种材料的处理时间约为97毫秒。该代理将自然语言请求转换为从弛豫到能带的工作流程，从单个上传的结构到自动构建的新候选结构，并返回预测的性质。
+
+</details>
+
+---
+
+## 5. The FrontierOR Challenge: Agentic Algorithm Design for Operations Research / FrontierOR 挑战赛：运筹学的自主算法设计
+
+**Date**: 2026-11-19 | **arXiv**: [2611.26171v1](http://arxiv.org/abs/2611.26171v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.26171v1)
+
+**Categories**: cs.AI, math.OC
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Operations research (OR) relies on algorithms that experts tailor to each problem: a new routing, scheduling or network design problem can take weeks of specialist work before it is solved well at scale. Large language model (LLM) agents now write, test and improve code, but whether they can design algorithms that scale to realistic instances is open: in the FrontierOR benchmark's one-shot evaluation, the strongest model matches Gurobi, with an objective within 1% of Gurobi's and no slower, on only 39% of the large instances. The FrontierOR Challenge asks teams to build agentic workflows that design, test, and improve algorithms for many optimization problems at once. Stage 1 releases 60 of the benchmark's 180 audited problems, spanning six application categories and five formulation types, in weekly rounds of 15; Stage 2 introduces new problems outside the benchmark, with unseen instances. Two tracks are ranked separately: in the Main track we run the submitted algorithms in a network-isolated sandbox with open-source dependencies only; in the Self-hosted track teams solve the instances on their own machines, with any software, within a timed window. Every solution is checked for feasibility, and a feasible solution scores the ratio of its objective to a frozen known reference, averaged over hidden instances.
+
+运筹学（OR）依赖于专家针对每个问题量身定制的算法：一个新的路径规划、调度或网络设计问题可能需要数周的专家工作才能得到妥善的大规模解决。大型语言模型（LLM）代理现在可以编写、测试和改进代码，但它们是否能够设计出可扩展到实际实例的算法仍有待观察：在FrontierOR基准的一次性评估中，最强大的模型仅在39%的大型实例中与Gurobi相当，其目标值与Gurobi的相差不到1%，且速度不慢。FrontierOR 挑战赛要求各团队构建代理工作流，用于同时为多个优化问题设计、测试和改进算法。第 1 阶段将发布基准测试中 180 个经过审核的问题中的 60 个，涵盖六个应用类别和五种建模类型，每周一轮，每轮 15 个问题；第 2 阶段将引入基准测试之外的新问题，包含未见过的实例。两个赛道分别排名：在主赛道中，我们在网络隔离的沙盒中运行提交的算法，仅使用开源依赖项；在自托管赛道中，参赛团队在规定时间内使用任何软件在自己的机器上求解实例。每个解决方案都会经过可行性检查，对于可行的解决方案，其得分是其目标值与固定已知参考值的比率，该比率是对隐藏实例取平均值得到的。
+
+</details>
+
+---
+
+## 6. NariQ: Sub-3-Bit Quantization for Long-Horizon Agentic Tasks / NariQ：用于长时程智能体任务的3位以下量化
+
+**Date**: 2026-11-19 | **arXiv**: [2611.26157v1](http://arxiv.org/abs/2611.26157v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.26157v1)
+
+**Categories**: cs.LG
+
+**Code**: https://github.com/nari-labs/nari-llama.cpp.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Long-horizon agentic tasks require a model to call tools over many steps at contexts of 100K tokens or more, yet many low-bit quantization methods are calibrated on short web text and judged on perplexity. This mismatch is costly: existing quantizations of Qwen3.8-27B at or below 3 bits per weight match BF16 on shorter tasks like AIME, yet in published results solve at most 72% as many tasks as BF16 on DeepSWE, a long-horizon agentic benchmark. We propose NariQ, a trellis-coded post-training quantization method that calibrates on tokens generated by the BF16 model in agent sessions. On Qwen3.8-27B, NariQ at 3.0 and 2.5 bits per weight stays level with BF16 on two long-horizon agentic benchmarks, DeepSWE and Terminal Bench, as well as on AIME and RealWorldQA. Our checkpoint at 2.0 bits per weight trails this performance. To our knowledge, these are the first quantizations at or below 3 bits per weight shown to match their full-precision version on long-horizon agentic tasks. We release the files as Qwen3.8-27B-NariQ-GGUF (https://huggingface.co/nari-labs/Qwen3.8-27B-NariQ-GGUF), with inference available through our llama.cpp fork at https://github.com/nari-labs/nari-llama.cpp.
+
+长周期智能体任务要求模型在 10 万个或更多个token的上下文中跨多个步骤调用工具，但许多低比特量化方法都是根据短篇幅网页文本进行校准，并以困惑度作为评判标准。这种不匹配的代价很高：在 AIME 等较短的任务上，现有 Qwen3.8-27B 的量化（每个权重 3 位或更低）与 BF16 相当，但在已发布的结果中，在长视野智能体基准 DeepSWE 上，其解决的任务数量最多只有 BF16 的 72%。我们提出了NariQ，这是一种格状码后训练量化方法，它根据BF16模型在代理会话中生成的token进行校准。在 Qwen3.8-27B 上，NariQ 在每权重 3.0 和 2.5 位时的表现与 BF16 在两个长程智能体基准（DeepSWE 和 Terminal Bench）以及 AIME 和 RealWorldQA 上的表现持平。我们的检查点在每个权重 2.0 位时落后于这一表现。据我们所知，这些是首批在长视野智能体任务上表现与全精度版本相当的每权重3比特或以下的量化。我们以 Qwen3.8-27B-NariQ-GGUF（https://huggingface.co/nari-labs/Qwen3.8-27B-NariQ-GGUF）的形式发布这些文件，您可以通过我们的 llama.cpp 分支（https://github.com/nari-labs/nari-llama.cpp）进行推理。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-11-20 (31 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-11-20
