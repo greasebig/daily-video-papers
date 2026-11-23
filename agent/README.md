@@ -5,6 +5,7 @@ Daily updates of agent-related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-11-23](papers/2026-11-23.md) - 9 papers
 - [2026-11-21](papers/2026-11-21.md) - 6 papers
 - [2026-11-20](papers/2026-11-20.md) - 31 papers
 - [2026-11-19](papers/2026-11-19.md) - 38 papers
@@ -209,6 +210,166 @@ Daily updates of agent-related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-11-23 (9 papers)</b></summary>
+
+# arXiv Agent Papers - 2026-11-23
+
+**Paper Count**: 9
+
+---
+
+## 1. LesionAgent: Training-Free Agentic Tumor Tracking and Response Assessment in Longitudinal CT / LesionAgent：纵向CT中无需训练的智能肿瘤跟踪和疗效评估
+
+**Date**: 2026-11-20 | **arXiv**: [2611.27876v1](http://arxiv.org/abs/2611.27876v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.27876v1)
+
+**Categories**: cs.CV, cs.AI, cs.MA
+
+**Code**: https://github.com/MIC-DKFZ/LesionAgent.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Every few months, a cancer patient's CT scans decide whether treatment continues. 3D foundation models can now detect, segment, register and track lesions, yet none of them reads the scans as a radiologist does. A radiologist decides which findings are lesions, which are the same lesion months later and whether a new spot means progression, and checks each decision against the extensive rules of a clinical guideline. We introduce LesionAgent, an LLM agent that performs this read end to end without task-specific training. It operates frozen 3D models as tools, acts in 3D through coordinate-labelled views, remembers every lesion across visits in a registry, verifies every model output it relies on, and leaves every number to a deterministic guideline engine. On four public longitudinal CT datasets, LesionAgent tracks more lesions and measures them more accurately than every automatic baseline, and where the same 3D models chained by fixed rules call progression falsely at 33 of 56 follow-ups, it does so twice. On clinical follow-up CTs, it agrees with the radiologists' response at 20 of 23 follow-ups, including every change in response, and without training on DeepLesion, it retrieves more of its lesions than every tracker trained on it (89.0% vs. 87.4%). Its harness, not its LLM, makes the difference: given the same LLM and 3D models but not the harness, Claude Code reaches a detection F1 of 41% and LesionAgent 78%, and an open-weight LLM that can run inside the hospital rises from 6% to 73%. LesionAgent and a napari reading app for any LLM are available at https://github.com/MIC-DKFZ/LesionAgent.
+
+每隔几个月，癌症患者的CT扫描结果将决定是否继续治疗。3D 基础模型现在可以检测、分割、配准和跟踪病灶，但它们都无法像放射科医生那样解读扫描结果。放射科医生会判断哪些发现是病灶，哪些是数月后的同一病灶，以及新出现的病灶是否意味着病情进展，并对照临床指南的详尽规则来核对每一项判断。我们推出了LesionAgent，这是一款LLM代理，无需针对特定任务的训练即可执行端到端的影像判读。它将冻结的3D模型作为工具来操作，通过带坐标标记的视图在3D空间中进行操作，在登记册中记住每次就诊的每个病灶，验证其所依赖的每个模型输出，并将每个数字交给确定性指南引擎处理。在四个公开的纵向CT数据集中，LesionAgent跟踪的病灶数量多于所有自动基线，且测量精度更高。在56次随访中，由固定规则串联的相同3D模型在33次随访中错误地判定为疾病进展，而LesionAgent仅有2次错误判定。在临床随访CT中，它在23次随访中的20次与放射科医生的判断一致，包括每次判断的变化，并且在未经过DeepLesion训练的情况下，它检索到的病灶比所有经过DeepLesion训练的跟踪器都要多（89.0% vs. 87.4%）。发挥作用的是它的框架，而不是它的LLM：在提供相同的LLM和3D模型但不提供框架的情况下，Claude Code的检测F1值为41%，而LesionAgent的检测F1值为78%；一款可以在医院内部运行的开源LLM
+
+</details>
+
+---
+
+## 2. SLICR: Strategy Logic-Guided Multi-Agent Reinforcement Learning / SLICR：策略逻辑引导的多智能体强化学习
+
+**Date**: 2026-11-20 | **arXiv**: [2611.27865v1](http://arxiv.org/abs/2611.27865v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.27865v1)
+
+**Categories**: cs.AI, cs.LO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Specification-guided reinforcement learning (RL) translates formal specifications of desired behavior of agents into shaped rewards. This paper introduces SLICR, a significant paradigm shift that advances the state of the art to specification-guided RL in adversarial settings under partial observability. We employ Strategy Logic (SL), which allows explicit quantification over agents' strategies and uses the linear temporal logic (LTL) to specify the agents' objectives and constraints. This enables reasoning not only about how agents should act to satisfy a specification, but also about how they should respond to the strategies and behaviors of other agents. We evaluate SLICR on three popular benchmarks: Predator-Prey, Google Research Football, and our home-grown extension of SMAC-HARD, demonstrating its effectiveness, scalability, and ability to adapt to diverse adversarial strategies.
+
+规范引导的强化学习 (RL) 将智能体期望行为的正式规范转换为塑造的奖励。本文介绍了SLICR，这是一种重大的范式转变，它将部分可观测性下的对抗性环境中的规范引导型强化学习（RL）推进到了最先进的水平。我们采用策略逻辑（SL），它允许对智能体的策略进行显式量化，并使用线性时态逻辑（LTL）来指定智能体的目标和约束。这不仅可以推理智能体应如何行动以满足规范，还可以推理智能体应如何应对其他智能体的策略和行为。我们在三个热门基准上对SLICR进行了评估：Predator-Prey、Google Research Football以及我们自行开发的SMAC-HARD扩展，从而展示了其有效性、可扩展性以及适应各种对抗策略的能力。
+
+</details>
+
+---
+
+## 3. Beyond Self-Critique: Epistemic Convergence Control for Multi-Agent Research Verification / 超越自我批判：多智能体研究验证的认识论趋同控制
+
+**Date**: 2026-11-20 | **arXiv**: [2611.27839v1](http://arxiv.org/abs/2611.27839v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.27839v1)
+
+**Categories**: cs.AI, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Multi-agent systems for scientific claim verification increasingly rely on role-structured LLM debate to pressure-test hypotheses. However, when debating agents are instantiated from the same underlying base model, they share identical latent representations, making self-critique bias structurally inevitable. Static fixed-iteration protocols compound this by either halting prematurely before evidence stabilizes or wasting inference compute after convergence. We present \sys{}, a multi-agent research verification framework that addresses both failure modes. First, we introduce an asymmetric role architecture comprising an Advocate, Skeptic, and Arbitrator with opposing epistemic directives, producing significantly lower role-embedding similarity (0.852 vs.\ 0.918 for symmetric Multi-Agent Debate [MAD], $p = 5.82 \times 10^{-8}$) and surfacing more contested claims (22.0\% vs.\ 15.4\%). Second, we propose the Belief-Delta ($\DB$) convergence criterion, an evidence-grounded stopping rule that eliminates over-iteration (0.0\% vs.\ 62.5\% for Fixed-$3$) while cutting LLM calls by 2.4$\times$. Third, each supported claim is anchored to a verbatim literature snippet audited by an independent NLI classifier, achieving a 21.7\% hallucination rate (comparable to 25.9\% for a Self-Refine critic, $p = 0.61$) while establishing auditable evidence grounding. Across 200 runs on 40 research hypotheses evaluated with DeepSeek-R1-32B, \sys{} balances compute efficiency with rigorous epistemic verification.
+
+用于科学主张验证的多智能体系统日益依赖于角色分工的LLM辩论来对假设进行压力测试。然而，当辩论的智能体由同一个底层基模型实例化时，它们具有相同的潜在表示，这使得自我批评的偏见在结构上不可避免。静态固定迭代协议会加剧这一问题，原因在于其要么在证据稳定之前过早停止，要么在收敛后浪费推理计算资源。我们提出了\sys{}，这是一个多智能体研究验证框架，可解决这两种失效模式。首先，我们引入了一种非对称角色架构，其中包含具有相反认知指令的“支持者”、“怀疑者”和“仲裁者”，从而显著降低了角色嵌入相似性（对称多智能体辩论[MAD]为0.852，而0.918，$p = 5.82 \times 10^{-8}$），并揭示了更多有争议的论断（22.0\% vs.\ 15.4\%）。其次，我们提出了信念-增量（$\DB$）收敛标准，这是一种基于证据的停止规则，可消除过度迭代（固定-$3$为0.0\%，而62.5\%），同时将LLM调用量减少2.4$\times$。第三，每个得到支持的论断都锚定于一段由独立NLI分类器审核的逐字文献片段，从而实现了21.7\%的幻觉率（与自我优化（Self-Refine）审评者的25.9\%相当，$p = 0.61$），同时建立了可审计的证据依据。在对40个研究假设进行的200次运行中，使用DeepSeek-R1-32B进行评估，\sys{}在计算效率与严谨的认识论之间实现了平衡。
+
+</details>
+
+---
+
+## 4. AutoOntologyBench: A Task-Grounded Benchmark for Agentic Knowledge Engineering / AutoOntologyBench：一种基于任务的代理知识工程基准
+
+**Date**: 2026-11-20 | **arXiv**: [2611.27734v1](http://arxiv.org/abs/2611.27734v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.27734v1)
+
+**Categories**: cs.CL
+
+**Code**: https://github.com/VinyehShaw/AutoOntologyBench.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Foundation-model agents are increasingly extending beyond software engineering (SWE) into autonomous scientific research, where acquiring and integrating domain knowledge remains a critical challenge. Recent industrial advances have increasingly adopted knowledge graphs and ontology-based semantic layers to organize heterogeneous knowledge into reusable representations. We ask: Can autonomous agents construct ontologies that help them solve real tasks, and do they offer measurable benefits over alternative knowledge representations? Existing benchmarks evaluate ontology correctness or agent task success in isolation, leaving the value of autonomously acquired knowledge unresolved. We therefore introduce AutoOntologyBench, a task-grounded benchmark comprising 19,947 audited tasks grounded in 18 real-world knowledge sources across 7 domains, with source-native verification. Spanning Application, Repair, Organization, and Construction, AutoOntologyBench compares nine frontier-model agents under matched knowledge representations. Layered on retrieval, agent-built ontologies add 6.1 points of task success, yet trail an expert-derived reference by 13.0, identifying autonomous knowledge acquisition as the bottleneck to scalable scientific research. Code and resources are available at https://github.com/VinyehShaw/AutoOntologyBench.
+
+基础模型代理正日益扩展到软件工程（SWE）之外的自主科学研究领域，而在该领域，获取和整合领域知识仍然是一项关键挑战。近年来，随着行业进步，知识图谱和基于本体的语义层被越来越多地采用，将异构知识组织成可重用的表示形式。我们提出以下问题：自主智能体能否构建有助于其解决实际任务的本体，并且与替代的知识表示相比，它们是否能提供可衡量的益处？现有基准分别评估本体的正确性或智能体任务的成功率，而没有解决自主获取知识的价值问题。因此，我们推出了AutoOntologyBench，这是一个基于任务的基准，包含19,947项经过审核的任务，这些任务基于7个领域的18个真实世界知识源，并采用源生验证。AutoOntologyBench 涵盖应用、修复、组织和构建，在匹配的知识表示下比较了九个前沿模型智能体。在检索的基础上，代理构建的本体将任务成功率提高了6.1个百分点，但仍落后于专家构建的参考本体13.0个百分点，这表明自主知识获取是可扩展科学研究的瓶颈。代码和资源可在此处获取： https://github.com/VinyehShaw/AutoOntologyBench。
+
+</details>
+
+---
+
+## 5. MetaRigor: From Agentic Automation to Verifiable End-to-End Meta-Analysis Through Scientific Decision Boundaries / MetaRigor：从自主性自动化到通过科学决策边界实现的端到端可验证元分析
+
+**Date**: 2026-11-20 | **arXiv**: [2611.27713v1](http://arxiv.org/abs/2611.27713v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.27713v1)
+
+**Categories**: cs.AI, cs.SE
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Automated meta-analysis requires not only accurate numerical extraction but also the consistent preservation of result identity across stages, including the associated study, comparison, population, outcome, time point, and analysis conditions. We present MetaRigor, an LLM workflow framework for verifiable end-to-end evidence synthesis. MetaRigor organizes study results as Study x Target units and operationalizes scientific decision boundaries at the task level through Task Contracts, programmatic rules, and source binding. The model performs semantic interpretation that depends on study context, whereas programs execute formalizable rules, computations, validation, and source verification. We conducted controlled evaluations across five stages: evidence acquisition, data extraction, risk of bias assessment, certainty of evidence assessment, and manuscript generation. MetaRigor achieved an F1 score of 86.29% for complete result delivery and 80.20% agreement for domain-level certainty of evidence judgments. Generated manuscripts received scores of 86.00 under human evaluation, exceeding all three baselines. A seven-case downstream end-to-end evaluation further yielded an aggregate F1 score of 77.01%, exceeding the strongest baseline by 9.78 percentage points. Cross-system tracing of archived outputs from three systems further showed that local mismatches or omissions in result identity could alter statistical inputs and the objects subjected to risk of bias assessment, with these errors subsequently propagating into the final report. Ablation experiments showed that task constraints and programmatic rules played distinct roles across different stages. These findings indicate that, in LLM-driven evidence synthesis workflows, consistently maintaining explicit result identity, decision boundaries, and provenance relationships is critical to improving end-to-end verifiability.
+
+自动化荟萃分析不仅需要准确的数值提取，还需要在各个阶段一致地保留结果的同一性，包括相关研究、比较、人群、结局、时间点和分析条件。我们推出了MetaRigor，这是一个用于可验证的端到端证据综合的LLM工作流框架。MetaRigor将研究结果组织为“研究 x 目标”单元，并通过任务合约、程序性规则和源绑定在任务层面将科学决策边界付诸实施。该模型执行依赖于研究背景的语义解释，而程序则执行可形式化的规则、计算、验证和来源核验。我们对五个阶段进行了对照评估：证据获取、数据提取、偏倚风险评估、证据确定性评估和文稿生成。MetaRigor 在完整结果交付方面的 F1 得分为 86.29%，在领域级证据确定性判断方面的一致性为 80.20%。在人工评估中，生成的文稿得分86.00分，超过了所有三个基准。一项包含七个案例的下游端到端评估进一步得出了77.01%的综合F1得分，比最强的基线高出9.78个百分点。对三个系统的存档输出进行跨系统追踪进一步表明，结果标识中的局部不匹配或遗漏可能会改变统计输入和接受偏倚风险评估的对象，其中
+
+</details>
+
+---
+
+## 6. Learning Inside Types: Epistemic Typestates for Safe Multi-Agent Reinforcement Learning / 内部类型学习：用于安全多智能体强化学习的认知类型状态
+
+**Date**: 2026-11-20 | **arXiv**: [2611.27631v1](http://arxiv.org/abs/2611.27631v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.27631v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Type disciplines make programs safe by construction: components checked against each other's types compose into programs that cannot go wrong in the ways the types exclude. Types suit reinforcement learning: a type constrains what an agent may choose, not how it chooses, so the guarantee holds for every policy a learner produces. We introduce epistemic typestates, a type discipline for safe multi-agent reinforcement learning. An agent's type is a protocol whose states record its beliefs, the worlds it cannot rule out from its own observations and actions, and permits only actions that are safe in every world of the belief, whatever the others do within their public types. Agents learn inside their types, which are built and checked one agent at a time and run without communication. We prove type soundness and team safety, give a synthesis that is sound and complete, build types from guards when worlds are infinite, and show that shields are a special case. All proofs are mechanised in Rocq. On nine benchmarks, no typed learner causes a safety violation, and task performance does not differ significantly from that of two recent multi-agent shielding methods. Where a contract-based method fails at five and ten agents, types for ten agents are built in under a second. In the two continuous benchmarks, Lagrangian learners cause thousands of violations in every training run.
+
+类型学科通过构造使程序具有安全性：对彼此的类型进行检查的组件组合成程序，这些程序不会以类型所排除的方式出错。类型适合强化学习：类型约束的是智能体可能选择什么，而不是它如何选择，因此对于学习者产生的每项策略，该保证都成立。我们引入了认识论类型状态，这是一种用于安全多智能体强化学习的类型规范。智能体的类型是一种协议，其状态记录了智能体的信念，即智能体根据自身的观察和行动无法排除的世界，并且仅允许在信念的每个世界中都是安全的行动，无论其他智能体在其公共类型中采取何种行动。智能体在其类型内部学习，这些类型一次构建和检查一个智能体，并在没有通信的情况下运行。我们证明了类型健全性和团队安全性，给出了健全且完备的综合方法，在世界无限时从守卫构建类型，并表明屏蔽是一种特殊情况。所有证明均在Rocq中实现机械化。在九个基准测试中，没有一个类型化学习器导致安全违规，并且任务性能与最近两种多智能体屏蔽方法的任务性能没有显著差异。在基于合约的方法在五名和十名智能体的情况下失败时，十名智能体的类型在一秒钟内即可构建完毕。在两个连续的基准测试中，拉格朗日学习器在每次训练中都会造成数千次违规。
+
+</details>
+
+---
+
+## 7. Benchmarks' Last Exam / 基准的最后一次考试
+
+**Date**: 2026-11-20 | **arXiv**: [2611.27622v1](http://arxiv.org/abs/2611.27622v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.27622v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Public benchmarks guide model selection, post-training rewards and claims of progress in artificial intelligence, yet leaderboards report aggregate scores without verifying whether each task's prompt, environment and grader agree on what counts as success. How often that agreement fails in contemporary evaluations, and in which direction confirmed defects move scores, has remained unmeasured across grading designs. Here we synthesize task-level quality reviews of 749 tasks across eight frontier benchmarks and 767 public model evaluations spanning closed-form question answering, document rubrics and agentic execution to assess whether prompts, environments and graders align. Task validity stratifies sharply by grading architecture. Closed-form benchmarks revised after public error reporting reach 92.5% verified validity, compared with 29.3% across six multi-step suites that nevertheless already supply 161 verified complex tasks. Rubric suites fail through mismatches between prompts and reference checklists, whereas execution harnesses add incomplete state assertions, shared-channel leaks and grading-time collisions. Across confirmed defects, 71.7% withhold credit from compliant solutions while 28.3% permit shortcut passes, indicating that raw leaderboard ceilings understate frontier capability on many practical tasks. Grading committed patches inside a fresh container cuts confirmed runtime bypasses from 14.7% in shared containers to 2.7% (a 5.5x drop, and 0% in read-only or static suites), showing how targeted maintenance restores existing benchmarks at low cost. As the initial milestone of the long-term Benchmarks' Last Exam initiative, this synthesis launches sustained expansion across wider benchmark coverage and deeper evaluation-quality dimensions so that pursuing leaderboard gains directly advances genuine model capability.
+
+公开基准指导着模型选择、训练后奖励以及对人工智能进展的宣称，但排行榜报告的却是总分，而没有核实每项任务的提示、环境和评分者是否就什么是成功达成一致。在当代的评估中，这种一致性不达标的频率以及已确认的缺陷对得分的影响方向，在各种评分设计中仍未得到衡量。在这里，我们综合了八个前沿基准中的749项任务的任务级质量评审，以及767项公开模型评估，涵盖封闭式问答、文档评分细则和代理执行，以评估提示、环境和评分者是否一致。任务有效性因评分架构而呈现出明显的分层。在公开错误报告后经过修订的封闭式基准达到了92.5%的经核实有效性，而六个多步测试集仅达到29.3%，尽管如此，这些测试集已经提供了161个经核实的复杂任务。评分细则套件因提示与参考清单之间不匹配而失败，而执行框架则增加了不完整状态断言、共享通道泄露和评分时冲突。在已确认的缺陷中，71.7% 的缺陷未对合规的解决方案给予认可，而 28.3% 的缺陷允许捷径通过，这表明原始排行榜的上限低估了许多实用任务的前沿能力。在新容器中对已提交的补丁进行评分，可将已确认的运行时绕过率从共享容器中的14.7%降至2.7%（降幅为5.5倍），而在只读或
+
+</details>
+
+---
+
+## 8. Bringing AI Assistance to the Beznau Nuclear Power Plant: A Hierarchical System of LLM Agents for Reactor Monitoring / 将人工智能辅助引入贝佐瑙核电站：用于反应堆监测的大语言模型代理分层系统
+
+**Date**: 2026-11-20 | **arXiv**: [2611.27556v1](http://arxiv.org/abs/2611.27556v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.27556v1)
+
+**Categories**: cs.MA, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Beznau Unit 1 in Switzerland, in operation since 1969, is the most experienced nuclear reactor still running worldwide. Five decades of incremental modernization have left its monitoring systems, alarm logs, variable catalogs, technical specifications and investigation reports in separate silos that were never designed to be queried together. As a result, investigating a core instrumentation anomaly means slow, manual gathering of knowledge scattered across databases, documents, and experienced colleagues. We present a hierarchical multi-agent assistant built on large language models (LLMs) to support these investigations and reduce the need for tedious manual searches in SAP systems. An orchestrating agent breaks down an engineer's question and hands the parts to specialized sub-agents, each with read-only access to one source. Domain expertise is written as natural-language procedures that plant engineers can read, review and revise. The system is strictly advisory, with every answer traced back to its sources. We also report organizational lessons from introducing agentic AI into a culture built on safety, traceability and conservative change. Beyond the technical architecture, the Beznau case study examines how an assistant can be introduced into a setting where evidence must be traceable, changes carefully reviewed, and operational decisions retained by plant personnel, paving the way for the responsible use of agentic AI in industrial plant monitoring.
+
+瑞士的贝兹瑙1号机组自1969年投入运行，是目前全球仍在运行的运行时间最长的核反应堆。经过五十年的渐进式现代化改造，其监测系统、报警日志、变量目录、技术规范和调查报告被分散在不同的孤岛中，这些孤岛从未被设计成可以一起查询。因此，调查堆芯仪表异常意味着需要缓慢地手动收集分散在数据库、文档和经验丰富的同事中的知识。我们推出了一款基于大型语言模型（LLM）的分层多智能体助手，旨在为这些调查提供支持，并减少在SAP系统中进行繁琐手动搜索的需要。协调代理将工程师的问题分解，并将各个部分交给专门的子代理，每个子代理都对一个源具有只读访问权限。领域专业知识以自然语言程序的形式编写，电厂工程师可以阅读、审核和修订这些程序。该系统仅提供建议，每个答案都可追溯到其来源。我们还报告了将代理人工智能引入以安全、可追溯性和保守变革为基础的文化中所获得的组织经验教训。除了技术架构之外，贝索案例研究还探讨了如何在必须确保证据可追溯、变更经过仔细审查且运营决策由电厂人员掌控的环境中引入助手，从而为在工业电厂监测中负责任地使用智能体AI铺平道路。
+
+</details>
+
+---
+
+## 9. Fix Where It Fails: Root-Cause-Guided Agentic Harness Optimization for Scene Graph Generation / 解决问题所在：基于根本原因的智能代理利用优化，用于场景图生成
+
+**Date**: 2026-11-20 | **arXiv**: [2611.27529v1](http://arxiv.org/abs/2611.27529v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.27529v1)
+
+**Categories**: cs.CV, cs.AI, cs.MA
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Scene graph generation (SGG) aims to detect objects in an image and predict the relationships between them. The standard PredCls, SGCls, and SGDet settings show how much performance drops without ground-truth boxes and labels, but not where or why a model fails. Knowing this would allow fixing a model where it fails, without retraining. We propose RoHa-SGG (Root-cause-guided Harness optimization for SGG), which extends agentic harness optimization to SGG. It optimizes the harness, the inference code around a frozen SGG model. RoHa-SGG has two main LLM agents. A root-cause analysis (RCA) agent finds the components where the model fails and diagnoses why, and a proposer agent searches for a harness that fixes these causes. We evaluate RoHa-SGG on Visual Genome and PSG with representative two-stage, one-stage, and multimodal-LLM SGG models. The analysis shows that the components where ground-truth triplets are lost differ across models and datasets. RoHa-SGG improves every metric on all five model-dataset combinations. Graph-constrained R@100 and mR@100 rise by up to 15.8 and 26.4 points for the multimodal LLM and by up to 3.6 and 10.1 points for the two-stage and one-stage models. With root-cause guidance, the harness search reaches the final score of an unguided search up to three times faster.
+
+场景图生成 (SGG) 的目标是检测图像中的对象并预测它们之间的关系。标准的 PredCls、SGCls 和 SGDet 设置显示了在没有真实值框和标签的情况下性能下降的幅度，但没有显示模型在什么地方或为什么会失败。了解这一点将有助于在不进行再训练的情况下修复模型的缺陷。我们提出了 RoHa-SGG（用于 SGG 的根源导向型 Harness 优化），它将智能体 Harness 优化扩展到了 SGG。它优化了线束，即围绕冻结的 SGG 模型编写的推理代码。RoHa-SGG 有两个主要的 LLM 代理。根因分析（RCA）代理找到模型失败的组件并诊断原因，提议代理则搜索可以解决这些原因的Harness。我们使用具有代表性的两阶段、单阶段和多模态 LLM SGG 模型，在 Visual Genome 和 PSG 上对 RoHa-SGG 进行了评估。分析表明，在不同模型和数据集中，丢失真实标签三元组的组件各不相同。RoHa-SGG 在所有五种模型-数据集组合上都改善了各项指标。对于多模态 LLM，图约束 R@100 和 mR@100 分别最多提高了 15.8 和 26.4 个百分点；对于两阶段和单阶段模型，则分别最多提高了 3.6 和 10.1 个百分点。在根源指导下，Harness 搜索达到无指导搜索的最终得分的速度最多可快三倍。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-11-21 (6 papers)</b></summary>
 
 # arXiv Agent Papers - 2026-11-21
