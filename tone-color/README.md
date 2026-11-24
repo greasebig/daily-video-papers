@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-11-24](papers/2026-11-24.md) - 2 papers
 - [2026-11-22](papers/2026-11-22.md) - 2 papers
 - [2026-11-20](papers/2026-11-20.md) - 2 papers
 - [2026-11-19](papers/2026-11-19.md) - 1 papers
@@ -129,6 +130,52 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-11-24 (2 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-11-24
+
+**Paper Count**: 2
+
+---
+
+## 1. Rate-Quality-Energy Convex Hull for High Dynamic Range Adaptive Video Streaming / 用于高动态范围自适应视频流的速率-质量-能量凸包
+
+**Date**: 2026-11-21 | **arXiv**: [2611.28817v1](http://arxiv.org/abs/2611.28817v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.28817v1)
+
+**Categories**: eess.IV, cs.MM
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+High Dynamic Range (HDR) video introduces substantially higher decoding complexity and energy consumption than Standard Dynamic Range (SDR), yet most adaptive streaming pipelines still rely on bitrate ladders optimized using SDR-oriented metrics such as VMAF. These ladders fail to capture HDR-specific perceptual behavior and ignore decoder-side energy, resulting in energetically inefficient operating points. This work proposes a rate-quality-energy convex-hull optimization framework that jointly considers bitrate, HDR-aware perceptual quality (HDRVMAF), and client-side processing energy, including decoding and upscaling. Experiments on twelve 4K HDR sequences from the LIVE HDR Video Quality Assessment Database evaluate 72 representations per clip and demonstrate that traditional VMAF-optimized ladders frequently select high-resolution encodes that become dominated once energy is accounted for. Compared to the Default HLS ladder, our HDR-aware method achieves substantial bitrate savings of up to 54.34% at equal HDRVMAF, while yielding relative client-side energy reductions of up to 43.10% under higher energy weighting. These results demonstrate the effectiveness of the proposed framework as a practical foundation for constructing HDR bitrate ladders that explicitly expose and control perceptual quality-energy trade-offs.
+
+与标准动态范围 (SDR) 视频相比，高动态范围 (HDR) 视频的解码复杂度更高，能耗也更大，但大多数自适应流媒体管道仍然依赖于使用面向 SDR 的指标（如 VMAF）优化的比特率阶梯。这些阶梯无法捕捉HDR特有的感知行为，并且忽视了解码器端的能耗，导致工作点在能耗方面效率低下。本研究提出了一种码率-质量-能耗凸包优化框架，该框架综合考虑了码率、HDR感知质量（HDRVMAF）以及客户端处理能耗（包括解码和上变换）。对来自LIVE HDR视频质量评估数据库的十二个4K HDR序列进行的实验评估了每个片段的72个表示，并表明传统的VMAF优化码率阶梯经常选择高分辨率编码，一旦考虑能耗，这些编码就会成为主导。与默认HLS阶梯相比，我们的HDR感知方法在HDRVMAF相同时实现了高达54.34%的比特率节省，同时在更高的能量权重下实现了高达43.10%的客户端相对能量节省。这些结果表明，所提出的框架作为构建HDR比特率阶梯的实用基础是有效的，这些阶梯明确揭示并控制感知质量与能耗之间的权衡。
+
+</details>
+
+---
+
+## 2. EID-Net: Endoscopic Illumination-aware Degradation Correction Network / EID-Net：内镜照明感知降质校正网络
+
+**Date**: 2026-11-20 | **arXiv**: [2611.28198v1](http://arxiv.org/abs/2611.28198v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.28198v1)
+
+**Categories**: eess.IV, cs.CV
+
+**Code**: https://github.com/JUNZHIlius/EID-Net.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Endoscopic images captured under complex illumination conditions often suffer from spatially non-uniform exposure degradation, including local under-exposure, over-exposure, and illumination-induced color variation. These degradations are usually entangled with tissue structures, making it challenging for general-purpose low-light enhancement and image restoration methods to improve visibility while preserving local structural and chromatic cues. In this paper, we propose EID-Net, an endoscopic illumination-aware degradation correction network for structure-preserving endoscopic illumination correction. Rather than treating illumination correction as a global intensity adjustment, EID-Net explicitly extracts an endoscopy-oriented degradation prior from the input image to characterize illumination-related variations in a unified representation. This prior is then introduced into the decoder through an illumination-modulated transposed attention mechanism, where it adaptively guides feature aggregation by modulating the key-value feature subspace. Extensive experiments on CEC, Endo4IE, EndoVis17, and EndoVis18 datasets demonstrate that EID-Net performs favorably against recent endoscopic enhancement and general image restoration methods. The code is available at https://github.com/JUNZHIlius/EID-Net.
+
+在复杂照明条件下采集的内窥镜图像通常会受到空间不均匀曝光退化的影响，包括局部欠曝、过曝和照明引起的色彩变化。这些退化通常与组织结构交织在一起，使得通用低光增强和图像恢复方法难以在改善可见性的同时保留局部结构和色彩特征。本文提出了 EID-Net，这是一个内镜照明感知退化校正网络，用于实现结构保持的内镜照明校正。EID-Net 不将照明校正视为全局强度调整，而是从输入图像中显式提取面向内镜的退化先验，以统一表示形式表征与照明相关的变化。然后，通过照明调制转置注意力机制将该先验引入解码器，其中该先验通过调制键值特征子空间来自适应地引导特征聚合。对CEC、Endo4IE、EndoVis17和EndoVis18数据集进行的广泛实验表明，EID-Net的性能优于近期的内镜增强和通用图像修复方法。代码可在 https://github.com/JUNZHIlius/EID-Net 获取。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-11-22 (2 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-11-22
