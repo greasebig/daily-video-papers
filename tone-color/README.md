@@ -7,6 +7,7 @@
 ## 📚 论文索引
 
 <!-- PAPERS_INDEX_START -->
+- [2026-11-25](papers/2026-11-25.md) - 2 papers
 - [2026-11-24](papers/2026-11-24.md) - 2 papers
 - [2026-11-22](papers/2026-11-22.md) - 2 papers
 - [2026-11-20](papers/2026-11-20.md) - 2 papers
@@ -130,6 +131,50 @@
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-11-25 (2 papers)</b></summary>
+
+# arXiv Tone & Color Papers - 2026-11-25
+
+**Paper Count**: 2
+
+---
+
+## 1. Towards a Multimodal Aesthetic Agent for Photographic Reference Grading / 用于摄影参考分级的多模式美容剂
+
+**Date**: 2026-11-24 | **arXiv**: [2611.32299v1](http://arxiv.org/abs/2611.32299v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.32299v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reference-guided photographic color grading helps users realize their aesthetic intent by selectively drawing on the color and tonal characteristics of a reference photograph. Doing so requires understanding which characteristics users wish to adopt and translating these preferences into controllable edits. However, image-only reference methods align overall appearance without instruction-grounded selection, while pixel-space generative editors typically produce flattened images without editable parameters, limiting subsequent refinement. To address these challenges, we introduce JarvisAura, a multimodal aesthetic agent that formulates photographic color grading as structured decision-making in an editable parameter space. JarvisAura offers three key advantages: (1) an aesthetic agent paradigm that integrates visual attribute perception, strategy-level reasoning, and parameterized execution for interpretable and controllable photographic color grading; (2) a unified reasoning-to-execution pipeline that connects aesthetic planning with backend rendering and editable parameter refinement; and (3) a three-stage training strategy comprising Parameter-Grounded Continual Pre-Training for parameter-appearance grounding, Reference-Grounded Supervised Fine-Tuning for reference-guided reasoning and parameter decisions, and Reference-Aligned Group Relative Policy Optimization for rendered-outcome refinement with multidimensional rewards and dynamic data derivation. On Ref-Bench, JarvisAura achieves the best scores among methods with results across reported automatic metrics and a 74% human-rated task-success rate, exceeding GPT-Image-2.5 by 9 percentage points.
+
+参考引导的摄影色彩分级可以帮助用户通过有选择地利用参考照片的颜色和色调特征来实现他们的审美意图。这样做需要了解用户希望采用哪些特征，并将这些偏好转化为可控的编辑。然而，仅图像参考方法可以在没有基于指令的选择的情况下对齐整体外观，而像素空间生成编辑器通常会生成没有可编辑参数的扁平图像，从而限制了后续的细化。为了应对这些挑战，我们引入了 JarvisAura，这是一种多模式美学代理，可将摄影色彩分级制定为可编辑参数空间中的结构化决策。 JarvisAura 提供了三个关键优势：（1）美学代理范式，集成了视觉属性感知、策略级推理和参数化执行，以实现可解释和可控的摄影色彩分级； （2）统一的推理到执行管道，将美学规划与后端渲染和可编辑参数细化连接起来； （3）三阶段训练策略，包括用于参数外观基础的参数接地持续预训练、用于参考引导推理和参数决策的参考接地监督微调，以及用于通过多维奖励和动态数据推导来细化渲染结果的参考对齐组相对策略优化。在 Ref-Bench 上，JarvisAura 在各种方法中取得了最佳分数，其结果涵盖了报告的自动指标和 74% 的人工评价任务成功率，比 GPT-Image-2.5 高出 9 个百分点。
+
+</details>
+
+---
+
+## 2. MediaStormBench-CameraLog: Can Multimodal Models Identify a Camera's Log Curve? / MediaStormBench-CameraLog：多模态模型能否识别相机的对数曲线？
+
+**Date**: 2026-11-24 | **arXiv**: [2611.32172v1](http://arxiv.org/abs/2611.32172v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.32172v1)
+
+**Categories**: cs.CV
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+MediaStormBench is a multimodal benchmark for real-world film and television production, with each subset drawn from MediaStorm's day-to-day work. We release its first subset, MediaStormBench-CameraLog (CameraLogBench), on a common foundational task in footage ingest and initial color grading: identifying the Log curve of a clip without metadata. Cameras record Log footage by compressing a wide range of scene light into code values with a vendor-defined logarithmic curve, and color can be restored correctly only once that curve is known. The curve, however, is recorded only in file metadata, easily lost in transcoding and team hand-offs. A colorist then has to try candidate curves one by one against a waveform scope, and a wrong choice shifts the tones and colors of the whole clip. Recovering the curve from the image alone is challenging, because vendor curves cluster tightly in code value and are coupled with unknown exposure. CameraLogBench is built on professionally shot footage and tests whether multimodal models can identify the curve, with a probe that removes the correct option to expose guessing from priors. Because every candidate curve is strictly defined by a published vendor formula, we derive four controls from one implementation of these formulas: graded negatives, synthetic frames of identical scenes, in-context specification digests, and a training-free formula baseline, which together decouple semantic priors from photometric measurement. Across 11 models, real-footage accuracy barely exceeds always guessing the most frequent curve; when the correct option is removed, models almost never abstain, revealing heavy reliance on scene and brand priors. Supplying the vendor specification sharply improves recognition on calibrated charts but hardly helps on natural images without a photometric reference, exposing a gap between reading a specification and measuring pixels.
+
+MediaStormBench 是现实世界电影和电视制作的多模式基准，每个子集都取自 MediaStorm 的日常工作。我们发布了它的第一个子集 MediaStormBench-CameraLog (CameraLogBench)，用于素材摄取和初始颜色分级中的常见基础任务：识别没有元数据的剪辑的 Log 曲线。摄像机通过使用供应商定义的对数曲线将各种场景光压缩为代码值来记录日志镜头，并且只有在已知该曲线后才能正确恢复颜色。然而，该曲线仅记录在文件元数据中，很容易在转码和团队交接中丢失。然后，调色师必须在波形范围内逐条尝试候选曲线，错误的选择会改变整个剪辑的色调和颜色。仅从图像中恢复曲线具有挑战性，因为供应商曲线在代码值中紧密聚集，并且与未知的暴露相结合。 CameraLogBench 基于专业拍摄的镜头构建，并测试多模态模型是否可以识别曲线，并使用探针删除正确的选项以暴露先验的猜测。由于每条候选曲线都是由已发布的供应商公式严格定义的，因此我们从这些公式的一个实现中得出四种控制：分级负片、相同场景的合成帧、上下文规范摘要和免训练公式基线，它们一起将语义先验与光度测量解耦。在 11 个模型中，真实镜头的准确度勉强超过了总是猜测最频繁的曲线；当正确的选项被删除时，模特几乎从不放弃，这表明他们对场景和品牌先验的严重依赖。提供供应商规格极大地提高了对校准图表的识别，但对没有光度参考的自然图像几乎没有帮助，暴露了读取规格和测量像素之间的差距。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-11-24 (2 papers)</b></summary>
 
 # arXiv Tone & Color Papers - 2026-11-24
