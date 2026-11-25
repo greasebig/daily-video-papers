@@ -5,6 +5,7 @@ Daily updates of world model related arXiv papers.
 ## Papers Index
 
 <!-- PAPERS_INDEX_START -->
+- [2026-11-25](papers/2026-11-25.md) - 21 papers
 - [2026-11-24](papers/2026-11-24.md) - 26 papers
 - [2026-11-23](papers/2026-11-23.md) - 7 papers
 - [2026-11-21](papers/2026-11-21.md) - 3 papers
@@ -197,6 +198,358 @@ Daily updates of world model related arXiv papers.
 ## Daily Papers
 
 <!-- PAPERS_CONTENT_START -->
+<details><summary><b>2026-11-25 (21 papers)</b></summary>
+
+# arXiv World Model Papers - 2026-11-25
+
+**Paper Count**: 21
+
+---
+
+## 1. iWAM: Efficient Action Prediction from World Models without Explicit Future Prediction / iWAM：无需显式未来预测的世界模型的高效行动预测
+
+**Date**: 2026-11-24 | **arXiv**: [2611.33141v1](http://arxiv.org/abs/2611.33141v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.33141v1)
+
+**Categories**: cs.RO, cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World-action models (WAMs) build policies on pretrained video-generation models, on the premise that predicting how a scene evolves helps determine how to act. However, generating future scenes is expensive for real-time control. This motivates efficient proxies for future imagination, but how to train such proxies without sacrificing action-prediction quality remains unclear. An effective proxy need not generate a high-resolution frame; it only needs to provide enough information to distinguish between possible futures. This leads to the design principle behind iWAM: rather than denoising an entire future frame, can we condition the action policy on intermediate features from a single video-model evaluation? We show that the answer is yes. Exploiting the reversible dynamics of flow-matching models, we invert each training future into the corresponding latent noise vector. However, a single velocity evaluation at this latent does not necessarily yield informative features for action prediction. We therefore learn a bidirectional flow map that amortizes future-generation computation, enabling a single model evaluation to provide effective conditioning features. At inference, we sample a latent noise vector from the prior and condition the policy using just one video-backbone forward pass. Across simulated benchmarks and real robots, iWAM recovers the generalization benefits of WAMs while substantially reducing its inference cost.
+
+世界-行动模型（WAM）基于预训练的视频生成模型构建策略，其前提是预测场景的演变有助于确定如何行动。然而，对于实时控制而言，生成未来场景的成本很高。这促使人们开发用于想象未来的高效代理，但如何在不牺牲动作预测质量的情况下训练此类代理仍不清楚。有效的代理不需要生成高分辨率的帧；它只需要提供足够的信息来区分可能的未来。这引出了iWAM背后的设计原则：我们是否可以根据单次视频模型评估得到的中间特征来调整动作策略，而不是对整个未来帧进行去噪？我们证明答案是肯定的。我们利用流匹配模型的可逆动态，将每个训练未来反演为对应的潜在噪声向量。然而，在此潜在空间进行一次速度评估，并不一定能产生用于动作预测的信息性特征。因此，我们学习了一个双向流映射，它摊销了未来生成的计算量，使单次模型评估能够提供有效的条件特征。在推理时，我们从先验分布中采样一个潜在噪声向量，并仅使用一次视频主干网络前向传播来对策略进行条件化。在模拟基准和真实机器人中，iWAM 恢复了 WAM 的泛化优势，同时大大降低了推理成本。
+
+</details>
+
+---
+
+## 2. Hybrid AI for AI-Native RAN Control: A Functional Perspective / 用于 AI 原生 RAN 控制的混合 AI：功能视角
+
+**Date**: 2026-11-24 | **arXiv**: [2611.33035v1](http://arxiv.org/abs/2611.33035v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.33035v1)
+
+**Categories**: cs.AI
+
+**Code**: https://github.com/pegahani/Hybrid-AI-RAN-Survey.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+AI-native radio access network (RAN) control involves interdependent decisions across network entities, protocol layers, and timescales. Understanding how AI and conventional methods can jointly support these decisions requires a common basis for comparing their functional roles. This survey introduces a technique-agnostic taxonomy of RAN decision-making organized around four complementary capabilities: Representation and Reasoning, Prediction and Simulation, Adaptive Control, and Decision Synthesis. These capabilities are defined by their roles in the control process, independently of the techniques used to implement them. Through this perspective, we examine representative AI and model-based approaches, including foundation models, world models, reinforcement learning, and optimization. We then apply the taxonomy to representative RAN control solutions across slow, medium, fast, and cross-timescale applications to identify which capabilities they implement and how these capabilities are combined in hybrid AI systems. We also review datasets, benchmarks, simulators, digital twins, and experimental platforms according to their support for the decision-making process and reproducible evaluation. The review highlights a gap between the availability of resources for closed-loop experimentation and the standardization of tasks, metrics, and evaluation protocols needed for meaningful comparisons.Finally, we identify research directions for hybrid AI in AI-native RAN, including capability integration, multi-agent and cross-timescale coordination, constraint handling, and reproducible closed-loop evaluation. A curated list of surveyed works and evaluation resources is available at https://github.com/pegahani/Hybrid-AI-RAN-Survey.
+
+AI 原生无线接入网 (RAN) 控制涉及跨网络实体、协议层和时间尺度的相互依存决策。要了解人工智能和传统方法如何共同支持这些决策，就需要一个共同的基础来比较它们的功能作用。本综述介绍了一种与技术无关的RAN决策分类法，该分类法围绕四种相辅相成的能力展开：表征与推理、预测与模拟、自适应控制和决策合成。这些能力由其在控制过程中的作用来定义，与用于实现它们的技术无关。通过这一视角，我们研究了具有代表性的AI和基于模型的方法，包括基础模型、世界模型、强化学习和优化。然后，我们将该分类法应用于慢速、中速、快速和跨时间尺度的应用中的代表性RAN控制解决方案，以确定它们实现了哪些能力，以及这些能力如何在混合人工智能系统中结合起来。我们还根据数据集、基准、模拟器、数字孪生和实验平台对决策过程的支持以及可重复性评估情况，对它们进行了评述。该综述强调了闭环实验的资源可用性与进行有意义的比较所需的任务、指标和评估协议标准化之间存在差距。最后，我们确定了混合AI在AI原生RAN中的研究方向，包括
+
+</details>
+
+---
+
+## 3. DynaMimic: A Physics-Informed World Model for Humanoid Motion Tracking / DynaMimic：一种用于人形机器人运动跟踪的物理信息世界模型
+
+**Date**: 2026-11-24 | **arXiv**: [2611.32944v1](http://arxiv.org/abs/2611.32944v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.32944v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Whole-body motion tracking enables humanoid robots to reproduce diverse skills from human demonstrations. Existing model-free reinforcement learning methods either distill motion specialists into a single policy at the cost of performance or train a generalist policy directly using cluster-scale computation. SuperMimic reduces this computational cost through a differentiable world model that implicitly learns the physics shared across motions by predicting the next state from the current state and action. However, this implicit formulation may not fully capture the underlying physical processes. Errors around changes of support can accumulate over imagined rollouts used to train the tracking policy. To address this challenge, we introduce DynaMimic, a differentiable world model that explicitly incorporates shared physics into state prediction. Specifically, its network predicts a contact wrench at each candidate support link and a residual generalized force. DynaMimic then uses these predictions to compute the next state through closed-form Lagrangian forward dynamics. Across 60 full LAFAN1 motions, DynaMimic reduces mean per-joint position error (MPJPE) by 18.6% relative to SuperMimic. For terrain tracking, we give both methods the same local height maps. Relative to terrain-conditioned SuperMimic, DynaMimic reduces MPJPE by 14.9% on A3 Parkour (66.15 to 56.28~mm) and by 10.8% on GRAIL terrain clips (141.88 to 126.57~mm). On a real A3 humanoid, the learned policies can perform diverse skills, such as floor recovery, cartwheel and a box vault.
+
+全身运动跟踪使人形机器人能够模仿人类的示范动作，再现各种技能。现有的无模型强化学习方法要么以牺牲性能为代价将运动专家提炼为单一策略，要么直接使用集群规模的计算来训练通用策略。SuperMimic 通过一个可微世界模型降低了这种计算成本，该模型通过根据当前状态和动作预测下一个状态，隐式地学习各种动作所共有的物理特性。然而，这种隐式建模可能无法完全捕捉到潜在的物理过程。在用于训练跟踪策略的想象性 rollout 中，支撑变化方面的误差可能会累积。为了应对这一挑战，我们推出了DynaMimic，这是一种可微化的世界模型，它将共有的物理规律明确地纳入状态预测中。具体而言，其网络预测每个候选支撑连杆处的接触扳力和残余广义力。然后，DynaMimic使用这些预测通过闭合形式的拉格朗日正向动力学计算下一个状态。在60个完整的LAFAN1动作中，与SuperMimic相比，DynaMimic将平均单关节位置误差（MPJPE）降低了18.6%。对于地形跟踪，我们为两种方法提供了相同局部高度图。与受地形条件约束的SuperMimic相比，DynaMimic在A3 Parkour上的MPJPE降低了14.9%（从66.15毫米降至56.28毫米），在GRAIL地形片段上的MPJPE降低了10.8%（从141.88毫米降至126.57毫米）。在真实的A3人形机器人上，所学习的策略可以
+
+</details>
+
+---
+
+## 4. Motion Conditioned World Modeling for Embodied Visual Tracking / 用于具身视觉跟踪的运动条件化世界建模
+
+**Date**: 2026-11-24 | **arXiv**: [2611.32900v1](http://arxiv.org/abs/2611.32900v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.32900v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+World models support embodied decision-making by predicting future environment states. In embodied visual tracking, uncertain target motion and robot-induced viewpoint changes jointly affect visual observations, making future-state prediction challenging. We propose Motion-Conditioned World Modeling, which incorporates predicted target-motion distributions and robot ego-motion into latent state transitions. A Geometry--Progress module jointly models geometric paths and single-step travel distances through shared motion modes and path-conditioned progress distributions. This formulation captures uncertainty in route selection and motion progress while preserving their dependence. Action-induced coordinate transformations express predicted paths in the next robot frame, providing geometrically grounded conditions for future visual-state prediction. Future visual feature reconstruction supervises the motion predictor through the conditioned transition branch, linking explicit motion representations to subsequent observations. The model is jointly optimized with motion likelihood, feature reconstruction, and expert-action supervision, enabling the tracking policy to combine visual context with predictive motion cues.Experiments on three embodied tracking benchmarks demonstrate improved tracking performance and cross-environment generalization with a lightweight $0.5$B backbone.
+
+世界模型通过预测未来的环境状态来支持具身决策。在具身视觉跟踪中，不确定的目标运动和机器人引起的视点变化共同影响视觉观测，使得未来状态的预测具有挑战性。我们提出了运动条件世界建模，该建模将预测的目标运动分布和机器人自运动纳入潜在状态转换。几何-进度模块通过共享运动模式和路径条件进度分布，共同建模几何路径和单步行进距离。这种建模方式捕捉了路线选择和运动进展中的不确定性，同时保留了它们之间的依赖关系。动作诱导的坐标变换在下一个机器人帧中表达预测路径，为未来的视觉状态预测提供几何上合理的条件。未来视觉特征重建通过条件化转移分支对运动预测器进行监督，将显式运动表示与后续观测联系起来。该模型通过运动似然性、特征重建和专家动作监督进行联合优化，使跟踪策略能够将视觉上下文与预测性运动线索相结合。在三个具身跟踪基准上的实验表明，使用轻量级$0.5$B主干网络，跟踪性能和跨环境泛化能力均得到提升。
+
+</details>
+
+---
+
+## 5. Interactive Neural Computers / 交互式神经计算机
+
+**Date**: 2026-11-24 | **arXiv**: [2611.32811v1](http://arxiv.org/abs/2611.32811v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.32811v1)
+
+**Categories**: cs.AI, cs.NE, cs.SC
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Computers and their interfaces are usually treated as fixed, so a person, or increasingly an AI agent, must adapt to whatever the operating system presents. This is limiting when someone needs a different workflow, or an interface suited to hands-free use or a disability. We explore an overlooked alternative. Rather than training an agent to operate an existing computer, we train a generative model to be the computer, predicting each next screen from past screens and the user's mouse and keyboard actions. Treating a desktop as an interactive world model raises problems that natural-video world models largely avoid. Without a camera pose to index memory, the model must remember content that has left the screen without any geometric cues. Arithmetic in a terminal has to be exactly right, not merely plausible. Small interface text must also stay legible at interactive frame rates. Our Interactive Neural Computer is structured like a Neural Turing Machine and starts to address these problems with three modules trained end to end from pixels and actions. A surprise-gated slot memory, supervised by latent next-frame prediction (MEMORY-JEPA), stores what is off screen. An exploratory query bridge brings in the reasoning of a pretrained VLM, and a residual renderer predicts only the latent changes between frames. In long closed-loop rollouts, our model recalls occluded files in 64.2% of trials (chance is 33.3%), compared with at most 56.0% for recurrent and sliding-window baselines. It also raises terminal-text OCR accuracy from 1.3% to 50.1%. Finally, because the memory is explicit, it can be transplanted at test time to causally change what the model renders.
+
+计算机及其界面通常被视为固定的，因此人（或者说越来越多地是人工智能代理）必须适应操作系统所呈现的一切。当有人需要不同的工作流程，或者需要适合免提使用或残障人士使用的界面时，这就显得有局限性。我们探索了一种被忽视的替代方案。我们不是训练一个代理来操作现有的计算机，而是训练一个生成式模型来充当计算机，根据过去的屏幕以及用户的鼠标和键盘操作来预测每个下一个屏幕。将桌面视为交互式世界模型会带来一些问题，而自然视频世界模型在很大程度上可以避免这些问题。如果没有摄像头姿态来索引记忆，模型就必须记住已经离开屏幕且没有任何几何线索的内容。终端中的算术必须完全正确，而不仅仅是看起来合理。小号的界面文本在交互式帧率下也必须保持清晰可读。我们的交互式神经计算机的结构类似于神经图灵机，并开始通过三个从像素和操作端到端训练的模块来解决这些问题。由潜在下一帧预测（MEMORY-JEPA）监督的惊喜门控槽位记忆存储屏幕外的内容。一个探索性查询桥接引入了预训练 VLM 的推理能力，而一个残差渲染器仅预测帧之间的潜在变化。在长闭环展开中，我们的模型在 64.2% 的试验中能够回忆起被遮挡的文件（随机概率为 33.3%），而循环和滑动窗口基线的最高成功率仅为 56.0%。
+
+</details>
+
+---
+
+## 6. Simulator-as-Proxy World Model for Robot Manipulation / 用于机器人操作的模拟器即代理世界模型
+
+**Date**: 2026-11-24 | **arXiv**: [2611.32786v1](http://arxiv.org/abs/2611.32786v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.32786v1)
+
+**Categories**: cs.RO, cs.CV, cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Video world models for robots are increasingly conditioned on a simulated or rendered proxy of the scene, on the assumption that the video will show what the proxy shows. Testing this assumption requires a proxy whose state is explicit and can be perturbed. We present SimPWM (Simulator-as-Proxy World Model): given a calibrated camera, it represents, from the first frame alone, the robot by its 3D model and the objects the gripper may touch as 3D points; a rule-based simulator with no trained parameters moves them under the actions, and a video model renders the result. SimPWM returns the realistic video together with the simulated state. We then freeze the simulated objects while the arm moves as recorded and check whether the video still shows the object lifted. On DROID episodes from unseen setups, the answer differs for the arm and for the objects. With each of three base video models, the arm follows the proxy (robot IoU 0.75-0.78, against at most 0.69 for end-to-end models); rendering the robot alone already gives this. What the simulated objects add is the object state: against a robot-only proxy, they cut missed pick-ups from 54% to 38%, and the video follows them only with some base models: on rigid objects, freezing them lowers the lift rate of MiniMax-H3, fine-tuned on episodes whose simulation agrees with the real video, from 42% to 10%, but that of LTX-2.3, trained on the same episodes, only from 57% to 49%, as if it inferred the grasp from the arm motion; more than half of the remaining lifts of MiniMax-H3 are of cloth and rope, which the simulator carries rigidly. With any base model, the simulated state records what the simulation did; under perturbed actions, a video that disagrees with it reveals that the video ignores the simulated state.
+
+机器人的视频世界模型越来越依赖于场景的模拟或渲染代理，其前提是视频将显示代理所显示的内容。要检验这一假设，就需要一个状态明确且可以受到扰动的代理。我们提出了SimPWM（模拟器作为代理的世界模型）：给定一个经过校准的摄像头，它仅从第一帧开始，就能够用3D模型表示机器人，并将夹爪可能接触到的物体表示为3D点；一个没有经过参数训练的基于规则的模拟器在动作下移动它们，然后一个视频模型渲染结果。SimPWM会返回逼真的视频以及模拟状态。然后，我们冻结模拟对象，同时机械臂按记录移动，并检查视频是否仍显示被抬起的对象。在来自未见过的设置的 DROID 情景中，机械臂和物体的答案各不相同。使用三个基本视频模型中的每一个，机械臂都遵循代理（机器人的IoU为0.75-0.78，而端到端模型的IoU最多为0.69）；仅渲染机器人就已经实现了这一点。模拟对象所增加的是对象状态：与仅包含机器人的代理相比，它们将未成功抓取的情况从 54% 降至 38%，并且只有在某些基础模型中，视频才会跟随它们：对于刚性对象，将其冻结可使 MiniMax-H3 的抓取率（在模拟与真实视频一致的情节上进行了微调）从 42% 降至 10%，但对于在相同情节上训练的 LTX-2.3，其抓取率仅从 57% 降至 49%，就好像它从机械臂的运动中推断出抓取动作一样；更多
+
+</details>
+
+---
+
+## 7. Learning World Models through Contrastive Identification of Actions / 通过行动的对比识别来学习世界模型
+
+**Date**: 2026-11-24 | **arXiv**: [2611.32776v1](http://arxiv.org/abs/2611.32776v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.32776v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Latent world models enable goal-directed planning from offline visual data, but prediction alone does not specify which action-related distinctions their representations should preserve. Inverse dynamics provides auxiliary supervision, yet squared-error action regression rewards additional information only through changes in the conditional action mean. We propose Contrastive Identification of Actions (CIA), which identifies the executed action among alternatives sampled from a history-conditioned behavior proposal. Comparing actions plausible in the same context targets information supplied by the next latent beyond history. Under exact behavior matching, we show that CIA can reward action information that leaves optimal inverse-regression error unchanged, and verify this distinction through a controlled learning example. CIA achieves higher planner-averaged mean success than the base world model and a regression inverse-dynamics baseline across five visual control benchmarks, without modifying the planner.
+
+隐式世界模型能够根据离线视觉数据进行目标导向的规划，但仅靠预测并不能确定其表征应保留哪些与动作相关的区分。逆动力学提供了辅助监督，但平方误差动作回归仅通过条件动作均值的变化来奖励额外信息。我们提出了动作对比识别（CIA），它从受历史条件约束的行为建议中抽样的备选方案中识别出已执行的动作。比较在同一情境下合理的动作，其目标是下一个超出历史的潜在变量所提供的信息。在精确行为匹配的情况下，我们展示了CIA能够奖励使最优逆回归误差保持不变的动作信息，并通过一个受控学习示例验证了这一区分。在五个视觉控制基准中，CIA 在不修改规划器的情况下，实现了比基准世界模型和回归逆动力学基线更高的规划器平均成功率。
+
+</details>
+
+---
+
+## 8. DiffGR00T: Execution-Aware Differentiable Training for Humanoid Whole-Body Vision-Language-Action Models / DiffGR00T：面向人形机器人全身视觉-语言-动作模型的执行感知型可微分训练
+
+**Date**: 2026-11-24 | **arXiv**: [2611.32665v1](http://arxiv.org/abs/2611.32665v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.32665v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Vision-language-action (VLA) models have achieved strong results in arm-centric manipulation, yet humanoid whole-body control (WBC) requires dynamic balance and tightly coupled full-body coordination. Existing hierarchical humanoid VLAs typically decouple motion generation from physical execution, leaving tracking and balance errors unable to directly optimize the VLA generator. We propose DiffGR00T, an end-to-end differentiable training framework that couples GR00T N1.7 with SONIC, a pretrained whole-body behavior foundation model. To enable execution-aware differentiable training, we replace the non-differentiable simulator with a learned, action-conditioned world model, allowing multi-step body-execution losses to backpropagate through the frozen whole-body controller and the flow-matching sampler directly into the VLA action head. On four HumanoidArena simulation tasks, DiffGR00T improves average task success by 12.5 percentage points over the supervised base VLA (59.2% to 71.7%), demonstrating that execution-aware gradients effectively align high-level motion generation with closed-loop whole-body dynamics.
+
+视觉-语言-动作（VLA）模型在以手臂为主的操纵方面取得了出色的成果，但人形机器人全身控制（WBC）需要动态平衡和紧密耦合的全身协调。现有的分层人形VLA通常将运动生成与物理执行解耦，导致跟踪和平衡误差无法直接优化VLA生成器。我们提出了DiffGR00T，这是一个端到端的可微化训练框架，将GR00T N1.7与预训练的全身行为基础模型SONIC相结合。为了实现执行感知可微化训练，我们将不可微化的模拟器替换为经过学习的、以动作条件化的世界模型，从而使多步体执行损失能够通过冻结的全身体控制器和流匹配采样器直接反向传播到VLA动作头。在四项HumanoidArena模拟任务中，与有监督的基准VLA相比，DiffGR00T将平均任务成功率提高了12.5个百分点（从59.2%提高到71.7%），这表明执行感知梯度能够有效地将高层次运动生成与闭环全身动力学相协调。
+
+</details>
+
+---
+
+## 9. Economic World Model / 经济世界模型
+
+**Date**: 2026-11-24 | **arXiv**: [2611.32663v1](http://arxiv.org/abs/2611.32663v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.32663v1)
+
+**Categories**: cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Can artificial intelligence reproduce the economic dynamics that emerge as households, firms and governments interact and adapt through markets and institutions? To answer this question, we define an economic world model (EWM) as an agent's internal representation of how an economic system works, enabling counterfactual simulation and decision-making under resource constraints. We then propose a general framework for studying EWMs that links three tasks: simulating agent behaviour, learning economic transitions and systematically evaluating the dynamics. As an initial implementation, we learn household policies from microeconomic data and calibrate a structural economic transition model using macroeconomic data, linking individual decisions to aggregate dynamics. Our micro-to-macro evaluation framework compares simulated individual actions and group distributions with observed microdata and assesses macroeconomic dynamics through forecasting and counterfactual experiments. Results show that simulated and observed household consumption distributions overlap by 94.9%, while EWM forecasts closely track real GDP and several other aggregate levels. In government-borrowing counterfactuals, the EWM reproduces the benchmark life-cycle model's short-run transmission from borrowing to consumption. For ex ante planning, the EWM enables an LLM agent to achieve 10.29% higher simulated GDP under the epidemic shock than direct LLM decisions. This initial EWM is only a starting point. We invite economists and AI researchers to build a stronger EWM together. Economists can contribute richer economic models and knowledge, while AI researchers can develop stronger data-driven methods for simulating agent behaviour and learning economic transitions. Together, we aim not only to reproduce real economic dynamics, but also to discover and test new mechanisms that support better decisions and benefit society.
+
+人工智能能否再现家庭、企业和政府通过市场和机构进行互动和适应时所产生的经济动态？为了回答这个问题，我们将经济世界模型（EWM）定义为代理人对经济系统运作方式的内部表征，它能够在资源受限的情况下进行反事实模拟和决策。然后，我们提出了一个研究EWM的一般框架，该框架将三项任务联系起来：模拟主体行为、学习经济转型和系统性地评估动态。作为初步实施，我们从微观经济数据中学习家庭政策，并使用宏观经济数据校准结构性经济转型模型，将个体决策与总体动态联系起来。我们的微观到宏观评估框架将模拟的个体行为和群体分布与观察到的微观数据进行比较，并通过预测和反事实实验来评估宏观经济动态。结果表明，模拟的家庭消费分布与观察到的家庭消费分布重叠94.9%，而EWM的预测与实际GDP及其他几个总量指标的走势密切吻合。在政府借贷的反事实情景中，EWM 再现了基准生命周期模型中从借贷到消费的短期传导过程。对于事前规划，在疫情冲击下，EWM使LLM代理实现的模拟GDP比直接LLM决策高出10.29%。这个最初的EWM只是一个起点。我们
+
+</details>
+
+---
+
+## 10. DexWAC: A Unified World-Actor-Critic Model for Dexterous Robot Manipulation / DexWAC：用于灵巧机器人操作的统一世界-角色-评论家模型
+
+**Date**: 2026-11-24 | **arXiv**: [2611.32654v1](http://arxiv.org/abs/2611.32654v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.32654v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Robot demonstrations provide more than actions to imitate: they reveal how actions change the world and how those changes contribute to task success. Recent world-action models (WAMs) extend vision-language-action (VLA) models with the first signal by jointly predicting actions and future observations, yet this predictive ability serves only as an auxiliary loss for policy learning. Meanwhile, most policy improvement methods learn dynamics and values in separate models, increasing training overhead and limiting representation sharing between these complementary objectives. We introduce DexWAC, a unified world-actor-critic model that jointly learns an actor, an action-conditioned world model, and a bootstrapped critic in a single robot pretraining stage. Our key insight is that visual prediction encourages control-relevant features, while value supervision promotes task-relevant representations; together, they shape a representation suited to policy learning. Built on an image-editing backbone, DexWAC predicts, for each action chunk, the visual latent and proprioception at its endpoint together with its reward and continuation, so the world model alone efficiently yields complete imagined transitions without generating intermediate video frames. After adapting the world model and critic on real rollouts, we improve the pretrained actor through either PPO on imagined rollouts or critic-guided best-of-$N$ selection. DexWAC surpasses the large-scale pretrained VLA and WAM baselines in simulation and achieves 75% average success on two real-world tasks, compared with 45% for $π_{0.5}$. Its world model is more accurate and faster than video-based baselines, and ablations confirm that learning dynamics and value together improves the policy.
+
+机器人演示提供的不仅仅是供模仿的动作：它们揭示了动作如何改变世界，以及这些变化如何有助于任务的成功。最近的世界-动作模型（WAM）通过联合预测动作和未来观测结果，用第一个信号扩展了视觉-语言-动作（VLA）模型，但这种预测能力仅作为策略学习的辅助损失。与此同时，大多数策略改进方法在不同的模型中学习动态和价值，这增加了训练开销，并限制了这些互补目标之间的表征共享。我们推出了DexWAC，这是一种统一的世界-行动者-评判者模型，它在单个机器人预训练阶段联合学习行动者、以行动为条件的世界模型和自举评判者。我们的关键见解是，视觉预测鼓励与控制相关的特征，而价值监督则促进与任务相关的表征；两者共同塑造出适合策略学习的表征。DexWAC建立在图像编辑主干之上，对于每个动作片段，它预测其终点的视觉潜在变量和本体感受，以及其奖励和延续，因此仅世界模型就能高效地生成完整的想象转换，而无需生成中间视频帧。在真实 rollout 上对世界模型和 critic 进行适配后，我们通过在想象 rollout 上使用 PPO 或通过 critic 指导的 $N$ 个最佳选择来改进预训练的 actor。DexWAC的表现优于大规模预训练的VLA和WAM
+
+</details>
+
+---
+
+## 11. CodeWAM: A Code World Action Model for End-to-End Autonomous Driving / CodeWAM：用于端到端自动驾驶的代码世界动作模型
+
+**Date**: 2026-11-24 | **arXiv**: [2611.32483v1](http://arxiv.org/abs/2611.32483v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.32483v1)
+
+**Categories**: cs.RO, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Driving world models anticipate action consequences through representations of how the world evolves. For autonomous driving, these representations must capture both the surrounding scene and the ego vehicle's motion under a candidate plan. We propose CodeWAM, a driving world model that incorporates executable code as part of its world representation. Code represents ego dynamics by expressing how the vehicle state evolves under plan execution, while a learned visual model captures scene-dependent consequences. Executing the code produces a candidate-conditioned motion sequence, which is evaluated relative to the prior plan and recorded motion history. The resulting execution consequences and learned scene outcomes jointly represent the candidate's future, enabling the planner to assess both what a plan may lead to and how the vehicle transitions into that future. The selected plan becomes part of the next decision's execution context, linking successive choices within the model. CodeWAM achieves 93.6 PDMS on NAVSIM v1 navtest, 92.1 EPDMS on v2 navtest, and 50.6 EPDMS on NAVHARD. Further experiments demonstrate improved pairwise execution consistency and gains on Hydra-MDP and DrivoR without additional training, supporting executable code as a complementary representation for driving world models.
+
+驾驶世界模型通过对世界演变方式的表征来预测行动的后果。对于自动驾驶来说，这些表征必须在候选方案下同时捕捉周围场景和本车的运动。我们提出了CodeWAM，这是一种将可执行代码纳入其世界表征的驾驶世界模型。代码通过表达车辆状态在计划执行过程中的演变来表示本车动态，而经过学习的视觉模型则捕捉与场景相关的后果。执行代码会生成一个候选方案条件下的运动序列，该序列将参照先前的计划和记录的运动历史进行评估。由此产生的执行结果和学习到的场景结果共同代表了候选方案的未来，使规划器能够评估一个方案可能导致的结果，以及车辆如何过渡到该未来。所选计划将成为下一个决策的执行环境的一部分，从而将模型中的连续选择联系起来。CodeWAM 在 NAVSIM v1 navtest 上实现了 93.6 PDMS，在 v2 navtest 上实现了 92.1 EPDMS，在 NAVHARD 上实现了 50.6 EPDMS。进一步的实验表明，在不进行额外训练的情况下，Hydra-MDP和DrivoR上的成对执行一致性得到改善，并取得了提升，这支持了将可执行代码作为驾驶世界模型的补充表示。
+
+</details>
+
+---
+
+## 12. CriticJEPA: World Models Are Better Critics Than Optimizers / CriticJEPA：世界模型比优化器更擅长批评
+
+**Date**: 2026-11-24 | **arXiv**: [2611.32357v1](http://arxiv.org/abs/2611.32357v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.32357v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Visual world models enable goal-directed planning by predicting action outcomes. Gradient-based planners optimize actions to lower predicted goal cost, but continued optimization can exploit prediction errors after execution stops improving. Comparing plans requires informative relative scores; improving them also requires reliable update directions. Exact-state execution reveals that a frozen hierarchical world model ranks goal-conditioned proposals even when its rankings among outputs of prolonged gradient search are uninformative. Effective planning pairs goal-directed candidates with predictions that distinguish their outcomes. We introduce CriticJEPA, which learns goal-conditioned flow proposals from reward-free trajectories and uses frozen rollouts to select among them at every hierarchy level. Forward selection forms a complete planner; short anchored updates refine candidates before selection. Across visual navigation and manipulation, CriticJEPA increases success at a fraction of the planning compute, transferring shared settings across independently trained models, hierarchy depths, and unseen tasks while keeping every world-model weight fixed.
+
+视觉世界模型通过预测行动结果来实现目标导向的规划。基于梯度的规划器通过优化行动来降低预测的目标成本，但当执行不再带来改进时，持续优化可能会利用预测误差。比较计划需要具有信息量的相对得分；改进计划还需要可靠的更新方向。精确状态执行表明，即使冻结的分层世界模型在长时间梯度搜索的输出结果中的排名没有信息价值，它也能对目标条件化提议进行排名。有效的规划将目标导向的候选方案与能够区分其结果的预测相结合。我们推出了CriticJEPA，它从无奖励轨迹中学习目标条件流建议，并使用冻结的 rollout 在每个层次中进行选择。前向选择形成一个完整的规划器；短锚定更新在选择之前对候选方案进行优化。在视觉导航和操作方面，CriticJEPA 以极少的规划计算量提高了成功率，在独立训练的模型、层次深度和未见过的任务之间迁移共享设置，同时保持每个世界模型的权重不变。
+
+</details>
+
+---
+
+## 13. DiCT: Teaching X-ray Vision-Language Models to Reason via Imagining CT / DiCT：通过想象CT来训练X射线视觉-语言模型进行推理
+
+**Date**: 2026-11-24 | **arXiv**: [2611.32344v1](http://arxiv.org/abs/2611.32344v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.32344v1)
+
+**Categories**: cs.CV, cs.AI
+
+**Code**: https://github.com/HongYep/DiCT.
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Diagnosing with X-rays often requires reasoning about the 3D locations of abnormalities and their spatial relationships to surrounding anatomical structures, yet such reasoning remains challenging due to the loss of spatial information in 2D projections. To address this challenge, we propose Dreaming in CT (DiCT), a three-stage progressive CT-to-X-ray reasoning transfer framework that leverages a CT vision-language model (VLM) to guide an X-ray VLM. Through this CT-guided transfer, the student acquires CT-informed 3D reasoning capabilities, enabling it to reason directly from 2D X-rays without explicit CT reconstruction at inference time. The framework begins with instruct the dreamer, which equips the X-ray student with initial CT-oriented reasoning capabilities and establishes a structured interface that distinguishes X-ray observations from CT imagination. Building on this structure, visualize the dream introduces CT-guided on-policy distillation (OPD), where the CT teacher selectively guides the X-ray student's reasoning trajectories to transfer 3D anatomical knowledge. Finally, manifest the dream adapts the acquired reasoning capabilities from digitally reconstructed radiographs (DRRs) to real clinical X-rays. Experiments across two VLM backbones on 3D-RAD and ReXVQA demonstrate DiCT's effectiveness across radiological reasoning tasks, achieving a 1.66 percentage point improvement over a CT reconstruction-based baseline on 3D-RAD Abnormality Identification with 12.77$\times$ lower inference computation. Our code is available at https://github.com/HongYep/DiCT.
+
+使用X射线进行诊断通常需要对异常的3D位置及其与周围解剖结构的空间关系进行推理，但由于2D投影中空间信息的丢失，此类推理仍然具有挑战性。为了应对这一挑战，我们提出了Dreaming in CT (DiCT)，这是一个三阶段渐进式CT到X射线推理迁移框架，它利用CT视觉-语言模型 (VLM) 来指导X射线VLM。通过这种CT引导的迁移，学生获得了基于CT的3D推理能力，使其能够在推理时直接从2D X射线进行推理，而无需显式CT重建。该框架首先是“指导梦者”，这一步为X射线学生赋予初步的CT导向推理能力，并建立一个结构化接口，将X射线观察与CT想象区分开来。在此结构的基础上，“可视化梦想”引入了 CT 引导的策略内蒸馏 (OPD)，其中 CT 教师有选择地引导 X 射线学生的推理轨迹，以传授 3D 解剖学知识。最后，“实现梦想”将从数字重建影像（DRR）中获得的推理能力应用于真实的临床X射线影像。在3D-RAD和ReXVQA上对两个VLM主干进行的实验表明，DiCT在各种放射学推理任务中都表现出有效性，在3D-RAD异常识别方面，与基于CT重建的基线相比，提升了1.66个百分点，
+
+</details>
+
+---
+
+## 14. Disentangling Visual Dynamics for World Model Planning / 解耦视觉动态以进行世界模型规划
+
+**Date**: 2026-11-24 | **arXiv**: [2611.32228v1](http://arxiv.org/abs/2611.32228v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.32228v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Visual world models enable planning through predictive latent states. However, entangled agent and exogenous dynamics can obscure task progress. Disentangling visual dynamics for planning requires addressing two challenges: 1) suppressing cross-factor interference while retaining useful information; and 2) linking factors to task-relevant signals, since stability alone does not ensure meaningful planning distances. Therefore, we introduce FactorWorld, a disentangled visual dynamics framework for world model planning. To separate agent and exogenous dynamics, we propose a Counterfactual Consensus Residual Factorizer (CCRF) guided by bidirectional counterfactual pairs. CCRF separates shared context from dynamic residuals, combining average and worst-partner constraints to suppress interference with state and motion supervision to retain useful information. To translate these factors into planning decisions, we introduce semantic routing to refine full-representation task predictions for state estimation, trajectory scoring, and task-adapted planning. Experiments on MiniGrid, MetaDrive, and CARLA show improved bidirectional factor stability across two backbones. On MiniGrid, factor routing raises mean SR from 78.80% to 82.40%. Across four continuous control tasks, including Push-T, FactorWorld achieves mean success rates ranging from 91.67% to 100% across tasks. These results demonstrate that combining decoupled visual dynamics with explicit tasks can significantly improve the planning capabilities of world models.
+
+视觉世界模型能够通过预测性潜在状态来实现规划。然而，纠缠的智能体和外生动态可能会掩盖任务的进展。为了将视觉动态解耦用于规划，需要解决两个挑战：1) 抑制跨因素干扰，同时保留有用信息；2) 将因素与任务相关信号联系起来，因为仅有稳定性并不能确保有意义的规划距离。因此，我们推出了FactorWorld，这是一个用于世界模型规划的解耦视觉动态框架。为了将主体动态和外生动态分离，我们提出了一种由双向反事实对引导的反事实一致性残差分解器（CCRF）。CCRF将共享上下文与动态残差分离，结合平均约束和最差伙伴约束，以抑制对状态和运动监督的干扰，从而保留有用信息。为了将这些因素转化为规划决策，我们引入了语义路由，以优化用于状态估计、轨迹评分和任务自适应规划的完整表征任务预测。在MiniGrid、MetaDrive和CARLA上进行的实验表明，在两个主干网络中，双向因子的稳定性得到了提升。在MiniGrid上，因子路由将平均SR从78.80%提高到82.40%。在包括Push-T在内的四项连续控制任务中，FactorWorld在所有任务中实现了91.67%至100%的平均成功率。这些结果表明，将解耦的视觉动态与显式任务相结合，可以显著提高
+
+</details>
+
+---
+
+## 15. RoboProbe: Benchmarking Physical Plausibility of Robot World Models / RoboProbe：对机器人世界模型的物理合理性进行基准测试
+
+**Date**: 2026-11-24 | **arXiv**: [2611.32152v1](http://arxiv.org/abs/2611.32152v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.32152v1)
+
+**Categories**: cs.CV, cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Evaluating the physical plausibility of generated videos is critical for reliable robotic planning with world models. These videos inform action proposal and assessment before real-world execution, so undetected physical violations can lead to erroneous assessments of action feasibility and safety. Yet current video generators often produce physically implausible interactions. Detecting such violations directly with vision-language models (VLMs) remains challenging as physical verification requires evidence-grounded spatiotemporal reasoning beyond high-level semantic understanding. We develop five law-specific metrics for evaluating physical plausibility by combining spatiotemporal evidence from segmentation, tracking, 3D geometry, or appearance comparisons with targeted VLM reasoning: Contact fidelity, Object persistence, Solidity, Robot deformation, and Object deformation. Building on this metric suite, we introduce RoboProbe, an agentic evaluation framework that coordinates metric execution and selectively refines evaluations through constrained actions. To evaluate the physical plausibility of robot world models, we further introduce RP-Bench, with 761 human-labeled generated videos and 130 real demonstrations of 239 manipulation tasks from 12 robot datasets. On RP-Bench, all five metrics achieve AUROCs above 0.85 and outperform the evaluated learned judges, prior evaluators, and a frames-only Gemini baseline. Applying these metrics to five video generators reveals distinct patterns of physical violations across models, in both violation types and frequencies.
+
+评估生成视频的物理合理性对于使用世界模型进行可靠的机器人规划至关重要。这些视频在现实世界执行之前为行动方案和评估提供信息，因此未被检测到的物理违背情况可能导致对行动可行性和安全性的错误评估。然而，当前的视频生成器往往会产生在物理上不合情理的交互。直接使用视觉-语言模型（VLM）来检测此类违背仍然具有挑战性，因为物理验证需要基于证据的时空推理，而不仅仅是高层次的语义理解。我们通过将来自分割、跟踪、3D几何或外观比较的时空证据与有针对性的VLM推理相结合，开发了五项针对特定定律的指标，用于评估物理合理性：接触保真度、物体持久性、刚性、机器人变形和物体变形。在此指标套件的基础上，我们推出了RoboProbe，这是一个代理评估框架，可协调指标执行，并通过受限操作有选择地优化评估。为了评估机器人世界模型的物理合理性，我们进一步推出了RP-Bench，其中包含761段由人类标注的生成视频，以及来自12个机器人数据集的239项操纵任务的130个真实演示。在RP-Bench上，所有五项指标的AUROC均高于0.85，优于经过评估的学习型评判者、先前的评估者以及仅使用帧的Gemini基线。将这些指标应用于五个视频生成器，结果显示
+
+</details>
+
+---
+
+## 16. PhysRF-WorldJEPA: Transforming Heterogeneous Large Language Models into Manifold-Decoupled Millimeter-Wave Radar World Models / PhysRF-WorldJEPA：将异构大语言模型转化为流形解耦毫米波雷达世界模型
+
+**Date**: 2026-11-24 | **arXiv**: [2611.32113v1](http://arxiv.org/abs/2611.32113v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.32113v1)
+
+**Categories**: cs.LG, cs.CV, eess.SP
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Adapting Large Language Models (LLMs) to millimeter-wave (mmWave) radar enables privacy-preserving, all-weather physical scene understanding across darkness, smoke, and walls. However, standard instruction tuning treats continuous radar streams as static text-like tokens, causing near-random global radar-to-text retrieval and severe physical drift under sensor blackouts. Conversely, coupling pairwise contrastive losses (e.g., SigLIP) directly into the shared backbone improves retrieval but injects $O(B^2)$ repulsive gradients that fracture continuous coordinate manifolds ($R^2 < 0$). We present PhysRF-WorldJEPA, a manifold-decoupled Joint-Embedding Predictive Architecture (JEPA) that separates continuous electromagnetic state prediction from cross-modal language alignment. An unattenuated 1.0x clock anchor and parallel dual-scale RF encoder feed a lean ~3% LoRA LLM trained with two-step state-space EMA-JEPA (Denoise -> Rollout) and sample-axis Batch-VICReg to predict +3.0 s physical states; a stop-gradient alignment head then maps frozen prompt states onto the text hypersphere with false-negative masking. On a 4,541-window tri-domain suite (77/60.25/60 GHz) against 10 baselines, freezing the physical backbone and training only the decoupled head lifts R->T R@10 from 5.95% to 15.01% and improves MedRank from 107.0 to 60.0 while preserving identical physical readout: 3.37 deg ($R^2=+0.961$) blackout +3.0 s torso tilt, 1.89 m ($R^2=+0.679$; 1.19 m/+0.863 at the RF front-end) cluttered UAV altitude, 2.04 m ($R^2=+0.461$) behind-wall NLOS range, 0.9976 virtual-RIS invariance, and 100% fall recall. Across five 0.5B-1.8B LLM families (15 zero-overhead models), World-JEPA improves retrieval and 75%-drop completion in 10/10 runs and blackout tilt in 4/5 (Span-Euc), 2/5 (Scatter), and 5/5 (per-family best) over SFT.
+
+将大语言模型（LLM）适配到毫米波（mmWave）雷达，即可在黑暗、烟雾和墙壁等条件下实现保护隐私的全天候物理场景理解。然而，标准的指令微调将连续的雷达流视为静态的类文本标记，导致全局雷达到文本检索近乎随机，并在传感器失灵时出现严重的物理漂移。相反，将成对的对比损失（例如，SigLIP）直接耦合到共享的主干网络中，可以改善检索效果，但会引入 $O(B^2)$ 的排斥梯度，从而破坏连续坐标流形（$R^2 < 0$）。我们提出了PhysRF-WorldJEPA，这是一种流形解耦的联合嵌入预测架构（JEPA），将连续电磁状态预测与跨模态语言对齐分离开来。一个未衰减的 1.0x 时钟锚点和并行的双尺度射频编码器为精简的 ~3% LoRA LLM 提供输入，该 LLM 通过两步状态空间 EMA-JEPA（去噪 -> 展开）和样本轴 Batch-VICReg 进行训练，以预测 +3.0 s 的物理状态；然后，一个停止梯度对齐头将冻结的提示状态映射到文本超球面，并采用假阴性掩蔽。在一个包含 4,541 个窗口的三域套件（77/60.25/60 GHz）上，与 10 个基线进行比较，冻结物理主干并仅训练解耦头将 R->T R@10 从 5.95% 提升至 15.01%，并将 MedRank 从 107.0 提升至 60.0，同时保持相同的物理读出：3.37 度（$R^2=+0.961$）遮挡 +3.0 s 躯干倾斜，1.89 m（$R^2=+0.679$；在射频前端为 1.19 m/+0.863）。
+
+</details>
+
+---
+
+## 17. Do Occupancy World Models Really Follow Actions? / 占用世界模型是否真的会遵循行动？
+
+**Date**: 2026-11-24 | **arXiv**: [2611.32029v1](http://arxiv.org/abs/2611.32029v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.32029v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Occupancy world models predict future 3D scenes conditioned on ego actions, yet their predictions may not faithfully follow the specified trajectory under counterfactual actions. Because driving datasets provide sparse coverage of alternative trajectories for each scene, existing models learn the spatial effect of ego motion implicitly from observed scene--trajectory combinations, which may entangle action effects with scene--trajectory correlations. We propose ReCast, an ego-trajectory-guided transformer that grounds future prediction in action-induced geometric correspondence across ego-centric frames. ReCast decouples historical encoding from future decoding and aligns deformable interactions using relative ego transformations, while retaining flexibility for non-rigid scene evolution. We also introduce a counterfactual action-faithfulness benchmark covering in-distribution, tail, and out-of-distribution trajectories. On Occ3D-nuScenes, ReCast achieves competitive standard forecasting performance while improving counterfactual forecasting, with particularly clear gains under out-of-distribution trajectories.
+
+占用世界模型根据本车行为预测未来的3D场景，但它们的预测在反事实行为下可能无法忠实地遵循指定的轨迹。由于驾驶数据集对每个场景的替代轨迹覆盖率较低，现有模型从观察到的场景-轨迹组合中隐式学习本车运动的空间效应，这可能会将动作效应与场景-轨迹相关性混淆在一起。我们提出了ReCast，这是一种以自我轨迹为引导的Transformer，它将未来预测建立在自我中心框架之间由动作引起的几何对应关系上。ReCast将历史编码与未来解码解耦，并使用相对本车变换来对齐可变形的交互，同时保留非刚性场景演变的灵活性。我们还引入了一个反事实动作忠实性基准，涵盖分布内、尾部和分布外轨迹。在Occ3D-nuScenes上，ReCast实现了具有竞争力的标准预测性能，同时提高了反事实预测的性能，在分布外轨迹下表现出尤为明显的提升。
+
+</details>
+
+---
+
+## 18. ADE: A Zero-Training Unlearning Method for Latent World Models / ADE：一种用于潜在世界模型的零训练遗忘方法
+
+**Date**: 2026-11-24 | **arXiv**: [2611.31998v1](http://arxiv.org/abs/2611.31998v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.31998v1)
+
+**Categories**: cs.LG, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Latent world models learn compact recurrent dynamics from offline trajectories, yet deployed simulators can retain backdoor triggers or stale transitions from outdated physical regimes. Existing unlearning methods fail in autoregressive physics: gradient updates distort latent manifolds and compound rollout drift, naive output zeroing suppresses valid control responses on trigger onset, and single-step deletion leaves corruption inside recurrent hidden states. We propose Analytical Dynamics Excision (ADE), a deterministic, zero-training closed-form unlearning algorithm for latent world models. Using only cached pretraining moments, ADE recovers retain covariances via single-pass matrix downdating without raw retain data and cascades closed-form edits across the input bottleneck, hidden states, and downstream heads. Pairing orthogonal excision with whitened recurrent damping and mean-preserving affine calibration neutralizes out-of-manifold backdoors and realigns in-manifold shifts without variance collapse. Across four regimes on three MuJoCo benchmarks, ADE outperforms seven tuned baselines on DreamerV1, eliminating HalfCheetah and Hopper velocity-flip triggers $4.4\times$ faster than fine-tuning, and transfers zero-shot to DreamerV3.
+
+潜在世界模型从离线轨迹中学习紧凑的递归动力学，但已部署的模拟器可能会保留来自过时物理机制的后门触发器或过时转换。现有的遗忘方法在自回归物理学中存在缺陷：梯度更新会扭曲潜在流形并加剧 rollout 漂移；简单的输出清零会在触发开始时抑制有效的控制响应；单步删除会在循环隐藏状态中留下损坏。我们提出了分析动力学切除（ADE），这是一种用于潜在世界模型的确定性、零训练闭合形式遗忘算法。ADE仅使用缓存的预训练矩，通过单次矩阵降秩来恢复保留协方差，无需原始保留数据，并在输入瓶颈、隐藏状态和下游头之间级联闭合形式编辑。将正交切除与白化循环阻尼和保持均值的仿射校准相结合，可以抵消流形外的后门，并重新校准流形内的偏移，而不会导致方差坍缩。在三个MuJoCo基准的四个模式中，ADE的表现优于DreamerV1上的七个经过调优的基线，消除HalfCheetah和Hopper速度翻转触发器的速度比微调快$4.4\times$，并将零样本迁移到DreamerV3。
+
+</details>
+
+---
+
+## 19. ReJEPA: Bounded Predictive Regulation for Latent World Models / ReJEPA：用于潜在世界模型的有界预测性正则化
+
+**Date**: 2026-11-24 | **arXiv**: [2611.31910v1](http://arxiv.org/abs/2611.31910v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.31910v1)
+
+**Categories**: cs.LG
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Latent world models learn representations by predicting future states in an abstract embedding space rather than reconstructing raw pixels. When training across multi-frame sequences, however, not all frames and spatial regions are equally informative or predictable. We argue that forcing a world model to minimize every prediction error may be unnecessary and harmful. Under standard $L_2$ loss, unbounded gradients force the encoder and predictor to overfit noisy or transient frames at the expense of core physical structure, while amplifying gradient conflict with representation regularizers. Conversely, $L_1$ loss bounds large gradients, but its constant gradient magnitude near zero disrupts the local smoothness required for planning. We resolve this tension with \textbf{ReJEPA}, a bounded predictive regulation principle that combines bounded gradients for large errors with smooth quadratic behavior near zero, instantiated simply via the element-wise $\log\cosh$ loss.   As a drop-in training replacement across Temporal Straightening, LeWorldModel, and V-JEPA~2.1, $\log\cosh$ consistently outperforms $L_2$, a curvature-matched quadratic control, $L_1$, and Smooth-$L_1$ baselines without altering architectures or inference procedures. Notably, the gains grow with environmental complexity, scaling from simple navigation to contact-rich manipulation and real-world autonomous driving on NAVSIM. Probing and geometric analyses confirm that relaxing the penalty on extreme errors yields representations that better capture physical states and align with the true planning cost landscape.
+
+潜在世界模型通过在抽象嵌入空间中预测未来状态来学习表征，而不是重建原始像素。然而，在跨多帧序列进行训练时，并非所有帧和空间区域都具有同等的信息量或可预测性。我们认为，强迫世界模型将每个预测误差都降至最小可能既不必要，也可能有害。在标准$L_2$损失下，无界梯度迫使编码器和预测器对噪声或瞬态帧过度拟合，牺牲了核心物理结构，同时放大了梯度与表示正则化项的冲突。相反，$L_1$损失会限制较大的梯度，但其在接近零处恒定的梯度幅度会破坏规划所需的局部平滑性。我们通过\textbf{ReJEPA}解决了这一矛盾，这是一种有界预测正则化原则，它将大误差的有界梯度与接近零时的平滑二次行为相结合，只需通过逐元素的$\log\cosh$损失即可实现。   作为Temporal Straightening、LeWorldModel和V-JEPA~2.1中的即插即用式训练替代方案，$\log\cosh$始终优于$L_2$、曲率匹配的二次控制、$L_1$和Smooth-$L_1$基线，且无需改变架构或推理过程。值得注意的是，随着环境复杂性的增加，性能提升也随之增加，从简单的导航扩展到接触丰富的操作，以及NAVSIM上的真实世界自动驾驶。探查和几何分析证实，放宽对极端误差的惩罚
+
+</details>
+
+---
+
+## 20. Co-DRIS: Physics-Informed Predictive Belief and Variable-Impedance Learning for Reactive Catching under Coupled Uncertainty / Co-DRIS：在耦合不确定性下用于反应式接物的物理信息预测信念和可变阻抗学习
+
+**Date**: 2026-11-24 | **arXiv**: [2611.31843v1](http://arxiv.org/abs/2611.31843v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.31843v1)
+
+**Categories**: cs.RO
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Reactive robotic manipulation is acutely sensitive to simultaneous sensing noise, measurement dropouts, joint execution errors, and contact parameter variations. While single-frame frameworks like Domain-Randomized Instance Set (DRIS) achieve strong robustness under isolated uncertainties (86.4%), they degrade severely when perception and actuation uncertainties co-occur (27.6% across 10 coupled stress scenarios) due to memoryless encoding and fixed high-stiffness PD control. We propose Co-DRIS + SuperMimic, a perception-action co-design framework coupling: (i) an inertial world-frame physics-informed world model combining exact ballistic kinematics with a zero-initialized contact residual to roll forward missing observations and accelerate training via zero-cost counterfactual dropout consistency; (ii) an action-conditioned dual-stream causal GRU belief encoder resolving the denoising-vs-lag deadlock; and (iii) phase-aware variable-impedance soft-catching that transitions the 7-DoF Franka Research 3 arm into an overdamped regime (zeta/zeta0 ~ 2.26x) at the torque layer. Under unbiased 3-seed tail evaluation on unseen throws (15,360 throws/scenario), our method achieves 89.6 +/- 0.4% on standard benchmarks (+10.5% on 4-sigma noise to 70.5%) and 66.6 +/- 0.5% across 10 coupled/dropout stress scenarios (+39.0% over DRIS; +30.4% on 50% dropout). We further validate impedance decoupling, causal contact triggering under +0.65 s flight-time shifts, and cross-task transfer to steel-plate ping-pong bouncing (87.5% to 100.0%) and FR3+Hand catching (+8.4% under 4x noise with 6-13% lower peak impact force).
+
+反应式机器人操纵对同时发生的传感噪声、测量值丢失、关节执行误差和接触参数变化极为敏感。虽然像域随机化实例集（DRIS）这样的单帧框架在孤立不确定性下具有很强的鲁棒性（86.4%），但由于无记忆编码和固定的高刚度PD控制，当感知和执行不确定性同时发生时（在10个耦合应力场景中为27.6%），其性能会严重下降。我们提出了Co-DRIS + SuperMimic，这是一个感知-动作协同设计框架，耦合了：(i) 一个惯性世界坐标系物理信息世界模型，将精确的弹道运动学与零初始化的接触残差相结合，以向前滚动缺失的观测值，并通过零成本的反事实dropout一致性来加速训练；(ii) 一个动作条件的双流因果GRU信念编码器，解决了去噪与滞后之间的僵局；以及 (iii) 具备相位感知的可变阻抗软抓取，使7-DoF Franka Research 3机械臂在扭矩层过渡到过阻尼状态（zeta/zeta0 ~ 2.26x）。在对未见过的投掷（15,360次投掷/场景）进行无偏3种子尾部评估时，我们的方法在标准基准测试上达到了89.6 +/- 0.4%（在4-sigma噪声下提高了10.5%，达到70.5%），在10个耦合/dropout压力场景中达到了66.6 +/- 0.5%（比DRIS高39.0%；在50% dropout下高30.4%）。我们进一步验证了阻抗解耦、在+0.65 s飞行时间偏移下的因果接触触发以及跨任务迁移至
+
+</details>
+
+---
+
+## 21. Gaze World Model / 凝视世界模型
+
+**Date**: 2026-11-24 | **arXiv**: [2611.31836v1](http://arxiv.org/abs/2611.31836v1) | **PDF**: [Link](http://arxiv.org/pdf/2611.31836v1)
+
+**Categories**: cs.CV, cs.AI
+
+<details><summary><b>Abstract / 摘要</b></summary>
+
+Where a person looks indicates their focus of attention, and how their gaze shifts between targets reveals how that attention responds to a changing scene. Existing gaze target estimation methods largely operate frame by frame and do not model these shifts. Gaze shifts are often driven by dynamic changes in the scene, which is the kind of information world models are designed to encode. This relationship is subtle, however, since an event far across the frame may produce only a slight movement of the person's head or eyes. We therefore introduce the Gaze World Model (GWM), which co-trains latent scene prediction with person-conditioned gaze supervision on a frozen V-JEPA 2.1 encoder; in our ablations, the latent prediction objective improves both shift detection and gaze localization. Given a video clip and the person's head box, GWM estimates gaze locations and detects gaze shifts in the observed clip, and forecasts future gaze and shifts from predicted scene features. To train and evaluate these tasks, we augment VideoAttentionTarget and ChildPlay with event-level gaze-shift annotations. GWM achieves state-of-the-art shift detection on these benchmarks, about 10 points higher in four-class AP than the strongest baseline, while remaining comparable to the strongest image-based models in gaze target estimation, and outperforms the compared baselines on future gaze localization and shift forecasting.
+
+一个人的视线方向表明了他的注意力焦点，而他的视线在目标之间如何转移则揭示了这种注意力对变化场景的反应方式。现有的注视目标估算方法大多是逐帧操作，并不对这些转移进行建模。视线转移通常是由场景的动态变化所驱动的，而这正是世界模型旨在编码的信息类型。然而，这种关系是微妙的，因为发生在画面远处的一个事件可能只会使人的头部或眼睛略微移动。因此，我们引入了注视世界模型（GWM），该模型在一个冻结的V-JEPA 2.1编码器上，将潜在场景预测与以人为条件的注视监督进行联合训练；在我们的消融实验中，潜在预测目标同时改善了注视转移检测和注视定位。给定一段视频片段和人物的头部框，GWM 会估计视线位置，检测所观察片段中的视线转移，并根据预测的场景特征预测未来的视线和转移。为了训练和评估这些任务，我们使用事件级视线转移标注对 VideoAttentionTarget 和 ChildPlay 进行了增强。在这些基准测试中，GWM 实现了最先进的注视点转移检测，在四类 AP 中比最强的基线高出约 10 个百分点，同时在注视点目标估计方面仍能与最强的基于图像的模型相媲美，并且在未来注视点定位和转移预测方面优于所比较的基线。
+
+</details>
+
+---
+
+
+
+</details>
+
 <details><summary><b>2026-11-24 (26 papers)</b></summary>
 
 # arXiv World Model Papers - 2026-11-24
